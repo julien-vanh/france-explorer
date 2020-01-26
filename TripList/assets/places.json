@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "title": "No Call to Action",
+    "region": "paris",
+    "popularity": 1,
+    "description": "Un lieu sans call to action",
+    "source": "http://wiki.fr",
+    "category": "activity",
+    "location": {
+      "lon": -73.9653551,
+      "lat": 40.7828647
+    }
+  },
+  {
+    "id": "2",
+    "title": "Tour Eiffel",
+    "region": "paris",
+    "popularity": 3,
+    "description": "Visiter la tour Eiffel reste pour la plupart de nos visiteurs un souvenir fort. La Tour est aussi un des monuments payants les plus visités au monde, avec près de 7 millions de visiteurs par an. Il est donc préférable de bien s’organiser en amont, surtout si vous venez de loin, pour que l’expérience de visite de ce symbole de Paris et de la France reste la plus fluide possible, pour petits et grands !",
+    "source": "https://www.toureiffel.paris/fr/bien-preparer-votre-visite",
+    "category": "visit",
+    "cta": {
+      "title": "Billeterie",
+      "link": "https://www.toureiffel.paris/fr/tarifs-horaires"
+    },
+    "location": {
+      "lon": 2.30084609985351,
+      "lat": 48.856876373291
+    }
+  },
+  {
+    "id": "3",
+    "title": "Rouen",
+    "region": "normandie",
+    "popularity": 2,
+    "description": "Comptant 110 117 habitants intra-muros, appelés les Rouennais, elle est la deuxième commune de Normandie après Le Havre et la trente-septième commune la plus peuplée de France. Elle n'en demeure pas moins la capitale administrative (préfecture) de la région Normandie depuis le 28 septembre 2016 tandis que Caen accueille le siège du conseil régional (capitale politique) ; la Normandie présente donc la particularité de posséder une gouvernance bicéphale. Au 1er janvier 2016, son agglomération compte 490 000 habitants3. En outre, elle est la commune la plus densément peuplée du Grand-Ouest français avec 5 218 hab./km2. Avec 658 285 habitants au 1er janvier 20124, son aire urbaine est la première de Normandie ainsi que la douzième de France, et la deuxième du Bassin parisien, après celle de Paris5. Son bassin d'emploi, le premier de la région, atteint 829 210 habitants6, ceci faisant de Rouen un grand pôle économique régional et national.",
+    "source": "https://fr.wikipedia.org/wiki/Rouen",
+    "category": "place",
+    "location": {
+      "lon": 1.0939658,
+      "lat": 49.4404591
+    }
+  },
+  {
+    "id": "4",
+    "title": "Caen",
+    "region": "normandie",
+    "popularity": 2,
+    "description": "Cité de Guillaume le Conquérant et capitale du duché de Normandie avec Rouen, la ville a hérité d’un très riche patrimoine architectural en partie détruit lors de la bataille de Caen. La ville a gardé la mémoire de ce moment clé de la Seconde Guerre mondiale en édifiant notamment un Mémorial pour la Paix, célèbre dans le monde pour les cérémonies de commémorations qui y ont lieu.",
+    "source": "https://fr.wikipedia.org/wiki/Caen",
+    "category": "place",
+    "location": {
+      "lon": -0.3690815,
+      "lat": 49.1828008
+    }
+  }
+]

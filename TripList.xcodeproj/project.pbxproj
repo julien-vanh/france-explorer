@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,33 @@
 		F95DE56023DE2F0F00BE1BD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F95DE55F23DE2F0F00BE1BD5 /* Assets.xcassets */; };
 		F95DE56323DE2F0F00BE1BD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F95DE56223DE2F0F00BE1BD5 /* Preview Assets.xcassets */; };
 		F95DE56623DE2F0F00BE1BD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F95DE56423DE2F0F00BE1BD5 /* LaunchScreen.storyboard */; };
+		F95DE57323DE345700BE1BD5 /* places.json in Resources */ = {isa = PBXBuildFile; fileRef = F95DE57223DE345700BE1BD5 /* places.json */; };
+		F95DE57623DE348000BE1BD5 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE57423DE347F00BE1BD5 /* Session.swift */; };
+		F95DE57723DE348000BE1BD5 /* Dataloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE57523DE348000BE1BD5 /* Dataloader.swift */; };
+		F95DE58C23DE349700BE1BD5 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE57823DE349500BE1BD5 /* MapView.swift */; };
+		F95DE58E23DE349700BE1BD5 /* AutoFocusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE57A23DE349500BE1BD5 /* AutoFocusTextField.swift */; };
+		F95DE59023DE349700BE1BD5 /* PlaceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE57C23DE349500BE1BD5 /* PlaceDetail.swift */; };
+		F95DE59123DE349700BE1BD5 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE57D23DE349600BE1BD5 /* Store.swift */; };
+		F95DE59323DE349700BE1BD5 /* AssociatesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE57F23DE349600BE1BD5 /* AssociatesRow.swift */; };
+		F95DE59623DE349700BE1BD5 /* StoreCategoriesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE58223DE349600BE1BD5 /* StoreCategoriesRow.swift */; };
+		F95DE59723DE349700BE1BD5 /* ImageCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE58323DE349600BE1BD5 /* ImageCarouselView.swift */; };
+		F95DE59823DE349700BE1BD5 /* DreamListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE58423DE349600BE1BD5 /* DreamListRow.swift */; };
+		F95DE59923DE349700BE1BD5 /* PlacesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE58523DE349600BE1BD5 /* PlacesList.swift */; };
+		F95DE59A23DE349700BE1BD5 /* Progression.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE58623DE349600BE1BD5 /* Progression.swift */; };
+		F95DE59B23DE349700BE1BD5 /* PlacePager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE58723DE349600BE1BD5 /* PlacePager.swift */; };
+		F95DE59C23DE349700BE1BD5 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE58823DE349600BE1BD5 /* TextView.swift */; };
+		F95DE59E23DE349700BE1BD5 /* DreamList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE58A23DE349600BE1BD5 /* DreamList.swift */; };
+		F95DE59F23DE349700BE1BD5 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE58B23DE349700BE1BD5 /* PageView.swift */; };
+		F95DE5A723DE34A900BE1BD5 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE5A123DE34A800BE1BD5 /* Place.swift */; };
+		F95DE5A823DE34A900BE1BD5 /* PlaceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE5A223DE34A800BE1BD5 /* PlaceStore.swift */; };
+		F95DE5B023DE357800BE1BD5 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F95DE5AC23DE357800BE1BD5 /* 1.jpg */; };
+		F95DE5B123DE357800BE1BD5 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F95DE5AD23DE357800BE1BD5 /* 4.jpg */; };
+		F95DE5B223DE357800BE1BD5 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F95DE5AE23DE357800BE1BD5 /* 2.jpg */; };
+		F95DE5B323DE357800BE1BD5 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F95DE5AF23DE357800BE1BD5 /* 3.jpg */; };
+		F95DE5B723DE3BE500BE1BD5 /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = F95DE5B623DE3BE500BE1BD5 /* QGrid */; };
+		F95DE5B923DE416D00BE1BD5 /* Dream.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE5B823DE416D00BE1BD5 /* Dream.swift */; };
+		F95DE5BB23DE422F00BE1BD5 /* DreamDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE5BA23DE422F00BE1BD5 /* DreamDetail.swift */; };
+		F95DE5BD23DE4A2900BE1BD5 /* PlacesMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE5BC23DE4A2900BE1BD5 /* PlacesMap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +51,32 @@
 		F95DE56223DE2F0F00BE1BD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F95DE56523DE2F0F00BE1BD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F95DE56723DE2F0F00BE1BD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F95DE57223DE345700BE1BD5 /* places.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = places.json; sourceTree = "<group>"; };
+		F95DE57423DE347F00BE1BD5 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		F95DE57523DE348000BE1BD5 /* Dataloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dataloader.swift; sourceTree = "<group>"; };
+		F95DE57823DE349500BE1BD5 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		F95DE57A23DE349500BE1BD5 /* AutoFocusTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoFocusTextField.swift; sourceTree = "<group>"; };
+		F95DE57C23DE349500BE1BD5 /* PlaceDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetail.swift; sourceTree = "<group>"; };
+		F95DE57D23DE349600BE1BD5 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		F95DE57F23DE349600BE1BD5 /* AssociatesRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssociatesRow.swift; sourceTree = "<group>"; };
+		F95DE58223DE349600BE1BD5 /* StoreCategoriesRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCategoriesRow.swift; sourceTree = "<group>"; };
+		F95DE58323DE349600BE1BD5 /* ImageCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCarouselView.swift; sourceTree = "<group>"; };
+		F95DE58423DE349600BE1BD5 /* DreamListRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamListRow.swift; sourceTree = "<group>"; };
+		F95DE58523DE349600BE1BD5 /* PlacesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesList.swift; sourceTree = "<group>"; };
+		F95DE58623DE349600BE1BD5 /* Progression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Progression.swift; sourceTree = "<group>"; };
+		F95DE58723DE349600BE1BD5 /* PlacePager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePager.swift; sourceTree = "<group>"; };
+		F95DE58823DE349600BE1BD5 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		F95DE58A23DE349600BE1BD5 /* DreamList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamList.swift; sourceTree = "<group>"; };
+		F95DE58B23DE349700BE1BD5 /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		F95DE5A123DE34A800BE1BD5 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		F95DE5A223DE34A800BE1BD5 /* PlaceStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceStore.swift; sourceTree = "<group>"; };
+		F95DE5AC23DE357800BE1BD5 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		F95DE5AD23DE357800BE1BD5 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		F95DE5AE23DE357800BE1BD5 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		F95DE5AF23DE357800BE1BD5 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		F95DE5B823DE416D00BE1BD5 /* Dream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dream.swift; sourceTree = "<group>"; };
+		F95DE5BA23DE422F00BE1BD5 /* DreamDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamDetail.swift; sourceTree = "<group>"; };
+		F95DE5BC23DE4A2900BE1BD5 /* PlacesMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F95DE5B723DE3BE500BE1BD5 /* QGrid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +113,10 @@
 				F95DE55923DE2F0F00BE1BD5 /* AppDelegate.swift */,
 				F95DE55B23DE2F0F00BE1BD5 /* SceneDelegate.swift */,
 				F95DE55D23DE2F0F00BE1BD5 /* ContentView.swift */,
+				F95DE57023DE2F6100BE1BD5 /* assets */,
+				F95DE56F23DE2F3B00BE1BD5 /* utils */,
+				F95DE56E23DE2F3300BE1BD5 /* views */,
+				F95DE56D23DE2F1F00BE1BD5 /* models */,
 				F95DE55F23DE2F0F00BE1BD5 /* Assets.xcassets */,
 				F95DE56423DE2F0F00BE1BD5 /* LaunchScreen.storyboard */,
 				F95DE56723DE2F0F00BE1BD5 /* Info.plist */,
@@ -73,6 +131,76 @@
 				F95DE56223DE2F0F00BE1BD5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F95DE56D23DE2F1F00BE1BD5 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				F95DE5B823DE416D00BE1BD5 /* Dream.swift */,
+				F95DE5A123DE34A800BE1BD5 /* Place.swift */,
+				F95DE5A223DE34A800BE1BD5 /* PlaceStore.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		F95DE56E23DE2F3300BE1BD5 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				F95DE57F23DE349600BE1BD5 /* AssociatesRow.swift */,
+				F95DE58A23DE349600BE1BD5 /* DreamList.swift */,
+				F95DE58423DE349600BE1BD5 /* DreamListRow.swift */,
+				F95DE5BA23DE422F00BE1BD5 /* DreamDetail.swift */,
+				F95DE57C23DE349500BE1BD5 /* PlaceDetail.swift */,
+				F95DE58523DE349600BE1BD5 /* PlacesList.swift */,
+				F95DE58723DE349600BE1BD5 /* PlacePager.swift */,
+				F95DE57823DE349500BE1BD5 /* MapView.swift */,
+				F95DE5BC23DE4A2900BE1BD5 /* PlacesMap.swift */,
+				F95DE58623DE349600BE1BD5 /* Progression.swift */,
+				F95DE57D23DE349600BE1BD5 /* Store.swift */,
+				F95DE58223DE349600BE1BD5 /* StoreCategoriesRow.swift */,
+				F95DE5B423DE39D000BE1BD5 /* components */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		F95DE56F23DE2F3B00BE1BD5 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				F95DE57523DE348000BE1BD5 /* Dataloader.swift */,
+				F95DE57423DE347F00BE1BD5 /* Session.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		F95DE57023DE2F6100BE1BD5 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				F95DE57123DE2F6D00BE1BD5 /* places */,
+				F95DE57223DE345700BE1BD5 /* places.json */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		F95DE57123DE2F6D00BE1BD5 /* places */ = {
+			isa = PBXGroup;
+			children = (
+				F95DE5AC23DE357800BE1BD5 /* 1.jpg */,
+				F95DE5AE23DE357800BE1BD5 /* 2.jpg */,
+				F95DE5AF23DE357800BE1BD5 /* 3.jpg */,
+				F95DE5AD23DE357800BE1BD5 /* 4.jpg */,
+			);
+			path = places;
+			sourceTree = "<group>";
+		};
+		F95DE5B423DE39D000BE1BD5 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				F95DE57A23DE349500BE1BD5 /* AutoFocusTextField.swift */,
+				F95DE58323DE349600BE1BD5 /* ImageCarouselView.swift */,
+				F95DE58B23DE349700BE1BD5 /* PageView.swift */,
+				F95DE58823DE349600BE1BD5 /* TextView.swift */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,6 +219,9 @@
 			dependencies = (
 			);
 			name = TripList;
+			packageProductDependencies = (
+				F95DE5B623DE3BE500BE1BD5 /* QGrid */,
+			);
 			productName = TripList;
 			productReference = F95DE55623DE2F0E00BE1BD5 /* TripList.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +250,9 @@
 				Base,
 			);
 			mainGroup = F95DE54D23DE2F0E00BE1BD5;
+			packageReferences = (
+				F95DE5B523DE3BE500BE1BD5 /* XCRemoteSwiftPackageReference "QGrid" */,
+			);
 			productRefGroup = F95DE55723DE2F0E00BE1BD5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -133,9 +267,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F95DE5B123DE357800BE1BD5 /* 4.jpg in Resources */,
 				F95DE56623DE2F0F00BE1BD5 /* LaunchScreen.storyboard in Resources */,
+				F95DE5B223DE357800BE1BD5 /* 2.jpg in Resources */,
 				F95DE56323DE2F0F00BE1BD5 /* Preview Assets.xcassets in Resources */,
 				F95DE56023DE2F0F00BE1BD5 /* Assets.xcassets in Resources */,
+				F95DE57323DE345700BE1BD5 /* places.json in Resources */,
+				F95DE5B023DE357800BE1BD5 /* 1.jpg in Resources */,
+				F95DE5B323DE357800BE1BD5 /* 3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +286,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				F95DE55A23DE2F0F00BE1BD5 /* AppDelegate.swift in Sources */,
+				F95DE5B923DE416D00BE1BD5 /* Dream.swift in Sources */,
+				F95DE59C23DE349700BE1BD5 /* TextView.swift in Sources */,
+				F95DE58C23DE349700BE1BD5 /* MapView.swift in Sources */,
+				F95DE59B23DE349700BE1BD5 /* PlacePager.swift in Sources */,
+				F95DE59823DE349700BE1BD5 /* DreamListRow.swift in Sources */,
+				F95DE57623DE348000BE1BD5 /* Session.swift in Sources */,
+				F95DE59323DE349700BE1BD5 /* AssociatesRow.swift in Sources */,
+				F95DE5BD23DE4A2900BE1BD5 /* PlacesMap.swift in Sources */,
 				F95DE55C23DE2F0F00BE1BD5 /* SceneDelegate.swift in Sources */,
+				F95DE57723DE348000BE1BD5 /* Dataloader.swift in Sources */,
+				F95DE5A723DE34A900BE1BD5 /* Place.swift in Sources */,
+				F95DE59123DE349700BE1BD5 /* Store.swift in Sources */,
+				F95DE59E23DE349700BE1BD5 /* DreamList.swift in Sources */,
+				F95DE5BB23DE422F00BE1BD5 /* DreamDetail.swift in Sources */,
+				F95DE5A823DE34A900BE1BD5 /* PlaceStore.swift in Sources */,
+				F95DE58E23DE349700BE1BD5 /* AutoFocusTextField.swift in Sources */,
+				F95DE59023DE349700BE1BD5 /* PlaceDetail.swift in Sources */,
+				F95DE59923DE349700BE1BD5 /* PlacesList.swift in Sources */,
+				F95DE59A23DE349700BE1BD5 /* Progression.swift in Sources */,
+				F95DE59F23DE349700BE1BD5 /* PageView.swift in Sources */,
+				F95DE59623DE349700BE1BD5 /* StoreCategoriesRow.swift in Sources */,
+				F95DE59723DE349700BE1BD5 /* ImageCarouselView.swift in Sources */,
 				F95DE55E23DE2F0F00BE1BD5 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +502,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F95DE5B523DE3BE500BE1BD5 /* XCRemoteSwiftPackageReference "QGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Q-Mobile/QGrid";
+			requirement = {
+				kind = exactVersion;
+				version = 0.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F95DE5B623DE3BE500BE1BD5 /* QGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F95DE5B523DE3BE500BE1BD5 /* XCRemoteSwiftPackageReference "QGrid" */;
+			productName = QGrid;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F95DE54E23DE2F0E00BE1BD5 /* Project object */;
 }

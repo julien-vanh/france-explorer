@@ -7,36 +7,53 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
+    @EnvironmentObject var session: Session
     @State private var selection = 0
  
     var body: some View {
         TabView(selection: $selection){
-            Text("First View")
-                .font(.title)
+            Store()
                 .tabItem {
                     VStack {
-                        Image("first")
-                        Text("First")
+                        Image(systemName: "lightbulb")
+                        Text("Idées")
                     }
                 }
                 .tag(0)
-            Text("Second View")
-                .font(.title)
+            PlacesMap()
                 .tabItem {
                     VStack {
-                        Image("second")
-                        Text("Second")
+                        Image(systemName: "mappin.and.ellipse")
+                        Text("Carte")
                     }
                 }
                 .tag(1)
-        }
+            DreamList()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "list.bullet")
+                        Text("Ma Liste")
+                    }
+                }
+                .tag(2)
+            Progression()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "text.badge.checkmark")
+                        Text("Progression")
+                    }
+                }
+                .tag(3)
+            
+        }.edgesIgnoringSafeArea(.top)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(Session())
     }
 }
