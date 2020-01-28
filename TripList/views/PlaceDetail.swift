@@ -36,10 +36,10 @@ struct PlaceDetail: View {
                             self.isComplete = false
                         } else {
                             self.session.setComplete(placeId: self.place.id, value: true)
-                            self.session.dreams.removeAll(where: { self.place.id == $0.placeId }) // Si completer, on le retire auto des Dreams
                             self.isComplete = true
+                            self.session.dreams.removeAll(where: { self.place.id == $0.placeId }) // Si completer, on le retire auto des Dreams
+                            self.isInDream = false
                         }
-                        
                     }) {
                         HStack {
                             Image(systemName: self.isComplete ? "checkmark.circle" : "circle")
