@@ -40,6 +40,7 @@
 		F95DE5B923DE416D00BE1BD5 /* Dream.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE5B823DE416D00BE1BD5 /* Dream.swift */; };
 		F95DE5BB23DE422F00BE1BD5 /* DreamDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE5BA23DE422F00BE1BD5 /* DreamDetail.swift */; };
 		F95DE5BD23DE4A2900BE1BD5 /* PlacesMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE5BC23DE4A2900BE1BD5 /* PlacesMap.swift */; };
+		F9DC21D423E0CEC20023B8EF /* RegionsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC21D323E0CEC20023B8EF /* RegionsMap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		F95DE5B823DE416D00BE1BD5 /* Dream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dream.swift; sourceTree = "<group>"; };
 		F95DE5BA23DE422F00BE1BD5 /* DreamDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamDetail.swift; sourceTree = "<group>"; };
 		F95DE5BC23DE4A2900BE1BD5 /* PlacesMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesMap.swift; sourceTree = "<group>"; };
+		F9DC21D323E0CEC20023B8EF /* RegionsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionsMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				F95DE57823DE349500BE1BD5 /* MapView.swift */,
+				F9DC21D323E0CEC20023B8EF /* RegionsMap.swift */,
 				F95DE57A23DE349500BE1BD5 /* AutoFocusTextField.swift */,
 				F95DE58323DE349600BE1BD5 /* ImageCarouselView.swift */,
 				F95DE58B23DE349700BE1BD5 /* PageView.swift */,
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F95DE55A23DE2F0F00BE1BD5 /* AppDelegate.swift in Sources */,
+				F9DC21D423E0CEC20023B8EF /* RegionsMap.swift in Sources */,
 				F95DE5B923DE416D00BE1BD5 /* Dream.swift in Sources */,
 				F95DE59C23DE349700BE1BD5 /* TextView.swift in Sources */,
 				F95DE58C23DE349700BE1BD5 /* MapView.swift in Sources */,
