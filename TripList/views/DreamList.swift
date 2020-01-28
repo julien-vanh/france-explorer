@@ -12,6 +12,7 @@ struct DreamList: View {
     @EnvironmentObject private var session: Session
     @State private var showingSheet = false
     @State private var showAddRow = false
+    @Environment(\.editMode) var mode
     
     var actionSheet: ActionSheet {
         ActionSheet(title: Text("Ma Liste"), buttons: [
@@ -45,7 +46,7 @@ struct DreamList: View {
                     }
                 ), trailing: EditButton()
             )
-        }
+        }.accentColor( .white)
     }
     
     private func deleteRow(at indexSet: IndexSet) {

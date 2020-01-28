@@ -27,7 +27,7 @@ struct AssociatesRow: View {
                             )
                         ) {
                             ZStack {
-                                ImageStore.shared.image(name: place.id)
+                                ImageStore.shared.image(name: "\(place.id)")
                                     .renderingMode(.original)
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)

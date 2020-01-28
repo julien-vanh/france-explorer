@@ -20,15 +20,13 @@ struct DreamListRow: View {
         HStack {
             if index >= 0 {
                 Button(action: {
-                    self.session.dreams[self.index]
-                    .completed.toggle()
+                    self.session.dreams[self.index].completed.toggle()
+                    self.session.setComplete(placeId: self.dream.placeId, value: self.session.dreams[self.index].completed)
                 }) {
                     Image(systemName: self.session.dreams[self.index]
                         .completed ? "circle.fill" : "circle")
                         .foregroundColor(.orange)
                 }.buttonStyle(BorderlessButtonStyle())
-            } else {
-                /*@START_MENU_TOKEN@*/EmptyView()/*@END_MENU_TOKEN@*/
             }
             
             Text(dream.title)

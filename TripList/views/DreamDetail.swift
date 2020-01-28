@@ -1,6 +1,6 @@
 //
 //  DreamDetail.swift
-//  LifeList
+//  TripList
 //
 //  Created by Julien Vanheule on 18/01/2020.
 //  Copyright © 2020 Julien Vanheule. All rights reserved.
@@ -8,6 +8,7 @@
 
 import SwiftUI
 import MapKit
+import UIKit
 
 struct DreamDetail: View {
     var dream: Dream
@@ -29,7 +30,44 @@ struct DreamDetail: View {
                 
                 Text(place.title).font(.largeTitle)
                 
-                Text(dream.note).padding()
+                
+                HStack{
+                    Image(systemName: "house.fill")
+                    Text("Réserver un hotel")
+                }
+                HStack{
+                    Image(systemName: "car.fill")
+                    Text("Louer une voiture")
+                }
+                
+                
+                
+                ZStack {
+                    MapView(coordinate: place.locationCoordinate)
+                        .edgesIgnoringSafeArea(.bottom)
+                        .frame(height: 200)
+                        .disabled(true)
+                        .overlay(
+                            Button(action: {
+                                let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: self.place.locationCoordinate, addressDictionary:nil))
+                                mapItem.name = self.place.title
+                                mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
+                            }) {
+                                HStack{
+                                    Image(systemName: "location.circle")
+                                    Text("Y aller")
+                                        .font(.headline)
+                                }
+                                .padding()
+                                .foregroundColor(.white)
+                                .background(Color.blue)
+                                .cornerRadius(10)
+                            }
+                            .padding([.top, .trailing], 10.0), alignment: .center)
+                    
+                }
+                
+ 
             }
         }.edgesIgnoringSafeArea(.top)
     }

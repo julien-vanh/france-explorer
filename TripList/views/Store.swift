@@ -22,7 +22,7 @@ struct Store: View {
                             NavigationLink(
                                 destination: PlaceDetail(place: place)
                             ) {
-                                ImageStore.shared.image(name: "\(place.id)")
+                                ImageStore.shared.image(name: place.id)
                                     .renderingMode(.original)
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
@@ -73,7 +73,7 @@ struct Store: View {
                 }
                 
             }.navigationBarTitle("Idées")
-        }
+        }.accentColor( .white)
     }
 }
 

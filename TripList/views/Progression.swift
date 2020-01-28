@@ -10,29 +10,42 @@ import SwiftUI
 import QGrid
 
 struct Progression: View {
+    @EnvironmentObject var session: Session
     
     var body: some View {
-        NavigationView(){
-            List{
+        NavigationView {
+            List {
                 ForEach(PlaceStore.shared.getCategories()) { category in
                     
-                    Section(header: Text(category.title)) {
+                    Section(header: Text(category.title + " 50%")) {
                         QGrid(PlaceStore.shared.getAllForCategory(category: category.category),
-                          columns: 6
+                          columns: 5,
+                          columnsInLandscape: 10,
+                          vSpacing: 0,
+                          hSpacing: 0,
+                          vPadding: 0,
+                          hPadding: 0
                         ) { place in
                             NavigationLink(
-                                destination: PlacePager(places: PlaceStore.shared.getRandom(count: 6))
+                                destination: PlacePager(places: PlaceStore.shared.getAllForCategory(category: category.category), place: place)
                             ) {
-                                Rond(place: place)
+                                
+                                    ImageStore.shared.image(name: place.id)
+                                        .renderingMode(.original)
+                                        .resizable()
+                                        .grayscale(self.session.isCompleted(placeId: place.id) ? 0.0 : 0.99)
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 70, height: 70).clipped()
+                                
                             }
                         }
-                        .frame(height: ceil(CGFloat(PlaceStore.shared.getAllForCategory(category: category.category).count) / 6.0)*50+30)
+                        .frame(height: ceil(CGFloat(PlaceStore.shared.getAllForCategory(category: category.category).count) / 6.0)*50+20)
                         .listRowInsets(EdgeInsets())
                     }
                 }
             }
             .navigationBarTitle("Progression")
-        }
+        }.accentColor( .white)
     }
 }
 
@@ -42,17 +55,4 @@ struct Progression_Previews: PreviewProvider {
     }
 }
 
-struct Rond: View {
-    var place: Place
-    
-    var body: some View {
-        ImageStore.shared.image(name: "\(place.id)")
-            .renderingMode(.original)
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .clipShape(Circle())
-            .frame(width: 50.0, height: 50.0)
-            .overlay(Circle().stroke(Color.gray, lineWidth: 2))
-            
-    }
-}
+

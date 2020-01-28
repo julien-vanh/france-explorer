@@ -9,6 +9,7 @@ import UIKit
 import SwiftUI
 
 let placesData: [Place] = load("places.json")
+let dreamsData = [Dream(place: placesData[0]), Dream(place: placesData[1]), Dream(place: placesData[2])]
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data

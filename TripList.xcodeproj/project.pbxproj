@@ -146,15 +146,14 @@
 		F95DE56E23DE2F3300BE1BD5 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				F95DE57F23DE349600BE1BD5 /* AssociatesRow.swift */,
 				F95DE58A23DE349600BE1BD5 /* DreamList.swift */,
 				F95DE58423DE349600BE1BD5 /* DreamListRow.swift */,
 				F95DE5BA23DE422F00BE1BD5 /* DreamDetail.swift */,
-				F95DE57C23DE349500BE1BD5 /* PlaceDetail.swift */,
+				F95DE5BC23DE4A2900BE1BD5 /* PlacesMap.swift */,
 				F95DE58523DE349600BE1BD5 /* PlacesList.swift */,
 				F95DE58723DE349600BE1BD5 /* PlacePager.swift */,
-				F95DE57823DE349500BE1BD5 /* MapView.swift */,
-				F95DE5BC23DE4A2900BE1BD5 /* PlacesMap.swift */,
+				F95DE57C23DE349500BE1BD5 /* PlaceDetail.swift */,
+				F95DE57F23DE349600BE1BD5 /* AssociatesRow.swift */,
 				F95DE58623DE349600BE1BD5 /* Progression.swift */,
 				F95DE57D23DE349600BE1BD5 /* Store.swift */,
 				F95DE58223DE349600BE1BD5 /* StoreCategoriesRow.swift */,
@@ -195,6 +194,7 @@
 		F95DE5B423DE39D000BE1BD5 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				F95DE57823DE349500BE1BD5 /* MapView.swift */,
 				F95DE57A23DE349500BE1BD5 /* AutoFocusTextField.swift */,
 				F95DE58323DE349600BE1BD5 /* ImageCarouselView.swift */,
 				F95DE58B23DE349700BE1BD5 /* PageView.swift */,

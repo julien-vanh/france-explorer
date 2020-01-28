@@ -43,7 +43,7 @@ final class PlaceStore: ObservableObject {
     }
     
     func getAllForCategory(category: PlaceCategory) -> [Place] {
-         return places.values.filter { $0.category == category }
+        return places.values.filter { $0.category == category }
     }
     
     func getAllForRegion(region: PlaceRegion) -> [Place] {

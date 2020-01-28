@@ -24,12 +24,12 @@ struct PlacesList: View {
         List{
             ForEach(places) { place in
                 NavigationLink(
-                    destination: PlaceDetail(place: place)
+                    destination: PlacePager(places: self.places, place:place)
                 ) {
                     Text(place.title)
                 }
             }
-        }
+        }.navigationBarTitle(category != nil ? category.title : "Liste")
     }
 }
 
