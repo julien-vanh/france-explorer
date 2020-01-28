@@ -41,6 +41,7 @@
 		F95DE5BB23DE422F00BE1BD5 /* DreamDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE5BA23DE422F00BE1BD5 /* DreamDetail.swift */; };
 		F95DE5BD23DE4A2900BE1BD5 /* PlacesMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE5BC23DE4A2900BE1BD5 /* PlacesMap.swift */; };
 		F9DC21D423E0CEC20023B8EF /* RegionsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC21D323E0CEC20023B8EF /* RegionsMap.swift */; };
+		F9DC21DA23E0DB1E0023B8EF /* regions.geojson in Resources */ = {isa = PBXBuildFile; fileRef = F9DC21D923E0DB1E0023B8EF /* regions.geojson */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		F95DE5BA23DE422F00BE1BD5 /* DreamDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamDetail.swift; sourceTree = "<group>"; };
 		F95DE5BC23DE4A2900BE1BD5 /* PlacesMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesMap.swift; sourceTree = "<group>"; };
 		F9DC21D323E0CEC20023B8EF /* RegionsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionsMap.swift; sourceTree = "<group>"; };
+		F9DC21D923E0DB1E0023B8EF /* regions.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = regions.geojson; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 		F95DE57023DE2F6100BE1BD5 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				F9DC21D923E0DB1E0023B8EF /* regions.geojson */,
 				F95DE57123DE2F6D00BE1BD5 /* places */,
 				F95DE57223DE345700BE1BD5 /* places.json */,
 			);
@@ -273,6 +276,7 @@
 				F95DE5B123DE357800BE1BD5 /* 4.jpg in Resources */,
 				F95DE56623DE2F0F00BE1BD5 /* LaunchScreen.storyboard in Resources */,
 				F95DE5B223DE357800BE1BD5 /* 2.jpg in Resources */,
+				F9DC21DA23E0DB1E0023B8EF /* regions.geojson in Resources */,
 				F95DE56323DE2F0F00BE1BD5 /* Preview Assets.xcassets in Resources */,
 				F95DE56023DE2F0F00BE1BD5 /* Assets.xcassets in Resources */,
 				F95DE57323DE345700BE1BD5 /* places.json in Resources */,
