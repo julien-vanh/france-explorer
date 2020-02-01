@@ -10,7 +10,7 @@ import SwiftUI
 import QGrid
 
 struct Progression: View {
-    @EnvironmentObject var session: Session
+    
     
     var body: some View {
         NavigationView {
@@ -27,16 +27,9 @@ struct Progression: View {
                           hPadding: 0
                         ) { place in
                             NavigationLink(
-                                destination: PlacePager(places: PlaceStore.shared.getAllForCategory(category: category.category), place: place)
+                                destination: PlacePager(places: PlaceStore.shared.getAllForCategory(category: category.category), initialePlace: place)
                             ) {
-                                
-                                    ImageStore.shared.image(name: place.id)
-                                        .renderingMode(.original)
-                                        .resizable()
-                                        .grayscale(self.session.isCompleted(placeId: place.id) ? 0.0 : 0.99)
-                                        .aspectRatio(contentMode: .fill)
-                                        .frame(width: 70, height: 70).clipped()
-                                
+                                ProgreesionItem(place: place)
                             }
                         }
                         .frame(height: ceil(CGFloat(PlaceStore.shared.getAllForCategory(category: category.category).count) / 6.0)*50+20)
@@ -56,3 +49,17 @@ struct Progression_Previews: PreviewProvider {
 }
 
 
+
+struct ProgreesionItem: View {
+    @EnvironmentObject var session: Session
+    var place: Place
+    
+    var body: some View {
+        ImageStore.shared.image(name: place.id)
+            .renderingMode(.original)
+            .resizable()
+            .grayscale(self.session.isCompleted(placeId: place.id) ? 0.0 : 0.99)
+            .aspectRatio(contentMode: .fill)
+            .frame(width: 70, height: 70).clipped()
+    }
+}

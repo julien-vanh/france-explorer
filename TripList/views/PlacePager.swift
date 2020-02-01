@@ -10,26 +10,17 @@ import SwiftUI
 
 struct PlacePager: View {
     var placeDetailViews: [PlaceDetail]
-    @State private var page: Int = 0
+    @State private var index: Int
     
-    init(places: [Place], place: Place){
+    init(places: [Place], initialePlace: Place){
         self.placeDetailViews = places.map { PlaceDetail(place: $0) }
-        self.page = places.firstIndex(where: {$0.id == place.id}) ?? 0
+        _index = State(initialValue: places.firstIndex(where: {$0.id == initialePlace.id}) ?? 0)
+        
     }
     
-    init(places: [Place]){
-        self.placeDetailViews = places.map { PlaceDetail(place: $0) }
-        self.page = 0
-    }
+   
 
     var body: some View {
-        PageView(placeDetailViews, currentPage: $page).edgesIgnoringSafeArea(.top)
-    }
-}
-
-struct PlacePager_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        PlacePager(places: PlaceStore.shared.getRandom(count: 4))
+        PageView(placeDetailViews, currentPage: $index).edgesIgnoringSafeArea(.top)
     }
 }
