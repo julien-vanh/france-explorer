@@ -12,9 +12,8 @@ import MapKit
 struct PlaceDetail: View {
     @EnvironmentObject var session: Session
     var place: Place
-    @State private var isComplete: Bool = false
-    @State private var isInDream: Bool = false
-    
+    @State private var showCredits = false
+
     var body: some View {
         ScrollView(.vertical) {
             GeometryReader { geometry in
@@ -27,90 +26,58 @@ struct PlaceDetail: View {
             }.frame(height: 300)
             
             VStack {
+                NavigationLink(
+                    destination: PlaceDetailPhotos(place: self.place)
+                ) {
+                    HStack{
+                        Spacer()
+                        Image(systemName: "plus")
+                        Text("photos")
+                            .font(.headline)
+                            .padding(.trailing, 15.0)
+                    }
+                    .foregroundColor(.white)
+                }
+                .padding(.top, -40.0)
+                
                 Text(self.place.title).font(.largeTitle)
                 
-                HStack {
-                    Button(action: {
-                        if self.session.isCompleted(placeId: self.place.id) {
-                            self.session.setComplete(placeId: self.place.id, value: false)
-                            self.isComplete = false
-                        } else {
-                            self.session.setComplete(placeId: self.place.id, value: true)
-                            self.isComplete = true
-                            self.session.dreams.removeAll(where: { self.place.id == $0.placeId }) // Si completer, on le retire auto des Dreams
-                            self.isInDream = false
-                        }
-                    }) {
-                        HStack {
-                            Image(systemName: self.isComplete ? "checkmark.circle" : "circle")
-                            Text("Déjà vu")
-                                
-                        }
-                        .font(.headline)
-                    }
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(Color.green)
-                    .cornerRadius(10)
-                    
-                   
-                    if (!self.isComplete) {
-                        if self.isInDream {
-                            Button(action: {
-                                self.session.dreams.removeAll(where: { self.place.id == $0.placeId })
-                                self.isInDream = false
-                            }) {
-                                Text("Retirer de Ma Liste")
-                                    .font(.headline)
-                            }
-                            .padding()
-                            .foregroundColor(.red)
-                        } else {
-                            HStack {
-                                Button(action: {
-                                    self.session.dreams.append(Dream(place: self.place))
-                                    self.isInDream = true
-                                }) {
-                                    HStack{
-                                        Image(systemName: "plus")
-                                        Text("Ajouter à Ma Liste")
-                                            .font(.headline)
-                                    }
-                                }
-                                .padding()
-                                .foregroundColor(.white)
-                                .background(Color.orange)
-                                .cornerRadius(10)
-                                
-                                
-                            }
-                        }
-                    }
+                PlaceDetailsButtons(place: self.place)
+                
+                if self.place.description != nil {
+                    Text(self.place.description).padding()
                 }
                 
-                
-                
-                
-                Text(self.place.description).padding()
-                
-                Button(action: {
-                    self.openLinkInBrowser(link: self.place.source)
-                }) {
-                    Text(self.place.source).foregroundColor(.blue)
+                if self.place.website != nil {
+                    HStack {
+                        Text("Site web :")
+                        Button(action: {
+                            self.openLinkInBrowser(link: self.place.website)
+                        }) {
+                            Text(self.place.website).foregroundColor(.orange)
+                        }
+                    }
+                    .padding(.vertical, 15.0)
                 }
-                    
+                
                 MapView(coordinate: self.place.locationCoordinate)
                     .edgesIgnoringSafeArea(.bottom)
-                    .frame(height: 250)
+                    .frame(height: 200)
                 
-                AssociatesRow(associates: PlaceStore.shared.getAssociatedPlaceTo(id: self.place.id, count: 5))
-                    .padding(.bottom, 50.0)
+                AssociatesRow(placeId: self.place.id)
+                    .padding(.bottom, 15.0)
+                    
+                Button(action: {
+                    self.showCredits = true
+                }) {
+                    Text("Crédits").foregroundColor(.gray)
+                }.sheet(isPresented: self.$showCredits) {
+                    CreditsModal(place: self.place)
+                }.padding(.bottom, 40.0)
             }
         }.edgesIgnoringSafeArea(.top).onAppear(perform: {
             print("hint loaded")
-            self.isComplete = self.session.isCompleted(placeId: self.place.id)
-            self.isInDream = self.session.isInDream(placeId: self.place.id)
-        }).onDisappear {
+            }).onDisappear {
             print("hint disappear")
         }
     }
@@ -149,5 +116,29 @@ struct PlaceDetail: View {
 struct HintDetail_Previews: PreviewProvider {
     static var previews: some View {
         PlaceDetail(place: placesData[2]).environmentObject(Session())
+    }
+}
+
+
+
+struct CreditsModal: View {
+    var place: Place
+    
+    var body: some View {
+        VStack {
+            Text("Crédits")
+                .font(.title)
+                .padding(.bottom, 50.0)
+            if place.photocredits != nil {
+                Text("Photo : ")
+                Text("\(place.photocredits)").foregroundColor(.gray)
+            }
+            
+            if place.source != nil {
+                Text("Description : ")
+                Text("\(place.source)").foregroundColor(.gray)
+            }
+        }
+        
     }
 }

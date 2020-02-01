@@ -8,10 +8,11 @@
 
 import SwiftUI
 import MapKit
+import Combine
 
 
 struct RegionsMapController: UIViewRepresentable {
-    
+    @EnvironmentObject var session: Session
     
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
@@ -23,9 +24,10 @@ struct RegionsMapController: UIViewRepresentable {
     
     
     func updateUIView(_ view: MKMapView, context: Context){
-        //If you changing the Map Annotation then you have to remove old Annotations
-        //mapView.removeAnnotations(mapView.annotations)
         view.delegate = context.coordinator
+        view.mapType = .mutedStandard
+        
+        view.register(PlaceAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         
         let coordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 46.183753, longitude: 2.4)
         let span = MKCoordinateSpan(latitudeDelta: 14.5, longitudeDelta: 14.5)
@@ -40,8 +42,11 @@ struct RegionsMapController: UIViewRepresentable {
                 
             let geometry = features.flatMap( {$0.geometry})
             let overlays = geometry.compactMap({$0 as? MKOverlay})
-            print("Nombre d'overlay \(overlays.count)")
-            view.addOverlays(overlays)
+            view.addOverlays(overlays, level: MKOverlayLevel.aboveRoads)
+            
+            let places = placesData
+            let annotations = places.map{PlaceAnnotation(place: $0, completed: session.isCompleted(placeId: $0.id))}
+            view.addAnnotations(annotations)
         }
     }
     
@@ -53,35 +58,68 @@ struct RegionsMapController: UIViewRepresentable {
         }
 
         func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+            
+            let alpha = CGFloat(0.4)
+            let colors: [UIColor] = [
+                UIColor.init(red: 244/255, green: 67/255, blue: 54/255, alpha: alpha),
+                UIColor.init(red: 33/255, green: 150/255, blue: 243/255, alpha: alpha),
+                UIColor.init(red: 255/255, green: 235/255, blue: 59/255, alpha: alpha),
+                UIColor.init(red: 121/255, green: 85/255, blue: 72/255, alpha: alpha),
+            ]
+            
             let renderer: MKOverlayPathRenderer
             switch overlay {
-            case is MKMultiPolygon:
-                renderer = MKMultiPolygonRenderer(overlay: overlay)
-            case is MKPolygon:
-                renderer = MKPolygonRenderer(overlay: overlay)
-            default:
-                return MKOverlayRenderer(overlay: overlay)
+                case is MKMultiPolygon:
+                    renderer = MKMultiPolygonRenderer(overlay: overlay)
+                case is MKPolygon:
+                    renderer = MKPolygonRenderer(overlay: overlay)
+                default:
+                    return MKOverlayRenderer(overlay: overlay)
             }
-            renderer.lineWidth = 2
-            renderer.strokeColor = UIColor.red
-            renderer.fillColor = UIColor.blue
+            renderer.lineWidth = 1
+            renderer.strokeColor = UIColor.gray
+            renderer.fillColor = colors.randomElement()
             
             return renderer
+        }
+        
+        func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+            if view.annotation is PlaceAnnotation {
+                let placeAnnotation = view.annotation as! PlaceAnnotation
+                print(placeAnnotation.place.title)
+            }
         }
     }
 }
 
 struct RegionsMap_Previews: PreviewProvider {
     static var previews: some View {
-        RegionsMapController()
+        RegionsMapController().environmentObject(Session())
     }
 }
 
 
 
-/*
- 
- view.delegate = self
- 
 
- */
+
+internal final class PlaceAnnotationView: MKMarkerAnnotationView {
+    internal override var annotation: MKAnnotation? { willSet { newValue.flatMap(configure(with:)) } }
+    
+    override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
+        super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
+        displayPriority = .required
+        //collisionMode = .circle
+        //centerOffset = CGPoint(x: 0.0, y: -10.0)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("\(#function) not implemented.")
+    }
+    
+    func configure(with annotation: MKAnnotation) {
+        guard annotation is PlaceAnnotation else { fatalError("Unexpected annotation type: \(annotation)") }
+        let placeAnnotation = annotation as! PlaceAnnotation
+        markerTintColor = placeAnnotation.completed ? UIColor.green : UIColor.red
+        glyphImage = UIImage(named: "mapicon.\(placeAnnotation.place.category)")
+    }
+}

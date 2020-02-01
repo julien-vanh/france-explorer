@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  TripList
+
+  Created by Julien Vanheule on 29/01/2020.
+  Copyright © 2020 Julien Vanheule. All rights reserved.
+*/
+"wikipedia.host" = "https://en.wikipedia.org/w/api.php";
+"wikipedia.main-page" = "Main_Page";

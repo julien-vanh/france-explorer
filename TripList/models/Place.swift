@@ -12,11 +12,14 @@ import CoreLocation
 struct Place: Hashable, Codable, Identifiable {
     var id: String
     var title: String
-    var region: PlaceRegion
-    var popularity: Int
-    var description: String
-    var source: String
+    var photocredits: String!
+    var regionId: String
     var category: PlaceCategory
+    var website: String!
+    var description: String!
+    var source: String!
+    var popularity: Int
+    
     fileprivate var location: Coordinates
     var locationCoordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(
@@ -26,15 +29,20 @@ struct Place: Hashable, Codable, Identifiable {
     var cta: CallToAction!
 }
 
-enum PlaceRegion: String, CaseIterable, Codable, Hashable {
-    case normandie = "normandie"
-    case paris = "paris"
+struct PlaceRegion: Hashable, Codable, Identifiable {
+    var id: String
+    var name: String
+    var domtom: Bool
 }
 
 enum PlaceCategory: String, CaseIterable, Codable, Hashable {
-    case visit = "visit"
-    case place = "place"
+    case city = "city"
+    case museum = "museum"
+    case park = "park"
     case activity = "activity"
+    case nature = "nature"
+    case place = "place"
+    case event = "event"
 }
 
 struct Coordinates: Hashable, Codable {

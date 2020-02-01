@@ -17,7 +17,7 @@ struct Progression: View {
             List {
                 ForEach(PlaceStore.shared.getCategories()) { category in
                     
-                    Section(header: Text(category.title + " 50%")) {
+                    Section(header: Text(category.title)) {
                         QGrid(PlaceStore.shared.getAllForCategory(category: category.category),
                           columns: 5,
                           columnsInLandscape: 10,
@@ -45,7 +45,7 @@ struct Progression: View {
                 }
             }
             .navigationBarTitle("Progression")
-        }.accentColor( .white)
+        }//.accentColor( .white)
     }
 }
 

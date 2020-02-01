@@ -1,0 +1,137 @@
+[
+  {
+    "id": "alsace",
+    "name": "Alsace",
+    "domtom": false
+  },
+  {
+    "id": "aquitaine",
+    "name": "Aquitaine",
+    "domtom": false
+  },
+  {
+    "id": "auvergne",
+    "name": "Auvergne",
+    "domtom": false
+  },
+  {
+    "id": "bassenormandie",
+    "name": "Basse-Normandie",
+    "domtom": false
+  },
+  {
+    "id": "bourgogne",
+    "name": "Bourgogne",
+    "domtom": false
+  },
+  {
+    "id": "bretagne",
+    "name": "Bretagne",
+    "domtom": false
+  },
+  {
+    "id": "centre",
+    "name": "Centre",
+    "domtom": false
+  },
+  {
+    "id": "champagne",
+    "name": "Champagne-Ardenne",
+    "domtom": false
+  },
+  {
+    "id": "corse",
+    "name": "Corse",
+    "domtom": false
+  },
+  {
+    "id": "franchecomte",
+    "name": "Franche-Comté",
+    "domtom": false
+  },
+  {
+    "id": "hautenormandie",
+    "name": "Haute-Normandie",
+    "domtom": false
+  },
+  {
+    "id": "iledefrance",
+    "name": "Île-de-France",
+    "domtom": false
+  },
+  {
+    "id": "languedoc",
+    "name": "Languedoc-Roussillon",
+    "domtom": false
+  },
+  {
+    "id": "limousin",
+    "name": "Limousin",
+    "domtom": false
+  },
+  {
+    "id": "lorraine",
+    "name": "Lorraine",
+    "domtom": false
+  },
+  {
+    "id": "midi",
+    "name": "Midi-Pyrénées",
+    "domtom": false
+  },
+  {
+    "id": "nord",
+    "name": "Nord-Pas-de-Calais",
+    "domtom": false
+  },
+  {
+    "id": "paysdelaloire",
+    "name": "Pays de la Loire",
+    "domtom": false
+  },
+  {
+    "id": "picardie",
+    "name": "Picardie",
+    "domtom": false
+  },
+  {
+    "id": "poitou",
+    "name": "Poitou-Charentes",
+    "domtom": false
+  },
+  {
+    "id": "provence",
+    "name": "Provence-Alpes-Côte d'Azur",
+    "domtom": false
+  },
+  {
+    "id": "rhone",
+    "name": "Rhône-Alpes",
+    "domtom": false
+  },
+  {
+    "id": "guadeloupe",
+    "name": "Guadeloupe",
+    "domtom": true
+  },
+  {
+    "id": "guyane",
+    "name": "Guyane",
+    "domtom": true
+  },
+  {
+    "id": "reunion",
+    "name": "La Réunion",
+    "domtom": true
+  },
+  {
+    "id": "martinique",
+    "name": "Martinique",
+    "domtom": true
+  },
+  {
+    "id": "mayotte",
+    "name": "Mayotte",
+    "domtom": true
+  }
+]

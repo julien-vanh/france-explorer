@@ -67,13 +67,14 @@ struct Store: View {
                             Text(place.title)
                         }
                     }
+                    /*
                     NavigationLink(destination: PlacesList()) {
                         Text("Voir tout")
-                    }
+                    }*/
                 }
                 
             }.navigationBarTitle("Idées")
-        }.accentColor( .white)
+        }//.accentColor( .white)
     }
 }
 

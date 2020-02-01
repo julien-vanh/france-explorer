@@ -9,8 +9,10 @@
 import SwiftUI
 
 struct PlacesMap: View {
+    
+    
     var body: some View {
-        RegionsMapController()
+        RegionsMapController().edgesIgnoringSafeArea(.top)
     }
 }
 

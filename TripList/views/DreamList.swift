@@ -46,7 +46,7 @@ struct DreamList: View {
                     }
                 ), trailing: EditButton()
             )
-        }.accentColor( .white)
+        }//.accentColor( .white)
     }
     
     private func deleteRow(at indexSet: IndexSet) {

@@ -29,25 +29,26 @@ final class PlaceStore: ObservableObject {
     
     func getCategories() -> [Category] {
         return  [
-            Category(id: 1, category: .visit, title: "Visite", image: ""),
-            Category(id: 2, category: .place, title: "Lieux", image: ""),
-            Category(id: 3, category: .activity, title: "Activité", image: "")
+            Category(id: 1, category: .city, title: "Ville", image: ""),
+            Category(id: 2, category: .museum, title: "Musée", image: ""),
+            Category(id: 3, category: .park, title: "Parc", image: ""),
+            Category(id: 4, category: .activity, title: "Activité", image: ""),
+            Category(id: 5, category: .nature, title: "Nature", image: ""),
+            Category(id: 6, category: .place, title: "Point d'intéret", image: ""),
+            Category(id: 7, category: .event, title: "Evenement", image: "")
         ]
     }
     
-    func getRegions() -> [Region] {
-        return  [
-            Region(id: 1, region: .paris, title: "Paris", image: ""),
-            Region(id: 2, region: .normandie, title: "Normandie", image: "")
-        ]
+    func getRegions() -> [PlaceRegion] {
+        return regionsData
     }
     
     func getAllForCategory(category: PlaceCategory) -> [Place] {
         return places.values.filter { $0.category == category }
     }
     
-    func getAllForRegion(region: PlaceRegion) -> [Place] {
-         return places.values.filter { $0.region == region }
+    func getAllForRegion(regionId: String) -> [Place] {
+        return places.values.filter { $0.regionId == regionId }
     }
     
     func getRandom(count:Int) -> [Place] {
