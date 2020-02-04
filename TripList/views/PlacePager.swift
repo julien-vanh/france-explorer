@@ -15,11 +15,8 @@ struct PlacePager: View {
     init(places: [Place], initialePlace: Place){
         self.placeDetailViews = places.map { PlaceDetail(place: $0) }
         _index = State(initialValue: places.firstIndex(where: {$0.id == initialePlace.id}) ?? 0)
-        
     }
     
-   
-
     var body: some View {
         PageView(placeDetailViews, currentPage: $index).edgesIgnoringSafeArea(.top)
     }

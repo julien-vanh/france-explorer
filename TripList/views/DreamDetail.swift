@@ -10,13 +10,14 @@ import SwiftUI
 import MapKit
 import UIKit
 
+
 struct DreamDetail: View {
     var dream: Dream
     var place: Place
     
     init(dream: Dream){
         self.dream = dream
-        self.place = PlaceStore.shared.get(id: dream.placeId)
+        self.place = PlaceStore.shared.get(id: dream.placeId!)
     }
     
     var body: some View {
@@ -73,8 +74,10 @@ struct DreamDetail: View {
     }
 }
 
+/*
 struct DreamDetail_Previews: PreviewProvider {
     static var previews: some View {
         DreamDetail(dream: Dream(place: PlaceStore.shared.get(id: "2")))
     }
 }
+*/

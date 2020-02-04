@@ -11,8 +11,10 @@ import SwiftUI
 struct DreamList: View {
     @EnvironmentObject private var session: Session
     @State private var showingSheet = false
-    @State private var showAddRow = false
     @Environment(\.editMode) var mode
+    @Environment(\.managedObjectContext) var managedObjectContext
+    @FetchRequest(fetchRequest: Dream.getAllDreams()) var dreams: FetchedResults<Dream>
+
     
     var actionSheet: ActionSheet {
         ActionSheet(title: Text("Ma Liste"), buttons: [
@@ -26,13 +28,15 @@ struct DreamList: View {
     var body: some View {
         NavigationView(){
             List {
-                ForEach(session.dreams, id: \.self) { dream in
+                ForEach(dreams) { dream in
                     NavigationLink(
                         destination: DreamDetail(dream: dream)
                     ) {
                         DreamListRow(dream: dream)
                     }
-                }.onDelete(perform: deleteRow).onMove(perform: move)
+                }
+                .onDelete(perform: deleteRow)
+                .onMove(perform: move)
             }
             .navigationBarTitle("Ma liste")
             .navigationBarItems(leading:(
@@ -46,15 +50,29 @@ struct DreamList: View {
                     }
                 ), trailing: EditButton()
             )
-        }//.accentColor( .white)
+        }
     }
     
     private func deleteRow(at indexSet: IndexSet) {
-        self.session.dreams.remove(atOffsets: indexSet)
+        let item = dreams[indexSet.first!]
+        managedObjectContext.delete(item)
+        saveDreams()
     }
     
     private func move(from source: IndexSet, to destination: Int) {
-        self.session.dreams.move(fromOffsets: source, toOffset: destination)
+        var copyArray = Array(dreams)
+        copyArray.move(fromOffsets: source, toOffset: destination)
+        copyArray.enumerated().forEach { $1.order = $0 }
+        saveDreams()
+    }
+    
+    private func saveDreams(){
+        do {
+            try managedObjectContext.save()
+        } catch {
+            print(error)
+            //TODO afficher une popup
+        }
     }
 }
 

@@ -9,10 +9,20 @@
 import SwiftUI
 import Combine
 
+class MapState: ObservableObject{
+    @Published var place: Place = PlaceStore.shared.get(id: "1") {
+        didSet {
+            self.bottomSheetShown = true
+        }
+    }
+    @Published var bottomSheetShown: Bool = false
+}
+
 struct ContentView: View {
     @EnvironmentObject var session: Session
     @State private var selection = 0
- 
+    @ObservedObject var mapState = MapState()
+    
     var body: some View {
         TabView(selection: $selection){
             Store()
@@ -23,7 +33,7 @@ struct ContentView: View {
                     }
                 }
                 .tag(0)
-            PlacesMap()
+            PlacesMap(place: self.$mapState.place)
                 .tabItem {
                     VStack {
                         Image(systemName: "mappin.and.ellipse")
@@ -48,7 +58,17 @@ struct ContentView: View {
                 }
                 .tag(3)
             
-        }.edgesIgnoringSafeArea(.top)
+            }.overlay(
+                GeometryReader { geometry in
+                    BottomSheetView(
+                        isOpen: self.$mapState.bottomSheetShown,
+                        maxHeight: geometry.size.height * 0.4
+                    ) {
+                        PlaceMapDrawer(isOpen: self.$mapState.bottomSheetShown, place: self.$mapState.place)
+                    }
+                }
+                , alignment: .bottom)
+            .edgesIgnoringSafeArea(.top)
     }
 }
 

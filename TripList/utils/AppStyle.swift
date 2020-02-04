@@ -26,14 +26,14 @@ class AppStyle {
 }
 
 extension UIColor {
-    static var myAppRed: UIColor {
-        return UIColor(red: 1, green: 0.1, blue: 0.1, alpha: 1)
+    static var mapOverlayUnexplored: UIColor {
+        return UIColor.init(red: 244/255, green: 67/255, blue: 54/255, alpha: CGFloat(0.4))
     }
-    static var myAppGreen: UIColor {
-        return UIColor(red: 0, green: 1, blue: 0, alpha: 1)
+    static var mapOverlayExploring: UIColor {
+        return UIColor.init(red: 255/255, green: 152/255, blue: 0/255, alpha: CGFloat(0.4))
     }
-    static var myAppBlue: UIColor {
-        return UIColor(red: 0, green: 0.2, blue: 0.9, alpha: 1)
+    static var mapOverlayExplored: UIColor {
+        return UIColor.init(red: 76/255, green: 175/255, blue: 80/255, alpha: CGFloat(0.4))
     }
 }
 

@@ -12,8 +12,30 @@ struct PlaceDetailsButtons: View {
     @EnvironmentObject var session: Session
     var place: Place
     @State private var isComplete: Bool = false
-    @State private var isInDream: Bool = false
+    @Environment(\.managedObjectContext) var managedObjectContext
+    @FetchRequest(fetchRequest: Dream.getAllDreams()) var dreams: FetchedResults<Dream>
     private let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
+    
+    private func addDream(){
+        let dream = Dream(context: self.managedObjectContext)
+        dream.configure(place: self.place)
+        dream.order = (self.dreams.last?.order ?? 0) + 1
+        saveContext()
+    }
+    
+    private func saveContext(){
+        do {
+            try self.managedObjectContext.save()
+            self.notificationFeedbackGenerator.notificationOccurred(.success)
+        } catch {
+            print(error)
+            //TODO
+        }
+    }
+    
+    private func getDreamIndexIfExist() -> Int? {
+        return dreams.firstIndex(where: {$0.placeId == place.id})
+    }
     
     var body: some View {
         HStack {
@@ -25,8 +47,13 @@ struct PlaceDetailsButtons: View {
                     self.session.setComplete(placeId: self.place.id, value: true)
                     self.isComplete = true
                     
-                    self.session.dreams.removeAll(where: { self.place.id == $0.placeId }) // Si completer, on le retire auto des Dreams
-                    self.isInDream = false
+                    // Si completer, on le retire automatiquement des Dreams si contenu dans le dreams
+                    if let index = self.getDreamIndexIfExist() {
+                        let item = self.dreams[index]
+                        item.completed = true
+                        self.saveContext()
+                    }
+                    
                     self.notificationFeedbackGenerator.notificationOccurred(.success)
                 }
             }) {
@@ -43,10 +70,12 @@ struct PlaceDetailsButtons: View {
             
             
             if (!self.isComplete) {
-                if self.isInDream {
+                
+                if getDreamIndexIfExist() != nil {
                     Button(action: {
-                        self.session.dreams.removeAll(where: { self.place.id == $0.placeId })
-                        self.isInDream = false
+                        let item = self.dreams[self.getDreamIndexIfExist()!]
+                        self.managedObjectContext.delete(item)
+                        self.saveContext()
                     }) {
                         Text("Retirer de Ma Liste")
                             .font(.headline)
@@ -54,31 +83,24 @@ struct PlaceDetailsButtons: View {
                     .padding()
                     .foregroundColor(.red)
                 } else {
-                    HStack {
-                        Button(action: {
-                            self.session.dreams.append(Dream(place: self.place))
-                            self.isInDream = true
-                            self.notificationFeedbackGenerator.notificationOccurred(.success)
-                        }) {
-                            HStack{
-                                Image(systemName: "plus")
-                                Text("Ajouter à Ma Liste")
-                                    .font(.headline)
-                            }
+                    Button(action: {
+                        self.addDream()
+                    }) {
+                        HStack{
+                            Image(systemName: "plus")
+                            Text("Ajouter à Ma Liste")
+                                .font(.headline)
                         }
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(Color.orange)
-                        .cornerRadius(10)
-                        
-                        
                     }
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color.orange)
+                    .cornerRadius(10)
                 }
             }
         }.onAppear(perform: {
             self.notificationFeedbackGenerator.prepare()
             self.isComplete = self.session.isCompleted(placeId: self.place.id)
-            self.isInDream = self.session.isInDream(placeId: self.place.id)
         })
     }
 }

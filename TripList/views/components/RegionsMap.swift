@@ -13,41 +13,51 @@ import Combine
 
 struct RegionsMapController: UIViewRepresentable {
     @EnvironmentObject var session: Session
+    @Binding var place: Place
+    
+    
     
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
     
     func makeUIView(context: Context) -> MKMapView{
-        MKMapView(frame: .zero)
-    }
-    
-    
-    func updateUIView(_ view: MKMapView, context: Context){
+        let view = MKMapView(frame: .zero)
         view.delegate = context.coordinator
         view.mapType = .mutedStandard
         
         view.register(PlaceAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         
-        let coordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 46.183753, longitude: 2.4)
-        let span = MKCoordinateSpan(latitudeDelta: 14.5, longitudeDelta: 14.5)
-        let region = MKCoordinateRegion(center: coordinate, span: span)
-        view.setRegion(region, animated: true)
+        centerMapOnFrance(map: view)
         
+        view.removeOverlays(view.overlays)
         if let file = Bundle.main.url(forResource: "regions", withExtension: "geojson"),
             let data = try? Data(contentsOf: file),
             let geojsonFeatures = try? MKGeoJSONDecoder().decode(data),
             let features = geojsonFeatures as? [MKGeoJSONFeature]
         {
-                
             let geometry = features.flatMap( {$0.geometry})
             let overlays = geometry.compactMap({$0 as? MKOverlay})
-            view.addOverlays(overlays, level: MKOverlayLevel.aboveRoads)
             
-            let places = placesData
-            let annotations = places.map{PlaceAnnotation(place: $0, completed: session.isCompleted(placeId: $0.id))}
-            view.addAnnotations(annotations)
+            view.addOverlays(overlays, level: MKOverlayLevel.aboveRoads)
         }
+        
+        return view
+    }
+    
+    
+    func updateUIView(_ view: MKMapView, context: Context){
+        view.removeAnnotations(view.annotations)
+        let places = placesData
+        let annotations = places.map{PlaceAnnotation(place: $0, completed: session.isCompleted(placeId: $0.id))}
+        view.addAnnotations(annotations)
+    }
+    
+    func centerMapOnFrance(map: MKMapView){
+        let coordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 46.183753, longitude: 2.4)
+        let span = MKCoordinateSpan(latitudeDelta: 14.5, longitudeDelta: 14.5)
+        let region = MKCoordinateRegion(center: coordinate, span: span)
+        map.setRegion(region, animated: true)
     }
     
     class Coordinator: NSObject, MKMapViewDelegate {
@@ -58,15 +68,6 @@ struct RegionsMapController: UIViewRepresentable {
         }
 
         func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-            
-            let alpha = CGFloat(0.4)
-            let colors: [UIColor] = [
-                UIColor.init(red: 244/255, green: 67/255, blue: 54/255, alpha: alpha),
-                UIColor.init(red: 33/255, green: 150/255, blue: 243/255, alpha: alpha),
-                UIColor.init(red: 255/255, green: 235/255, blue: 59/255, alpha: alpha),
-                UIColor.init(red: 121/255, green: 85/255, blue: 72/255, alpha: alpha),
-            ]
-            
             let renderer: MKOverlayPathRenderer
             switch overlay {
                 case is MKMultiPolygon:
@@ -78,7 +79,7 @@ struct RegionsMapController: UIViewRepresentable {
             }
             renderer.lineWidth = 1
             renderer.strokeColor = UIColor.gray
-            renderer.fillColor = colors.randomElement()
+            renderer.fillColor = UIColor.mapOverlayExploring
             
             return renderer
         }
@@ -87,6 +88,8 @@ struct RegionsMapController: UIViewRepresentable {
             if view.annotation is PlaceAnnotation {
                 let placeAnnotation = view.annotation as! PlaceAnnotation
                 print(placeAnnotation.place.title)
+                self.parent.place = placeAnnotation.place
+                mapView.setCenter(placeAnnotation.coordinate, animated: true)
             }
         }
     }
@@ -94,7 +97,7 @@ struct RegionsMapController: UIViewRepresentable {
 
 struct RegionsMap_Previews: PreviewProvider {
     static var previews: some View {
-        RegionsMapController().environmentObject(Session())
+        RegionsMapController(place: .constant(PlaceStore.shared.get(id: "1"))).environmentObject(Session())
     }
 }
 

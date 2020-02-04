@@ -15,10 +15,10 @@ struct Progression: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(PlaceStore.shared.getCategories()) { category in
+                ForEach(PlaceStore.shared.getRegions()) { region in
                     
-                    Section(header: Text(category.title)) {
-                        QGrid(PlaceStore.shared.getAllForCategory(category: category.category),
+                    Section(header: Text(region.name)) {
+                        QGrid(PlaceStore.shared.getAllForRegion(regionId: region.id),
                           columns: 5,
                           columnsInLandscape: 10,
                           vSpacing: 0,
@@ -27,12 +27,12 @@ struct Progression: View {
                           hPadding: 0
                         ) { place in
                             NavigationLink(
-                                destination: PlacePager(places: PlaceStore.shared.getAllForCategory(category: category.category), initialePlace: place)
+                                destination: PlacePager(places: PlaceStore.shared.getAllForRegion(regionId: region.id), initialePlace: place)
                             ) {
                                 ProgreesionItem(place: place)
                             }
                         }
-                        .frame(height: ceil(CGFloat(PlaceStore.shared.getAllForCategory(category: category.category).count) / 6.0)*50+20)
+                        .frame(height: ceil(CGFloat(PlaceStore.shared.getAllForRegion(regionId: region.id).count) / 5.0)*70)
                         .listRowInsets(EdgeInsets())
                     }
                 }

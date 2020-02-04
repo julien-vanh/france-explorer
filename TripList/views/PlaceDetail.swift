@@ -13,6 +13,7 @@ struct PlaceDetail: View {
     @EnvironmentObject var session: Session
     var place: Place
     @State private var showCredits = false
+    
 
     var body: some View {
         ScrollView(.vertical) {

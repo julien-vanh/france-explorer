@@ -7,35 +7,32 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct DreamListRow: View {
     @EnvironmentObject var session: Session
-    var dream: Dream
-    
-    var index: Int {
-        session.dreams.firstIndex(where: { $0.id == dream.id }) ?? -1
-    }
+    @Environment(\.managedObjectContext) var managedObjectContext
+    @ObservedObject var dream: Dream
     
     var body: some View {
         HStack {
-            if index >= 0 {
-                Button(action: {
-                    self.session.dreams[self.index].completed.toggle()
-                    self.session.setComplete(placeId: self.dream.placeId, value: self.session.dreams[self.index].completed)
-                }) {
-                    Image(systemName: self.session.dreams[self.index]
-                        .completed ? "circle.fill" : "circle")
-                        .foregroundColor(.orange)
-                }.buttonStyle(BorderlessButtonStyle())
-            }
+            Button(action: {
+                self.toggle()
+            }) {
+                Image(systemName: self.dream.completed ? "circle.fill" : "circle").foregroundColor(.orange)
+            }.buttonStyle(BorderlessButtonStyle())
             
-            Text(dream.title)
+            Text(dream.title ?? "")
         }
     }
-}
-
-struct DreamListRow_Previews: PreviewProvider {
-    static var previews: some View {
-        DreamListRow(dream: Dream(place: PlaceStore.shared.get(id: "2"))).environmentObject(Session())
+    
+    private func toggle(){
+        self.dream.completed.toggle()
+        do {
+            try self.managedObjectContext.save()
+            self.session.setComplete(placeId: self.dream.placeId ?? "0", value: self.dream.completed)
+        } catch {
+            print(error)
+        }
     }
 }

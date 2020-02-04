@@ -7,19 +7,40 @@
 //
 
 import Foundation
+import CoreData
 
-struct Dream: Hashable, Codable, Identifiable {
+public class Dream: NSManagedObject, Identifiable {
+    @NSManaged public var id: UUID?
+    @NSManaged public var createdAt: Date?
+    @NSManaged public var completed: Bool
+    @NSManaged public var title: String?
+    @NSManaged public var placeId: String?
+    @NSManaged public var note: String?
+    @NSManaged public var order: Int
+}
+
+extension Dream {
+    override public func awakeFromInsert() {
+        setPrimitiveValue(UUID(), forKey: "id")
+        setPrimitiveValue(Date(), forKey: "createdAt")
+        setPrimitiveValue(false, forKey: "completed")
+        setPrimitiveValue("", forKey: "title")
+        setPrimitiveValue("", forKey: "note")
+    }
     
-    var id = UUID()
-    var title: String
-    var note: String
-    var completed: Bool
-    var placeId: String
+    static func getAllDreams() -> NSFetchRequest<Dream> {
+        let request: NSFetchRequest<Dream> = Dream.fetchRequest() as! NSFetchRequest<Dream>
+        request.sortDescriptors = [NSSortDescriptor(key: "order", ascending: true)]
+          
+        return request
+    }
     
-    init(place: Place){
-        self.title = place.title
-        self.completed = false
-        self.note = ""
-        self.placeId = place.id
+    func configure(place: Place){
+        id = UUID()
+        createdAt = Date()
+        completed = false
+        title = place.title
+        placeId = place.id
+        note = ""
     }
 }

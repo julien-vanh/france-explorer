@@ -22,7 +22,7 @@ struct StoreCategoriesRow: View {
                 HStack(alignment: .top, spacing: 0) {
                     ForEach(storeCategories) { storeCategory in
                         NavigationLink(
-                            destination: PlacesMap()
+                            destination: PlacesList()
                         ) {
                             Text(storeCategory.title)
                                 .fontWeight(.semibold)

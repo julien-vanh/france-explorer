@@ -7,17 +7,22 @@
 //
 
 import SwiftUI
+import Combine
+
+
 
 struct PlacesMap: View {
-    
+    @Binding var place: Place
     
     var body: some View {
-        RegionsMapController().edgesIgnoringSafeArea(.top)
+        GeometryReader { geometry in
+            RegionsMapController(place: self.$place)
+        }.edgesIgnoringSafeArea(.all)
     }
 }
 
 struct PlacesMap_Previews: PreviewProvider {
     static var previews: some View {
-        PlacesMap()
+        PlacesMap(place: .constant(PlaceStore.shared.get(id: "1")))
     }
 }

@@ -9,6 +9,8 @@
 import Foundation
 import MapKit
 
+
+
 class PlaceAnnotation: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
     var place: Place

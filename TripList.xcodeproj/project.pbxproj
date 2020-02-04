@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F91DED9E23E6EAE800D8FFD7 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91DED9D23E6EAE800D8FFD7 /* BottomSheetView.swift */; };
+		F91DEDA023E6F4DD00D8FFD7 /* PlaceMapDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91DED9F23E6F4DD00D8FFD7 /* PlaceMapDrawer.swift */; };
+		F91DEDA323E8A26E00D8FFD7 /* TripList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F91DEDA123E8A26D00D8FFD7 /* TripList.xcdatamodeld */; };
 		F95DE55A23DE2F0F00BE1BD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE55923DE2F0F00BE1BD5 /* AppDelegate.swift */; };
 		F95DE55C23DE2F0F00BE1BD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE55B23DE2F0F00BE1BD5 /* SceneDelegate.swift */; };
 		F95DE55E23DE2F0F00BE1BD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE55D23DE2F0F00BE1BD5 /* ContentView.swift */; };
@@ -80,6 +83,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F91DED9D23E6EAE800D8FFD7 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
+		F91DED9F23E6F4DD00D8FFD7 /* PlaceMapDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMapDrawer.swift; sourceTree = "<group>"; };
+		F91DEDA223E8A26E00D8FFD7 /* TripList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TripList.xcdatamodel; sourceTree = "<group>"; };
 		F95DE55623DE2F0E00BE1BD5 /* TripList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F95DE55923DE2F0F00BE1BD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F95DE55B23DE2F0F00BE1BD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -197,6 +203,7 @@
 				F95DE56423DE2F0F00BE1BD5 /* LaunchScreen.storyboard */,
 				F9DC21F323E232650023B8EF /* Localizable.strings */,
 				F95DE56723DE2F0F00BE1BD5 /* Info.plist */,
+				F91DEDA123E8A26D00D8FFD7 /* TripList.xcdatamodeld */,
 				F95DE56123DE2F0F00BE1BD5 /* Preview Content */,
 			);
 			path = TripList;
@@ -233,6 +240,7 @@
 				F95DE57C23DE349500BE1BD5 /* PlaceDetail.swift */,
 				F9DC222C23E31FEE0023B8EF /* PlaceDetailsButtons.swift */,
 				F9DC222A23E31DF30023B8EF /* PlaceDetailPhotos.swift */,
+				F91DED9F23E6F4DD00D8FFD7 /* PlaceMapDrawer.swift */,
 				F95DE57F23DE349600BE1BD5 /* AssociatesRow.swift */,
 				F95DE58623DE349600BE1BD5 /* Progression.swift */,
 				F95DE57D23DE349600BE1BD5 /* Store.swift */,
@@ -277,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				F95DE57823DE349500BE1BD5 /* MapView.swift */,
+				F91DED9D23E6EAE800D8FFD7 /* BottomSheetView.swift */,
 				F9DC21D323E0CEC20023B8EF /* RegionsMap.swift */,
 				F95DE57A23DE349500BE1BD5 /* AutoFocusTextField.swift */,
 				F95DE58323DE349600BE1BD5 /* ImageCarouselView.swift */,
@@ -443,6 +452,8 @@
 				F9C9C68623E4B248002C1DA0 /* PlaceAnnotation.swift in Sources */,
 				F95DE55A23DE2F0F00BE1BD5 /* AppDelegate.swift in Sources */,
 				F9DC21D423E0CEC20023B8EF /* RegionsMap.swift in Sources */,
+				F91DEDA323E8A26E00D8FFD7 /* TripList.xcdatamodeld in Sources */,
+				F91DEDA023E6F4DD00D8FFD7 /* PlaceMapDrawer.swift in Sources */,
 				F95DE5B923DE416D00BE1BD5 /* Dream.swift in Sources */,
 				F95DE59C23DE349700BE1BD5 /* TextView.swift in Sources */,
 				F95DE58C23DE349700BE1BD5 /* MapView.swift in Sources */,
@@ -459,6 +470,7 @@
 				F95DE5A723DE34A900BE1BD5 /* Place.swift in Sources */,
 				F95DE59123DE349700BE1BD5 /* Store.swift in Sources */,
 				F9C9C68A23E4D287002C1DA0 /* UIColor+hexString.swift in Sources */,
+				F91DED9E23E6EAE800D8FFD7 /* BottomSheetView.swift in Sources */,
 				F95DE59E23DE349700BE1BD5 /* DreamList.swift in Sources */,
 				F9DC21E323E231840023B8EF /* WikipediaService.swift in Sources */,
 				F95DE5BB23DE422F00BE1BD5 /* DreamDetail.swift in Sources */,
@@ -726,6 +738,19 @@
 			productName = KingfisherSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		F91DEDA123E8A26D00D8FFD7 /* TripList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F91DEDA223E8A26E00D8FFD7 /* TripList.xcdatamodel */,
+			);
+			currentVersion = F91DEDA223E8A26E00D8FFD7 /* TripList.xcdatamodel */;
+			path = TripList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F95DE54E23DE2F0E00BE1BD5 /* Project object */;
 }
