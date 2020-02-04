@@ -33,7 +33,7 @@ struct ContentView: View {
                     }
                 }
                 .tag(0)
-            PlacesMap(place: self.$mapState.place)
+            PlacesMap(mapState: self.mapState)
                 .tabItem {
                     VStack {
                         Image(systemName: "mappin.and.ellipse")
@@ -64,7 +64,7 @@ struct ContentView: View {
                         isOpen: self.$mapState.bottomSheetShown,
                         maxHeight: geometry.size.height * 0.4
                     ) {
-                        PlaceMapDrawer(isOpen: self.$mapState.bottomSheetShown, place: self.$mapState.place)
+                        PlaceMapDrawer(mapState: self.mapState)
                     }
                 }
                 , alignment: .bottom)

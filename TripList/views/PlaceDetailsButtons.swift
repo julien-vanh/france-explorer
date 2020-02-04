@@ -11,7 +11,7 @@ import SwiftUI
 struct PlaceDetailsButtons: View {
     @EnvironmentObject var session: Session
     var place: Place
-    @State private var isComplete: Bool = false
+    //@State private var isComplete: Bool = false
     @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(fetchRequest: Dream.getAllDreams()) var dreams: FetchedResults<Dream>
     private let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
@@ -42,10 +42,10 @@ struct PlaceDetailsButtons: View {
             Button(action: {
                 if self.session.isCompleted(placeId: self.place.id) {
                     self.session.setComplete(placeId: self.place.id, value: false)
-                    self.isComplete = false
+                    
                 } else {
                     self.session.setComplete(placeId: self.place.id, value: true)
-                    self.isComplete = true
+                    
                     
                     // Si completer, on le retire automatiquement des Dreams si contenu dans le dreams
                     if let index = self.getDreamIndexIfExist() {
@@ -58,7 +58,7 @@ struct PlaceDetailsButtons: View {
                 }
             }) {
                 HStack {
-                    Image(systemName: self.isComplete ? "checkmark.circle" : "circle")
+                    Image(systemName: self.session.isCompleted(placeId: self.place.id) ? "checkmark.circle" : "circle")
                     Text("Déjà vu")
                 }
                 .font(.headline)
@@ -69,7 +69,7 @@ struct PlaceDetailsButtons: View {
             .cornerRadius(10)
             
             
-            if (!self.isComplete) {
+            if (!self.session.isCompleted(placeId: self.place.id)) {
                 
                 if getDreamIndexIfExist() != nil {
                     Button(action: {
@@ -100,7 +100,8 @@ struct PlaceDetailsButtons: View {
             }
         }.onAppear(perform: {
             self.notificationFeedbackGenerator.prepare()
-            self.isComplete = self.session.isCompleted(placeId: self.place.id)
+            //self.isComplete = self.session.isCompleted(placeId: self.place.id)
+            //print("compute isComplete", self.isComplete, self.place)
         })
     }
 }

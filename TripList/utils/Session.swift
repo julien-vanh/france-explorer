@@ -19,7 +19,7 @@ class Session: ObservableObject {
     @Published var isPremium: Bool = false
     
     init(){
-        loadData()
+        //loadData()
     }
     
     

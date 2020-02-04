@@ -12,17 +12,17 @@ import Combine
 
 
 struct PlacesMap: View {
-    @Binding var place: Place
+    @ObservedObject var mapState: MapState
     
     var body: some View {
         GeometryReader { geometry in
-            RegionsMapController(place: self.$place)
+            RegionsMapController(mapState: self.mapState)
         }.edgesIgnoringSafeArea(.all)
     }
 }
 
 struct PlacesMap_Previews: PreviewProvider {
     static var previews: some View {
-        PlacesMap(place: .constant(PlaceStore.shared.get(id: "1")))
+        PlacesMap(mapState: MapState())
     }
 }

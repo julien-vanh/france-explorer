@@ -9,14 +9,13 @@
 import SwiftUI
 
 struct PlaceMapDrawer: View {
-    @Binding var isOpen: Bool
-    @Binding var place: Place
+    @ObservedObject var mapState: MapState
     
     
     var body: some View {
         VStack {
             HStack {
-                Text(place.title)
+                Text(self.mapState.place.title)
                 .font(.title)
                 .padding(.leading)
                 
@@ -32,7 +31,7 @@ struct PlaceMapDrawer: View {
                 .frame(width: 40, height: 40)
                 .padding([.top, .trailing], 10.0)
                 .onTapGesture {
-                    self.isOpen.toggle()
+                    self.mapState.bottomSheetShown.toggle()
                 }
             }
             
@@ -40,10 +39,10 @@ struct PlaceMapDrawer: View {
                 VStack {
                     
                     
-                    PlaceDetailsButtons(place: self.place)
+                    PlaceDetailsButtons(place: self.mapState.place)
                     
                     HStack {
-                        ImageStore.shared.image(name: self.place.id)
+                        ImageStore.shared.image(name: self.mapState.place.id)
                             .resizable()
                             .scaledToFill()
                             .frame(width: 200, height: 150)
@@ -74,6 +73,6 @@ struct PlaceMapDrawer: View {
 
 struct PlaceMapDrawer_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceMapDrawer(isOpen: .constant(true), place: .constant(PlaceStore.shared.get(id: "1")))
+        PlaceMapDrawer(mapState: MapState())
     }
 }

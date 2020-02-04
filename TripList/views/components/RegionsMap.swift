@@ -13,7 +13,7 @@ import Combine
 
 struct RegionsMapController: UIViewRepresentable {
     @EnvironmentObject var session: Session
-    @Binding var place: Place
+    @ObservedObject var mapState: MapState
     
     
     
@@ -88,7 +88,7 @@ struct RegionsMapController: UIViewRepresentable {
             if view.annotation is PlaceAnnotation {
                 let placeAnnotation = view.annotation as! PlaceAnnotation
                 print(placeAnnotation.place.title)
-                self.parent.place = placeAnnotation.place
+                self.parent.mapState.place = placeAnnotation.place
                 mapView.setCenter(placeAnnotation.coordinate, animated: true)
             }
         }
@@ -97,7 +97,7 @@ struct RegionsMapController: UIViewRepresentable {
 
 struct RegionsMap_Previews: PreviewProvider {
     static var previews: some View {
-        RegionsMapController(place: .constant(PlaceStore.shared.get(id: "1"))).environmentObject(Session())
+        RegionsMapController(mapState: MapState()).environmentObject(Session())
     }
 }
 

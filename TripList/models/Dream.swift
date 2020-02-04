@@ -20,13 +20,6 @@ public class Dream: NSManagedObject, Identifiable {
 }
 
 extension Dream {
-    override public func awakeFromInsert() {
-        setPrimitiveValue(UUID(), forKey: "id")
-        setPrimitiveValue(Date(), forKey: "createdAt")
-        setPrimitiveValue(false, forKey: "completed")
-        setPrimitiveValue("", forKey: "title")
-        setPrimitiveValue("", forKey: "note")
-    }
     
     static func getAllDreams() -> NSFetchRequest<Dream> {
         let request: NSFetchRequest<Dream> = Dream.fetchRequest() as! NSFetchRequest<Dream>

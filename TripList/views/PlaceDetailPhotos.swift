@@ -17,17 +17,18 @@ struct PlaceDetailPhotos: View {
     var body: some View {
         
         ASCollectionView(data: pageImages, dataID: \.self) { pageImage, _ in
-            KFImage(pageImage.url).placeholder {
-                // Placeholder while downloading.
-                Image(systemName: "arrow.2.circlepath.circle")
-                    .font(.largeTitle)
-                    .opacity(0.3)
-            }
+            GeometryReader { geometry in
+                KFImage(pageImage.url).placeholder {
+                    // Placeholder while downloading.
+                    Image(systemName: "arrow.2.circlepath.circle")
+                        .font(.largeTitle)
+                        .opacity(0.3)
+                }
                 .renderingMode(.original)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                
-                .frame(width: 200.0, height: 200.0).clipped()
+                .frame(width: geometry.size.width)
+            }.clipped()
         }
         .layout {
             .grid(layoutMode: .adaptive(withMinItemSize: 150),
@@ -36,8 +37,7 @@ struct PlaceDetailPhotos: View {
                   itemSize: .absolute(150))
         }
         .scrollIndicatorsEnabled(false)
-        .navigationBarTitle(place.title)
-        .edgesIgnoringSafeArea([.top, .horizontal])
+        .navigationBarTitle(Text(place.title), displayMode: .inline)
         .onAppear(perform: {
             WikipediaService.shared.getPageImages(288657) { result in
                 switch result {
