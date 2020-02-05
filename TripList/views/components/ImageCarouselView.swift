@@ -12,10 +12,8 @@ struct ImageCarouselView<Content: View>: View {
     private var numberOfImages: Int
     private var content: Content
 
-    // 4
     @State private var currentIndex: Int = 0
     
-    // 5
     private let timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
 
     // 6
@@ -25,30 +23,25 @@ struct ImageCarouselView<Content: View>: View {
     }
 
     var body: some View {
-        // 1
         GeometryReader { geometry in
-            // 2
+            
             ZStack(alignment: .bottom) {
                HStack(spacing: 0) {
-                   // 3
                    self.content
                }
                .frame(width: geometry.size.width, height: geometry.size.height, alignment: .leading) // 4
                .offset(x: CGFloat(self.currentIndex) * -geometry.size.width, y: 0) // 5
                .animation(.spring()) // 6
                .onReceive(self.timer) { _ in
-                   // 7
+                   
                    self.currentIndex = (self.currentIndex + 1) % 3
                }
-               // 2
+               
                HStack(spacing: 3) {
-                   // 3
                    ForEach(0..<self.numberOfImages, id: \.self) { index in
-                        // 4
                        Circle()
-                           .frame(width: index == self.currentIndex ? 10 : 8,
-                                  height: index == self.currentIndex ? 10 : 8)
-                           .foregroundColor(index == self.currentIndex ? Color.blue : .white)
+                           .frame(width: 8, height: 8)
+                           .foregroundColor(index == self.currentIndex ? Color.gray : .white)
                            .overlay(Circle().stroke(Color.gray, lineWidth: 1))
                            .padding(.bottom, 8)
                            .animation(.spring())

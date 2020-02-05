@@ -29,7 +29,7 @@ struct Progression: View {
                             NavigationLink(
                                 destination: PlacePager(places: PlaceStore.shared.getAllForRegion(regionId: region.id), initialePlace: place)
                             ) {
-                                ProgreesionItem(place: place)
+                                ProgressionItem(place: place)
                             }
                         }
                         .frame(height: ceil(CGFloat(PlaceStore.shared.getAllForRegion(regionId: region.id).count) / 5.0)*70)
@@ -50,7 +50,7 @@ struct Progression_Previews: PreviewProvider {
 
 
 
-struct ProgreesionItem: View {
+struct ProgressionItem: View {
     @EnvironmentObject var session: Session
     var place: Place
     
@@ -58,7 +58,7 @@ struct ProgreesionItem: View {
         ImageStore.shared.image(name: place.id)
             .renderingMode(.original)
             .resizable()
-            .grayscale(self.session.isCompleted(placeId: place.id) ? 0.0 : 0.99)
+            //.grayscale(self.session.isCompleted(placeId: place.id) ? 0.0 : 0.99)
             .aspectRatio(contentMode: .fill)
             .frame(width: 70, height: 70).clipped()
     }

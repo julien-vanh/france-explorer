@@ -16,6 +16,7 @@ class MapState: ObservableObject{
         }
     }
     @Published var bottomSheetShown: Bool = false
+    @Published var update: Bool = false
 }
 
 struct ContentView: View {

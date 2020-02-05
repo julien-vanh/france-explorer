@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct DreamList: View {
-    @EnvironmentObject private var session: Session
     @State private var showingSheet = false
     @Environment(\.editMode) var mode
     @Environment(\.managedObjectContext) var managedObjectContext
@@ -78,6 +77,6 @@ struct DreamList: View {
 
 struct DreamList_Previews: PreviewProvider {
     static var previews: some View {
-        DreamList().environmentObject(Session())
+        DreamList()
     }
 }

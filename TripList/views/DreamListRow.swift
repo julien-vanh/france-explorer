@@ -10,9 +10,15 @@ import SwiftUI
 import CoreData
 
 struct DreamListRow: View {
-    @EnvironmentObject var session: Session
     @Environment(\.managedObjectContext) var managedObjectContext
     @ObservedObject var dream: Dream
+    var fetchRequest: FetchRequest<Completion>
+    var completions: FetchedResults<Completion> { fetchRequest.wrappedValue }
+    
+    init(dream: Dream) {
+        self.dream = dream
+        fetchRequest = FetchRequest<Completion>(entity: Completion.entity(), sortDescriptors: [], predicate: NSPredicate(format: "placeId == %@", dream.placeId ?? 0))
+    }
     
     var body: some View {
         HStack {
@@ -28,9 +34,16 @@ struct DreamListRow: View {
     
     private func toggle(){
         self.dream.completed.toggle()
+        if(self.dream.completed){
+            let completion = Completion(context: self.managedObjectContext)
+            completion.configure(placeId: self.dream.placeId ?? "0")
+        } else {
+            self.completions.forEach({
+                self.managedObjectContext.delete($0)
+            })
+        }
         do {
             try self.managedObjectContext.save()
-            self.session.setComplete(placeId: self.dream.placeId ?? "0", value: self.dream.completed)
         } catch {
             print(error)
         }

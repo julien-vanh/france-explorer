@@ -43,7 +43,7 @@ struct PlaceDetail: View {
                 
                 Text(self.place.title).font(.largeTitle)
                 
-                //PlaceDetailsButtons(place: self.place)
+                PlaceDetailsButtons(place: self.place)
                 
                 if self.place.description != nil {
                     Text(self.place.description).padding()

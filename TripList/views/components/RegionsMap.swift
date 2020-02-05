@@ -8,13 +8,12 @@
 
 import SwiftUI
 import MapKit
-import Combine
+import CoreData
 
 
 struct RegionsMapController: UIViewRepresentable {
-    @EnvironmentObject var session: Session
     @ObservedObject var mapState: MapState
-    
+    @FetchRequest(fetchRequest: Completion.getAllCompletion()) var completions: FetchedResults<Completion>
     
     
     func makeCoordinator() -> Coordinator {
@@ -47,10 +46,15 @@ struct RegionsMapController: UIViewRepresentable {
     
     
     func updateUIView(_ view: MKMapView, context: Context){
+        print("UPDATE updateUIView")
         view.removeAnnotations(view.annotations)
         let places = placesData
-        let annotations = places.map{PlaceAnnotation(place: $0, completed: session.isCompleted(placeId: $0.id))}
+        let annotations = places.map{PlaceAnnotation(place: $0, completed: self.placeIsComplete(place: $0))}
         view.addAnnotations(annotations)
+    }
+    
+    func placeIsComplete(place: Place) -> Bool{
+        return completions.firstIndex(where: {$0.placeId == place.id}) != nil
     }
     
     func centerMapOnFrance(map: MKMapView){

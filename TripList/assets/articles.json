@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "title": "Top 10 des parcs d'attractions",
+    "description": "Le décryptage du classement européen est d’ailleurs d’autant plus intéressant. Selon TEA, les parcs qui ont connu la plus forte croissance de fréquentation sont ceux qui « construisent leurs propres destinations ». Si Disneyland Resort Paris, avec ses deux parcs, domine mécaniquement le classement (15 141 000 visiteurs ; + 1,9%) ; le Parc Astérix, avec 2 174 000 visiteurs (+8,8%) en 2018, est ainsi récompensé pour sa politique d’investissement et son expansion hôtelière (13e place). Le Futuroscope, par contre, accuse une baisse de fréquentation notable avec 1,850,000 visiteurs (-7,5%) et pointe à la 18e position. Mais le parc, piloté par la Compagnie des Alpes (qui exploite également le Parc Astérix), accueillera une nouvelle attraction majeure fin 2019 et ouvrira même un parc dédié aux enfants d’ici quelques années. La France, de manière générale, attire 21,5 millions de visiteurs dans ses 5 parcs classés dans le Top 20.",
+    "places": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Inmanquables de Paris",
+    "description": "Voici la liste des lieux à voir lors de votre visite à Paris.",
+    "places": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "18",
+      "20"
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Top 5 du patrimoine français",
+    "description": "Top 5 du patrimoine français",
+    "places": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  }
+]

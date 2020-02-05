@@ -14,33 +14,14 @@ fileprivate typealias _StateDictionary = [String: Bool]
 
 
 class Session: ObservableObject {
-    private var interests: _StateDictionary = [:]
-    private var progression: _StateDictionary = [:]
     @Published var isPremium: Bool = false
     
     init(){
         //loadData()
     }
+
     
-    
-    //Interest
-    public func setInterest(placeId: String, value: Bool){
-        if value == true {
-            interests[placeId] = true
-        } else {
-            interests[placeId] = false
-        }
-    }
-    
-    public func isInteresting(placeId: String) -> Bool{
-        return interests[placeId] == true
-    }
-    
-    public func isQualified(placeId: String) -> Bool{
-        return interests.keys.contains(placeId)
-    }
-    
-    
+    /*
     //Progression
     public func isCompleted(placeId: String) -> Bool{
         return progression.keys.contains(placeId)
@@ -81,4 +62,6 @@ class Session: ObservableObject {
             UserDefaults.standard.removePersistentDomain(forName: appDomain)
         }
     }
+ 
+ */
 }

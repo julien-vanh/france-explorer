@@ -17,6 +17,7 @@ struct PlacesList: View {
     }
     
     init(category: Category){
+        self.category = category
         places = PlaceStore.shared.getAllForCategory(category: category.category)
     }
     

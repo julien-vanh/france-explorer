@@ -9,12 +9,26 @@
 import SwiftUI
 
 struct PlaceDetailsButtons: View {
-    @EnvironmentObject var session: Session
     var place: Place
-    //@State private var isComplete: Bool = false
     @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(fetchRequest: Dream.getAllDreams()) var dreams: FetchedResults<Dream>
+    var fetchRequest: FetchRequest<Completion>
+    var completions: FetchedResults<Completion> { fetchRequest.wrappedValue }
+    @ObservedObject var mapState: MapState
+    
     private let notificationFeedbackGenerator = UINotificationFeedbackGenerator()
+    
+    init(place: Place) {
+        mapState = MapState()
+        self.place = place
+        fetchRequest = FetchRequest<Completion>(entity: Completion.entity(), sortDescriptors: [], predicate: NSPredicate(format: "placeId == %@", place.id))
+    }
+    
+    init(mapState: MapState) {
+        self.mapState = mapState
+        self.place = mapState.place
+        fetchRequest = FetchRequest<Completion>(entity: Completion.entity(), sortDescriptors: [], predicate: NSPredicate(format: "placeId == %@", place.id))
+    }
     
     private func addDream(){
         let dream = Dream(context: self.managedObjectContext)
@@ -27,9 +41,9 @@ struct PlaceDetailsButtons: View {
         do {
             try self.managedObjectContext.save()
             self.notificationFeedbackGenerator.notificationOccurred(.success)
+            self.mapState.update.toggle()
         } catch {
             print(error)
-            //TODO
         }
     }
     
@@ -40,25 +54,27 @@ struct PlaceDetailsButtons: View {
     var body: some View {
         HStack {
             Button(action: {
-                if self.session.isCompleted(placeId: self.place.id) {
-                    self.session.setComplete(placeId: self.place.id, value: false)
-                    
+                print("click")
+                if self.completions.first != nil {
+                    self.completions.forEach({
+                        self.managedObjectContext.delete($0)
+                    })
                 } else {
-                    self.session.setComplete(placeId: self.place.id, value: true)
+                    let completion = Completion(context: self.managedObjectContext)
+                    completion.configure(placeId: self.place.id)
                     
-                    
-                    // Si completer, on le retire automatiquement des Dreams si contenu dans le dreams
+                    // Si dans la Dreams liste, on complete le Dream
                     if let index = self.getDreamIndexIfExist() {
                         let item = self.dreams[index]
                         item.completed = true
-                        self.saveContext()
                     }
                     
                     self.notificationFeedbackGenerator.notificationOccurred(.success)
                 }
+                self.saveContext()
             }) {
                 HStack {
-                    Image(systemName: self.session.isCompleted(placeId: self.place.id) ? "checkmark.circle" : "circle")
+                    Image(systemName: (completions.first != nil) ? "checkmark.circle" : "circle")
                     Text("Déjà vu")
                 }
                 .font(.headline)
@@ -69,7 +85,7 @@ struct PlaceDetailsButtons: View {
             .cornerRadius(10)
             
             
-            if (!self.session.isCompleted(placeId: self.place.id)) {
+            if (completions.first == nil) {
                 
                 if getDreamIndexIfExist() != nil {
                     Button(action: {
@@ -100,8 +116,6 @@ struct PlaceDetailsButtons: View {
             }
         }.onAppear(perform: {
             self.notificationFeedbackGenerator.prepare()
-            //self.isComplete = self.session.isCompleted(placeId: self.place.id)
-            //print("compute isComplete", self.isComplete, self.place)
         })
     }
 }
