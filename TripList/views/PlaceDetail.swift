@@ -14,6 +14,13 @@ struct PlaceDetail: View {
     var place: Place
     @State private var showCredits = false
     
+    init(){
+        self.place = PlaceStore.shared.getRandom(count: 1)[0]
+    }
+    
+    init(place: Place){
+        self.place = place
+    }
 
     var body: some View {
         ScrollView(.vertical) {

@@ -90,7 +90,7 @@ struct Carousel: View {
 struct RandomButton: View {
     var body: some View {
         VStack(alignment: .center) {
-            NavigationLink(destination: PlaceDetail(place: PlaceStore.shared.getRandom(count: 1)[0])) {
+            NavigationLink(destination: LazyView(PlaceDetail())) {
                 HStack {
                     Image(systemName: "shuffle")
                         .font(.headline)

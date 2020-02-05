@@ -52,9 +52,11 @@ final class PlaceStore: ObservableObject {
     }
     
     func getRandom(count:Int) -> [Place] {
-        var resultCount = 5
+        var resultCount: Int
         if(count > places.keys.count){
             resultCount = places.keys.count
+        } else {
+            resultCount = count
         }
         return Array(places.values.shuffled().prefix(resultCount))
     }
