@@ -7,20 +7,22 @@
 //
 
 import SwiftUI
+import EventKit
 
 struct DreamList: View {
     @State private var showingSheet = false
     @Environment(\.editMode) var mode
     @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(fetchRequest: Dream.getAllDreams()) var dreams: FetchedResults<Dream>
-
+    @State private var isSharePresented: Bool = false
     
     var actionSheet: ActionSheet {
         ActionSheet(title: Text("Ma Liste"), buttons: [
-            .default(Text("Copier dans Rappels")),
-            .default(Text("Imprimer")),
-            .default(Text("Partager")),
-            .destructive(Text("Annuler"))
+            .default(Text("Copier dans Rappels"), action:copyInReminder),
+            .default(Text("Imprimer"), action:printAsPdf),
+            .default(Text("Partager"), action:share),
+            .destructive(Text("Supprimer les complétés"), action:deleteCompletes),
+            .cancel()
         ])
     }
     
@@ -38,18 +40,23 @@ struct DreamList: View {
                 .onMove(perform: move)
             }
             .navigationBarTitle("Ma liste")
-            .navigationBarItems(leading:(
-                    Button(action: {
-                        self.showingSheet = true
-                    }){
-                        Image(systemName: "square.and.arrow.up.fill")
-                            .frame(width: 100, height: 40, alignment: .leading)
-                    }.actionSheet(isPresented: $showingSheet) {
-                        self.actionSheet
-                    }
-                ), trailing: EditButton()
-            )
+            .navigationBarItems(leading:EditButton(), trailing:(
+                Button(action: {
+                    self.showingSheet = true
+                }){
+                    Image(systemName: "ellipsis.circle.fill")
+                        .frame(width: 100, height: 40, alignment: .trailing)
+                        .font(.title)
+                }.actionSheet(isPresented: $showingSheet) {
+                    self.actionSheet
+                }
+            ))
         }
+        .sheet(isPresented: $isSharePresented, onDismiss: {
+            print("Dismiss")
+        }, content: {
+            ActivityViewController(activityItems: self.sharedItems())
+        })
     }
     
     private func deleteRow(at indexSet: IndexSet) {
@@ -72,6 +79,38 @@ struct DreamList: View {
             print(error)
             //TODO afficher une popup
         }
+    }
+    
+    private func copyInReminder(){
+        let dreamsArray = self.dreams.map { (dream) -> Dream in
+            return dream
+        } // car self.dreams n'est pas un array
+        Reminders.copyDreams(dreams: dreamsArray)
+    }
+    
+    private func printAsPdf(){
+        
+    }
+    
+    private func share(){
+        self.isSharePresented.toggle()
+    }
+    
+    private func sharedItems() -> [Any] {
+        var items: [String] = []
+        self.dreams.forEach({ (dream) in
+            items.append(dream.title!)
+        })
+        return items;
+    }
+    
+    private func deleteCompletes(){
+        dreams.forEach { (dream) in
+            if dream.completed {
+                managedObjectContext.delete(dream)
+            }
+        }
+        saveDreams()
     }
 }
 

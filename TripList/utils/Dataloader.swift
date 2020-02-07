@@ -34,6 +34,10 @@ func load<T: Decodable>(_ filename: String) -> T {
     }
 }
 
+enum ImageStoreError: Error {
+    case cannotLoadImage
+}
+
 final class ImageStore {
     typealias _ImageDictionary = [String: CGImage]
     fileprivate var images: _ImageDictionary = [:]
@@ -44,17 +48,17 @@ final class ImageStore {
     
     func image(name: String) -> Image {
         let index = _guaranteeImage(name: name)
-        
         return Image(images.values[index], scale: CGFloat(ImageStore.scale), label: Text(verbatim: name))
     }
 
-    static func loadImage(name: String) -> CGImage {
+    static func loadImage(name: String) throws -> CGImage {
         guard
             let url = Bundle.main.url(forResource: name, withExtension: "jpg"),
             let imageSource = CGImageSourceCreateWithURL(url as NSURL, nil),
             let image = CGImageSourceCreateImageAtIndex(imageSource, 0, nil)
         else {
-            fatalError("Couldn't load image \(name).jpg from main bundle.")
+            throw ImageStoreError.cannotLoadImage
+            
         }
         return image
     }
@@ -62,7 +66,12 @@ final class ImageStore {
     fileprivate func _guaranteeImage(name: String) -> _ImageDictionary.Index {
         if let index = images.index(forKey: name) { return index }
         
-        images[name] = ImageStore.loadImage(name: name)
+        if let image = try? ImageStore.loadImage(name: name) {
+            images[name] = image
+            return images.index(forKey: name)!
+        }
+        
+        images[name] = try! ImageStore.loadImage(name: "1")
         return images.index(forKey: name)!
     }
 }

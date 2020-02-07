@@ -13,6 +13,7 @@ struct Place: Hashable, Codable, Identifiable {
     var id: String
     var title: String
     var photocredits: String!
+    var wikiPageId: Int!
     var regionId: String
     var category: PlaceCategory
     var website: String!
@@ -20,11 +21,13 @@ struct Place: Hashable, Codable, Identifiable {
     var source: String!
     var popularity: Int
     
-    fileprivate var location: Coordinates
+    fileprivate var location: Coordinates?
     var locationCoordinate: CLLocationCoordinate2D {
-        CLLocationCoordinate2D(
-            latitude: location.lat,
-            longitude: location.lon)
+        if let loc = self.location {
+            return CLLocationCoordinate2D(latitude: loc.lat, longitude: loc.lon)
+        } else {
+            return CLLocationCoordinate2D(latitude: 0, longitude: 0)
+        }
     }
     var cta: CallToAction!
 }

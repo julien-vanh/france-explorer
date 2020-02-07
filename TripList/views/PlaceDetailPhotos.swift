@@ -72,14 +72,17 @@ struct PlaceDetailPhotos: View {
             }
         })
         .onAppear(perform: {
-            WikipediaService.shared.getPageImages(288657) { result in
-                switch result {
-                case .failure(let error):
-                    print(error)
-                case .success(let value):
-                    self.pageImages = value
+            if let wikiPageId = self.place.wikiPageId {
+                WikipediaService.shared.getPageImages(wikiPageId) { result in //TODO id en dur
+                    switch result {
+                    case .failure(let error):
+                        print(error)
+                    case .success(let value):
+                        self.pageImages = value
+                    }
                 }
             }
+            
         })
     }
 }

@@ -13,6 +13,8 @@ struct PlaceDetail: View {
     @EnvironmentObject var session: Session
     var place: Place
     @State private var showCredits = false
+    @State var wikiPage: WikiPage!
+    
     
     init(){
         self.place = PlaceStore.shared.getRandom(count: 1)[0]
@@ -34,6 +36,8 @@ struct PlaceDetail: View {
             }.frame(height: 300)
             
             VStack {
+                
+                    
                 NavigationLink(
                     destination: PlaceDetailPhotos(place: self.place)
                 ) {
@@ -54,6 +58,8 @@ struct PlaceDetail: View {
                 
                 if self.place.description != nil {
                     Text(self.place.description).padding()
+                } else if (self.wikiPage != nil && self.wikiPage != nil){
+                    Text(self.wikiPage.extract).padding()
                 }
                 
                 if self.place.website != nil {
@@ -83,9 +89,22 @@ struct PlaceDetail: View {
                     CreditsModal(place: self.place)
                 }.padding(.bottom, 40.0)
             }
-        }.edgesIgnoringSafeArea(.top).onAppear(perform: {
+        }
+        .edgesIgnoringSafeArea(.top).onAppear(perform: {
             print("hint loaded")
-            }).onDisappear {
+            if self.place.wikiPageId != nil {
+                WikipediaService.shared.getPage(self.place.wikiPageId!) { result in
+                    switch result {
+                    case .failure(let error):
+                        print(error)
+                    case .success(let page):
+                        self.wikiPage = page
+                        print("page downloaded")
+                    }
+                }
+            }
+            
+        }).onDisappear {
             print("hint disappear")
         }
     }
