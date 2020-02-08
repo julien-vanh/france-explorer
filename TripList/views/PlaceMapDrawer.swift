@@ -35,44 +35,34 @@ struct PlaceMapDrawer: View {
                 }
             }
             
-            ScrollView(.vertical) {
-                VStack {
-                    
-                    
-                    PlaceDetailsButtons(mapState: self.mapState)
-                    
-                    HStack {
-                        ImageStore.shared.image(name: self.mapState.place.id)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 200, height: 150)
-                            .clipped()
-                            .cornerRadius(10)
-                            .padding(.leading)
-                        
-                        
-                            
-
-                        
-                        VStack {
-                            Text("Nature").padding(5).background(Color.green).cornerRadius(10).foregroundColor(.white)
-                            Spacer()
-                            Text("Détails...").padding(5)
-                            
-                        }.padding(.horizontal, 5.0)
-                        
-                        Spacer()
-                    }
-                    
-                    
-                    
-                    
-                }
+            PlaceDetailsButtons(mapState: self.mapState)
+            
+            HStack {
+                ImageStore.shared.image(name: self.mapState.place.id)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 200, height: 150)
+                    .clipped()
+                    .cornerRadius(10)
+                    .padding(.leading)
                 
+                VStack {
+                    Text("Nature")
+                        .padding(5)
+                        .background(Color.green)
+                        .cornerRadius(10)
+                        .foregroundColor(.white)
+                    Spacer()
+                    Text("Détails...")
+                        .padding(5)
+                    
+                }.padding(.horizontal, 5.0)
+                
+                Spacer()
             }
         }
         
-        //.background(Color.black)
+        .background(Color.clear)
         .edgesIgnoringSafeArea(.horizontal)
     }
 }

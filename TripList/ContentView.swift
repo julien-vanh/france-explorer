@@ -68,7 +68,7 @@ struct ContentView: View {
                         maxHeight: geometry.size.height * 0.9
                     ) {
                         PlaceMapDrawer(mapState: self.mapState)
-                    }
+                    }.offset(x: 0, y: 40)
                 }
                 , alignment: .bottom)
             .edgesIgnoringSafeArea(.top)

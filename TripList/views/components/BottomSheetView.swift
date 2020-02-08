@@ -12,8 +12,6 @@ fileprivate enum Constants {
     static let radius: CGFloat = 15
     static let indicatorHeight: CGFloat = 6
     static let indicatorWidth: CGFloat = 60
-    static let snapRatio: CGFloat = 0.9
-    static let minHeightRatio: CGFloat = 0.0
 }
 
 enum BottomSheetState {
@@ -37,7 +35,6 @@ struct BottomSheetView<Content: View>: View {
             case .middle: return maxHeight/2
             case .closed: return maxHeight
         }
-        //(isOpen ? 0 : maxHeight - minHeight)
     }
 
     private var indicator: some View {
@@ -52,7 +49,7 @@ struct BottomSheetView<Content: View>: View {
     }
 
     init(state: Binding<BottomSheetState>, maxHeight: CGFloat, @ViewBuilder content: () -> Content) {
-        self.minHeight = 0 //maxHeight * Constants.minHeightRatio
+        self.minHeight = 0
         self.maxHeight = maxHeight
         self.content = content()
         self._state = state
@@ -74,25 +71,16 @@ struct BottomSheetView<Content: View>: View {
                 DragGesture().updating(self.$translation) { value, aState, _ in
                     aState = value.translation.height
                 }.onEnded { value in
-                    let location = value.location.y
-                    print("Drag end \(location)")
-                    
-                    /*
-                    let snapDistance = self.maxHeight * Constants.snapRatio
-                    guard abs(value.translation.height) > snapDistance else {
-                        return
-                    }
-                     */
+                    let location = geometry.size.height - value.location.y
                     
                     //Determine le state en fin de scroll
-                    if location < 300 {
+                    if location > self.maxHeight * 0.75 {
                         self.state = .full
-                    } else if location > 600 {
+                    } else if location < self.maxHeight * 0.25 {
                         self.state = .closed
                     } else {
                         self.state = .middle
                     }
-                    
                 }
             )
         }
