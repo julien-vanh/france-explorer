@@ -19,7 +19,7 @@ struct DreamList: View {
     var actionSheet: ActionSheet {
         ActionSheet(title: Text("Ma Liste"), buttons: [
             .default(Text("Copier dans Rappels"), action:copyInReminder),
-            .default(Text("Imprimer"), action:printAsPdf),
+            //.default(Text("Imprimer"), action:printAsPdf),
             .default(Text("Partager"), action:share),
             .destructive(Text("Supprimer les complétés"), action:deleteCompletes),
             .cancel()
@@ -89,7 +89,7 @@ struct DreamList: View {
     }
     
     private func printAsPdf(){
-        
+        //TODO
     }
     
     private func share(){

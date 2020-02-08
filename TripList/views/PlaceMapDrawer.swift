@@ -31,7 +31,7 @@ struct PlaceMapDrawer: View {
                 .frame(width: 40, height: 40)
                 .padding([.top, .trailing], 10.0)
                 .onTapGesture {
-                    self.mapState.bottomSheetShown.toggle()
+                    self.mapState.state = .closed
                 }
             }
             

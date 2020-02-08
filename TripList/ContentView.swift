@@ -12,10 +12,12 @@ import Combine
 class MapState: ObservableObject{
     @Published var place: Place = PlaceStore.shared.get(id: "1") {
         didSet {
-            self.bottomSheetShown = true
+            if self.state == .closed {
+                self.state = .middle
+            }
         }
     }
-    @Published var bottomSheetShown: Bool = false
+    @Published var state: BottomSheetState = .closed
     @Published var update: Bool = false
 }
 
@@ -62,8 +64,8 @@ struct ContentView: View {
             }.overlay(
                 GeometryReader { geometry in
                     BottomSheetView(
-                        isOpen: self.$mapState.bottomSheetShown,
-                        maxHeight: geometry.size.height * 0.4
+                        state: self.$mapState.state,
+                        maxHeight: geometry.size.height * 0.9
                     ) {
                         PlaceMapDrawer(mapState: self.mapState)
                     }
