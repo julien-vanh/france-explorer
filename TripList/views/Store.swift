@@ -9,6 +9,15 @@
 import SwiftUI
 
 struct Store: View {
+    @ObservedObject var locationManager = LocationManager()
+
+    var userLatitude: String {
+        return "\(locationManager.lastLocation?.coordinate.latitude ?? 0)"
+    }
+
+    var userLongitude: String {
+        return "\(locationManager.lastLocation?.coordinate.longitude ?? 0)"
+    }
     
     
     var body: some View {
@@ -19,6 +28,14 @@ struct Store: View {
                     .padding(.leading, 15.0)
                 
                 Carousel()
+                
+                VStack {
+                    Text("location status: \(locationManager.statusString)")
+                    HStack {
+                        Text("latitude: \(userLatitude)")
+                        Text("longitude: \(userLongitude)")
+                    }
+                }
                 
                 RandomButton()
                 

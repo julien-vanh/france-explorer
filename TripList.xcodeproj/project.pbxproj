@@ -50,6 +50,8 @@
 		F9815CE223EAD53900EEF9CA /* StoreArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9815CE123EAD53900EEF9CA /* StoreArticle.swift */; };
 		F99E73A323ED9CD4006BC089 /* Reminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E73A223ED9CD4006BC089 /* Reminders.swift */; };
 		F99E73A723EDAD54006BC089 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E73A623EDAD54006BC089 /* ActivityViewController.swift */; };
+		F99E73A923EF0D69006BC089 /* ProgressionRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E73A823EF0D69006BC089 /* ProgressionRegion.swift */; };
+		F99E73AB23F34DE2006BC089 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E73AA23F34DE2006BC089 /* LocationManager.swift */; };
 		F9C9C68423E498D2002C1DA0 /* ASCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = F9C9C68323E498D2002C1DA0 /* ASCollectionView */; };
 		F9C9C68623E4B248002C1DA0 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9C68523E4B248002C1DA0 /* PlaceAnnotation.swift */; };
 		F9C9C68823E4D093002C1DA0 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9C68723E4D093002C1DA0 /* AppStyle.swift */; };
@@ -136,6 +138,8 @@
 		F9815CE123EAD53900EEF9CA /* StoreArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreArticle.swift; sourceTree = "<group>"; };
 		F99E73A223ED9CD4006BC089 /* Reminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminders.swift; sourceTree = "<group>"; };
 		F99E73A623EDAD54006BC089 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		F99E73A823EF0D69006BC089 /* ProgressionRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressionRegion.swift; sourceTree = "<group>"; };
+		F99E73AA23F34DE2006BC089 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		F9C9C68523E4B248002C1DA0 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 		F9C9C68723E4D093002C1DA0 /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
 		F9C9C68923E4D287002C1DA0 /* UIColor+hexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hexString.swift"; sourceTree = "<group>"; };
@@ -273,6 +277,7 @@
 				F91DED9F23E6F4DD00D8FFD7 /* PlaceMapDrawer.swift */,
 				F95DE57F23DE349600BE1BD5 /* AssociatesRow.swift */,
 				F95DE58623DE349600BE1BD5 /* Progression.swift */,
+				F99E73A823EF0D69006BC089 /* ProgressionRegion.swift */,
 				F95DE57D23DE349600BE1BD5 /* Store.swift */,
 				F95DE58223DE349600BE1BD5 /* StoreCategoriesRow.swift */,
 				F9815CDF23EAD50500EEF9CA /* StoreArticlesRow.swift */,
@@ -286,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				F95DE57523DE348000BE1BD5 /* Dataloader.swift */,
+				F99E73AA23F34DE2006BC089 /* LocationManager.swift */,
 				F95DE57423DE347F00BE1BD5 /* Session.swift */,
 				F9C9C68723E4D093002C1DA0 /* AppStyle.swift */,
 				F9C9C68923E4D287002C1DA0 /* UIColor+hexString.swift */,
@@ -507,6 +513,7 @@
 				F95DE5BD23DE4A2900BE1BD5 /* PlacesMap.swift in Sources */,
 				F95DE55C23DE2F0F00BE1BD5 /* SceneDelegate.swift in Sources */,
 				F9DC222D23E31FEE0023B8EF /* PlaceDetailsButtons.swift in Sources */,
+				F99E73A923EF0D69006BC089 /* ProgressionRegion.swift in Sources */,
 				F95DE57723DE348000BE1BD5 /* Dataloader.swift in Sources */,
 				F95DE5A723DE34A900BE1BD5 /* Place.swift in Sources */,
 				F95DE59123DE349700BE1BD5 /* Store.swift in Sources */,
@@ -517,6 +524,7 @@
 				F95DE5BB23DE422F00BE1BD5 /* DreamDetail.swift in Sources */,
 				F95DE5A823DE34A900BE1BD5 /* PlaceStore.swift in Sources */,
 				F95DE58E23DE349700BE1BD5 /* AutoFocusTextField.swift in Sources */,
+				F99E73AB23F34DE2006BC089 /* LocationManager.swift in Sources */,
 				F99E73A323ED9CD4006BC089 /* Reminders.swift in Sources */,
 				F95DE59023DE349700BE1BD5 /* PlaceDetail.swift in Sources */,
 				F9DC21E823E231A70023B8EF /* WikiResponse.swift in Sources */,

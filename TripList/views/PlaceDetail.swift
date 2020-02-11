@@ -64,15 +64,23 @@ struct PlaceDetail: View {
                 
                 if self.place.website != nil {
                     HStack {
-                        Text("Site web :")
+                        Image(systemName: "globe").frame(width: 40, height: 40, alignment: .center).font(.title)
                         Button(action: {
                             self.openLinkInBrowser(link: self.place.website)
                         }) {
-                            Text(self.place.website).foregroundColor(.orange)
+                            Text(self.place.website)
                         }
+                        Spacer()
                     }
-                    .padding(.vertical, 15.0)
+                    .padding(.bottom, 10.0)
                 }
+                
+                HStack {
+                    Image(systemName: "pin").frame(width: 40, height: 40, alignment: .center).font(.title)
+                    Text("10 rue des Champs de la Vigne, 27550 Fontaine la Soret")
+                    Spacer()
+                }
+                .padding(.bottom, 10.0)
                 
                 MapView(coordinate: self.place.locationCoordinate)
                     .edgesIgnoringSafeArea(.bottom)

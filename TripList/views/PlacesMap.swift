@@ -8,16 +8,39 @@
 
 import SwiftUI
 import Combine
-
+import MapKit
 
 
 struct PlacesMap: View {
     @ObservedObject var mapState: MapState
+    var regionMap: RegionsMapController
+    
+    init(mapState: MapState){
+        self.mapState = mapState
+        self.regionMap = RegionsMapController(mapState: mapState)
+    }
     
     var body: some View {
-        GeometryReader { geometry in
-            RegionsMapController(mapState: self.mapState)
-        }.edgesIgnoringSafeArea(.all)
+        
+        ZStack(alignment: .topTrailing, content: {
+            regionMap.edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                Button(action: {
+                    self.regionMap.view.userTrackingMode = .follow
+                }) {
+                    Image(systemName: "location")
+                        .font(.title)
+                        
+                }
+                .frame(width: 50, height: 50, alignment: .center)
+                .background(Color.white)
+                .cornerRadius(10)
+                
+                //Add other buttons here
+            }.padding()
+        })
+        
     }
 }
 

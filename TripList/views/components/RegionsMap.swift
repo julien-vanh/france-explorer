@@ -9,23 +9,24 @@
 import SwiftUI
 import MapKit
 import CoreData
+import UIKit
 
 
 struct RegionsMapController: UIViewRepresentable {
     @ObservedObject var mapState: MapState
     @FetchRequest(fetchRequest: Completion.getAllCompletion()) var completions: FetchedResults<Completion>
-    
+    let view = MKMapView(frame: .zero)
     
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
     
     func makeUIView(context: Context) -> MKMapView{
-        let view = MKMapView(frame: .zero)
         view.delegate = context.coordinator
         view.mapType = .mutedStandard
-        
+        view.showsUserLocation = true
         view.register(PlaceAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        
         
         centerMapOnFrance(map: view)
         
@@ -42,6 +43,12 @@ struct RegionsMapController: UIViewRepresentable {
         }
         
         return view
+    }
+    
+    
+    
+    func centerMapOnUserButtonClicked(_ view: MKMapView) {
+        view.setUserTrackingMode( MKUserTrackingMode.follow, animated: true)
     }
     
     
@@ -114,7 +121,7 @@ internal final class PlaceAnnotationView: MKMarkerAnnotationView {
     
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
-        displayPriority = .required
+        //displayPriority = .required
         //collisionMode = .circle
         //centerOffset = CGPoint(x: 0.0, y: -10.0)
     }

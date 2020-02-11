@@ -67,20 +67,6 @@ final class PlaceStore: ObservableObject {
     }
 }
 
-struct Region: Identifiable {
-    var id: Int
-    var region: PlaceRegion
-    var title: String
-    var image: String
-    
-    init(id: Int, region: PlaceRegion, title: String, image: String){
-        self.id = id
-        self.region = region
-        self.title = title
-        self.image = image
-    }
-}
-
 struct Category: Identifiable {
     var id: Int
     var category: PlaceCategory
