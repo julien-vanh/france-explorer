@@ -8,6 +8,8 @@
 
 import Combine
 import SwiftUI
+import CoreLocation
+import MapKit
 
 final class PlaceStore: ObservableObject {
     typealias _PlaceDictionary = [String: Place]
@@ -62,8 +64,29 @@ final class PlaceStore: ObservableObject {
     }
     
     func getAssociatedPlaceTo(id: String, count: Int) -> [Place]{
-        //TODO
-        return Array(places.values.shuffled().prefix(count))
+        if let place = get(id: id) {
+            return getNearestPlaces(position: place.locationCoordinate, count: 8)
+        } else {
+            return Array(places.values.shuffled().prefix(count))
+        }
+        
+    }
+    
+    func getNearestPlaces(position: CLLocationCoordinate2D, count: Int) -> [Place] {
+        var resultCount: Int
+        if(count > places.keys.count){
+            resultCount = places.keys.count
+        } else {
+            resultCount = count
+        }
+        let positionPoint = MKMapPoint(position);
+        
+        let sortedPlaces = places.values.sorted { (p1, p2) -> Bool in
+            let distanceP1 = positionPoint.distance(to: MKMapPoint(p1.locationCoordinate))
+            let distanceP2 = positionPoint.distance(to: MKMapPoint(p2.locationCoordinate))
+            return distanceP1 < distanceP2
+        }
+        return Array(sortedPlaces.prefix(resultCount))
     }
 }
 

@@ -547,14 +547,6 @@
   }
 },
 {
-  "id": "38",
-  "regionId": "aquitaine",
-  "title": "Déguster le vin bordelais",
-  "category": "activity",
-  "popularity": 2,
-  "iap": true
-},
-{
   "id": "39",
   "regionId": "aquitaine",
   "title": "Phare de Cordouan",
@@ -578,14 +570,6 @@
     "lon": -0.5800364,
     "lat": 44.841225
   }
-},
-{
-  "id": "41",
-  "regionId": "aquitaine",
-  "title": "Déguster un cannelé",
-  "category": "activity",
-  "popularity": 1,
-  "iap": true
 },
 {
   "id": "42",
@@ -759,14 +743,7 @@
     "lat": 44.2035695227739
   }
 },
-{
-  "id": "56",
-  "regionId": "aquitaine",
-  "title": "Déguster de l'Armagnac",
-  "category": "activity",
-  "popularity": 1,
-  "iap": true
-},
+
 {
   "id": "57",
   "regionId": "aquitaine",
@@ -913,15 +890,6 @@
     "lon": 0.8724228,
     "lat": 44.6322937
   }
-},
-{
-  "id": "69",
-  "regionId": "auvergne",
-  "title": "Déguster les fromages de la régions",
-  "category": "activity",
-  "description": "Cantal, Salers, Saint-Nectaire, fourme d'Amber, bleu de Laqueuille",
-  "popularity": 2,
-  "iap": false
 },
 {
   "id": "70",
@@ -1287,15 +1255,6 @@
     "lon": 2.575414,
     "lat": 44.9536481
   }
-},
-{
-  "id": "100",
-  "regionId": "auvergne",
-  "title": "Randonner dans le Cantal",
-  "category": "activity",
-  "website": "rando.cantal.fr",
-  "popularity": 2,
-  "iap": true
 },
 {
   "id": "101",

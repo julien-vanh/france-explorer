@@ -21,13 +21,9 @@ struct Place: Hashable, Codable, Identifiable {
     var source: String!
     var popularity: Int
     
-    fileprivate var location: Coordinates?
+    fileprivate var location: Coordinates
     var locationCoordinate: CLLocationCoordinate2D {
-        if let loc = self.location {
-            return CLLocationCoordinate2D(latitude: loc.lat, longitude: loc.lon)
-        } else {
-            return CLLocationCoordinate2D(latitude: 0, longitude: 0)
-        }
+        return CLLocationCoordinate2D(latitude: location.lat, longitude: location.lon)
     }
     var cta: CallToAction!
 }

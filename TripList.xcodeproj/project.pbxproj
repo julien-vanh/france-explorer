@@ -52,6 +52,7 @@
 		F99E73A723EDAD54006BC089 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E73A623EDAD54006BC089 /* ActivityViewController.swift */; };
 		F99E73A923EF0D69006BC089 /* ProgressionRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E73A823EF0D69006BC089 /* ProgressionRegion.swift */; };
 		F99E73AB23F34DE2006BC089 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E73AA23F34DE2006BC089 /* LocationManager.swift */; };
+		F99E73AD23F3611E006BC089 /* NearestPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E73AC23F3611E006BC089 /* NearestPlaces.swift */; };
 		F9C9C68423E498D2002C1DA0 /* ASCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = F9C9C68323E498D2002C1DA0 /* ASCollectionView */; };
 		F9C9C68623E4B248002C1DA0 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9C68523E4B248002C1DA0 /* PlaceAnnotation.swift */; };
 		F9C9C68823E4D093002C1DA0 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9C68723E4D093002C1DA0 /* AppStyle.swift */; };
@@ -140,6 +141,7 @@
 		F99E73A623EDAD54006BC089 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		F99E73A823EF0D69006BC089 /* ProgressionRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressionRegion.swift; sourceTree = "<group>"; };
 		F99E73AA23F34DE2006BC089 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		F99E73AC23F3611E006BC089 /* NearestPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestPlaces.swift; sourceTree = "<group>"; };
 		F9C9C68523E4B248002C1DA0 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 		F9C9C68723E4D093002C1DA0 /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
 		F9C9C68923E4D287002C1DA0 /* UIColor+hexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hexString.swift"; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 				F95DE58623DE349600BE1BD5 /* Progression.swift */,
 				F99E73A823EF0D69006BC089 /* ProgressionRegion.swift */,
 				F95DE57D23DE349600BE1BD5 /* Store.swift */,
+				F99E73AC23F3611E006BC089 /* NearestPlaces.swift */,
 				F95DE58223DE349600BE1BD5 /* StoreCategoriesRow.swift */,
 				F9815CDF23EAD50500EEF9CA /* StoreArticlesRow.swift */,
 				F9815CE123EAD53900EEF9CA /* StoreArticle.swift */,
@@ -500,6 +503,7 @@
 				F91DEDA323E8A26E00D8FFD7 /* TripList.xcdatamodeld in Sources */,
 				F91DEDA023E6F4DD00D8FFD7 /* PlaceMapDrawer.swift in Sources */,
 				F91DEDCA23E9BAB900D8FFD7 /* Completion.swift in Sources */,
+				F99E73AD23F3611E006BC089 /* NearestPlaces.swift in Sources */,
 				F95DE5B923DE416D00BE1BD5 /* Dream.swift in Sources */,
 				F95DE59C23DE349700BE1BD5 /* TextView.swift in Sources */,
 				F95DE58C23DE349700BE1BD5 /* MapView.swift in Sources */,
