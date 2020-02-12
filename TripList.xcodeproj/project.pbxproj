@@ -102,7 +102,7 @@
 		F951F36823EAD70D00C89636 /* article3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = article3.jpg; sourceTree = "<group>"; };
 		F951F36923EAD70D00C89636 /* article1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = article1.jpg; sourceTree = "<group>"; };
 		F951F36A23EAD70D00C89636 /* article2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = article2.jpg; sourceTree = "<group>"; };
-		F95DE55623DE2F0E00BE1BD5 /* TripList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F95DE55623DE2F0E00BE1BD5 /* France Heritage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "France Heritage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F95DE55923DE2F0F00BE1BD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F95DE55B23DE2F0F00BE1BD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F95DE55D23DE2F0F00BE1BD5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -218,7 +218,7 @@
 		F95DE55723DE2F0E00BE1BD5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F95DE55623DE2F0E00BE1BD5 /* TripList.app */,
+				F95DE55623DE2F0E00BE1BD5 /* France Heritage.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -405,7 +405,7 @@
 				F9C9C68323E498D2002C1DA0 /* ASCollectionView */,
 			);
 			productName = TripList;
-			productReference = F95DE55623DE2F0E00BE1BD5 /* TripList.app */;
+			productReference = F95DE55623DE2F0E00BE1BD5 /* France Heritage.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -701,7 +701,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jva.app.triplist.TripList;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "France Heritage";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -721,7 +721,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jva.app.triplist.TripList;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "France Heritage";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

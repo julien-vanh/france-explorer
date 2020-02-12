@@ -65,7 +65,7 @@ final class PlaceStore: ObservableObject {
     
     func getAssociatedPlaceTo(id: String, count: Int) -> [Place]{
         if let place = get(id: id) {
-            return getNearestPlaces(position: place.locationCoordinate, count: 8)
+            return Array(getNearestPlaces(position: place.locationCoordinate, count: 8).dropFirst()) //On retirer le premier car c'est le place à partir duquel on fait la recherche
         } else {
             return Array(places.values.shuffled().prefix(count))
         }

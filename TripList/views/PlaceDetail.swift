@@ -56,9 +56,14 @@ struct PlaceDetail: View {
                 
                 PlaceDetailsButtons(place: self.place)
                 
+                /*
                 if self.place.description != nil {
                     Text(self.place.description).padding()
                 } else if (self.wikiPage != nil && self.wikiPage != nil){
+                    Text(self.wikiPage.extract).padding()
+                }*/
+                
+                if (self.wikiPage != nil && self.wikiPage != nil){
                     Text(self.wikiPage.extract).padding()
                 }
                 
