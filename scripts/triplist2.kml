@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>TripList2</name>
+    <description/>
+    <Style id="icon-1546-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1546-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1546-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1546-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1546-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1598-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1598-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1598-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1598-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1598-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1636-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1636-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1636-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1636-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1636-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1720-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1720-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1720-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1720-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1720-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>limousin</name>
+      <Placemark>
+        <name>Château de Châlucet</name>
+        <description><![CDATA[website: www.chalucet.com<br>popularity: 2<br>address: Lieu Dit Chalusset, 87260 Saint-Jean-Ligoure]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="website">
+            <value>www.chalucet.com</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Lieu Dit Chalusset, 87260 Saint-Jean-Ligoure</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.31111099999998,45.732222,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lac de Saint-Pardoux</name>
+        <description><![CDATA[website: <br>popularity: <br>address: Lac de Saint-Pardoux]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Lac de Saint-Pardoux</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.28933110000003,46.0323849,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Oradour-sur-Glane</name>
+        <description><![CDATA[website: <br>popularity: <br>address: 87520 Oradour-sur-Glane]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>87520 Oradour-sur-Glane</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.03274599999997,45.9310789,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Ruines de la Forteresse de Crozant</name>
+        <description><![CDATA[website: www.limousin-medieval.com<br>popularity: 2<br>address: 16 Route Isabelle d'Angouleme, 23160 Crozant]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="website">
+            <value>www.limousin-medieval.com</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value><![CDATA[16 Route Isabelle d'Angouleme, 23160 Crozant]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.62083619999999,46.3940651,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Labyrinthe Géant des Monts de Guéret</name>
+        <description><![CDATA[website: www.labyrinthe-gueret.fr<br>popularity: 2<br>address: Route de Bourganeuf, 23000 Guéret]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="website">
+            <value>www.labyrinthe-gueret.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Route de Bourganeuf, 23000 Guéret</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.86106700000005,46.147938,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Château de Villemonteix</name>
+        <description><![CDATA[website: www.chateau-villemonteix.cla.fr<br>popularity: <br>address: 23150 Saint-Pardoux-les-Cards]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="website">
+            <value>www.chateau-villemonteix.cla.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>23150 Saint-Pardoux-les-Cards</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.14322949999996,46.1078986,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Masgot</name>
+        <description><![CDATA[website: www.masgot.fr<br>popularity: <br>address: 23480 Fransèches]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="website">
+            <value>www.masgot.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>23480 Fransèches</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.03538849999995,46.0358129,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Parc Naturel Régional de Millevaches en Limousin</name>
+        <description><![CDATA[website: www.pnr-millevaches.fr<br>popularity: <br>address: 7 route d’Aubusson, 19290 Millevaches]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="website">
+            <value>www.pnr-millevaches.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>7 route d’Aubusson, 19290 Millevaches</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.09501449999993,45.6426141,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Uzerche</name>
+        <description><![CDATA[website: www.uzerche.fr<br>popularity: <br>address: 19140 Uzerche]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="website">
+            <value>www.uzerche.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>19140 Uzerche</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.56345699999997,45.424066,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Collonges-la-Rouge</name>
+        <description><![CDATA[website: <br>popularity: <br>address: 19500 Collonges-la-Rouge]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>19500 Collonges-la-Rouge</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.654225,45.060939,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Curemonte</name>
+        <description><![CDATA[website: <br>popularity: <br>address: 19500 Curemonte]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>19500 Curemonte</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.74233700000002,45.000278,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Les Tours de Merle</name>
+        <description><![CDATA[website: www.toursdemerle.fr<br>popularity: <br>address: Les Tours de Merle, 19220 Saint-Geniez-ô-Merle]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="website">
+            <value>www.toursdemerle.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Les Tours de Merle, 19220 Saint-Geniez-ô-Merle</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.07454899999993,45.0641872,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Musée du cloître</name>
+        <description><![CDATA[website: <br>popularity: 2<br>address: Place de la Cathédrale, 19000 Tulle]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Place de la Cathédrale, 19000 Tulle</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.77097649999996,45.2678045,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lac de la Triouzoune</name>
+        <description><![CDATA[website: <br>popularity: <br>address: Lac de la Triouzoune, 19160]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Lac de la Triouzoune, 19160</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.29252329999997,45.395101,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Site de Saint Nazaire</name>
+        <description><![CDATA[website: <br>popularity: <br>address: 19110 Sarroux - St Julien, France]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>19110 Sarroux - St Julien, France</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.38728909999998,45.4149725,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
