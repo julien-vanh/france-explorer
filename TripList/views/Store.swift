@@ -56,7 +56,7 @@ struct Store: View {
                 Rectangle().opacity(0).frame(height:40)
                 
             }.navigationBarTitle("Idées")
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

@@ -8,7 +8,7 @@
 
 extension String {
     func deleteHTMLTags() -> String {
-        return self.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+        return self.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil).trimmingCharacters(in:.whitespacesAndNewlines).replacingOccurrences(of: "\n", with: "")
     }
     
     func addCarriageReturnAfterPoint() -> String {
