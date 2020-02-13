@@ -33,11 +33,9 @@ final class PlaceStore: ObservableObject {
         return  [
             Category(id: 1, category: .city, title: "Ville", image: ""),
             Category(id: 2, category: .museum, title: "Musée", image: ""),
-            Category(id: 3, category: .park, title: "Parc", image: ""),
-            Category(id: 4, category: .activity, title: "Activité", image: ""),
-            Category(id: 5, category: .nature, title: "Nature", image: ""),
-            Category(id: 6, category: .place, title: "Point d'intéret", image: ""),
-            Category(id: 7, category: .event, title: "Evenement", image: "")
+            Category(id: 3, category: .nature, title: "Nature", image: ""),
+            Category(id: 4, category: .historical, title: "Histoire", image: ""),
+            Category(id: 5, category: .event, title: "Événement", image: "")
         ]
     }
     

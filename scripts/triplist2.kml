@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>TripList2</name>
+    <name>triplist2</name>
     <description/>
     <Style id="icon-1546-0288D1-normal">
       <IconStyle>
@@ -143,9 +143,12 @@
       <name>limousin</name>
       <Placemark>
         <name>Château de Châlucet</name>
-        <description><![CDATA[website: www.chalucet.com<br>popularity: 2<br>address: Lieu Dit Chalusset, 87260 Saint-Jean-Ligoure]]></description>
+        <description><![CDATA[wiki: 918146<br>website: www.chalucet.com<br>popularity: 2<br>address: Lieu Dit Chalusset, 87260 Saint-Jean-Ligoure]]></description>
         <styleUrl>#icon-1598-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>918146</value>
+          </Data>
           <Data name="website">
             <value>www.chalucet.com</value>
           </Data>
@@ -164,9 +167,12 @@
       </Placemark>
       <Placemark>
         <name>Lac de Saint-Pardoux</name>
-        <description><![CDATA[website: <br>popularity: <br>address: Lac de Saint-Pardoux]]></description>
+        <description><![CDATA[wiki: 800838<br>website: <br>popularity: <br>address: Lac de Saint-Pardoux]]></description>
         <styleUrl>#icon-1720-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>800838</value>
+          </Data>
           <Data name="website">
             <value/>
           </Data>
@@ -185,9 +191,12 @@
       </Placemark>
       <Placemark>
         <name>Oradour-sur-Glane</name>
-        <description><![CDATA[website: <br>popularity: <br>address: 87520 Oradour-sur-Glane]]></description>
+        <description><![CDATA[wiki: 70911<br>website: <br>popularity: <br>address: 87520 Oradour-sur-Glane]]></description>
         <styleUrl>#icon-1546-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>70911</value>
+          </Data>
           <Data name="website">
             <value/>
           </Data>
@@ -206,9 +215,12 @@
       </Placemark>
       <Placemark>
         <name>Ruines de la Forteresse de Crozant</name>
-        <description><![CDATA[website: www.limousin-medieval.com<br>popularity: 2<br>address: 16 Route Isabelle d'Angouleme, 23160 Crozant]]></description>
+        <description><![CDATA[wiki: 2998249<br>website: www.limousin-medieval.com<br>popularity: 2<br>address: 16 Route Isabelle d'Angouleme, 23160 Crozant]]></description>
         <styleUrl>#icon-1598-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>2998249</value>
+          </Data>
           <Data name="website">
             <value>www.limousin-medieval.com</value>
           </Data>
@@ -227,9 +239,12 @@
       </Placemark>
       <Placemark>
         <name>Labyrinthe Géant des Monts de Guéret</name>
-        <description><![CDATA[website: www.labyrinthe-gueret.fr<br>popularity: 2<br>address: Route de Bourganeuf, 23000 Guéret]]></description>
+        <description><![CDATA[wiki: 5039646<br>website: www.labyrinthe-gueret.fr<br>popularity: 2<br>address: Route de Bourganeuf, 23000 Guéret]]></description>
         <styleUrl>#icon-1720-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>5039646</value>
+          </Data>
           <Data name="website">
             <value>www.labyrinthe-gueret.fr</value>
           </Data>
@@ -248,9 +263,12 @@
       </Placemark>
       <Placemark>
         <name>Château de Villemonteix</name>
-        <description><![CDATA[website: www.chateau-villemonteix.cla.fr<br>popularity: <br>address: 23150 Saint-Pardoux-les-Cards]]></description>
+        <description><![CDATA[wiki: 2966498<br>website: www.chateau-villemonteix.cla.fr<br>popularity: <br>address: 23150 Saint-Pardoux-les-Cards]]></description>
         <styleUrl>#icon-1598-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>2966498</value>
+          </Data>
           <Data name="website">
             <value>www.chateau-villemonteix.cla.fr</value>
           </Data>
@@ -269,9 +287,12 @@
       </Placemark>
       <Placemark>
         <name>Masgot</name>
-        <description><![CDATA[website: www.masgot.fr<br>popularity: <br>address: 23480 Fransèches]]></description>
+        <description><![CDATA[wiki: 10453878<br>website: www.masgot.fr<br>popularity: <br>address: 23480 Fransèches]]></description>
         <styleUrl>#icon-1546-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>10453878</value>
+          </Data>
           <Data name="website">
             <value>www.masgot.fr</value>
           </Data>
@@ -290,9 +311,12 @@
       </Placemark>
       <Placemark>
         <name>Parc Naturel Régional de Millevaches en Limousin</name>
-        <description><![CDATA[website: www.pnr-millevaches.fr<br>popularity: <br>address: 7 route d’Aubusson, 19290 Millevaches]]></description>
+        <description><![CDATA[wiki: 743513<br>website: www.pnr-millevaches.fr<br>popularity: <br>address: 7 route d’Aubusson, 19290 Millevaches]]></description>
         <styleUrl>#icon-1720-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>743513</value>
+          </Data>
           <Data name="website">
             <value>www.pnr-millevaches.fr</value>
           </Data>
@@ -311,9 +335,12 @@
       </Placemark>
       <Placemark>
         <name>Uzerche</name>
-        <description><![CDATA[website: www.uzerche.fr<br>popularity: <br>address: 19140 Uzerche]]></description>
+        <description><![CDATA[wiki: 2966292<br>website: www.uzerche.fr<br>popularity: <br>address: 19140 Uzerche]]></description>
         <styleUrl>#icon-1546-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>2966292</value>
+          </Data>
           <Data name="website">
             <value>www.uzerche.fr</value>
           </Data>
@@ -332,9 +359,12 @@
       </Placemark>
       <Placemark>
         <name>Collonges-la-Rouge</name>
-        <description><![CDATA[website: <br>popularity: <br>address: 19500 Collonges-la-Rouge]]></description>
+        <description><![CDATA[wiki: 98044<br>website: <br>popularity: <br>address: 19500 Collonges-la-Rouge]]></description>
         <styleUrl>#icon-1546-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>98044</value>
+          </Data>
           <Data name="website">
             <value/>
           </Data>
@@ -353,9 +383,12 @@
       </Placemark>
       <Placemark>
         <name>Curemonte</name>
-        <description><![CDATA[website: <br>popularity: <br>address: 19500 Curemonte]]></description>
+        <description><![CDATA[wiki: 72289<br>website: <br>popularity: <br>address: 19500 Curemonte]]></description>
         <styleUrl>#icon-1546-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>72289</value>
+          </Data>
           <Data name="website">
             <value/>
           </Data>
@@ -374,9 +407,12 @@
       </Placemark>
       <Placemark>
         <name>Les Tours de Merle</name>
-        <description><![CDATA[website: www.toursdemerle.fr<br>popularity: <br>address: Les Tours de Merle, 19220 Saint-Geniez-ô-Merle]]></description>
+        <description><![CDATA[wiki: 1818149<br>website: www.toursdemerle.fr<br>popularity: <br>address: Les Tours de Merle, 19220 Saint-Geniez-ô-Merle]]></description>
         <styleUrl>#icon-1598-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>1818149</value>
+          </Data>
           <Data name="website">
             <value>www.toursdemerle.fr</value>
           </Data>
@@ -395,9 +431,12 @@
       </Placemark>
       <Placemark>
         <name>Musée du cloître</name>
-        <description><![CDATA[website: <br>popularity: 2<br>address: Place de la Cathédrale, 19000 Tulle]]></description>
+        <description><![CDATA[wiki: 3189860<br>website: <br>popularity: 2<br>address: Place de la Cathédrale, 19000 Tulle]]></description>
         <styleUrl>#icon-1636-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>3189860</value>
+          </Data>
           <Data name="website">
             <value/>
           </Data>
@@ -416,9 +455,12 @@
       </Placemark>
       <Placemark>
         <name>Lac de la Triouzoune</name>
-        <description><![CDATA[website: <br>popularity: <br>address: Lac de la Triouzoune, 19160]]></description>
+        <description><![CDATA[wiki: 3049822<br>website: <br>popularity: <br>address: Lac de la Triouzoune, 19160]]></description>
         <styleUrl>#icon-1720-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>3049822</value>
+          </Data>
           <Data name="website">
             <value/>
           </Data>
@@ -437,9 +479,12 @@
       </Placemark>
       <Placemark>
         <name>Site de Saint Nazaire</name>
-        <description><![CDATA[website: <br>popularity: <br>address: 19110 Sarroux - St Julien, France]]></description>
+        <description><![CDATA[wiki: 10116892<br>website: <br>popularity: <br>address: 19110 Sarroux - St Julien, France]]></description>
         <styleUrl>#icon-1720-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>10116892</value>
+          </Data>
           <Data name="website">
             <value/>
           </Data>

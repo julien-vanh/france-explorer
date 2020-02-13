@@ -1,29 +1,21 @@
 var fs = require('fs'),
     xml2js = require('xml2js');
-
-var header = [
-    {id: 'region', title: 'region'},
-    {id: 'title', title: 'title'},
-    {id: 'longitude', title: 'longitude'},
-    {id: 'latitude', title: 'latitude'},
-    {id: 'website', title: 'website'},
-    {id: 'popularity', title: 'popularity'},
-    {id: 'address', title: 'address'}
-]
 var lines = []
-
-const createCsvWriter = require('csv-writer').createObjectCsvWriter;
-const csvWriter = createCsvWriter({
-  path: 'output.csv',
-  header:header
-});
 
 readFile("triplist1.kml").then(()=>{
     return readFile("triplist2.kml");
 }).then(()=> {
-    return csvWriter.writeRecords(lines)
+    let data = JSON.stringify(lines);
+    return new Promise((resolve, reject) => {
+        fs.writeFile("step1-output.json", data, error => {
+            if (error) reject(error);
+            resolve();
+        });
+    });
 }).then(()=> {
-    console.log('The CSV file was written successfully')
+    console.log('step1 success')
+}).catch(err => {
+    console.error("step1 error", err.message)
 });
 
 
@@ -45,7 +37,7 @@ function readFile(filename){
                             
                 let placemarks = folder.Placemark
                     placemarks.forEach(placemark => {
-                            //console.log(placemark)
+                            console.log(placemark)
                             let title = placemark.name[0]
                             let coordinates = placemark.Point[0].coordinates[0].trim().split(",")
                             let longitude = coordinates[0]
@@ -56,9 +48,30 @@ function readFile(filename){
                                        
                             let extendedData = placemark.ExtendedData[0].Data
                             //console.log(extendedData)
+                                       
+                            let style = placemark.styleUrl[0]
+                            let category
+                            
+                            if(style === "#icon-1720-0288D1"){
+                                category = "nature"
+                            }
+                            else if(style === "#icon-1636-0288D1"){
+                                category = "museum"
+                            }
+                            else if(style === "#icon-1598-0288D1"){
+                                category = "historical"
+                            }
+                            else if(style === "#icon-1546-0288D1"){
+                                category = "city"
+                            }
+                            else {
+                                category = "event"
+                            }
+                                       
                             var website
                             var popularity
                             var address
+                            var wiki
                             extendedData.forEach(data => {
                                     let name = data['$'].name
                                     let value = data['value'][0]
@@ -73,21 +86,24 @@ function readFile(filename){
                                         else popularity = 1
                                     }
                                     else if (name == "address") address = value;
+                                    else if (name == "wiki") wiki = value;
                             })
                             
                             lines.push({
-                                region:region,
-                                title:title,
-                                longitude:longitude,
-                                latitude:latitude,
-                                website:website,
-                                popularity:popularity,
-                                address:address
+                                region: region,
+                                title: title,
+                                longitude: longitude,
+                                latitude: latitude,
+                                website: website,
+                                popularity: popularity,
+                                address: address,
+                                category: category,
+                                wiki: wiki
                             })
                     })
             })
                            
-            console.log('Done', lines);
+            //console.log('Done', lines);
         
             }).catch(error => {
                 console.log(error.message)

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>TripList France</name>
+    <name>triplist1</name>
     <description/>
     <Style id="icon-1511-0288D1-normal">
       <IconStyle>
@@ -177,9 +177,12 @@
       <name>alsace</name>
       <Placemark>
         <name>Château de Lichtenberg</name>
-        <description><![CDATA[website: www.chateaudelichtenberg.com<br>popularity: 2<br>address: Rue des Cochers, 67340 Lichtenberg]]></description>
+        <description><![CDATA[wiki: 338248<br>website: www.chateaudelichtenberg.com<br>popularity: 2<br>address: Rue des Cochers, 67340 Lichtenberg]]></description>
         <styleUrl>#icon-1598-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>338248</value>
+          </Data>
           <Data name="website">
             <value>www.chateaudelichtenberg.com</value>
           </Data>
@@ -198,9 +201,12 @@
       </Placemark>
       <Placemark>
         <name>Ligne Maginot Fort Schoenenbourg</name>
-        <description><![CDATA[website: www.lignemaginot.com<br>popularity: 2<br>address: Rue Commandant Martial Reynier, 67250 Hunspach]]></description>
+        <description><![CDATA[wiki: 381733<br>website: www.lignemaginot.com<br>popularity: 2<br>address: Rue Commandant Martial Reynier, 67250 Hunspach]]></description>
         <styleUrl>#icon-1598-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>381733</value>
+          </Data>
           <Data name="website">
             <value>www.lignemaginot.com</value>
           </Data>
@@ -219,9 +225,12 @@
       </Placemark>
       <Placemark>
         <name>Cathédrale Notre Dame de Strasbourg</name>
-        <description><![CDATA[website: www.cathedrale-strasbourg.fr<br>popularity: 1<br>address: Place de la Cathédrale, 67000 Strasbourg]]></description>
+        <description><![CDATA[wiki: 2713920<br>website: www.cathedrale-strasbourg.fr<br>popularity: 1<br>address: Place de la Cathédrale, 67000 Strasbourg]]></description>
         <styleUrl>#icon-1598-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>2713920</value>
+          </Data>
           <Data name="website">
             <value>www.cathedrale-strasbourg.fr</value>
           </Data>
@@ -240,9 +249,12 @@
       </Placemark>
       <Placemark>
         <name>Petite France</name>
-        <description><![CDATA[website: https://www.visitstrasbourg.fr/decouvrir-strasbourg/les-incontournables/la-petite-france/<br>popularity: 2<br>address: Petite France, 67000 Strasbourg]]></description>
+        <description><![CDATA[wiki: 3234362<br>website: https://www.visitstrasbourg.fr/decouvrir-strasbourg/les-incontournables/la-petite-france/<br>popularity: 2<br>address: Petite France, 67000 Strasbourg]]></description>
         <styleUrl>#icon-1546-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>3234362</value>
+          </Data>
           <Data name="website">
             <value>https://www.visitstrasbourg.fr/decouvrir-strasbourg/les-incontournables/la-petite-france/</value>
           </Data>
@@ -261,9 +273,12 @@
       </Placemark>
       <Placemark>
         <name>Marché De Noël De Strasbourg</name>
-        <description><![CDATA[website: https://noel.strasbourg.eu/<br>popularity: 3<br>address: 29 Rue de la Nuée-Bleue, 67000 Strasbourg]]></description>
+        <description><![CDATA[wiki: 2055677<br>website: https://noel.strasbourg.eu/<br>popularity: 3<br>address: 29 Rue de la Nuée-Bleue, 67000 Strasbourg]]></description>
         <styleUrl>#icon-1511-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>2055677</value>
+          </Data>
           <Data name="website">
             <value>https://noel.strasbourg.eu/</value>
           </Data>
@@ -282,9 +297,12 @@
       </Placemark>
       <Placemark>
         <name>Mittelbergheim</name>
-        <description><![CDATA[website: <br>popularity: 1<br>address: 67140 Mittelbergheim]]></description>
+        <description><![CDATA[wiki: 297312<br>website: <br>popularity: 1<br>address: 67140 Mittelbergheim]]></description>
         <styleUrl>#icon-1546-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>297312</value>
+          </Data>
           <Data name="website">
             <value/>
           </Data>
@@ -303,9 +321,12 @@
       </Placemark>
       <Placemark>
         <name>Château du Haut-Kœnigsbourg</name>
-        <description><![CDATA[website: www.haut-koenigsbourg.fr<br>popularity: 1<br>address: 67600 Orschwiller]]></description>
+        <description><![CDATA[wiki: 213261<br>website: www.haut-koenigsbourg.fr<br>popularity: 1<br>address: 67600 Orschwiller]]></description>
         <styleUrl>#icon-1598-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>213261</value>
+          </Data>
           <Data name="website">
             <value>www.haut-koenigsbourg.fr</value>
           </Data>
@@ -324,9 +345,12 @@
       </Placemark>
       <Placemark>
         <name>Bibliothèque Humaniste</name>
-        <description><![CDATA[website: www.bibliotheque-humaniste.fr<br>popularity: 2<br>address: 1 Place Dr Maurice Kubler, 67600 Sélestat]]></description>
+        <description><![CDATA[wiki: 1793329<br>website: www.bibliotheque-humaniste.fr<br>popularity: 2<br>address: 1 Place Dr Maurice Kubler, 67600 Sélestat]]></description>
         <styleUrl>#icon-1598-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>1793329</value>
+          </Data>
           <Data name="website">
             <value>www.bibliotheque-humaniste.fr</value>
           </Data>
@@ -345,9 +369,12 @@
       </Placemark>
       <Placemark>
         <name>Saint-Hippolyte</name>
-        <description><![CDATA[website: <br>popularity: 1<br>address: 68590 Saint-Hippolyte]]></description>
+        <description><![CDATA[wiki: 288729<br>website: <br>popularity: 1<br>address: 68590 Saint-Hippolyte]]></description>
         <styleUrl>#icon-1546-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>288729</value>
+          </Data>
           <Data name="website">
             <value/>
           </Data>
@@ -366,9 +393,12 @@
       </Placemark>
       <Placemark>
         <name>Bergheim</name>
-        <description><![CDATA[website: <br>popularity: 2<br>address: 68750 Bergheim]]></description>
+        <description><![CDATA[wiki: 288405<br>website: <br>popularity: 2<br>address: 68750 Bergheim]]></description>
         <styleUrl>#icon-1546-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>288405</value>
+          </Data>
           <Data name="website">
             <value/>
           </Data>
@@ -387,9 +417,12 @@
       </Placemark>
       <Placemark>
         <name>Massif du Taennchel</name>
-        <description><![CDATA[website: <br>popularity: 1<br>address: Massif du Taennchel, 68150 Ribeauvillé]]></description>
+        <description><![CDATA[wiki: 1276065<br>website: <br>popularity: 1<br>address: Massif du Taennchel, 68150 Ribeauvillé]]></description>
         <styleUrl>#icon-1720-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>1276065</value>
+          </Data>
           <Data name="website">
             <value/>
           </Data>
@@ -408,9 +441,12 @@
       </Placemark>
       <Placemark>
         <name>Route des Vins</name>
-        <description><![CDATA[website: https://www.route-des-vins-alsace.com<br>popularity: 3<br>address: ]]></description>
+        <description><![CDATA[wiki: 94307<br>website: https://www.route-des-vins-alsace.com<br>popularity: 3<br>address: ]]></description>
         <styleUrl>#icon-1720-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>94307</value>
+          </Data>
           <Data name="website">
             <value>https://www.route-des-vins-alsace.com</value>
           </Data>
@@ -429,9 +465,12 @@
       </Placemark>
       <Placemark>
         <name>Les Menetriers</name>
-        <description><![CDATA[website: https://www.visit.alsace/<br>popularity: 1<br>address: 68150 Ribeauvillé]]></description>
+        <description><![CDATA[wiki: 288698<br>website: https://www.visit.alsace/<br>popularity: 1<br>address: 68150 Ribeauvillé]]></description>
         <styleUrl>#icon-1511-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>288698</value>
+          </Data>
           <Data name="website">
             <value>https://www.visit.alsace/</value>
           </Data>
@@ -450,9 +489,12 @@
       </Placemark>
       <Placemark>
         <name>Hunawihr</name>
-        <description><![CDATA[website: <br>popularity: 1<br>address: 68150 Hunawihr]]></description>
+        <description><![CDATA[wiki: 288567<br>website: <br>popularity: 1<br>address: 68150 Hunawihr]]></description>
         <styleUrl>#icon-1546-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>288567</value>
+          </Data>
           <Data name="website">
             <value/>
           </Data>
@@ -471,9 +513,12 @@
       </Placemark>
       <Placemark>
         <name>Riquewihr</name>
-        <description><![CDATA[website: <br>popularity: 1<br>address: 68340 Riquewihr]]></description>
+        <description><![CDATA[wiki: 40198<br>website: <br>popularity: 1<br>address: 68340 Riquewihr]]></description>
         <styleUrl>#icon-1546-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>40198</value>
+          </Data>
           <Data name="website">
             <value/>
           </Data>
@@ -492,9 +537,12 @@
       </Placemark>
       <Placemark>
         <name>Kaysersberg</name>
-        <description><![CDATA[website: www.ville-kaysersberg.fr<br>popularity: 1<br>address: 68240 Kaysersberg]]></description>
+        <description><![CDATA[wiki: 288582<br>website: www.ville-kaysersberg.fr<br>popularity: 1<br>address: 68240 Kaysersberg]]></description>
         <styleUrl>#icon-1546-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>288582</value>
+          </Data>
           <Data name="website">
             <value>www.ville-kaysersberg.fr</value>
           </Data>
@@ -513,9 +561,12 @@
       </Placemark>
       <Placemark>
         <name>Niedermorschwihr</name>
-        <description><![CDATA[website: <br>popularity: 1<br>address: 68230 Niedermorschwihr]]></description>
+        <description><![CDATA[wiki: 288657<br>website: <br>popularity: 1<br>address: 68230 Niedermorschwihr]]></description>
         <styleUrl>#icon-1546-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>288657</value>
+          </Data>
           <Data name="website">
             <value/>
           </Data>
@@ -534,9 +585,12 @@
       </Placemark>
       <Placemark>
         <name>Colmar</name>
-        <description><![CDATA[website: www.colmar.fr<br>popularity: 2<br>address: 68000 Colmar]]></description>
+        <description><![CDATA[wiki: 10320<br>website: www.colmar.fr<br>popularity: 2<br>address: 68000 Colmar]]></description>
         <styleUrl>#icon-1546-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>10320</value>
+          </Data>
           <Data name="website">
             <value>www.colmar.fr</value>
           </Data>
@@ -555,9 +609,12 @@
       </Placemark>
       <Placemark>
         <name>Musée Unterlinden</name>
-        <description><![CDATA[website: www.musee-unterlinden.com<br>popularity: 1<br>address: 1 Rue des Unterlinden, 68000 Colmar]]></description>
+        <description><![CDATA[wiki: 1017465<br>website: www.musee-unterlinden.com<br>popularity: 1<br>address: 1 Rue des Unterlinden, 68000 Colmar]]></description>
         <styleUrl>#icon-1636-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>1017465</value>
+          </Data>
           <Data name="website">
             <value>www.musee-unterlinden.com</value>
           </Data>
@@ -576,9 +633,12 @@
       </Placemark>
       <Placemark>
         <name>Eguisheim</name>
-        <description><![CDATA[website: <br>popularity: 1<br>address: 68420 Eguisheim]]></description>
+        <description><![CDATA[wiki: 288462<br>website: <br>popularity: 1<br>address: 68420 Eguisheim]]></description>
         <styleUrl>#icon-1546-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>288462</value>
+          </Data>
           <Data name="website">
             <value/>
           </Data>
@@ -597,9 +657,12 @@
       </Placemark>
       <Placemark>
         <name>Vallée de Munster</name>
-        <description><![CDATA[website: www.vallee-munster.eu<br>popularity: 1<br>address: 1 Rue du Couvent, 68140 Munster]]></description>
+        <description><![CDATA[wiki: 264880<br>website: www.vallee-munster.eu<br>popularity: 1<br>address: 1 Rue du Couvent, 68140 Munster]]></description>
         <styleUrl>#icon-1720-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>264880</value>
+          </Data>
           <Data name="website">
             <value>www.vallee-munster.eu</value>
           </Data>
@@ -618,9 +681,12 @@
       </Placemark>
       <Placemark>
         <name>Parc de Wesserling - Écomusée Textile</name>
-        <description><![CDATA[website: www.parc-wesserling.fr<br>popularity: 1<br>address: Rue du Parc, 68470 Husseren-Wesserling]]></description>
+        <description><![CDATA[wiki: 7339674<br>website: www.parc-wesserling.fr<br>popularity: 1<br>address: Rue du Parc, 68470 Husseren-Wesserling]]></description>
         <styleUrl>#icon-1636-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>7339674</value>
+          </Data>
           <Data name="website">
             <value>www.parc-wesserling.fr</value>
           </Data>
@@ -639,9 +705,12 @@
       </Placemark>
       <Placemark>
         <name><![CDATA[Cité de l'Automobile]]></name>
-        <description><![CDATA[website: www.citedelautomobile.com<br>popularity: 2<br>address: 17 Rue de la Mertzau, 68100 Mulhouse]]></description>
+        <description><![CDATA[wiki: 324821<br>website: www.citedelautomobile.com<br>popularity: 2<br>address: 17 Rue de la Mertzau, 68100 Mulhouse]]></description>
         <styleUrl>#icon-1636-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>324821</value>
+          </Data>
           <Data name="website">
             <value>www.citedelautomobile.com</value>
           </Data>
@@ -660,9 +729,12 @@
       </Placemark>
       <Placemark>
         <name>La Collégiale Saint Thiébaut</name>
-        <description><![CDATA[website: www.hautes-vosges-alsace.fr<br>popularity: 1<br>address: 10 Place Joffre, 68800 Thann]]></description>
+        <description><![CDATA[wiki: 2842113<br>website: www.hautes-vosges-alsace.fr<br>popularity: 1<br>address: 10 Place Joffre, 68800 Thann]]></description>
         <styleUrl>#icon-1598-0288D1</styleUrl>
         <ExtendedData>
+          <Data name="wiki">
+            <value>2842113</value>
+          </Data>
           <Data name="website">
             <value>www.hautes-vosges-alsace.fr</value>
           </Data>
