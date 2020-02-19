@@ -9,6 +9,8 @@
   "author": "Julien Vanheule",
   "license": "ISC",
   "dependencies": {
+    "csv-parser": "^2.3.2",
+    "csv-writer": "^1.6.0",
     "request": "^2.88.2",
     "request-promise": "^4.2.5",
     "xml2js": "^0.4.23"

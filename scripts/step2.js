@@ -1,31 +1,37 @@
 const rp = require('request-promise');
 const request = require('request');
 const fs = require('fs');
+const csv = require('csv-parser');
 
-let rawdata = fs.readFileSync('step1-output.json');
-let mymapsplaces = JSON.parse(rawdata);
+let REGION_FILTER = "limousin"
+//TODO lire step1 output
 
-let promises = []
+var cpt = 0
 let photosData = {}
-mymapsplaces.forEach(place => {
-    if(place.wiki){
-        let pageId = place.wiki
-        let region = place.region
-        let title = place.title.replace(/[^0-9a-z]/gi, '')
-        
-        if(region === "alsace"){
-            let p = getPhotos(pageId, region, title).then(data => {
-                photosData[pageId] = data
-            })
-            promises.push(p)
+
+readCSVFile('step1-output.csv').then(places => {
+    let promises = []
+
+    places.forEach(place => {
+        if(typeof place['wiki-fr'] === "string" && place['wiki-fr'] != ""){
+            let pageId = place['wiki-fr']
+            let region = place.region
+            let title = place.title.replace(/[^0-9a-z]/gi, '')
+            
+            if(region === REGION_FILTER){
+                let p = getPhotos(pageId, region, title).then(data => {
+                    photosData[pageId] = data
+                })
+                promises.push(p)
+            }
         }
-    }
-})
-Promise.all(promises).then(()=> {
-    console.log(photosData)
+    })
+    return Promise.all(promises)
+}).then(()=> {
+    //console.log(photosData)
     let data = JSON.stringify(photosData);
     return new Promise((resolve, reject) => {
-        fs.writeFile("step2-output.json", data, error => {
+        fs.writeFile("./step2output/"+REGION_FILTER+"/SELECTION/metadata.json", data, error => {
             if (error) reject(error);
             resolve();
         });
@@ -36,7 +42,20 @@ Promise.all(promises).then(()=> {
     console.error(err.message)
 })
 
-
+function readCSVFile(filename){
+    var places = []
+    return new Promise((resolve) => {
+        fs.createReadStream(filename).pipe(csv())
+        .on('data', (row) => {
+            //console.log(row);
+            places.push(row)
+        })
+        .on('end', () => {
+            console.log('CSV file successfully processed');
+            resolve(places)
+        });
+    })
+}
 
 function getPhotos(pageId, region, title){
     let photos = {}
@@ -47,7 +66,7 @@ function getPhotos(pageId, region, title){
     };
 
     return rp(options).then( data => {
-        let promises = [];
+        let promise = Promise.resolve()
         
         Object.values(data.query.pages).forEach((page, index) => {
             if(page.imageinfo[0].mime === "image/jpeg"){
@@ -72,14 +91,20 @@ function getPhotos(pageId, region, title){
                     licence: licence,
                     source: page.imageinfo[0].descriptionshorturl
                 }
+
+                fs.mkdirSync("./step2output/"+REGION_FILTER+"/SELECTION", { recursive: true }, (err) => {
+                    if (err) console.log("err", err)
+                });
                 
-                let foldername = "./photos/"+region+"/"+title
+                let foldername = "./step2output/"+REGION_FILTER+"/"+title
                 let filename = pageId+"-"+index+".jpeg"
-                promises.push(downloadImage(imageUrl, foldername, filename).catch(err => {console.log("error downloanding ", filename)}))
+                promise.then(()=> {
+                    return downloadImage(imageUrl, foldername, filename).catch(err => {console.log("error downloanding ", filename)})
+                })
             }
         })
 
-        return Promise.all(promises).then(()=> {
+        return promise.then(()=> {
             return photos
         })
     })
@@ -93,18 +118,23 @@ function removeHTMLTags(str){
 }
 
 function downloadImage(url, foldername, filename){
+    console.log("downloading : "+foldername+"/"+filename);
     fs.mkdirSync(foldername, { recursive: true }, (err) => {
         if (err) console.log("err", err)
-      });
-
+    });
+    cpt = cpt + 1
     return new Promise((resolve, reject) => {
         request(url).pipe(fs.createWriteStream(foldername+"/"+filename))
             .on('finish', () => {
-                console.log(foldername+"/"+filename+" downloaded");
+                cpt = cpt - 1
+                console.log("done", cpt);
                 resolve();
             })
             .on('error', (error) => {
+                console.error("error downloading "+foldername+"/"+filename)
+                cpt = cpt - 1
                 reject(error);
             });
     })
 }
+
