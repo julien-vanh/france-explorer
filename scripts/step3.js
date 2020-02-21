@@ -1,10 +1,11 @@
-const rp = require('request-promise');
-const request = require('request');
 const fs = require('fs');
 const csv = require('csv-parser');
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
-let REGION_FILTER = "limousin"
+let REGION_FILTER = "aquitaine"
+
+
+
 
 var places
 var metadatas
@@ -29,12 +30,23 @@ let p3 = new Promise((resolve, reject) => {
     files = _files
 })
 
-Promise.all([p1, p2, p3]).then(()=> {
+let p4 = new Promise((resolve, reject) => {
+    fs.rmdir("./step3output/"+REGION_FILTER, {recursive: true}, (err) => {
+        if(err) reject(err)
+        resolve()
+    })
+})
+
+Promise.all([p1, p2, p3, p4]).then(()=> {
     places.forEach(place => {
         
         if(place.region === REGION_FILTER){
             //console.log("place", place)
             let pageId = place["wiki-fr"]
+
+            fs.mkdirSync("./step3output/"+REGION_FILTER, { recursive: true }, (err) => {
+                if (err) console.log("err", err)
+            });
 
             files.forEach(file => {
                 //console.log("file", file)
@@ -46,6 +58,9 @@ Promise.all([p1, p2, p3]).then(()=> {
                     place["photo-description"] = metadata.description
                     place["photo-credit"] = metadata.artist + " "+metadata.licence
                     place["photo-source"] = metadata.source
+
+                    let photoTitle = place.title.replace(/[^0-9a-z]/gi, '')+".jpeg"
+                    fs.copyFileSync("./step2output/"+REGION_FILTER+"/SELECTION/"+file, "./step3output/"+REGION_FILTER+"/"+photoTitle)
                 }
             })
             results.push(place)
@@ -54,7 +69,7 @@ Promise.all([p1, p2, p3]).then(()=> {
     })
 }).then(()=>{
     const csvWriter = createCsvWriter({
-        path: 'step3-output.csv',
+        path: "./step3output/"+REGION_FILTER+"/places-"+REGION_FILTER+".csv",
         header: [
           {id: 'title', title: 'title'},
           {id: 'title-en', title: 'title-en'},

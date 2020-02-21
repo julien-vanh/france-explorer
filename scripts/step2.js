@@ -2,14 +2,23 @@ const rp = require('request-promise');
 const request = require('request');
 const fs = require('fs');
 const csv = require('csv-parser');
+const download = require('image-downloader')
 
-let REGION_FILTER = "limousin"
-//TODO lire step1 output
+let REGION_FILTER = "aquitaine"
 
 var cpt = 0
 let photosData = {}
 
-readCSVFile('step1-output.csv').then(places => {
+let clean = new Promise((resolve, reject) => {
+    fs.rmdir("./step2output/"+REGION_FILTER, {recursive: true}, (err) => {
+        if(err) reject(err)
+        resolve()
+    })
+})
+
+clean.then(()=>{
+    return readCSVFile('step1-output.csv')
+}).then(places => {
     let promises = []
 
     places.forEach(place => {
@@ -61,7 +70,7 @@ function getPhotos(pageId, region, title){
     let photos = {}
 
     var options = {
-        uri: "https://fr.wikipedia.org/w/api.php?action=query&pageids="+pageId+"&generator=images&gimlimit=35&prop=imageinfo&iiprop=url|mime|extmetadata&iiextmetadatafilter=ImageDescription|LicenseShortName|Artist&format=json",
+        uri: "https://fr.wikipedia.org/w/api.php?action=query&pageids="+pageId+"&generator=images&gimlimit=45&prop=imageinfo&iiprop=url|mime|extmetadata&iiextmetadatafilter=ImageDescription|LicenseShortName|Artist&format=json",
         json: true
     };
 
@@ -123,18 +132,17 @@ function downloadImage(url, foldername, filename){
         if (err) console.log("err", err)
     });
     cpt = cpt + 1
-    return new Promise((resolve, reject) => {
-        request(url).pipe(fs.createWriteStream(foldername+"/"+filename))
-            .on('finish', () => {
-                cpt = cpt - 1
-                console.log("done", cpt);
-                resolve();
-            })
-            .on('error', (error) => {
-                console.error("error downloading "+foldername+"/"+filename)
-                cpt = cpt - 1
-                reject(error);
-            });
-    })
+
+    let options = {
+        url: url,
+        dest: foldername+"/"+filename,
+        timeout: 10* 60 * 1000  
+    }
+    
+    return download.image(options).then(({ filename, image }) => {
+        cpt = cpt-1
+        console.log('Saved to', filename, cpt)
+        
+    }).catch((err) => console.error(err))
 }
 

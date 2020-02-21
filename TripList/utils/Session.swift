@@ -11,10 +11,15 @@ import SwiftUI
 fileprivate typealias _StateDictionary = [String: Bool]
 
 
-
+enum AppLanguage: String {
+    case fr = "fr"
+    case en = "en"
+}
 
 class Session: ObservableObject {
     @Published var isPremium: Bool = false
+    @Published var language: AppLanguage = .fr
+    
     
     init(){
         //loadData()

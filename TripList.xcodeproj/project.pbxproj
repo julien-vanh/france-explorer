@@ -11,6 +11,74 @@
 		F91DEDA023E6F4DD00D8FFD7 /* PlaceMapDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91DED9F23E6F4DD00D8FFD7 /* PlaceMapDrawer.swift */; };
 		F91DEDA323E8A26E00D8FFD7 /* TripList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F91DEDA123E8A26D00D8FFD7 /* TripList.xcdatamodeld */; };
 		F91DEDCA23E9BAB900D8FFD7 /* Completion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91DEDC923E9BAB900D8FFD7 /* Completion.swift */; };
+		F94B491E240026220055956D /* MarchDeNolDeStrasbourg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48DB2400261C0055956D /* MarchDeNolDeStrasbourg.jpg */; };
+		F94B491F240026220055956D /* GorgesdeKakuetta.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48DC2400261C0055956D /* GorgesdeKakuetta.jpg */; };
+		F94B4920240026220055956D /* Riquewihr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48DD2400261C0055956D /* Riquewihr.jpg */; };
+		F94B4921240026220055956D /* ParcdeWesserlingcomuseTextile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48DE2400261D0055956D /* ParcdeWesserlingcomuseTextile.jpg */; };
+		F94B4922240026220055956D /* CollongeslaRouge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48DF2400261D0055956D /* CollongeslaRouge.jpg */; };
+		F94B4923240026220055956D /* PharedeCordouan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48E02400261D0055956D /* PharedeCordouan.jpg */; };
+		F94B4924240026220055956D /* CapFerret.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48E12400261D0055956D /* CapFerret.jpg */; };
+		F94B4925240026220055956D /* SaintHippolyte.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48E22400261D0055956D /* SaintHippolyte.jpg */; };
+		F94B4926240026220055956D /* DuneduPilat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48E32400261D0055956D /* DuneduPilat.jpg */; };
+		F94B4927240026220055956D /* SarlatlaCanda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48E42400261D0055956D /* SarlatlaCanda.jpg */; };
+		F94B4928240026220055956D /* Bergheim.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48E52400261D0055956D /* Bergheim.jpg */; };
+		F94B4929240026220055956D /* Eguisheim.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48E62400261D0055956D /* Eguisheim.jpg */; };
+		F94B492A240026220055956D /* Niedermorschwihr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48E72400261D0055956D /* Niedermorschwihr.jpg */; };
+		F94B492B240026220055956D /* PetiteFrance.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48E82400261D0055956D /* PetiteFrance.jpg */; };
+		F94B492C240026220055956D /* CitdelAutomobile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48E92400261D0055956D /* CitdelAutomobile.jpg */; };
+		F94B492D240026220055956D /* AbbayedeBrantme.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48EA2400261D0055956D /* AbbayedeBrantme.jpg */; };
+		F94B492E240026220055956D /* Colmar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48EB2400261D0055956D /* Colmar.jpg */; };
+		F94B492F240026220055956D /* comusedeMarquze.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48EC2400261E0055956D /* comusedeMarquze.jpg */; };
+		F94B4930240026220055956D /* BeynacetCazenac.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48ED2400261E0055956D /* BeynacetCazenac.jpg */; };
+		F94B4931240026220055956D /* FtesDeBayonne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48EE2400261E0055956D /* FtesDeBayonne.jpg */; };
+		F94B4932240026220055956D /* BibliothqueHumaniste.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48EF2400261E0055956D /* BibliothqueHumaniste.jpg */; };
+		F94B4933240026220055956D /* CathdraleNotreDamedeStrasbourg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48F02400261E0055956D /* CathdraleNotreDamedeStrasbourg.jpg */; };
+		F94B4934240026220055956D /* Masgot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48F12400261E0055956D /* Masgot.jpg */; };
+		F94B4935240026220055956D /* Curemonte.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48F22400261E0055956D /* Curemonte.jpg */; };
+		F94B4936240026220055956D /* Monflanquin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48F32400261E0055956D /* Monflanquin.jpg */; };
+		F94B4937240026220055956D /* Pujols.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48F42400261E0055956D /* Pujols.jpg */; };
+		F94B4938240026220055956D /* Urepel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48F52400261E0055956D /* Urepel.jpg */; };
+		F94B4939240026220055956D /* GouffredeProumeyssac.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48F62400261E0055956D /* GouffredeProumeyssac.jpg */; };
+		F94B493A240026220055956D /* GrottedeLaVerna.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48F72400261E0055956D /* GrottedeLaVerna.jpg */; };
+		F94B493B240026220055956D /* SaintJeanPieddePort.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48F82400261E0055956D /* SaintJeanPieddePort.jpg */; };
+		F94B493C240026220055956D /* Vesunnamusegalloromain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48F92400261F0055956D /* Vesunnamusegalloromain.jpg */; };
+		F94B493D240026220055956D /* Monpazier.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48FA2400261F0055956D /* Monpazier.jpg */; };
+		F94B493E240026220055956D /* LesJardinsdeMarqueyssac.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48FB2400261F0055956D /* LesJardinsdeMarqueyssac.jpg */; };
+		F94B493F240026220055956D /* Kaysersberg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48FC2400261F0055956D /* Kaysersberg.jpg */; };
+		F94B4940240026220055956D /* ParcNaturelRgionaldeMillevachesenLimousin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48FD2400261F0055956D /* ParcNaturelRgionaldeMillevachesenLimousin.jpg */; };
+		F94B4941240026220055956D /* SaintJeandeLuz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48FE2400261F0055956D /* SaintJeandeLuz.jpg */; };
+		F94B4942240026220055956D /* MassifduTaennchel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B48FF2400261F0055956D /* MassifduTaennchel.jpg */; };
+		F94B4943240026220055956D /* Mittelbergheim.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B49002400261F0055956D /* Mittelbergheim.jpg */; };
+		F94B4944240026220055956D /* MuseUnterlinden.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B49012400261F0055956D /* MuseUnterlinden.jpg */; };
+		F94B4945240026220055956D /* Hunawihr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B49022400261F0055956D /* Hunawihr.jpg */; };
+		F94B4946240026220055956D /* ChteaudeVillemonteix.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B49032400261F0055956D /* ChteaudeVillemonteix.jpg */; };
+		F94B4947240026220055956D /* OradoursurGlane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B4904240026200055956D /* OradoursurGlane.jpg */; };
+		F94B4948240026220055956D /* Uzerche.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B4905240026200055956D /* Uzerche.jpg */; };
+		F94B4949240026220055956D /* Eyrignacetsesjardins.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B4906240026200055956D /* Eyrignacetsesjardins.jpg */; };
+		F94B494A240026220055956D /* Museduclotre.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B4907240026200055956D /* Museduclotre.jpg */; };
+		F94B494B240026220055956D /* LigneMaginotFortSchoenenbourg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B4908240026200055956D /* LigneMaginotFortSchoenenbourg.jpg */; };
+		F94B494C240026220055956D /* LesToursdeMerle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B4909240026200055956D /* LesToursdeMerle.jpg */; };
+		F94B494D240026220055956D /* Biarritz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B490A240026200055956D /* Biarritz.jpg */; };
+		F94B494E240026220055956D /* ChteaudeBiron.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B490B240026200055956D /* ChteaudeBiron.jpg */; };
+		F94B494F240026220055956D /* LaRoqueGageac.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B490C240026200055956D /* LaRoqueGageac.jpg */; };
+		F94B4950240026220055956D /* Bordeaux.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B490D240026200055956D /* Bordeaux.jpg */; };
+		F94B4951240026220055956D /* ChteaudeChlucet.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B490E240026200055956D /* ChteaudeChlucet.jpg */; };
+		F94B4952240026220055956D /* CtedArgent.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B490F240026200055956D /* CtedArgent.jpg */; };
+		F94B4953240026220055956D /* LaCollgialeSaintThibaut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B4910240026200055956D /* LaCollgialeSaintThibaut.jpg */; };
+		F94B4954240026220055956D /* CastelmorondAlbret.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B4911240026210055956D /* CastelmorondAlbret.jpg */; };
+		F94B4955240026220055956D /* LabastidedArmagnac.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B4912240026210055956D /* LabastidedArmagnac.jpg */; };
+		F94B4956240026220055956D /* LacdeSaintPardoux.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B4913240026210055956D /* LacdeSaintPardoux.jpg */; };
+		F94B4957240026220055956D /* Saintmilion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B4914240026210055956D /* Saintmilion.jpg */; };
+		F94B4958240026220055956D /* LaRhune.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B4915240026210055956D /* LaRhune.jpg */; };
+		F94B4959240026220055956D /* RoutedesVins.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B4916240026210055956D /* RoutedesVins.jpg */; };
+		F94B495A240026220055956D /* RuinesdelaForteressedeCrozant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B4917240026210055956D /* RuinesdelaForteressedeCrozant.jpg */; };
+		F94B495B240026220055956D /* BassindArcachon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B4918240026210055956D /* BassindArcachon.jpg */; };
+		F94B495C240026220055956D /* Bayonne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B4919240026210055956D /* Bayonne.jpg */; };
+		F94B495D240026220055956D /* LesMenetriers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B491A240026220055956D /* LesMenetriers.jpg */; };
+		F94B495E240026220055956D /* Cadillac.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B491B240026220055956D /* Cadillac.jpg */; };
+		F94B495F240026220055956D /* ChteaudeLichtenberg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B491C240026220055956D /* ChteaudeLichtenberg.jpg */; };
+		F94B4960240026220055956D /* SitedeSaintNazaire.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B491D240026220055956D /* SitedeSaintNazaire.jpg */; };
+		F94B4962240026300055956D /* Places.csv in Resources */ = {isa = PBXBuildFile; fileRef = F94B4961240026300055956D /* Places.csv */; };
 		F951F36B23EAD70D00C89636 /* article3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F951F36823EAD70D00C89636 /* article3.jpg */; };
 		F951F36C23EAD70D00C89636 /* article1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F951F36923EAD70D00C89636 /* article1.jpg */; };
 		F951F36D23EAD70D00C89636 /* article2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F951F36A23EAD70D00C89636 /* article2.jpg */; };
@@ -20,7 +88,6 @@
 		F95DE56023DE2F0F00BE1BD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F95DE55F23DE2F0F00BE1BD5 /* Assets.xcassets */; };
 		F95DE56323DE2F0F00BE1BD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F95DE56223DE2F0F00BE1BD5 /* Preview Assets.xcassets */; };
 		F95DE56623DE2F0F00BE1BD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F95DE56423DE2F0F00BE1BD5 /* LaunchScreen.storyboard */; };
-		F95DE57323DE345700BE1BD5 /* places.json in Resources */ = {isa = PBXBuildFile; fileRef = F95DE57223DE345700BE1BD5 /* places.json */; };
 		F95DE57623DE348000BE1BD5 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE57423DE347F00BE1BD5 /* Session.swift */; };
 		F95DE57723DE348000BE1BD5 /* Dataloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE57523DE348000BE1BD5 /* Dataloader.swift */; };
 		F95DE58C23DE349700BE1BD5 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE57823DE349500BE1BD5 /* MapView.swift */; };
@@ -66,30 +133,6 @@
 		F9DC21EB23E231D30023B8EF /* String+HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC21EA23E231D30023B8EF /* String+HTML.swift */; };
 		F9DC21F123E232650023B8EF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9DC21F323E232650023B8EF /* Localizable.strings */; };
 		F9DC21F823E234530023B8EF /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = F9DC21F723E234530023B8EF /* KingfisherSwiftUI */; };
-		F9DC221223E242870023B8EF /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9DC21FA23E242840023B8EF /* 10.jpg */; };
-		F9DC221323E242870023B8EF /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9DC21FB23E242840023B8EF /* 4.jpg */; };
-		F9DC221423E242870023B8EF /* 21.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9DC21FC23E242840023B8EF /* 21.jpg */; };
-		F9DC221523E242870023B8EF /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9DC21FD23E242840023B8EF /* 6.jpg */; };
-		F9DC221623E242870023B8EF /* 24.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9DC21FE23E242850023B8EF /* 24.jpg */; };
-		F9DC221723E242870023B8EF /* 23.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9DC21FF23E242850023B8EF /* 23.jpg */; };
-		F9DC221823E242870023B8EF /* 15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9DC220023E242850023B8EF /* 15.jpg */; };
-		F9DC221923E242870023B8EF /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9DC220123E242850023B8EF /* 8.jpg */; };
-		F9DC221A23E242870023B8EF /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9DC220223E242850023B8EF /* 9.jpg */; };
-		F9DC221B23E242870023B8EF /* 11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9DC220323E242850023B8EF /* 11.jpg */; };
-		F9DC221C23E242870023B8EF /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9DC220423E242850023B8EF /* 1.jpg */; };
-		F9DC221D23E242870023B8EF /* 14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9DC220523E242850023B8EF /* 14.jpg */; };
-		F9DC221E23E242870023B8EF /* 16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9DC220623E242850023B8EF /* 16.jpg */; };
-		F9DC221F23E242870023B8EF /* 17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9DC220723E242860023B8EF /* 17.jpg */; };
-		F9DC222023E242870023B8EF /* 19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9DC220823E242860023B8EF /* 19.jpg */; };
-		F9DC222123E242870023B8EF /* 22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9DC220923E242860023B8EF /* 22.jpg */; };
-		F9DC222223E242870023B8EF /* 20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9DC220A23E242860023B8EF /* 20.jpg */; };
-		F9DC222323E242870023B8EF /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9DC220B23E242860023B8EF /* 2.jpg */; };
-		F9DC222423E242870023B8EF /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9DC220C23E242860023B8EF /* 3.jpg */; };
-		F9DC222523E242870023B8EF /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9DC220D23E242860023B8EF /* 7.jpg */; };
-		F9DC222623E242870023B8EF /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9DC220E23E242860023B8EF /* 12.jpg */; };
-		F9DC222723E242870023B8EF /* 13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9DC220F23E242860023B8EF /* 13.jpg */; };
-		F9DC222823E242870023B8EF /* 18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9DC221023E242860023B8EF /* 18.jpg */; };
-		F9DC222923E242870023B8EF /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9DC221123E242870023B8EF /* 5.jpg */; };
 		F9DC222B23E31DF30023B8EF /* PlaceDetailPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC222A23E31DF30023B8EF /* PlaceDetailPhotos.swift */; };
 		F9DC222D23E31FEE0023B8EF /* PlaceDetailsButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC222C23E31FEE0023B8EF /* PlaceDetailsButtons.swift */; };
 /* End PBXBuildFile section */
@@ -99,6 +142,74 @@
 		F91DED9F23E6F4DD00D8FFD7 /* PlaceMapDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMapDrawer.swift; sourceTree = "<group>"; };
 		F91DEDA223E8A26E00D8FFD7 /* TripList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TripList.xcdatamodel; sourceTree = "<group>"; };
 		F91DEDC923E9BAB900D8FFD7 /* Completion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Completion.swift; sourceTree = "<group>"; };
+		F94B48DB2400261C0055956D /* MarchDeNolDeStrasbourg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MarchDeNolDeStrasbourg.jpg; sourceTree = "<group>"; };
+		F94B48DC2400261C0055956D /* GorgesdeKakuetta.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GorgesdeKakuetta.jpg; sourceTree = "<group>"; };
+		F94B48DD2400261C0055956D /* Riquewihr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Riquewihr.jpg; sourceTree = "<group>"; };
+		F94B48DE2400261D0055956D /* ParcdeWesserlingcomuseTextile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ParcdeWesserlingcomuseTextile.jpg; sourceTree = "<group>"; };
+		F94B48DF2400261D0055956D /* CollongeslaRouge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CollongeslaRouge.jpg; sourceTree = "<group>"; };
+		F94B48E02400261D0055956D /* PharedeCordouan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PharedeCordouan.jpg; sourceTree = "<group>"; };
+		F94B48E12400261D0055956D /* CapFerret.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CapFerret.jpg; sourceTree = "<group>"; };
+		F94B48E22400261D0055956D /* SaintHippolyte.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SaintHippolyte.jpg; sourceTree = "<group>"; };
+		F94B48E32400261D0055956D /* DuneduPilat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DuneduPilat.jpg; sourceTree = "<group>"; };
+		F94B48E42400261D0055956D /* SarlatlaCanda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SarlatlaCanda.jpg; sourceTree = "<group>"; };
+		F94B48E52400261D0055956D /* Bergheim.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Bergheim.jpg; sourceTree = "<group>"; };
+		F94B48E62400261D0055956D /* Eguisheim.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Eguisheim.jpg; sourceTree = "<group>"; };
+		F94B48E72400261D0055956D /* Niedermorschwihr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Niedermorschwihr.jpg; sourceTree = "<group>"; };
+		F94B48E82400261D0055956D /* PetiteFrance.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PetiteFrance.jpg; sourceTree = "<group>"; };
+		F94B48E92400261D0055956D /* CitdelAutomobile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CitdelAutomobile.jpg; sourceTree = "<group>"; };
+		F94B48EA2400261D0055956D /* AbbayedeBrantme.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AbbayedeBrantme.jpg; sourceTree = "<group>"; };
+		F94B48EB2400261D0055956D /* Colmar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Colmar.jpg; sourceTree = "<group>"; };
+		F94B48EC2400261E0055956D /* comusedeMarquze.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = comusedeMarquze.jpg; sourceTree = "<group>"; };
+		F94B48ED2400261E0055956D /* BeynacetCazenac.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BeynacetCazenac.jpg; sourceTree = "<group>"; };
+		F94B48EE2400261E0055956D /* FtesDeBayonne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FtesDeBayonne.jpg; sourceTree = "<group>"; };
+		F94B48EF2400261E0055956D /* BibliothqueHumaniste.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BibliothqueHumaniste.jpg; sourceTree = "<group>"; };
+		F94B48F02400261E0055956D /* CathdraleNotreDamedeStrasbourg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CathdraleNotreDamedeStrasbourg.jpg; sourceTree = "<group>"; };
+		F94B48F12400261E0055956D /* Masgot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Masgot.jpg; sourceTree = "<group>"; };
+		F94B48F22400261E0055956D /* Curemonte.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Curemonte.jpg; sourceTree = "<group>"; };
+		F94B48F32400261E0055956D /* Monflanquin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Monflanquin.jpg; sourceTree = "<group>"; };
+		F94B48F42400261E0055956D /* Pujols.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pujols.jpg; sourceTree = "<group>"; };
+		F94B48F52400261E0055956D /* Urepel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Urepel.jpg; sourceTree = "<group>"; };
+		F94B48F62400261E0055956D /* GouffredeProumeyssac.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GouffredeProumeyssac.jpg; sourceTree = "<group>"; };
+		F94B48F72400261E0055956D /* GrottedeLaVerna.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GrottedeLaVerna.jpg; sourceTree = "<group>"; };
+		F94B48F82400261E0055956D /* SaintJeanPieddePort.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SaintJeanPieddePort.jpg; sourceTree = "<group>"; };
+		F94B48F92400261F0055956D /* Vesunnamusegalloromain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Vesunnamusegalloromain.jpg; sourceTree = "<group>"; };
+		F94B48FA2400261F0055956D /* Monpazier.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Monpazier.jpg; sourceTree = "<group>"; };
+		F94B48FB2400261F0055956D /* LesJardinsdeMarqueyssac.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LesJardinsdeMarqueyssac.jpg; sourceTree = "<group>"; };
+		F94B48FC2400261F0055956D /* Kaysersberg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Kaysersberg.jpg; sourceTree = "<group>"; };
+		F94B48FD2400261F0055956D /* ParcNaturelRgionaldeMillevachesenLimousin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ParcNaturelRgionaldeMillevachesenLimousin.jpg; sourceTree = "<group>"; };
+		F94B48FE2400261F0055956D /* SaintJeandeLuz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SaintJeandeLuz.jpg; sourceTree = "<group>"; };
+		F94B48FF2400261F0055956D /* MassifduTaennchel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MassifduTaennchel.jpg; sourceTree = "<group>"; };
+		F94B49002400261F0055956D /* Mittelbergheim.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mittelbergheim.jpg; sourceTree = "<group>"; };
+		F94B49012400261F0055956D /* MuseUnterlinden.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MuseUnterlinden.jpg; sourceTree = "<group>"; };
+		F94B49022400261F0055956D /* Hunawihr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hunawihr.jpg; sourceTree = "<group>"; };
+		F94B49032400261F0055956D /* ChteaudeVillemonteix.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ChteaudeVillemonteix.jpg; sourceTree = "<group>"; };
+		F94B4904240026200055956D /* OradoursurGlane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = OradoursurGlane.jpg; sourceTree = "<group>"; };
+		F94B4905240026200055956D /* Uzerche.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Uzerche.jpg; sourceTree = "<group>"; };
+		F94B4906240026200055956D /* Eyrignacetsesjardins.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Eyrignacetsesjardins.jpg; sourceTree = "<group>"; };
+		F94B4907240026200055956D /* Museduclotre.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Museduclotre.jpg; sourceTree = "<group>"; };
+		F94B4908240026200055956D /* LigneMaginotFortSchoenenbourg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LigneMaginotFortSchoenenbourg.jpg; sourceTree = "<group>"; };
+		F94B4909240026200055956D /* LesToursdeMerle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LesToursdeMerle.jpg; sourceTree = "<group>"; };
+		F94B490A240026200055956D /* Biarritz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Biarritz.jpg; sourceTree = "<group>"; };
+		F94B490B240026200055956D /* ChteaudeBiron.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ChteaudeBiron.jpg; sourceTree = "<group>"; };
+		F94B490C240026200055956D /* LaRoqueGageac.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LaRoqueGageac.jpg; sourceTree = "<group>"; };
+		F94B490D240026200055956D /* Bordeaux.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Bordeaux.jpg; sourceTree = "<group>"; };
+		F94B490E240026200055956D /* ChteaudeChlucet.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ChteaudeChlucet.jpg; sourceTree = "<group>"; };
+		F94B490F240026200055956D /* CtedArgent.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CtedArgent.jpg; sourceTree = "<group>"; };
+		F94B4910240026200055956D /* LaCollgialeSaintThibaut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LaCollgialeSaintThibaut.jpg; sourceTree = "<group>"; };
+		F94B4911240026210055956D /* CastelmorondAlbret.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CastelmorondAlbret.jpg; sourceTree = "<group>"; };
+		F94B4912240026210055956D /* LabastidedArmagnac.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LabastidedArmagnac.jpg; sourceTree = "<group>"; };
+		F94B4913240026210055956D /* LacdeSaintPardoux.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LacdeSaintPardoux.jpg; sourceTree = "<group>"; };
+		F94B4914240026210055956D /* Saintmilion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Saintmilion.jpg; sourceTree = "<group>"; };
+		F94B4915240026210055956D /* LaRhune.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LaRhune.jpg; sourceTree = "<group>"; };
+		F94B4916240026210055956D /* RoutedesVins.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RoutedesVins.jpg; sourceTree = "<group>"; };
+		F94B4917240026210055956D /* RuinesdelaForteressedeCrozant.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RuinesdelaForteressedeCrozant.jpg; sourceTree = "<group>"; };
+		F94B4918240026210055956D /* BassindArcachon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BassindArcachon.jpg; sourceTree = "<group>"; };
+		F94B4919240026210055956D /* Bayonne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Bayonne.jpg; sourceTree = "<group>"; };
+		F94B491A240026220055956D /* LesMenetriers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LesMenetriers.jpg; sourceTree = "<group>"; };
+		F94B491B240026220055956D /* Cadillac.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cadillac.jpg; sourceTree = "<group>"; };
+		F94B491C240026220055956D /* ChteaudeLichtenberg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ChteaudeLichtenberg.jpg; sourceTree = "<group>"; };
+		F94B491D240026220055956D /* SitedeSaintNazaire.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SitedeSaintNazaire.jpg; sourceTree = "<group>"; };
+		F94B4961240026300055956D /* Places.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Places.csv; sourceTree = "<group>"; };
 		F951F36823EAD70D00C89636 /* article3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = article3.jpg; sourceTree = "<group>"; };
 		F951F36923EAD70D00C89636 /* article1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = article1.jpg; sourceTree = "<group>"; };
 		F951F36A23EAD70D00C89636 /* article2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = article2.jpg; sourceTree = "<group>"; };
@@ -110,7 +221,6 @@
 		F95DE56223DE2F0F00BE1BD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F95DE56523DE2F0F00BE1BD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F95DE56723DE2F0F00BE1BD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F95DE57223DE345700BE1BD5 /* places.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = places.json; sourceTree = "<group>"; };
 		F95DE57423DE347F00BE1BD5 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		F95DE57523DE348000BE1BD5 /* Dataloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dataloader.swift; sourceTree = "<group>"; };
 		F95DE57823DE349500BE1BD5 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -155,30 +265,6 @@
 		F9DC21F223E232650023B8EF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F9DC21F423E232810023B8EF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F9DC21F523E232820023B8EF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		F9DC21FA23E242840023B8EF /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
-		F9DC21FB23E242840023B8EF /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
-		F9DC21FC23E242840023B8EF /* 21.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 21.jpg; sourceTree = "<group>"; };
-		F9DC21FD23E242840023B8EF /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
-		F9DC21FE23E242850023B8EF /* 24.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 24.jpg; sourceTree = "<group>"; };
-		F9DC21FF23E242850023B8EF /* 23.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 23.jpg; sourceTree = "<group>"; };
-		F9DC220023E242850023B8EF /* 15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15.jpg; sourceTree = "<group>"; };
-		F9DC220123E242850023B8EF /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
-		F9DC220223E242850023B8EF /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
-		F9DC220323E242850023B8EF /* 11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11.jpg; sourceTree = "<group>"; };
-		F9DC220423E242850023B8EF /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
-		F9DC220523E242850023B8EF /* 14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 14.jpg; sourceTree = "<group>"; };
-		F9DC220623E242850023B8EF /* 16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 16.jpg; sourceTree = "<group>"; };
-		F9DC220723E242860023B8EF /* 17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 17.jpg; sourceTree = "<group>"; };
-		F9DC220823E242860023B8EF /* 19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 19.jpg; sourceTree = "<group>"; };
-		F9DC220923E242860023B8EF /* 22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 22.jpg; sourceTree = "<group>"; };
-		F9DC220A23E242860023B8EF /* 20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 20.jpg; sourceTree = "<group>"; };
-		F9DC220B23E242860023B8EF /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
-		F9DC220C23E242860023B8EF /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
-		F9DC220D23E242860023B8EF /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
-		F9DC220E23E242860023B8EF /* 12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 12.jpg; sourceTree = "<group>"; };
-		F9DC220F23E242860023B8EF /* 13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.jpg; sourceTree = "<group>"; };
-		F9DC221023E242860023B8EF /* 18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 18.jpg; sourceTree = "<group>"; };
-		F9DC221123E242870023B8EF /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
 		F9DC222A23E31DF30023B8EF /* PlaceDetailPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailPhotos.swift; sourceTree = "<group>"; };
 		F9DC222C23E31FEE0023B8EF /* PlaceDetailsButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -197,6 +283,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F94B48DA2400260C0055956D /* photos */ = {
+			isa = PBXGroup;
+			children = (
+				F94B48EA2400261D0055956D /* AbbayedeBrantme.jpg */,
+				F94B4918240026210055956D /* BassindArcachon.jpg */,
+				F94B4919240026210055956D /* Bayonne.jpg */,
+				F94B48E52400261D0055956D /* Bergheim.jpg */,
+				F94B48ED2400261E0055956D /* BeynacetCazenac.jpg */,
+				F94B490A240026200055956D /* Biarritz.jpg */,
+				F94B48EF2400261E0055956D /* BibliothqueHumaniste.jpg */,
+				F94B490D240026200055956D /* Bordeaux.jpg */,
+				F94B491B240026220055956D /* Cadillac.jpg */,
+				F94B48E12400261D0055956D /* CapFerret.jpg */,
+				F94B4911240026210055956D /* CastelmorondAlbret.jpg */,
+				F94B48F02400261E0055956D /* CathdraleNotreDamedeStrasbourg.jpg */,
+				F94B490B240026200055956D /* ChteaudeBiron.jpg */,
+				F94B490E240026200055956D /* ChteaudeChlucet.jpg */,
+				F94B491C240026220055956D /* ChteaudeLichtenberg.jpg */,
+				F94B49032400261F0055956D /* ChteaudeVillemonteix.jpg */,
+				F94B48E92400261D0055956D /* CitdelAutomobile.jpg */,
+				F94B48DF2400261D0055956D /* CollongeslaRouge.jpg */,
+				F94B48EB2400261D0055956D /* Colmar.jpg */,
+				F94B48EC2400261E0055956D /* comusedeMarquze.jpg */,
+				F94B490F240026200055956D /* CtedArgent.jpg */,
+				F94B48F22400261E0055956D /* Curemonte.jpg */,
+				F94B48E32400261D0055956D /* DuneduPilat.jpg */,
+				F94B48E62400261D0055956D /* Eguisheim.jpg */,
+				F94B4906240026200055956D /* Eyrignacetsesjardins.jpg */,
+				F94B48EE2400261E0055956D /* FtesDeBayonne.jpg */,
+				F94B48DC2400261C0055956D /* GorgesdeKakuetta.jpg */,
+				F94B48F62400261E0055956D /* GouffredeProumeyssac.jpg */,
+				F94B48F72400261E0055956D /* GrottedeLaVerna.jpg */,
+				F94B49022400261F0055956D /* Hunawihr.jpg */,
+				F94B48FC2400261F0055956D /* Kaysersberg.jpg */,
+				F94B4912240026210055956D /* LabastidedArmagnac.jpg */,
+				F94B4913240026210055956D /* LacdeSaintPardoux.jpg */,
+				F94B4910240026200055956D /* LaCollgialeSaintThibaut.jpg */,
+				F94B4915240026210055956D /* LaRhune.jpg */,
+				F94B490C240026200055956D /* LaRoqueGageac.jpg */,
+				F94B48FB2400261F0055956D /* LesJardinsdeMarqueyssac.jpg */,
+				F94B491A240026220055956D /* LesMenetriers.jpg */,
+				F94B4909240026200055956D /* LesToursdeMerle.jpg */,
+				F94B4908240026200055956D /* LigneMaginotFortSchoenenbourg.jpg */,
+				F94B48DB2400261C0055956D /* MarchDeNolDeStrasbourg.jpg */,
+				F94B48F12400261E0055956D /* Masgot.jpg */,
+				F94B48FF2400261F0055956D /* MassifduTaennchel.jpg */,
+				F94B49002400261F0055956D /* Mittelbergheim.jpg */,
+				F94B48F32400261E0055956D /* Monflanquin.jpg */,
+				F94B48FA2400261F0055956D /* Monpazier.jpg */,
+				F94B4907240026200055956D /* Museduclotre.jpg */,
+				F94B49012400261F0055956D /* MuseUnterlinden.jpg */,
+				F94B48E72400261D0055956D /* Niedermorschwihr.jpg */,
+				F94B4904240026200055956D /* OradoursurGlane.jpg */,
+				F94B48DE2400261D0055956D /* ParcdeWesserlingcomuseTextile.jpg */,
+				F94B48FD2400261F0055956D /* ParcNaturelRgionaldeMillevachesenLimousin.jpg */,
+				F94B48E82400261D0055956D /* PetiteFrance.jpg */,
+				F94B48E02400261D0055956D /* PharedeCordouan.jpg */,
+				F94B48F42400261E0055956D /* Pujols.jpg */,
+				F94B48DD2400261C0055956D /* Riquewihr.jpg */,
+				F94B4916240026210055956D /* RoutedesVins.jpg */,
+				F94B4917240026210055956D /* RuinesdelaForteressedeCrozant.jpg */,
+				F94B48E22400261D0055956D /* SaintHippolyte.jpg */,
+				F94B48FE2400261F0055956D /* SaintJeandeLuz.jpg */,
+				F94B48F82400261E0055956D /* SaintJeanPieddePort.jpg */,
+				F94B4914240026210055956D /* Saintmilion.jpg */,
+				F94B48E42400261D0055956D /* SarlatlaCanda.jpg */,
+				F94B491D240026220055956D /* SitedeSaintNazaire.jpg */,
+				F94B48F52400261E0055956D /* Urepel.jpg */,
+				F94B4905240026200055956D /* Uzerche.jpg */,
+				F94B48F92400261F0055956D /* Vesunnamusegalloromain.jpg */,
+			);
+			path = photos;
+			sourceTree = "<group>";
+		};
 		F951F36723EAD6FE00C89636 /* articles */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,7 +469,6 @@
 			children = (
 				F9DC21D923E0DB1E0023B8EF /* regions.geojson */,
 				F95DE57123DE2F6D00BE1BD5 /* places */,
-				F95DE57223DE345700BE1BD5 /* places.json */,
 				F9DC21E023E1DE0C0023B8EF /* regions.json */,
 				F9815CDB23EAD33100EEF9CA /* articles.json */,
 				F951F36723EAD6FE00C89636 /* articles */,
@@ -320,7 +479,8 @@
 		F95DE57123DE2F6D00BE1BD5 /* places */ = {
 			isa = PBXGroup;
 			children = (
-				F9DC21F923E242760023B8EF /* alsace */,
+				F94B4961240026300055956D /* Places.csv */,
+				F94B48DA2400260C0055956D /* photos */,
 			);
 			path = places;
 			sourceTree = "<group>";
@@ -350,37 +510,6 @@
 				F9DC21EA23E231D30023B8EF /* String+HTML.swift */,
 			);
 			path = wikipedia;
-			sourceTree = "<group>";
-		};
-		F9DC21F923E242760023B8EF /* alsace */ = {
-			isa = PBXGroup;
-			children = (
-				F9DC220423E242850023B8EF /* 1.jpg */,
-				F9DC220B23E242860023B8EF /* 2.jpg */,
-				F9DC220C23E242860023B8EF /* 3.jpg */,
-				F9DC21FB23E242840023B8EF /* 4.jpg */,
-				F9DC221123E242870023B8EF /* 5.jpg */,
-				F9DC21FD23E242840023B8EF /* 6.jpg */,
-				F9DC220D23E242860023B8EF /* 7.jpg */,
-				F9DC220123E242850023B8EF /* 8.jpg */,
-				F9DC220223E242850023B8EF /* 9.jpg */,
-				F9DC21FA23E242840023B8EF /* 10.jpg */,
-				F9DC220323E242850023B8EF /* 11.jpg */,
-				F9DC220E23E242860023B8EF /* 12.jpg */,
-				F9DC220F23E242860023B8EF /* 13.jpg */,
-				F9DC220523E242850023B8EF /* 14.jpg */,
-				F9DC220023E242850023B8EF /* 15.jpg */,
-				F9DC220623E242850023B8EF /* 16.jpg */,
-				F9DC220723E242860023B8EF /* 17.jpg */,
-				F9DC221023E242860023B8EF /* 18.jpg */,
-				F9DC220823E242860023B8EF /* 19.jpg */,
-				F9DC220A23E242860023B8EF /* 20.jpg */,
-				F9DC21FC23E242840023B8EF /* 21.jpg */,
-				F9DC220923E242860023B8EF /* 22.jpg */,
-				F9DC21FF23E242850023B8EF /* 23.jpg */,
-				F9DC21FE23E242850023B8EF /* 24.jpg */,
-			);
-			path = alsace;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -452,41 +581,84 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9DC221E23E242870023B8EF /* 16.jpg in Resources */,
-				F9DC222123E242870023B8EF /* 22.jpg in Resources */,
-				F9DC221923E242870023B8EF /* 8.jpg in Resources */,
-				F9DC221723E242870023B8EF /* 23.jpg in Resources */,
-				F9DC221523E242870023B8EF /* 6.jpg in Resources */,
-				F9DC221423E242870023B8EF /* 21.jpg in Resources */,
+				F94B4940240026220055956D /* ParcNaturelRgionaldeMillevachesenLimousin.jpg in Resources */,
+				F94B4933240026220055956D /* CathdraleNotreDamedeStrasbourg.jpg in Resources */,
+				F94B4942240026220055956D /* MassifduTaennchel.jpg in Resources */,
+				F94B492B240026220055956D /* PetiteFrance.jpg in Resources */,
+				F94B4960240026220055956D /* SitedeSaintNazaire.jpg in Resources */,
+				F94B492A240026220055956D /* Niedermorschwihr.jpg in Resources */,
 				F95DE56623DE2F0F00BE1BD5 /* LaunchScreen.storyboard in Resources */,
+				F94B492E240026220055956D /* Colmar.jpg in Resources */,
+				F94B494C240026220055956D /* LesToursdeMerle.jpg in Resources */,
+				F94B492C240026220055956D /* CitdelAutomobile.jpg in Resources */,
+				F94B4936240026220055956D /* Monflanquin.jpg in Resources */,
 				F9DC21DA23E0DB1E0023B8EF /* regions.geojson in Resources */,
+				F94B4946240026220055956D /* ChteaudeVillemonteix.jpg in Resources */,
+				F94B494A240026220055956D /* Museduclotre.jpg in Resources */,
+				F94B4923240026220055956D /* PharedeCordouan.jpg in Resources */,
+				F94B4957240026220055956D /* Saintmilion.jpg in Resources */,
 				F95DE56323DE2F0F00BE1BD5 /* Preview Assets.xcassets in Resources */,
+				F94B4955240026220055956D /* LabastidedArmagnac.jpg in Resources */,
+				F94B4944240026220055956D /* MuseUnterlinden.jpg in Resources */,
+				F94B4927240026220055956D /* SarlatlaCanda.jpg in Resources */,
+				F94B494D240026220055956D /* Biarritz.jpg in Resources */,
+				F94B4934240026220055956D /* Masgot.jpg in Resources */,
+				F94B493B240026220055956D /* SaintJeanPieddePort.jpg in Resources */,
+				F94B495D240026220055956D /* LesMenetriers.jpg in Resources */,
+				F94B491E240026220055956D /* MarchDeNolDeStrasbourg.jpg in Resources */,
+				F94B495E240026220055956D /* Cadillac.jpg in Resources */,
+				F94B4926240026220055956D /* DuneduPilat.jpg in Resources */,
+				F94B4931240026220055956D /* FtesDeBayonne.jpg in Resources */,
+				F94B4941240026220055956D /* SaintJeandeLuz.jpg in Resources */,
 				F9DC21F123E232650023B8EF /* Localizable.strings in Resources */,
-				F9DC222023E242870023B8EF /* 19.jpg in Resources */,
+				F94B493F240026220055956D /* Kaysersberg.jpg in Resources */,
+				F94B4932240026220055956D /* BibliothqueHumaniste.jpg in Resources */,
+				F94B4958240026220055956D /* LaRhune.jpg in Resources */,
+				F94B4953240026220055956D /* LaCollgialeSaintThibaut.jpg in Resources */,
+				F94B493A240026220055956D /* GrottedeLaVerna.jpg in Resources */,
+				F94B493D240026220055956D /* Monpazier.jpg in Resources */,
+				F94B4943240026220055956D /* Mittelbergheim.jpg in Resources */,
+				F94B4952240026220055956D /* CtedArgent.jpg in Resources */,
 				F951F36D23EAD70D00C89636 /* article2.jpg in Resources */,
-				F9DC221823E242870023B8EF /* 15.jpg in Resources */,
+				F94B4959240026220055956D /* RoutedesVins.jpg in Resources */,
+				F94B4938240026220055956D /* Urepel.jpg in Resources */,
+				F94B492F240026220055956D /* comusedeMarquze.jpg in Resources */,
 				F9815CDC23EAD33100EEF9CA /* articles.json in Resources */,
+				F94B495C240026220055956D /* Bayonne.jpg in Resources */,
+				F94B495A240026220055956D /* RuinesdelaForteressedeCrozant.jpg in Resources */,
+				F94B4962240026300055956D /* Places.csv in Resources */,
+				F94B4924240026220055956D /* CapFerret.jpg in Resources */,
+				F94B493C240026220055956D /* Vesunnamusegalloromain.jpg in Resources */,
+				F94B494B240026220055956D /* LigneMaginotFortSchoenenbourg.jpg in Resources */,
+				F94B494E240026220055956D /* ChteaudeBiron.jpg in Resources */,
+				F94B4945240026220055956D /* Hunawihr.jpg in Resources */,
+				F94B4935240026220055956D /* Curemonte.jpg in Resources */,
 				F95DE56023DE2F0F00BE1BD5 /* Assets.xcassets in Resources */,
-				F9DC221623E242870023B8EF /* 24.jpg in Resources */,
-				F95DE57323DE345700BE1BD5 /* places.json in Resources */,
-				F9DC221323E242870023B8EF /* 4.jpg in Resources */,
-				F9DC222623E242870023B8EF /* 12.jpg in Resources */,
-				F9DC221A23E242870023B8EF /* 9.jpg in Resources */,
-				F9DC222423E242870023B8EF /* 3.jpg in Resources */,
-				F9DC221F23E242870023B8EF /* 17.jpg in Resources */,
-				F9DC222823E242870023B8EF /* 18.jpg in Resources */,
-				F9DC221223E242870023B8EF /* 10.jpg in Resources */,
-				F9DC221D23E242870023B8EF /* 14.jpg in Resources */,
-				F9DC221C23E242870023B8EF /* 1.jpg in Resources */,
+				F94B4928240026220055956D /* Bergheim.jpg in Resources */,
+				F94B4929240026220055956D /* Eguisheim.jpg in Resources */,
+				F94B4922240026220055956D /* CollongeslaRouge.jpg in Resources */,
+				F94B4920240026220055956D /* Riquewihr.jpg in Resources */,
+				F94B4937240026220055956D /* Pujols.jpg in Resources */,
+				F94B4921240026220055956D /* ParcdeWesserlingcomuseTextile.jpg in Resources */,
+				F94B491F240026220055956D /* GorgesdeKakuetta.jpg in Resources */,
+				F94B4956240026220055956D /* LacdeSaintPardoux.jpg in Resources */,
+				F94B4939240026220055956D /* GouffredeProumeyssac.jpg in Resources */,
+				F94B4951240026220055956D /* ChteaudeChlucet.jpg in Resources */,
+				F94B494F240026220055956D /* LaRoqueGageac.jpg in Resources */,
+				F94B493E240026220055956D /* LesJardinsdeMarqueyssac.jpg in Resources */,
+				F94B4948240026220055956D /* Uzerche.jpg in Resources */,
+				F94B492D240026220055956D /* AbbayedeBrantme.jpg in Resources */,
+				F94B4925240026220055956D /* SaintHippolyte.jpg in Resources */,
+				F94B4930240026220055956D /* BeynacetCazenac.jpg in Resources */,
 				F9DC21E123E1DE0C0023B8EF /* regions.json in Resources */,
-				F9DC222323E242870023B8EF /* 2.jpg in Resources */,
-				F9DC222723E242870023B8EF /* 13.jpg in Resources */,
-				F9DC222523E242870023B8EF /* 7.jpg in Resources */,
-				F9DC221B23E242870023B8EF /* 11.jpg in Resources */,
-				F9DC222923E242870023B8EF /* 5.jpg in Resources */,
+				F94B4954240026220055956D /* CastelmorondAlbret.jpg in Resources */,
+				F94B4950240026220055956D /* Bordeaux.jpg in Resources */,
 				F951F36B23EAD70D00C89636 /* article3.jpg in Resources */,
+				F94B4947240026220055956D /* OradoursurGlane.jpg in Resources */,
+				F94B4949240026220055956D /* Eyrignacetsesjardins.jpg in Resources */,
+				F94B495F240026220055956D /* ChteaudeLichtenberg.jpg in Resources */,
 				F951F36C23EAD70D00C89636 /* article1.jpg in Resources */,
-				F9DC222223E242870023B8EF /* 20.jpg in Resources */,
+				F94B495B240026220055956D /* BassindArcachon.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

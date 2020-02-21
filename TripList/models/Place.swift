@@ -12,20 +12,48 @@ import CoreLocation
 struct Place: Hashable, Codable, Identifiable {
     var id: String
     var title: String
-    var photocredits: String!
-    var wikiPageId: Int!
-    var regionId: String
     var category: PlaceCategory
-    var website: String!
-    var description: String!
-    var source: String!
+    var regionId: String
+    var iap: Bool
     var popularity: Int
     
-    fileprivate var location: Coordinates
+    fileprivate var position: Coordinates
     var locationCoordinate: CLLocationCoordinate2D {
-        return CLLocationCoordinate2D(latitude: location.lat, longitude: location.lon)
+        return CLLocationCoordinate2D(latitude: position.lat, longitude: position.lon)
     }
+    var address: String!
+    var website: String!
+    
+    var illustration: PlaceIllustration
+    var photocredits: String!
+    
+    fileprivate var descriptionFr: PlaceDescription
+    fileprivate var descriptionEn: PlaceDescription
+    var description: PlaceDescription {
+        if( Locale.current.languageCode == "fr"){
+            return descriptionFr
+        } else {
+            return descriptionEn
+        }
+    }
+    
+    var wikiPageId: String!
+    
     var cta: CallToAction!
+}
+
+struct PlaceIllustration: Hashable, Codable {
+    var path: String
+    var description: String
+    var credit: String
+    var source: String
+}
+
+struct PlaceDescription: Hashable, Codable {
+    var title: String!
+    var description: String
+    var credit: String!
+    var wikiPageId: String!
 }
 
 struct PlaceRegion: Hashable, Codable, Identifiable {
