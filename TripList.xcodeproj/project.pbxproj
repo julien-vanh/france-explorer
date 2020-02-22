@@ -78,7 +78,9 @@
 		F94B495E240026220055956D /* Cadillac.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B491B240026220055956D /* Cadillac.jpg */; };
 		F94B495F240026220055956D /* ChteaudeLichtenberg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B491C240026220055956D /* ChteaudeLichtenberg.jpg */; };
 		F94B4960240026220055956D /* SitedeSaintNazaire.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F94B491D240026220055956D /* SitedeSaintNazaire.jpg */; };
-		F94B4962240026300055956D /* Places.csv in Resources */ = {isa = PBXBuildFile; fileRef = F94B4961240026300055956D /* Places.csv */; };
+		F94B49692400435A0055956D /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = F94B49682400435A0055956D /* placeholder.png */; };
+		F94B496D240160520055956D /* places.json in Resources */ = {isa = PBXBuildFile; fileRef = F94B496C240160520055956D /* places.json */; };
+		F94B49702401A42A0055956D /* SeparationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B496F2401A42A0055956D /* SeparationBar.swift */; };
 		F951F36B23EAD70D00C89636 /* article3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F951F36823EAD70D00C89636 /* article3.jpg */; };
 		F951F36C23EAD70D00C89636 /* article1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F951F36923EAD70D00C89636 /* article1.jpg */; };
 		F951F36D23EAD70D00C89636 /* article2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F951F36A23EAD70D00C89636 /* article2.jpg */; };
@@ -209,7 +211,9 @@
 		F94B491B240026220055956D /* Cadillac.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cadillac.jpg; sourceTree = "<group>"; };
 		F94B491C240026220055956D /* ChteaudeLichtenberg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ChteaudeLichtenberg.jpg; sourceTree = "<group>"; };
 		F94B491D240026220055956D /* SitedeSaintNazaire.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SitedeSaintNazaire.jpg; sourceTree = "<group>"; };
-		F94B4961240026300055956D /* Places.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Places.csv; sourceTree = "<group>"; };
+		F94B49682400435A0055956D /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		F94B496C240160520055956D /* places.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = places.json; path = scripts/places.json; sourceTree = SOURCE_ROOT; };
+		F94B496F2401A42A0055956D /* SeparationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparationBar.swift; sourceTree = "<group>"; };
 		F951F36823EAD70D00C89636 /* article3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = article3.jpg; sourceTree = "<group>"; };
 		F951F36923EAD70D00C89636 /* article1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = article1.jpg; sourceTree = "<group>"; };
 		F951F36A23EAD70D00C89636 /* article2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = article2.jpg; sourceTree = "<group>"; };
@@ -357,12 +361,21 @@
 			path = photos;
 			sourceTree = "<group>";
 		};
-		F951F36723EAD6FE00C89636 /* articles */ = {
+		F94B496E2401999E0055956D /* photos */ = {
 			isa = PBXGroup;
 			children = (
 				F951F36923EAD70D00C89636 /* article1.jpg */,
 				F951F36A23EAD70D00C89636 /* article2.jpg */,
 				F951F36823EAD70D00C89636 /* article3.jpg */,
+			);
+			path = photos;
+			sourceTree = "<group>";
+		};
+		F951F36723EAD6FE00C89636 /* articles */ = {
+			isa = PBXGroup;
+			children = (
+				F9815CDB23EAD33100EEF9CA /* articles.json */,
+				F94B496E2401999E0055956D /* photos */,
 			);
 			path = articles;
 			sourceTree = "<group>";
@@ -467,10 +480,10 @@
 		F95DE57023DE2F6100BE1BD5 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				F94B49682400435A0055956D /* placeholder.png */,
 				F9DC21D923E0DB1E0023B8EF /* regions.geojson */,
-				F95DE57123DE2F6D00BE1BD5 /* places */,
 				F9DC21E023E1DE0C0023B8EF /* regions.json */,
-				F9815CDB23EAD33100EEF9CA /* articles.json */,
+				F95DE57123DE2F6D00BE1BD5 /* places */,
 				F951F36723EAD6FE00C89636 /* articles */,
 			);
 			path = assets;
@@ -479,7 +492,7 @@
 		F95DE57123DE2F6D00BE1BD5 /* places */ = {
 			isa = PBXGroup;
 			children = (
-				F94B4961240026300055956D /* Places.csv */,
+				F94B496C240160520055956D /* places.json */,
 				F94B48DA2400260C0055956D /* photos */,
 			);
 			path = places;
@@ -497,6 +510,7 @@
 				F95DE58823DE349600BE1BD5 /* TextView.swift */,
 				F96D610F23EB607900CD296A /* LazyView.swift */,
 				F99E73A623EDAD54006BC089 /* ActivityViewController.swift */,
+				F94B496F2401A42A0055956D /* SeparationBar.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -615,6 +629,7 @@
 				F94B4932240026220055956D /* BibliothqueHumaniste.jpg in Resources */,
 				F94B4958240026220055956D /* LaRhune.jpg in Resources */,
 				F94B4953240026220055956D /* LaCollgialeSaintThibaut.jpg in Resources */,
+				F94B496D240160520055956D /* places.json in Resources */,
 				F94B493A240026220055956D /* GrottedeLaVerna.jpg in Resources */,
 				F94B493D240026220055956D /* Monpazier.jpg in Resources */,
 				F94B4943240026220055956D /* Mittelbergheim.jpg in Resources */,
@@ -626,7 +641,6 @@
 				F9815CDC23EAD33100EEF9CA /* articles.json in Resources */,
 				F94B495C240026220055956D /* Bayonne.jpg in Resources */,
 				F94B495A240026220055956D /* RuinesdelaForteressedeCrozant.jpg in Resources */,
-				F94B4962240026300055956D /* Places.csv in Resources */,
 				F94B4924240026220055956D /* CapFerret.jpg in Resources */,
 				F94B493C240026220055956D /* Vesunnamusegalloromain.jpg in Resources */,
 				F94B494B240026220055956D /* LigneMaginotFortSchoenenbourg.jpg in Resources */,
@@ -635,6 +649,7 @@
 				F94B4935240026220055956D /* Curemonte.jpg in Resources */,
 				F95DE56023DE2F0F00BE1BD5 /* Assets.xcassets in Resources */,
 				F94B4928240026220055956D /* Bergheim.jpg in Resources */,
+				F94B49692400435A0055956D /* placeholder.png in Resources */,
 				F94B4929240026220055956D /* Eguisheim.jpg in Resources */,
 				F94B4922240026220055956D /* CollongeslaRouge.jpg in Resources */,
 				F94B4920240026220055956D /* Riquewihr.jpg in Resources */,
@@ -694,6 +709,7 @@
 				F95DE5A723DE34A900BE1BD5 /* Place.swift in Sources */,
 				F95DE59123DE349700BE1BD5 /* Store.swift in Sources */,
 				F9C9C68A23E4D287002C1DA0 /* UIColor+hexString.swift in Sources */,
+				F94B49702401A42A0055956D /* SeparationBar.swift in Sources */,
 				F91DED9E23E6EAE800D8FFD7 /* BottomSheetView.swift in Sources */,
 				F95DE59E23DE349700BE1BD5 /* DreamList.swift in Sources */,
 				F9DC21E323E231840023B8EF /* WikipediaService.swift in Sources */,

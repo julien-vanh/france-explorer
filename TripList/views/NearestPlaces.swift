@@ -23,17 +23,24 @@ struct NearestPlaces: View {
                         destination: PlaceDetail(place: place)
                     ) {
                         HStack {
-                            ImageStore.shared.image(name: place.id)
+                            ImageStore.shared.image(forPlace: place)
                                 .renderingMode(.original)
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 100, height:60)
                                 .clipped().cornerRadius(5)
-                            Text(place.title)
-                                .font(.headline)
+                            
+                            VStack(alignment: .leading) {
+                                Text(place.title)
+                                    .font(.headline)
+                                Text(PlaceStore.shared.getCategory(placeCategory: place.category).title)
+                                    .foregroundColor(Color(AppStyle.color(for: place.category)))
+                                Spacer()
+                                SeparationBar()
+                            }
                             Spacer()
                         }
-                        .padding(.leading, 15.0)
+                        .padding(.leading, 10.0)
                     }
                 }
             }

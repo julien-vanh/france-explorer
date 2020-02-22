@@ -23,7 +23,7 @@ struct DreamDetail: View {
     var body: some View {
         ScrollView(.vertical) {
             VStack {
-                ImageStore.shared.image(name: place.id)
+                ImageStore.shared.image(forPlace: place)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(height: 250)

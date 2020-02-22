@@ -12,6 +12,8 @@ let placesData: [Place] = load("places.json")
 let articlesData: [Article] = load("articles.json")
 let regionsData: [PlaceRegion] = load("regions.json")
 
+
+
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
     
@@ -46,14 +48,25 @@ final class ImageStore {
     
     static var shared = ImageStore()
     
+    
     func image(name: String) -> Image {
         let index = _guaranteeImage(name: name)
         return Image(images.values[index], scale: CGFloat(ImageStore.scale), label: Text(verbatim: name))
     }
+    
+    
+    func image(forPlace place: Place) -> Image {
+        var path = "placeholder.png"
+        if let illustration = place.illustration {
+            path = illustration.path.replacingOccurrences(of: "jpeg", with: "jpg")
+        }
+        let index = _guaranteeImage(name: path)
+        return Image(images.values[index], scale: CGFloat(ImageStore.scale), label: Text(verbatim: path))
+    }
 
     static func loadImage(name: String) throws -> CGImage {
         guard
-            let url = Bundle.main.url(forResource: name, withExtension: "jpg"),
+            let url = Bundle.main.url(forResource: name, withExtension: nil),
             let imageSource = CGImageSourceCreateWithURL(url as NSURL, nil),
             let image = CGImageSourceCreateImageAtIndex(imageSource, 0, nil)
         else {
@@ -71,7 +84,7 @@ final class ImageStore {
             return images.index(forKey: name)!
         }
         
-        images[name] = try! ImageStore.loadImage(name: "1")
+        images[name] = try! ImageStore.loadImage(name: "placeholder.png")
         return images.index(forKey: name)!
     }
 }

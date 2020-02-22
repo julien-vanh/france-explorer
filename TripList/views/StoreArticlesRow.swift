@@ -30,7 +30,7 @@ struct StoreArticlesRow: View {
                             )
                         ) {
                             ZStack {
-                                ImageStore.shared.image(name: "article\(article.id)")
+                                ImageStore.shared.image(name: "article\(article.id).jpg")
                                     .renderingMode(.original)
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)

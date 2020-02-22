@@ -10,7 +10,7 @@ import SwiftUI
 import Combine
 
 class MapState: ObservableObject{
-    @Published var place: Place = PlaceStore.shared.get(id: "1") {
+    @Published var place: Place = PlaceStore.shared.getRandom(count: 1)[0] {
         didSet {
             if self.state == .closed {
                 self.state = .middle
@@ -31,8 +31,8 @@ struct ContentView: View {
             Store()
                 .tabItem {
                     VStack {
-                        Image(systemName: "lightbulb")
-                        Text("Idées")
+                        Image(systemName: "rectangle.stack.fill")
+                        Text("Destinations")
                     }
                 }
                 .tag(0)

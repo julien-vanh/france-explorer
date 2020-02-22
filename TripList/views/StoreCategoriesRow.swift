@@ -31,12 +31,8 @@ struct StoreCategoriesRow: View {
                     
                     VStack {
                         StoreCategoryItem(category: self.storeCategories[4])
-                        StoreCategoryItem(category: self.storeCategories[5])
                     }
                     
-                    VStack {
-                        StoreCategoryItem(category: self.storeCategories[6])
-                    }
                     Rectangle().opacity(0).frame(width:15)
                 }
             }

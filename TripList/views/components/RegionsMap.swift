@@ -133,7 +133,8 @@ internal final class PlaceAnnotationView: MKMarkerAnnotationView {
     func configure(with annotation: MKAnnotation) {
         guard annotation is PlaceAnnotation else { fatalError("Unexpected annotation type: \(annotation)") }
         let placeAnnotation = annotation as! PlaceAnnotation
-        markerTintColor = placeAnnotation.completed ? UIColor.green : UIColor.red
+        //markerTintColor = placeAnnotation.completed ? UIColor.green : UIColor.red
+        markerTintColor = AppStyle.color(for: placeAnnotation.place.category)
         glyphImage = UIImage(named: "mapicon.\(placeAnnotation.place.category)")
     }
 }

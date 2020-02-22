@@ -34,14 +34,14 @@ struct ImageCarouselView<Content: View>: View {
                .animation(.spring()) // 6
                .onReceive(self.timer) { _ in
                    
-                   self.currentIndex = (self.currentIndex + 1) % 3
+                self.currentIndex = (self.currentIndex + 1) % self.numberOfImages
                }
                
                HStack(spacing: 3) {
                    ForEach(0..<self.numberOfImages, id: \.self) { index in
                        Circle()
                            .frame(width: 8, height: 8)
-                           .foregroundColor(index == self.currentIndex ? Color.gray : .white)
+                           .foregroundColor(index == self.currentIndex ? Color.blue : .white)
                            .overlay(Circle().stroke(Color.gray, lineWidth: 1))
                            .padding(.bottom, 8)
                            .animation(.spring())

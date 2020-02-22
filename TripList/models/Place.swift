@@ -10,7 +10,9 @@ import Foundation
 import CoreLocation
 
 struct Place: Hashable, Codable, Identifiable {
-    var id: String
+    var id: String {
+        return title.components(separatedBy: CharacterSet.alphanumerics.inverted).joined()
+    }
     var title: String
     var category: PlaceCategory
     var regionId: String
@@ -24,12 +26,11 @@ struct Place: Hashable, Codable, Identifiable {
     var address: String!
     var website: String!
     
-    var illustration: PlaceIllustration
-    var photocredits: String!
+    var illustration: PlaceIllustration!
     
-    fileprivate var descriptionFr: PlaceDescription
-    fileprivate var descriptionEn: PlaceDescription
-    var description: PlaceDescription {
+    fileprivate var descriptionFr: PlaceDescription!
+    fileprivate var descriptionEn: PlaceDescription!
+    var content: PlaceDescription! {
         if( Locale.current.languageCode == "fr"){
             return descriptionFr
         } else {
@@ -37,7 +38,7 @@ struct Place: Hashable, Codable, Identifiable {
         }
     }
     
-    var wikiPageId: String!
+    var wikiPageId: Int!
     
     var cta: CallToAction!
 }
@@ -53,7 +54,7 @@ struct PlaceDescription: Hashable, Codable {
     var title: String!
     var description: String
     var credit: String!
-    var wikiPageId: String!
+    var wikiPageId: Int!
 }
 
 struct PlaceRegion: Hashable, Codable, Identifiable {

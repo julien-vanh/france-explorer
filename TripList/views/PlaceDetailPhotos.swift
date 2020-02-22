@@ -69,7 +69,7 @@ struct PlaceDetailPhotos: View {
                     }
                     Spacer()
                 }
-            }
+            }.background(Color.black).edgesIgnoringSafeArea(.bottom)
         })
         .onAppear(perform: {
             if let wikiPageId = self.place.wikiPageId {

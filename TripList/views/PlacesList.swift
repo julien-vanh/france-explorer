@@ -36,6 +36,6 @@ struct PlacesList: View {
 
 struct PlacesList_Previews: PreviewProvider {
     static var previews: some View {
-        PlacesList(category: Category(id: 2, category: .place, title: "Lieux", image: ""))
+        PlacesList(category: Category(id: 2, category: .historical, title: "Lieux", image: ""))
     }
 }

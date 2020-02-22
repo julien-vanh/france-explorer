@@ -13,12 +13,20 @@ import MapKit
 
 final class PlaceStore: ObservableObject {
     typealias _PlaceDictionary = [String: Place]
+    typealias _CategoryDictionary = [String: Category]
     fileprivate var places: _PlaceDictionary = [:]
+    fileprivate var categories: _CategoryDictionary = [:]
     
     static let shared = PlaceStore()
     
     init(){
         placesData.forEach { places["\($0.id)"] = $0 }
+        
+        categories[PlaceCategory.city.rawValue] = Category(id: 1, category: .city, title: "Ville", image: "")
+        categories[PlaceCategory.museum.rawValue] = Category(id: 2, category: .museum, title: "Musée", image: "")
+        categories[PlaceCategory.nature.rawValue] = Category(id: 3, category: .nature, title: "Nature", image: "")
+        categories[PlaceCategory.historical.rawValue] = Category(id: 4, category: .historical, title: "Histoire", image: "")
+        categories[PlaceCategory.event.rawValue] = Category(id: 5, category: .event, title: "Événement", image: "")
     }
     
     func get(id: String) -> Place! {
@@ -30,13 +38,11 @@ final class PlaceStore: ObservableObject {
     }
     
     func getCategories() -> [Category] {
-        return  [
-            Category(id: 1, category: .city, title: "Ville", image: ""),
-            Category(id: 2, category: .museum, title: "Musée", image: ""),
-            Category(id: 3, category: .nature, title: "Nature", image: ""),
-            Category(id: 4, category: .historical, title: "Histoire", image: ""),
-            Category(id: 5, category: .event, title: "Événement", image: "")
-        ]
+        return Array(categories.values)
+    }
+    
+    func getCategory(placeCategory: PlaceCategory) -> Category {
+        return categories[placeCategory.rawValue]!
     }
     
     func getRegions() -> [PlaceRegion] {
@@ -45,6 +51,10 @@ final class PlaceStore: ObservableObject {
     
     func getAllForCategory(category: PlaceCategory) -> [Place] {
         return places.values.filter { $0.category == category }
+    }
+    
+    func getAllForCategory(category: PlaceCategory, regionId: String) -> [Place] {
+        return places.values.filter { $0.regionId == regionId && $0.category == category }
     }
     
     func getAllForRegion(regionId: String) -> [Place] {

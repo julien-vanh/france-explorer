@@ -17,7 +17,7 @@ struct ProgressionRegion: View {
             ForEach(PlaceStore.shared.getCategories()) { category in
                 
                 Section(header: Text(category.title)) {
-                    QGrid(PlaceStore.shared.getAllForCategory(category: category.category),
+                    QGrid(PlaceStore.shared.getAllForCategory(category: category.category, regionId: self.region.id),
                       columns: 5,
                       columnsInLandscape: 10,
                       vSpacing: 0,
@@ -26,12 +26,12 @@ struct ProgressionRegion: View {
                       hPadding: 0
                     ) { place in
                         NavigationLink(
-                            destination: PlacePager(places: PlaceStore.shared.getAllForCategory(category: category.category), initialePlace: place)
+                            destination: PlacePager(places: PlaceStore.shared.getAllForCategory(category: category.category, regionId: self.region.id), initialePlace: place)
                         ) {
                             ProgressionItem(place: place)
                         }
                     }
-                    .frame(height: ceil(CGFloat(PlaceStore.shared.getAllForCategory(category: category.category).count) / 5.0)*70)
+                    .frame(height: ceil(CGFloat(PlaceStore.shared.getAllForCategory(category: category.category, regionId: self.region.id).count) / 5.0)*70)
                     .listRowInsets(EdgeInsets())
                 }
             }
@@ -51,7 +51,7 @@ struct ProgressionItem: View {
     var place: Place
     
     var body: some View {
-        ImageStore.shared.image(name: place.id)
+        ImageStore.shared.image(forPlace: place)
             .renderingMode(.original)
             .resizable()
             //.grayscale(self.session.isCompleted(placeId: place.id) ? 0.0 : 0.99)

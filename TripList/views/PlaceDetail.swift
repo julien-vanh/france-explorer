@@ -13,7 +13,6 @@ struct PlaceDetail: View {
     @EnvironmentObject var session: Session
     var place: Place
     @State private var showCredits = false
-    @State var wikiPage: WikiPage!
     
     
     init(){
@@ -27,7 +26,7 @@ struct PlaceDetail: View {
     var body: some View {
         ScrollView(.vertical) {
             GeometryReader { geometry in
-                ImageStore.shared.image(name: self.place.id)
+                ImageStore.shared.image(forPlace: self.place)
                     .resizable()
                     .scaledToFill()
                     .frame(width: geometry.size.width, height: self.getHeightForHeaderImage(geometry))
@@ -36,40 +35,43 @@ struct PlaceDetail: View {
             }.frame(height: 300)
             
             VStack {
-                
-                    
                 NavigationLink(
                     destination: PlaceDetailPhotos(place: self.place)
                 ) {
                     HStack{
-                        Spacer()
-                        Image(systemName: "plus")
+                           
                         Text("photos")
-                            .font(.headline)
-                            .padding(.trailing, 15.0)
+                            .padding(.horizontal, 5.0)
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .background(Color.black).cornerRadius(10)
+                            
+                        Spacer()
                     }
-                    .foregroundColor(.white)
+                    
                 }
+                    .padding(.leading, 10.0)
                 .padding(.top, -40.0)
+                
+                Text(PlaceStore.shared.getCategory(placeCategory: self.place.category).title)
+                    .foregroundColor(Color(AppStyle.color(for: self.place.category)))
                 
                 Text(self.place.title).font(.largeTitle)
                 
                 PlaceDetailsButtons(place: self.place)
                 
-                /*
-                if self.place.description != nil {
-                    Text(self.place.description).padding()
-                } else if (self.wikiPage != nil && self.wikiPage != nil){
-                    Text(self.wikiPage.extract).padding()
-                }*/
                 
-                if (self.wikiPage != nil && self.wikiPage != nil){
-                    Text(self.wikiPage.extract).padding()
+                    
+                
+                if self.place.content != nil {
+                    Text(self.place.content!.description)
+                        .padding( 10.0)
                 }
                 
                 if self.place.website != nil {
+                    SeparationBar()
                     HStack {
-                        Image(systemName: "globe").frame(width: 40, height: 40, alignment: .center).font(.title)
+                        Image(systemName: "globe").frame(width: 30, height: 30, alignment: .center).font(.title)
                         Button(action: {
                             self.openLinkInBrowser(link: self.place.website)
                         }) {
@@ -77,53 +79,55 @@ struct PlaceDetail: View {
                         }
                         Spacer()
                     }
-                    .padding(.bottom, 10.0)
+                    .padding(.leading, 10.0)
                 }
                 
-                HStack {
-                    Image(systemName: "pin").frame(width: 40, height: 40, alignment: .center).font(.title)
-                    Text("10 rue des Champs de la Vigne, 27550 Fontaine la Soret")
-                    Spacer()
+                if self.place.address != nil {
+                    SeparationBar()
+                    HStack {
+                        Image(systemName: "map").frame(width: 30, height: 30, alignment: .center).font(.title)
+                        Button(action: {
+                            let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: self.place.locationCoordinate, addressDictionary:nil))
+                            mapItem.name = self.place.title
+                            mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
+                        }) {
+                            Text(self.place.address)
+                        }
+                        Spacer()
+                    }
+                    .padding(.leading, 10.0)
                 }
-                .padding(.bottom, 10.0)
                 
-                MapView(coordinate: self.place.locationCoordinate)
-                    .edgesIgnoringSafeArea(.bottom)
-                    .frame(height: 200)
+                
                 
                 AssociatesRow(placeId: self.place.id)
+                    .padding(.top, 10.0)
                     .padding(.bottom, 15.0)
-                    
+                
                 Button(action: {
                     self.showCredits = true
                 }) {
                     Text("Crédits").foregroundColor(.gray)
                 }.sheet(isPresented: self.$showCredits) {
-                    CreditsModal(place: self.place)
-                }.padding(.bottom, 40.0)
-            }
-        }
-        .edgesIgnoringSafeArea(.top).onAppear(perform: {
-            print("hint loaded")
-            if self.place.wikiPageId != nil {
-                WikipediaService.shared.getPage(self.place.wikiPageId!) { result in
-                    switch result {
-                    case .failure(let error):
-                        print(error)
-                    case .success(let page):
-                        self.wikiPage = page
-                        print("page downloaded")
-                    }
+                    CreditsModal(place: self.place, display: self.$showCredits)
                 }
             }
             
-        }).onDisappear {
-            print("hint disappear")
+            GeometryReader { geometry in
+                MapView(coordinate: self.place.locationCoordinate)
+                    //.frame(width: geometry.size.width, height: UIScreen.main.bounds.height - 50 - self.getScrollOffset(geometry))//Lag
+                    .frame(width: geometry.size.width, height: 300)
+            }.frame(height: 300)
         }
+        .edgesIgnoringSafeArea(.vertical)
     }
     
     private func openLinkInBrowser(link: String){
-        if let url = URL(string: link) {
+        var urlString = link
+        if !link.hasPrefix("http"){
+            urlString = "http://"+link
+        }
+        if let url = URL(string: urlString) {
             UIApplication.shared.open(url)
         }
     }
@@ -163,22 +167,46 @@ struct HintDetail_Previews: PreviewProvider {
 
 struct CreditsModal: View {
     var place: Place
+    @Binding var display: Bool
     
     var body: some View {
         VStack {
-            Text("Crédits")
-                .font(.title)
-                .padding(.bottom, 50.0)
-            if place.photocredits != nil {
-                Text("Photo : ")
-                Text("\(place.photocredits)").foregroundColor(.gray)
+            HStack {
+                Image(systemName: "xmark")
+                    .foregroundColor(.white)
+                    .background(
+                    Circle()
+                        .fill(Color.gray)
+                        .frame(width: 40, height: 40)
+                )
+                .frame(width: 40, height: 40)
+                .padding([.top, .leading], 20.0)
+                .onTapGesture {
+                    self.display.toggle()
+                }
+                Spacer()
             }
             
-            if place.source != nil {
-                Text("Description : ")
-                Text("\(place.source)").foregroundColor(.gray)
-            }
+            VStack(alignment: .leading) {
+                Text("Crédits")
+                    .font(.title)
+                    .padding(.bottom, 50.0)
+                
+                if place.illustration != nil {
+                    Text("Photo")
+                    Text(place.illustration!.description).foregroundColor(.gray)
+                    Text(place.illustration!.credit).foregroundColor(.gray)
+                    Text(place.illustration!.source).foregroundColor(.gray)
+                    .padding(.bottom, 30.0)
+                }
+                
+                if (self.place.content != nil){
+                    Text("Texte")
+                    Text(self.place.content!.credit).foregroundColor(.gray)
+                }
+            }.padding()
+            
+            Spacer()
         }
-        
     }
 }

@@ -38,7 +38,7 @@ struct PlaceMapDrawer: View {
             PlaceDetailsButtons(mapState: self.mapState)
             
             HStack {
-                ImageStore.shared.image(name: self.mapState.place.id)
+                ImageStore.shared.image(forPlace: self.mapState.place)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 200, height: 150)

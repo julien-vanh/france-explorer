@@ -20,7 +20,7 @@ struct StoreArticle: View {
     var body: some View {
         ScrollView(.vertical) {
             GeometryReader { geometry in
-                ImageStore.shared.image(name: "article\(self.article.id)")
+                ImageStore.shared.image(name: "article\(self.article.id).jpg")
                     .resizable()
                     .scaledToFill()
                     .frame(width: geometry.size.width, height: self.getHeightForHeaderImage(geometry))
@@ -43,7 +43,7 @@ struct StoreArticle: View {
                             destination: PlaceDetail(place: place)
                         ) {
                             HStack {
-                                ImageStore.shared.image(name: place.id)
+                                ImageStore.shared.image(forPlace: place)
                                     .renderingMode(.original)
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
