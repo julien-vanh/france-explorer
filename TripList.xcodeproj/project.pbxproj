@@ -127,6 +127,7 @@
 		F9C9C68623E4B248002C1DA0 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9C68523E4B248002C1DA0 /* PlaceAnnotation.swift */; };
 		F9C9C68823E4D093002C1DA0 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9C68723E4D093002C1DA0 /* AppStyle.swift */; };
 		F9C9C68A23E4D287002C1DA0 /* UIColor+hexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9C68923E4D287002C1DA0 /* UIColor+hexString.swift */; };
+		F9D49FA12402917C005A2B8E /* PlaceGridCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D49FA02402917C005A2B8E /* PlaceGridCompact.swift */; };
 		F9DC21D423E0CEC20023B8EF /* RegionsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC21D323E0CEC20023B8EF /* RegionsMap.swift */; };
 		F9DC21DA23E0DB1E0023B8EF /* regions.geojson in Resources */ = {isa = PBXBuildFile; fileRef = F9DC21D923E0DB1E0023B8EF /* regions.geojson */; };
 		F9DC21E123E1DE0C0023B8EF /* regions.json in Resources */ = {isa = PBXBuildFile; fileRef = F9DC21E023E1DE0C0023B8EF /* regions.json */; };
@@ -261,6 +262,7 @@
 		F9C9C68523E4B248002C1DA0 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 		F9C9C68723E4D093002C1DA0 /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
 		F9C9C68923E4D287002C1DA0 /* UIColor+hexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hexString.swift"; sourceTree = "<group>"; };
+		F9D49FA02402917C005A2B8E /* PlaceGridCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceGridCompact.swift; sourceTree = "<group>"; };
 		F9DC21D323E0CEC20023B8EF /* RegionsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionsMap.swift; sourceTree = "<group>"; };
 		F9DC21D923E0DB1E0023B8EF /* regions.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = regions.geojson; sourceTree = "<group>"; };
 		F9DC21E023E1DE0C0023B8EF /* regions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = regions.json; sourceTree = "<group>"; };
@@ -458,6 +460,7 @@
 				F99E73A823EF0D69006BC089 /* ProgressionRegion.swift */,
 				F95DE57D23DE349600BE1BD5 /* Store.swift */,
 				F99E73AC23F3611E006BC089 /* NearestPlaces.swift */,
+				F9D49FA02402917C005A2B8E /* PlaceGridCompact.swift */,
 				F95DE58223DE349600BE1BD5 /* StoreCategoriesRow.swift */,
 				F9815CDF23EAD50500EEF9CA /* StoreArticlesRow.swift */,
 				F9815CE123EAD53900EEF9CA /* StoreArticle.swift */,
@@ -714,6 +717,7 @@
 				F95DE59123DE349700BE1BD5 /* Store.swift in Sources */,
 				F9C9C68A23E4D287002C1DA0 /* UIColor+hexString.swift in Sources */,
 				F94B49702401A42A0055956D /* SeparationBar.swift in Sources */,
+				F9D49FA12402917C005A2B8E /* PlaceGridCompact.swift in Sources */,
 				F91DED9E23E6EAE800D8FFD7 /* BottomSheetView.swift in Sources */,
 				F95DE59E23DE349700BE1BD5 /* DreamList.swift in Sources */,
 				F9DC21E323E231840023B8EF /* WikipediaService.swift in Sources */,

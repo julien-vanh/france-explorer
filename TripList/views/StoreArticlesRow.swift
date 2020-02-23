@@ -17,9 +17,12 @@ struct StoreArticlesRow: View {
     
     var body: some View {
        VStack(alignment: .leading) {
-            Text("Nos sélections")
-                .font(.title)
-                .padding([.top, .leading], 15)
+            HStack
+            {
+                Text("Nos sélections")
+                    .font(.title)
+                Spacer()
+            }.padding(.horizontal, 10)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: 0) {

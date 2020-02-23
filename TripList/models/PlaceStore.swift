@@ -61,14 +61,22 @@ final class PlaceStore: ObservableObject {
         return places.values.filter { $0.regionId == regionId }
     }
     
-    func getRandom(count:Int) -> [Place] {
+    func getRandom(count:Int, withIllustration: Bool = false) -> [Place] {
         var resultCount: Int
         if(count > places.keys.count){
             resultCount = places.keys.count
         } else {
             resultCount = count
         }
-        return Array(places.values.shuffled().prefix(resultCount))
+        var result: [Place]
+        if(withIllustration){
+            result = places.values.filter { (place) -> Bool in
+                return place.illustration != nil
+            }
+        } else {
+            result = Array(places.values)
+        }
+        return Array(result.shuffled().prefix(resultCount))
     }
     
     func getAssociatedPlaceTo(id: String, count: Int) -> [Place]{

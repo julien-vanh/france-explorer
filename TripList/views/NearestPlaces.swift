@@ -12,19 +12,22 @@ struct NearestPlaces: View {
     @ObservedObject var locationManager = LocationManager()
     
     var body: some View {
-        VStack(alignment: .leading) {
-            if(locationManager.lastLocation != nil) {
-                Text("À proximité")
-                    .font(.title)
-                    .padding([.top, .leading], 15)
-                
-                ForEach(PlaceStore.shared.getNearestPlaces(position: locationManager.lastLocation!.coordinate, count: 5)) { place in
-                    NavigationLink(
-                        destination: PlaceDetail(place: place)
-                    ) {
-                        PlaceViewCompact(place: place)
+        VStack{
+            if(locationManager.nearestPlaces != nil){
+                HStack
+                {
+                    Text("À proximité")
+                        .font(.title)
+                    Spacer()
+                    Button(action: {
+                        //
+                    })
+                    {
+                        Text("Voir plus")
                     }
-                }
+                }.padding(.horizontal, 10)
+                
+                PlaceGridCompact(places: self.locationManager.nearestPlaces!)
             }
         }
     }

@@ -20,24 +20,15 @@ struct Store: View {
                 
                 Carousel()
                 
-                NearestPlaces()
-                
                 RandomButton()
+                
+                NearestPlaces()
                 
                 StoreArticlesRow()
                 
                 StoreCategoriesRow()
                 
-                VStack(alignment: .leading) {
-                    Text("Suggestions")
-                        .font(.title)
-                        .padding([.top, .leading], 15)
-                    
-                    ForEach(PlaceStore.shared.getRandom(count: 5)) { place in
-                        PlaceViewCompact(place: place)
-                        
-                    }
-                }
+                StoreSuggestions()
                 
                 Rectangle().opacity(0).frame(height:40)
                 
@@ -61,7 +52,7 @@ struct Carousel: View {
     var body: some View {
         GeometryReader { geometry in
             ImageCarouselView(numberOfImages: self.CountInCarousel) {
-                ForEach(PlaceStore.shared.getRandom(count: self.CountInCarousel)) { place in
+                ForEach(PlaceStore.shared.getRandom(count: self.CountInCarousel, withIllustration: true)) { place in
                     NavigationLink(
                         destination: PlaceDetail(place: place)
                     ) {
@@ -94,6 +85,27 @@ struct RandomButton: View {
                 .background(LinearGradient(gradient: Gradient(colors: [Color.orange, Color.red]), startPoint: .leading, endPoint: .trailing))
                 .cornerRadius(20)
             }
+        }
+    }
+}
+
+struct StoreSuggestions: View {
+    var body: some View {
+        VStack(alignment: .leading) {
+            HStack
+                {
+                    Text("Suggestions")
+                        .font(.title)
+                    Spacer()
+                    Button(action: {
+                        //
+                    })
+                    {
+                        Text("Voir plus")
+                    }
+            }.padding(.horizontal, 10)
+            
+            PlaceGridCompact(places: PlaceStore.shared.getRandom(count: 9, withIllustration: true))
         }
     }
 }

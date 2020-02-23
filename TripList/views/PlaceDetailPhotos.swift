@@ -26,7 +26,7 @@ struct PlaceDetailPhotos: View {
                 }, label: {
                     KFImage(pageImage.url).placeholder {
                         // Placeholder while downloading.
-                        Image(systemName: "arrow.2.circlepath.circle")
+                        Image(systemName: "photo")
                             .font(.largeTitle)
                             .opacity(0.3)
                     }

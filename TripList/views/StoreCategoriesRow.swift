@@ -11,32 +11,36 @@ import SwiftUI
 struct StoreCategoriesRow: View {
     var storeCategories = PlaceStore.shared.getCategories()
     
+    let rows = UIDevice.current.userInterfaceIdiom == .phone ? 2 : 1
+    let cols = UIDevice.current.userInterfaceIdiom == .phone ? 3 : 5
+    
     var body: some View {
-       VStack(alignment: .leading) {
-            Text("Catégories")
-                .font(.title)
-                .padding([.top, .leading], 15)
-            
+        VStack {
+            HStack
+            {
+                Text("Catégories")
+                    .font(.title)
+                Spacer()
+            }.padding(.horizontal, 10)
+        
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: 0) {
-                    VStack {
-                        StoreCategoryItem(category: self.storeCategories[0])
-                        StoreCategoryItem(category: self.storeCategories[1])
+                    ForEach((0...(cols-1)), id: \.self) { col in
+                        VStack {
+                            ForEach((0...(self.rows-1)), id: \.self) { row in
+                                VStack{
+                                    if self.storeCategories.count > (row*self.cols+col) {
+                                        StoreCategoryItem(category: self.storeCategories[row*self.cols+col])
+                                            .frame(width: 180)
+                                    }
+                                }
+                            }
+                        }
                     }
-                    
-                    VStack {
-                        StoreCategoryItem(category: self.storeCategories[2])
-                        StoreCategoryItem(category: self.storeCategories[3])
-                    }
-                    
-                    VStack {
-                        StoreCategoryItem(category: self.storeCategories[4])
-                    }
-                    
-                    Rectangle().opacity(0).frame(width:15)
+                    Rectangle().opacity(0).frame(width:50)
                 }
             }
-        }
+        }.frame(height: CGFloat(50*rows+60))
     }
 }
 

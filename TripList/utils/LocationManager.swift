@@ -26,6 +26,12 @@ class LocationManager: NSObject, ObservableObject {
             objectWillChange.send()
         }
     }
+    
+    @Published var nearestPlaces: [Place]? {
+        willSet {
+            objectWillChange.send()
+        }
+    }
 
     var statusString: String {
         guard let status = locationStatus else {
@@ -58,6 +64,7 @@ extension LocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         self.lastLocation = location
+        self.nearestPlaces = PlaceStore.shared.getNearestPlaces(position: location.coordinate, count: 9)
         print(#function, location)
     }
 
