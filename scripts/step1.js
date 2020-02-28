@@ -25,10 +25,10 @@ const csvWriter = createCsvWriter({
 
 var lines = []
 
-let f1 = readFile("triplist1.kml")
-let f2 = readFile("triplist2.kml")
+let f1 = readFile("triplist2.kml")
+//let f2 = readFile("triplist2.kml")
 
-Promise.all([f1, f2]).then(()=> {
+Promise.all([f1]).then(()=> {
     return csvWriter.writeRecords(lines)
 }).then(()=> {
     console.log('step1 success')
@@ -205,6 +205,7 @@ function getWikiData(pageid){
 }
 
 function getWikiDataEN(pageTitle){
+    pageTitle = pageTitle.replace("œ", "oe")
     var options = {
         uri: "https://en.wikipedia.org/w/api.php?action=query&titles="+pageTitle+"&prop=extracts&exintro&explaintext&format=json",
         json: true

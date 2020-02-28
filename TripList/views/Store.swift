@@ -97,12 +97,13 @@ struct StoreSuggestions: View {
                     Text("Suggestions")
                         .font(.title)
                     Spacer()
+                    /*
                     Button(action: {
                         //
                     })
                     {
                         Text("Voir plus")
-                    }
+                    }*/
             }.padding(.horizontal, 10)
             
             PlaceGridCompact(places: PlaceStore.shared.getRandom(count: 9, withIllustration: true))

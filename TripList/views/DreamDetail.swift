@@ -44,7 +44,7 @@ struct DreamDetail: View {
                 
                 
                 ZStack {
-                    MapView(coordinate: place.locationCoordinate)
+                    MapView(place: place)
                         .edgesIgnoringSafeArea(.bottom)
                         .frame(height: 200)
                         .disabled(true)

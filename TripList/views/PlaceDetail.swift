@@ -11,16 +11,25 @@ import MapKit
 
 struct PlaceDetail: View {
     @EnvironmentObject var session: Session
+    @ObservedObject var locationManager = LocationManager.shared
+    
     var place: Place
+    var displayAssociates: Bool = true
     @State private var showCredits = false
     
     
     init(){
+        //To display a random place
         self.place = PlaceStore.shared.getRandom(count: 1)[0]
     }
     
     init(place: Place){
         self.place = place
+    }
+    
+    init(place: Place, displayAssociates: Bool){
+        self.place = place
+        self.displayAssociates = displayAssociates
     }
 
     var body: some View {
@@ -58,10 +67,13 @@ struct PlaceDetail: View {
                 
                 Text(self.place.title).font(.largeTitle)
                 
+                if locationManager.isLocationEnable() {
+                    Text("Situé à : " + AppStyle.formatDistance(value: locationManager.distanceTo(coordinate: place.locationCoordinate)))
+                }
+                
+                
                 PlaceDetailsButtons(place: self.place)
                 
-                
-                    
                 
                 if self.place.content != nil {
                     Text(self.place.content!.description)
@@ -99,10 +111,12 @@ struct PlaceDetail: View {
                 }
                 
                 
+                if displayAssociates {
+                    AssociatesRow(placeId: self.place.id)
+                        .padding(.top, 10.0)
+                        .padding(.bottom, 15.0)
+                }
                 
-                AssociatesRow(placeId: self.place.id)
-                    .padding(.top, 10.0)
-                    .padding(.bottom, 15.0)
                 
                 Button(action: {
                     self.showCredits = true
@@ -113,13 +127,15 @@ struct PlaceDetail: View {
                 }
             }
             
+            
+            
             GeometryReader { geometry in
-                MapView(coordinate: self.place.locationCoordinate)
+                MapView(place: self.place)
                     //.frame(width: geometry.size.width, height: UIScreen.main.bounds.height - 50 - self.getScrollOffset(geometry))//Lag
-                    .frame(width: geometry.size.width, height: 300)
-            }.frame(height: 300)
+                    .frame(width: geometry.size.width, height: 500)
+            }.frame(height: 500)
         }
-        .edgesIgnoringSafeArea(.vertical)
+        .edgesIgnoringSafeArea(.top)
     }
     
     private func openLinkInBrowser(link: String){

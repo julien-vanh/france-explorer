@@ -8,7 +8,7 @@
         <color>ffd18802</color>
         <scale>1</scale>
         <Icon>
-          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -20,7 +20,7 @@
         <color>ffd18802</color>
         <scale>1</scale>
         <Icon>
-          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -42,7 +42,7 @@
         <color>ffd18802</color>
         <scale>1</scale>
         <Icon>
-          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -54,7 +54,7 @@
         <color>ffd18802</color>
         <scale>1</scale>
         <Icon>
-          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -76,7 +76,7 @@
         <color>ffd18802</color>
         <scale>1</scale>
         <Icon>
-          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -88,7 +88,7 @@
         <color>ffd18802</color>
         <scale>1</scale>
         <Icon>
-          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -110,7 +110,7 @@
         <color>ffd18802</color>
         <scale>1</scale>
         <Icon>
-          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -122,7 +122,7 @@
         <color>ffd18802</color>
         <scale>1</scale>
         <Icon>
-          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -144,7 +144,7 @@
         <color>ffd18802</color>
         <scale>1</scale>
         <Icon>
-          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -156,7 +156,7 @@
         <color>ffd18802</color>
         <scale>1</scale>
         <Icon>
-          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -3739,6 +3739,3066 @@
         <Point>
           <coordinates>
             0.983238099999994,49.9117958,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>paysdelaloire</name>
+      <Placemark>
+        <name>Château de Clisson</name>
+        <description><![CDATA[wiki: 1853258<br>website: grand-patrimoine.loire-atlantique.fr<br>popularity: <br>address: Place du Minage, 44190 Clisson]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1853258</value>
+          </Data>
+          <Data name="website">
+            <value>grand-patrimoine.loire-atlantique.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Place du Minage, 44190 Clisson</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -1.28130629999998,47.0866779,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Musée du Vignoble Nantais</name>
+        <description><![CDATA[wiki: 5650520<br>website: www.musee-vignoble-nantais.eu<br>popularity: <br>address: 82 Rue Pierre Abélard, 44330 Le Pallet]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>5650520</value>
+          </Data>
+          <Data name="website">
+            <value>www.musee-vignoble-nantais.eu</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>82 Rue Pierre Abélard, 44330 Le Pallet</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -1.33004299999993,47.134936,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Les Machines de l'Île]]></name>
+        <description><![CDATA[wiki: 1102301<br>website: www.lesmachines-nantes.fr<br>popularity: <br>address: Parc des Chantiers, Boulevard Léon Bureau, 44200 Nantes]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1102301</value>
+          </Data>
+          <Data name="website">
+            <value>www.lesmachines-nantes.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Parc des Chantiers, Boulevard Léon Bureau, 44200 Nantes</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -1.56445199999996,47.2062447,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Château des ducs de Bretagne</name>
+        <description><![CDATA[wiki: 422208<br>website: www.chateau-nantes.fr<br>popularity: <br>address: 4 Place Marc Elder, 44000 Nantes]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>422208</value>
+          </Data>
+          <Data name="website">
+            <value>www.chateau-nantes.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>4 Place Marc Elder, 44000 Nantes</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -1.54877080000006,47.2162749,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Passage Pommeraye</name>
+        <description><![CDATA[wiki: 609149<br>website: www.passagepommeraye.fr<br>popularity: <br>address: 20 Passage Pommeraye, 44000 Nantes]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>609149</value>
+          </Data>
+          <Data name="website">
+            <value>www.passagepommeraye.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>20 Passage Pommeraye, 44000 Nantes</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -1.55965700000002,47.2134459,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Île de Versailles</name>
+        <description><![CDATA[wiki: 876980<br>website: <br>popularity: <br>address: Île de Versailles, 44000 Nantes]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>876980</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Île de Versailles, 44000 Nantes</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -1.55416089999994,47.225612,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Escal'Atlantic]]></name>
+        <description><![CDATA[wiki: 7618564<br>website: www.saint-nazaire-tourisme.com<br>popularity: 3<br>address: Boulevard de la Légion d'Honneur, 44600 Saint-Nazaire]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>7618564</value>
+          </Data>
+          <Data name="website">
+            <value>www.saint-nazaire-tourisme.com</value>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value><![CDATA[Boulevard de la Légion d'Honneur, 44600 Saint-Nazaire]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -2.20339300000001,47.275703,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sous-marin Espadon</name>
+        <description><![CDATA[wiki: 7900242<br>website: www.saint-nazaire-tourisme.com<br>popularity: 2<br>address: Avenue de la Forme Ecluse, 44600 Saint-Nazaire]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>7900242</value>
+          </Data>
+          <Data name="website">
+            <value>www.saint-nazaire-tourisme.com</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Avenue de la Forme Ecluse, 44600 Saint-Nazaire</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -2.1989294,47.2755946,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Marais salants de Guérande</name>
+        <description><![CDATA[wiki: 3759186<br>website: <br>popularity: <br>address: 44350 Guérande, France]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>3759186</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>44350 Guérande, France</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -2.455015,47.31916,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Parc Naturel Régional de Brière</name>
+        <description><![CDATA[wiki: 930684<br>website: www.parc-naturel-briere.com<br>popularity: <br>address: 44720 Saint-Joachim]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>930684</value>
+          </Data>
+          <Data name="website">
+            <value>www.parc-naturel-briere.com</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>44720 Saint-Joachim</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -2.23569629999997,47.3785644,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sainte-Suzanne</name>
+        <description><![CDATA[wiki: 315377<br>website: <br>popularity: <br>address: Sainte-Suzanne, 53270 Sainte-Suzanne-et-Chammes]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>315377</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Sainte-Suzanne, 53270 Sainte-Suzanne-et-Chammes</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.349277000000029,48.097456,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Jublains</name>
+        <description><![CDATA[wiki: 293892<br>website: <br>popularity: <br>address: 53160 Jublains]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>293892</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>53160 Jublains</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.494711999999936,48.256575,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Abbaye de Fontaine-Daniel</name>
+        <description><![CDATA[wiki: 2838263<br>website: <br>popularity: <br>address: 53100 Saint-Georges-Buttavent]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>2838263</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>53100 Saint-Georges-Buttavent</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.673212899999953,48.2776385,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Château de Lassay</name>
+        <description><![CDATA[wiki: 1964438<br>website: www.chateaudelassay.fr<br>popularity: <br>address: Place du Boële, 53110 Lassay-les-Châteaux]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1964438</value>
+          </Data>
+          <Data name="website">
+            <value>www.chateaudelassay.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Place du Boële, 53110 Lassay-les-Châteaux</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.499850000000038,48.438839,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Musée des 24 Heures du Mans</name>
+        <description><![CDATA[wiki: 2019329<br>website: www.lemans-musee24h.com<br>popularity: 3<br>address: 9 place Luigi Chinetti, 72100 Le Mans]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>2019329</value>
+          </Data>
+          <Data name="website">
+            <value>www.lemans-musee24h.com</value>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value>9 place Luigi Chinetti, 72100 Le Mans</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            0.208644000000049,47.956867,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Château De Montmirail</name>
+        <description><![CDATA[wiki: 817180<br>website: www.chateaudemontmirail.com<br>popularity: <br>address: Le Château de Montmirail, 72320 Montmirail]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>817180</value>
+          </Data>
+          <Data name="website">
+            <value>www.chateaudemontmirail.com</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Le Château de Montmirail, 72320 Montmirail</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            0.790181500000017,48.1031846,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Château du Lude</name>
+        <description><![CDATA[wiki: 2519364<br>website: <br>popularity: <br>address: Le Château, 72800 Le Lude]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>2519364</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Le Château, 72800 Le Lude</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            0.159051999999974,47.64752,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Zoo de La Flèche</name>
+        <description><![CDATA[wiki: 2819182<br>website: www.zoo-la-fleche.com<br>popularity: 2<br>address: Le Tertre Rouge, 72200 La Flèche]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>2819182</value>
+          </Data>
+          <Data name="website">
+            <value>www.zoo-la-fleche.com</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Le Tertre Rouge, 72200 La Flèche</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.0475777999999991,47.6776384,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Château d'Angers]]></name>
+        <description><![CDATA[wiki: 665431<br>website: www.chateau-angers.fr<br>popularity: <br>address: 2 Promenade du Bout du Monde, 49100 Angers]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>665431</value>
+          </Data>
+          <Data name="website">
+            <value>www.chateau-angers.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>2 Promenade du Bout du Monde, 49100 Angers</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.559999999999945,47.47,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Abbaye Royale de Fontevraud</name>
+        <description><![CDATA[wiki: 159693<br>website: www.fontevraud.fr<br>popularity: <br>address: 49590 Fontevraud-l'Abbaye]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>159693</value>
+          </Data>
+          <Data name="website">
+            <value>www.fontevraud.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value><![CDATA[49590 Fontevraud-l'Abbaye]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            0.0524682999999868,47.1808273,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Château de Montsoreau - Musée d'art contemporain]]></name>
+        <description><![CDATA[wiki: 11020295<br>website: www.chateau-montsoreau.com<br>popularity: <br>address: Passage du Marquis de, Passage de Geoffre, 49730 Montsoreau]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>11020295</value>
+          </Data>
+          <Data name="website">
+            <value>www.chateau-montsoreau.com</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Passage du Marquis de, Passage de Geoffre, 49730 Montsoreau</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            0.06254899999999,47.215685,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Souzay-Champigny</name>
+        <description><![CDATA[wiki: 476007<br>website: <br>popularity: <br>address: 49400 Souzay-Champigny]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>476007</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>49400 Souzay-Champigny</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.00503600000001825,47.234691,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bioparc de Doué-la-Fontaine</name>
+        <description><![CDATA[wiki: 1211315<br>website: www.bioparc-zoo.fr<br>popularity: <br>address: 103 Rue de Cholet, 49700 Doué-en-Anjou]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1211315</value>
+          </Data>
+          <Data name="website">
+            <value>www.bioparc-zoo.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>103 Rue de Cholet, 49700 Doué-en-Anjou</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.299476000000027,47.190543,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Béhuard</name>
+        <description><![CDATA[wiki: 475536<br>website: <br>popularity: <br>address: 49028 Béhuard]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>475536</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>49028 Béhuard</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.643667999999934,47.379488,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Château de Serrant</name>
+        <description><![CDATA[wiki: 964306<br>website: www.chateau-serrant.net<br>popularity: <br>address: RD 723, 49170 Saint-Georges-sur-Loire]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>964306</value>
+          </Data>
+          <Data name="website">
+            <value>www.chateau-serrant.net</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>RD 723, 49170 Saint-Georges-sur-Loire</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.744053799999961,47.415086,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Parc Oriental de Maulévrier</name>
+        <description><![CDATA[wiki: 4686996<br>website: www.parc-oriental.com<br>popularity: <br>address: Place de la Mairie, 49360 Maulevrier]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>4686996</value>
+          </Data>
+          <Data name="website">
+            <value>www.parc-oriental.com</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Place de la Mairie, 49360 Maulevrier</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.744564099999934,47.005855,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Château du Plessis-Bourré</name>
+        <description><![CDATA[wiki: 179263<br>website: www.plessis-bourre.com<br>popularity: <br>address: Château du Plessis-Bourré, 49460 Écuillé]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>179263</value>
+          </Data>
+          <Data name="website">
+            <value>www.plessis-bourre.com</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Château du Plessis-Bourré, 49460 Écuillé</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.544288800000004,47.6009026,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Puy du Fou</name>
+        <description><![CDATA[wiki: 38508<br>website: www.puydufou.com<br>popularity: 3<br>address: 85590 Les Epesses]]></description>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>38508</value>
+          </Data>
+          <Data name="website">
+            <value>www.puydufou.com</value>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value>85590 Les Epesses</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.9281158,46.8896024,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Passage Du Gois</name>
+        <description><![CDATA[wiki: 91283<br>website: www.passagedugois.com<br>popularity: <br>address: Passage du Gois, 85230 Beauvoir-sur-Mer]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>91283</value>
+          </Data>
+          <Data name="website">
+            <value>www.passagedugois.com</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Passage du Gois, 85230 Beauvoir-sur-Mer</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -2.12708550000002,46.9316082,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Île d'Yeu]]></name>
+        <description><![CDATA[wiki: 1926030<br>website: <br>popularity: <br>address: 85350 L'Île-d'Yeu]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1926030</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value><![CDATA[85350 L'Île-d'Yeu]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -2.3466244,46.7093529,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Parc Naturel Régional du Marais Poitevin</name>
+        <description><![CDATA[wiki: 121514<br>website: pnr.parc-marais-poitevin.fr<br>popularity: 3<br>address: 79510 Coulon]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>121514</value>
+          </Data>
+          <Data name="website">
+            <value>pnr.parc-marais-poitevin.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value>79510 Coulon</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.586111100000039,46.3216667,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Le Daviaud</name>
+        <description><![CDATA[wiki: 1593176<br>website: www.ledaviaud.fr<br>popularity: 2<br>address: Le Daviaud, 85550 La Barre-de-Monts]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1593176</value>
+          </Data>
+          <Data name="website">
+            <value>www.ledaviaud.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Le Daviaud, 85550 La Barre-de-Monts</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -2.1037063,46.8741052,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Vouvant, Cité Médiévale</name>
+        <description><![CDATA[wiki: 124905<br>website: www.vouvant.fr<br>popularity: <br>address: 85120 Vouvant]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>124905</value>
+          </Data>
+          <Data name="website">
+            <value>www.vouvant.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>85120 Vouvant</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.771271299999967,46.5730641,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>picardie</name>
+      <Placemark>
+        <name>Musée Condé</name>
+        <description><![CDATA[wiki: 139533<br>website: www.musee-conde.fr<br>popularity: <br>address: Route Pavée, 60500 Chantilly]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>139533</value>
+          </Data>
+          <Data name="website">
+            <value>www.musee-conde.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Route Pavée, 60500 Chantilly</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.47946820000004,49.1942499,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Château de Chantilly</name>
+        <description><![CDATA[wiki: 486645<br>website: www.domainedechantilly.com<br>popularity: 3<br>address: 60500 Chantilly]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>486645</value>
+          </Data>
+          <Data name="website">
+            <value>www.domainedechantilly.com</value>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value>60500 Chantilly</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.48520340000005,49.1938467,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Parc Astérix</name>
+        <description><![CDATA[wiki: 102193<br>website: www.parcasterix.fr<br>popularity: 3<br>address: 60128 Plailly]]></description>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>102193</value>
+          </Data>
+          <Data name="website">
+            <value>www.parcasterix.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value>60128 Plailly</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.57123009999998,49.1341839,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Abbaye Royale de Chaalis</name>
+        <description><![CDATA[wiki: 848284<br>website: www.chaalis.fr<br>popularity: 2<br>address: 60300 Fontaine-Chaalis]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>848284</value>
+          </Data>
+          <Data name="website">
+            <value>www.chaalis.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>60300 Fontaine-Chaalis</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.68584080000005,49.1481796,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>La Cathédrale Saint-Pierre</name>
+        <description><![CDATA[wiki: 187618<br>website: www.cathedrale-beauvais.fr<br>popularity: 2<br>address: Rue Saint-Pierre, 60000 Beauvais]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>187618</value>
+          </Data>
+          <Data name="website">
+            <value>www.cathedrale-beauvais.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Rue Saint-Pierre, 60000 Beauvais</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.08150939999996,49.4325649,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Abbatiale de Saint Germer de Fly</name>
+        <description><![CDATA[wiki: 373039<br>website: <br>popularity: <br>address: 2 De la Mairie, 60850 Saint-Germer-de-Fly]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>373039</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>2 De la Mairie, 60850 Saint-Germer-de-Fly</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.78076250000004,49.4433353,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Gerberoy</name>
+        <description><![CDATA[wiki: 532730<br>website: <br>popularity: <br>address: 60380 Gerberoy]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>532730</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>60380 Gerberoy</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.850054,49.534236,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cité des Bateliers</name>
+        <description><![CDATA[wiki: 1849843<br>website: www.citedesbateliers.com<br>popularity: <br>address: 59 Avenue de la Canonnière, 60150 Longueil-Annel]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1849843</value>
+          </Data>
+          <Data name="website">
+            <value>www.citedesbateliers.com</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>59 Avenue de la Canonnière, 60150 Longueil-Annel</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.86089160000006,49.4611563,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Château de Pierrefonds</name>
+        <description><![CDATA[wiki: 634<br>website: pierrefonds.monuments-nationaux.fr<br>popularity: 2<br>address: Rue Viollet le Duc, 60350 Pierrefonds]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>634</value>
+          </Data>
+          <Data name="website">
+            <value>pierrefonds.monuments-nationaux.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Rue Viollet le Duc, 60350 Pierrefonds</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.98018309999998,49.346975,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Cathédrale Notre-Dame d'Amiens]]></name>
+        <description><![CDATA[wiki: 99096<br>website: cathedrale-amiens.monuments-nationaux.fr<br>popularity: <br>address: 30 Place Notre Dame, 80000 Amiens]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>99096</value>
+          </Data>
+          <Data name="website">
+            <value>cathedrale-amiens.monuments-nationaux.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>30 Place Notre Dame, 80000 Amiens</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.30204809999998,49.8946252,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Musée de Picardie</name>
+        <description><![CDATA[wiki: 1724668<br>website: <br>popularity: <br>address: 48 Rue de la République, 80000 Amiens]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1724668</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>48 Rue de la République, 80000 Amiens</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.29548299999999,49.890513,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cité Souterraine de Naours</name>
+        <description><![CDATA[wiki: 3860130<br>website: www.citesouterrainedenaours.fr<br>popularity: 2<br>address: 5 Rue des Carrières, 80260 Naours]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>3860130</value>
+          </Data>
+          <Data name="website">
+            <value>www.citesouterrainedenaours.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>5 Rue des Carrières, 80260 Naours</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.28220750000003,50.0343756,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Abbaye de Saint-Riquier</name>
+        <description><![CDATA[wiki: 1875634<br>website: www.ccr-abbaye-saint-riquier.fr<br>popularity: <br>address: Pl. de l'église, 80135 Saint-Riquier]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1875634</value>
+          </Data>
+          <Data name="website">
+            <value>www.ccr-abbaye-saint-riquier.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value><![CDATA[Pl. de l'église, 80135 Saint-Riquier]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.948532,50.1335932,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Château Fort de Rambures</name>
+        <description><![CDATA[wiki: 714326<br>website: www.chateau-rambures-picardie.fr<br>popularity: <br>address: 8 Rue du Château, 80140 Rambures]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>714326</value>
+          </Data>
+          <Data name="website">
+            <value>www.chateau-rambures-picardie.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>8 Rue du Château, 80140 Rambures</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.70790799999997,49.9453373,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Baie de Somme</name>
+        <description><![CDATA[wiki: 114500<br>website: <br>popularity: 3<br>address: ]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>114500</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.62694399999998,50.201389,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Chemin de Fer de la Baie de Somme</name>
+        <description><![CDATA[wiki: 1547081<br>website: www.chemindefer-baiedesomme.fr<br>popularity: 2<br>address: Quai Perrée, 80230 Saint-Valery-sur-Somme]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1547081</value>
+          </Data>
+          <Data name="website">
+            <value>www.chemindefer-baiedesomme.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Quai Perrée, 80230 Saint-Valery-sur-Somme</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.64371200000005,50.182972,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Parc du Marquenterre</name>
+        <description><![CDATA[wiki: 4280023<br>website: www.parcdumarquenterre.fr<br>popularity: 2<br>address: 25bis Chemin des Garennes, 80120 Saint-Quentin-en-Tourmont]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>4280023</value>
+          </Data>
+          <Data name="website">
+            <value>www.parcdumarquenterre.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>25bis Chemin des Garennes, 80120 Saint-Quentin-en-Tourmont</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.58573109999998,50.2638587,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Abbaye de Valloires</name>
+        <description><![CDATA[wiki: 1318345<br>website: www.abbaye-valloires.com<br>popularity: <br>address: Lieu dit Valloires, 80120 Argoules]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1318345</value>
+          </Data>
+          <Data name="website">
+            <value>www.abbaye-valloires.com</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Lieu dit Valloires, 80120 Argoules</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.81985839999993,50.3490304,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mémorial terre-neuvien de Beaumont-Hamel</name>
+        <description><![CDATA[wiki: 6446579<br>website: www.veterans.gc.ca<br>popularity: 2<br>address: rue de l'Église, D73, 80300 Auchonvillers]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>6446579</value>
+          </Data>
+          <Data name="website">
+            <value>www.veterans.gc.ca</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value><![CDATA[rue de l'Église, D73, 80300 Auchonvillers]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.64747539999996,50.0723926,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Historial de la Grande Guerre</name>
+        <description><![CDATA[wiki: 786134<br>website: www.historial.fr<br>popularity: 2<br>address: Place André Audinot, 80200 Péronne]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>786134</value>
+          </Data>
+          <Data name="website">
+            <value>www.historial.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Place André Audinot, 80200 Péronne</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.93085980000001,49.9291464,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Soissons</name>
+        <description><![CDATA[wiki: 15875<br>website: <br>popularity: <br>address: 02200 Soissons]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>15875</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>02200 Soissons</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            3.32341999999994,49.376636,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Caverne du Dragon - Chemin des Dames</name>
+        <description><![CDATA[wiki: 1919270<br>website: www.chemindesdames.fr<br>popularity: 2<br>address: Chemin des Dames, 02160 Oulches-la-Vallée-Foulon]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1919270</value>
+          </Data>
+          <Data name="website">
+            <value>www.chemindesdames.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Chemin des Dames, 02160 Oulches-la-Vallée-Foulon</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            3.73243330000003,49.4414545,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cathédrale Notre-Dame de Laon</name>
+        <description><![CDATA[wiki: 330522<br>website: <br>popularity: <br>address: Rue du Cloître, 02000 Laon]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>330522</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Rue du Cloître, 02000 Laon</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            3.62500390000002,49.564341,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Le Familistère de Guise</name>
+        <description><![CDATA[wiki: 378518<br>website: www.familistere.com<br>popularity: 2<br>address: Cité Familistere, 02120 Guise]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>378518</value>
+          </Data>
+          <Data name="website">
+            <value>www.familistere.com</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Cité Familistere, 02120 Guise</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            3.62523699999997,49.904727,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tunnel de Riqueval</name>
+        <description><![CDATA[wiki: 1254743<br>website: <br>popularity: <br>address: 02420 Hameau de Riqueval, Bellicourt]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1254743</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>02420 Hameau de Riqueval, Bellicourt</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            3.23580089999996,49.9512614,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>poitou</name>
+      <Placemark>
+        <name>Abbaye de Saint-Savin</name>
+        <description><![CDATA[wiki: 1760831<br>website: www.abbaye-saint-savin.fr<br>popularity: <br>address: Place de la Libération, 86310 Saint-Savin]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1760831</value>
+          </Data>
+          <Data name="website">
+            <value>www.abbaye-saint-savin.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Place de la Libération, 86310 Saint-Savin</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            0.865994099999966,46.5647692,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Futuroscope</name>
+        <description><![CDATA[wiki: 51083<br>website: www.futuroscope.com<br>popularity: 3<br>address: Avenue René Monory, 86360 Chasseneuil-du-Poitou]]></description>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>51083</value>
+          </Data>
+          <Data name="website">
+            <value>www.futuroscope.com</value>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value>Avenue René Monory, 86360 Chasseneuil-du-Poitou</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            0.369758100000013,46.6698573,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Les Géants du Ciel - Vol en Scène</name>
+        <description><![CDATA[wiki: <br>website: www.geantsduciel.com<br>popularity: 2<br>address: Château des Evêques, Rue Saint-Pierre, 86300 Chauvigny]]></description>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value/>
+          </Data>
+          <Data name="website">
+            <value>www.geantsduciel.com</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Château des Evêques, Rue Saint-Pierre, 86300 Chauvigny</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            0.649027799999999,46.569211,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Angles-sur-l'Anglin]]></name>
+        <description><![CDATA[wiki: 84545<br>website: <br>popularity: <br>address: 86260 Angles-sur-l'Anglin]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>84545</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value><![CDATA[86260 Angles-sur-l'Anglin]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            0.883131999999932,46.695265,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>La Vallée des Singes</name>
+        <description><![CDATA[wiki: 3944368<br>website: www.la-vallee-des-singes.fr<br>popularity: 2<br>address: Le Gureau, 86700 Romagne]]></description>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>3944368</value>
+          </Data>
+          <Data name="website">
+            <value>www.la-vallee-des-singes.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Le Gureau, 86700 Romagne</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            0.289756000000011,46.242559,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Musée Bernard d'Agesci]]></name>
+        <description><![CDATA[wiki: 11239936<br>website: www.niortagglo.fr<br>popularity: <br>address: 26 Avenue de Limoges, 79000 Niort]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>11239936</value>
+          </Data>
+          <Data name="website">
+            <value>www.niortagglo.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>26 Avenue de Limoges, 79000 Niort</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.454351999999972,46.321098,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Château d'Oiron]]></name>
+        <description><![CDATA[wiki: 222218<br>website: www.chateau-oiron.fr<br>popularity: <br>address: 10 Rue du Château, 79100 Oiron]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>222218</value>
+          </Data>
+          <Data name="website">
+            <value>www.chateau-oiron.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>10 Rue du Château, 79100 Oiron</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.0775833000000148,46.9520723,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Château de Saint-Loup-sur-Thouet</name>
+        <description><![CDATA[wiki: 1430696<br>website: chateaudesaint-loup.com<br>popularity: <br>address: 1 Rue Jacques de Boyer, 79600 Saint-Loup-Lamairé]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1430696</value>
+          </Data>
+          <Data name="website">
+            <value>chateaudesaint-loup.com</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>1 Rue Jacques de Boyer, 79600 Saint-Loup-Lamairé</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.167318600000044,46.7892511,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tumulus de Bougon</name>
+        <description><![CDATA[wiki: 1926156<br>website: www.tumulus-de-bougon.fr<br>popularity: <br>address: La Chapelle de Bougon, 79800 Bougon]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1926156</value>
+          </Data>
+          <Data name="website">
+            <value>www.tumulus-de-bougon.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>La Chapelle de Bougon, 79800 Bougon</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.0675966999999673,46.3775589,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Francofolies</name>
+        <description><![CDATA[wiki: 159231<br>website: francofolies.fr<br>popularity: 2<br>address: Espl. Saint-Jean d'Acre, 17000 La Rochelle]]></description>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>159231</value>
+          </Data>
+          <Data name="website">
+            <value>francofolies.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value><![CDATA[Espl. Saint-Jean d'Acre, 17000 La Rochelle]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -1.15784400000007,46.1547259,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Musée Maritime de La Rochelle</name>
+        <description><![CDATA[wiki: 1340596<br>website: www.museemaritimelarochelle.fr<br>popularity: 2<br>address: Place Bernard Moitessier, 17000 La Rochelle]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1340596</value>
+          </Data>
+          <Data name="website">
+            <value>www.museemaritimelarochelle.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Place Bernard Moitessier, 17000 La Rochelle</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -1.15148880000004,46.1501995,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>La Tour de la Lanterne</name>
+        <description><![CDATA[wiki: 966577<br>website: www.tours-la-rochelle.fr<br>popularity: 2<br>address: Rue sur les Murs, 17000 La Rochelle]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>966577</value>
+          </Data>
+          <Data name="website">
+            <value>www.tours-la-rochelle.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Rue sur les Murs, 17000 La Rochelle</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -1.15701109999998,46.1557861,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Île d'Aix]]></name>
+        <description><![CDATA[wiki: 108634<br>website: <br>popularity: 3<br>address: Île d'Aix]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>108634</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value><![CDATA[Île d'Aix]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -1.17298890000006,46.0205269,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Corderie Royale</name>
+        <description><![CDATA[wiki: 4669079<br>website: www.corderie-royale.com<br>popularity: 2<br>address: Rue Jean-Baptiste Audebert, 17300 Rochefort]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>4669079</value>
+          </Data>
+          <Data name="website">
+            <value>www.corderie-royale.com</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Rue Jean-Baptiste Audebert, 17300 Rochefort</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.95595400000002,45.937983,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Saint-Martin-de-Ré</name>
+        <description><![CDATA[wiki: 118847<br>website: <br>popularity: 3<br>address: Saint-Martin-de-Ré]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>118847</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value>Saint-Martin-de-Ré</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -1.36737600000004,46.203401,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Phare des Baleines</name>
+        <description><![CDATA[wiki: 81173<br>website: www.lepharedesbaleines.fr<br>popularity: 2<br>address: 155 Allée du Phare, 17590 Saint-Clément-des-Baleines]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>81173</value>
+          </Data>
+          <Data name="website">
+            <value>www.lepharedesbaleines.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>155 Allée du Phare, 17590 Saint-Clément-des-Baleines</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -1.56121729999995,46.2441246,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hiers-Brouage</name>
+        <description><![CDATA[wiki: 12359<br>website: www.hiers-brouage-tourisme.fr<br>popularity: <br>address: 1 Rue de l'Hospital, 17320 Marennes-Hiers-Brouage]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>12359</value>
+          </Data>
+          <Data name="website">
+            <value>www.hiers-brouage-tourisme.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value><![CDATA[1 Rue de l'Hospital, 17320 Marennes-Hiers-Brouage]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -1.06991429999994,45.8675981,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Château de la Roche Courbon</name>
+        <description><![CDATA[wiki: 124815<br>website: www.larochecourbon.fr<br>popularity: 2<br>address: 17250 Saint-Porchaire]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>124815</value>
+          </Data>
+          <Data name="website">
+            <value>www.larochecourbon.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>17250 Saint-Porchaire</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.781145000000038,45.835422,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fort Boyard</name>
+        <description><![CDATA[wiki: Fort Boyard<br>website: <br>popularity: 3<br>address: ]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>Fort Boyard</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -1.21392379999998,45.9995289,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mornac-sur-Seudre</name>
+        <description><![CDATA[wiki: 348698<br>website: <br>popularity: <br>address: 17113 Mornac-sur-Seudre]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>348698</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>17113 Mornac-sur-Seudre</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -1.02932999999996,45.708796,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Zoo de La Palmyre</name>
+        <description><![CDATA[wiki: 481209<br>website: www.zoo-palmyre.fr<br>popularity: 2<br>address: 6 Avenue de Royan, 17570 Les Mathes]]></description>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>481209</value>
+          </Data>
+          <Data name="website">
+            <value>www.zoo-palmyre.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>6 Avenue de Royan, 17570 Les Mathes</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -1.16491730000007,45.6867395,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Amphithéâtre de Saintes</name>
+        <description><![CDATA[wiki: 1184086<br>website: <br>popularity: <br>address: 20 Rue Lacurie, 17100 Saintes]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1184086</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>20 Rue Lacurie, 17100 Saintes</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.643917600000009,45.7457015,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Paléosite</name>
+        <description><![CDATA[wiki: 4165001<br>website: www.paleosite.fr<br>popularity: 2<br>address: Route de la montée verte, 17770 Saint-Césaire]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>4165001</value>
+          </Data>
+          <Data name="website">
+            <value>www.paleosite.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Route de la montée verte, 17770 Saint-Césaire</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.504999999999995,45.7497222,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cognac</name>
+        <description><![CDATA[wiki: 45675<br>website: <br>popularity: <br>address: 16100 Cognac]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>45675</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>16100 Cognac</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.328744000000029,45.691046,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Église monolithe Saint-Jean</name>
+        <description><![CDATA[wiki: 4909786<br>website: <br>popularity: 2<br>address: 16390 Aubeterre-sur-Dronne, France]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>4909786</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>16390 Aubeterre-sur-Dronne, France</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            0.171219400000041,45.2722627,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Thermes de Cassinomagus</name>
+        <description><![CDATA[wiki: 959255<br>website: www.cassinomagus.fr<br>popularity: <br>address: Longeas, 16150 Chassenon]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>959255</value>
+          </Data>
+          <Data name="website">
+            <value>www.cassinomagus.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Longeas, 16150 Chassenon</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            0.771686600000066,45.8474032,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>provence</name>
+      <Placemark>
+        <name>Île de Porquerolles</name>
+        <description><![CDATA[wiki: 390392<br>website: <br>popularity: 2<br>address: ]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>390392</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.22166779999998,43.0010171,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Port-Cros</name>
+        <description><![CDATA[wiki: 97498<br>website: <br>popularity: <br>address: ]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>97498</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.39442680000002,43.0035949,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Chartreuse de la Verne</name>
+        <description><![CDATA[wiki: 3576755<br>website: <br>popularity: <br>address: 1982 La Verne, 83610 Collobrières]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>3576755</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>1982 La Verne, 83610 Collobrières</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.40100170000005,43.2352931,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Domaine du Rayol, Le Jardin des Méditerranées</name>
+        <description><![CDATA[wiki: 830370<br>website: www.domainedurayol.org<br>popularity: <br>address: Avenue des Belges, 83820 Rayol-Canadel-sur-Mer]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>830370</value>
+          </Data>
+          <Data name="website">
+            <value>www.domainedurayol.org</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Avenue des Belges, 83820 Rayol-Canadel-sur-Mer</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.4809884,43.1559691,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Estérel Côte d'Azur]]></name>
+        <description><![CDATA[wiki: 138608<br>website: <br>popularity: 2<br>address: ]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>138608</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.91714409999997,43.4679325,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cotignac</name>
+        <description><![CDATA[wiki: 390950<br>website: <br>popularity: <br>address: 83570 Cotignac]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>390950</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>83570 Cotignac</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.14858300000003,43.529171,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lac de Sainte-Croix</name>
+        <description><![CDATA[wiki: 3257569<br>website: <br>popularity: <br>address: Lac de Sainte-Croix]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>3257569</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Lac de Sainte-Croix</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.18982619999997,43.7715417,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mons</name>
+        <description><![CDATA[wiki: 390974<br>website: <br>popularity: <br>address: 83440 Mons]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>390974</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>83440 Mons</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.71380399999998,43.690922,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Abbaye du Thoronet</name>
+        <description><![CDATA[wiki: 246198<br>website: thoronet.monuments-nationaux.fr<br>popularity: <br>address: 83340 Le Thoronet]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>246198</value>
+          </Data>
+          <Data name="website">
+            <value>thoronet.monuments-nationaux.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>83340 Le Thoronet</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.26399420000007,43.4604131,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Saint-Tropez</name>
+        <description><![CDATA[wiki: 2678841<br>website: <br>popularity: 3<br>address: 83990 Saint-Tropez]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>2678841</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value>83990 Saint-Tropez</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.64071089999993,43.2676808,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lucéram</name>
+        <description><![CDATA[wiki: 321505<br>website: <br>popularity: <br>address: 06440 Lucéram]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>321505</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>06440 Lucéram</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            7.36089700000002,43.883746,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Villefranche-sur-Mer</name>
+        <description><![CDATA[wiki: 200967<br>website: <br>popularity: 2<br>address: 06230 Villefranche-sur-Mer]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>200967</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>06230 Villefranche-sur-Mer</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            7.31110899999999,43.703976,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cathédrale Saint-Nicolas de Nice</name>
+        <description><![CDATA[wiki: 3095615<br>website: <br>popularity: <br>address: Avenue Nicolas II, 06000 Nice]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>3095615</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Avenue Nicolas II, 06000 Nice</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            7.25382309999998,43.703805,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Villa Ephrussi de Rothschild</name>
+        <description><![CDATA[wiki: 1267216<br>website: www.villa-ephrussi.com<br>popularity: <br>address: 1 Avenue Ephrussi de Rothschild, 06230 Saint-Jean-Cap-Ferrat]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1267216</value>
+          </Data>
+          <Data name="website">
+            <value>www.villa-ephrussi.com</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>1 Avenue Ephrussi de Rothschild, 06230 Saint-Jean-Cap-Ferrat</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            7.32849199999998,43.696593,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Grasse</name>
+        <description><![CDATA[wiki: 4178410<br>website: <br>popularity: <br>address: 06069 Grasse]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>4178410</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>06069 Grasse</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.92649200000005,43.660153,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Gourdon</name>
+        <description><![CDATA[wiki: 321467<br>website: <br>popularity: <br>address: 06620 Gourdon]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>321467</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>06620 Gourdon</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.97933799999998,43.719923,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Musée Picasso</name>
+        <description><![CDATA[wiki: 312863<br>website: <br>popularity: <br>address: Prom. Amiral de Grasse, 06600 Antibes]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>312863</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Prom. Amiral de Grasse, 06600 Antibes</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            7.12826040000004,43.5807616,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Touët-sur-Var</name>
+        <description><![CDATA[wiki: 321550<br>website: <br>popularity: <br>address: 06710 Touët-sur-Var]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>321550</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>06710 Touët-sur-Var</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            7.00665300000003,43.947528,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Vallée des Merveilles</name>
+        <description><![CDATA[wiki: 242467<br>website: <br>popularity: <br>address: ]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>242467</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            7.43821630000002,44.0751304,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lac de Serre-Ponçon</name>
+        <description><![CDATA[wiki: 325013<br>website: <br>popularity: <br>address: ]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>325013</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.3811207,44.5272855,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Parc national des Écrins</name>
+        <description><![CDATA[wiki: 97500<br>website: www.ecrins-parcnational.fr<br>popularity: <br>address: ]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>97500</value>
+          </Data>
+          <Data name="website">
+            <value>www.ecrins-parcnational.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.26205549999997,44.8387896,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Glacier de la Meije</name>
+        <description><![CDATA[wiki: 134600<br>website: <br>popularity: <br>address: Glacier de la Meije, 05320 La Grave]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>134600</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Glacier de la Meije, 05320 La Grave</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.29850199999998,45.009021,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Marseilles, Vallon des Auffes</name>
+        <description><![CDATA[wiki: 867820<br>website: <br>popularity: <br>address: ]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>867820</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            5.35024699999997,43.285447,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[MuCEM – Musée des civilisations de l'Europe et de la Méditerranée]]></name>
+        <description><![CDATA[wiki: 5036603<br>website: mucem.org<br>popularity: <br>address: 1 Espl. J4, 13002 Marseille]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>5036603</value>
+          </Data>
+          <Data name="website">
+            <value>mucem.org</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>1 Espl. J4, 13002 Marseille</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            5.36108250000007,43.2966941,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Citadelle de Besançon</name>
+        <description><![CDATA[wiki: 3968336<br>website: <br>popularity: <br>address: 1 Porte de Pignerol, 05100 Briançon]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>3968336</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>1 Porte de Pignerol, 05100 Briançon</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.64410120000002,44.9007157,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Parc national des Calanques</name>
+        <description><![CDATA[wiki: 2394103<br>website: www.calanques-parcnational.fr<br>popularity: 3<br>address: ]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>2394103</value>
+          </Data>
+          <Data name="website">
+            <value>www.calanques-parcnational.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            5.43132960000003,43.2181902,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cassis</name>
+        <description><![CDATA[wiki: 138268<br>website: <br>popularity: 2<br>address: 13260 Cassis]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>138268</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>13260 Cassis</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            5.53711999999996,43.215134,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Camargue</name>
+        <description><![CDATA[wiki: 44731<br>website: <br>popularity: 3<br>address: ]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>44731</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            4.46898340000007,43.5939088,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Arènes d'Arles]]></name>
+        <description><![CDATA[wiki: 929111<br>website: <br>popularity: <br>address: 1 Rond-Point des Arènes, 13200 Arles]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>929111</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>1 Rond-Point des Arènes, 13200 Arles</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            4.63093100000003,43.677798,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Palais des Papes</name>
+        <description><![CDATA[wiki: 229820<br>website: www.palais-des-papes.com<br>popularity: 3<br>address: Place du Palais, 84000 Avignon]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>229820</value>
+          </Data>
+          <Data name="website">
+            <value>www.palais-des-papes.com</value>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value>Place du Palais, 84000 Avignon</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            4.80769710000004,43.9508521,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Pont d'Avignon]]></name>
+        <description><![CDATA[wiki: 1699181<br>website: <br>popularity: 2<br>address: Boulevard de la Ligne, 84000 Avignon]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1699181</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Boulevard de la Ligne, 84000 Avignon</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            4.8048781,43.9538522,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Festival d'Avignon]]></name>
+        <description><![CDATA[wiki: 540724<br>website: <br>popularity: <br>address: ]]></description>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>540724</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            4.80552799999998,43.949317,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Abbaye Notre-Dame de Sénanque</name>
+        <description><![CDATA[wiki: 4242996<br>website: www.senanque.fr<br>popularity: <br>address: 84220 Gordes]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>4242996</value>
+          </Data>
+          <Data name="website">
+            <value>www.senanque.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>84220 Gordes</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            5.18665550000003,43.9282823,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Gordes</name>
+        <description><![CDATA[wiki: 225329<br>website: <br>popularity: <br>address: 84220 Gordes]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>225329</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>84220 Gordes</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            5.20017600000006,43.911315,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Le Sentier des Ocres</name>
+        <description><![CDATA[wiki: <br>website: <br>popularity: <br>address: Sentier des ocres, 84220 Roussillon]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value/>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Sentier des ocres, 84220 Roussillon</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            5.2956504,43.9011257,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Le Colorado Provençal</name>
+        <description><![CDATA[wiki: 242393<br>website: coloradoprovencal.fr<br>popularity: 3<br>address: Quartier le Logis Neuf D 22, 84400 Rustrel]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>242393</value>
+          </Data>
+          <Data name="website">
+            <value>coloradoprovencal.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value>Quartier le Logis Neuf D 22, 84400 Rustrel</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            5.49908870000002,43.9199108,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mont Ventoux</name>
+        <description><![CDATA[wiki: 107808<br>website: <br>popularity: <br>address: Mont Ventoux, 84390 Brantes]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>107808</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Mont Ventoux, 84390 Brantes</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            5.2786797,44.1740851,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Chorégies d'Orange]]></name>
+        <description><![CDATA[wiki: 904710<br>website: https://www.choregies.fr/<br>popularity: 2<br>address: Rue Madeleine Roch, 84100 Orange]]></description>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>904710</value>
+          </Data>
+          <Data name="website">
+            <value>https://www.choregies.fr/</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Rue Madeleine Roch, 84100 Orange</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            4.80881169999998,44.1359031,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Moustiers-Sainte-Marie</name>
+        <description><![CDATA[wiki: 319014<br>website: <br>popularity: <br>address: 04360 Moustiers-Sainte-Marie]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>319014</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>04360 Moustiers-Sainte-Marie</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.22148100000004,43.8456819,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Gorges du Verdon</name>
+        <description><![CDATA[wiki: 162819<br>website: <br>popularity: 3<br>address: Gorges du Verdon]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>162819</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value>Gorges du Verdon</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.37883720000002,43.7613593,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Entrevaux</name>
+        <description><![CDATA[wiki: 318964<br>website: <br>popularity: <br>address: 04320 Entrevaux]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>318964</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>04320 Entrevaux</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.81004200000007,43.950242,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Parc national du Mercantour</name>
+        <description><![CDATA[wiki: 97502<br>website: www.mercantour.eu<br>popularity: 2<br>address: ]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>97502</value>
+          </Data>
+          <Data name="website">
+            <value>www.mercantour.eu</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            7.00141159999998,44.1521534,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Plateau De Valensole</name>
+        <description><![CDATA[wiki: 319098<br>website: <br>popularity: <br>address: 04360 Moustiers-Sainte-Marie]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>319098</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>04360 Moustiers-Sainte-Marie</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            5.99456880000002,43.850155,0
           </coordinates>
         </Point>
       </Placemark>

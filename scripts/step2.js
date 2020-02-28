@@ -4,21 +4,21 @@ const fs = require('fs');
 const csv = require('csv-parser');
 const download = require('image-downloader')
 
-let REGION_FILTER = "aquitaine"
+let REGION_FILTER = "corse"
 
 var cpt = 0
 let photosData = {}
 
 let clean = new Promise((resolve, reject) => {
+    /*
     fs.rmdir("./step2output/"+REGION_FILTER, {recursive: true}, (err) => {
         if(err) reject(err)
         resolve()
     })
+    */
 })
 
-clean.then(()=>{
-    return readCSVFile('step1-output.csv')
-}).then(places => {
+return readCSVFile('step1-output.csv').then(places => {
     let promises = []
 
     places.forEach(place => {
@@ -37,7 +37,7 @@ clean.then(()=>{
     })
     return Promise.all(promises)
 }).then(()=> {
-    //console.log(photosData)
+    console.log(photosData)
     let data = JSON.stringify(photosData);
     return new Promise((resolve, reject) => {
         fs.writeFile("./step2output/"+REGION_FILTER+"/SELECTION/metadata.json", data, error => {
@@ -136,7 +136,7 @@ function downloadImage(url, foldername, filename){
     let options = {
         url: url,
         dest: foldername+"/"+filename,
-        timeout: 10* 60 * 1000  
+        timeout: 20 * 60 * 1000  
     }
     
     return download.image(options).then(({ filename, image }) => {

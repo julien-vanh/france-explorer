@@ -25,7 +25,7 @@ struct DreamListRow: View {
             Button(action: {
                 self.toggle()
             }) {
-                Image(systemName: self.dream.completed ? "circle.fill" : "circle").foregroundColor(.orange)
+                Image(systemName: self.dream.completed ? "checkmark.circle" : "circle").foregroundColor(.green)
             }.buttonStyle(BorderlessButtonStyle())
             
             Text(dream.title ?? "")

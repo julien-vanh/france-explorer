@@ -34,28 +34,60 @@ struct StoreArticle: View {
                 Text(self.article.description).padding()
                 
                 VStack(alignment: .leading) {
-                    Text("Destinations associées")
-                        .font(.title)
-                        .padding([.top, .leading], 15)
-                    
-                    ForEach(associatedPlaces) { place in
-                        NavigationLink(
-                            destination: PlaceDetail(place: place)
-                        ) {
-                            HStack {
-                                ImageStore.shared.image(forPlace: place)
-                                    .renderingMode(.original)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 100, height:60)
-                                    .clipped().cornerRadius(5)
-                                Text(place.title)
-                                    .font(.headline)
-                                Spacer()
+                    if associatedPlaces.count > 0 {
+                        Text("Destinations associées")
+                            .font(.title)
+                            .padding([.top, .leading], 15)
+                        
+                        ForEach(associatedPlaces) { place in
+                            NavigationLink(
+                                destination: PlaceDetail(place: place)
+                            ) {
+                                HStack {
+                                    ImageStore.shared.image(forPlace: place)
+                                        .renderingMode(.original)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 100, height:60)
+                                        .clipped().cornerRadius(5)
+                                    
+                                    VStack {
+                                        HStack {
+                                            Text(place.title)
+                                                .font(.headline)
+                                                .lineLimit(2)
+                                            
+                                            Spacer()
+                                            
+                                            Button(action: {
+                                                //self.toggle()
+                                            }) {
+                                                Image(systemName: true ? "checkmark.circle" : "circle")
+                                            }.buttonStyle(BorderlessButtonStyle()).padding()
+                                            .foregroundColor(.white)
+                                            .background(Color.green)
+                                            .cornerRadius(10)
+                                            .font(.headline)
+                                            
+                                            Button(action: {
+                                                //self.toggle()
+                                            }) {
+                                                Image(systemName: true ? "text.badge.minus" : "text.badge.plus")
+                                            }.buttonStyle(BorderlessButtonStyle()).padding()
+                                            .foregroundColor(.white)
+                                            .background(Color.orange)
+                                            .cornerRadius(10)
+                                            .font(.headline)
+                                        }
+                                        SeparationBar()
+                                    }
+                                    
+                                }
+                                .padding(.horizontal, 10.0)
                             }
-                            .padding(.leading, 15.0)
                         }
                     }
+                    
                 }
                 
                 Rectangle().opacity(0).frame(height:40)

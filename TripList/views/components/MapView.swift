@@ -10,18 +10,23 @@ import SwiftUI
 import MapKit
 
 struct MapView: UIViewRepresentable {
-    var coordinate: CLLocationCoordinate2D
+    var place: Place
 
     func makeUIView(context: Context) -> MKMapView {
         let view = MKMapView(frame: .zero)
+        view.showsUserLocation = true
+        view.register(PlaceAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         
         let span = MKCoordinateSpan(latitudeDelta: 2.0, longitudeDelta: 2.0)
-        let region = MKCoordinateRegion(center: coordinate, span: span)
+        let region = MKCoordinateRegion(center: place.locationCoordinate, span: span)
         view.setRegion(region, animated: true)
         
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = coordinate
+        let annotation = PlaceAnnotation(place: place, completed: false)
+        
         view.addAnnotation(annotation)
+        view.selectAnnotation(annotation, animated: false)
+        view.showAnnotations(view.annotations, animated: false)
+        //view
         return view
     }
 
@@ -32,6 +37,6 @@ struct MapView: UIViewRepresentable {
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView(coordinate: CLLocationCoordinate2D(latitude: 59.560551, longitude: -135.334571))
+        MapView(place: PlaceStore.shared.getRandom(count: 1)[0])
     }
 }

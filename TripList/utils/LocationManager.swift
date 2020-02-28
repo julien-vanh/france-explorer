@@ -4,8 +4,10 @@
 import Foundation
 import CoreLocation
 import Combine
+import MapKit
 
 class LocationManager: NSObject, ObservableObject {
+    static let shared = LocationManager()
 
     override init() {
         super.init()
@@ -46,7 +48,17 @@ class LocationManager: NSObject, ObservableObject {
         case .denied: return "denied"
         default: return "unknown"
         }
-
+    }
+    
+    public func isLocationEnable() -> Bool{
+        return lastLocation != nil
+    }
+    
+    public func distanceTo(coordinate: CLLocationCoordinate2D) -> CLLocationDistance {
+        if let userLocation = lastLocation {
+            return MKMapPoint(userLocation.coordinate).distance(to: MKMapPoint(coordinate))
+        }
+        return -1.0
     }
 
     let objectWillChange = PassthroughSubject<Void, Never>()

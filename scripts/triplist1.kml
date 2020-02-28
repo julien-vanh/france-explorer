@@ -8,7 +8,7 @@
         <color>ffd18802</color>
         <scale>1</scale>
         <Icon>
-          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -20,7 +20,7 @@
         <color>ffd18802</color>
         <scale>1</scale>
         <Icon>
-          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -42,7 +42,7 @@
         <color>ffd18802</color>
         <scale>1</scale>
         <Icon>
-          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -54,7 +54,7 @@
         <color>ffd18802</color>
         <scale>1</scale>
         <Icon>
-          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -76,7 +76,7 @@
         <color>ffd18802</color>
         <scale>1</scale>
         <Icon>
-          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -88,7 +88,7 @@
         <color>ffd18802</color>
         <scale>1</scale>
         <Icon>
-          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -110,7 +110,7 @@
         <color>ffd18802</color>
         <scale>1</scale>
         <Icon>
-          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -122,7 +122,7 @@
         <color>ffd18802</color>
         <scale>1</scale>
         <Icon>
-          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -144,7 +144,7 @@
         <color>ffd18802</color>
         <scale>1</scale>
         <Icon>
-          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -156,7 +156,7 @@
         <color>ffd18802</color>
         <scale>1</scale>
         <Icon>
-          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -2490,10 +2490,10 @@
       <name>bourgogne</name>
       <Placemark>
         <name>Abbaye de Cluny</name>
-        <description><![CDATA[cluny: 3466365<br>website: www.cluny-abbaye.fr<br>popularity: 3<br>address: Rue du 11 Août 1944, 71250 Cluny]]></description>
+        <description><![CDATA[wiki: 3466365<br>website: www.cluny-abbaye.fr<br>popularity: 3<br>address: Rue du 11 Août 1944, 71250 Cluny]]></description>
         <styleUrl>#icon-1598-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>3466365</value>
           </Data>
           <Data name="website">
@@ -2514,10 +2514,10 @@
       </Placemark>
       <Placemark>
         <name>Semur-en-Brionnais</name>
-        <description><![CDATA[cluny: 556518<br>website: <br>popularity: <br>address: 71110 Semur-en-Brionnais]]></description>
+        <description><![CDATA[wiki: 556518<br>website: <br>popularity: <br>address: 71110 Semur-en-Brionnais]]></description>
         <styleUrl>#icon-1546-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>556518</value>
           </Data>
           <Data name="website">
@@ -2538,10 +2538,10 @@
       </Placemark>
       <Placemark>
         <name>Basilique du Sacré-Cœur de Jésus</name>
-        <description><![CDATA[cluny: 1396691<br>website: www.bourgogne-tourisme.com<br>popularity: 2<br>address: 1 Place Cardinal Perraud, 71600 Paray-le-Monial]]></description>
+        <description><![CDATA[wiki: 1396691<br>website: www.bourgogne-tourisme.com<br>popularity: 2<br>address: 1 Place Cardinal Perraud, 71600 Paray-le-Monial]]></description>
         <styleUrl>#icon-1598-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>1396691</value>
           </Data>
           <Data name="website">
@@ -2562,10 +2562,10 @@
       </Placemark>
       <Placemark>
         <name>Musée de la Mine</name>
-        <description><![CDATA[cluny: 6100973<br>website: www.musee-mine-blanzy.fr<br>popularity: <br>address: 34 Rue du Bois Clair, 71450 Blanzy]]></description>
+        <description><![CDATA[wiki: 6100973<br>website: www.musee-mine-blanzy.fr<br>popularity: <br>address: 34 Rue du Bois Clair, 71450 Blanzy]]></description>
         <styleUrl>#icon-1636-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>6100973</value>
           </Data>
           <Data name="website">
@@ -2586,10 +2586,10 @@
       </Placemark>
       <Placemark>
         <name>Château de Cormatin</name>
-        <description><![CDATA[cluny: 2456515<br>website: www.chateaudecormatin.com<br>popularity: 2<br>address: Château de, 71460 Cormatin]]></description>
+        <description><![CDATA[wiki: 2456515<br>website: www.chateaudecormatin.com<br>popularity: 2<br>address: Château de, 71460 Cormatin]]></description>
         <styleUrl>#icon-1598-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>2456515</value>
           </Data>
           <Data name="website">
@@ -2610,10 +2610,10 @@
       </Placemark>
       <Placemark>
         <name>Parc Naturel Régional du Morvan</name>
-        <description><![CDATA[cluny: 131980<br>website: www.parcdumorvan.org<br>popularity: 2<br>address: Lieu-dit, Les Petites Fourches, 58230 Saint-Brisson]]></description>
+        <description><![CDATA[wiki: 131980<br>website: www.parcdumorvan.org<br>popularity: 2<br>address: Lieu-dit, Les Petites Fourches, 58230 Saint-Brisson]]></description>
         <styleUrl>#icon-1720-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>131980</value>
           </Data>
           <Data name="website">
@@ -2634,10 +2634,10 @@
       </Placemark>
       <Placemark>
         <name>Musée Rolin</name>
-        <description><![CDATA[cluny: 4186671<br>website: www.autun.com<br>popularity: <br>address: 3 Rue des Bancs, 71400 Autun]]></description>
+        <description><![CDATA[wiki: 4186671<br>website: www.autun.com<br>popularity: <br>address: 3 Rue des Bancs, 71400 Autun]]></description>
         <styleUrl>#icon-1636-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>4186671</value>
           </Data>
           <Data name="website">
@@ -2658,10 +2658,10 @@
       </Placemark>
       <Placemark>
         <name>Musée Nicéphore Niépce</name>
-        <description><![CDATA[cluny: 1138630<br>website: www.museeniepce.com<br>popularity: <br>address: 28 Quai des Messageries, 71100 Chalon-sur-Saône]]></description>
+        <description><![CDATA[wiki: 1138630<br>website: www.museeniepce.com<br>popularity: <br>address: 28 Quai des Messageries, 71100 Chalon-sur-Saône]]></description>
         <styleUrl>#icon-1636-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>1138630</value>
           </Data>
           <Data name="website">
@@ -2682,10 +2682,10 @@
       </Placemark>
       <Placemark>
         <name>Lac de Saint-Agnan</name>
-        <description><![CDATA[cluny: 4264717<br>website: <br>popularity: <br>address: Lac de Saint-Agnan, 58230 Saint-Agnan]]></description>
+        <description><![CDATA[wiki: 4264717<br>website: <br>popularity: <br>address: Lac de Saint-Agnan, 58230 Saint-Agnan]]></description>
         <styleUrl>#icon-1720-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>4264717</value>
           </Data>
           <Data name="website">
@@ -2706,10 +2706,10 @@
       </Placemark>
       <Placemark>
         <name>Arthel</name>
-        <description><![CDATA[cluny: 489700<br>website: <br>popularity: <br>address: 58700 Arthel]]></description>
+        <description><![CDATA[wiki: 489700<br>website: <br>popularity: <br>address: 58700 Arthel]]></description>
         <styleUrl>#icon-1546-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>489700</value>
           </Data>
           <Data name="website">
@@ -2730,10 +2730,10 @@
       </Placemark>
       <Placemark>
         <name>Bibracte</name>
-        <description><![CDATA[cluny: 32573<br>website: www.bibracte.fr<br>popularity: <br>address: Mont Beuvray, 71990 Saint-Léger-sous-Beuvray]]></description>
+        <description><![CDATA[wiki: 32573<br>website: www.bibracte.fr<br>popularity: <br>address: Mont Beuvray, 71990 Saint-Léger-sous-Beuvray]]></description>
         <styleUrl>#icon-1636-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>32573</value>
           </Data>
           <Data name="website">
@@ -2754,10 +2754,10 @@
       </Placemark>
       <Placemark>
         <name>La Charité-sur-Loire</name>
-        <description><![CDATA[cluny: 143296<br>website: www.ville-la-charite-sur-loire.fr<br>popularity: <br>address: 58400 La Charité-sur-Loire]]></description>
+        <description><![CDATA[wiki: 143296<br>website: www.ville-la-charite-sur-loire.fr<br>popularity: <br>address: 58400 La Charité-sur-Loire]]></description>
         <styleUrl>#icon-1546-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>143296</value>
           </Data>
           <Data name="website">
@@ -2778,10 +2778,10 @@
       </Placemark>
       <Placemark>
         <name>Vézelay</name>
-        <description><![CDATA[cluny: 115801<br>website: <br>popularity: <br>address: 89450 Vézelay]]></description>
+        <description><![CDATA[wiki: 115801<br>website: <br>popularity: <br>address: 89450 Vézelay]]></description>
         <styleUrl>#icon-1546-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>115801</value>
           </Data>
           <Data name="website">
@@ -2802,10 +2802,10 @@
       </Placemark>
       <Placemark>
         <name>Château de Berzé-le-Châtel</name>
-        <description><![CDATA[cluny: 2235744<br>website: www.berze.fr<br>popularity: <br>address: 71960 Berzé-le-Châtel]]></description>
+        <description><![CDATA[wiki: 2235744<br>website: www.berze.fr<br>popularity: <br>address: 71960 Berzé-le-Châtel]]></description>
         <styleUrl>#icon-1598-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>2235744</value>
           </Data>
           <Data name="website">
@@ -2826,10 +2826,10 @@
       </Placemark>
       <Placemark>
         <name>Abbaye de Pontigny</name>
-        <description><![CDATA[cluny: 375901<br>website: www.abbayedepontigny.com<br>popularity: 2<br>address: 5 Avenue de l'Abbaye, 89230 Pontigny]]></description>
+        <description><![CDATA[wiki: 375901<br>website: www.abbayedepontigny.com<br>popularity: 2<br>address: 5 Avenue de l'Abbaye, 89230 Pontigny]]></description>
         <styleUrl>#icon-1546-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>375901</value>
           </Data>
           <Data name="website">
@@ -2850,10 +2850,10 @@
       </Placemark>
       <Placemark>
         <name>Ancy-le-Franc</name>
-        <description><![CDATA[cluny: 938133<br>website: <br>popularity: <br>address: 89160 Ancy-le-Franc]]></description>
+        <description><![CDATA[wiki: 938133<br>website: <br>popularity: <br>address: 89160 Ancy-le-Franc]]></description>
         <styleUrl>#icon-1546-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>938133</value>
           </Data>
           <Data name="website">
@@ -2874,10 +2874,10 @@
       </Placemark>
       <Placemark>
         <name>Château de Bazoches</name>
-        <description><![CDATA[cluny: 401008<br>website: <br>popularity: <br>address: Château de Bazoches, 58190 Bazoches]]></description>
+        <description><![CDATA[wiki: 401008<br>website: <br>popularity: <br>address: Château de Bazoches, 58190 Bazoches]]></description>
         <styleUrl>#icon-1598-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>401008</value>
           </Data>
           <Data name="website">
@@ -2898,10 +2898,10 @@
       </Placemark>
       <Placemark>
         <name>Noyers</name>
-        <description><![CDATA[cluny: 313198<br>website: www.noyers-sur-serein.com<br>popularity: <br>address: 89310 Noyers]]></description>
+        <description><![CDATA[wiki: 313198<br>website: www.noyers-sur-serein.com<br>popularity: <br>address: 89310 Noyers]]></description>
         <styleUrl>#icon-1546-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>313198</value>
           </Data>
           <Data name="website">
@@ -2922,10 +2922,10 @@
       </Placemark>
       <Placemark>
         <name>Château de Châteauneuf</name>
-        <description><![CDATA[cluny: 12686544<br>website: https://chateauneuf.bourgognefranchecomte.eu/infos-pratiques/<br>popularity: 2<br>address: 21320 Chateauneuf]]></description>
+        <description><![CDATA[wiki: 12686544<br>website: https://chateauneuf.bourgognefranchecomte.eu/infos-pratiques/<br>popularity: 2<br>address: 21320 Chateauneuf]]></description>
         <styleUrl>#icon-1598-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>12686544</value>
           </Data>
           <Data name="website">
@@ -2946,10 +2946,10 @@
       </Placemark>
       <Placemark>
         <name>Parc Noisot</name>
-        <description><![CDATA[cluny: 6145143<br>website: <br>popularity: <br>address: Parc Noisot, 21220 Fixin]]></description>
+        <description><![CDATA[wiki: 6145143<br>website: <br>popularity: <br>address: Parc Noisot, 21220 Fixin]]></description>
         <styleUrl>#icon-1720-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>6145143</value>
           </Data>
           <Data name="website">
@@ -2970,10 +2970,10 @@
       </Placemark>
       <Placemark>
         <name>Palais des ducs et des Etats de Bourgogne</name>
-        <description><![CDATA[cluny: 998063<br>website: mba.dijon.fr<br>popularity: 2<br>address: 1 Place de la Libération, 21000 Dijon]]></description>
+        <description><![CDATA[wiki: 998063<br>website: mba.dijon.fr<br>popularity: 2<br>address: 1 Place de la Libération, 21000 Dijon]]></description>
         <styleUrl>#icon-1598-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>998063</value>
           </Data>
           <Data name="website">
@@ -2994,10 +2994,10 @@
       </Placemark>
       <Placemark>
         <name>Hôtel de Vogüé</name>
-        <description><![CDATA[cluny: 5166981<br>website: <br>popularity: <br>address: 8 Rue de la Chouette, 21000 Dijon]]></description>
+        <description><![CDATA[wiki: 5166981<br>website: <br>popularity: <br>address: 8 Rue de la Chouette, 21000 Dijon]]></description>
         <styleUrl>#icon-1598-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>5166981</value>
           </Data>
           <Data name="website">
@@ -3018,10 +3018,10 @@
       </Placemark>
       <Placemark>
         <name>Château du Clos de Vougeot</name>
-        <description><![CDATA[cluny: 1055661<br>website: www.closdevougeot.fr<br>popularity: <br>address: Rue de la Montagne, 21640 Vougeot]]></description>
+        <description><![CDATA[wiki: 1055661<br>website: www.closdevougeot.fr<br>popularity: <br>address: Rue de la Montagne, 21640 Vougeot]]></description>
         <styleUrl>#icon-1598-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>1055661</value>
           </Data>
           <Data name="website">
@@ -3042,10 +3042,10 @@
       </Placemark>
       <Placemark>
         <name>Abbaye de Fontenay</name>
-        <description><![CDATA[cluny: 402088<br>website: www.abbayedefontenay.com<br>popularity: <br>address: 21500 Montbard]]></description>
+        <description><![CDATA[wiki: 402088<br>website: www.abbayedefontenay.com<br>popularity: <br>address: 21500 Montbard]]></description>
         <styleUrl>#icon-1598-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>402088</value>
           </Data>
           <Data name="website">
@@ -3066,10 +3066,10 @@
       </Placemark>
       <Placemark>
         <name>Hospices de Beaune</name>
-        <description><![CDATA[cluny: 354515<br>website: hospices-de-beaune.com<br>popularity: 2<br>address: Rue de l'Hôtel Dieu, 21200 Beaune]]></description>
+        <description><![CDATA[wiki: 354515<br>website: hospices-de-beaune.com<br>popularity: 2<br>address: Rue de l'Hôtel Dieu, 21200 Beaune]]></description>
         <styleUrl>#icon-1598-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>354515</value>
           </Data>
           <Data name="website">
@@ -3090,10 +3090,10 @@
       </Placemark>
       <Placemark>
         <name>Guédelon</name>
-        <description><![CDATA[cluny: 10551<br>website: www.guedelon.fr<br>popularity: 2<br>address: D955, 89520 Treigny]]></description>
+        <description><![CDATA[wiki: 10551<br>website: www.guedelon.fr<br>popularity: 2<br>address: D955, 89520 Treigny]]></description>
         <styleUrl>#icon-1598-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>10551</value>
           </Data>
           <Data name="website">
@@ -3114,10 +3114,10 @@
       </Placemark>
       <Placemark>
         <name>Château de Saint-Point</name>
-        <description><![CDATA[cluny: 2515240<br>website: <br>popularity: <br>address: 71520 Saint-Point]]></description>
+        <description><![CDATA[wiki: 2515240<br>website: <br>popularity: <br>address: 71520 Saint-Point]]></description>
         <styleUrl>#icon-1598-0288D1</styleUrl>
         <ExtendedData>
-          <Data name="cluny">
+          <Data name="wiki">
             <value>2515240</value>
           </Data>
           <Data name="website">
@@ -6130,7 +6130,7 @@
       <Placemark>
         <name>Disneyland Parc</name>
         <description><![CDATA[wiki: 231112<br>website: www.disneylandparis.com<br>popularity: 3<br>address: Boulevard de Parc, 77700 Chessy]]></description>
-        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
         <ExtendedData>
           <Data name="wiki">
             <value>231112</value>

@@ -1,0 +1,1287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>triplist3</name>
+    <description/>
+    <Style id="icon-1511-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1511-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1511-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1511-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1511-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1546-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1546-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1546-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1546-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1546-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1598-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1598-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1598-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1598-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1598-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1636-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1636-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1636-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1636-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1636-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1720-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1720-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1720-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1720-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1720-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>rhone</name>
+      <Placemark>
+        <name><![CDATA[Réserve naturelle nationale des gorges de l'Ardèche]]></name>
+        <description><![CDATA[wiki: 966491<br>website: www.gorgesdelardeche.fr<br>popularity: <br>address: 07700 Saint-Remèze]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>966491</value>
+          </Data>
+          <Data name="website">
+            <value>www.gorgesdelardeche.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>07700 Saint-Remèze</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            4.44393650000006,44.3649796,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Grotte de la Madeleine</name>
+        <description><![CDATA[wiki: 11233721<br>website: www.grottemadeleine.com<br>popularity: 2<br>address: Route touristique des Gorges de l'Ardèche, 07700 Saint-Remèze]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>11233721</value>
+          </Data>
+          <Data name="website">
+            <value>www.grottemadeleine.com</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value><![CDATA[Route touristique des Gorges de l'Ardèche, 07700 Saint-Remèze]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            4.48349499999995,44.340025,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Grotte de Saint-Marcel</name>
+        <description><![CDATA[wiki: 5978342<br>website: <br>popularity: <br>address: Grotte de Saint-Marcel, 07700 Bidon]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>5978342</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Grotte de Saint-Marcel, 07700 Bidon</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            4.54165499999999,44.327091,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Grand Site de l'Aven d'Orgnac]]></name>
+        <description><![CDATA[wiki: 1712626<br>website: www.orgnac.com<br>popularity: 2<br>address: 2240 Route de, L'Aven, 07150 Orgnac-l'Aven]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1712626</value>
+          </Data>
+          <Data name="website">
+            <value>www.orgnac.com</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value><![CDATA[2240 Route de, L'Aven, 07150 Orgnac-l'Aven]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            4.41284840000003,44.3189123,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Balazuc</name>
+        <description><![CDATA[wiki: 322592<br>website: <br>popularity: <br>address: 07120 Balazuc]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>322592</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>07120 Balazuc</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            4.37270699999999,44.509106,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Vogüé</name>
+        <description><![CDATA[wiki: 323512<br>website: <br>popularity: 2<br>address: 07200 Vogüé]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>323512</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>07200 Vogüé</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            4.41329300000007,44.551115,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Neck de Sceautres</name>
+        <description><![CDATA[wiki: 4924816<br>website: <br>popularity: <br>address: Neck de Sceautres, 07400 Sceautres]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>4924816</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Neck de Sceautres, 07400 Sceautres</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            4.60611100000006,44.617222,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mont Gerbier de Jonc</name>
+        <description><![CDATA[wiki: 238283<br>website: <br>popularity: <br>address: Mont Gerbier de Jonc, 07310 Saint-Martial]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>238283</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Mont Gerbier de Jonc, 07310 Saint-Martial</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            4.22000000000003,44.844444,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Palais Idéal du Facteur Cheval</name>
+        <description><![CDATA[wiki: 332154<br>website: www.facteurcheval.com<br>popularity: 3<br>address: 8 Rue du Palais, 26390 Hauterives]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>332154</value>
+          </Data>
+          <Data name="website">
+            <value>www.facteurcheval.com</value>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value>8 Rue du Palais, 26390 Hauterives</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            5.02853300000004,45.2563095,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Montélimar</name>
+        <description><![CDATA[wiki: 63225<br>website: <br>popularity: <br>address: 26200 Montélimar]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>63225</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>26200 Montélimar</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            4.74949600000002,44.556944,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Château de Grignan</name>
+        <description><![CDATA[wiki: 772114<br>website: <br>popularity: <br>address: Château de Grignan, 26230 Grignan]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>772114</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Château de Grignan, 26230 Grignan</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            4.90903520000006,44.4187508,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Parc de la Tête d'Or]]></name>
+        <description><![CDATA[wiki: 112025<br>website: <br>popularity: <br>address: 69006 Lyon]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>112025</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>69006 Lyon</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            4.85521440000002,45.7774032,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>La Basilique Notre Dame de Fourvière</name>
+        <description><![CDATA[wiki: 186307<br>website: www.fourviere.org<br>popularity: <br>address: 8 Place de Fourvière, 69005 Lyon]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>186307</value>
+          </Data>
+          <Data name="website">
+            <value>www.fourviere.org</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>8 Place de Fourvière, 69005 Lyon</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            4.82262600000001,45.7622928,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fête Des Lumières</name>
+        <description><![CDATA[wiki: 2487080<br>website: www.fetedeslumieres.lyon.fr<br>popularity: <br>address: 69002 Lyon]]></description>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>2487080</value>
+          </Data>
+          <Data name="website">
+            <value>www.fetedeslumieres.lyon.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>69002 Lyon</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            4.83355890000007,45.7577553,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Musée de Grenoble</name>
+        <description><![CDATA[wiki: 1571884<br>website: www.museedegrenoble.fr<br>popularity: 2<br>address: 5 Place de Lavalette, 38000 Grenoble]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1571884</value>
+          </Data>
+          <Data name="website">
+            <value>www.museedegrenoble.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>5 Place de Lavalette, 38000 Grenoble</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            5.73231290000001,45.194928,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Besse-et-Saint-Anastaise</name>
+        <description><![CDATA[wiki: 83329<br>website: <br>popularity: <br>address: 13 Rue Notre Dame, 63610 Besse-et-Saint-Anastaise]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>83329</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>13 Rue Notre Dame, 63610 Besse-et-Saint-Anastaise</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.93340799999999,45.511707,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Musée de la Révolution française - Domaine de Vizille</name>
+        <description><![CDATA[wiki: 386337<br>website: www.domaine-vizille.fr<br>popularity: 2<br>address: Place du Château, 38220 Vizille]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>386337</value>
+          </Data>
+          <Data name="website">
+            <value>www.domaine-vizille.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Place du Château, 38220 Vizille</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            5.77364,45.0757588,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Lac d'Aiguebelette]]></name>
+        <description><![CDATA[wiki: 151782<br>website: <br>popularity: <br>address: Lac d'Aiguebelette]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>151782</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value><![CDATA[Lac d'Aiguebelette]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            5.7984672,45.555451,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Col du Galibier</name>
+        <description><![CDATA[wiki: 166054<br>website: <br>popularity: 3<br>address: Col du Galibier, 05220 Le Monêtier-les-Bains]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>166054</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value>Col du Galibier, 05220 Le Monêtier-les-Bains</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.40773079999997,45.0640987,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Parc national de la Vanoise</name>
+        <description><![CDATA[wiki: 69436<br>website: www.vanoise-parcnational.fr<br>popularity: <br>address: ]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>69436</value>
+          </Data>
+          <Data name="website">
+            <value>www.vanoise-parcnational.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.86292819999994,45.3902213,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Lac d'Annecy]]></name>
+        <description><![CDATA[wiki: 23924<br>website: <br>popularity: <br>address: ]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>23924</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.16732320000006,45.8615248,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mont Blanc</name>
+        <description><![CDATA[wiki: 6845<br>website: <br>popularity: 3<br>address: ]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>6845</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.86517490000006,45.8326223,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Aiguille du Midi</name>
+        <description><![CDATA[wiki: 117019<br>website: <br>popularity: 3<br>address: 100 Place de l'Aiguille du Midi, 74400 Chamonix-Mont-Blanc]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>117019</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value><![CDATA[100 Place de l'Aiguille du Midi, 74400 Chamonix-Mont-Blanc]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.87009760000001,45.9183231,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Évian-les-Bains</name>
+        <description><![CDATA[wiki: 11279<br>website: <br>popularity: 2<br>address: 74500 Évian-les-Bains]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>11279</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>74500 Évian-les-Bains</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.59094900000002,46.401488,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Les Nuits de Fourvière</name>
+        <description><![CDATA[wiki: 816152<br>website: www.nuitsdefourviere.com<br>popularity: <br>address: 6 Rue de l'Antiquaille, 69005 Lyon]]></description>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>816152</value>
+          </Data>
+          <Data name="website">
+            <value>www.nuitsdefourviere.com</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value><![CDATA[6 Rue de l'Antiquaille, 69005 Lyon]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            4.81999999999994,45.7598,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>corse</name>
+      <Placemark>
+        <name>Centuri</name>
+        <description><![CDATA[wiki: 305136<br>website: <br>popularity: <br>address: 20238 Centuri]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>305136</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>20238 Centuri</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            9.37285850000001,42.9597112,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Patrimonio</name>
+        <description><![CDATA[wiki: 4245501<br>website: <br>popularity: <br>address: 20253 Patrimonio]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>4245501</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>20253 Patrimonio</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            9.36955399999999,42.706531,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bastia, Place Saint-Nicolas</name>
+        <description><![CDATA[wiki: 8267736<br>website: <br>popularity: 2<br>address: Allée Général Fieschi, 20200 Bastia]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>8267736</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Allée Général Fieschi, 20200 Bastia</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            9.45122779999997,42.7005856,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Désert des Agriates</name>
+        <description><![CDATA[wiki: 1065261<br>website: <br>popularity: <br>address: 20246 Santo-Pietro-di-Tenda]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1065261</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>20246 Santo-Pietro-di-Tenda</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            9.16666669999995,42.6666667,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Église Saint-Michel de Murato</name>
+        <description><![CDATA[wiki: 5461611<br>website: <br>popularity: <br>address: 1130 A Qua U Péru, 20239 Murato]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>5461611</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>1130 A Qua U Péru, 20239 Murato</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            9.33353179999995,42.5860801,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Sant'Antonino]]></name>
+        <description><![CDATA[wiki: 453185<br>website: <br>popularity: <br>address: 20220 Sant'Antonino]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>453185</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value><![CDATA[20220 Sant'Antonino]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            8.90502900000001,42.589356,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pigna</name>
+        <description><![CDATA[wiki: 453110<br>website: <br>popularity: <br>address: 20220 Pigna]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>453110</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>20220 Pigna</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            8.90271600000005,42.599403,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Calvi</name>
+        <description><![CDATA[wiki: 105455<br>website: <br>popularity: <br>address: 20260 Calvi]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>105455</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>20260 Calvi</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            8.75722199999996,42.567651,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Gorges de l'Asco]]></name>
+        <description><![CDATA[wiki: 4877455<br>website: <br>popularity: <br>address: 20276 Asco]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>4877455</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>20276 Asco</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            9.05573200000003,42.456289,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Monte Cinto</name>
+        <description><![CDATA[wiki: 367408<br>website: <br>popularity: <br>address: 20224 Lozzi]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>367408</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>20224 Lozzi</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            8.94589199999996,42.379456,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Citadelle de Corte</name>
+        <description><![CDATA[wiki: 6909266<br>website: www.museudiacorsica.corsica<br>popularity: 2<br>address: La Citadelle, 20250 Corte]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>6909266</value>
+          </Data>
+          <Data name="website">
+            <value>www.museudiacorsica.corsica</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>La Citadelle, 20250 Corte</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            9.148098,42.3064761,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lac de Nino</name>
+        <description><![CDATA[wiki: 349055<br>website: <br>popularity: <br>address: ]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>349055</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            8.94040389999998,42.2554719,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Parc Galea</name>
+        <description><![CDATA[wiki: <br>website: www.parcgalea.com<br>popularity: <br>address: 20230 Taglio-Isolaccio]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value/>
+          </Data>
+          <Data name="website">
+            <value>www.parcgalea.com</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>20230 Taglio-Isolaccio</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            9.52634009999997,42.433478,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Les Calanques de Piana</name>
+        <description><![CDATA[wiki: 332451<br>website: <br>popularity: <br>address: 20115 Piana]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>332451</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>20115 Piana</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            8.65347689999999,42.2454527,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Réserve Naturelle De Scandola</name>
+        <description><![CDATA[wiki: 1694496<br>website: <br>popularity: <br>address: ]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1694496</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            8.5614683,42.3589629,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Évisa</name>
+        <description><![CDATA[wiki: 2742898<br>website: <br>popularity: <br>address: 20126 Évisa]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>2742898</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>20126 Évisa</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            8.80358899999999,42.253563,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tour Génoise de la Parata</name>
+        <description><![CDATA[wiki: 1696010<br>website: <br>popularity: 3<br>address: 8 Route des Sanguinaires, 20000 Ajaccio]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1696010</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value>8 Route des Sanguinaires, 20000 Ajaccio</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            8.60842700000001,41.8953247,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Filitosa - Le Site Préhistorique de la Corse</name>
+        <description><![CDATA[wiki: 230703<br>website: www.filitosa.fr<br>popularity: <br>address: 20140 Sollacaro]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>230703</value>
+          </Data>
+          <Data name="website">
+            <value>www.filitosa.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>20140 Sollacaro</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            8.87002800000005,41.745036,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Musée Fesch</name>
+        <description><![CDATA[wiki: 3447637<br>website: www.musee-fesch.com<br>popularity: 2<br>address: 50-52 Rue Cardinal Fesch, 20000 Ajaccio]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>3447637</value>
+          </Data>
+          <Data name="website">
+            <value>www.musee-fesch.com</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>50-52 Rue Cardinal Fesch, 20000 Ajaccio</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            8.73846130000004,41.9220381,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bonifacio</name>
+        <description><![CDATA[wiki: 159652<br>website: <br>popularity: 3<br>address: 20169 Bonifacio]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>159652</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value>20169 Bonifacio</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            9.15926899999999,41.387174,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Aiguilles de Bavella</name>
+        <description><![CDATA[wiki: 1557576<br>website: <br>popularity: <br>address: 20122 Quenza]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1557576</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>20122 Quenza</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            9.21293500000002,41.809544,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

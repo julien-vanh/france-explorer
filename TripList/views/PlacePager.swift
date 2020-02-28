@@ -13,7 +13,7 @@ struct PlacePager: View {
     @State private var index: Int
     
     init(places: [Place], initialePlace: Place){
-        self.placeDetailViews = places.map { PlaceDetail(place: $0) }
+        self.placeDetailViews = places.map { PlaceDetail(place: $0, displayAssociates: false) }
         _index = State(initialValue: places.firstIndex(where: {$0.id == initialePlace.id}) ?? 0)
     }
     
