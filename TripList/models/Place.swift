@@ -10,9 +10,7 @@ import Foundation
 import CoreLocation
 
 struct Place: Hashable, Codable, Identifiable {
-    var id: String {
-        return title.components(separatedBy: CharacterSet.alphanumerics.inverted).joined()
-    }
+    var id: String
     var title: String
     var category: PlaceCategory
     var regionId: String

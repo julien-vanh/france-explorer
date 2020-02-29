@@ -35,7 +35,7 @@ struct PlaceMapDrawer: View {
                 }
             }
             
-            PlaceDetailsButtons(mapState: self.mapState)
+            PlaceButtons(mapState: self.mapState)
             
             HStack {
                 ImageStore.shared.image(forPlace: self.mapState.place)

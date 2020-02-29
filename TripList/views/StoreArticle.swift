@@ -14,13 +14,13 @@ struct StoreArticle: View {
     
     init(article: Article){
         self.article = article
-        associatedPlaces = article.places.map({ PlaceStore.shared.get(id: $0)})
+        associatedPlaces = article.places.map({ PlaceStore.shared.get(id: $0.placeId)})
     }
     
     var body: some View {
         ScrollView(.vertical) {
             GeometryReader { geometry in
-                ImageStore.shared.image(name: "article\(self.article.id).jpg")
+                ImageStore.shared.image(name: "\(self.article.id).jpg")
                     .resizable()
                     .scaledToFill()
                     .frame(width: geometry.size.width, height: self.getHeightForHeaderImage(geometry))
@@ -29,9 +29,9 @@ struct StoreArticle: View {
             }.frame(height: 300)
             
             VStack {
-                Text(self.article.title).font(.largeTitle)
+                Text(self.article.content.title).font(.largeTitle)
                 
-                Text(self.article.description).padding()
+                Text(self.article.content.description).padding()
                 
                 VStack(alignment: .leading) {
                     if associatedPlaces.count > 0 {
@@ -59,25 +59,7 @@ struct StoreArticle: View {
                                             
                                             Spacer()
                                             
-                                            Button(action: {
-                                                //self.toggle()
-                                            }) {
-                                                Image(systemName: true ? "checkmark.circle" : "circle")
-                                            }.buttonStyle(BorderlessButtonStyle()).padding()
-                                            .foregroundColor(.white)
-                                            .background(Color.green)
-                                            .cornerRadius(10)
-                                            .font(.headline)
-                                            
-                                            Button(action: {
-                                                //self.toggle()
-                                            }) {
-                                                Image(systemName: true ? "text.badge.minus" : "text.badge.plus")
-                                            }.buttonStyle(BorderlessButtonStyle()).padding()
-                                            .foregroundColor(.white)
-                                            .background(Color.orange)
-                                            .cornerRadius(10)
-                                            .font(.headline)
+                                            PlaceButtonsMini(place: place)
                                         }
                                         SeparationBar()
                                     }

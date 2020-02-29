@@ -127,7 +127,7 @@ function generateArticles(){
                 if(place["parent_record_id"] === article["form_record_id"]){
                     placesIds.push({
                         placeId: place["placeId"],
-                        order: place["order"]
+                        order: parseInt(place["order"])
                     })
                 }
             })

@@ -59,7 +59,7 @@ struct PlaceDetail: View {
                     }
                     
                 }
-                    .padding(.leading, 10.0)
+                .padding(.leading, 10.0)
                 .padding(.top, -40.0)
                 
                 Text(PlaceStore.shared.getCategory(placeCategory: self.place.category).title)
@@ -72,7 +72,7 @@ struct PlaceDetail: View {
                 }
                 
                 
-                PlaceDetailsButtons(place: self.place)
+                PlaceButtons(place: self.place)
                 
                 
                 if self.place.content != nil {
