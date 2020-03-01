@@ -33,12 +33,14 @@ struct PlacesMap: View {
                         .font(.title)
                         
                 }
-                .frame(width: 50, height: 50, alignment: .center)
+                .frame(width: 40, height: 40, alignment: .center)
                 .background(Color.white)
                 .cornerRadius(10)
                 
                 //Add other buttons here
-            }.padding()
+            }
+            .padding(.top, 50.0)
+            .padding(.trailing, 4.0)
         })
         
     }

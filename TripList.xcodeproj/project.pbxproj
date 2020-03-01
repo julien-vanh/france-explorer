@@ -591,6 +591,7 @@
 		F9AB64BE240AD4390061CD52 /* Lesmeilleursparcsdattractions.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9AB64BD240AD4390061CD52 /* Lesmeilleursparcsdattractions.jpg */; };
 		F9AB64C0240AD7520061CD52 /* PlaceButtonsMini.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64BF240AD7520061CD52 /* PlaceButtonsMini.swift */; };
 		F9AB64C2240AD9CE0061CD52 /* VibrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64C1240AD9CE0061CD52 /* VibrationManager.swift */; };
+		F9AB64C4240BD7720061CD52 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64C3240BD7720061CD52 /* Parameters.swift */; };
 		F9C9C68423E498D2002C1DA0 /* ASCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = F9C9C68323E498D2002C1DA0 /* ASCollectionView */; };
 		F9C9C68623E4B248002C1DA0 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9C68523E4B248002C1DA0 /* PlaceAnnotation.swift */; };
 		F9C9C68823E4D093002C1DA0 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9C68723E4D093002C1DA0 /* AppStyle.swift */; };
@@ -1195,6 +1196,7 @@
 		F9AB64BD240AD4390061CD52 /* Lesmeilleursparcsdattractions.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Lesmeilleursparcsdattractions.jpg; path = "scripts/TapFormsExport/Articles/Articles-Photos/Lesmeilleursparcsdattractions.jpg"; sourceTree = SOURCE_ROOT; };
 		F9AB64BF240AD7520061CD52 /* PlaceButtonsMini.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceButtonsMini.swift; sourceTree = "<group>"; };
 		F9AB64C1240AD9CE0061CD52 /* VibrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationManager.swift; sourceTree = "<group>"; };
+		F9AB64C3240BD7720061CD52 /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
 		F9C9C68523E4B248002C1DA0 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 		F9C9C68723E4D093002C1DA0 /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
 		F9C9C68923E4D287002C1DA0 /* UIColor+hexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hexString.swift"; sourceTree = "<group>"; };
@@ -1325,6 +1327,7 @@
 				F95DE58223DE349600BE1BD5 /* StoreCategoriesRow.swift */,
 				F9815CDF23EAD50500EEF9CA /* StoreArticlesRow.swift */,
 				F9815CE123EAD53900EEF9CA /* StoreArticle.swift */,
+				F9AB64C3240BD7720061CD52 /* Parameters.swift */,
 				F95DE5B423DE39D000BE1BD5 /* components */,
 			);
 			path = views;
@@ -2579,6 +2582,7 @@
 				F95DE57623DE348000BE1BD5 /* Session.swift in Sources */,
 				F95DE59323DE349700BE1BD5 /* AssociatesRow.swift in Sources */,
 				F95DE5BD23DE4A2900BE1BD5 /* PlacesMap.swift in Sources */,
+				F9AB64C4240BD7720061CD52 /* Parameters.swift in Sources */,
 				F95DE55C23DE2F0F00BE1BD5 /* SceneDelegate.swift in Sources */,
 				F9DC222D23E31FEE0023B8EF /* PlaceButtons.swift in Sources */,
 				F99E73A923EF0D69006BC089 /* ProgressionRegion.swift in Sources */,

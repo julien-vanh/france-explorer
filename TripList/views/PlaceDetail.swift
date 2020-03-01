@@ -68,7 +68,7 @@ struct PlaceDetail: View {
                 Text(self.place.title).font(.largeTitle)
                 
                 if locationManager.isLocationEnable() {
-                    Text("Situé à : " + AppStyle.formatDistance(value: locationManager.distanceTo(coordinate: place.locationCoordinate)))
+                    Text("à " + AppStyle.formatDistance(value: locationManager.distanceTo(coordinate: place.locationCoordinate)))
                 }
                 
                 
@@ -119,11 +119,11 @@ struct PlaceDetail: View {
                 
                 
                 Button(action: {
-                    self.showCredits = true
+                    self.showCredits.toggle()
                 }) {
                     Text("Crédits").foregroundColor(.gray)
                 }.sheet(isPresented: self.$showCredits) {
-                    CreditsModal(place: self.place, display: self.$showCredits)
+                    CreditsModal(place: self.place)
                 }
             }
             
@@ -183,30 +183,12 @@ struct HintDetail_Previews: PreviewProvider {
 
 struct CreditsModal: View {
     var place: Place
-    @Binding var display: Bool
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
-        VStack {
-            HStack {
-                Image(systemName: "xmark")
-                    .foregroundColor(.white)
-                    .background(
-                    Circle()
-                        .fill(Color.gray)
-                        .frame(width: 40, height: 40)
-                )
-                .frame(width: 40, height: 40)
-                .padding([.top, .leading], 20.0)
-                .onTapGesture {
-                    self.display.toggle()
-                }
-                Spacer()
-            }
+        NavigationView {
             
             VStack(alignment: .leading) {
-                Text("Crédits")
-                    .font(.title)
-                    .padding(.bottom, 50.0)
                 
                 if place.illustration != nil {
                     Text("Photo")
@@ -220,9 +202,17 @@ struct CreditsModal: View {
                     Text("Texte")
                     Text(self.place.content!.credit).foregroundColor(.gray)
                 }
-            }.padding()
-            
-            Spacer()
-        }
+                
+                Spacer()
+            }
+            .padding()
+            .navigationBarTitle("Crédits", displayMode: .inline)
+            .navigationBarItems(trailing:
+                Button("OK") {
+                    self.presentationMode.wrappedValue.dismiss()
+                }
+            )
+        }.environment(\.horizontalSizeClass, .compact)
+        
     }
 }

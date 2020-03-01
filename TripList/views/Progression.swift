@@ -10,12 +10,20 @@ import SwiftUI
 import QGrid
 
 struct Progression: View {
-    
+    @State var showingDetail = false
     
     var body: some View {
         NavigationView {
             
             List {
+                Button(action: {
+                           self.showingDetail.toggle()
+                       }) {
+                           Text("Show Detail")
+                       }
+                
+                    
+                
                 HStack{
                     Text("Totale : 2%")
                 }
@@ -29,6 +37,9 @@ struct Progression: View {
                 
             }
             .navigationBarTitle("Progression")
+            .sheet(isPresented: $showingDetail) {
+                 Parameters()
+            }
         }
     }
 }
