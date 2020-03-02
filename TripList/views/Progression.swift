@@ -16,17 +16,27 @@ struct Progression: View {
         NavigationView {
             
             List {
-                Button(action: {
-                           self.showingDetail.toggle()
-                       }) {
-                           Text("Show Detail")
-                       }
+                VStack(alignment: .leading) {
+                    HStack(alignment: .center) {
+                        VStack(alignment: .leading) {
+                            Text("France").font(.title)
+                            Text("21/25 régions visitées").foregroundColor(.green)
+                        }
+                        
+                        Spacer()
+                        ImageStore.shared.image(name: "france.png")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 80, height: 50)
+                            .clipped()
+                    }
+                    
+                    
+                }
+                
                 
                     
                 
-                HStack{
-                    Text("Totale : 2%")
-                }
                 
                 ForEach(PlaceStore.shared.getRegions()) { region in
                     NavigationLink(destination: LazyView(ProgressionRegion(region: region)), label: {
@@ -58,8 +68,12 @@ struct ProgressionLine: View {
     var region: PlaceRegion
     
     var body: some View {
-        HStack{
+        HStack {
             Text(region.name)
+            Spacer()
+            Text("Terra incognita")
+                .foregroundColor(.gray)
+                .font(.caption)
         }
     }
 }

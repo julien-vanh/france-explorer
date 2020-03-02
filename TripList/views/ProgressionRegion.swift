@@ -47,15 +47,24 @@ struct ProgressionRegion_Previews: PreviewProvider {
 }
 
 struct ProgressionItem: View {
-    @EnvironmentObject var session: Session
     var place: Place
+    var completed: Bool = true
     
     var body: some View {
-        ImageStore.shared.image(forPlace: place)
-            .renderingMode(.original)
-            .resizable()
-            //.grayscale(self.session.isCompleted(placeId: place.id) ? 0.0 : 0.99)
-            .aspectRatio(contentMode: .fill)
-            .frame(width: 70, height: 70).clipped()
+        ZStack(alignment: .center) {
+            ImageStore.shared.image(forPlace: place)
+                .renderingMode(.original)
+                .resizable()
+                .grayscale(completed ? 0.7 : 0.0)
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 70, height: 70).clipped()
+            
+            if completed {
+                Image(systemName: "checkmark.circle")
+                    .foregroundColor(.green).font(.title)
+                    //.padding([.bottom, .trailing], 3.0)
+            }
+            
+        }.frame(width: 70, height: 70)
     }
 }

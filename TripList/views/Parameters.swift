@@ -7,36 +7,76 @@
 //
 
 import SwiftUI
+import MessageUI
 
 struct Parameters: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @State private var isSharePresented: Bool = false
+    @State private var isPurchasePresented: Bool = false
+    
+    @State var result: Result<MFMailComposeResult, Error>? = nil
+    @State var isShowingMailView = false
     
     var body: some View {
         NavigationView {
             List {
-                
+                Button(action: {self.isPurchasePresented.toggle()}) {
+                    Text("Version complète")
+                }
+                .sheet(isPresented: $isPurchasePresented, onDismiss: {
+                    print("Dismiss")
+                }, content: {
+                    PurchasePage()
+                })
                 
                 Section(header: Text("Synchonisation"), content: {
-                    HStack {
-                        Image(systemName: "arrow.clockwise.icloud").foregroundColor(.blue).frame(width:30)
-                        Text("iCloud")
+                    Button(action: {
+                        print("Syncing") //TODO
+                    }) {
+                        HStack {
+                            Image(systemName: "arrow.clockwise.icloud").foregroundColor(.blue).frame(width:30)
+                            Text("iCloud")
+                        }
                     }
                 })
                 
                 
                 Section(header: Text("Applications"), content: {
-                    HStack {
-                        Image(systemName: "star").foregroundColor(.yellow).frame(width:30)
-                        Text("Noter l'application")
+                    Button(action: {
+                        AppState.openLinkInBrowser(link: "http://VERSLESTORE") //TODO
+                    }) {
+                        HStack {
+                            Image(systemName: "star").foregroundColor(.yellow).frame(width:30)
+                            Text("Noter l'application")
+                        }
                     }
-                    HStack {
-                        Image(systemName: "square.and.pencil").foregroundColor(.green).frame(width:30)
-                        Text("Nous contacter")
+                    
+                    
+                    Button(action: {
+                        self.isShowingMailView.toggle()
+                    }) {
+                        HStack {
+                            Image(systemName: "square.and.pencil").foregroundColor(.green).frame(width:30)
+                            Text("Nous contacter")
+                        }
                     }
-                    HStack {
-                        Image(systemName: "square.and.arrow.up").foregroundColor(.red).frame(width:30)
-                        Text("Partager")
+                    .disabled(!MFMailComposeViewController.canSendMail())
+                    .sheet(isPresented: $isShowingMailView) {
+                        MailView(result: self.$result)
                     }
+                    
+                    
+                    Button(action: {self.isSharePresented.toggle()}) {
+                        HStack {
+                            Image(systemName: "square.and.arrow.up").foregroundColor(.red).frame(width:30)
+                            Text("Partager")
+                        }
+                    }.sheet(isPresented: $isSharePresented, onDismiss: {
+                        print("Dismiss")
+                    }, content: {
+                        ActivityViewController(activityItems:["Connaisez-vous la France ?", "TripList", "LIEN VERS LE STORE"]) //TODO
+                    })
+                    
                 })
                 
                 
@@ -47,10 +87,10 @@ struct Parameters: View {
                     HStack {
                         Text("Version")
                         Spacer()
-                        Text(UIApplication.appVersion).foregroundColor(.blue)
+                        Text(UIApplication.appVersion).foregroundColor(.gray)
                     }
                     
-                    Text("Confidentialité")
+                    Text("Confidentialité") //TODO NavigationLink
                     
                     Text("Mentions tierces")
                 })
@@ -59,6 +99,8 @@ struct Parameters: View {
                 
                 
             }
+            
+            
             .listStyle(GroupedListStyle())
             .navigationBarTitle("Paramètres", displayMode: .inline)
             .navigationBarItems(trailing:
@@ -68,6 +110,8 @@ struct Parameters: View {
             )
         }.environment(\.horizontalSizeClass, .compact)
     }
+    
+    
 }
 
 struct Parameters_Previews: PreviewProvider {

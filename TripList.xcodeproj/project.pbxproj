@@ -615,6 +615,8 @@
 		F9FC37DD240D225900F17AAC /* premium1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9FC37D8240D225900F17AAC /* premium1.jpg */; };
 		F9FC37DE240D225900F17AAC /* premium5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9FC37D9240D225900F17AAC /* premium5.jpg */; };
 		F9FC37DF240D225900F17AAC /* premium4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9FC37DA240D225900F17AAC /* premium4.jpg */; };
+		F9FC37E1240D61D500F17AAC /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FC37E0240D61D500F17AAC /* MailView.swift */; };
+		F9FC37E3240D67BE00F17AAC /* france.png in Resources */ = {isa = PBXBuildFile; fileRef = F9FC37E2240D67BD00F17AAC /* france.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1227,6 +1229,8 @@
 		F9FC37D8240D225900F17AAC /* premium1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = premium1.jpg; sourceTree = "<group>"; };
 		F9FC37D9240D225900F17AAC /* premium5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = premium5.jpg; sourceTree = "<group>"; };
 		F9FC37DA240D225900F17AAC /* premium4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = premium4.jpg; sourceTree = "<group>"; };
+		F9FC37E0240D61D500F17AAC /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
+		F9FC37E2240D67BD00F17AAC /* france.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = france.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1367,6 +1371,7 @@
 		F95DE57023DE2F6100BE1BD5 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				F9FC37E2240D67BD00F17AAC /* france.png */,
 				F9FC37D5240D222200F17AAC /* purchasePage */,
 				F94B49682400435A0055956D /* placeholder.png */,
 				F9DC21D923E0DB1E0023B8EF /* regions.geojson */,
@@ -1399,6 +1404,7 @@
 				F96D610F23EB607900CD296A /* LazyView.swift */,
 				F99E73A623EDAD54006BC089 /* ActivityViewController.swift */,
 				F94B496F2401A42A0055956D /* SeparationBar.swift */,
+				F9FC37E0240D61D500F17AAC /* MailView.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -2193,6 +2199,7 @@
 				F9AB630F240AD0310061CD52 /* OradoursurGlane.jpg in Resources */,
 				F9AB63E2240AD0310061CD52 /* NausicaaCentreNationalDeLaMer.jpg in Resources */,
 				F9AB62AF240AD0310061CD52 /* Nozeroy.jpg in Resources */,
+				F9FC37E3240D67BE00F17AAC /* france.png in Resources */,
 				F9AB62CE240AD0310061CD52 /* MontignyleGannelon.jpg in Resources */,
 				F9AB6405240AD0310061CD52 /* ChteaudesDucsdeLorraine.jpg in Resources */,
 				F9AB6428240AD0310061CD52 /* FaylBillot.jpg in Resources */,
@@ -2644,6 +2651,7 @@
 				F95DE59923DE349700BE1BD5 /* PlacesList.swift in Sources */,
 				F95DE59A23DE349700BE1BD5 /* Progression.swift in Sources */,
 				F95DE59F23DE349700BE1BD5 /* PageView.swift in Sources */,
+				F9FC37E1240D61D500F17AAC /* MailView.swift in Sources */,
 				F95DE59623DE349700BE1BD5 /* StoreCategoriesRow.swift in Sources */,
 				F95DE59723DE349700BE1BD5 /* ImageCarouselView.swift in Sources */,
 				F9AB64C2240AD9CE0061CD52 /* VibrationManager.swift in Sources */,

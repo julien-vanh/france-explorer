@@ -51,6 +51,15 @@ struct ContentView: View {
                 }
                 .tag(3)
             
+            Parameters()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "gear")
+                        Text("Paramètres")
+                    }
+                }
+                .tag(4)
+            
             }.overlay(
                 GeometryReader { geometry in
                     BottomSheetView(
