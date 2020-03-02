@@ -7,40 +7,19 @@
 //
 
 import SwiftUI
-import QGrid
 
 struct ProgressionRegion: View {
     var region: PlaceRegion
     
+    
     var body: some View {
-        ScrollView(.vertical) {
-            ForEach(PlaceStore.shared.getCategories()) { category in
-                
-                HStack {
-                    Text(category.title)
-                        .font(.headline)
-                        .foregroundColor(Color(AppStyle.color(for: category.category)))
-                    Spacer()
-                }.padding(.leading, 15)
-                
-                QGrid(PlaceStore.shared.getAllForCategory(category: category.category, regionId: self.region.id),
-                      columns: 5,
-                      columnsInLandscape: 10,
-                      vSpacing: 5,
-                      hSpacing: 5,
-                      vPadding: 0,
-                      hPadding: 5
-                ) { place in
-                    NavigationLink(
-                            destination: PlacePager(places: PlaceStore.shared.getAllForCategory(category: category.category, regionId: self.region.id), initialePlace: place)
-                        ) {
-                            ProgressionItem(place: place)
-                        }
-                    }
-                    .frame(height: ceil(CGFloat(PlaceStore.shared.getAllForCategory(category: category.category, regionId: self.region.id).count) / 5.0)*70)
-                    .listRowInsets(EdgeInsets())
-                
-                SeparationBar().frame(height: 5)
+        GeometryReader { geometry in
+            ScrollView(.vertical) {
+                RegionRow(title: "Villes", category: .city, regionId: self.region.id, width: geometry.size.width)
+                RegionRow(title: "Histoire", category: .historical, regionId: self.region.id, width: geometry.size.width)
+                RegionRow(title: "Musée", category: .museum, regionId: self.region.id, width: geometry.size.width)
+                RegionRow(title: "Nature", category: .nature, regionId: self.region.id, width: geometry.size.width)
+                RegionRow(title: "Évenements", category: .event, regionId: self.region.id, width: geometry.size.width)
             }
         }
         .navigationBarTitle(Text(region.name))
@@ -55,23 +34,85 @@ struct ProgressionRegion_Previews: PreviewProvider {
 
 struct ProgressionItem: View {
     var place: Place
+    var size: CGFloat
     var completed: Bool = true
     
+    
     var body: some View {
-        ZStack(alignment: .center) {
-            ImageStore.shared.image(forPlace: place)
-                .renderingMode(.original)
-                .resizable()
-                .grayscale(completed ? 0.7 : 0.0)
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 70, height: 70).clipped()
+        NavigationLink(
+            destination: LazyView(PlacePager(places: PlaceStore.shared.getAllForCategory(category: self.place.category, regionId: self.place.regionId), initialePlace: self.place))
+        ) {
+            ZStack {
+                ImageStore.shared.image(forPlace: self.place)
+                    .renderingMode(.original)
+                    .resizable()
+                    .grayscale(self.completed ? 0.7 : 0.0)
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: self.size, height: self.size).clipped()
+                    
+                
+                if completed {
+                    Image(systemName: "checkmark.circle")
+                        .foregroundColor(.green).font(.title)
+                }
+                
+                }.cornerRadius(10).frame(width: self.size, height: self.size)
+        }
+    }
+}
+
+struct RegionRow: View {
+    var title: String
+    var category: PlaceCategory
+    var regionId: String
+    var width: CGFloat
+    
+    
+    var body: some View {
+        VStack {
+            Text(self.title)
+                .font(.headline)
+                .foregroundColor(Color(AppStyle.color(for: self.category)))
+                .padding(.leading, 15)
             
-            if completed {
-                Image(systemName: "checkmark.circle")
-                    .foregroundColor(.green).font(.title)
-                    //.padding([.bottom, .trailing], 3.0)
+            
+            RegionContent(places: PlaceStore.shared.getAllForCategory(category: self.category, regionId: self.regionId), width: width)
+            
+            SeparationBar()
+            Spacer()
+        }
+    }
+}
+
+struct RegionContent: View {
+    var places: [Place]
+    var width: CGFloat
+    let cols = UIDevice.current.userInterfaceIdiom == .phone ? 5 : 10
+    let rows: Int
+    
+    
+    init(places: [Place], width: CGFloat){
+        self.width = width
+        self.places = places
+        self.rows = places.count/cols + 1
+    }
+    
+    var body: some View {
+        VStack {
+            ForEach((0...(self.rows-1)), id: \.self) { row in
+                HStack(alignment: .top, spacing: 0) {
+                    ForEach((0...(self.cols-1)), id: \.self) { col in
+                        VStack{
+                            if self.places.count > (row*self.cols+col) {
+                                ProgressionItem(place: self.places[row*self.cols+col], size: (self.width/CGFloat(self.cols))-4).padding(2)
+                            }
+                        }
+                    }
+                    Spacer()
+                }
             }
             
-        }.frame(width: 70, height: 70)
+        }.padding(.leading, 5)
+                
     }
 }
