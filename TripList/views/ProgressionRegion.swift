@@ -13,19 +13,25 @@ struct ProgressionRegion: View {
     var region: PlaceRegion
     
     var body: some View {
-        List {
+        ScrollView(.vertical) {
             ForEach(PlaceStore.shared.getCategories()) { category in
                 
-                Section(header: Text(category.title)) {
-                    QGrid(PlaceStore.shared.getAllForCategory(category: category.category, regionId: self.region.id),
+                HStack {
+                    Text(category.title)
+                        .font(.headline)
+                        .foregroundColor(Color(AppStyle.color(for: category.category)))
+                    Spacer()
+                }.padding(.leading, 15)
+                
+                QGrid(PlaceStore.shared.getAllForCategory(category: category.category, regionId: self.region.id),
                       columns: 5,
                       columnsInLandscape: 10,
-                      vSpacing: 0,
-                      hSpacing: 0,
+                      vSpacing: 5,
+                      hSpacing: 5,
                       vPadding: 0,
-                      hPadding: 0
-                    ) { place in
-                        NavigationLink(
+                      hPadding: 5
+                ) { place in
+                    NavigationLink(
                             destination: PlacePager(places: PlaceStore.shared.getAllForCategory(category: category.category, regionId: self.region.id), initialePlace: place)
                         ) {
                             ProgressionItem(place: place)
@@ -33,7 +39,8 @@ struct ProgressionRegion: View {
                     }
                     .frame(height: ceil(CGFloat(PlaceStore.shared.getAllForCategory(category: category.category, regionId: self.region.id).count) / 5.0)*70)
                     .listRowInsets(EdgeInsets())
-                }
+                
+                SeparationBar().frame(height: 5)
             }
         }
         .navigationBarTitle(Text(region.name))
