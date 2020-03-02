@@ -13,7 +13,7 @@ import UIKit
 
 
 struct RegionsMapController: UIViewRepresentable {
-    @ObservedObject var mapState: MapState
+    @ObservedObject var appState = AppState.shared
     @FetchRequest(fetchRequest: Completion.getAllCompletion()) var completions: FetchedResults<Completion>
     let view = MKMapView(frame: .zero)
     
@@ -42,6 +42,11 @@ struct RegionsMapController: UIViewRepresentable {
             view.addOverlays(overlays, level: MKOverlayLevel.aboveRoads)
         }
         
+        view.removeAnnotations(view.annotations)
+        let places = placesData
+        let annotations = places.map{PlaceAnnotation(place: $0, completed: self.placeIsComplete(place: $0))}
+        view.addAnnotations(annotations)
+        
         return view
     }
     
@@ -53,11 +58,8 @@ struct RegionsMapController: UIViewRepresentable {
     
     
     func updateUIView(_ view: MKMapView, context: Context){
-        print("UPDATE updateUIView")
-        view.removeAnnotations(view.annotations)
-        let places = placesData
-        let annotations = places.map{PlaceAnnotation(place: $0, completed: self.placeIsComplete(place: $0))}
-        view.addAnnotations(annotations)
+        //print("UPDATE updateUIView")
+        
     }
     
     func placeIsComplete(place: Place) -> Bool{
@@ -99,7 +101,7 @@ struct RegionsMapController: UIViewRepresentable {
             if view.annotation is PlaceAnnotation {
                 let placeAnnotation = view.annotation as! PlaceAnnotation
                 print(placeAnnotation.place.title)
-                self.parent.mapState.place = placeAnnotation.place
+                self.parent.appState.place = placeAnnotation.place
                 mapView.setCenter(placeAnnotation.coordinate, animated: true)
             }
         }
@@ -108,7 +110,7 @@ struct RegionsMapController: UIViewRepresentable {
 
 struct RegionsMap_Previews: PreviewProvider {
     static var previews: some View {
-        RegionsMapController(mapState: MapState()).environmentObject(Session())
+        RegionsMapController()
     }
 }
 

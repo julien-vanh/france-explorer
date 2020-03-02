@@ -78,7 +78,9 @@ struct Parameters_Previews: PreviewProvider {
 
 struct Footer: View {
     var body: some View {
-        Text("TripList\n @2020 ForgeApp Studio. Tous droits réservés.").foregroundColor(.gray).font(.footnote).multilineTextAlignment(.center)
+            Text("TripList\n @2020 ForgeApp Studio. Tous droits réservés.")
+                .foregroundColor(.gray)
+                .font(.footnote)
     }
 }
 

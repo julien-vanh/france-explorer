@@ -114,6 +114,8 @@ struct PhotoFullscreen: View {
     
     var body: some View {
         ZStack {
+            Color.black
+            
             KFImage(self.pageImage.url).placeholder {
                 // Placeholder while downloading.
                 Image(systemName: "arrow.2.circlepath.circle")
@@ -126,23 +128,27 @@ struct PhotoFullscreen: View {
             
             VStack {
                 Spacer()
-                
-                Group{
-                    if(pageImage.description != nil){
-                        Text(pageImage.description!).foregroundColor(.white)
-                    }
-                    if(pageImage.artist != nil){
-                        Text(pageImage.artist!).foregroundColor(Color.gray)
-                    }
-                }
-                .padding()
-                .background(Color.black)
-                .cornerRadius(5)
+                Text(photoDescription())
+                    .foregroundColor(.gray)
+                    .padding(3)
+                    .background(Color.black)
+                    .cornerRadius(5)
             }
-            .padding(.bottom, 50.0)
         }
         .background(Color.black)
         .edgesIgnoringSafeArea(.all)
+    }
+    
+    func photoDescription() -> String!{
+        var result = ""
         
+        if let description = pageImage.description{
+            result += description
+        }
+        if let artist = pageImage.artist{
+            result += ("("+artist+")")
+        }
+        
+        return result
     }
 }

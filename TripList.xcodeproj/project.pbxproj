@@ -592,6 +592,7 @@
 		F9AB64C0240AD7520061CD52 /* PlaceButtonsMini.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64BF240AD7520061CD52 /* PlaceButtonsMini.swift */; };
 		F9AB64C2240AD9CE0061CD52 /* VibrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64C1240AD9CE0061CD52 /* VibrationManager.swift */; };
 		F9AB64C4240BD7720061CD52 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64C3240BD7720061CD52 /* Parameters.swift */; };
+		F9AB64C6240C22C90061CD52 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64C5240C22C90061CD52 /* AppState.swift */; };
 		F9C9C68423E498D2002C1DA0 /* ASCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = F9C9C68323E498D2002C1DA0 /* ASCollectionView */; };
 		F9C9C68623E4B248002C1DA0 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9C68523E4B248002C1DA0 /* PlaceAnnotation.swift */; };
 		F9C9C68823E4D093002C1DA0 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9C68723E4D093002C1DA0 /* AppStyle.swift */; };
@@ -608,6 +609,12 @@
 		F9DC21F823E234530023B8EF /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = F9DC21F723E234530023B8EF /* KingfisherSwiftUI */; };
 		F9DC222B23E31DF30023B8EF /* PlaceDetailPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC222A23E31DF30023B8EF /* PlaceDetailPhotos.swift */; };
 		F9DC222D23E31FEE0023B8EF /* PlaceButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC222C23E31FEE0023B8EF /* PlaceButtons.swift */; };
+		F9FC37D4240D15F900F17AAC /* PurchasePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FC37D3240D15F900F17AAC /* PurchasePage.swift */; };
+		F9FC37DB240D225900F17AAC /* premium3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9FC37D6240D225900F17AAC /* premium3.jpg */; };
+		F9FC37DC240D225900F17AAC /* premium2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9FC37D7240D225900F17AAC /* premium2.jpg */; };
+		F9FC37DD240D225900F17AAC /* premium1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9FC37D8240D225900F17AAC /* premium1.jpg */; };
+		F9FC37DE240D225900F17AAC /* premium5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9FC37D9240D225900F17AAC /* premium5.jpg */; };
+		F9FC37DF240D225900F17AAC /* premium4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9FC37DA240D225900F17AAC /* premium4.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1197,6 +1204,7 @@
 		F9AB64BF240AD7520061CD52 /* PlaceButtonsMini.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceButtonsMini.swift; sourceTree = "<group>"; };
 		F9AB64C1240AD9CE0061CD52 /* VibrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationManager.swift; sourceTree = "<group>"; };
 		F9AB64C3240BD7720061CD52 /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
+		F9AB64C5240C22C90061CD52 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		F9C9C68523E4B248002C1DA0 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 		F9C9C68723E4D093002C1DA0 /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
 		F9C9C68923E4D287002C1DA0 /* UIColor+hexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hexString.swift"; sourceTree = "<group>"; };
@@ -1213,6 +1221,12 @@
 		F9DC21F523E232820023B8EF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F9DC222A23E31DF30023B8EF /* PlaceDetailPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailPhotos.swift; sourceTree = "<group>"; };
 		F9DC222C23E31FEE0023B8EF /* PlaceButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceButtons.swift; sourceTree = "<group>"; };
+		F9FC37D3240D15F900F17AAC /* PurchasePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasePage.swift; sourceTree = "<group>"; };
+		F9FC37D6240D225900F17AAC /* premium3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = premium3.jpg; sourceTree = "<group>"; };
+		F9FC37D7240D225900F17AAC /* premium2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = premium2.jpg; sourceTree = "<group>"; };
+		F9FC37D8240D225900F17AAC /* premium1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = premium1.jpg; sourceTree = "<group>"; };
+		F9FC37D9240D225900F17AAC /* premium5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = premium5.jpg; sourceTree = "<group>"; };
+		F9FC37DA240D225900F17AAC /* premium4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = premium4.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1328,6 +1342,7 @@
 				F9815CDF23EAD50500EEF9CA /* StoreArticlesRow.swift */,
 				F9815CE123EAD53900EEF9CA /* StoreArticle.swift */,
 				F9AB64C3240BD7720061CD52 /* Parameters.swift */,
+				F9FC37D3240D15F900F17AAC /* PurchasePage.swift */,
 				F95DE5B423DE39D000BE1BD5 /* components */,
 			);
 			path = views;
@@ -1341,6 +1356,7 @@
 				F9AB64C1240AD9CE0061CD52 /* VibrationManager.swift */,
 				F95DE57423DE347F00BE1BD5 /* Session.swift */,
 				F9C9C68723E4D093002C1DA0 /* AppStyle.swift */,
+				F9AB64C5240C22C90061CD52 /* AppState.swift */,
 				F9C9C68923E4D287002C1DA0 /* UIColor+hexString.swift */,
 				F99E73A223ED9CD4006BC089 /* Reminders.swift */,
 				F9DC21EC23E231D70023B8EF /* wikipedia */,
@@ -1351,6 +1367,7 @@
 		F95DE57023DE2F6100BE1BD5 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				F9FC37D5240D222200F17AAC /* purchasePage */,
 				F94B49682400435A0055956D /* placeholder.png */,
 				F9DC21D923E0DB1E0023B8EF /* regions.geojson */,
 				F9DC21E023E1DE0C0023B8EF /* regions.json */,
@@ -1939,6 +1956,18 @@
 			path = wikipedia;
 			sourceTree = "<group>";
 		};
+		F9FC37D5240D222200F17AAC /* purchasePage */ = {
+			isa = PBXGroup;
+			children = (
+				F9FC37D8240D225900F17AAC /* premium1.jpg */,
+				F9FC37D7240D225900F17AAC /* premium2.jpg */,
+				F9FC37D6240D225900F17AAC /* premium3.jpg */,
+				F9FC37DA240D225900F17AAC /* premium4.jpg */,
+				F9FC37D9240D225900F17AAC /* premium5.jpg */,
+			);
+			path = purchasePage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2098,6 +2127,7 @@
 				F9AB633D240AD0310061CD52 /* ChorgiesdOrange.jpg in Resources */,
 				F9AB64B7240AD0310061CD52 /* Bonifacio.jpg in Resources */,
 				F9AB6341240AD0310061CD52 /* ChteauFortdeRambures.jpg in Resources */,
+				F9FC37DC240D225900F17AAC /* premium2.jpg in Resources */,
 				F9AB6306240AD0310061CD52 /* LacdAiguebelette.jpg in Resources */,
 				F9AB6430240AD0310061CD52 /* LaCharitsurLoire.jpg in Resources */,
 				F9AB643E240AD0310061CD52 /* Cassel.jpg in Resources */,
@@ -2189,6 +2219,7 @@
 				F9AB6370240AD0310061CD52 /* BeuvronenAuge.jpg in Resources */,
 				F9DC21DA23E0DB1E0023B8EF /* regions.geojson in Resources */,
 				F9AB62C4240AD0310061CD52 /* NeckdeSceautres.jpg in Resources */,
+				F9FC37DF240D225900F17AAC /* premium4.jpg in Resources */,
 				F9AB64B0240AD0310061CD52 /* AbbayedAuberive.jpg in Resources */,
 				F9AB62C3240AD0310061CD52 /* ArcdeTriomphe.jpg in Resources */,
 				F9AB6435240AD0310061CD52 /* ChteaudeLassay.jpg in Resources */,
@@ -2237,6 +2268,7 @@
 				F9AB62E9240AD0310061CD52 /* ChteaudeBelvoir.jpg in Resources */,
 				F9AB64A8240AD0310061CD52 /* Museduclotre.jpg in Resources */,
 				F9AB63AA240AD0310061CD52 /* CathdraleSainteCroixdOrlans.jpg in Resources */,
+				F9FC37DB240D225900F17AAC /* premium3.jpg in Resources */,
 				F9AB64AC240AD0310061CD52 /* SaintTropez.jpg in Resources */,
 				F9AB63CA240AD0310061CD52 /* Bthune.jpg in Resources */,
 				F9AB62ED240AD0310061CD52 /* AbbayedeFontaineDaniel.jpg in Resources */,
@@ -2274,6 +2306,7 @@
 				F9AB6338240AD0310061CD52 /* ChteauduPlessisBourr.jpg in Resources */,
 				F9AB63F5240AD0310061CD52 /* TunneldeRiqueval.jpg in Resources */,
 				F9AB62F8240AD0310061CD52 /* BaiedeSomme.jpg in Resources */,
+				F9FC37DE240D225900F17AAC /* premium5.jpg in Resources */,
 				F9AB6471240AD0310061CD52 /* LesCalanquesdePiana.jpg in Resources */,
 				F9AB649A240AD0310061CD52 /* MontBlanc.jpg in Resources */,
 				F9AB645B240AD0310061CD52 /* MARISCentrededcouvertedelapcheenmer.jpg in Resources */,
@@ -2453,6 +2486,7 @@
 				F9AB644E240AD0310061CD52 /* MaraissalantsdeGurande.jpg in Resources */,
 				F9AB64A7240AD0310061CD52 /* AiguilleduMidi.jpg in Resources */,
 				F9AB6488240AD0310061CD52 /* LeCentrePompidou.jpg in Resources */,
+				F9FC37DD240D225900F17AAC /* premium1.jpg in Resources */,
 				F9AB6389240AD0310061CD52 /* MassifduTaennchel.jpg in Resources */,
 				F9AB6411240AD0310061CD52 /* SaintAntoninNobleVal.jpg in Resources */,
 				F9AB631A240AD0310061CD52 /* Thiers.jpg in Resources */,
@@ -2565,7 +2599,9 @@
 			files = (
 				F9C9C68623E4B248002C1DA0 /* PlaceAnnotation.swift in Sources */,
 				F95DE55A23DE2F0F00BE1BD5 /* AppDelegate.swift in Sources */,
+				F9FC37D4240D15F900F17AAC /* PurchasePage.swift in Sources */,
 				F9DC21D423E0CEC20023B8EF /* RegionsMap.swift in Sources */,
+				F9AB64C6240C22C90061CD52 /* AppState.swift in Sources */,
 				F91DEDA323E8A26E00D8FFD7 /* TripList.xcdatamodeld in Sources */,
 				F91DEDA023E6F4DD00D8FFD7 /* PlaceMapDrawer.swift in Sources */,
 				F91DEDCA23E9BAB900D8FFD7 /* Completion.swift in Sources */,

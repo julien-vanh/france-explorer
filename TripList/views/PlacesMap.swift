@@ -12,13 +12,7 @@ import MapKit
 
 
 struct PlacesMap: View {
-    @ObservedObject var mapState: MapState
-    var regionMap: RegionsMapController
-    
-    init(mapState: MapState){
-        self.mapState = mapState
-        self.regionMap = RegionsMapController(mapState: mapState)
-    }
+    var regionMap = RegionsMapController()
     
     var body: some View {
         
@@ -48,6 +42,6 @@ struct PlacesMap: View {
 
 struct PlacesMap_Previews: PreviewProvider {
     static var previews: some View {
-        PlacesMap(mapState: MapState())
+        PlacesMap()
     }
 }

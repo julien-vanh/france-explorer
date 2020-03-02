@@ -7,68 +7,87 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct PlaceMapDrawer: View {
-    @ObservedObject var mapState: MapState
-    
+    @Binding var place: Place
+    @State private var showCredits = false
+    @ObservedObject var locationManager = LocationManager.shared
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
+            
+            Text(place.title)
+                .font(.headline)
+            
+        
             HStack {
-                Text(self.mapState.place.title)
-                .font(.title)
-                .padding(.leading)
+                Text(PlaceStore.shared.getCategory(placeCategory: self.place.category).title)
+                    .foregroundColor(Color(AppStyle.color(for: self.place.category)))
                 
-                Spacer()
-                
-                Image(systemName: "xmark")
-                    .foregroundColor(.white)
-                    .background(
-                    Circle()
-                        .fill(Color.gray)
-                        .frame(width: 40, height: 40)
-                )
-                .frame(width: 40, height: 40)
-                .padding([.top, .trailing], 10.0)
-                .onTapGesture {
-                    self.mapState.state = .closed
+                if locationManager.isLocationEnable() {
+                    Text(" - " + AppStyle.formatDistance(value: locationManager.distanceTo(coordinate: place.locationCoordinate)))
                 }
             }
             
-            PlaceButtons(mapState: self.mapState)
+            //PlaceButtons(place: place)
             
-            HStack {
-                ImageStore.shared.image(forPlace: self.mapState.place)
+            
+            GeometryReader { geometry in
+                ImageStore.shared.image(forPlace: self.place)
+                    .renderingMode(.original)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 200, height: 150)
-                    .clipped()
-                    .cornerRadius(10)
-                    .padding(.leading)
-                
-                VStack {
-                    Text("Nature")
-                        .padding(5)
-                        .background(Color.green)
-                        .cornerRadius(10)
-                        .foregroundColor(.white)
-                    Spacer()
-                    Text("Détails...")
-                        .padding(5)
-                    
-                }.padding(.horizontal, 5.0)
-                
-                Spacer()
-            }
-        }
+                    .frame(width: geometry.size.width, height:geometry.size.height)
+                    .clipped().cornerRadius(15).padding(10)
+            }.frame(height: 150)
         
-        .background(Color.clear)
-        .edgesIgnoringSafeArea(.horizontal)
+            
+            
+            if self.place.content != nil {
+                Text(self.place.content!.description)
+                    .lineLimit(6)
+            }
+            
+            
+            
+            if self.place.address != nil {
+                SeparationBar()
+                Text("Adresse").foregroundColor(.gray).font(.subheadline)
+                Button(action: {
+                    let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: self.place.locationCoordinate, addressDictionary:nil))
+                    mapItem.name = self.place.title
+                    mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
+                }) {
+                    Text(self.place.address)
+                }
+            }
+            
+            if self.place.website != nil {
+                SeparationBar()
+                Text("Site web").foregroundColor(.gray).font(.subheadline)
+                Button(action: {
+                    AppState.openLinkInBrowser(link: self.place.website)
+                }) {
+                    Text(self.place.website).foregroundColor(.blue)
+                }
+            }
+        
+            SeparationBar()
+            Button(action: {
+                self.showCredits.toggle()
+            }) {
+                Text("Crédits").foregroundColor(.gray).font(.subheadline)
+            }.sheet(isPresented: self.$showCredits) {
+                CreditsModal(place: self.place)
+            }
+    
+        }.padding()
     }
 }
 
 struct PlaceMapDrawer_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceMapDrawer(mapState: MapState())
+        PlaceMapDrawer(place: .constant(PlaceStore.shared.getRandom(count: 1)[0]))
     }
 }

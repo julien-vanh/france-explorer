@@ -14,19 +14,9 @@ struct PlaceButtons: View {
     @FetchRequest(fetchRequest: Dream.getAllDreams()) var dreams: FetchedResults<Dream>
     var fetchRequest: FetchRequest<Completion>
     var completions: FetchedResults<Completion> { fetchRequest.wrappedValue }
-    @ObservedObject var mapState: MapState
-    
-    
     
     init(place: Place) {
-        mapState = MapState()
         self.place = place
-        fetchRequest = FetchRequest<Completion>(entity: Completion.entity(), sortDescriptors: [], predicate: NSPredicate(format: "placeId == %@", place.id))
-    }
-    
-    init(mapState: MapState) {
-        self.mapState = mapState
-        self.place = mapState.place
         fetchRequest = FetchRequest<Completion>(entity: Completion.entity(), sortDescriptors: [], predicate: NSPredicate(format: "placeId == %@", place.id))
     }
     
@@ -41,7 +31,6 @@ struct PlaceButtons: View {
         do {
             try self.managedObjectContext.save()
             VibrationManager.shared.success()
-            self.mapState.update.toggle()
         } catch {
             print(error)
         }
@@ -52,7 +41,7 @@ struct PlaceButtons: View {
     }
     
     var body: some View {
-        HStack {
+        HStack(alignment: .center) {
             Button(action: {
                 print("click")
                 if self.completions.first != nil {

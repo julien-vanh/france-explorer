@@ -16,7 +16,11 @@ struct Store: View {
         NavigationView {
             
             ScrollView(.vertical) {
-                Text("Découvrez des centaines d'idées pour remplir votre Liste...")
+                HStack() {
+                    Text("Découvrez des centaines d'idées pour remplir votre Liste...").padding(.leading, 10)
+                    Spacer()
+                }
+                
                 
                 Carousel()
                 

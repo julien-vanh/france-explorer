@@ -11,8 +11,8 @@ import SwiftUI
 struct StoreCategoriesRow: View {
     var storeCategories = PlaceStore.shared.getCategories()
     
-    let rows = UIDevice.current.userInterfaceIdiom == .phone ? 2 : 1
-    let cols = UIDevice.current.userInterfaceIdiom == .phone ? 3 : 5
+    let rows = UIDevice.current.userInterfaceIdiom == .phone ? 3 : 1
+    let cols = UIDevice.current.userInterfaceIdiom == .phone ? 2 : 5
     
     var body: some View {
         VStack {
@@ -63,7 +63,7 @@ struct StoreCategoryItem: View {
                 .foregroundColor(.white)
                 .background(Color(AppStyle.color(for: category.category)))
                 .cornerRadius(5)
-                .padding([.leading, .bottom], 15)
+                .padding([.leading, .bottom], 10)
             
         }
     }

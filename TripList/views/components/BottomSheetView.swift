@@ -72,9 +72,9 @@ struct BottomSheetView<Content: View>: View {
                     aState = value.translation.height
                 }.onEnded { value in
                     let location = geometry.size.height - value.location.y
-                    
+                    print("Location", location)
                     //Determine le state en fin de scroll
-                    if location > self.maxHeight * 0.75 {
+                    if location > self.maxHeight * 0.5 {
                         self.state = .full
                     } else if location < self.maxHeight * 0.25 {
                         self.state = .closed

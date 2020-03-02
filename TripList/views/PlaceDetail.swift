@@ -85,7 +85,7 @@ struct PlaceDetail: View {
                     HStack {
                         Image(systemName: "globe").frame(width: 30, height: 30, alignment: .center).font(.title)
                         Button(action: {
-                            self.openLinkInBrowser(link: self.place.website)
+                            AppState.openLinkInBrowser(link: self.place.website)
                         }) {
                             Text(self.place.website)
                         }
@@ -136,16 +136,6 @@ struct PlaceDetail: View {
             }.frame(height: 500)
         }
         .edgesIgnoringSafeArea(.top)
-    }
-    
-    private func openLinkInBrowser(link: String){
-        var urlString = link
-        if !link.hasPrefix("http"){
-            urlString = "http://"+link
-        }
-        if let url = URL(string: urlString) {
-            UIApplication.shared.open(url)
-        }
     }
     
     private func getScrollOffset(_ geometry: GeometryProxy) -> CGFloat {
