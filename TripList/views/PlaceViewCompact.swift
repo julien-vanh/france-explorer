@@ -10,12 +10,13 @@ import SwiftUI
 
 struct PlaceViewCompact: View {
     var place: Place
+    @ObservedObject var locationManager = LocationManager.shared
     
     var body: some View {
         NavigationLink(
             destination: PlaceDetail(place: place)
         ) {
-            HStack {
+            HStack(alignment: .center) {
                 ImageStore.shared.image(forPlace: place)
                     .renderingMode(.original)
                     .resizable()
@@ -24,10 +25,19 @@ struct PlaceViewCompact: View {
                     .clipped().cornerRadius(5)
                 
                 VStack(alignment: .leading) {
+                    
                     Text(place.title)
                         .font(.headline)
+                    
                     Text(PlaceStore.shared.getCategory(placeCategory: place.category).title)
                         .foregroundColor(Color(AppStyle.color(for: place.category)))
+                    
+                    if locationManager.isLocationEnable() {
+                        Text("à " + AppStyle.formatDistance(value: locationManager.distanceTo(coordinate: place.locationCoordinate)))
+                            .foregroundColor(.black)
+                            .font(.caption)
+                    
+                    }
                     Spacer()
                     SeparationBar()
                 }
