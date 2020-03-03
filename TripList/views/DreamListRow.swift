@@ -21,11 +21,14 @@ struct DreamListRow: View {
     }
     
     var body: some View {
-        HStack {
+        HStack(alignment: .center) {
             Button(action: {
                 self.toggle()
+                
             }) {
-                Image(systemName: self.dream.completed ? "checkmark.circle" : "circle").foregroundColor(.green)
+                Image(systemName: self.dream.completed ? "checkmark.circle.fill" : "circle")
+                    .foregroundColor(.green)
+                    .font(.title)
             }.buttonStyle(BorderlessButtonStyle())
             
             Text(dream.title ?? "")
@@ -37,6 +40,7 @@ struct DreamListRow: View {
         if(self.dream.completed){
             let completion = Completion(context: self.managedObjectContext)
             completion.configure(placeId: self.dream.placeId ?? "0")
+            VibrationManager.shared.success()
         } else {
             self.completions.forEach({
                 self.managedObjectContext.delete($0)

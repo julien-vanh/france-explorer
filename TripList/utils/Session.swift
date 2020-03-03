@@ -20,7 +20,6 @@ class Session: ObservableObject {
     @Published var isPremium: Bool = false
     @Published var language: AppLanguage = .fr
     
-    
     init(){
         //loadData()
     }

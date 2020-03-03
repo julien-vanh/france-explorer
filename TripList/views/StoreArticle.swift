@@ -73,18 +73,6 @@ struct StoreArticle: View {
                 }
                 
                 Rectangle().opacity(0).frame(height:40)
-                /*
-                AssociatesRow(placeId: self.place.id)
-                    .padding(.bottom, 15.0)
-                
-                Button(action: {
-                    self.showCredits = true
-                }) {
-                    Text("Crédits").foregroundColor(.gray)
-                }.sheet(isPresented: self.$showCredits) {
-                    CreditsModal(place: self.article)
-                }.padding(.bottom, 40.0)
-                */
             }
         }
     }

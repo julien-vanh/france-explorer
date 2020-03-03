@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import QGrid
 
 struct ProgressionRegion: View {
     var region: PlaceRegion
@@ -56,7 +57,7 @@ struct ProgressionItem: View {
                         .foregroundColor(.green).font(.title)
                 }
                 
-                }.cornerRadius(10).frame(width: self.size, height: self.size)
+            }.cornerRadius(10).frame(width: self.size, height: self.size)
         }
     }
 }
@@ -78,8 +79,7 @@ struct RegionRow: View {
             
             RegionContent(places: PlaceStore.shared.getAllForCategory(category: self.category, regionId: self.regionId), width: width)
             
-            SeparationBar()
-            Spacer()
+            
         }
     }
 }
@@ -98,21 +98,17 @@ struct RegionContent: View {
     }
     
     var body: some View {
-        VStack {
-            ForEach((0...(self.rows-1)), id: \.self) { row in
-                HStack(alignment: .top, spacing: 0) {
-                    ForEach((0...(self.cols-1)), id: \.self) { col in
-                        VStack{
-                            if self.places.count > (row*self.cols+col) {
-                                ProgressionItem(place: self.places[row*self.cols+col], size: (self.width/CGFloat(self.cols))-4).padding(2)
-                            }
-                        }
-                    }
-                    Spacer()
-                }
-            }
-            
-        }.padding(.leading, 5)
+        QGrid(places,
+              columns: cols,
+              columnsInLandscape: cols,
+              vSpacing: 10,
+              hSpacing: 10,
+              vPadding: 10,
+              hPadding: 10) { place in
+                ProgressionItem(place: place, size: (self.width/CGFloat(self.cols))-5)
+        }.frame(height: CGFloat(self.rows)*90)
+        
+        
                 
     }
 }

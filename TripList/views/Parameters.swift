@@ -10,10 +10,8 @@ import SwiftUI
 import MessageUI
 
 struct Parameters: View {
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State private var isSharePresented: Bool = false
     @State private var isPurchasePresented: Bool = false
-    
     @State var result: Result<MFMailComposeResult, Error>? = nil
     @State var isShowingMailView = false
     
@@ -103,11 +101,7 @@ struct Parameters: View {
             
             .listStyle(GroupedListStyle())
             .navigationBarTitle("Paramètres", displayMode: .inline)
-            .navigationBarItems(trailing:
-                Button("OK") {
-                    self.presentationMode.wrappedValue.dismiss()
-                }
-            )
+            
         }.environment(\.horizontalSizeClass, .compact)
     }
     

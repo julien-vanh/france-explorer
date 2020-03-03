@@ -4,6 +4,9 @@ import SwiftUI
 import UIKit
 import MessageUI
 
+let MAILTO = "support@triplist.com" //TODO
+let SUBJECT = "Support Triplist" //TODO
+
 struct MailView: UIViewControllerRepresentable {
 
     @Environment(\.presentationMode) var presentation
@@ -42,6 +45,8 @@ struct MailView: UIViewControllerRepresentable {
     func makeUIViewController(context: UIViewControllerRepresentableContext<MailView>) -> MFMailComposeViewController {
         let vc = MFMailComposeViewController()
         vc.mailComposeDelegate = context.coordinator
+        vc.setToRecipients([MAILTO])
+        vc.setSubject(SUBJECT)
         return vc
     }
 

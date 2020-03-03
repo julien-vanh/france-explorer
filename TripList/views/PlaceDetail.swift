@@ -10,7 +10,6 @@ import SwiftUI
 import MapKit
 
 struct PlaceDetail: View {
-    @EnvironmentObject var session: Session
     @ObservedObject var locationManager = LocationManager.shared
     
     var place: Place
@@ -18,8 +17,7 @@ struct PlaceDetail: View {
     @State private var showCredits = false
     
     
-    init(){
-        //To display a random place
+    init(){//To display a random place
         self.place = PlaceStore.shared.getRandom(count: 1)[0]
     }
     
@@ -44,23 +42,25 @@ struct PlaceDetail: View {
             }.frame(height: 300)
             
             VStack {
-                NavigationLink(
-                    destination: PlaceDetailPhotos(place: self.place)
-                ) {
-                    HStack{
-                           
-                        Text("photos")
-                            .padding(.horizontal, 5.0)
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .background(Color.black).cornerRadius(10)
-                            
-                        Spacer()
+                
+                HStack{
+                    NavigationLink(
+                        destination: PlaceDetailPhotos(place: self.place)
+                    ) {
+                        HStack {
+                            Image(systemName: "photo")
+                            Text("photos")
+                        }
+                        
                     }
-                    
+                    .foregroundColor(.blue)
+                    .padding(5.0)
+                    .background(Color.white).cornerRadius(10)
+                        
+                    Spacer()
                 }
                 .padding(.leading, 10.0)
-                .padding(.top, -40.0)
+                .padding(.top, -30.0)
                 
                 Text(PlaceStore.shared.getCategory(placeCategory: self.place.category).title)
                     .foregroundColor(Color(AppStyle.color(for: self.place.category)))
@@ -165,7 +165,7 @@ struct PlaceDetail: View {
 
 struct HintDetail_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceDetail(place: placesData[2]).environmentObject(Session())
+        PlaceDetail(place: placesData[2])
     }
 }
 

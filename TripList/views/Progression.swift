@@ -46,7 +46,7 @@ struct Progression: View {
                 }
                 
             }
-            .navigationBarTitle("Progression")
+            .navigationBarTitle("Progression", displayMode: .inline)
             .sheet(isPresented: $showingDetail) {
                  Parameters()
             }
