@@ -7,12 +7,18 @@
 //
 
 import SwiftUI
+import QGrid
 
 struct StoreCategoriesRow: View {
-    var storeCategories = PlaceStore.shared.getCategories()
-    
-    let rows = UIDevice.current.userInterfaceIdiom == .phone ? 3 : 1
+    var storeCategories:[Category]
     let cols = UIDevice.current.userInterfaceIdiom == .phone ? 2 : 5
+    let rows:Int
+    
+    
+    init(){
+        self.storeCategories = PlaceStore.shared.getCategories()
+        self.rows = self.storeCategories.count/cols + 1
+    }
     
     var body: some View {
         VStack {
@@ -21,33 +27,24 @@ struct StoreCategoriesRow: View {
                 Text("Catégories")
                     .font(.title)
                 Spacer()
-                
             }.padding(.horizontal, 10)
         
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(alignment: .top, spacing: 0) {
-                    ForEach((0...(cols-1)), id: \.self) { col in
-                        VStack {
-                            ForEach((0...(self.rows-1)), id: \.self) { row in
-                                VStack{
-                                    if self.storeCategories.count > (row*self.cols+col) {
-                                        StoreCategoryItem(category: self.storeCategories[row*self.cols+col])
-                                            .frame(width: 180)
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    Rectangle().opacity(0).frame(width:50)
-                }
-            }
-        }.frame(height: CGFloat(50*rows+60))
+            QGrid(storeCategories,
+                  columns: cols,
+                  columnsInLandscape: cols,
+                  vSpacing: 10,
+                  hSpacing: 10,
+                  vPadding: 15,
+                  hPadding: 15) { category in
+                    StoreCategoryItem(category: category)
+            }.frame(height: CGFloat(self.rows)*60+30)
+        }
     }
 }
 
 struct StoreCategoriesRow_Previews: PreviewProvider {
     static var previews: some View {
-        StoreCategoriesRow().previewLayout(.fixed(width: 400, height: 200))
+        StoreCategoriesRow().previewLayout(.fixed(width: 414, height: 300))
     }
 }
 
@@ -64,7 +61,6 @@ struct StoreCategoryItem: View {
                 .foregroundColor(.white)
                 .background(Color(AppStyle.color(for: category.category)))
                 .cornerRadius(5)
-                .padding([.leading, .bottom], 10)
             
         }
     }

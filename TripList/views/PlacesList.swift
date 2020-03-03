@@ -30,7 +30,13 @@ struct PlacesList: View {
                     Text(place.title)
                 }
             }
-        }.navigationBarTitle(category != nil ? category.title : "Liste")
+        }
+        .navigationBarItems(trailing:
+            Button("Filtrer") {
+                
+            }
+        )
+        .navigationBarTitle(category != nil ? category.title : "Liste")
     }
 }
 

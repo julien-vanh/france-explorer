@@ -51,7 +51,7 @@ struct PlaceDetail: View {
                             Image(systemName: "photo")
                             Text("photos")
                         }
-                        
+
                     }
                     .foregroundColor(.blue)
                     .padding(5.0)
@@ -60,12 +60,12 @@ struct PlaceDetail: View {
                     Spacer()
                 }
                 .padding(.leading, 10.0)
-                .padding(.top, -30.0)
+                .padding(.top, -45.0)
                 
                 Text(PlaceStore.shared.getCategory(placeCategory: self.place.category).title)
                     .foregroundColor(Color(AppStyle.color(for: self.place.category)))
                 
-                Text(self.place.title).font(.largeTitle)
+                Text(self.place.title).font(.largeTitle).multilineTextAlignment(.center)
                 
                 if locationManager.isLocationEnable() {
                     Text("à " + AppStyle.formatDistance(value: locationManager.distanceTo(coordinate: place.locationCoordinate)))
@@ -80,24 +80,12 @@ struct PlaceDetail: View {
                         .padding( 10.0)
                 }
                 
-                if self.place.website != nil {
-                    SeparationBar()
-                    HStack {
-                        Image(systemName: "globe").frame(width: 30, height: 30, alignment: .center).font(.title)
-                        Button(action: {
-                            AppState.openLinkInBrowser(link: self.place.website)
-                        }) {
-                            Text(self.place.website)
-                        }
-                        Spacer()
-                    }
-                    .padding(.leading, 10.0)
-                }
-                
                 if self.place.address != nil {
                     SeparationBar()
                     HStack {
-                        Image(systemName: "map").frame(width: 30, height: 30, alignment: .center).font(.title)
+                        Image(systemName: "location").frame(width: 30, height: 30, alignment: .center)
+                            .font(.title)
+                            .padding(.trailing, 10)
                         Button(action: {
                             let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: self.place.locationCoordinate, addressDictionary:nil))
                             mapItem.name = self.place.title
@@ -110,6 +98,21 @@ struct PlaceDetail: View {
                     .padding(.leading, 10.0)
                 }
                 
+                if self.place.website != nil {
+                    SeparationBar()
+                    HStack {
+                        Image(systemName: "globe").frame(width: 30, height: 30, alignment: .center)
+                            .font(.title)
+                            .padding(.trailing, 10)
+                        Button(action: {
+                            AppState.openLinkInBrowser(link: self.place.website)
+                        }) {
+                            Text("Site web")
+                        }
+                        Spacer()
+                    }
+                    .padding(.leading, 10.0)
+                }
                 
                 if displayAssociates {
                     AssociatesRow(placeId: self.place.id)
