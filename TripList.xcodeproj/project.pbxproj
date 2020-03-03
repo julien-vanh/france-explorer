@@ -597,6 +597,7 @@
 		F9C9C68623E4B248002C1DA0 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9C68523E4B248002C1DA0 /* PlaceAnnotation.swift */; };
 		F9C9C68823E4D093002C1DA0 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9C68723E4D093002C1DA0 /* AppStyle.swift */; };
 		F9C9C68A23E4D287002C1DA0 /* UIColor+hexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9C68923E4D287002C1DA0 /* UIColor+hexString.swift */; };
+		F9D032F2240E89A7008A9B13 /* ArticlesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D032F1240E89A7008A9B13 /* ArticlesList.swift */; };
 		F9D49FA12402917C005A2B8E /* PlaceGridCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D49FA02402917C005A2B8E /* PlaceGridCompact.swift */; };
 		F9DC21D423E0CEC20023B8EF /* RegionsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC21D323E0CEC20023B8EF /* RegionsMap.swift */; };
 		F9DC21DA23E0DB1E0023B8EF /* regions.geojson in Resources */ = {isa = PBXBuildFile; fileRef = F9DC21D923E0DB1E0023B8EF /* regions.geojson */; };
@@ -1210,6 +1211,7 @@
 		F9C9C68523E4B248002C1DA0 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 		F9C9C68723E4D093002C1DA0 /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
 		F9C9C68923E4D287002C1DA0 /* UIColor+hexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hexString.swift"; sourceTree = "<group>"; };
+		F9D032F1240E89A7008A9B13 /* ArticlesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesList.swift; sourceTree = "<group>"; };
 		F9D49FA02402917C005A2B8E /* PlaceGridCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceGridCompact.swift; sourceTree = "<group>"; };
 		F9DC21D323E0CEC20023B8EF /* RegionsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionsMap.swift; sourceTree = "<group>"; };
 		F9DC21D923E0DB1E0023B8EF /* regions.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = regions.geojson; sourceTree = "<group>"; };
@@ -1344,6 +1346,7 @@
 				F9D49FA02402917C005A2B8E /* PlaceGridCompact.swift */,
 				F95DE58223DE349600BE1BD5 /* StoreCategoriesRow.swift */,
 				F9815CDF23EAD50500EEF9CA /* StoreArticlesRow.swift */,
+				F9D032F1240E89A7008A9B13 /* ArticlesList.swift */,
 				F9815CE123EAD53900EEF9CA /* StoreArticle.swift */,
 				F9AB64C3240BD7720061CD52 /* Parameters.swift */,
 				F9FC37D3240D15F900F17AAC /* PurchasePage.swift */,
@@ -2630,6 +2633,7 @@
 				F9DC222D23E31FEE0023B8EF /* PlaceButtons.swift in Sources */,
 				F99E73A923EF0D69006BC089 /* ProgressionRegion.swift in Sources */,
 				F95DE57723DE348000BE1BD5 /* Dataloader.swift in Sources */,
+				F9D032F2240E89A7008A9B13 /* ArticlesList.swift in Sources */,
 				F95DE5A723DE34A900BE1BD5 /* Place.swift in Sources */,
 				F95DE59123DE349700BE1BD5 /* Store.swift in Sources */,
 				F9AB64C0240AD7520061CD52 /* PlaceButtonsMini.swift in Sources */,

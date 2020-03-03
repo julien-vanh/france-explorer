@@ -21,6 +21,7 @@ struct StoreCategoriesRow: View {
                 Text("Catégories")
                     .font(.title)
                 Spacer()
+                
             }.padding(.horizontal, 10)
         
             ScrollView(.horizontal, showsIndicators: false) {

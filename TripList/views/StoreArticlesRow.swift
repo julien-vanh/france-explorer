@@ -9,11 +9,8 @@
 import SwiftUI
 
 struct StoreArticlesRow: View {
-    var articles: [Article] = []
+    var articles: [Article] = Array(articlesData.shuffled().prefix(5))
     
-    init() {
-        articles = articlesData
-    }
     
     var body: some View {
        VStack(alignment: .leading) {
@@ -22,6 +19,12 @@ struct StoreArticlesRow: View {
                 Text("Nos sélections")
                     .font(.title)
                 Spacer()
+                NavigationLink(destination: ArticlesList()){
+                    HStack {
+                        Text("Voir plus")
+                        Image(systemName: "chevron.right")
+                    }.foregroundColor(.blue)
+                }
             }.padding(.horizontal, 10)
             
             ScrollView(.horizontal, showsIndicators: false) {
