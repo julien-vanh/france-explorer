@@ -12,6 +12,8 @@ struct PlacesList: View {
     var category: Category!
     var places: [Place] = []
     
+    @State var menuOpen: Bool = false
+    
     init(){
         places = PlaceStore.shared.getRandom(count: 100)
     }
@@ -22,21 +24,33 @@ struct PlacesList: View {
     }
     
     var body: some View {
-        List{
-            ForEach(places) { place in
-                NavigationLink(
-                    destination: PlacePager(places: self.places, initialePlace:place)
-                ) {
-                    Text(place.title)
+        ZStack {
+            List{
+                ForEach(places) { place in
+                    NavigationLink(
+                        destination: PlacePager(places: self.places, initialePlace:place)
+                    ) {
+                        Text(place.title)
+                    }
                 }
             }
+            
+            SideMenu(width: 270,
+                     isOpen: self.menuOpen,
+                     menuClose: self.openMenu)
         }
+        
+        
         .navigationBarItems(trailing:
             Button("Filtrer") {
-                
+                self.openMenu()
             }
         )
-        .navigationBarTitle(category != nil ? category.title : "Liste")
+        .navigationBarTitle("Destinations", displayMode: .inline)
+    }
+    
+    func openMenu() {
+        self.menuOpen.toggle()
     }
 }
 

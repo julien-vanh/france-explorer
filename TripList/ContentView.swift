@@ -18,7 +18,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selection){
-            Store()
+            SearchPage()
                 .tabItem {
                     VStack {
                         Image(systemName: "rectangle.stack.fill")

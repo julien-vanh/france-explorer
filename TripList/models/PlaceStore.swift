@@ -61,6 +61,15 @@ final class PlaceStore: ObservableObject {
         return places.values.filter { $0.regionId == regionId }
     }
     
+    func getAllForSearch(search: String) -> [Place] {
+        if search.count > 2 {
+            let hashSearch = search.lowercased().forSorting
+            return places.values.filter { $0.hash.contains(hashSearch)}
+        } else {
+            return []
+        }
+    }
+    
     func getRandom(count:Int, withIllustration: Bool = false) -> [Place] {
         var resultCount: Int
         if(count > places.keys.count){

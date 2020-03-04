@@ -39,6 +39,22 @@ struct Place: Hashable, Codable, Identifiable {
     var wikiPageId: Int!
     
     var cta: CallToAction!
+    
+    var hash: String {
+        var hash = title + regionId
+        if let contentdefined = address {
+            hash += contentdefined
+        }
+        return hash.lowercased().forSorting
+    }
+}
+
+extension String {
+    var forSorting: String {
+        let simple = folding(options: [.diacriticInsensitive, .widthInsensitive, .caseInsensitive], locale: nil)
+        let nonAlphaNumeric = CharacterSet.alphanumerics.inverted
+        return simple.components(separatedBy: nonAlphaNumeric).joined(separator: "")
+    }
 }
 
 struct PlaceIllustration: Hashable, Codable {
