@@ -20,7 +20,7 @@ struct ArticlesList: View {
             ForEach(articles) { article in
                 ArticleRow(article: article)
             }
-        }.navigationBarTitle("Articles", displayMode: .inline)
+        }.navigationBarTitle("Sélections", displayMode: .inline)
     }
 }
 

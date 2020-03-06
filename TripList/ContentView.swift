@@ -12,7 +12,6 @@ import Combine
 
 
 struct ContentView: View {
-    @EnvironmentObject var session: Session
     @State private var selection = 0
     @ObservedObject var appState = AppState.shared
     
@@ -76,6 +75,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environmentObject(Session())
+        ContentView()
     }
 }

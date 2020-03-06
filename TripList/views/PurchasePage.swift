@@ -9,6 +9,9 @@ import SwiftUI
 
 struct PurchasePage: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @EnvironmentObject var session: Session
+    
+    var price:String = "Acheter 4,99 €"
 
     var body: some View {
         NavigationView {
@@ -25,7 +28,32 @@ struct PurchasePage: View {
                 FeatureLine(text: "Suppression de la publicité")
                 FeatureLine(text: "Liste illimitée")
                 
-                PurchaseButtons().padding()
+                VStack(alignment: .center) {
+                    Button(action: {
+                        print("purchasing...")
+                        self.session.isPremium = true // TODO
+                        self.presentationMode.wrappedValue.dismiss()
+                    }) {
+                        Text(price)
+                            .fontWeight(.semibold)
+                            .font(.headline).foregroundColor(.white)
+                            .frame(width: 250.0, height: 40.0)
+                            .foregroundColor(.white)
+                            .background(Color.green)
+                            .cornerRadius(20)
+                    }
+                    
+                    SeparationBar()
+                        
+                    Button(action: {
+                        print("Restauring")
+                    }) {
+                        Text("Restaurer mes achats")
+                            .font(.subheadline)
+                            .foregroundColor(.blue)
+                            .frame(width: 250.0, height: 40.0)
+                    }
+                }.padding()
                 
             }
             .listStyle(GroupedListStyle())
@@ -41,7 +69,7 @@ struct PurchasePage: View {
 
 struct PurchasePage_Previews: PreviewProvider {
     static var previews: some View {
-        PurchasePage()
+        PurchasePage().environmentObject(Session())
     }
 }
 
@@ -79,36 +107,5 @@ struct FeatureLine: View {
             Text(text)
             Spacer()
         }.padding(.horizontal, 20)
-    }
-}
-
-struct PurchaseButtons: View {
-    var price:String = "Acheter 4,99 €"
-    
-    var body: some View {
-        VStack(alignment: .center) {
-            Button(action: {
-                print("purchasing...")
-            }) {
-                Text(price)
-                    .fontWeight(.semibold)
-                    .font(.headline).foregroundColor(.white)
-                    .frame(width: 250.0, height: 40.0)
-                    .foregroundColor(.white)
-                    .background(Color.green)
-                    .cornerRadius(20)
-            }
-            
-            SeparationBar()
-                
-            Button(action: {
-                print("Restauring")
-            }) {
-                Text("Restaurer mes achats")
-                    .font(.subheadline)
-                    .foregroundColor(.blue)
-                    .frame(width: 250.0, height: 40.0)
-            }
-        }
     }
 }

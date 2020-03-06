@@ -14,18 +14,17 @@ struct Parameters: View {
     @State private var isPurchasePresented: Bool = false
     @State var result: Result<MFMailComposeResult, Error>? = nil
     @State var isShowingMailView = false
+    @EnvironmentObject var session: Session
     
     var body: some View {
         NavigationView {
             List {
-                Button(action: {self.isPurchasePresented.toggle()}) {
-                    Text("Version complète")
+                if !session.isPremium {
+                    Button(action: {self.isPurchasePresented.toggle()}) {
+                        Text("Version complète")
+                    }
                 }
-                .sheet(isPresented: $isPurchasePresented, onDismiss: {
-                    print("Dismiss")
-                }, content: {
-                    PurchasePage()
-                })
+                
                 
                 Section(header: Text("Synchonisation"), content: {
                     Button(action: {
@@ -97,7 +96,11 @@ struct Parameters: View {
                 
                 
             }
-            
+            .sheet(isPresented: $isPurchasePresented, onDismiss: {
+                print("Dismiss")
+            }, content: {
+                PurchasePage().environmentObject(self.session)
+            })
             
             .listStyle(GroupedListStyle())
             .navigationBarTitle("Paramètres", displayMode: .inline)
@@ -110,7 +113,7 @@ struct Parameters: View {
 
 struct Parameters_Previews: PreviewProvider {
     static var previews: some View {
-        Parameters()
+        Parameters().environmentObject(Session())
     }
 }
 

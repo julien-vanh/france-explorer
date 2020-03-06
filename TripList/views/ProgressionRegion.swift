@@ -11,7 +11,7 @@ import QGrid
 
 struct ProgressionRegion: View {
     var region: PlaceRegion
-    
+    @EnvironmentObject var session: Session
     
     
     var body: some View {
@@ -24,20 +24,25 @@ struct ProgressionRegion: View {
     }
     
     private func getPlaces() -> [ProgressionCell]{
-        let places = PlaceStore.shared.getAllForRegion(regionId: self.region.id)
+        let places = PlaceStore.shared.getAllForRegion(regionId: self.region.id).sorted { (p1, p2) -> Bool in
+            p1.category.rawValue < p2.category.rawValue
+        }
         
         var result: [ProgressionCell] = []
         var premiumCount = 0
         
         places.forEach { (place) in
-            if place.iap {
+            if place.iap && !session.isPremium {
                 premiumCount += 1
             } else {
                 result.append(ProgressionCell(place: place))
             }
         }
         
-        result.append(ProgressionCell(premiumWithMissing: 15))
+        if premiumCount > 0 {
+            result.append(ProgressionCell(premiumWithMissing: premiumCount))
+        }
+        
         
         return result
     }
@@ -71,29 +76,45 @@ struct ProgressionCell: Identifiable {
 
 struct ProgressionRegion_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressionRegion(region: regionsData[0])
+        ProgressionRegion(region: regionsData[0]).environmentObject(Session())
     }
 }
 
 struct ProgressionItem: View {
     var cell: ProgressionCell
     var size: CGFloat
-    var completed: Bool = Bool.random() //TODO
+    
     @State private var isPurchasePresented: Bool = false
+    
+    var fetchRequest: FetchRequest<Completion>
+    var completions: FetchedResults<Completion> { fetchRequest.wrappedValue }
+    @EnvironmentObject var session: Session
+    
+    init(cell: ProgressionCell, size: CGFloat) {
+        self.cell = cell
+        self.size = size
+        
+        var placeId = "premium"
+        if let place = cell.place {
+            placeId = place.id
+        }
+        
+        fetchRequest = FetchRequest<Completion>(entity: Completion.entity(), sortDescriptors: [], predicate: NSPredicate(format: "placeId == %@", placeId))
+    }
     
     var body: some View {
         VStack {
             if cell.type == .placeCell {
                 NavigationLink(
-                    destination: LazyView(PlacePager(places: PlaceStore.shared.getAllForRegion(regionId: self.cell.place!.regionId), initialePlace: self.cell.place!))
+                    destination: PlaceDetail(place: cell.place!, displayAssociates: false)
+                    //destination: LazyView(PlacePager(places: PlaceStore.shared.getAllForRegion(regionId: self.cell.place!.regionId), initialePlace: self.cell.place!))
                 ) {
-                    if self.completed {
+                    if self.completions.first != nil {
                         ImageStore.shared.image(forPlace: self.cell.place!)
                         .renderingMode(.original)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: self.size, height: self.size).clipped()
-                        .blur(radius: self.completed ? 0.0 : 2)
                         .cornerRadius(10).frame(width: self.size, height: self.size)
                     } else {
                         Image("mapicon.\(cell.place!.category)")
@@ -130,7 +151,7 @@ struct ProgressionItem: View {
                 .sheet(isPresented: self.$isPurchasePresented, onDismiss: {
                     print("Dismiss")
                 }, content: {
-                    PurchasePage()
+                    PurchasePage().environmentObject(self.session)
                 })
                 
             }

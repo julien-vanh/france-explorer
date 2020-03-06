@@ -131,12 +131,13 @@ struct PhotoFullscreen: View {
                 Text(photoDescription())
                     .foregroundColor(.gray)
                     .padding(3)
+                    .padding(.bottom, 50)
                     .background(Color.black)
                     .cornerRadius(5)
             }
         }
-        .background(Color.black)
-        .edgesIgnoringSafeArea(.all)
+        //.background(Color.black)
+        //.edgesIgnoringSafeArea(.all)
     }
     
     func photoDescription() -> String!{
@@ -146,7 +147,7 @@ struct PhotoFullscreen: View {
             result += description
         }
         if let artist = pageImage.artist{
-            result += ("("+artist+")")
+            result += (" ("+artist+")")
         }
         
         return result

@@ -82,8 +82,7 @@ struct PlaceButtonsMini: View {
                         Image(systemName: "text.badge.minus")
                     }
                     .buttonStyle(BorderlessButtonStyle()).padding()
-                    .foregroundColor(.white)
-                    .background(Color.orange)
+                    .foregroundColor(.red)
                     .cornerRadius(10)
                     .font(.headline)
                 } else {
