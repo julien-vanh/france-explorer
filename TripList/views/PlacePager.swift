@@ -18,6 +18,6 @@ struct PlacePager: View {
     }
     
     var body: some View {
-        PageView(placeDetailViews, currentPage: $index).edgesIgnoringSafeArea(.top)
+        PageView(placeDetailViews, currentPage: $index)//.edgesIgnoringSafeArea(.top)
     }
 }

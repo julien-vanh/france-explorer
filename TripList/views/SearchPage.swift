@@ -45,7 +45,7 @@ struct SearchPage: View {
                 .overlay(
                     VStack{
                         if(isEditing) {
-                            ExtractedView(searchText: searchText)
+                            SearchResult(searchText: searchText)
                         }
                     }
                 )
@@ -57,9 +57,8 @@ struct SearchPage: View {
     }
 }
 
-struct ExtractedView: View {
+struct SearchResult: View {
     var searchText: String
-    let array = ["Peter", "Paul", "Mary", "Anna-Lena", "George", "John", "Greg", "Thomas", "Robert", "Bernie", "Mike", "Benno", "Hugo", "Miles", "Michael", "Mikel", "Tim", "Tom", "Lottie", "Lorrie", "Barbara"]
     
     var body: some View {
         List {

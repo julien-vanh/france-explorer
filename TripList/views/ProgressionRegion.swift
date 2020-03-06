@@ -13,17 +13,59 @@ struct ProgressionRegion: View {
     var region: PlaceRegion
     
     
+    
     var body: some View {
         GeometryReader { geometry in
             ScrollView(.vertical) {
-                RegionRow(title: "Villes", category: .city, regionId: self.region.id, width: geometry.size.width)
-                RegionRow(title: "Histoire", category: .historical, regionId: self.region.id, width: geometry.size.width)
-                RegionRow(title: "Musée", category: .museum, regionId: self.region.id, width: geometry.size.width)
-                RegionRow(title: "Nature", category: .nature, regionId: self.region.id, width: geometry.size.width)
-                RegionRow(title: "Évenements", category: .event, regionId: self.region.id, width: geometry.size.width)
+                RegionContent(cells: self.getPlaces(), width: geometry.size.width)
             }
         }
         .navigationBarTitle(Text(region.name))
+    }
+    
+    private func getPlaces() -> [ProgressionCell]{
+        let places = PlaceStore.shared.getAllForRegion(regionId: self.region.id)
+        
+        var result: [ProgressionCell] = []
+        var premiumCount = 0
+        
+        places.forEach { (place) in
+            if place.iap {
+                premiumCount += 1
+            } else {
+                result.append(ProgressionCell(place: place))
+            }
+        }
+        
+        result.append(ProgressionCell(premiumWithMissing: 15))
+        
+        return result
+    }
+}
+
+struct ProgressionCell: Identifiable {
+    
+    
+    enum ProgressionCellType {
+        case placeCell
+        case premiumCell
+    }
+    
+    var id: String
+    var type: ProgressionCellType
+    var place: Place!
+    var missingPlacesCount: Int!
+    
+    init(premiumWithMissing: Int){
+        id = "premium"
+        type = .premiumCell
+        missingPlacesCount = premiumWithMissing
+    }
+    
+    init(place: Place){
+        id = place.id
+        type = .placeCell
+        self.place = place
     }
 }
 
@@ -34,81 +76,94 @@ struct ProgressionRegion_Previews: PreviewProvider {
 }
 
 struct ProgressionItem: View {
-    var place: Place
+    var cell: ProgressionCell
     var size: CGFloat
-    var completed: Bool = true
-    
-    
-    var body: some View {
-        NavigationLink(
-            destination: LazyView(PlacePager(places: PlaceStore.shared.getAllForCategory(category: self.place.category, regionId: self.place.regionId), initialePlace: self.place))
-        ) {
-            ZStack {
-                ImageStore.shared.image(forPlace: self.place)
-                    .renderingMode(.original)
-                    .resizable()
-                    .grayscale(self.completed ? 0.7 : 0.0)
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: self.size, height: self.size).clipped()
-                    
-                
-                if completed {
-                    Image(systemName: "checkmark.circle")
-                        .foregroundColor(.green).font(.title)
-                }
-                
-            }.cornerRadius(10).frame(width: self.size, height: self.size)
-        }
-    }
-}
-
-struct RegionRow: View {
-    var title: String
-    var category: PlaceCategory
-    var regionId: String
-    var width: CGFloat
-    
+    var completed: Bool = Bool.random() //TODO
+    @State private var isPurchasePresented: Bool = false
     
     var body: some View {
         VStack {
-            Text(self.title)
-                .font(.headline)
-                .foregroundColor(Color(AppStyle.color(for: self.category)))
-                .padding(.leading, 15)
-            
-            
-            RegionContent(places: PlaceStore.shared.getAllForCategory(category: self.category, regionId: self.regionId), width: width)
-            
-            
+            if cell.type == .placeCell {
+                NavigationLink(
+                    destination: LazyView(PlacePager(places: PlaceStore.shared.getAllForRegion(regionId: self.cell.place!.regionId), initialePlace: self.cell.place!))
+                ) {
+                    if self.completed {
+                        ImageStore.shared.image(forPlace: self.cell.place!)
+                        .renderingMode(.original)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: self.size, height: self.size).clipped()
+                        .blur(radius: self.completed ? 0.0 : 2)
+                        .cornerRadius(10).frame(width: self.size, height: self.size)
+                    } else {
+                        Image("mapicon.\(cell.place!.category)")
+                        .renderingMode(.original)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 30, height: 30)
+                        .padding(8)
+                        .frame(width: self.size, height: self.size)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .strokeBorder(Color(AppStyle.color(for: cell.place.category)), lineWidth: 4)
+                        )
+                        .background(Color(UIColor(hex: 0xDDDDDD)))
+                        .cornerRadius(10)
+                    }
+                }
+            } else {
+                Button(action: {self.isPurchasePresented.toggle()}) {
+                    VStack {
+                        Image(systemName: "star.fill").font(.title)
+                        Text("+ \(cell.missingPlacesCount!)")
+                    }
+                    .foregroundColor(.yellow)
+                    .padding(8)
+                    .frame(width: self.size, height: self.size)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .strokeBorder(Color.yellow, lineWidth: 4)
+                    )
+                        .background(Color.black)
+                    .cornerRadius(10)
+                }
+                .sheet(isPresented: self.$isPurchasePresented, onDismiss: {
+                    print("Dismiss")
+                }, content: {
+                    PurchasePage()
+                })
+                
+            }
         }
     }
 }
 
+
+
 struct RegionContent: View {
-    var places: [Place]
-    var width: CGFloat
+    var cells: [ProgressionCell]
+    var cellSize: CGFloat
     let cols = UIDevice.current.userInterfaceIdiom == .phone ? 5 : 10
     let rows: Int
     
+    let VPADDING: CGFloat = 10.0
+    let HSPACING: CGFloat = 10
     
-    init(places: [Place], width: CGFloat){
-        self.width = width
-        self.places = places
-        self.rows = places.count/cols + 1
+    init(cells: [ProgressionCell], width: CGFloat){
+        self.cellSize = (width/CGFloat(self.cols))-10
+        self.cells = cells
+        self.rows = Int(ceil(CGFloat(cells.count)/CGFloat((cols))))
     }
     
     var body: some View {
-        QGrid(places,
+        QGrid(cells,
               columns: cols,
               columnsInLandscape: cols,
               vSpacing: 10,
-              hSpacing: 10,
-              vPadding: 10,
-              hPadding: 10) { place in
-                ProgressionItem(place: place, size: (self.width/CGFloat(self.cols))-5)
-        }.frame(height: CGFloat(self.rows)*90)
-        
-        
-                
+              hSpacing: HSPACING,
+              vPadding: VPADDING,
+              hPadding: 10) { cell in
+                ProgressionItem(cell: cell, size: self.cellSize)
+        }.frame(height: VPADDING+(self.cellSize+HSPACING)*CGFloat(self.rows)+VPADDING)
     }
 }
