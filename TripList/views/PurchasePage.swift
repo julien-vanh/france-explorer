@@ -69,7 +69,7 @@ struct PurchasePage: View {
 
 struct PurchasePage_Previews: PreviewProvider {
     static var previews: some View {
-        PurchasePage().environmentObject(Session())
+        PurchasePage()
     }
 }
 
@@ -94,7 +94,7 @@ struct PurchaseCarousel: View {
                         .clipped().cornerRadius(15).padding(10)
                 }
             }
-        }.frame(width: UIScreen.main.bounds.width, height: 300, alignment: .center)
+        }.frame(height: 280, alignment: .center)
     }
 }
 
