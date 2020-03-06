@@ -54,8 +54,6 @@ struct StoreArticle: View {
                                     VStack {
                                         HStack {
                                             Text(place.title)
-                                                .font(.headline)
-                                                .lineLimit(2)
                                             
                                             Spacer()
                                             
