@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import FirebaseAnalytics
 
 struct StoreArticle: View {
     var article: Article
@@ -72,6 +73,11 @@ struct StoreArticle: View {
                 
                 Rectangle().opacity(0).frame(height:40)
             }
+        }.onAppear {
+            Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+                AnalyticsParameterItemID: self.article.id,
+                AnalyticsParameterContentType: "article"
+            ])
         }
     }
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8CB92F7763543DD657D004F /* Pods_TripList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9698C69142C657E5CE8286B8 /* Pods_TripList.framework */; };
 		F91DED9E23E6EAE800D8FFD7 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91DED9D23E6EAE800D8FFD7 /* BottomSheetView.swift */; };
 		F91DEDA023E6F4DD00D8FFD7 /* PlaceMapDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91DED9F23E6F4DD00D8FFD7 /* PlaceMapDrawer.swift */; };
 		F91DEDA323E8A26E00D8FFD7 /* TripList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F91DEDA123E8A26D00D8FFD7 /* TripList.xcdatamodeld */; };
@@ -596,6 +597,8 @@
 		F92E05C42412898C009C5ADD /* CitadelledeCorte.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F92E037C2412898B009C5ADD /* CitadelledeCorte.jpg */; };
 		F92E05C52412898C009C5ADD /* ValledeChaudefour.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F92E037D2412898B009C5ADD /* ValledeChaudefour.jpg */; };
 		F92E05C724128A26009C5ADD /* articles.json in Resources */ = {isa = PBXBuildFile; fileRef = F92E05C624128A26009C5ADD /* articles.json */; };
+		F92E05CB2412941B009C5ADD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92E05CA2412941B009C5ADD /* MapKit.framework */; };
+		F92E05CD24129558009C5ADD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F92E05CC24129558009C5ADD /* GoogleService-Info.plist */; };
 		F94B49692400435A0055956D /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = F94B49682400435A0055956D /* placeholder.png */; };
 		F94B49702401A42A0055956D /* SeparationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B496F2401A42A0055956D /* SeparationBar.swift */; };
 		F94B49732401DE3D0055956D /* PlaceViewCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B49722401DE3D0055956D /* PlaceViewCompact.swift */; };
@@ -623,7 +626,7 @@
 		F95DE59F23DE349700BE1BD5 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE58B23DE349700BE1BD5 /* PageView.swift */; };
 		F95DE5A723DE34A900BE1BD5 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE5A123DE34A800BE1BD5 /* Place.swift */; };
 		F95DE5A823DE34A900BE1BD5 /* PlaceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE5A223DE34A800BE1BD5 /* PlaceStore.swift */; };
-		F95DE5B723DE3BE500BE1BD5 /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = F95DE5B623DE3BE500BE1BD5 /* QGrid */; };
+		F95DE5B723DE3BE500BE1BD5 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = F95DE5B623DE3BE500BE1BD5 /* SwiftPackageProductDependency */; };
 		F95DE5B923DE416D00BE1BD5 /* Dream.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE5B823DE416D00BE1BD5 /* Dream.swift */; };
 		F95DE5BB23DE422F00BE1BD5 /* DreamDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE5BA23DE422F00BE1BD5 /* DreamDetail.swift */; };
 		F95DE5BD23DE4A2900BE1BD5 /* PlacesMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE5BC23DE4A2900BE1BD5 /* PlacesMap.swift */; };
@@ -641,7 +644,7 @@
 		F9AB64C2240AD9CE0061CD52 /* VibrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64C1240AD9CE0061CD52 /* VibrationManager.swift */; };
 		F9AB64C4240BD7720061CD52 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64C3240BD7720061CD52 /* Parameters.swift */; };
 		F9AB64C6240C22C90061CD52 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64C5240C22C90061CD52 /* AppState.swift */; };
-		F9C9C68423E498D2002C1DA0 /* ASCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = F9C9C68323E498D2002C1DA0 /* ASCollectionView */; };
+		F9C9C68423E498D2002C1DA0 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = F9C9C68323E498D2002C1DA0 /* SwiftPackageProductDependency */; };
 		F9C9C68623E4B248002C1DA0 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9C68523E4B248002C1DA0 /* PlaceAnnotation.swift */; };
 		F9C9C68823E4D093002C1DA0 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9C68723E4D093002C1DA0 /* AppStyle.swift */; };
 		F9C9C68A23E4D287002C1DA0 /* UIColor+hexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9C68923E4D287002C1DA0 /* UIColor+hexString.swift */; };
@@ -666,7 +669,7 @@
 		F9DC21E923E231A70023B8EF /* ImageMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC21E623E231A70023B8EF /* ImageMetadata.swift */; };
 		F9DC21EB23E231D30023B8EF /* String+HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC21EA23E231D30023B8EF /* String+HTML.swift */; };
 		F9DC21F123E232650023B8EF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9DC21F323E232650023B8EF /* Localizable.strings */; };
-		F9DC21F823E234530023B8EF /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = F9DC21F723E234530023B8EF /* KingfisherSwiftUI */; };
+		F9DC21F823E234530023B8EF /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = F9DC21F723E234530023B8EF /* SwiftPackageProductDependency */; };
 		F9DC222B23E31DF30023B8EF /* PlaceDetailPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC222A23E31DF30023B8EF /* PlaceDetailPhotos.swift */; };
 		F9DC222D23E31FEE0023B8EF /* PlaceButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC222C23E31FEE0023B8EF /* PlaceButtons.swift */; };
 		F9FC37D4240D15F900F17AAC /* PurchasePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FC37D3240D15F900F17AAC /* PurchasePage.swift */; };
@@ -680,6 +683,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7689E2DCC7F5369AF5ECE682 /* Pods-TripList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripList.debug.xcconfig"; path = "Target Support Files/Pods-TripList/Pods-TripList.debug.xcconfig"; sourceTree = "<group>"; };
+		9698C69142C657E5CE8286B8 /* Pods_TripList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C13C3C1697C3E7D04C10C491 /* Pods-TripList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripList.release.xcconfig"; path = "Target Support Files/Pods-TripList/Pods-TripList.release.xcconfig"; sourceTree = "<group>"; };
 		F91DED9D23E6EAE800D8FFD7 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		F91DED9F23E6F4DD00D8FFD7 /* PlaceMapDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMapDrawer.swift; sourceTree = "<group>"; };
 		F91DEDA223E8A26E00D8FFD7 /* TripList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TripList.xcdatamodel; sourceTree = "<group>"; };
@@ -1269,6 +1275,9 @@
 		F92E037C2412898B009C5ADD /* CitadelledeCorte.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CitadelledeCorte.jpg; sourceTree = "<group>"; };
 		F92E037D2412898B009C5ADD /* ValledeChaudefour.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ValledeChaudefour.jpg; sourceTree = "<group>"; };
 		F92E05C624128A26009C5ADD /* articles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = articles.json; sourceTree = "<group>"; };
+		F92E05C824129411009C5ADD /* France Heritage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "France Heritage.entitlements"; sourceTree = "<group>"; };
+		F92E05CA2412941B009C5ADD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F92E05CC24129558009C5ADD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F94B49682400435A0055956D /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		F94B496F2401A42A0055956D /* SeparationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparationBar.swift; sourceTree = "<group>"; };
 		F94B49722401DE3D0055956D /* PlaceViewCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewCompact.swift; sourceTree = "<group>"; };
@@ -1358,15 +1367,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9DC21F823E234530023B8EF /* KingfisherSwiftUI in Frameworks */,
-				F9C9C68423E498D2002C1DA0 /* ASCollectionView in Frameworks */,
-				F95DE5B723DE3BE500BE1BD5 /* QGrid in Frameworks */,
+				F9DC21F823E234530023B8EF /* BuildFile in Frameworks */,
+				F9C9C68423E498D2002C1DA0 /* BuildFile in Frameworks */,
+				F92E05CB2412941B009C5ADD /* MapKit.framework in Frameworks */,
+				F95DE5B723DE3BE500BE1BD5 /* BuildFile in Frameworks */,
+				E8CB92F7763543DD657D004F /* Pods_TripList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C561A45F0E0290AD10B0334 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7689E2DCC7F5369AF5ECE682 /* Pods-TripList.debug.xcconfig */,
+				C13C3C1697C3E7D04C10C491 /* Pods-TripList.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F92E01352412898A009C5ADD /* photos */ = {
 			isa = PBXGroup;
 			children = (
@@ -1958,6 +1979,15 @@
 			path = photos;
 			sourceTree = "<group>";
 		};
+		F92E05C92412941B009C5ADD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F92E05CA2412941B009C5ADD /* MapKit.framework */,
+				9698C69142C657E5CE8286B8 /* Pods_TripList.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F94B496E2401999E0055956D /* photos */ = {
 			isa = PBXGroup;
 			children = (
@@ -1987,6 +2017,8 @@
 			children = (
 				F95DE55823DE2F0F00BE1BD5 /* TripList */,
 				F95DE55723DE2F0E00BE1BD5 /* Products */,
+				F92E05C92412941B009C5ADD /* Frameworks */,
+				0C561A45F0E0290AD10B0334 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2001,6 +2033,7 @@
 		F95DE55823DE2F0F00BE1BD5 /* TripList */ = {
 			isa = PBXGroup;
 			children = (
+				F92E05C824129411009C5ADD /* France Heritage.entitlements */,
 				F95DE55923DE2F0F00BE1BD5 /* AppDelegate.swift */,
 				F95DE55B23DE2F0F00BE1BD5 /* SceneDelegate.swift */,
 				F95DE55D23DE2F0F00BE1BD5 /* ContentView.swift */,
@@ -2013,6 +2046,7 @@
 				F9DC21F323E232650023B8EF /* Localizable.strings */,
 				F95DE56723DE2F0F00BE1BD5 /* Info.plist */,
 				F91DEDA123E8A26D00D8FFD7 /* TripList.xcdatamodeld */,
+				F92E05CC24129558009C5ADD /* GoogleService-Info.plist */,
 				F95DE56123DE2F0F00BE1BD5 /* Preview Content */,
 			);
 			path = TripList;
@@ -2161,9 +2195,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F95DE56A23DE2F0F00BE1BD5 /* Build configuration list for PBXNativeTarget "TripList" */;
 			buildPhases = (
+				457E5F701CA3AD202B2CE77D /* [CP] Check Pods Manifest.lock */,
 				F95DE55223DE2F0E00BE1BD5 /* Sources */,
 				F95DE55323DE2F0E00BE1BD5 /* Frameworks */,
 				F95DE55423DE2F0E00BE1BD5 /* Resources */,
+				47773301A98EEB5F3A5C2942 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2171,9 +2207,9 @@
 			);
 			name = TripList;
 			packageProductDependencies = (
-				F95DE5B623DE3BE500BE1BD5 /* QGrid */,
-				F9DC21F723E234530023B8EF /* KingfisherSwiftUI */,
-				F9C9C68323E498D2002C1DA0 /* ASCollectionView */,
+				F95DE5B623DE3BE500BE1BD5 /* SwiftPackageProductDependency */,
+				F9DC21F723E234530023B8EF /* SwiftPackageProductDependency */,
+				F9C9C68323E498D2002C1DA0 /* SwiftPackageProductDependency */,
 			);
 			productName = TripList;
 			productReference = F95DE55623DE2F0E00BE1BD5 /* France Heritage.app */;
@@ -2205,9 +2241,9 @@
 			);
 			mainGroup = F95DE54D23DE2F0E00BE1BD5;
 			packageReferences = (
-				F95DE5B523DE3BE500BE1BD5 /* XCRemoteSwiftPackageReference "QGrid" */,
-				F9DC21F623E234530023B8EF /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				F9C9C68223E498D2002C1DA0 /* XCRemoteSwiftPackageReference "ASCollectionView" */,
+				F95DE5B523DE3BE500BE1BD5 /* RemoteSwiftPackageReference */,
+				F9DC21F623E234530023B8EF /* RemoteSwiftPackageReference */,
+				F9C9C68223E498D2002C1DA0 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = F95DE55723DE2F0E00BE1BD5 /* Products */;
 			projectDirPath = "";
@@ -2728,6 +2764,7 @@
 				F92E04F62412898C009C5ADD /* ParcduMarquenterre.jpg in Resources */,
 				F92E04E32412898C009C5ADD /* GrottedelaMadeleine.jpg in Resources */,
 				F92E05A52412898C009C5ADD /* TourEiffel.jpg in Resources */,
+				F92E05CD24129558009C5ADD /* GoogleService-Info.plist in Resources */,
 				F9DC21E123E1DE0C0023B8EF /* regions.json in Resources */,
 				F92E03F92412898C009C5ADD /* MusedelaMtallurgieArdennaise.jpg in Resources */,
 				F92E05A22412898C009C5ADD /* GorgesDeGalamus.jpg in Resources */,
@@ -2834,6 +2871,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		457E5F701CA3AD202B2CE77D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TripList-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47773301A98EEB5F3A5C2942 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TripList/Pods-TripList-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TripList/Pods-TripList-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TripList/Pods-TripList-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F95DE55223DE2F0E00BE1BD5 /* Sources */ = {
@@ -3045,8 +3124,10 @@
 		};
 		F95DE56B23DE2F0F00BE1BD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7689E2DCC7F5369AF5ECE682 /* Pods-TripList.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "TripList/France Heritage.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 20200306;
@@ -3070,8 +3151,10 @@
 		};
 		F95DE56C23DE2F0F00BE1BD5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C13C3C1697C3E7D04C10C491 /* Pods-TripList.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "TripList/France Heritage.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 20200306;
@@ -3117,7 +3200,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F95DE5B523DE3BE500BE1BD5 /* XCRemoteSwiftPackageReference "QGrid" */ = {
+		F95DE5B523DE3BE500BE1BD5 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Q-Mobile/QGrid";
 			requirement = {
@@ -3125,7 +3208,7 @@
 				version = 0.1.3;
 			};
 		};
-		F9C9C68223E498D2002C1DA0 /* XCRemoteSwiftPackageReference "ASCollectionView" */ = {
+		F9C9C68223E498D2002C1DA0 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apptekstudios/ASCollectionView";
 			requirement = {
@@ -3133,7 +3216,7 @@
 				version = 1.2.2;
 			};
 		};
-		F9DC21F623E234530023B8EF /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		F9DC21F623E234530023B8EF /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -3144,19 +3227,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F95DE5B623DE3BE500BE1BD5 /* QGrid */ = {
+		F95DE5B623DE3BE500BE1BD5 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F95DE5B523DE3BE500BE1BD5 /* XCRemoteSwiftPackageReference "QGrid" */;
+			package = F95DE5B523DE3BE500BE1BD5 /* RemoteSwiftPackageReference */;
 			productName = QGrid;
 		};
-		F9C9C68323E498D2002C1DA0 /* ASCollectionView */ = {
+		F9C9C68323E498D2002C1DA0 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F9C9C68223E498D2002C1DA0 /* XCRemoteSwiftPackageReference "ASCollectionView" */;
+			package = F9C9C68223E498D2002C1DA0 /* RemoteSwiftPackageReference */;
 			productName = ASCollectionView;
 		};
-		F9DC21F723E234530023B8EF /* KingfisherSwiftUI */ = {
+		F9DC21F723E234530023B8EF /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F9DC21F623E234530023B8EF /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = F9DC21F623E234530023B8EF /* RemoteSwiftPackageReference */;
 			productName = KingfisherSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */

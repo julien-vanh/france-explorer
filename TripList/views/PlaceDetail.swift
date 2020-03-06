@@ -8,6 +8,7 @@
 
 import SwiftUI
 import MapKit
+import FirebaseAnalytics
 
 struct PlaceDetail: View {
     @ObservedObject var locationManager = LocationManager.shared
@@ -137,6 +138,11 @@ struct PlaceDetail: View {
                     //.frame(width: geometry.size.width, height: UIScreen.main.bounds.height - 50 - self.getScrollOffset(geometry))//Lag
                     .frame(width: geometry.size.width, height: 500)
             }.frame(height: 500)
+        }.onAppear {
+            Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+                AnalyticsParameterItemID: self.place.id,
+                AnalyticsParameterContentType: "place"
+            ])
         }
         .edgesIgnoringSafeArea(.top)
     }
