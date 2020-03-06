@@ -25,7 +25,7 @@ const csvWriter = createCsvWriter({
 
 var lines = []
 
-let f1 = readFile("triplist2.kml")
+let f1 = readFile("triplist3.kml")
 //let f2 = readFile("triplist2.kml")
 
 Promise.all([f1]).then(()=> {

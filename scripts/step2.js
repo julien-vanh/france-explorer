@@ -4,7 +4,7 @@ const fs = require('fs');
 const csv = require('csv-parser');
 const download = require('image-downloader')
 
-let REGION_FILTER = "corse"
+let REGION_FILTER = "acategoriser"
 
 var cpt = 0
 let photosData = {}
@@ -78,7 +78,7 @@ function getPhotos(pageId, region, title){
         let promise = Promise.resolve()
         
         Object.values(data.query.pages).forEach((page, index) => {
-            if(page.imageinfo[0].mime === "image/jpeg"){
+            if(page.imageinfo && page.imageinfo[0].mime === "image/jpeg"){
                 
                 let extmetadata = page.imageinfo[0].extmetadata
                 var description, artist, licence;

@@ -1283,5 +1283,1332 @@
         </Point>
       </Placemark>
     </Folder>
+    <Folder>
+      <name>acategoriser</name>
+      <Placemark>
+        <name>Europa-Park Mitarbeiterparkplatz</name>
+        <description><![CDATA[wiki: 231172<br>website: www.europapark.de<br>popularity: 3<br>address: Europa-Park-Straße 2, 77977 Rust, Allemagne]]></description>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>231172</value>
+          </Data>
+          <Data name="website">
+            <value>www.europapark.de</value>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value>Europa-Park-Straße 2, 77977 Rust, Allemagne</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            7.71592580000004,48.2637946,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Nigloland</name>
+        <description><![CDATA[wiki: 415788<br>website: www.nigloland.fr<br>popularity: 3<br>address: 27 Rue de la Vallée du Landion, 10200 Dolancourt]]></description>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>415788</value>
+          </Data>
+          <Data name="website">
+            <value>www.nigloland.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value>27 Rue de la Vallée du Landion, 10200 Dolancourt</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            4.6094362,48.260924,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Le PAL</name>
+        <description><![CDATA[wiki: 796621<br>website: www.lepal.com<br>popularity: 3<br>address: Saint-Pourçain-sur-Besbre, 03290 Dompierre-sur-Besbre]]></description>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>796621</value>
+          </Data>
+          <Data name="website">
+            <value>www.lepal.com</value>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value>Saint-Pourçain-sur-Besbre, 03290 Dompierre-sur-Besbre</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            3.62538799999993,46.509026,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Walibi Rhône-Alpes</name>
+        <description><![CDATA[wiki: 7636005<br>website: www.walibi.fr<br>popularity: 3<br>address: 1380 Route de la Corneille, 38630 Les Avenières]]></description>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>7636005</value>
+          </Data>
+          <Data name="website">
+            <value>www.walibi.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value>1380 Route de la Corneille, 38630 Les Avenières</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            5.56912850000003,45.6203252,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Cité de l'espace]]></name>
+        <description><![CDATA[wiki: 63784<br>website: www.cite-espace.com<br>popularity: 3<br>address: Avenue Jean Gonord, 31500 Toulouse]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>63784</value>
+          </Data>
+          <Data name="website">
+            <value>www.cite-espace.com</value>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value>Avenue Jean Gonord, 31500 Toulouse</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.49335670000005,43.5866272,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Parc Saint Paul</name>
+        <description><![CDATA[wiki: 3004864<br>website: www.parcsaintpaul.fr<br>popularity: 2<br>address: 47 Rue de l'Avelon, 60650 Saint-Paul]]></description>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>3004864</value>
+          </Data>
+          <Data name="website">
+            <value>www.parcsaintpaul.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value><![CDATA[47 Rue de l'Avelon, 60650 Saint-Paul]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.98281700000007,49.421484,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>La Mer de Sable</name>
+        <description><![CDATA[wiki: 616098<br>website: www.merdesable.fr<br>popularity: 2<br>address: N330, 60950 Ermenonville]]></description>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>616098</value>
+          </Data>
+          <Data name="website">
+            <value>www.merdesable.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>N330, 60950 Ermenonville</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.67452800000001,49.145131,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Walibi Sud-Ouest</name>
+        <description><![CDATA[wiki: 1675280<br>website: www.parcagen.fr<br>popularity: 2<br>address: 47310 Roquefort]]></description>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1675280</value>
+          </Data>
+          <Data name="website">
+            <value>www.parcagen.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>47310 Roquefort</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            0.576062500000035,44.1867254,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Bagatelle - Parc d'Attractions]]></name>
+        <description><![CDATA[wiki: 997875<br>website: www.parcbagatelle.com<br>popularity: 1<br>address: D940, 62155 Merlimont]]></description>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>997875</value>
+          </Data>
+          <Data name="website">
+            <value>www.parcbagatelle.com</value>
+          </Data>
+          <Data name="popularity">
+            <value>1.0</value>
+          </Data>
+          <Data name="address">
+            <value>D940, 62155 Merlimont</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.60497970000006,50.4302157,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Parc du Petit Prince</name>
+        <description><![CDATA[wiki: 7938113<br>website: www.parcdupetitprince.com<br>popularity: 1<br>address: Le Parc du Petit Prince, Rue de l'Espoir, 68190 Ungersheim]]></description>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>7938113</value>
+          </Data>
+          <Data name="website">
+            <value>www.parcdupetitprince.com</value>
+          </Data>
+          <Data name="popularity">
+            <value>1.0</value>
+          </Data>
+          <Data name="address">
+            <value><![CDATA[Le Parc du Petit Prince, Rue de l'Espoir, 68190 Ungersheim]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            7.29769020000003,47.8615079,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fraispertuis City</name>
+        <description><![CDATA[wiki: 508439<br>website: www.fraispertuis-city.fr<br>popularity: 1<br>address: 50 Rue de la Colline des Eaux, 88700 Jeanménil]]></description>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>508439</value>
+          </Data>
+          <Data name="website">
+            <value>www.fraispertuis-city.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>1.0</value>
+          </Data>
+          <Data name="address">
+            <value>50 Rue de la Colline des Eaux, 88700 Jeanménil</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.72862699999996,48.32401,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Dennlys Parc</name>
+        <description><![CDATA[wiki: 911105<br>website: www.dennlys-parc.com<br>popularity: <br>address: 11 Rue du Moulin, 62560 Dennebrœucq]]></description>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>911105</value>
+          </Data>
+          <Data name="website">
+            <value>www.dennlys-parc.com</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>11 Rue du Moulin, 62560 Dennebrœucq</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.15398909999999,50.570955,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Terra Botanica</name>
+        <description><![CDATA[wiki: 4705040<br>website: www.terrabotanica.fr<br>popularity: 2<br>address: Route d'Épinard, 49000 Angers]]></description>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>4705040</value>
+          </Data>
+          <Data name="website">
+            <value>www.terrabotanica.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value><![CDATA[Route d'Épinard, 49000 Angers]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.57086670000001,47.5010817,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Walygator Parc</name>
+        <description><![CDATA[wiki: 1672085<br>website: walygatorparc.com<br>popularity: <br>address: Voie Romaine, 57280 Maizières-lès-Metz]]></description>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1672085</value>
+          </Data>
+          <Data name="website">
+            <value>walygatorparc.com</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Voie Romaine, 57280 Maizières-lès-Metz</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.15599759999998,49.2253495,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>France Miniature</name>
+        <description><![CDATA[wiki: 109740<br>website: www.franceminiature.fr<br>popularity: 2<br>address: Boulevard André Malraux, 78990 Élancourt]]></description>
+        <styleUrl>#icon-1511-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>109740</value>
+          </Data>
+          <Data name="website">
+            <value>www.franceminiature.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Boulevard André Malraux, 78990 Élancourt</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.96496890000003,48.7767701,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Phare de l'Île Vierge]]></name>
+        <description><![CDATA[wiki: 246632<br>website: <br>popularity: <br>address: L'Île Vierge, 29880 Plouguerneau]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>246632</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value><![CDATA[L'Île Vierge, 29880 Plouguerneau]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -4.56749630000002,48.638843,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Basilique Notre-Dame de la Garde</name>
+        <description><![CDATA[wiki: 252114<br>website: www.notredamedelagarde.com<br>popularity: 3<br>address: Rue Fort du Sanctuaire, 13281 Marseille]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>252114</value>
+          </Data>
+          <Data name="website">
+            <value>www.notredamedelagarde.com</value>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value>Rue Fort du Sanctuaire, 13281 Marseille</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            5.37123769999994,43.2839533,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sainte Chapelle</name>
+        <description><![CDATA[wiki: 58680<br>website: sainte-chapelle.monuments-nationaux.fr<br>popularity: 3<br>address: 8 Boulevard du Palais, 75001 Paris]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>58680</value>
+          </Data>
+          <Data name="website">
+            <value>sainte-chapelle.monuments-nationaux.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value>8 Boulevard du Palais, 75001 Paris</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.34498699999995,48.85542,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cathédrale Notre-Dame de Paris</name>
+        <description><![CDATA[wiki: 19424<br>website: www.notredamedeparis.fr<br>popularity: 3<br>address: 6 Parvis Notre-Dame - Pl. Jean-Paul II, 75004 Paris]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>19424</value>
+          </Data>
+          <Data name="website">
+            <value>www.notredamedeparis.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value>6 Parvis Notre-Dame - Pl. Jean-Paul II, 75004 Paris</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.34990210000001,48.8529682,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Palais Jacques Cœur</name>
+        <description><![CDATA[wiki: 2493518<br>website: palais-jacques-coeur.monuments-nationaux.fr<br>popularity: 2<br>address: 10Bis Rue Jacques Cœur, 18000 Bourges]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>2493518</value>
+          </Data>
+          <Data name="website">
+            <value>palais-jacques-coeur.monuments-nationaux.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>10Bis Rue Jacques Cœur, 18000 Bourges</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.39361830000007,47.0845711,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fondation Louis Vuitton</name>
+        <description><![CDATA[wiki: 2469732<br>website: www.fondationlouisvuitton.fr<br>popularity: 2<br>address: 8 Avenue du Mahatma Gandhi, 75116 Paris]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>2469732</value>
+          </Data>
+          <Data name="website">
+            <value>www.fondationlouisvuitton.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>8 Avenue du Mahatma Gandhi, 75116 Paris</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.26340529999993,48.8764725,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>La Basilique de Vézelay</name>
+        <description><![CDATA[wiki: 350708<br>website: www.basiliquedevezelay.org<br>popularity: <br>address: 89450 Vézelay]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>350708</value>
+          </Data>
+          <Data name="website">
+            <value>www.basiliquedevezelay.org</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>89450 Vézelay</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            3.74874039999997,47.4663856,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Citadelle de Sisteron</name>
+        <description><![CDATA[wiki: 333769<br>website: www.citadelledesisteron.fr<br>popularity: 2<br>address: Montée de la Citadelle, 04200 Sisteron]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>333769</value>
+          </Data>
+          <Data name="website">
+            <value>www.citadelledesisteron.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Montée de la Citadelle, 04200 Sisteron</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            5.94348519999994,44.1985397,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Maison de George Sand</name>
+        <description><![CDATA[wiki: 6126068<br>website: www.maison-george-sand.fr<br>popularity: <br>address: 2 place Sainte-Anne, 36400 Nohant-Vic]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>6126068</value>
+          </Data>
+          <Data name="website">
+            <value>www.maison-george-sand.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>2 place Sainte-Anne, 36400 Nohant-Vic</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.97535570000002,46.625167,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Château des Baux</name>
+        <description><![CDATA[wiki: 1376319<br>website: www.chateau-baux-provence.com<br>popularity: 2<br>address: Grand Rue, 13520 Les Baux-de-Provence]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1376319</value>
+          </Data>
+          <Data name="website">
+            <value>www.chateau-baux-provence.com</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Grand Rue, 13520 Les Baux-de-Provence</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            4.79675999999995,43.7443388,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Château de Breteuil</name>
+        <description><![CDATA[wiki: 445726<br>website: www.breteuil.fr<br>popularity: 2<br>address: 78460 Choisel, France]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>445726</value>
+          </Data>
+          <Data name="website">
+            <value>www.breteuil.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>78460 Choisel, France</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.02308930000004,48.6799878,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Château de Langeais</name>
+        <description><![CDATA[wiki: 762926<br>website: www.chateau-de-langeais.com<br>popularity: <br>address: Place Pierre de Brosse, 37130 Langeais]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>762926</value>
+          </Data>
+          <Data name="website">
+            <value>www.chateau-de-langeais.com</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Place Pierre de Brosse, 37130 Langeais</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            0.406181999999944,47.3247194,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Château du Rivau</name>
+        <description><![CDATA[wiki: 1008541<br>website: www.chateaudurivau.com<br>popularity: <br>address: 9 Rue du Château, 37120 Lémeré]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1008541</value>
+          </Data>
+          <Data name="website">
+            <value>www.chateaudurivau.com</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>9 Rue du Château, 37120 Lémeré</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            0.323063499999989,47.1038659,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Château d'Ussé]]></name>
+        <description><![CDATA[wiki: 149703<br>website: www.chateaudusse.fr<br>popularity: 2<br>address: 37420 Rigny-Ussé]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>149703</value>
+          </Data>
+          <Data name="website">
+            <value>www.chateaudusse.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>37420 Rigny-Ussé</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            0.291321899999957,47.2500053,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Château Royal d'Amboise]]></name>
+        <description><![CDATA[wiki: 123761<br>website: www.chateau-amboise.com<br>popularity: 2<br>address: Montée de l'Emir Abd el Kader, 37400 Amboise]]></description>
+        <styleUrl>#icon-1598-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>123761</value>
+          </Data>
+          <Data name="website">
+            <value>www.chateau-amboise.com</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value><![CDATA[Montée de l'Emir Abd el Kader, 37400 Amboise]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            0.987019000000032,47.4133609,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>acategoriser2</name>
+      <Placemark>
+        <name>Musée du Débarquement</name>
+        <description><![CDATA[wiki: 11531211<br>website: www.musee-arromanches.fr<br>popularity: 2<br>address: Place du 6 Juin, 14117 Arromanches-les-Bains]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>11531211</value>
+          </Data>
+          <Data name="website">
+            <value>www.musee-arromanches.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Place du 6 Juin, 14117 Arromanches-les-Bains</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -0.620264899999938,49.3401858,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Musée Cinéma et Miniature</name>
+        <description><![CDATA[wiki: 6824346<br>website: www.museeminiatureetcinema.fr<br>popularity: 2<br>address: 60 Rue Saint-Jean, 69005 Lyon]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>6824346</value>
+          </Data>
+          <Data name="website">
+            <value>www.museeminiatureetcinema.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>60 Rue Saint-Jean, 69005 Lyon</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            4.82734740000001,45.761876,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Musée des Beaux-Arts de Lyon</name>
+        <description><![CDATA[wiki: 234275<br>website: www.mba-lyon.fr<br>popularity: 2<br>address: 20 Place des Terreaux, 69001 Lyon]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>234275</value>
+          </Data>
+          <Data name="website">
+            <value>www.mba-lyon.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>20 Place des Terreaux, 69001 Lyon</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            4.83361909999996,45.7671097,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Musée du quai Branly - Jacques Chirac</name>
+        <description><![CDATA[wiki: 119783<br>website: www.quaibranly.fr<br>popularity: 3<br>address: 37 Quai Branly, 75007 Paris]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>119783</value>
+          </Data>
+          <Data name="website">
+            <value>www.quaibranly.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>3.0</value>
+          </Data>
+          <Data name="address">
+            <value>37 Quai Branly, 75007 Paris</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.29789400000004,48.8608889,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Musée de l'Orangerie]]></name>
+        <description><![CDATA[wiki: 149132<br>website: www.musee-orangerie.fr<br>popularity: 2<br>address: Jardin Tuileries, 75001 Paris]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>149132</value>
+          </Data>
+          <Data name="website">
+            <value>www.musee-orangerie.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Jardin Tuileries, 75001 Paris</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.32267239999999,48.8637884,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Centre Pompidou-Metz</name>
+        <description><![CDATA[wiki: 929926<br>website: www.centrepompidou-metz.fr<br>popularity: <br>address: 1 Parvis des Droits de l'Homme, 57020 Metz]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>929926</value>
+          </Data>
+          <Data name="website">
+            <value>www.centrepompidou-metz.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value><![CDATA[1 Parvis des Droits de l'Homme, 57020 Metz]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            6.18167629999994,49.1082406,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Musée Rodin</name>
+        <description><![CDATA[wiki: 133570<br>website: www.musee-rodin.fr<br>popularity: <br>address: 77 Rue de Varenne, 75007 Paris]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>133570</value>
+          </Data>
+          <Data name="website">
+            <value>www.musee-rodin.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>77 Rue de Varenne, 75007 Paris</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.31583539999997,48.8553072,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Muséum national d'Histoire naturelle]]></name>
+        <description><![CDATA[wiki: 98418<br>website: www.mnhn.fr<br>popularity: 2<br>address: 57 Rue Cuvier, 75005 Paris]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>98418</value>
+          </Data>
+          <Data name="website">
+            <value>www.mnhn.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>57 Rue Cuvier, 75005 Paris</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.36348880000003,48.8433896,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>La Bambouseraie en Cévennes</name>
+        <description><![CDATA[wiki: 73908<br>website: www.bambouseraie.com<br>popularity: 2<br>address: 552 Montsauve, 30140 Générargues]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>73908</value>
+          </Data>
+          <Data name="website">
+            <value>www.bambouseraie.com</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>552 Montsauve, 30140 Générargues</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            3.98136599999998,44.071179,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Domaine de Courson</name>
+        <description><![CDATA[wiki: 747978<br>website: www.domaine-de-courson.fr<br>popularity: <br>address: Domaine de Courson, 91680 Courson-Monteloup<br>]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>747978</value>
+          </Data>
+          <Data name="website">
+            <value>www.domaine-de-courson.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>Domaine de Courson, 91680 Courson-Monteloup
+</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.14586850000001,48.6002179,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Château De Saint Jean De Beauregard</name>
+        <description><![CDATA[wiki: 1820976<br>website: www.chateaudesaintjeandebeauregard.com<br>popularity: <br>address: 1 Rue du Château, 91940 Saint-Jean-de-Beauregard]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>1820976</value>
+          </Data>
+          <Data name="website">
+            <value>www.chateaudesaintjeandebeauregard.com</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>1 Rue du Château, 91940 Saint-Jean-de-Beauregard</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.16355620000002,48.6611707,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Musée départemental Albert-Kahn</name>
+        <description><![CDATA[wiki: 821781<br>website: <br>popularity: <br>address: 10 Rue du Port, 92100 Boulogne-Billancourt]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>821781</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>10 Rue du Port, 92100 Boulogne-Billancourt</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.22790639999994,48.8412915,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Jardin des Tuileries</name>
+        <description><![CDATA[wiki: 43293<br>website: <br>popularity: 2<br>address: Place de la Concorde, 75001 Paris]]></description>
+        <styleUrl>#icon-1720-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>43293</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Place de la Concorde, 75001 Paris</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.32749430000001,48.8634916,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Domme</name>
+        <description><![CDATA[wiki: 377427<br>website: <br>popularity: <br>address: 24250 Domme]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>377427</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>24250 Domme</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.21704799999998,44.801305,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Èze</name>
+        <description><![CDATA[wiki: 145601<br>website: <br>popularity: <br>address: 06360 Èze]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>145601</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>06360 Èze</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            7.36179200000004,43.7278189,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Saorge</name>
+        <description><![CDATA[wiki: 321540<br>website: <br>popularity: <br>address: 06540 Saorge]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>321540</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>06540 Saorge</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            7.55199500000003,43.988452,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Turenne</name>
+        <description><![CDATA[wiki: 70642<br>website: <br>popularity: <br>address: 19500 Turenne]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>70642</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>19500 Turenne</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.58000300000003,45.05319,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Estaing</name>
+        <description><![CDATA[wiki: 334706<br>website: <br>popularity: <br>address: 12190 Estaing]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>334706</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>12190 Estaing</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.67203500000005,44.554877,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Belcastel</name>
+        <description><![CDATA[wiki: 334636<br>website: <br>popularity: <br>address: 12390 Belcastel]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>334636</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>12390 Belcastel</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            2.33455600000002,44.387444,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Puy-l'Évêque]]></name>
+        <description><![CDATA[wiki: 321704<br>website: <br>popularity: <br>address: 46700 Puy-l'Évêque]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>321704</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value><![CDATA[46700 Puy-l'Évêque]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.13680799999997,44.503914,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Provins</name>
+        <description><![CDATA[wiki: 19490<br>website: <br>popularity: <br>address: 77160 Provins]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>19490</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>77160 Provins</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            3.29920300000003,48.560149,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Saint-Montan</name>
+        <description><![CDATA[wiki: 323439<br>website: <br>popularity: <br>address: 07220 Saint-Montan]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>323439</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>07220 Saint-Montan</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            4.62359500000002,44.440076,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sainte-Énimie</name>
+        <description><![CDATA[wiki: 155993<br>website: www.sainte-enimie.fr<br>popularity: <br>address: 48210 Sainte-Énimie]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>155993</value>
+          </Data>
+          <Data name="website">
+            <value>www.sainte-enimie.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>48210 Sainte-Énimie</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            3.41047500000002,44.366298,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Seguret</name>
+        <description><![CDATA[wiki: 3905471<br>website: <br>popularity: <br>address: 84110 Seguret]]></description>
+        <styleUrl>#icon-1546-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>3905471</value>
+          </Data>
+          <Data name="website">
+            <value/>
+          </Data>
+          <Data name="popularity">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value>84110 Seguret</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            5.02309100000002,44.20559,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Lascaux IV Centre International de l'Art Pariétal]]></name>
+        <description><![CDATA[wiki: 3852960<br>website: www.lascaux.fr<br>popularity: 2<br>address: Avenue de Lascaux, 24290 Montignac]]></description>
+        <styleUrl>#icon-1636-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="wiki">
+            <value>3852960</value>
+          </Data>
+          <Data name="website">
+            <value>www.lascaux.fr</value>
+          </Data>
+          <Data name="popularity">
+            <value>2.0</value>
+          </Data>
+          <Data name="address">
+            <value>Avenue de Lascaux, 24290 Montignac</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            1.169669,45.058139,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
   </Document>
 </kml>
