@@ -47,6 +47,8 @@ struct PurchasePage: View {
                         
                     Button(action: {
                         print("Restauring")
+                        self.session.isPremium = true // TODO
+                        self.presentationMode.wrappedValue.dismiss()
                     }) {
                         Text("Restaurer mes achats")
                             .font(.subheadline)

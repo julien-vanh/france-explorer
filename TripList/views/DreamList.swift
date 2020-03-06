@@ -10,7 +10,8 @@ import SwiftUI
 import EventKit
 
 struct DreamList: View {
-    @State private var showingSheet = false
+    @State private var showingActionSheet = false
+    @State private var showingPopover = false
     @Environment(\.editMode) var mode
     @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(fetchRequest: Dream.getAllDreams()) var dreams: FetchedResults<Dream>
@@ -25,6 +26,8 @@ struct DreamList: View {
             .cancel()
         ])
     }
+    
+    
     
     var body: some View {
         NavigationView(){
@@ -42,13 +45,28 @@ struct DreamList: View {
             .navigationBarTitle("Ma liste")
             .navigationBarItems(leading:EditButton(), trailing:(
                 Button(action: {
-                    self.showingSheet = true
+                    if UIDevice.current.userInterfaceIdiom == .phone {
+                        self.showingActionSheet = true
+                    } else {
+                        self.showingPopover = true
+                    }
                 }){
                     Image(systemName: "ellipsis.circle.fill")
                         .frame(width: 100, height: 40, alignment: .trailing)
                         .font(.title)
-                }.actionSheet(isPresented: $showingSheet) {
-                    self.actionSheet
+                }
+                .popover(isPresented: $showingPopover, arrowEdge: .bottom){
+                    List {
+                        Button(action: self.copyInReminder) {
+                            Text("Copier dans Rappels").foregroundColor(.blue)
+                        }
+                        Button(action: self.share) {
+                            Text("Partager").foregroundColor(.blue)
+                        }
+                        Button(action: self.deleteCompletes) {
+                            Text("Supprimer les complétés").foregroundColor(.red)
+                        }
+                    }
                 }
             ))
         }
@@ -57,6 +75,10 @@ struct DreamList: View {
         }, content: {
             ActivityViewController(activityItems: self.sharedItems())
         })
+        .actionSheet(isPresented: $showingActionSheet) {
+            self.actionSheet
+        }
+    
     }
     
     private func deleteRow(at indexSet: IndexSet) {
@@ -82,6 +104,7 @@ struct DreamList: View {
     }
     
     private func copyInReminder(){
+        showingPopover = false
         let dreamsArray = self.dreams.map { (dream) -> Dream in
             return dream
         } // car self.dreams n'est pas un array
@@ -89,11 +112,17 @@ struct DreamList: View {
     }
     
     private func printAsPdf(){
+        showingPopover = false
         //TODO
     }
     
     private func share(){
-        self.isSharePresented.toggle()
+        showingPopover = false
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {//Retadé de 1 sec pour attendre que le popover dismiss
+            self.isSharePresented.toggle()
+        }
+        
     }
     
     private func sharedItems() -> [Any] {
@@ -105,6 +134,7 @@ struct DreamList: View {
     }
     
     private func deleteCompletes(){
+        showingPopover = false
         dreams.forEach { (dream) in
             if dream.completed {
                 managedObjectContext.delete(dream)
