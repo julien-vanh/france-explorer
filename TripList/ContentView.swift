@@ -12,55 +12,17 @@ import Combine
 
 
 struct ContentView: View {
-    @State private var selection = 0
     @ObservedObject var appState = AppState.shared
     
     var body: some View {
-        TabView(selection: $selection){
-            SearchPage()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "rectangle.stack.fill")
-                        Text("Destinations")
-                    }
-                }
-                .tag(0)
-            PlacesMap()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "mappin.and.ellipse")
-                        Text("Carte")
-                    }
-                }
-                .tag(1)
-            DreamList()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "list.bullet")
-                        Text("Ma Liste")
-                    }
-                }
-                .tag(2)
-            Progression()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "text.badge.checkmark")
-                        Text("Progression")
-                    }
-                }
-                .tag(3)
-            
-            Parameters()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "gear")
-                        Text("Paramètres")
-                    }
-                }
-                .tag(4)
-            
-            }.overlay(
-                GeometryReader { geometry in
+        UIKitTabView([
+            UIKitTabView.Tab(view: SearchPage(), title: "Destinations", image: "rectangle.stack.fill"),
+            UIKitTabView.Tab(view: PlacesMap(), title: "Carte", image: "mappin.and.ellipse"),
+            UIKitTabView.Tab(view: DreamList(), title: "Ma Liste", image: "list.bullet"),
+            UIKitTabView.Tab(view: Progression(), title: "Progression", image: "text.badge.checkmark"),
+            UIKitTabView.Tab(view: Parameters(), title: "Paramètres", image: "gear")
+        ]).overlay(
+            GeometryReader { geometry in
                     BottomSheetView(
                         state: self.$appState.state,
                         maxHeight: geometry.size.height * 0.9
@@ -68,8 +30,8 @@ struct ContentView: View {
                         PlaceMapDrawer(place: self.$appState.place)
                     }.offset(x: 0, y: 40)
                 }
-                , alignment: .bottom)
-            .edgesIgnoringSafeArea(.top)
+        , alignment: .bottom)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
