@@ -41,31 +41,35 @@ struct StoreArticle: View {
                             .padding([.top, .leading], 15)
                         
                         ForEach(associatedPlaces) { place in
-                            NavigationLink(
-                                destination: PlaceDetail(place: place)
-                            ) {
-                                HStack {
+                            HStack {
+                                NavigationLink(
+                                    destination: PlaceDetail(place: place)
+                                ) {
                                     ImageStore.shared.image(forPlace: place)
                                         .renderingMode(.original)
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
                                         .frame(width: 100, height:60)
                                         .clipped().cornerRadius(5)
-                                    
-                                    VStack {
-                                        HStack {
-                                            Text(place.title)
-                                            
-                                            Spacer()
-                                            
-                                            PlaceButtonsMini(place: place)
-                                        }
-                                        SeparationBar()
-                                    }
-                                    
                                 }
-                                .padding(.horizontal, 10.0)
+                                
+                                VStack {
+                                    HStack {
+                                        NavigationLink(
+                                            destination: PlaceDetail(place: place)
+                                        ) {
+                                            Text(place.title)
+                                        }
+                                        
+                                        Spacer()
+                                        
+                                        PlaceButtonsMini(place: place)
+                                    }
+                                    SeparationBar()
+                                }
+                                
                             }
+                            .padding(.horizontal, 10.0)
                         }
                     }
                     
