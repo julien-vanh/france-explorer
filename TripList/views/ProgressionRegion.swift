@@ -117,7 +117,7 @@ struct ProgressionItem: View {
                         .frame(width: self.size, height: self.size).clipped()
                         .cornerRadius(10).frame(width: self.size, height: self.size)
                     } else {
-                        Image("mapicon.\(cell.place!.category)")
+                        Image("\(cell.place!.category)-colored")
                         .renderingMode(.original)
                         .resizable()
                         .aspectRatio(contentMode: .fit)

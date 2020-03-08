@@ -17,7 +17,7 @@ class AppStyle {
             case .city: color = UIColor(hex: 0xE02020)
             case .museum: color = UIColor(hex: 0xFFA51C)
             case .nature: color = UIColor(hex: 0x3BCE41)
-            case .historical: color = UIColor(hex: 0x7F7F7F)
+            case .historical: color = UIColor(hex: 0x999999)
             case .event: color = UIColor(hex: 0x2074E0)
             //case .park: color = UIColor(hex: 0x00796B)
             //case .activity: color = UIColor(hex: 0xE64A19)

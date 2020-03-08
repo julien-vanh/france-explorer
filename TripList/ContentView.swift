@@ -27,7 +27,24 @@ struct ContentView: View {
                         state: self.$appState.state,
                         maxHeight: geometry.size.height * 0.9
                     ) {
-                        PlaceMapDrawer(place: self.$appState.place)
+                        ZStack(alignment: .topTrailing) {
+                            
+                            PlaceMapDrawer(place: self.$appState.place)
+                            
+                            Image(systemName: "xmark")
+                                .foregroundColor(.white)
+                                .background(
+                                Circle()
+                                    .fill(Color.gray)
+                                    .frame(width: 40, height: 40)
+                            )
+                            .frame(width: 40, height: 40)
+                            .padding([.top, .trailing], 20.0)
+                            .onTapGesture {
+                                self.appState.state = BottomSheetState.closed
+                            }
+                        }
+                        
                     }.offset(x: 0, y: 40)
                 }
         , alignment: .bottom)

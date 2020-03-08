@@ -46,11 +46,19 @@ struct PlacesList: View {
                 self.openMenu()
             }
         )
-        .navigationBarTitle("Destinations", displayMode: .inline)
+        .navigationBarTitle(Text(getTitle()), displayMode: .inline)
     }
     
     func openMenu() {
         self.menuOpen.toggle()
+    }
+    
+    private func getTitle() -> String {
+        if let cat = category {
+            return cat.title
+        } else {
+            return ""
+        }
     }
 }
 

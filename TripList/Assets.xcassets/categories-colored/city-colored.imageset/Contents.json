@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "city.png",
+      "filename" : "home-colored.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "home-colored@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "home-colored@3x.png",
       "scale" : "3x"
     }
   ],

@@ -137,6 +137,6 @@ internal final class PlaceAnnotationView: MKMarkerAnnotationView {
         let placeAnnotation = annotation as! PlaceAnnotation
         //markerTintColor = placeAnnotation.completed ? UIColor.green : UIColor.red
         markerTintColor = AppStyle.color(for: placeAnnotation.place.category)
-        glyphImage = UIImage(named: "mapicon.\(placeAnnotation.place.category)")
+        glyphImage = UIImage(named: "\(placeAnnotation.place.category)-colored")
     }
 }
