@@ -44,7 +44,7 @@ struct RegionsMapController: UIViewRepresentable {
         
         view.removeAnnotations(view.annotations)
         let places = placesData
-        let annotations = places.map{PlaceAnnotation(place: $0, completed: self.placeIsComplete(place: $0))}
+        let annotations = places.map{PlaceAnnotation(place: $0)}
         view.addAnnotations(annotations)
         
         return view
@@ -60,10 +60,6 @@ struct RegionsMapController: UIViewRepresentable {
     func updateUIView(_ view: MKMapView, context: Context){
         //print("UPDATE updateUIView")
         
-    }
-    
-    func placeIsComplete(place: Place) -> Bool{
-        return completions.firstIndex(where: {$0.placeId == place.id}) != nil
     }
     
     func centerMapOnFrance(map: MKMapView){

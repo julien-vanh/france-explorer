@@ -20,7 +20,7 @@ struct ProgressionRegion: View {
                 RegionContent(cells: self.getPlaces(), width: geometry.size.width)
             }
         }
-        .navigationBarTitle(Text(region.name))
+        .navigationBarTitle(Text(region.name), displayMode: .large)
     }
     
     private func getPlaces() -> [ProgressionCell]{
@@ -126,9 +126,9 @@ struct ProgressionItem: View {
                         .frame(width: self.size, height: self.size)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
-                                .strokeBorder(Color(AppStyle.color(for: cell.place.category)), lineWidth: 4)
+                                .strokeBorder(Color(AppStyle.color(for: cell.place.category)), lineWidth: 2)
                         )
-                        .background(Color(UIColor(hex: 0xDDDDDD)))
+                        .background(Color(UIColor(hex: 0xEEEEEE)))
                         .cornerRadius(10)
                     }
                 }

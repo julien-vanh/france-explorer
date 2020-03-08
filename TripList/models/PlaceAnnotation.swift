@@ -14,11 +14,9 @@ import MapKit
 class PlaceAnnotation: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
     var place: Place
-    var completed: Bool
     
-    init(place: Place, completed: Bool){
+    init(place: Place){
         self.place = place
         self.coordinate = place.locationCoordinate
-        self.completed = completed
     }
 }

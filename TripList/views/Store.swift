@@ -9,47 +9,6 @@
 
 import SwiftUI
 
-struct Store: View {
-
-    
-    var body: some View {
-        NavigationView {
-            
-            ScrollView(.vertical) {
-                HStack() {
-                    Text("Découvrez des centaines d'idées pour remplir votre Liste...").padding(.leading, 10)
-                    Spacer()
-                }
-                
-                
-                Carousel()
-                
-                RandomButton()
-                
-                NearestPlaces()
-                
-                StoreArticlesRow()
-                
-                StoreCategoriesRow()
-                
-                StoreSuggestions()
-                
-                Rectangle().opacity(0).frame(height:40)
-                
-            }.navigationBarTitle("Destinations")
-        }.navigationViewStyle(StackNavigationViewStyle())
-    }
-}
-
-
-
-
-struct Store_Previews: PreviewProvider {
-    static var previews: some View {
-        Store()
-    }
-}
-
 struct Carousel: View {
     let CountInCarousel = 5
     

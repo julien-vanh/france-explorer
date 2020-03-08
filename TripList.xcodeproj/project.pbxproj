@@ -1283,7 +1283,7 @@
 		F94B49682400435A0055956D /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		F94B496F2401A42A0055956D /* SeparationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparationBar.swift; sourceTree = "<group>"; };
 		F94B49722401DE3D0055956D /* PlaceViewCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewCompact.swift; sourceTree = "<group>"; };
-		F95DE55623DE2F0E00BE1BD5 /* France TripTick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "France TripTick.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F95DE55623DE2F0E00BE1BD5 /* France Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "France Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F95DE55923DE2F0F00BE1BD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F95DE55B23DE2F0F00BE1BD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F95DE55D23DE2F0F00BE1BD5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -2026,7 +2026,7 @@
 		F95DE55723DE2F0E00BE1BD5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F95DE55623DE2F0E00BE1BD5 /* France TripTick.app */,
+				F95DE55623DE2F0E00BE1BD5 /* France Guide.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2214,7 +2214,7 @@
 				F9C9C68323E498D2002C1DA0 /* ASCollectionView */,
 			);
 			productName = TripList;
-			productReference = F95DE55623DE2F0E00BE1BD5 /* France TripTick.app */;
+			productReference = F95DE55623DE2F0E00BE1BD5 /* France Guide.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -3145,7 +3145,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jva.app.triplist;
-				PRODUCT_NAME = "France TripTick";
+				PRODUCT_NAME = "France Guide";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3172,7 +3172,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jva.app.triplist;
-				PRODUCT_NAME = "France TripTick";
+				PRODUCT_NAME = "France Guide";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

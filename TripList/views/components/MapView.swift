@@ -21,7 +21,7 @@ struct MapView: UIViewRepresentable {
         let region = MKCoordinateRegion(center: place.locationCoordinate, span: span)
         view.setRegion(region, animated: true)
         
-        let annotation = PlaceAnnotation(place: place, completed: false)
+        let annotation = PlaceAnnotation(place: place)
         
         view.addAnnotation(annotation)
         view.selectAnnotation(annotation, animated: false)
