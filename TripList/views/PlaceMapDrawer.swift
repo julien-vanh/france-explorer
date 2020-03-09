@@ -30,7 +30,7 @@ struct PlaceMapDrawer: View {
                 }
             }
             
-            //PlaceButtons(place: place)
+            PlaceButtons(place: place)
             
             
             GeometryReader { geometry in

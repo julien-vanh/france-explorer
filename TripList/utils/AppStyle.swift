@@ -17,7 +17,7 @@ class AppStyle {
             case .city: color = UIColor(hex: 0xE02020)
             case .museum: color = UIColor(hex: 0xFFA51C)
             case .nature: color = UIColor(hex: 0x3BCE41)
-            case .historical: color = UIColor(hex: 0x999999)
+            case .historical: color = UIColor(hex: 0x7F7F7F)
             case .event: color = UIColor(hex: 0x2074E0)
             //case .park: color = UIColor(hex: 0x00796B)
             //case .activity: color = UIColor(hex: 0xE64A19)
@@ -28,28 +28,16 @@ class AppStyle {
     static func formatDistance(value: CLLocationDistance) -> String {
         let formatter = MKDistanceFormatter()
         return formatter.string(fromDistance: value)
-        /*
-        var suffixe = "m"
-        var distance = value
-        if value > 1000 {
-            distance = value / 1000
-            suffixe = "km"
-        }
-        
-        return formatter.string(fromDistance: distance) + " " + suffixe
- */
+       
     }
 }
 
 extension UIColor {
     static var mapOverlayUnexplored: UIColor {
-        return UIColor.init(red: 244/255, green: 67/255, blue: 54/255, alpha: CGFloat(0.4))
+        return UIColor.init(red: 255/255, green: 255/255, blue: 255/255, alpha: CGFloat(0.0))
     }
     static var mapOverlayExploring: UIColor {
-        return UIColor.init(red: 255/255, green: 152/255, blue: 0/255, alpha: CGFloat(0.4))
-    }
-    static var mapOverlayExplored: UIColor {
-        return UIColor.init(red: 76/255, green: 175/255, blue: 80/255, alpha: CGFloat(0.4))
+        return UIColor.init(red: 218/255, green: 185/255, blue: 57/255, alpha: CGFloat(1.0))
     }
     
     static var separationBar: UIColor {

@@ -14,34 +14,45 @@ import UIKit
 
 struct RegionsMapController: UIViewRepresentable {
     @ObservedObject var appState = AppState.shared
-    @FetchRequest(fetchRequest: Completion.getAllCompletion()) var completions: FetchedResults<Completion>
-    let view = MKMapView(frame: .zero)
+    var regionsCompletion: [String: Int]
+    private var regionsOverlay: [String: MKOverlay] = [:]
+    private let view = MKMapView(frame: .zero)
+    private let decoder = JSONDecoder()
+    
+    init(regionsCompletion: [String: Int]){
+        self.regionsCompletion = regionsCompletion
+        
+        if let file = Bundle.main.url(forResource: "regions", withExtension: "geojson"),
+            let data = try? Data(contentsOf: file),
+            let geojsonFeatures = try? MKGeoJSONDecoder().decode(data),
+            let features = geojsonFeatures as? [MKGeoJSONFeature]
+        {
+            features.forEach { (feature) in
+                if let overlay = feature.geometry[0] as? MKOverlay {
+                    do {
+                        let metadata: RegionMetadata = try decoder.decode(RegionMetadata.self, from: feature.properties!)
+                        regionsOverlay[metadata.regionId] = overlay
+                    } catch {
+                        fatalError("Couldn't parse regions metadata")
+                    }
+                }
+            }
+        }
+    }
     
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
     
     func makeUIView(context: Context) -> MKMapView{
+        //Configure map
         view.delegate = context.coordinator
         view.mapType = .mutedStandard
         view.showsUserLocation = true
         view.register(PlaceAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-        
-        
         centerMapOnFrance(map: view)
         
-        view.removeOverlays(view.overlays)
-        if let file = Bundle.main.url(forResource: "regions", withExtension: "geojson"),
-            let data = try? Data(contentsOf: file),
-            let geojsonFeatures = try? MKGeoJSONDecoder().decode(data),
-            let features = geojsonFeatures as? [MKGeoJSONFeature]
-        {
-            let geometry = features.flatMap( {$0.geometry})
-            let overlays = geometry.compactMap({$0 as? MKOverlay})
-            
-            view.addOverlays(overlays, level: MKOverlayLevel.aboveRoads)
-        }
-        
+        //Build annotations
         view.removeAnnotations(view.annotations)
         let places = placesData
         let annotations = places.map{PlaceAnnotation(place: $0)}
@@ -50,6 +61,10 @@ struct RegionsMapController: UIViewRepresentable {
         return view
     }
     
+    struct RegionMetadata: Hashable, Codable {
+        var name: String
+        var regionId: String
+    }
     
     
     func centerMapOnUserButtonClicked(_ view: MKMapView) {
@@ -58,8 +73,13 @@ struct RegionsMapController: UIViewRepresentable {
     
     
     func updateUIView(_ view: MKMapView, context: Context){
-        //print("UPDATE updateUIView")
+        view.removeOverlays(view.overlays)
         
+        regionsCompletion.keys.forEach { regionId in
+            if let overlay = regionsOverlay[regionId] {
+                view.addOverlay(overlay, level: .aboveRoads)
+            }
+        }
     }
     
     func centerMapOnFrance(map: MKMapView){
@@ -86,10 +106,10 @@ struct RegionsMapController: UIViewRepresentable {
                 default:
                     return MKOverlayRenderer(overlay: overlay)
             }
-            renderer.lineWidth = 1
-            renderer.strokeColor = UIColor.gray
-            renderer.fillColor = UIColor.mapOverlayExploring
             
+            renderer.lineWidth = 1
+            renderer.strokeColor = UIColor.clear
+            renderer.fillColor = UIColor.mapOverlayExploring
             return renderer
         }
         
@@ -104,24 +124,26 @@ struct RegionsMapController: UIViewRepresentable {
     }
 }
 
-struct RegionsMap_Previews: PreviewProvider {
-    static var previews: some View {
-        RegionsMapController()
-    }
-}
-
-
-
-
 
 internal final class PlaceAnnotationView: MKMarkerAnnotationView {
     internal override var annotation: MKAnnotation? { willSet { newValue.flatMap(configure(with:)) } }
     
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
-        //displayPriority = .required
-        //collisionMode = .circle
-        //centerOffset = CGPoint(x: 0.0, y: -10.0)
+        
+        if annotation is PlaceAnnotation {
+            let placeAnnotation = annotation as! PlaceAnnotation
+            
+            switch placeAnnotation.place.popularity{
+            case 3:
+                displayPriority = .required
+            case 2:
+                displayPriority = .defaultHigh
+            default:
+                displayPriority = .defaultLow
+            }
+        }
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -131,7 +153,6 @@ internal final class PlaceAnnotationView: MKMarkerAnnotationView {
     func configure(with annotation: MKAnnotation) {
         guard annotation is PlaceAnnotation else { fatalError("Unexpected annotation type: \(annotation)") }
         let placeAnnotation = annotation as! PlaceAnnotation
-        //markerTintColor = placeAnnotation.completed ? UIColor.green : UIColor.red
         markerTintColor = AppStyle.color(for: placeAnnotation.place.category)
         glyphImage = UIImage(named: "\(placeAnnotation.place.category)-colored")
     }
