@@ -108,30 +108,5 @@
     "id": "rhone",
     "name": "Rhône-Alpes",
     "domtom": false
-  },
-  {
-    "id": "guadeloupe",
-    "name": "Guadeloupe",
-    "domtom": true
-  },
-  {
-    "id": "guyane",
-    "name": "Guyane",
-    "domtom": true
-  },
-  {
-    "id": "reunion",
-    "name": "La Réunion",
-    "domtom": true
-  },
-  {
-    "id": "martinique",
-    "name": "Martinique",
-    "domtom": true
-  },
-  {
-    "id": "mayotte",
-    "name": "Mayotte",
-    "domtom": true
   }
 ]
