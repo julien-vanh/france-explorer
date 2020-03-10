@@ -21,9 +21,13 @@ struct LaunchCarousel: View {
         UIHostingController(rootView: CarouselImage(imageString: "premium4.jpg"))
     ]
     
-    var titles = ["Take some time out", "Conquer personal hindrances", "Create a peaceful mind"]
+    var titles = ["Bienvenue !", "Votre liste", "Progression"]
     
-    var captions =  ["Take your time out and bring awareness into your everyday life", "Meditating helps you dealing with anxiety and other psychic problems", "Regular medidation sessions creates a peaceful inner mind"]
+    var captions =  [
+        "Découvrez notre sélection de destinations pour découvrir la France.\nMusées, patrimoine, village, nature, événements et sorties",
+        "Ajoutez vos envies de voyages à votre liste\net préparez vos futures vacances",
+        "Marquez les lieux visités et regardez ce qu'il reste à explorer"
+    ]
     
     
     
@@ -40,23 +44,27 @@ struct LaunchCarousel: View {
                     .font(.title)
                     //.frame(height: 50)
                 
-                Text(captions[currentPageIndex])
+                Text(captions[currentPageIndex]).multilineTextAlignment(.center)
                     //.frame(height: 100)
                 
                 if(self.currentPageIndex+1 == self.subviews.count){
-                    HStack {
-                        Button(action: {self.cguPresented.toggle()}) {
-                            Text("CGU").foregroundColor(.blue)
-                        }.sheet(isPresented: self.$cguPresented, content: {
-                            WebViewModal(title: "Conditions générales", url: "https://www.apple.com")
-                        })
-                        Text("et la")
-                        Button(action: {self.confidentialitePresented.toggle()}) {
-                            Text("Politique de confidentialité").foregroundColor(.blue)
-                        }.sheet(isPresented: self.$confidentialitePresented, content: {
-                            WebViewModal(title: "Confidentialité", url: "https://www.apple.com")
-                        })
+                    VStack(spacing: 0) {
+                        Text("En continuant vous acceptez nos")
+                        HStack {
+                            Button(action: {self.cguPresented.toggle()}) {
+                                Text("CGU").foregroundColor(.blue)
+                            }.sheet(isPresented: self.$cguPresented, content: {
+                                WebViewModal(title: "Conditions générales", url: "https://www.apple.com")//TODO
+                            })
+                            Text("et la")
+                            Button(action: {self.confidentialitePresented.toggle()}) {
+                                Text("Politique de confidentialité").foregroundColor(.blue)
+                            }.sheet(isPresented: self.$confidentialitePresented, content: {
+                                WebViewModal(title: "Confidentialité", url: "https://www.apple.com")//TODO
+                            })
+                        }
                     }
+                    
                 }
                 
                 PageControl(numberOfPages: subviews.count, currentPageIndex: $currentPageIndex)
@@ -84,7 +92,8 @@ struct LaunchCarousel: View {
                         .font(.headline).foregroundColor(.white)
                         .frame(width: 250.0, height: 40.0)
                         .foregroundColor(.white)
-                        .background(LinearGradient(gradient: Gradient(colors: [Color.green, Color.green]), startPoint: .leading, endPoint: .trailing))
+                        .background(Color.green)
+                        //.background(LinearGradient(gradient: Gradient(colors: [Color(UIColor(hex: 0x59D722)), Color(UIColor(hex: 0x105800))]), startPoint: .top, endPoint: .bottom))
                         .cornerRadius(20)
                 } else {
                    Text("Suivant")
@@ -92,7 +101,8 @@ struct LaunchCarousel: View {
                        .font(.headline).foregroundColor(.white)
                        .frame(width: 250.0, height: 40.0)
                        .foregroundColor(.white)
-                       .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.blue]), startPoint: .leading, endPoint: .trailing))
+                    .background(Color.blue)
+                    //.background(LinearGradient(gradient: Gradient(colors: [Color(UIColor(hex:0x3AB9E4)), Color(UIColor(hex:0x1A16C1))]), startPoint: .top, endPoint: .bottom))
                        .cornerRadius(20)
                 }
             }.padding(30)
@@ -130,6 +140,8 @@ struct WebViewModal: View {
     var title: String
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @ObservedObject var model: WebViewModel
+    
+    let dg = DragGesture()
      
     init(title: String, url: String){
         self.title = title
@@ -140,7 +152,7 @@ struct WebViewModal: View {
         NavigationView {
             LoadingView(isShowing: self.$model.isLoading) {
                 WebView(viewModel: self.model)
-            }
+            }.highPriorityGesture(self.dg)
             .navigationBarTitle(Text(title), displayMode: .inline)
             .navigationBarItems(trailing:
                 Button("Fermer") {
