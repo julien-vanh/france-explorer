@@ -94,16 +94,16 @@ struct PlaceDetailPhotos_Previews: PreviewProvider {
 }
 
 struct PhotoPager: View {
-    var photosViews: [PhotoFullscreen]
-    @State private var index: Int
+    var photosViews: [UIHostingController<PhotoFullscreen>]
+    @State private var currentPageIndex: Int
     
     init(photos: [ImageMetadata], initiale: ImageMetadata){
-        self.photosViews = photos.map { PhotoFullscreen(pageImage: $0) }
-        _index = State(initialValue: photos.firstIndex(where: {$0.title == initiale.title}) ?? 0)
+        self.photosViews = photos.map { UIHostingController(rootView:PhotoFullscreen(pageImage: $0)) }
+        _currentPageIndex = State(initialValue: photos.firstIndex(where: {$0.title == initiale.title}) ?? 0)
     }
     
     var body: some View {
-        PageView(photosViews, currentPage: $index)
+        PageViewController(currentPageIndex: $currentPageIndex, viewControllers: photosViews)
             .edgesIgnoringSafeArea(.all)
     }
 }
@@ -113,7 +113,7 @@ struct PhotoFullscreen: View {
     var pageImage: ImageMetadata
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .center) {
             Color.black
             
             KFImage(self.pageImage.url).placeholder {
@@ -129,11 +129,11 @@ struct PhotoFullscreen: View {
             VStack {
                 Spacer()
                 Text(photoDescription())
-                    .foregroundColor(.gray)
+                    .foregroundColor(.white)
                     .padding(3)
-                    .padding(.bottom, 50)
-                    .background(Color.black)
+                    .background(BlurView(style: .dark))
                     .cornerRadius(5)
+                    .padding(.bottom, 50)
             }
         }
         //.background(Color.black)

@@ -9,15 +9,15 @@
 import SwiftUI
 
 struct PlacePager: View {
-    var placeDetailViews: [PlaceDetail]
-    @State private var index: Int
+    var placeDetailViews: [UIHostingController<PlaceDetail>]
+    @State private var currentPageIndex: Int
     
     init(places: [Place], initialePlace: Place){
-        self.placeDetailViews = places.map { PlaceDetail(place: $0, displayAssociates: false) }
-        _index = State(initialValue: places.firstIndex(where: {$0.id == initialePlace.id}) ?? 0)
+        self.placeDetailViews = places.map { UIHostingController(rootView:PlaceDetail(place: $0, displayAssociates: false)) }
+        _currentPageIndex = State(initialValue: places.firstIndex(where: {$0.id == initialePlace.id}) ?? 0)
     }
     
     var body: some View {
-        PageView(placeDetailViews, currentPage: $index)//.edgesIgnoringSafeArea(.top)
+        PageViewController(currentPageIndex: $currentPageIndex, viewControllers: placeDetailViews)//.edgesIgnoringSafeArea(.top)
     }
 }

@@ -624,7 +624,6 @@
 		F95DE59B23DE349700BE1BD5 /* PlacePager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE58723DE349600BE1BD5 /* PlacePager.swift */; };
 		F95DE59C23DE349700BE1BD5 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE58823DE349600BE1BD5 /* TextView.swift */; };
 		F95DE59E23DE349700BE1BD5 /* DreamList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE58A23DE349600BE1BD5 /* DreamList.swift */; };
-		F95DE59F23DE349700BE1BD5 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE58B23DE349700BE1BD5 /* PageView.swift */; };
 		F95DE5A723DE34A900BE1BD5 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE5A123DE34A800BE1BD5 /* Place.swift */; };
 		F95DE5A823DE34A900BE1BD5 /* PlaceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE5A223DE34A800BE1BD5 /* PlaceStore.swift */; };
 		F95DE5B723DE3BE500BE1BD5 /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = F95DE5B623DE3BE500BE1BD5 /* QGrid */; };
@@ -664,6 +663,7 @@
 		F9D07F6C2412893200D34BC2 /* ZoosetAquariums.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9D07F642412893200D34BC2 /* ZoosetAquariums.jpg */; };
 		F9D49FA12402917C005A2B8E /* PlaceGridCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D49FA02402917C005A2B8E /* PlaceGridCompact.swift */; };
 		F9D82E5D2417E3DA003961AD /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D82E5C2417E3DA003961AD /* BlurView.swift */; };
+		F9D82E5F2417FB97003961AD /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D82E5E2417FB97003961AD /* PageViewController.swift */; };
 		F9DC21D423E0CEC20023B8EF /* RegionsMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC21D323E0CEC20023B8EF /* RegionsMap.swift */; };
 		F9DC21DA23E0DB1E0023B8EF /* regions.geojson in Resources */ = {isa = PBXBuildFile; fileRef = F9DC21D923E0DB1E0023B8EF /* regions.geojson */; };
 		F9DC21E123E1DE0C0023B8EF /* regions.json in Resources */ = {isa = PBXBuildFile; fileRef = F9DC21E023E1DE0C0023B8EF /* regions.json */; };
@@ -1308,7 +1308,6 @@
 		F95DE58723DE349600BE1BD5 /* PlacePager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePager.swift; sourceTree = "<group>"; };
 		F95DE58823DE349600BE1BD5 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		F95DE58A23DE349600BE1BD5 /* DreamList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamList.swift; sourceTree = "<group>"; };
-		F95DE58B23DE349700BE1BD5 /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		F95DE5A123DE34A800BE1BD5 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		F95DE5A223DE34A800BE1BD5 /* PlaceStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceStore.swift; sourceTree = "<group>"; };
 		F95DE5B823DE416D00BE1BD5 /* Dream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dream.swift; sourceTree = "<group>"; };
@@ -1346,6 +1345,7 @@
 		F9D07F642412893200D34BC2 /* ZoosetAquariums.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ZoosetAquariums.jpg; sourceTree = "<group>"; };
 		F9D49FA02402917C005A2B8E /* PlaceGridCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceGridCompact.swift; sourceTree = "<group>"; };
 		F9D82E5C2417E3DA003961AD /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		F9D82E5E2417FB97003961AD /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		F9DC21D323E0CEC20023B8EF /* RegionsMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionsMap.swift; sourceTree = "<group>"; };
 		F9DC21D923E0DB1E0023B8EF /* regions.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = regions.geojson; sourceTree = "<group>"; };
 		F9DC21E023E1DE0C0023B8EF /* regions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = regions.json; sourceTree = "<group>"; };
@@ -2158,7 +2158,6 @@
 				F91DED9D23E6EAE800D8FFD7 /* BottomSheetView.swift */,
 				F95DE57A23DE349500BE1BD5 /* AutoFocusTextField.swift */,
 				F95DE58323DE349600BE1BD5 /* ImageCarouselView.swift */,
-				F95DE58B23DE349700BE1BD5 /* PageView.swift */,
 				F95DE58823DE349600BE1BD5 /* TextView.swift */,
 				F96D610F23EB607900CD296A /* LazyView.swift */,
 				F99E73A623EDAD54006BC089 /* ActivityViewController.swift */,
@@ -2169,6 +2168,7 @@
 				F92E05CE2412EE44009C5ADD /* TabBarController.swift */,
 				F98172562417D2E70011A76B /* WebView.swift */,
 				F9D82E5C2417E3DA003961AD /* BlurView.swift */,
+				F9D82E5E2417FB97003961AD /* PageViewController.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -2974,13 +2974,13 @@
 				F99E73A323ED9CD4006BC089 /* Reminders.swift in Sources */,
 				F95DE59023DE349700BE1BD5 /* PlaceDetail.swift in Sources */,
 				F9DC21E823E231A70023B8EF /* WikiResponse.swift in Sources */,
+				F9D82E5F2417FB97003961AD /* PageViewController.swift in Sources */,
 				F9DC21EB23E231D30023B8EF /* String+HTML.swift in Sources */,
 				F9DC21E923E231A70023B8EF /* ImageMetadata.swift in Sources */,
 				F95DE59923DE349700BE1BD5 /* PlacesList.swift in Sources */,
 				F9D82E5D2417E3DA003961AD /* BlurView.swift in Sources */,
 				F92E05D12417A467009C5ADD /* LaunchCarousel.swift in Sources */,
 				F95DE59A23DE349700BE1BD5 /* Progression.swift in Sources */,
-				F95DE59F23DE349700BE1BD5 /* PageView.swift in Sources */,
 				F9FC37E1240D61D500F17AAC /* MailView.swift in Sources */,
 				F95DE59623DE349700BE1BD5 /* StoreCategoriesRow.swift in Sources */,
 				F95DE59723DE349700BE1BD5 /* ImageCarouselView.swift in Sources */,

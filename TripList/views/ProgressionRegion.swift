@@ -106,8 +106,8 @@ struct ProgressionItem: View {
         VStack {
             if cell.type == .placeCell {
                 NavigationLink(
-                    destination: LazyView(PlaceDetail(place: self.cell.place!, displayAssociates: false))
-                    //destination: LazyView(PlacePager(places: PlaceStore.shared.getAllForRegion(regionId: self.cell.place!.regionId), initialePlace: self.cell.place!))
+                    //destination: LazyView(PlaceDetail(place: self.cell.place!, displayAssociates: false))
+                    destination: LazyView(PlacePager(places: PlaceStore.shared.getAllForRegion(regionId: self.cell.place!.regionId), initialePlace: self.cell.place!))
                 ) {
                     if self.completions.first != nil {
                         ImageStore.shared.image(forPlace: self.cell.place!)

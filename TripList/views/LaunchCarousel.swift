@@ -10,138 +10,117 @@ import SwiftUI
 
 
 struct LaunchCarousel: View {
-    @State var currentIndex = 0
     @ObservedObject var appState = AppState.shared
     @State var cguPresented = false
     @State var confidentialitePresented = false
-    
-    var pages = [
-        LaunchPage(
-            image: "premium1.jpg",
-            title: "Bienvenue !",
-            text: "Des centaines d’idées voyage pour découvrir la France\nMusées, patrimoine, village, nature, événement et sorties"
-        ),
-        LaunchPage(
-            image: "premium2.jpg",
-            title: "Carte",
-            text: "Pour rechercher les points d’intérêts à proximité.\nL’occasion d’un détour pour ne rien rater"
-        ),
-        /*
-        LaunchPage(
-            image: "premium1.jpg",
-            title: "Votre liste",
-            text: "Pour ajouter vos futures destinations et préparer votre voyage "
-        ),
- */
-        LaunchPage(
-            image: "premium4.jpg",
-            title: "Progression",
-            text: "Marquer les lieux visités.\nPermet de déterminer quelles régions sont inexplorées "
-        )
+    @State var currentPageIndex = 0
+
+    var subviews = [
+        UIHostingController(rootView: CarouselImage(imageString: "premium1.jpg")),
+        UIHostingController(rootView: CarouselImage(imageString: "premium2.jpg")),
+        UIHostingController(rootView: CarouselImage(imageString: "premium4.jpg"))
     ]
+    
+    var titles = ["Take some time out", "Conquer personal hindrances", "Create a peaceful mind"]
+    
+    var captions =  ["Take your time out and bring awareness into your everyday life", "Meditating helps you dealing with anxiety and other psychic problems", "Regular medidation sessions creates a peaceful inner mind"]
     
     
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .bottom) {
             Color.white
             
-            PageView(self.pages, currentPage: self.$currentIndex)
+            
+            PageViewController(currentPageIndex: $currentPageIndex, viewControllers: subviews)
             
             
             VStack(spacing: 10) {
-                /*
-                HStack(spacing: 3) {
-                    ForEach(0..<self.pages.count, id: \.self) { index in
-                        Circle()
-                            .frame(width: 10, height: 10)
-                            //.foregroundColor(index == self.currentIndex ? Color.blue : .white)
-                            .overlay(Circle().stroke(Color.gray, lineWidth: 1))
-                            .padding(.bottom, 8)
-                            .animation(.spring())
+                Text(titles[currentPageIndex])
+                    .font(.title)
+                    //.frame(height: 50)
+                
+                Text(captions[currentPageIndex])
+                    //.frame(height: 100)
+                
+                if(self.currentPageIndex+1 == self.subviews.count){
+                    HStack {
+                        Button(action: {self.cguPresented.toggle()}) {
+                            Text("CGU").foregroundColor(.blue)
+                        }.sheet(isPresented: self.$cguPresented, content: {
+                            WebViewModal(title: "Conditions générales", url: "https://www.apple.com")
+                        })
+                        Text("et la")
+                        Button(action: {self.confidentialitePresented.toggle()}) {
+                            Text("Politique de confidentialité").foregroundColor(.blue)
+                        }.sheet(isPresented: self.$confidentialitePresented, content: {
+                            WebViewModal(title: "Confidentialité", url: "https://www.apple.com")
+                        })
                     }
                 }
-                */
                 
+                PageControl(numberOfPages: subviews.count, currentPageIndex: $currentPageIndex)
                 
-                VStack {
-                    
-                        //if self.currentIndex == (self.pages.count-1) {
-                            HStack {
-                                Button(action: {self.cguPresented.toggle()}) {
-                                    Text("CGU").foregroundColor(.blue)
-                                }.sheet(isPresented: self.$cguPresented, content: {
-                                    WebViewModal(title: "Conditions générales", url: "https://www.apple.com")
-                                })
-                                Text("et la")
-                                Button(action: {self.confidentialitePresented.toggle()}) {
-                                    Text("Politique de confidentialité").foregroundColor(.blue)
-                                }.sheet(isPresented: self.$confidentialitePresented, content: {
-                                    WebViewModal(title: "Confidentialité", url: "https://www.apple.com")
-                                })
-                            }
-                        //}
-                        
-                        
-                        Button(action: {
-                            if self.currentIndex == (self.pages.count-1) {
-                                self.appState.displayLaunchCarousel = false
-                            } else {
-                                self.currentIndex += 1
-                            }
-                        }) {
-                            Text(self.currentIndex == (self.pages.count-1) ? "Accepter" : "Suivant")
-                                .fontWeight(.semibold)
-                                .font(.headline).foregroundColor(.white)
-                                .frame(width: 250.0, height: 40.0)
-                                .foregroundColor(.white)
-                                .background(LinearGradient(gradient: Gradient(colors: [Color.orange, Color.red]), startPoint: .leading, endPoint: .trailing))
-                                .cornerRadius(20)
-                        }.padding(.bottom, 50)
-                        
-                    Text("LOL")
-                    }
-                    .frame(height: 150, alignment: .bottom)
-                    .background(BlurView(style: .systemUltraThinMaterial))
-                }
+                Rectangle().opacity(0).frame(height: 80)
+            }
+            .padding()
+            .background(BlurView(style: .systemUltraThinMaterial))
+            .cornerRadius(15)
+            .padding(.bottom, -20)
+            .frame(minWidth: 300, maxWidth: 600, minHeight: 100, maxHeight: .infinity, alignment: Alignment.bottom)
                 
             
-        }
-        
-        .edgesIgnoringSafeArea(.top)
-        
+            
+            Button(action: {
+                if self.currentPageIndex+1 == self.subviews.count {
+                    self.appState.displayLaunchCarousel = false
+                } else {
+                    self.currentPageIndex += 1
+                }
+            }) {
+                if(self.currentPageIndex+1 == self.subviews.count) {
+                    Text("Accepter")
+                        .fontWeight(.semibold)
+                        .font(.headline).foregroundColor(.white)
+                        .frame(width: 250.0, height: 40.0)
+                        .foregroundColor(.white)
+                        .background(LinearGradient(gradient: Gradient(colors: [Color.green, Color.green]), startPoint: .leading, endPoint: .trailing))
+                        .cornerRadius(20)
+                } else {
+                   Text("Suivant")
+                       .fontWeight(.semibold)
+                       .font(.headline).foregroundColor(.white)
+                       .frame(width: 250.0, height: 40.0)
+                       .foregroundColor(.white)
+                       .background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color.blue]), startPoint: .leading, endPoint: .trailing))
+                       .cornerRadius(20)
+                }
+            }.padding(30)
+            
+            
+        }.edgesIgnoringSafeArea(.top)
     }
 }
 
-
-
+#if DEBUG
 struct LaunchCarousel_Previews: PreviewProvider {
     static var previews: some View {
         LaunchCarousel()
     }
 }
+#endif
 
-struct LaunchPage: View {
-    var image: String
-    var title: String
-    var text: String
+
+struct CarouselImage: View {
+    var imageString: String
     
     var body: some View {
-        ZStack(alignment: .center) {
-            Color.white
-            
-            ImageStore.shared.image(name: self.image)
-                .renderingMode(.original)
+        GeometryReader { geometry in
+            ImageStore.shared.image(name: self.imageString)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
-            
-            VStack {
-                Text(title)
-                    .font(.largeTitle)
-                    .fontWeight(.black)
-                    .foregroundColor(.white)
-                Text(text)
-            }
+                .scaledToFill()
+                .frame(width: geometry.size.width, height: geometry.size.height)
+                .clipped()
         }
     }
 }
@@ -151,12 +130,12 @@ struct WebViewModal: View {
     var title: String
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @ObservedObject var model: WebViewModel
-    
+     
     init(title: String, url: String){
         self.title = title
         self.model = WebViewModel(url: url)
     }
-    
+     
     var body: some View {
         NavigationView {
             LoadingView(isShowing: self.$model.isLoading) {
