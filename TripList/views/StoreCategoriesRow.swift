@@ -27,7 +27,7 @@ struct StoreCategoriesRow: View {
                 Text("Catégories")
                     .font(.title)
                 Spacer()
-            }.padding(.horizontal, 10)
+            }.padding(.horizontal)
         
             QGrid(storeCategories,
                   columns: cols,

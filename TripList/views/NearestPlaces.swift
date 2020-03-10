@@ -27,7 +27,7 @@ struct NearestPlaces: View {
                         Text("Voir plus")
                     }
                     */
-                }.padding(.horizontal, 10)
+                }.padding(.horizontal)
                 
                 PlaceGridCompact(places: self.locationManager.nearestPlaces!)
             }

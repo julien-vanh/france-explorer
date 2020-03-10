@@ -56,7 +56,8 @@ struct PlaceDetail: View {
                     }
                     .foregroundColor(.blue)
                     .padding(5.0)
-                    .background(Color.white).cornerRadius(10)
+                    .background(BlurView(style: .extraLight))
+                    .cornerRadius(10)
                         
                     Spacer()
                 }

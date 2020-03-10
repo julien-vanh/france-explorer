@@ -20,17 +20,3 @@ class PlaceAnnotation: NSObject, MKAnnotation {
         self.coordinate = place.locationCoordinate
     }
 }
-
-
-
-protocol RegionOverlay {
-    var regionId: String { get set }
-}
-
-class MultiPolygonRegion: MKMultiPolygon, RegionOverlay {
-    var regionId: String = ""
-}
-
-class PolygonRegion: MKPolygon, RegionOverlay {
-    var regionId: String = ""
-}

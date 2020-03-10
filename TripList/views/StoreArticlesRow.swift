@@ -25,7 +25,7 @@ struct StoreArticlesRow: View {
                         Image(systemName: "chevron.right")
                     }.foregroundColor(.blue)
                 }
-            }.padding(.horizontal, 10)
+            }.padding(.horizontal)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: 0) {
@@ -53,7 +53,7 @@ struct StoreArticlesRow: View {
                     }
                     Rectangle().opacity(0).frame(width:15)
                 }
-            }
+            }.frame(height: 180)
         }
     }
 }

@@ -22,6 +22,7 @@ class AppState: NSObject, ObservableObject {
     }
     @Published var state: BottomSheetState = .closed
     @Published var update: Bool = false
+    @Published var displayLaunchCarousel: Bool = true
     
     
     static func openLinkInBrowser(link: String){
