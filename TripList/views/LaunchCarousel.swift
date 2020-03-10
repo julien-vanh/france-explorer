@@ -81,7 +81,7 @@ struct LaunchCarousel: View {
             
             Button(action: {
                 if self.currentPageIndex+1 == self.subviews.count {
-                    self.appState.displayLaunchCarousel = false
+                    self.appState.acceptCGU()
                 } else {
                     self.currentPageIndex += 1
                 }

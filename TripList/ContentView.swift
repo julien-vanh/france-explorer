@@ -23,7 +23,7 @@ struct ContentView: View {
             UIKitTabView.Tab(view: Parameters(), title: "Paramètres", image: "gear")
         ]).overlay(
             GeometryReader { geometry in
-                if(self.appState.displayLaunchCarousel){
+                if(!self.appState.cguAccepted){
                     LaunchCarousel()
                 } else {
                     BottomSheetView(

@@ -10,6 +10,10 @@ import Foundation
 import Combine
 import SwiftUI
 
+enum UserDefaultsKeys : String {
+    case cguAccepted = "cguAccepted"
+}
+
 class AppState: NSObject, ObservableObject {
     static let shared = AppState()
     
@@ -22,7 +26,14 @@ class AppState: NSObject, ObservableObject {
     }
     @Published var state: BottomSheetState = .closed
     @Published var update: Bool = false
-    @Published var displayLaunchCarousel: Bool = true
+    @Published var cguAccepted: Bool = false
+    
+    override init(){
+        super.init()
+        
+        let ud = UserDefaults.standard
+        cguAccepted = ud.bool(forKey: UserDefaultsKeys.cguAccepted.rawValue)
+    }
     
     
     static func openLinkInBrowser(link: String){
@@ -34,4 +45,13 @@ class AppState: NSObject, ObservableObject {
             UIApplication.shared.open(url)
         }
     }
+    
+    public func acceptCGU(){
+        cguAccepted = true
+        
+        let ud = UserDefaults.standard
+        ud.set(true, forKey: UserDefaultsKeys.cguAccepted.rawValue)
+    }
+    
+    
 }
