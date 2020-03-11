@@ -9,7 +9,7 @@
 import SwiftUI
 import MapKit
 
-struct PlaceMapDrawer: View {
+struct PlaceDrawer: View {
     @Binding var place: Place
     @State private var showCredits = false
     @ObservedObject var locationManager = LocationManager.shared
@@ -88,6 +88,6 @@ struct PlaceMapDrawer: View {
 
 struct PlaceMapDrawer_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceMapDrawer(place: .constant(PlaceStore.shared.getRandom(count: 1)[0]))
+        PlaceDrawer(place: .constant(PlaceStore.shared.getRandom(count: 1)[0]))
     }
 }

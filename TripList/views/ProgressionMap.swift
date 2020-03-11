@@ -11,18 +11,17 @@ import Combine
 import MapKit
 
 
-struct PlacesMap: View {
+struct ProgressionMap: View {
     @FetchRequest(fetchRequest: Completion.getAllCompletion()) var completions: FetchedResults<Completion>
-    //var regionMap = RegionsMapController(regionsCompletion: getRegionsCompletion())
     let regionsCount = PlaceStore.shared.getRegions().count
     
     
     var body: some View {
-        
-        ZStack(alignment: .topTrailing) {
-            RegionsMapController(regionsCompletion: getRegionsCompletion()).edgesIgnoringSafeArea(.all)
+        ZStack(alignment: .bottomTrailing) {
+            ProgressionMapController(completions: completionsArray()).edgesIgnoringSafeArea(.all)
             
             VStack(alignment: .trailing, spacing: 10) {
+                /*
                 Button(action: {
                     //self.regionMap.view.userTrackingMode = .follow
                 }) {
@@ -33,19 +32,20 @@ struct PlacesMap: View {
                 .frame(width: 40, height: 40, alignment: .center)
                 .background(Color.white)
                 .cornerRadius(10)
+                */
                 
                 //Add other buttons here
-                Text("\(completions.count)/\(regionsCount) régions visitées")
-                    .foregroundColor(Color(UIColor.mapOverlayExploring)).padding(8).background(Color.white)
+                Text("\(getRegionsExploredCount())/\(regionsCount) régions visitées")
+                    .foregroundColor(Color(UIColor.explored))
+                    .padding(8)
+                    .background(BlurView())
                     .cornerRadius(10)
             }
-            
-            .padding(.top, 50.0)
-            .padding(.trailing, 4.0)
+            .padding([.bottom, .trailing], 4)
         }
     }
     
-    private func getRegionsCompletion() -> [String: Int]{
+    private func getRegionsExploredCount() -> Int{
         var regionsCompletion:[String: Int] = [:]
         
         self.completions.forEach { (completion) in
@@ -57,13 +57,16 @@ struct PlacesMap: View {
                 }
             }
         }
-        
-        return regionsCompletion
+        return regionsCompletion.keys.count
+    }
+    
+    private func completionsArray() -> [Completion]{
+        return completions.compactMap({$0})
     }
 }
 
 struct PlacesMap_Previews: PreviewProvider {
     static var previews: some View {
-        PlacesMap()
+        ProgressionMap()
     }
 }

@@ -28,7 +28,7 @@ struct PlacesList: View {
             List{
                 ForEach(places) { place in
                     NavigationLink(
-                        destination: PlacePager(places: self.places, initialePlace:place)
+                        destination: PlacesPager(places: self.places, initialePlace:place)
                     ) {
                         Text(place.title)
                     }

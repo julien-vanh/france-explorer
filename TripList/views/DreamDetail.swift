@@ -75,7 +75,7 @@ struct DreamDetail: View {
             
             
             GeometryReader { geometry in
-                MapView(place: self.place)
+                PlaceMapView(place: self.place)
                     //.frame(width: geometry.size.width, height: UIScreen.main.bounds.height - 50 - self.getScrollOffset(geometry))//Lag
                     .frame(width: geometry.size.width, height: 500)
             }.frame(height: 500)

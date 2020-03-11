@@ -31,7 +31,7 @@ struct StoreArticlesRow: View {
                 HStack(alignment: .top, spacing: 0) {
                     ForEach(articles) { article in
                         NavigationLink(
-                            destination: StoreArticle(
+                            destination: ArticleDetail(
                                 article: article
                             )
                         ) {

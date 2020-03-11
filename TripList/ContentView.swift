@@ -17,7 +17,7 @@ struct ContentView: View {
     var body: some View {
         UIKitTabView([
             UIKitTabView.Tab(view: Store(), title: "Destinations", image: "rectangle.stack.fill"),
-            UIKitTabView.Tab(view: PlacesMap(), title: "Carte", image: "mappin.and.ellipse"),
+            UIKitTabView.Tab(view: ProgressionMap(), title: "Carte", image: "mappin.and.ellipse"),
             UIKitTabView.Tab(view: DreamList(), title: "Ma Liste", image: "list.bullet"),
             UIKitTabView.Tab(view: Progression(), title: "Progression", image: "text.badge.checkmark"),
             UIKitTabView.Tab(view: Parameters(), title: "Paramètres", image: "gear")
@@ -32,7 +32,7 @@ struct ContentView: View {
                     ) {
                         ZStack(alignment: .topTrailing) {
                             
-                            PlaceMapDrawer(place: self.$appState.place)
+                            PlaceDrawer(place: self.$appState.place)
                             
                             Image(systemName: "xmark")
                                 .foregroundColor(.white)

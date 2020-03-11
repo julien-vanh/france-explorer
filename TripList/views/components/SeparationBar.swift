@@ -10,6 +10,6 @@ import SwiftUI
 
 struct SeparationBar: View {
     var body: some View {
-        Rectangle().foregroundColor(Color(UIColor.separationBar)).frame(height:1)
+        Rectangle().foregroundColor(Color(UIColor.systemGray2)).frame(height:1)
     }
 }

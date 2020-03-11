@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct PlacePager: View {
+struct PlacesPager: View {
     var placeDetailViews: [UIHostingController<PlaceDetail>]
     @State private var currentPageIndex: Int
     

@@ -12,15 +12,15 @@ import CoreData
 import UIKit
 
 
-struct RegionsMapController: UIViewRepresentable {
+struct ProgressionMapController: UIViewRepresentable {
     @ObservedObject var appState = AppState.shared
-    var regionsCompletion: [String: Int]
+    var completions: [Completion]
     private var regionsOverlay: [String: MKOverlay] = [:]
     private let view = MKMapView(frame: .zero)
     private let decoder = JSONDecoder()
     
-    init(regionsCompletion: [String: Int]){
-        self.regionsCompletion = regionsCompletion
+    init(completions:  [Completion]){
+        self.completions = completions
         
         if let file = Bundle.main.url(forResource: "regions", withExtension: "geojson"),
             let data = try? Data(contentsOf: file),
@@ -52,11 +52,6 @@ struct RegionsMapController: UIViewRepresentable {
         view.register(PlaceAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         centerMapOnFrance(map: view)
         
-        //Build annotations
-        view.removeAnnotations(view.annotations)
-        let places = placesData
-        let annotations = places.map{PlaceAnnotation(place: $0)}
-        view.addAnnotations(annotations)
         
         return view
     }
@@ -75,11 +70,38 @@ struct RegionsMapController: UIViewRepresentable {
     func updateUIView(_ view: MKMapView, context: Context){
         view.removeOverlays(view.overlays)
         
-        regionsCompletion.keys.forEach { regionId in
+        getRegionsCompletion(completions).keys.forEach { regionId in
             if let overlay = regionsOverlay[regionId] {
                 view.addOverlay(overlay, level: .aboveRoads)
             }
         }
+        
+        //Build annotations
+        view.removeAnnotations(view.annotations)
+        let places = placesData
+        let annotations = places.map { (place) -> PlaceAnnotation in
+            let explored = completions.contains { (completion) -> Bool in
+                completion.placeId == place.id
+            }
+            return PlaceAnnotation(place: place, style: (explored ? .Explored : .Unexplored))
+        }
+        view.addAnnotations(annotations)
+    }
+    
+    private func getRegionsCompletion(_ completions: [Completion]) -> [String: Int]{
+        var regionsCompletion:[String: Int] = [:]
+        
+        self.completions.forEach { (completion) in
+            if let place = PlaceStore.shared.get(id: completion.placeId!) {
+                if regionsCompletion[place.regionId] != nil {
+                    regionsCompletion[place.regionId]! += 1
+                } else {
+                    regionsCompletion[place.regionId] = 1
+                }
+            }
+        }
+        
+        return regionsCompletion
     }
     
     func centerMapOnFrance(map: MKMapView){
@@ -90,9 +112,9 @@ struct RegionsMapController: UIViewRepresentable {
     }
     
     class Coordinator: NSObject, MKMapViewDelegate {
-        var parent: RegionsMapController
+        var parent: ProgressionMapController
 
-        init(_ map: RegionsMapController) {
+        init(_ map: ProgressionMapController) {
             self.parent = map
         }
 
@@ -109,7 +131,7 @@ struct RegionsMapController: UIViewRepresentable {
             
             renderer.lineWidth = 1
             renderer.strokeColor = UIColor.clear
-            renderer.fillColor = UIColor.mapOverlayExploring
+            renderer.fillColor = UIColor.explored
             return renderer
         }
         
@@ -125,35 +147,4 @@ struct RegionsMapController: UIViewRepresentable {
 }
 
 
-internal final class PlaceAnnotationView: MKMarkerAnnotationView {
-    internal override var annotation: MKAnnotation? { willSet { newValue.flatMap(configure(with:)) } }
-    
-    override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
-        super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
-        
-        if annotation is PlaceAnnotation {
-            let placeAnnotation = annotation as! PlaceAnnotation
-            
-            switch placeAnnotation.place.popularity{
-            case 3:
-                displayPriority = .required
-            case 2:
-                displayPriority = .defaultHigh
-            default:
-                displayPriority = .defaultLow
-            }
-        }
-        
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("\(#function) not implemented.")
-    }
-    
-    func configure(with annotation: MKAnnotation) {
-        guard annotation is PlaceAnnotation else { fatalError("Unexpected annotation type: \(annotation)") }
-        let placeAnnotation = annotation as! PlaceAnnotation
-        markerTintColor = AppStyle.color(for: placeAnnotation.place.category)
-        glyphImage = UIImage(named: "\(placeAnnotation.place.category)-colored")
-    }
-}
+

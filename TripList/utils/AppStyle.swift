@@ -14,11 +14,11 @@ class AppStyle {
     static func color(for placeCategory: PlaceCategory) -> UIColor {
         var color: UIColor
         switch placeCategory {
-            case .city: color = UIColor(hex: 0xE02020)
-            case .museum: color = UIColor(hex: 0xFFA51C)
+            case .city: color = UIColor(hex: 0x1DC0D1)
+            case .museum: color = UIColor(hex: 0xF0652E)
             case .nature: color = UIColor(hex: 0x3BCE41)
-            case .historical: color = UIColor(hex: 0x7F7F7F)
-            case .event: color = UIColor(hex: 0x2074E0)
+            case .historical: color = UIColor(hex: 0x999999)
+            case .event: color = UIColor(hex: 0x8C32C3)
             //case .park: color = UIColor(hex: 0x00796B)
             //case .activity: color = UIColor(hex: 0xE64A19)
         }
@@ -33,15 +33,11 @@ class AppStyle {
 }
 
 extension UIColor {
-    static var mapOverlayUnexplored: UIColor {
+    static var unexplored: UIColor {
         return UIColor.init(red: 255/255, green: 255/255, blue: 255/255, alpha: CGFloat(0.0))
     }
-    static var mapOverlayExploring: UIColor {
-        return UIColor.init(red: 218/255, green: 185/255, blue: 57/255, alpha: CGFloat(1.0))
-    }
-    
-    static var separationBar: UIColor {
-        return UIColor.init(red: 210/255, green: 210/255, blue: 210/255, alpha: CGFloat(1))
+    static var explored: UIColor {
+        return UIColor(hex: 0xFFC110)
     }
 }
 

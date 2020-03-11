@@ -9,7 +9,7 @@
 import SwiftUI
 import MapKit
 
-struct MapView: UIViewRepresentable {
+struct PlaceMapView: UIViewRepresentable {
     var place: Place
 
     func makeUIView(context: Context) -> MKMapView {
@@ -21,7 +21,7 @@ struct MapView: UIViewRepresentable {
         let region = MKCoordinateRegion(center: place.locationCoordinate, span: span)
         view.setRegion(region, animated: true)
         
-        let annotation = PlaceAnnotation(place: place)
+        let annotation = PlaceAnnotation(place: place, style: .Colored)
         
         view.addAnnotation(annotation)
         view.selectAnnotation(annotation, animated: false)
@@ -37,6 +37,6 @@ struct MapView: UIViewRepresentable {
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView(place: PlaceStore.shared.getRandom(count: 1)[0])
+        PlaceMapView(place: PlaceStore.shared.getRandom(count: 1)[0])
     }
 }

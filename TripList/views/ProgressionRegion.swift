@@ -15,12 +15,15 @@ struct ProgressionRegion: View {
     
     
     var body: some View {
-        GeometryReader { geometry in
-            ScrollView(.vertical) {
-                RegionContent(cells: self.getPlaces(), width: geometry.size.width)
+        VStack {
+            GeometryReader { geometry in
+                ScrollView(.vertical) {
+                    RegionContent(cells: self.getPlaces(), width: geometry.size.width)
+                }
+                
             }
         }
-        .navigationBarTitle(Text(region.name), displayMode: .large)
+        .navigationBarTitle(Text(self.region.name))
     }
     
     private func getPlaces() -> [ProgressionCell]{
@@ -107,7 +110,7 @@ struct ProgressionItem: View {
             if cell.type == .placeCell {
                 NavigationLink(
                     //destination: LazyView(PlaceDetail(place: self.cell.place!, displayAssociates: false))
-                    destination: LazyView(PlacePager(places: PlaceStore.shared.getAllForRegion(regionId: self.cell.place!.regionId), initialePlace: self.cell.place!))
+                    destination: LazyView(PlacesPager(places: PlaceStore.shared.getAllForRegion(regionId: self.cell.place!.regionId), initialePlace: self.cell.place!))
                 ) {
                     if self.completions.first != nil {
                         ImageStore.shared.image(forPlace: self.cell.place!)
@@ -135,7 +138,7 @@ struct ProgressionItem: View {
             } else {
                 Button(action: {self.isPurchasePresented.toggle()}) {
                     VStack {
-                        Image(systemName: "star.fill").font(.title)
+                        Image(systemName: "star.fill").font(.headline)
                         Text("+ \(cell.missingPlacesCount!)")
                     }
                     .foregroundColor(.yellow)
@@ -153,7 +156,6 @@ struct ProgressionItem: View {
                 }, content: {
                     PurchasePage().environmentObject(self.session)
                 })
-                
             }
         }
     }

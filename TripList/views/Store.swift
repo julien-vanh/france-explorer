@@ -48,8 +48,7 @@ struct Store: View {
                     
                     Rectangle().opacity(0).frame(height:40)
                 }
-                .navigationBarTitle(Text(""), displayMode: .inline)
-                .navigationBarHidden(true)
+                
                 .overlay(
                     VStack{
                         if(isEditing) {
@@ -58,6 +57,9 @@ struct Store: View {
                     }
                 )
             }
+            .navigationBarTitle(Text(""), displayMode: .large)
+            .navigationBarHidden(true)
+            
         }
         .navigationViewStyle(StackNavigationViewStyle())
         

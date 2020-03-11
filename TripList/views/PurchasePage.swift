@@ -23,8 +23,8 @@ struct PurchasePage: View {
                     .padding()
                     .foregroundColor(.gray)
                 
-                FeatureLine(text: "300 lieux supplémentaires en France")
-                FeatureLine(text: "Régions d'outre-mer")
+                FeatureLine(text: "350 destinations supplémentaires")
+                //FeatureLine(text: "Régions d'outre-mer")
                 FeatureLine(text: "Suppression de la publicité")
                 FeatureLine(text: "Liste illimitée")
                 

@@ -27,7 +27,7 @@ struct DreamListRow: View {
                 
             }) {
                 Image(systemName: self.dream.completed ? "checkmark.circle.fill" : "circle")
-                    .foregroundColor(.green)
+                    .foregroundColor(Color(UIColor.explored))
                     .font(.title)
             }.buttonStyle(BorderlessButtonStyle())
             

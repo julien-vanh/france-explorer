@@ -8,12 +8,13 @@
 
 import SwiftUI
 
-struct PlaceButtons: View {
+struct PlaceButtonsMini: View {
     var place: Place
     @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(fetchRequest: Dream.getAllDreams()) var dreams: FetchedResults<Dream>
     var fetchRequest: FetchRequest<Completion>
     var completions: FetchedResults<Completion> { fetchRequest.wrappedValue }
+    
     
     init(place: Place) {
         self.place = place
@@ -41,9 +42,8 @@ struct PlaceButtons: View {
     }
     
     var body: some View {
-        HStack(alignment: .center) {
+        HStack {
             Button(action: {
-                print("click")
                 if self.completions.first != nil {
                     self.completions.forEach({
                         self.managedObjectContext.delete($0)
@@ -62,16 +62,13 @@ struct PlaceButtons: View {
                 }
                 self.saveContext()
             }) {
-                HStack {
-                    Image(systemName: (completions.first != nil) ? "checkmark.circle" : "circle")
-                    Text("Déjà vu")
-                }
-                .font(.headline)
+                Image(systemName: (completions.first != nil) ? "checkmark.circle" : "circle")
             }
-            .padding()
+            .buttonStyle(BorderlessButtonStyle()).padding()
             .foregroundColor(.white)
-            .background(Color.green)
+            .background(Color(UIColor.explored))
             .cornerRadius(10)
+            .font(.headline)
             
             
             if (completions.first == nil) {
@@ -82,25 +79,23 @@ struct PlaceButtons: View {
                         self.managedObjectContext.delete(item)
                         self.saveContext()
                     }) {
-                        Text("Retirer de Ma Liste")
-                            .font(.headline)
+                        Image(systemName: "text.badge.minus")
                     }
-                    .padding()
+                    .buttonStyle(BorderlessButtonStyle()).padding()
                     .foregroundColor(.red)
+                    .cornerRadius(10)
+                    .font(.headline)
                 } else {
                     Button(action: {
                         self.addDream()
                     }) {
-                        HStack{
-                            Image(systemName: "plus")
-                            Text("Ajouter à Ma Liste")
-                                .font(.headline)
-                        }
+                        Image(systemName: "text.badge.plus")
                     }
-                    .padding()
+                    .buttonStyle(BorderlessButtonStyle()).padding()
                     .foregroundColor(.white)
-                    .background(Color.orange)
+                    .background(Color.blue)
                     .cornerRadius(10)
+                    .font(.headline)
                 }
             }
         }

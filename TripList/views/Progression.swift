@@ -10,7 +10,6 @@ import SwiftUI
 import QGrid
 
 struct Progression: View {
-    @State var showingDetail = false
     @FetchRequest(fetchRequest: Completion.getAllCompletion()) var completions: FetchedResults<Completion>
     
     var body: some View {
@@ -20,7 +19,8 @@ struct Progression: View {
                     HStack(alignment: .center) {
                         VStack(alignment: .leading) {
                             Text("France").font(.title)
-                            Text("\(getRegionsCompletion().keys.count)/\(PlaceStore.shared.getRegions().count) régions visitées").foregroundColor(.green)
+                            Text("\(getRegionsCompletion().keys.count)/\(PlaceStore.shared.getRegions().count) régions visitées")
+                                .foregroundColor(Color(UIColor.explored))
                         }
                         
                         Spacer()
@@ -41,10 +41,8 @@ struct Progression: View {
                 }
                 
             }
-            .navigationBarTitle("Progression", displayMode: .inline)
-            .sheet(isPresented: $showingDetail) {
-                 Parameters()
-            }
+            
+            .navigationBarTitle(Text("Progression"), displayMode: .inline)
         }
     }
     

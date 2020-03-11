@@ -9,7 +9,7 @@
 import SwiftUI
 import FirebaseAnalytics
 
-struct StoreArticle: View {
+struct ArticleDetail: View {
     var article: Article
     var associatedPlaces: [Place] = []
     
@@ -112,6 +112,6 @@ struct StoreArticle: View {
 
 struct StoreArticle_Previews: PreviewProvider {
     static var previews: some View {
-        StoreArticle(article: articlesData[0])
+        ArticleDetail(article: articlesData[0])
     }
 }

@@ -26,7 +26,7 @@ final class PlaceStore: ObservableObject {
         categories[PlaceCategory.museum.rawValue] = Category(id: 2, category: .museum, title: "Musée", image: "")
         categories[PlaceCategory.nature.rawValue] = Category(id: 3, category: .nature, title: "Nature", image: "")
         categories[PlaceCategory.historical.rawValue] = Category(id: 4, category: .historical, title: "Histoire", image: "")
-        categories[PlaceCategory.event.rawValue] = Category(id: 5, category: .event, title: "Événement", image: "")
+        categories[PlaceCategory.event.rawValue] = Category(id: 5, category: .event, title: "Sortie", image: "")
     }
     
     func get(id: String) -> Place! {

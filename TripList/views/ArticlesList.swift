@@ -20,7 +20,7 @@ struct ArticlesList: View {
             ForEach(articles) { article in
                 ArticleRow(article: article)
             }
-        }.navigationBarTitle("Sélections", displayMode: .inline)
+        }.navigationBarTitle(Text("Sélections"))
     }
 }
 
@@ -34,7 +34,7 @@ struct ArticleRow: View {
     var article: Article
     
     var body: some View {
-        NavigationLink(destination: StoreArticle(article: article)){
+        NavigationLink(destination: ArticleDetail(article: article)){
             HStack(alignment: .center) {
                 
                 ImageStore.shared.image(name: "\(article.id).jpg")
