@@ -12,6 +12,7 @@ import FirebaseAnalytics
 
 struct PlaceDetail: View {
     @ObservedObject var locationManager = LocationManager.shared
+    @State var websitePresented = false
     
     var place: Place
     var displayAssociates: Bool = true
@@ -106,11 +107,12 @@ struct PlaceDetail: View {
                         Image(systemName: "globe").frame(width: 30, height: 30, alignment: .center)
                             .font(.title)
                             .padding(.trailing, 10)
-                        Button(action: {
-                            AppState.openLinkInBrowser(link: self.place.website)
-                        }) {
+                        
+                        Button(action: {self.websitePresented.toggle()}) {
                             Text("Site web")
-                        }
+                        }.sheet(isPresented: self.$websitePresented, content: {
+                            WebViewModal(title: self.place.title, url: self.place.website)
+                        })
                         Spacer()
                     }
                     .padding(.leading, 10.0)

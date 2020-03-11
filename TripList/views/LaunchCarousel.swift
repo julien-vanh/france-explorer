@@ -144,15 +144,21 @@ struct WebViewModal: View {
     let dg = DragGesture()
      
     init(title: String, url: String){
+        var stringUrl = url
+        if !url.hasPrefix("http"){
+            stringUrl = "https://"+url
+        }
         self.title = title
-        self.model = WebViewModel(url: url)
+        self.model = WebViewModel(url: stringUrl)
     }
      
     var body: some View {
         NavigationView {
             LoadingView(isShowing: self.$model.isLoading) {
                 WebView(viewModel: self.model)
-            }.highPriorityGesture(self.dg)
+            }
+            .highPriorityGesture(self.dg)
+            .edgesIgnoringSafeArea(.bottom)
             .navigationBarTitle(Text(title), displayMode: .inline)
             .navigationBarItems(trailing:
                 Button("Fermer") {
