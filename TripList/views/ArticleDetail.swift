@@ -171,6 +171,6 @@ struct ArticleAssociatedPlaceLocked: View {
 
 struct ArticleAssociatedPlace_Previews: PreviewProvider {
     static var previews: some View {
-        ArticleAssociatedPlace(place: PlaceStore.shared.getRandom(count: 1)[0])
+        ArticleAssociatedPlace(place: PlaceStore.shared.getRandom(count: 1, premium: false)[0])
     }
 }

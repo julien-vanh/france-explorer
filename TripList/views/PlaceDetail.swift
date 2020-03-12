@@ -20,7 +20,7 @@ struct PlaceDetail: View {
     
     
     init(){//To display a random place
-        self.place = PlaceStore.shared.getRandom(count: 1)[0]
+        self.place = PlaceStore.shared.getRandom(count: 1, premium: false)[0]
     }
     
     init(place: Place){
@@ -118,12 +118,12 @@ struct PlaceDetail: View {
                     .padding(.leading, 10.0)
                 }
                 
+                
                 if displayAssociates {
-                    AssociatesRow(placeId: self.place.id)
+                    AssociatesRow(place: self.place)
                         .padding(.top, 10.0)
                         .padding(.bottom, 15.0)
                 }
-                
                 
                 Button(action: {
                     self.showCredits.toggle()

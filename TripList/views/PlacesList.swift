@@ -9,13 +9,14 @@
 import SwiftUI
 
 struct PlacesList: View {
+    @ObservedObject var appState = AppState.shared
     var category: Category!
     var places: [Place] = []
     
     @State var menuOpen: Bool = false
     
     init(){
-        places = PlaceStore.shared.getRandom(count: 100)
+        places = PlaceStore.shared.getRandom(count: 100, premium: appState.isPremium)
     }
     
     init(category: Category){

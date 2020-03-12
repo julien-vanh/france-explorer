@@ -53,6 +53,6 @@ struct PlaceViewCompact: View {
 
 struct PlaceViewCompact_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceViewCompact(place: PlaceStore.shared.getRandom(count: 1)[0])
+        PlaceViewCompact(place: PlaceStore.shared.getRandom(count: 1, premium: false)[0])
     }
 }

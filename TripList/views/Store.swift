@@ -65,12 +65,13 @@ struct Store: View {
 }
 
 struct SearchResult: View {
+    @ObservedObject var appState = AppState.shared
     var searchText: String
     
     var body: some View {
         List {
             // Filtered list of names
-            ForEach(PlaceStore.shared.getAllForSearch(search: searchText), id:\.self) {
+            ForEach(PlaceStore.shared.getAllForSearch(search: searchText, premium: appState.isPremium), id:\.self) {
                 place in
                 NavigationLink(destination: PlaceDetail(place: place)){
                     HStack(alignment: .center, spacing: 10) {
@@ -91,12 +92,13 @@ struct SearchResult: View {
 }
 
 struct Carousel: View {
+    @ObservedObject var appState = AppState.shared
     let CountInCarousel = 5
     
     var body: some View {
         GeometryReader { geometry in
             ImageCarouselView(numberOfImages: self.CountInCarousel) {
-                ForEach(PlaceStore.shared.getRandom(count: self.CountInCarousel, withIllustration: true)) { place in
+                ForEach(PlaceStore.shared.getRandom(count: self.CountInCarousel, premium: self.appState.isPremium)) { place in
                     NavigationLink(
                         destination: PlaceDetail(place: place)
                     ) {
@@ -134,6 +136,8 @@ struct RandomButton: View {
 }
 
 struct StoreSuggestions: View {
+    @ObservedObject var appState = AppState.shared
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack
@@ -150,7 +154,7 @@ struct StoreSuggestions: View {
                     }*/
             }.padding(.horizontal)
             
-            PlaceGridCompact(places: PlaceStore.shared.getRandom(count: 9, withIllustration: true))
+            PlaceGridCompact(places: PlaceStore.shared.getRandom(count: 9, premium: appState.isPremium))
         }
     }
 }

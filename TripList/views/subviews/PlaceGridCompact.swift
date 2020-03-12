@@ -30,6 +30,6 @@ struct PlaceGridCompact: View {
 
 struct PlaceGridCompact_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceGridCompact(places: PlaceStore.shared.getRandom(count: 9))
+        PlaceGridCompact(places: PlaceStore.shared.getRandom(count: 9, premium: false))
     }
 }

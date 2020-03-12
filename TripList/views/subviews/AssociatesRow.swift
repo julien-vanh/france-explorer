@@ -9,13 +9,8 @@
 import SwiftUI
 
 struct AssociatesRow: View {
-    var placeId: String
-    var associates: [Place] = []
-    
-    init(placeId: String) {
-        self.placeId = placeId
-        self.associates = PlaceStore.shared.getAssociatedPlaceTo(id: placeId, count: 5)
-    }
+    var place: Place
+    @ObservedObject var appState = AppState.shared
     
     var body: some View {
        VStack(alignment: .leading) {
@@ -26,7 +21,7 @@ struct AssociatesRow: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: 0) {
-                    ForEach(associates) { place in
+                    ForEach(PlaceStore.shared.getAssociatedPlaceTo(place: place, count: 5, premium: appState.isPremium)) { place in
                         NavigationLink(
                             destination: PlaceDetail(
                                 place: place
@@ -57,7 +52,7 @@ struct AssociatesRow: View {
 
 struct AssociatedHintsRow_Previews: PreviewProvider {
     static var previews: some View {
-        AssociatesRow(placeId: "1")
+        AssociatesRow(place: PlaceStore.shared.getRandom(count: 1, premium: false)[0])
             .previewLayout(.fixed(width: 400, height: 200))
     }
 }

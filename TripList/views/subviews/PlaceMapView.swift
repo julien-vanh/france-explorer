@@ -25,8 +25,9 @@ struct PlaceMapView: UIViewRepresentable {
         
         view.addAnnotation(annotation)
         view.selectAnnotation(annotation, animated: false)
+        
         view.showAnnotations(view.annotations, animated: false)
-        //view
+        
         return view
     }
 
@@ -37,6 +38,6 @@ struct PlaceMapView: UIViewRepresentable {
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceMapView(place: PlaceStore.shared.getRandom(count: 1)[0])
+        PlaceMapView(place: PlaceStore.shared.getRandom(count: 1, premium: false)[0])
     }
 }

@@ -11,7 +11,7 @@ import QGrid
 
 struct ProgressionRegion: View {
     var region: PlaceRegion
-    @EnvironmentObject var session: Session
+    @ObservedObject var appState = AppState.shared
     
     
     var body: some View {
@@ -35,7 +35,7 @@ struct ProgressionRegion: View {
         var premiumCount = 0
         
         places.forEach { (place) in
-            if place.iap && !session.isPremium {
+            if place.iap && !appState.isPremium {
                 premiumCount += 1
             } else {
                 result.append(ProgressionCell(place: place))

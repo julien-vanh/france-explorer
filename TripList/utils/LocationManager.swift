@@ -8,6 +8,7 @@ import MapKit
 
 class LocationManager: NSObject, ObservableObject {
     static let shared = LocationManager()
+    
 
     override init() {
         super.init()
@@ -76,7 +77,7 @@ extension LocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         self.lastLocation = location
-        self.nearestPlaces = PlaceStore.shared.getNearestPlaces(position: location.coordinate, count: 9)
+        self.nearestPlaces = PlaceStore.shared.getNearestPlaces(position: location.coordinate, count: 9, premium: AppState.shared.isPremium)
         print(#function, location)
     }
 

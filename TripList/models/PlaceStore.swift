@@ -11,16 +11,24 @@ import SwiftUI
 import CoreLocation
 import MapKit
 
-final class PlaceStore: ObservableObject {
+final class PlaceStore: NSObject {
     typealias _PlaceDictionary = [String: Place]
     typealias _CategoryDictionary = [String: Category]
-    fileprivate var places: _PlaceDictionary = [:]
+    fileprivate var premiumPlaces: _PlaceDictionary = [:] //all places included premium places
+    fileprivate var freePlaces: _PlaceDictionary = [:] //free places only
     fileprivate var categories: _CategoryDictionary = [:]
     
     static let shared = PlaceStore()
     
-    init(){
-        placesData.forEach { places["\($0.id)"] = $0 }
+    override init(){
+        super.init()
+        
+        placesData.forEach { (place) in
+            if !place.iap {
+                freePlaces["\(place.id)"] = place
+            }
+            premiumPlaces["\(place.id)"] = place
+        }
         
         categories[PlaceCategory.city.rawValue] = Category(id: 1, category: .city, title: "Ville", image: "")
         categories[PlaceCategory.museum.rawValue] = Category(id: 2, category: .museum, title: "Musée", image: "")
@@ -30,8 +38,8 @@ final class PlaceStore: ObservableObject {
     }
     
     func get(id: String) -> Place! {
-        if let index = places.index(forKey: id){
-            return places.values[index]
+        if let index = premiumPlaces.index(forKey: id){
+            return premiumPlaces.values[index]
         } else {
             return nil
         }
@@ -50,51 +58,40 @@ final class PlaceStore: ObservableObject {
     }
     
     func getAllForCategory(category: PlaceCategory) -> [Place] {
-        return places.values.filter { $0.category == category }
+        return premiumPlaces.values.filter { $0.category == category }
     }
     
     func getAllForCategory(category: PlaceCategory, regionId: String) -> [Place] {
-        return places.values.filter { $0.regionId == regionId && $0.category == category }
+        return premiumPlaces.values.filter { $0.regionId == regionId && $0.category == category }
     }
     
     func getAllForRegion(regionId: String) -> [Place] {
-        return places.values.filter { $0.regionId == regionId }
+        return premiumPlaces.values.filter { $0.regionId == regionId }
     }
     
-    func getAllForSearch(search: String) -> [Place] {
+    
+    func getAllForSearch(search: String, premium: Bool) -> [Place] {
+        let places = premium ? premiumPlaces : freePlaces
+        
         if search.count > 2 {
             let hashSearch = search.lowercased().forSorting
-            return places.values.filter { $0.hash.contains(hashSearch)}
+            var matchingPlaces = places.values.filter { $0.hash.contains(hashSearch)}
+            matchingPlaces.sort { (p1, p2) -> Bool in
+                return p1.popularity > p2.popularity
+            }
+            return matchingPlaces
         } else {
             return []
         }
     }
     
-    func getRandom(count:Int, withIllustration: Bool = false) -> [Place] {
-        var resultCount: Int
-        if(count > places.keys.count){
-            resultCount = places.keys.count
-        } else {
-            resultCount = count
-        }
-        var result: [Place]
-        if(withIllustration){
-            result = places.values.filter { (place) -> Bool in
-                return place.illustration != nil
-            }
-        } else {
-            result = Array(places.values)
-        }
-        return Array(result.shuffled().prefix(resultCount))
+    func getRandom(count:Int, premium: Bool) -> [Place] {
+        let places = premium ? premiumPlaces : freePlaces
+        return Array(places.values.shuffled().prefix(min(places.keys.count, count)))
     }
     
-    func getAssociatedPlaceTo(id: String, count: Int) -> [Place]{
-        if let place = get(id: id) {
-            return Array(getNearestPlaces(position: place.locationCoordinate, count: 8).dropFirst()) //On retirer le premier car c'est le place à partir duquel on fait la recherche
-        } else {
-            return Array(places.values.shuffled().prefix(count))
-        }
-        
+    func getAssociatedPlaceTo(place: Place, count: Int, premium: Bool) -> [Place]{
+        return Array(getNearestPlaces(position: place.locationCoordinate, count: count+1, premium: premium).dropFirst()) //On retirer le premier car c'est le place à partir duquel on fait la recherche
     }
     
     func getAssociatedPlaceToArticle(article: Article) -> [Place]{
@@ -104,13 +101,9 @@ final class PlaceStore: ObservableObject {
         return articlePlaces.compactMap({ PlaceStore.shared.get(id: $0.placeId)})
     }
     
-    func getNearestPlaces(position: CLLocationCoordinate2D, count: Int) -> [Place] {
-        var resultCount: Int
-        if(count > places.keys.count){
-            resultCount = places.keys.count
-        } else {
-            resultCount = count
-        }
+    func getNearestPlaces(position: CLLocationCoordinate2D, count: Int, premium: Bool) -> [Place] {
+        let places = premium ? premiumPlaces : freePlaces
+        
         let positionPoint = MKMapPoint(position);
         
         let sortedPlaces = places.values.sorted { (p1, p2) -> Bool in
@@ -118,9 +111,10 @@ final class PlaceStore: ObservableObject {
             let distanceP2 = positionPoint.distance(to: MKMapPoint(p2.locationCoordinate))
             return distanceP1 < distanceP2
         }
-        return Array(sortedPlaces.prefix(resultCount))
+        return Array(sortedPlaces.prefix(min(sortedPlaces.count, count)))
     }
 }
+
 
 struct Category: Identifiable {
     var id: Int

@@ -35,6 +35,8 @@ internal final class PlaceAnnotationView: MKMarkerAnnotationView {
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         
+        
+        
         if annotation is PlaceAnnotation {
             let placeAnnotation = annotation as! PlaceAnnotation
             
@@ -69,6 +71,7 @@ internal final class PlaceAnnotationView: MKMarkerAnnotationView {
         case .PremiumLock:
             markerTintColor = UIColor.white
             glyphImage = UIImage(systemName: "questionmark")
+            isEnabled = false
         default:
             markerTintColor = AppStyle.color(for: placeAnnotation.place.category)
             glyphImage = UIImage(named: "\(placeAnnotation.place.category)-colored")

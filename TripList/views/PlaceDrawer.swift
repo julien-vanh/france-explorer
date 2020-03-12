@@ -88,6 +88,6 @@ struct PlaceDrawer: View {
 
 struct PlaceMapDrawer_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceDrawer(place: .constant(PlaceStore.shared.getRandom(count: 1)[0]))
+        PlaceDrawer(place: .constant(PlaceStore.shared.getRandom(count: 1, premium: false)[0]))
     }
 }

@@ -17,7 +17,7 @@ enum UserDefaultsKeys : String {
 class AppState: NSObject, ObservableObject {
     static let shared = AppState()
     
-    @Published var place: Place = PlaceStore.shared.getRandom(count: 1)[0] {
+    @Published var place: Place = PlaceStore.shared.getRandom(count: 1, premium: false)[0] {
         didSet {
             if self.state == .closed {
                 self.state = .middle
