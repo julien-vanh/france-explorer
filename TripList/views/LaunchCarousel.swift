@@ -36,6 +36,8 @@ struct LaunchCarousel: View {
             Color.white
             
             
+            
+            
             PageViewController(currentPageIndex: $currentPageIndex, viewControllers: subviews)
             
             
@@ -69,7 +71,7 @@ struct LaunchCarousel: View {
                 
                 PageControl(numberOfPages: subviews.count, currentPageIndex: $currentPageIndex)
                 
-                Rectangle().opacity(0).frame(height: 80)
+                Rectangle().opacity(0).frame(height: 100)
             }
             .padding()
             .background(BlurView(style: .systemUltraThinMaterial))
@@ -96,7 +98,7 @@ struct LaunchCarousel: View {
                         //.background(LinearGradient(gradient: Gradient(colors: [Color(UIColor(hex: 0x59D722)), Color(UIColor(hex: 0x105800))]), startPoint: .top, endPoint: .bottom))
                         .cornerRadius(20)
                 } else {
-                   Text("Suivant")
+                   Text("Continuer")
                        .fontWeight(.semibold)
                        .font(.headline).foregroundColor(.white)
                        .frame(width: 250.0, height: 40.0)
@@ -105,10 +107,10 @@ struct LaunchCarousel: View {
                     //.background(LinearGradient(gradient: Gradient(colors: [Color(UIColor(hex:0x3AB9E4)), Color(UIColor(hex:0x1A16C1))]), startPoint: .top, endPoint: .bottom))
                        .cornerRadius(20)
                 }
-            }.padding(30)
+            }.padding(70)
             
             
-        }.edgesIgnoringSafeArea(.top)
+        }.edgesIgnoringSafeArea(.all)
     }
 }
 
@@ -128,7 +130,8 @@ struct CarouselImage: View {
         GeometryReader { geometry in
             ImageStore.shared.image(name: self.imageString)
                 .resizable()
-                .scaledToFill()
+                .aspectRatio(contentMode: .fill)
+                .imageScale(.large)
                 .frame(width: geometry.size.width, height: geometry.size.height)
                 .clipped()
         }
