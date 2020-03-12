@@ -646,6 +646,7 @@
 		F9AB64C2240AD9CE0061CD52 /* VibrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64C1240AD9CE0061CD52 /* VibrationManager.swift */; };
 		F9AB64C4240BD7720061CD52 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64C3240BD7720061CD52 /* Parameters.swift */; };
 		F9AB64C6240C22C90061CD52 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64C5240C22C90061CD52 /* AppState.swift */; };
+		F9C1E806241A943F006EBEB8 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C1E805241A943F006EBEB8 /* ProgressBar.swift */; };
 		F9C9C68423E498D2002C1DA0 /* ASCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = F9C9C68323E498D2002C1DA0 /* ASCollectionView */; };
 		F9C9C68823E4D093002C1DA0 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9C68723E4D093002C1DA0 /* AppStyle.swift */; };
 		F9C9C68A23E4D287002C1DA0 /* UIColor+hexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9C68923E4D287002C1DA0 /* UIColor+hexString.swift */; };
@@ -682,7 +683,6 @@
 		F9FC37DE240D225900F17AAC /* premium5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9FC37D9240D225900F17AAC /* premium5.jpg */; };
 		F9FC37DF240D225900F17AAC /* premium4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9FC37DA240D225900F17AAC /* premium4.jpg */; };
 		F9FC37E1240D61D500F17AAC /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FC37E0240D61D500F17AAC /* MailView.swift */; };
-		F9FC37E3240D67BE00F17AAC /* france.png in Resources */ = {isa = PBXBuildFile; fileRef = F9FC37E2240D67BD00F17AAC /* france.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1329,6 +1329,7 @@
 		F9AB64C1240AD9CE0061CD52 /* VibrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationManager.swift; sourceTree = "<group>"; };
 		F9AB64C3240BD7720061CD52 /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
 		F9AB64C5240C22C90061CD52 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		F9C1E805241A943F006EBEB8 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		F9C9C68723E4D093002C1DA0 /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
 		F9C9C68923E4D287002C1DA0 /* UIColor+hexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hexString.swift"; sourceTree = "<group>"; };
 		F9D032F1240E89A7008A9B13 /* ArticlesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesList.swift; sourceTree = "<group>"; };
@@ -1365,7 +1366,6 @@
 		F9FC37D9240D225900F17AAC /* premium5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = premium5.jpg; sourceTree = "<group>"; };
 		F9FC37DA240D225900F17AAC /* premium4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = premium4.jpg; sourceTree = "<group>"; };
 		F9FC37E0240D61D500F17AAC /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
-		F9FC37E2240D67BD00F17AAC /* france.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = france.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2123,7 +2123,6 @@
 		F95DE57023DE2F6100BE1BD5 /* assets */ = {
 			isa = PBXGroup;
 			children = (
-				F9FC37E2240D67BD00F17AAC /* france.png */,
 				F9FC37D5240D222200F17AAC /* purchasePage */,
 				F94B49682400435A0055956D /* placeholder.png */,
 				F9DC21D923E0DB1E0023B8EF /* regions.geojson */,
@@ -2177,6 +2176,7 @@
 				F95DE58223DE349600BE1BD5 /* StoreCategoriesRow.swift */,
 				F99E73AC23F3611E006BC089 /* NearestPlaces.swift */,
 				F95DE57F23DE349600BE1BD5 /* AssociatesRow.swift */,
+				F9C1E805241A943F006EBEB8 /* ProgressBar.swift */,
 			);
 			path = subviews;
 			sourceTree = "<group>";
@@ -2457,7 +2457,6 @@
 				F92E04652412898C009C5ADD /* AbbayedeCluny.jpg in Resources */,
 				F92E03C92412898B009C5ADD /* LaCoupoleCentredHistoireetPlantarium3D.jpg in Resources */,
 				F92E04C72412898C009C5ADD /* PharedeCordouan.jpg in Resources */,
-				F9FC37E3240D67BE00F17AAC /* france.png in Resources */,
 				F92E05312412898C009C5ADD /* NeckdeSceautres.jpg in Resources */,
 				F92E058F2412898C009C5ADD /* Curemonte.jpg in Resources */,
 				F92E04312412898C009C5ADD /* MusedelaTapisseriedeBayeux.jpg in Resources */,
@@ -2957,6 +2956,7 @@
 				F9815CDE23EAD36B00EEF9CA /* Article.swift in Sources */,
 				F9D032F6240FD085008A9B13 /* Store.swift in Sources */,
 				F9DC222B23E31DF30023B8EF /* PlaceDetailPhotos.swift in Sources */,
+				F9C1E806241A943F006EBEB8 /* ProgressBar.swift in Sources */,
 				F95DE57623DE348000BE1BD5 /* Session.swift in Sources */,
 				F95DE59323DE349700BE1BD5 /* AssociatesRow.swift in Sources */,
 				F95DE5BD23DE4A2900BE1BD5 /* ProgressionMap.swift in Sources */,

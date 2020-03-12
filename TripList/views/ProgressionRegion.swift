@@ -20,7 +20,6 @@ struct ProgressionRegion: View {
                 ScrollView(.vertical) {
                     RegionContent(cells: self.getPlaces(), width: geometry.size.width)
                 }
-                
             }
         }
         .navigationBarTitle(Text(self.region.name))
@@ -46,19 +45,24 @@ struct ProgressionRegion: View {
             result.append(ProgressionCell(premiumWithMissing: premiumCount))
         }
         
-        
         return result
     }
 }
 
+struct ProgressionRegion_Previews: PreviewProvider {
+    static var previews: some View {
+        ProgressionRegion(region: regionsData[0])
+    }
+}
+
+
+
+
 struct ProgressionCell: Identifiable {
-    
-    
     enum ProgressionCellType {
         case placeCell
         case premiumCell
     }
-    
     var id: String
     var type: ProgressionCellType
     var place: Place!
@@ -77,24 +81,22 @@ struct ProgressionCell: Identifiable {
     }
 }
 
-struct ProgressionRegion_Previews: PreviewProvider {
-    static var previews: some View {
-        ProgressionRegion(region: regionsData[0]).environmentObject(Session())
-    }
-}
+
 
 struct ProgressionItem: View {
     var cell: ProgressionCell
+    var cells: [ProgressionCell]
     var size: CGFloat
     
     @State private var isPurchasePresented: Bool = false
     
     var fetchRequest: FetchRequest<Completion>
     var completions: FetchedResults<Completion> { fetchRequest.wrappedValue }
-    @EnvironmentObject var session: Session
     
-    init(cell: ProgressionCell, size: CGFloat) {
+    
+    init(cell: ProgressionCell, cells: [ProgressionCell], size: CGFloat) {
         self.cell = cell
+        self.cells = cells
         self.size = size
         
         var placeId = "premium"
@@ -110,7 +112,7 @@ struct ProgressionItem: View {
             if cell.type == .placeCell {
                 NavigationLink(
                     //destination: LazyView(PlaceDetail(place: self.cell.place!, displayAssociates: false))
-                    destination: LazyView(PlacesPager(places: PlaceStore.shared.getAllForRegion(regionId: self.cell.place!.regionId), initialePlace: self.cell.place!))
+                    destination: LazyView(PlacesPager(places: self.cells.compactMap{$0.place}, initialePlace: self.cell.place!))
                 ) {
                     if self.completions.first != nil {
                         ImageStore.shared.image(forPlace: self.cell.place!)
@@ -154,7 +156,7 @@ struct ProgressionItem: View {
                 .sheet(isPresented: self.$isPurchasePresented, onDismiss: {
                     print("Dismiss")
                 }, content: {
-                    PurchasePage().environmentObject(self.session)
+                    PurchasePage()
                 })
             }
         }
@@ -186,7 +188,7 @@ struct RegionContent: View {
               hSpacing: HSPACING,
               vPadding: VPADDING,
               hPadding: 10) { cell in
-                ProgressionItem(cell: cell, size: self.cellSize)
+                ProgressionItem(cell: cell, cells: self.cells, size: self.cellSize)
         }.frame(height: VPADDING+(self.cellSize+HSPACING)*CGFloat(self.rows)+VPADDING)
     }
 }

@@ -16,20 +16,9 @@ struct Progression: View {
         NavigationView {
             List {
                 VStack(alignment: .leading) {
-                    HStack(alignment: .center) {
-                        VStack(alignment: .leading) {
-                            Text("France").font(.title)
-                            Text("\(getRegionsCompletion().keys.count)/\(PlaceStore.shared.getRegions().count) régions visitées")
-                                .foregroundColor(Color(UIColor.explored))
-                        }
-                        
-                        Spacer()
-                        ImageStore.shared.image(name: "france.png")
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 80, height: 50)
-                            .clipped()
-                    }
+                    Text("France").font(.title)
+                    Text("\(getRegionsCompletion().keys.count)/\(PlaceStore.shared.getRegions().count) régions visitées")
+                            .foregroundColor(Color(UIColor.explored))
                 }
                 
                 
@@ -78,12 +67,10 @@ struct ProgressionLine: View {
     var completedCount: Int
     
     var body: some View {
-        HStack {
+        VStack(alignment: .leading) {
             Text(region.name)
-            Spacer()
-            Text(completedPlaceCount())
-                .foregroundColor(.gray)
-                .font(.caption)
+            
+            ProgressBar(value: CGFloat(completedCount)/CGFloat(PlaceStore.shared.getAllForRegion(regionId: region.id).count))
         }
     }
     
