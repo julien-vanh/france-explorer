@@ -83,7 +83,11 @@ struct ProgressionMapController: UIViewRepresentable {
             let explored = completions.contains { (completion) -> Bool in
                 completion.placeId == place.id
             }
-            return PlaceAnnotation(place: place, style: (explored ? .Explored : .Unexplored))
+            var style: PlaceAnnotationStyle = (explored ? .Explored : .Unexplored)
+            if place.iap && !appState.isPremium {
+                style = .PremiumLock
+            }
+            return PlaceAnnotation(place: place, style: style)
         }
         view.addAnnotations(annotations)
     }
@@ -138,8 +142,9 @@ struct ProgressionMapController: UIViewRepresentable {
         func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
             if view.annotation is PlaceAnnotation {
                 let placeAnnotation = view.annotation as! PlaceAnnotation
-                print(placeAnnotation.place.title)
+                
                 self.parent.appState.place = placeAnnotation.place
+                
                 mapView.setCenter(placeAnnotation.coordinate, animated: true)
             }
         }

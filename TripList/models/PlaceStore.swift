@@ -97,6 +97,13 @@ final class PlaceStore: ObservableObject {
         
     }
     
+    func getAssociatedPlaceToArticle(article: Article) -> [Place]{
+        let articlePlaces = article.places.sorted { (a1, a2) -> Bool in
+            return a1.order < a2.order
+        }
+        return articlePlaces.compactMap({ PlaceStore.shared.get(id: $0.placeId)})
+    }
+    
     func getNearestPlaces(position: CLLocationCoordinate2D, count: Int) -> [Place] {
         var resultCount: Int
         if(count > places.keys.count){

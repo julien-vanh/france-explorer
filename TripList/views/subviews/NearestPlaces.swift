@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct NearestPlaces: View {
+    
     @ObservedObject var locationManager = LocationManager.shared
     
     var body: some View {
@@ -19,14 +20,6 @@ struct NearestPlaces: View {
                     Text("À proximité")
                         .font(.title)
                     Spacer()
-                    /*
-                    Button(action: {
-                        //
-                    })
-                    {
-                        Text("Voir plus")
-                    }
-                    */
                 }.padding(.horizontal)
                 
                 PlaceGridCompact(places: self.locationManager.nearestPlaces!)

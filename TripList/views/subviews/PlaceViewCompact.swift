@@ -16,33 +16,36 @@ struct PlaceViewCompact: View {
         NavigationLink(
             destination: PlaceDetail(place: place)
         ) {
-            HStack(alignment: .center) {
+            HStack(alignment: .bottom) {
                 ImageStore.shared.image(forPlace: place)
                     .renderingMode(.original)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 100, height:60)
+                    .frame(width: 100, height:70)
                     .clipped().cornerRadius(5)
                 
                 VStack(alignment: .leading) {
-                    
                     Text(place.title)
-                        .font(.headline)
+                        .font(.headline).lineLimit(2)
                     
-                    Text(PlaceStore.shared.getCategory(placeCategory: place.category).title)
-                        .foregroundColor(Color(AppStyle.color(for: place.category)))
-                    
-                    if locationManager.isLocationEnable() {
-                        Text("à " + AppStyle.formatDistance(value: locationManager.distanceTo(coordinate: place.locationCoordinate)))
-                            .foregroundColor(.black)
+                    HStack(alignment: .bottom, spacing: 10) {
+                        Text(PlaceStore.shared.getCategory(placeCategory: place.category).title)
+                            .foregroundColor(Color(AppStyle.color(for: place.category)))
                             .font(.caption)
-                    
+                        
+                        if locationManager.isLocationEnable() {
+                            Text("à " + AppStyle.formatDistance(value: locationManager.distanceTo(coordinate: place.locationCoordinate)))
+                                .foregroundColor(.black)
+                                .font(.caption)
+                        }
+                        
+                        Spacer()
                     }
                     Spacer()
                     SeparationBar()
                 }
-                Spacer()
             }
+            .frame(height: 70)
             .padding(.leading, 10.0)
         }
     }

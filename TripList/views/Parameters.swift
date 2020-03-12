@@ -14,12 +14,12 @@ struct Parameters: View {
     @State private var isPurchasePresented: Bool = false
     @State var result: Result<MFMailComposeResult, Error>? = nil
     @State var isShowingMailView = false
-    @EnvironmentObject var session: Session
+    @ObservedObject var appState = AppState.shared
     
     var body: some View {
         NavigationView {
             List {
-                if !session.isPremium {
+                if !appState.isPremium {
                     Button(action: {self.isPurchasePresented.toggle()}) {
                         Text("Version complète")
                     }
@@ -99,7 +99,7 @@ struct Parameters: View {
             .sheet(isPresented: $isPurchasePresented, onDismiss: {
                 print("Dismiss")
             }, content: {
-                PurchasePage().environmentObject(self.session)
+                PurchasePage()
             })
             
             .listStyle(GroupedListStyle())
@@ -113,7 +113,7 @@ struct Parameters: View {
 
 struct Parameters_Previews: PreviewProvider {
     static var previews: some View {
-        Parameters().environmentObject(Session())
+        Parameters()
     }
 }
 

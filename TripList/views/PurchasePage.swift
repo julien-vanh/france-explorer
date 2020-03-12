@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PurchasePage: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @EnvironmentObject var session: Session
+    @ObservedObject var appState = AppState.shared
     
     var price:String = "Acheter 4,99 €"
 
@@ -31,7 +31,7 @@ struct PurchasePage: View {
                 VStack(alignment: .center) {
                     Button(action: {
                         print("purchasing...")
-                        self.session.isPremium = true // TODO
+                        self.appState.isPremium = true // TODO
                         self.presentationMode.wrappedValue.dismiss()
                     }) {
                         Text(price)
@@ -47,7 +47,7 @@ struct PurchasePage: View {
                         
                     Button(action: {
                         print("Restauring")
-                        self.session.isPremium = true // TODO
+                        self.appState.isPremium = true // TODO
                         self.presentationMode.wrappedValue.dismiss()
                     }) {
                         Text("Restaurer mes achats")

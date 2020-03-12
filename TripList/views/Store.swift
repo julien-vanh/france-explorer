@@ -11,8 +11,6 @@ import SwiftUI
 import SwiftUI
 
 struct Store: View {
-    
-    
     @State private var searchText = ""
     @State private var isEditing = false
     

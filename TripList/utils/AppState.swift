@@ -27,6 +27,7 @@ class AppState: NSObject, ObservableObject {
     @Published var state: BottomSheetState = .closed
     @Published var update: Bool = false
     @Published var cguAccepted: Bool = false
+    @Published var isPremium: Bool = false
     
     override init(){
         super.init()

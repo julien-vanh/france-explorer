@@ -13,6 +13,7 @@ enum PlaceAnnotationStyle {
     case Colored
     case Unexplored
     case Explored
+    case PremiumLock
 }
 
 class PlaceAnnotation: NSObject, MKAnnotation {
@@ -65,6 +66,9 @@ internal final class PlaceAnnotationView: MKMarkerAnnotationView {
         case .Colored:
             markerTintColor = AppStyle.color(for: placeAnnotation.place.category)
             glyphImage = UIImage(named: "\(placeAnnotation.place.category)-colored")
+        case .PremiumLock:
+            markerTintColor = UIColor.white
+            glyphImage = UIImage(systemName: "questionmark")
         default:
             markerTintColor = AppStyle.color(for: placeAnnotation.place.category)
             glyphImage = UIImage(named: "\(placeAnnotation.place.category)-colored")

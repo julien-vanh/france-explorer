@@ -12,10 +12,11 @@ import FirebaseAnalytics
 struct ArticleDetail: View {
     var article: Article
     var associatedPlaces: [Place] = []
+    @ObservedObject var appState = AppState.shared
     
     init(article: Article){
         self.article = article
-        associatedPlaces = article.places.map({ PlaceStore.shared.get(id: $0.placeId)})
+        associatedPlaces = PlaceStore.shared.getAssociatedPlaceToArticle(article: article)
     }
     
     var body: some View {
@@ -41,38 +42,13 @@ struct ArticleDetail: View {
                             .padding([.top, .leading], 15)
                         
                         ForEach(associatedPlaces) { place in
-                            HStack {
-                                NavigationLink(
-                                    destination: PlaceDetail(place: place)
-                                ) {
-                                    ImageStore.shared.image(forPlace: place)
-                                        .renderingMode(.original)
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fill)
-                                        .frame(width: 100, height:60)
-                                        .clipped().cornerRadius(5)
-                                }
-                                
-                                VStack {
-                                    HStack {
-                                        NavigationLink(
-                                            destination: PlaceDetail(place: place)
-                                        ) {
-                                            Text(place.title)
-                                        }
-                                        
-                                        Spacer()
-                                        
-                                        PlaceButtonsMini(place: place)
-                                    }
-                                    SeparationBar()
-                                }
-                                
+                            if place.iap && !self.appState.isPremium {
+                                ArticleAssociatedPlaceLocked(place: place)
+                            } else {
+                                ArticleAssociatedPlace(place: place)
                             }
-                            .padding(.horizontal, 10.0)
                         }
                     }
-                    
                 }
                 
                 Rectangle().opacity(0).frame(height:40)
@@ -110,8 +86,91 @@ struct ArticleDetail: View {
     }
 }
 
+/*
 struct StoreArticle_Previews: PreviewProvider {
     static var previews: some View {
         ArticleDetail(article: articlesData[0])
+    }
+}
+*/
+
+struct ArticleAssociatedPlace: View {
+    var place: Place
+    
+    var body: some View {
+        HStack(alignment: .bottom) {
+            NavigationLink(
+                destination: PlaceDetail(place: place)
+            ) {
+                ImageStore.shared.image(forPlace: place)
+                    .renderingMode(.original)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 100, height:70)
+                    .clipped().cornerRadius(5)
+            }
+            
+            VStack(alignment: .leading){
+                HStack(alignment: .center) {
+                    NavigationLink(
+                        destination: PlaceDetail(place: place)
+                    ) {
+                        Text(place.title).font(.headline).lineLimit(2)
+                    }
+                    Spacer()
+                    VStack {
+                        Spacer()
+                        PlaceButtonsMini(place: place)
+                        Spacer()
+                    }
+                }
+                Spacer()
+                SeparationBar()
+            }
+            
+            
+            
+        }
+        .frame(height: 70)
+        .padding(.horizontal, 10.0)
+    }
+}
+
+struct ArticleAssociatedPlaceLocked: View {
+    var place: Place
+    @State private var isPurchasePresented: Bool = false
+    
+    var body: some View {
+        Button(action: {self.isPurchasePresented.toggle()}) {
+            HStack(alignment: .bottom) {
+                ImageStore.shared.image(forPlace: place)
+                    .renderingMode(.original)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 100, height:70)
+                    .clipped().blur(radius: 5).cornerRadius(5)
+                
+                VStack(alignment: .leading) {
+                    Spacer()
+                    Text(place.title).font(.headline).lineLimit(2).blur(radius: 5)
+                    Spacer()
+                    SeparationBar()
+                }
+            }
+        }
+        .frame(height: 70)
+        .padding(.horizontal, 10.0)
+        .sheet(isPresented: $isPurchasePresented, onDismiss: {
+            print("Dismiss")
+        }, content: {
+            PurchasePage()
+        })
+        
+    }
+}
+
+struct ArticleAssociatedPlace_Previews: PreviewProvider {
+    static var previews: some View {
+        ArticleAssociatedPlace(place: PlaceStore.shared.getRandom(count: 1)[0])
     }
 }
