@@ -647,6 +647,7 @@
 		F9AB64C4240BD7720061CD52 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64C3240BD7720061CD52 /* Parameters.swift */; };
 		F9AB64C6240C22C90061CD52 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64C5240C22C90061CD52 /* AppState.swift */; };
 		F9C1E806241A943F006EBEB8 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C1E805241A943F006EBEB8 /* ProgressBar.swift */; };
+		F9C1E809241C0A60006EBEB8 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = F9C1E808241C0A60006EBEB8 /* URLImage */; };
 		F9C9C68423E498D2002C1DA0 /* ASCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = F9C9C68323E498D2002C1DA0 /* ASCollectionView */; };
 		F9C9C68823E4D093002C1DA0 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9C68723E4D093002C1DA0 /* AppStyle.swift */; };
 		F9C9C68A23E4D287002C1DA0 /* UIColor+hexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9C68923E4D287002C1DA0 /* UIColor+hexString.swift */; };
@@ -673,7 +674,6 @@
 		F9DC21E923E231A70023B8EF /* ImageMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC21E623E231A70023B8EF /* ImageMetadata.swift */; };
 		F9DC21EB23E231D30023B8EF /* String+HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC21EA23E231D30023B8EF /* String+HTML.swift */; };
 		F9DC21F123E232650023B8EF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9DC21F323E232650023B8EF /* Localizable.strings */; };
-		F9DC21F823E234530023B8EF /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = F9DC21F723E234530023B8EF /* KingfisherSwiftUI */; };
 		F9DC222B23E31DF30023B8EF /* PlaceDetailPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC222A23E31DF30023B8EF /* PlaceDetailPhotos.swift */; };
 		F9DC222D23E31FEE0023B8EF /* PlaceButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC222C23E31FEE0023B8EF /* PlaceButtons.swift */; };
 		F9FC37D4240D15F900F17AAC /* PurchasePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FC37D3240D15F900F17AAC /* PurchasePage.swift */; };
@@ -1373,10 +1373,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9DC21F823E234530023B8EF /* KingfisherSwiftUI in Frameworks */,
 				F9C9C68423E498D2002C1DA0 /* ASCollectionView in Frameworks */,
 				F92E05CB2412941B009C5ADD /* MapKit.framework in Frameworks */,
 				F95DE5B723DE3BE500BE1BD5 /* QGrid in Frameworks */,
+				F9C1E809241C0A60006EBEB8 /* URLImage in Frameworks */,
 				E8CB92F7763543DD657D004F /* Pods_TripList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2224,8 +2224,8 @@
 			name = TripList;
 			packageProductDependencies = (
 				F95DE5B623DE3BE500BE1BD5 /* QGrid */,
-				F9DC21F723E234530023B8EF /* KingfisherSwiftUI */,
 				F9C9C68323E498D2002C1DA0 /* ASCollectionView */,
+				F9C1E808241C0A60006EBEB8 /* URLImage */,
 			);
 			productName = TripList;
 			productReference = F95DE55623DE2F0E00BE1BD5 /* France Guide.app */;
@@ -2258,8 +2258,8 @@
 			mainGroup = F95DE54D23DE2F0E00BE1BD5;
 			packageReferences = (
 				F95DE5B523DE3BE500BE1BD5 /* XCRemoteSwiftPackageReference "QGrid" */,
-				F9DC21F623E234530023B8EF /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				F9C9C68223E498D2002C1DA0 /* XCRemoteSwiftPackageReference "ASCollectionView" */,
+				F9C1E807241C0A60006EBEB8 /* XCRemoteSwiftPackageReference "url-image" */,
 			);
 			productRefGroup = F95DE55723DE2F0E00BE1BD5 /* Products */;
 			projectDirPath = "";
@@ -3227,20 +3227,20 @@
 				version = 0.1.3;
 			};
 		};
+		F9C1E807241C0A60006EBEB8 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = exactVersion;
+				version = 0.9.10;
+			};
+		};
 		F9C9C68223E498D2002C1DA0 /* XCRemoteSwiftPackageReference "ASCollectionView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apptekstudios/ASCollectionView";
 			requirement = {
 				kind = exactVersion;
 				version = 1.2.2;
-			};
-		};
-		F9DC21F623E234530023B8EF /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
-			requirement = {
-				kind = exactVersion;
-				version = 5.13.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -3251,15 +3251,15 @@
 			package = F95DE5B523DE3BE500BE1BD5 /* XCRemoteSwiftPackageReference "QGrid" */;
 			productName = QGrid;
 		};
+		F9C1E808241C0A60006EBEB8 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9C1E807241C0A60006EBEB8 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
 		F9C9C68323E498D2002C1DA0 /* ASCollectionView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F9C9C68223E498D2002C1DA0 /* XCRemoteSwiftPackageReference "ASCollectionView" */;
 			productName = ASCollectionView;
-		};
-		F9DC21F723E234530023B8EF /* KingfisherSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F9DC21F623E234530023B8EF /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = KingfisherSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 

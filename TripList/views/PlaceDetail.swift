@@ -13,24 +13,12 @@ import FirebaseAnalytics
 struct PlaceDetail: View {
     @ObservedObject var locationManager = LocationManager.shared
     @State var websitePresented = false
-    
-    var place: Place
+    @State var place: Place = PlaceStore.shared.getRandom(count: 1, premium: false)[0]
     var displayAssociates: Bool = true
     @State private var showCredits = false
     
     
-    init(){//To display a random place
-        self.place = PlaceStore.shared.getRandom(count: 1, premium: false)[0]
-    }
-    
-    init(place: Place){
-        self.place = place
-    }
-    
-    init(place: Place, displayAssociates: Bool){
-        self.place = place
-        self.displayAssociates = displayAssociates
-    }
+   
 
     var body: some View {
         ScrollView(.vertical) {
@@ -120,7 +108,7 @@ struct PlaceDetail: View {
                 
                 
                 if displayAssociates {
-                    AssociatesRow(place: self.place)
+                    AssociatesRow(place: self.$place)
                         .padding(.top, 10.0)
                         .padding(.bottom, 15.0)
                 }

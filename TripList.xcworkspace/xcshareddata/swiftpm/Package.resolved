@@ -11,21 +11,21 @@
         }
       },
       {
-        "package": "Kingfisher",
-        "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
-        "state": {
-          "branch": null,
-          "revision": "44bfa76787a0f07e4d5ae3304e9d4f631fd519bd",
-          "version": "5.13.0"
-        }
-      },
-      {
         "package": "QGrid",
         "repositoryURL": "https://github.com/Q-Mobile/QGrid",
         "state": {
           "branch": null,
           "revision": "40607aec336a8097c94bcadb81762592d89073ac",
           "version": "0.1.3"
+        }
+      },
+      {
+        "package": "URLImage",
+        "repositoryURL": "https://github.com/dmytro-anokhin/url-image.git",
+        "state": {
+          "branch": null,
+          "revision": "dc913391b6fc0c9de283ef111eb90d0e9abf4c36",
+          "version": "0.9.10"
         }
       }
     ]

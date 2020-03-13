@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-import KingfisherSwiftUI
+import URLImage
 import ASCollectionView
 
 struct PlaceDetailPhotos: View {
@@ -24,15 +24,13 @@ struct PlaceDetailPhotos: View {
                     self.selectedPageImage = pageImage
                     self.showModal.toggle()
                 }, label: {
-                    KFImage(pageImage.url).placeholder {
-                        // Placeholder while downloading.
-                        Image(systemName: "photo")
-                            .font(.largeTitle)
-                            .opacity(0.3)
+                    URLImage(pageImage.url!) { proxy in
+                    proxy.image
+                        .resizable()// Make image resizable
+                        .renderingMode(.original)
+                        .aspectRatio(contentMode: .fit) // Fill the frame
+                        .clipped()                       // Clip overlaping parts
                     }
-                    .renderingMode(.original)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
                     .frame(width: geometry.size.width)
                 })
                 
@@ -72,6 +70,7 @@ struct PlaceDetailPhotos: View {
             }.background(Color.black).edgesIgnoringSafeArea(.bottom)
         })
         .onAppear(perform: {
+            
             if let wikiPageId = self.place.wikiPageId {
                 WikipediaService.shared.getPageImages(wikiPageId) { result in //TODO id en dur
                     switch result {
@@ -115,15 +114,15 @@ struct PhotoFullscreen: View {
     var body: some View {
         ZStack(alignment: .center) {
             Color.black
-            
-            KFImage(self.pageImage.url).placeholder {
-                // Placeholder while downloading.
-                Image(systemName: "arrow.2.circlepath.circle")
-                    .font(.largeTitle)
-                    .opacity(0.3)
+            URLImage(self.pageImage.url!) { proxy in
+            proxy.image
+                .resizable()                     // Make image resizable
+                .aspectRatio(contentMode: .fit) // Fill the frame
+                .clipped()                       // Clip overlaping parts
             }
-            .resizable()
-            .aspectRatio(contentMode: .fit)
+            //.frame(width: 100.0, height: 100.0)
+            //.resizable()
+            //.aspectRatio(contentMode: .fit)
             
             
             VStack {

@@ -16,23 +16,20 @@ struct PlaceMapView: UIViewRepresentable {
         let view = MKMapView(frame: .zero)
         view.showsUserLocation = true
         view.register(PlaceAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-        
-        let span = MKCoordinateSpan(latitudeDelta: 2.0, longitudeDelta: 2.0)
-        let region = MKCoordinateRegion(center: place.locationCoordinate, span: span)
-        view.setRegion(region, animated: true)
-        
-        let annotation = PlaceAnnotation(place: place, style: .Colored)
-        
-        view.addAnnotation(annotation)
-        view.selectAnnotation(annotation, animated: false)
-        
-        view.showAnnotations(view.annotations, animated: false)
-        
         return view
     }
 
     func updateUIView(_ view: MKMapView, context: Context) {
+        let span = MKCoordinateSpan(latitudeDelta: 8.0, longitudeDelta: 8.0)
+        let region = MKCoordinateRegion(center: place.locationCoordinate, span: span)
+        view.setRegion(region, animated: true)
         
+        
+        view.removeAnnotations(view.annotations)
+        let annotation = PlaceAnnotation(place: place, style: .Colored)
+        view.addAnnotation(annotation)
+        
+        view.showAnnotations(view.annotations, animated: false)
     }
 }
 

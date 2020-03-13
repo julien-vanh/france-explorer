@@ -113,6 +113,7 @@ struct ProgressionItem: View {
                 NavigationLink(
                     //destination: LazyView(PlaceDetail(place: self.cell.place!, displayAssociates: false))
                     destination: LazyView(PlacesPager(places: self.cells.compactMap{$0.place}, initialePlace: self.cell.place!))
+                    
                 ) {
                     if self.completions.first != nil {
                         ImageStore.shared.image(forPlace: self.cell.place!)

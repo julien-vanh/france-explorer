@@ -44,7 +44,6 @@ struct PlaceButtons: View {
         HStack(alignment: .center) {
             Spacer()
             Button(action: {
-                print("click")
                 if self.completions.first != nil {
                     self.completions.forEach({
                         self.managedObjectContext.delete($0)

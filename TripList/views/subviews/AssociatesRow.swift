@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct AssociatesRow: View {
-    var place: Place
+    @Binding var place: Place
     @ObservedObject var appState = AppState.shared
     
     var body: some View {
@@ -21,12 +21,12 @@ struct AssociatesRow: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: 0) {
-                    ForEach(PlaceStore.shared.getAssociatedPlaceTo(place: place, count: 5, premium: appState.isPremium)) { place in
-                        NavigationLink(
-                            destination: PlaceDetail(
-                                place: place
-                            )
-                        ) {
+                    ForEach(PlaceStore.shared.getAssociatedPlaceTo(place: place, count: 6, premium: appState.isPremium)) { place in
+                        
+                        
+                        Button(action: {
+                            self.place = place
+                        }) {
                             ZStack {
                                 ImageStore.shared.image(forPlace: place)
                                     .renderingMode(.original)
@@ -52,7 +52,7 @@ struct AssociatesRow: View {
 
 struct AssociatedHintsRow_Previews: PreviewProvider {
     static var previews: some View {
-        AssociatesRow(place: PlaceStore.shared.getRandom(count: 1, premium: false)[0])
+        AssociatesRow(place: Binding(.constant(PlaceStore.shared.getRandom(count: 1, premium: false)[0]))!)
             .previewLayout(.fixed(width: 400, height: 200))
     }
 }
