@@ -127,7 +127,7 @@ struct PlaceDetail: View {
             GeometryReader { geometry in
                 PlaceMapView(place: self.place)
                     //.frame(width: geometry.size.width, height: UIScreen.main.bounds.height - 50 - self.getScrollOffset(geometry))//Lag
-                    .frame(width: geometry.size.width, height: 500)
+                    .frame(width: geometry.size.width, height: 500).disabled(true)
             }.frame(height: 500)
         }.onAppear {
             Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
