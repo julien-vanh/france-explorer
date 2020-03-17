@@ -79,12 +79,14 @@ struct WikiImage: Decodable {
 }
 
 struct WikiImageInfo: Decodable{
+    var thumburl: String
     var url: String
     var mime: String
     var extmetadata:WikiImageExtmetadata?
     
     
     enum CodingKeys: String, CodingKey {
+        case thumburl
         case url
         case extmetadata
         case mime
@@ -92,6 +94,7 @@ struct WikiImageInfo: Decodable{
     
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
+        thumburl = try values.decode(String.self, forKey: .thumburl)
         url = try values.decode(String.self, forKey: .url)
         mime = try values.decode(String.self, forKey: .mime)
         

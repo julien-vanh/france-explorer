@@ -64,7 +64,9 @@ struct WikipediaService {
     
     
     func getPageImages(_ pageid: Int, limit: Int = 40, completion: @escaping(Result<[ImageMetadata], WikipediaError>) -> Void) {
-        let urlString  = "\(self.host)?action=query&pageids=\(pageid)&generator=images&gimlimit=\(limit)&prop=imageinfo&iiprop=url%7Cmime%7Cextmetadata&iiextmetadatafilter=ImageDescription%7CArtist&format=json"
+        let imagesLimit = min(limit, 50) //Pas plus de 50 images retournées par l'aPI si resize
+        let MAX_WIDTH = 800
+        let urlString  = "\(self.host)?action=query&pageids=\(pageid)&generator=images&gimlimit=\(imagesLimit)&prop=imageinfo&iiprop=url%7Cmime%7Cextmetadata&iiurlwidth=\(MAX_WIDTH)&iiextmetadatafilter=ImageDescription%7CArtist&format=json"
         
         guard let URL = URL(string: urlString) else {
             completion(.failure(.cannotBuildUrl))
@@ -83,10 +85,19 @@ struct WikipediaService {
                 var images:[ImageMetadata] = []
                 for value in response.query.pages.values {
                     if case .image(let image) = value {
-                        if image.imageinfo[0].mime == "image/jpeg" {
-                            let imageMetadata = ImageMetadata(image)
-                            images.append(imageMetadata)
+                        if image.imageinfo[0].mime != "image/jpeg" {
+                            continue
                         }
+                        
+                        if let metadata = image.imageinfo[0].extmetadata, let description = metadata.ImageDescription {
+                            if description.value.uppercased().contains("CARTE ") || description.value.uppercased().contains("MAP ") {
+                                continue
+                            }
+                        }
+                            
+                        let imageMetadata = ImageMetadata(image)
+                        images.append(imageMetadata)
+                        
                     }
                 }
                 completion(.success(images))

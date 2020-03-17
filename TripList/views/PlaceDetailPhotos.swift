@@ -24,7 +24,7 @@ struct PlaceDetailPhotos: View {
                     self.selectedPageImage = pageImage
                     self.showModal.toggle()
                 }, label: {
-                    URLImage(pageImage.url!) { proxy in
+                    URLImage(pageImage.thumburl!) { proxy in
                     proxy.image
                         .resizable()// Make image resizable
                         .renderingMode(.original)
@@ -114,7 +114,7 @@ struct PhotoFullscreen: View {
     var body: some View {
         ZStack(alignment: .center) {
             Color.black
-            URLImage(self.pageImage.url!) { proxy in
+            URLImage(self.pageImage.thumburl!) { proxy in
             proxy.image
                 .resizable()                     // Make image resizable
                 .aspectRatio(contentMode: .fit) // Fill the frame

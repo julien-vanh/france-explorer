@@ -12,9 +12,13 @@ struct ImageMetadata: Hashable {
     var url: URL?
     var artist: String?
     var description: String?
+    var thumburl: URL?
     
     init(_ wikiImage: WikiImage){
         title = wikiImage.title
+        if let imageURL = URL(string: wikiImage.imageinfo[0].thumburl) {
+            thumburl = imageURL
+        }
         if let imageURL = URL(string: wikiImage.imageinfo[0].url) {
             url = imageURL
         }
