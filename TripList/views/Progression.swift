@@ -24,6 +24,7 @@ struct Progression: View {
             }
             .navigationBarTitle(Text("Progression"), displayMode: .inline)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

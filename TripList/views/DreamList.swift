@@ -78,7 +78,7 @@ struct DreamList: View {
         .actionSheet(isPresented: $showingActionSheet) {
             self.actionSheet
         }
-    
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     private func deleteRow(at indexSet: IndexSet) {

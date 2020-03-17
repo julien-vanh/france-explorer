@@ -48,7 +48,7 @@ struct StoreArticlesRow: View {
                                     .foregroundColor(.white).frame(width: 315, height: 170)
                             }
                             .cornerRadius(5)
-                            .padding(.leading, 15)
+                            .padding(.leading, 10)
                         }
                     }
                     Rectangle().opacity(0).frame(width:15)

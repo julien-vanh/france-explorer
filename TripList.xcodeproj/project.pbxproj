@@ -648,7 +648,7 @@
 		F9AB64C6240C22C90061CD52 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64C5240C22C90061CD52 /* AppState.swift */; };
 		F9C1E806241A943F006EBEB8 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C1E805241A943F006EBEB8 /* ProgressBar.swift */; };
 		F9C1E809241C0A60006EBEB8 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = F9C1E808241C0A60006EBEB8 /* URLImage */; };
-		F9C9C68423E498D2002C1DA0 /* ASCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = F9C9C68323E498D2002C1DA0 /* ASCollectionView */; };
+		F9C2D3A72420E4B800F7B968 /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = F9C2D3A62420E4B800F7B968 /* WaterfallGrid */; };
 		F9C9C68823E4D093002C1DA0 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9C68723E4D093002C1DA0 /* AppStyle.swift */; };
 		F9C9C68A23E4D287002C1DA0 /* UIColor+hexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9C68923E4D287002C1DA0 /* UIColor+hexString.swift */; };
 		F9D032F2240E89A7008A9B13 /* ArticlesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D032F1240E89A7008A9B13 /* ArticlesList.swift */; };
@@ -1373,10 +1373,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9C9C68423E498D2002C1DA0 /* ASCollectionView in Frameworks */,
 				F92E05CB2412941B009C5ADD /* MapKit.framework in Frameworks */,
 				F95DE5B723DE3BE500BE1BD5 /* QGrid in Frameworks */,
 				F9C1E809241C0A60006EBEB8 /* URLImage in Frameworks */,
+				F9C2D3A72420E4B800F7B968 /* WaterfallGrid in Frameworks */,
 				E8CB92F7763543DD657D004F /* Pods_TripList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2224,8 +2224,8 @@
 			name = TripList;
 			packageProductDependencies = (
 				F95DE5B623DE3BE500BE1BD5 /* QGrid */,
-				F9C9C68323E498D2002C1DA0 /* ASCollectionView */,
 				F9C1E808241C0A60006EBEB8 /* URLImage */,
+				F9C2D3A62420E4B800F7B968 /* WaterfallGrid */,
 			);
 			productName = TripList;
 			productReference = F95DE55623DE2F0E00BE1BD5 /* France Guide.app */;
@@ -2258,8 +2258,8 @@
 			mainGroup = F95DE54D23DE2F0E00BE1BD5;
 			packageReferences = (
 				F95DE5B523DE3BE500BE1BD5 /* XCRemoteSwiftPackageReference "QGrid" */,
-				F9C9C68223E498D2002C1DA0 /* XCRemoteSwiftPackageReference "ASCollectionView" */,
 				F9C1E807241C0A60006EBEB8 /* XCRemoteSwiftPackageReference "url-image" */,
+				F9C2D3A52420E4B800F7B968 /* XCRemoteSwiftPackageReference "WaterfallGrid" */,
 			);
 			productRefGroup = F95DE55723DE2F0E00BE1BD5 /* Products */;
 			projectDirPath = "";
@@ -3235,12 +3235,12 @@
 				version = 0.9.10;
 			};
 		};
-		F9C9C68223E498D2002C1DA0 /* XCRemoteSwiftPackageReference "ASCollectionView" */ = {
+		F9C2D3A52420E4B800F7B968 /* XCRemoteSwiftPackageReference "WaterfallGrid" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apptekstudios/ASCollectionView";
+			repositoryURL = "https://github.com/paololeonardi/WaterfallGrid.git";
 			requirement = {
 				kind = exactVersion;
-				version = 1.2.2;
+				version = 0.4.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -3256,10 +3256,10 @@
 			package = F9C1E807241C0A60006EBEB8 /* XCRemoteSwiftPackageReference "url-image" */;
 			productName = URLImage;
 		};
-		F9C9C68323E498D2002C1DA0 /* ASCollectionView */ = {
+		F9C2D3A62420E4B800F7B968 /* WaterfallGrid */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F9C9C68223E498D2002C1DA0 /* XCRemoteSwiftPackageReference "ASCollectionView" */;
-			productName = ASCollectionView;
+			package = F9C2D3A52420E4B800F7B968 /* XCRemoteSwiftPackageReference "WaterfallGrid" */;
+			productName = WaterfallGrid;
 		};
 /* End XCSwiftPackageProductDependency section */
 

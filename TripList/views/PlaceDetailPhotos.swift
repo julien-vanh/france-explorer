@@ -8,7 +8,7 @@
 
 import SwiftUI
 import URLImage
-import ASCollectionView
+import WaterfallGrid
 
 struct PlaceDetailPhotos: View {
     var place: Place
@@ -17,33 +17,26 @@ struct PlaceDetailPhotos: View {
     @State var selectedPageImage: ImageMetadata?
     
     var body: some View {
-        
-        ASCollectionView(data: pageImages, dataID: \.self) { pageImage, _ in
-            GeometryReader { geometry in
-                Button(action: {
-                    self.selectedPageImage = pageImage
-                    self.showModal.toggle()
-                }, label: {
-                    URLImage(pageImage.thumburl!) { proxy in
-                    proxy.image
-                        .resizable()// Make image resizable
+        WaterfallGrid(pageImages, id: \.self) { pageImage in
+            Button(action: {
+                self.selectedPageImage = pageImage
+                self.showModal.toggle()
+            }) {
+                URLImage(pageImage.thumburl!, placeholder: { _ in
+                    Image(systemName: "photo").foregroundColor(.clear)
+                }, content: {
+                    $0.image
+                        .resizable()
                         .renderingMode(.original)
-                        .aspectRatio(contentMode: .fit) // Fill the frame
-                        .clipped()                       // Clip overlaping parts
-                    }
-                    .frame(width: geometry.size.width)
+                        .aspectRatio(contentMode: .fit)
+                        .clipped()
+                    
                 })
-                
-                
-            }.clipped()
-        }
-        .layout {
-            .grid(layoutMode: .adaptive(withMinItemSize: 150),
-                  itemSpacing: 10,
-                  lineSpacing: 10,
-                  itemSize: .absolute(150))
-        }
-        .scrollIndicatorsEnabled(false)
+            }
+        }.gridStyle(
+            columnsInPortrait: UIDevice.current.userInterfaceIdiom == .phone ? 2 : 3,
+            columnsInLandscape: UIDevice.current.userInterfaceIdiom == .phone ? 3 : 4
+        )
         .navigationBarTitle(Text(place.title), displayMode: .inline)
         .sheet(isPresented: $showModal, content: {
             ZStack {

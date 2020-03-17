@@ -17,7 +17,7 @@ struct StoreCategoriesRow: View {
     
     init(){
         self.storeCategories = PlaceStore.shared.getCategories()
-        self.rows = self.storeCategories.count/cols + 1
+        self.rows = Int(ceil(CGFloat(self.storeCategories.count)/CGFloat((cols))))
     }
     
     var body: some View {
@@ -57,7 +57,7 @@ struct StoreCategoryItem: View {
         ) {
             Text(category.title)
                 .fontWeight(.semibold)
-                .frame(width: 155, height: 50)
+                .frame(width: 130, height: 50)
                 .foregroundColor(.white)
                 .background(Color(AppStyle.color(for: category.category)))
                 .cornerRadius(5)

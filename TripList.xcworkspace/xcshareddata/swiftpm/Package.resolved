@@ -2,15 +2,6 @@
   "object": {
     "pins": [
       {
-        "package": "ASCollectionView",
-        "repositoryURL": "https://github.com/apptekstudios/ASCollectionView",
-        "state": {
-          "branch": null,
-          "revision": "c730c2e63276cd42e15953a85a79ecda1d1b03e2",
-          "version": "1.2.2"
-        }
-      },
-      {
         "package": "QGrid",
         "repositoryURL": "https://github.com/Q-Mobile/QGrid",
         "state": {
@@ -26,6 +17,15 @@
           "branch": null,
           "revision": "dc913391b6fc0c9de283ef111eb90d0e9abf4c36",
           "version": "0.9.10"
+        }
+      },
+      {
+        "package": "WaterfallGrid",
+        "repositoryURL": "https://github.com/paololeonardi/WaterfallGrid.git",
+        "state": {
+          "branch": null,
+          "revision": "67bb0263a45357651608faafcd51fe39cfd3cf30",
+          "version": "0.4.0"
         }
       }
     ]
