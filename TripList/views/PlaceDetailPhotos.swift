@@ -23,7 +23,9 @@ struct PlaceDetailPhotos: View {
                 self.showModal.toggle()
             }) {
                 URLImage(pageImage.thumburl!, placeholder: { _ in
-                    Image(systemName: "photo").foregroundColor(.clear)
+                    Image(systemName: "photo")
+                        .foregroundColor(.clear)
+                        .frame(height: 0)
                 }, content: {
                     $0.image
                         .resizable()
@@ -111,25 +113,30 @@ struct PhotoFullscreen: View {
             
             ZStack(alignment: .center) {
                 Color.black
-
-                URLImage(self.pageImage.thumburl!) { proxy in
-                proxy.image
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)// Make image resizable
-                    .frame(width:geometry.size.width, height: geometry.size.height)
-                    .scaleEffect(self.scale)
-                    .clipped()
-                    .gesture(MagnificationGesture()
-                        .onChanged { val in
-                            let delta = val / self.lastScaleValue
-                            self.lastScaleValue = val
-                            self.scale = self.scale * delta
-                        }.onEnded { val in
-                            self.lastScaleValue = 1.0
-                            self.scale = max(self.scale, 1.0)
-                        }
-                    )
-                }
+                
+                URLImage(self.pageImage.thumburl!, placeholder: { _ in
+                    Image(systemName: "photo")
+                        .foregroundColor(.white)
+                        .font(.largeTitle)
+                        .frame(width:geometry.size.width)
+                }, content: { proxy in
+                    proxy.image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)// Make image resizable
+                        .frame(width:geometry.size.width, height: geometry.size.height)
+                        .scaleEffect(self.scale)
+                        .clipped()
+                        .gesture(MagnificationGesture()
+                            .onChanged { val in
+                                let delta = val / self.lastScaleValue
+                                self.lastScaleValue = val
+                                self.scale = self.scale * delta
+                            }.onEnded { val in
+                                self.lastScaleValue = 1.0
+                                self.scale = max(self.scale, 1.0)
+                            }
+                        )
+                })
                 
                 
                 VStack {

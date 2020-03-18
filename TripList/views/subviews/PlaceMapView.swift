@@ -20,7 +20,7 @@ struct PlaceMapView: UIViewRepresentable {
     }
 
     func updateUIView(_ view: MKMapView, context: Context) {
-        let span = MKCoordinateSpan(latitudeDelta: 7.0, longitudeDelta: 7.0)
+        let span = MKCoordinateSpan(latitudeDelta: 0.0, longitudeDelta: 7.0)
         let region = MKCoordinateRegion(center: place.locationCoordinate, span: span)
         view.setRegion(region, animated: true)
         
@@ -28,7 +28,7 @@ struct PlaceMapView: UIViewRepresentable {
         view.removeAnnotations(view.annotations)
         let annotation = PlaceAnnotation(place: place, style: .Colored)
         view.addAnnotation(annotation)
-        view.selectAnnotation(annotation, animated: true)
+        //view.selectAnnotation(annotation, animated: true)
         
         if view.annotations.count > 1 {
             view.showAnnotations(view.annotations, animated: false)

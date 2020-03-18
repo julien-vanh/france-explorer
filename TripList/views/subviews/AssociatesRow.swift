@@ -23,10 +23,8 @@ struct AssociatesRow: View {
                 HStack(alignment: .top, spacing: 0) {
                     ForEach(PlaceStore.shared.getAssociatedPlaceTo(place: place, count: 6, premium: appState.isPremium)) { place in
                         
-                        
-                        Button(action: {
-                            self.place = place
-                        }) {
+                        //Button(action: {self.place = place})
+                        NavigationLink(destination: PlaceDetail(place: place, displayAssociates: false )){
                             ZStack {
                                 ImageStore.shared.image(forPlace: place)
                                     .renderingMode(.original)

@@ -16,8 +16,6 @@ struct PlaceDetail: View {
     @State var place: Place = PlaceStore.shared.getRandom(count: 1, premium: false)[0]
     var displayAssociates: Bool = true
     @State private var showCredits = false
-    
-    
    
 
     var body: some View {
@@ -29,7 +27,9 @@ struct PlaceDetail: View {
                     .frame(width: geometry.size.width, height: self.getHeightForHeaderImage(geometry))
                     .clipped()
                     .offset(x: 0, y: self.getOffsetForHeaderImage(geometry))
+                    .navigationBarTitle(self.getNavigationTitle(geometry))
             }.frame(height: 300)
+            
             
             VStack {
                 
@@ -136,10 +136,15 @@ struct PlaceDetail: View {
             ])
         }
         .edgesIgnoringSafeArea(.top)
+        
+    }
+    
+    private func getNavigationTitle(_ geometry: GeometryProxy) -> String {
+        return getScrollOffset(geometry) < -290 ? self.place.title : ""
     }
     
     private func getScrollOffset(_ geometry: GeometryProxy) -> CGFloat {
-        geometry.frame(in: .global).minY
+        return geometry.frame(in: .global).minY
     }
     
     private func getOffsetForHeaderImage(_ geometry: GeometryProxy) -> CGFloat {
