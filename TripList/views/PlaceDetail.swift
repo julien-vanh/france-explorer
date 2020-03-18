@@ -28,7 +28,7 @@ struct PlaceDetail: View {
                     .clipped()
                     .offset(x: 0, y: self.getOffsetForHeaderImage(geometry))
                     .navigationBarTitle(self.getNavigationTitle(geometry))
-            }.frame(height: 300)
+            }.frame(height: 400)
             
             
             VStack {
@@ -140,7 +140,7 @@ struct PlaceDetail: View {
     }
     
     private func getNavigationTitle(_ geometry: GeometryProxy) -> String {
-        return getScrollOffset(geometry) < -290 ? self.place.title : ""
+        return getScrollOffset(geometry) < -390 ? self.place.title : ""
     }
     
     private func getScrollOffset(_ geometry: GeometryProxy) -> CGFloat {

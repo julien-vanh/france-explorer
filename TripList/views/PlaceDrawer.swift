@@ -8,6 +8,7 @@
 
 import SwiftUI
 import MapKit
+import QGrid
 
 struct PlaceDrawer: View {
     @Binding var place: Place
@@ -32,25 +33,63 @@ struct PlaceDrawer: View {
             
             PlaceButtons(place: place)
             
-            
-            GeometryReader { geometry in
-                ImageStore.shared.image(forPlace: self.place)
-                    .renderingMode(.original)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: geometry.size.width, height:geometry.size.height)
-                    .clipped().cornerRadius(15).padding(10)
-            }.frame(height: 150)
-        
-            
-            
-            if self.place.content != nil {
-                Text(self.place.content!.description)
-                    .lineLimit(6)
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                HStack(alignment: .top, spacing: 10) {
+                    GeometryReader { geometry in
+                        ImageStore.shared.image(forPlace: self.place)
+                            .renderingMode(.original)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: geometry.size.width, height:geometry.size.height)
+                            .clipped().cornerRadius(15).padding(10)
+                    }.frame(height: 150)
+                    
+                    Spacer()
+                    
+                    PlaceDrawerMetadata(place: place)
+                }
+            } else {
+                GeometryReader { geometry in
+                    ImageStore.shared.image(forPlace: self.place)
+                        .renderingMode(.original)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: geometry.size.width, height:geometry.size.height)
+                        .clipped().cornerRadius(15).padding(10)
+                }.frame(height: 150)
+                
+                PlaceDrawerMetadata(place: place)
             }
             
             
+            if self.place.content != nil {
+                Text(self.place.content!.description).lineLimit(10).padding(.top, 10)
+            }
             
+            SeparationBar()
+            
+            Button(action: {
+                self.showCredits.toggle()
+            }) {
+                Text("Crédits").foregroundColor(.gray).font(.subheadline)
+            }.sheet(isPresented: self.$showCredits) {
+                CreditsModal(place: self.place)
+            }
+        }.padding()
+    }
+}
+
+struct PlaceMapDrawer_Previews: PreviewProvider {
+    static var previews: some View {
+        PlaceDrawer(place: .constant(PlaceStore.shared.getRandom(count: 1, premium: false)[0]))
+    }
+}
+
+struct PlaceDrawerMetadata: View {
+    var place: Place
+    
+    var body: some View {
+        VStack(alignment: .leading) {
             if self.place.address != nil {
                 SeparationBar()
                 Text("Adresse").foregroundColor(.gray).font(.subheadline)
@@ -72,22 +111,6 @@ struct PlaceDrawer: View {
                     Text(self.place.website).foregroundColor(.blue)
                 }
             }
-        
-            SeparationBar()
-            Button(action: {
-                self.showCredits.toggle()
-            }) {
-                Text("Crédits").foregroundColor(.gray).font(.subheadline)
-            }.sheet(isPresented: self.$showCredits) {
-                CreditsModal(place: self.place)
-            }
-    
-        }.padding()
-    }
-}
-
-struct PlaceMapDrawer_Previews: PreviewProvider {
-    static var previews: some View {
-        PlaceDrawer(place: .constant(PlaceStore.shared.getRandom(count: 1, premium: false)[0]))
+        }
     }
 }

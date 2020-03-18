@@ -7,45 +7,54 @@
 //
 
 import SwiftUI
-import QGrid
+import WaterfallGrid
+import URLImage
+
 
 struct ProgressionRegion: View {
     var region: PlaceRegion
     @ObservedObject var appState = AppState.shared
     
-    
     var body: some View {
-        VStack {
-            GeometryReader { geometry in
-                ScrollView(.vertical) {
-                    RegionContent(cells: self.getPlaces(), width: geometry.size.width)
+        WaterfallGrid(self.getCards(), id: \.id) { card in
+            VStack {
+                if card.type == .premiumCell {
+                    PlaceCardLocked(card: card)
+                } else {
+                    PlaceCard(card: card)
                 }
             }
-        }
+        }.gridStyle(
+            columnsInPortrait: UIDevice.current.userInterfaceIdiom == .phone ? 2 : 3,
+            columnsInLandscape: UIDevice.current.userInterfaceIdiom == .phone ? 3 : 3
+        )
+            //.background(Color(UIColor.))
+        .padding(.horizontal, 5)
         .navigationBarTitle(Text(self.region.name))
     }
     
-    private func getPlaces() -> [ProgressionCell]{
+    private func getCards() -> [ProgressionCard]{
         let places = PlaceStore.shared.getAllForRegion(regionId: self.region.id).sorted { (p1, p2) -> Bool in
             p1.category.rawValue < p2.category.rawValue
         }
         
-        var result: [ProgressionCell] = []
+        var result: [ProgressionCard] = []
         var premiumCount = 0
         
         places.forEach { (place) in
             if place.iap && !appState.isPremium {
                 premiumCount += 1
             } else {
-                result.append(ProgressionCell(place: place))
+                result.append(ProgressionCard(place: place))
             }
         }
         
         if premiumCount > 0 {
-            result.append(ProgressionCell(premiumWithMissing: premiumCount))
+            result.insert(ProgressionCard(premiumWithMissing: premiumCount), at: 4)
         }
         
         return result
+
     }
 }
 
@@ -55,16 +64,13 @@ struct ProgressionRegion_Previews: PreviewProvider {
     }
 }
 
-
-
-
-struct ProgressionCell: Identifiable {
-    enum ProgressionCellType {
+struct ProgressionCard: Identifiable {
+    enum ProgressionCardType {
         case placeCell
         case premiumCell
     }
     var id: String
-    var type: ProgressionCellType
+    var type: ProgressionCardType
     var place: Place!
     var missingPlacesCount: Int!
     
@@ -82,114 +88,101 @@ struct ProgressionCell: Identifiable {
 }
 
 
-
-struct ProgressionItem: View {
-    var cell: ProgressionCell
-    var cells: [ProgressionCell]
-    var size: CGFloat
-    
+struct PlaceCardLocked: View {
+    var card: ProgressionCard
     @State private var isPurchasePresented: Bool = false
-    
-    var fetchRequest: FetchRequest<Completion>
-    var completions: FetchedResults<Completion> { fetchRequest.wrappedValue }
-    
-    
-    init(cell: ProgressionCell, cells: [ProgressionCell], size: CGFloat) {
-        self.cell = cell
-        self.cells = cells
-        self.size = size
-        
-        var placeId = "premium"
-        if let place = cell.place {
-            placeId = place.id
-        }
-        
-        fetchRequest = FetchRequest<Completion>(entity: Completion.entity(), sortDescriptors: [], predicate: NSPredicate(format: "placeId == %@", placeId))
-    }
-    
+
     var body: some View {
-        VStack {
-            if cell.type == .placeCell {
-                NavigationLink(
-                    //destination: LazyView(PlaceDetail(place: self.cell.place!, displayAssociates: false))
-                    destination: LazyView(PlacesPager(places: self.cells.compactMap{$0.place}, initialePlace: self.cell.place!))
-                    
-                ) {
-                    if self.completions.first != nil {
-                        ImageStore.shared.image(forPlace: self.cell.place!)
-                        .renderingMode(.original)
+        Button(action: {self.isPurchasePresented.toggle()}) {
+            ZStack(alignment: .bottomLeading) {
+                ImageStore.shared.image(name: "placeholder.jpg")//TODO
+                    .resizable()
+                    .renderingMode(.original)
+                    .aspectRatio(contentMode: .fit)
+                    .clipped()
+                
+                HStack(alignment: .center, spacing: 10) {
+                    Image(systemName: "star.fill")
                         .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: self.size, height: self.size).clipped()
-                        .cornerRadius(10).frame(width: self.size, height: self.size)
-                    } else {
-                        Image("\(cell.place!.category)-colored")
                         .renderingMode(.original)
-                        .resizable()
+                        .foregroundColor(Color.yellow)
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 30, height: 30)
+                        .frame(width: 20, height: 20)
                         .padding(8)
-                        .frame(width: self.size, height: self.size)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .strokeBorder(Color(AppStyle.color(for: cell.place.category)), lineWidth: 2)
-                        )
-                        .background(Color(UIColor(hex: 0xEEEEEE)))
-                        .cornerRadius(10)
-                    }
+                    
+                    Text("Guide complet")
+                        .font(.caption)
+                        .lineLimit(2)
+                        .foregroundColor(.yellow)
+                    
+                    Spacer()
                 }
-            } else {
-                Button(action: {self.isPurchasePresented.toggle()}) {
-                    VStack {
-                        Image(systemName: "star.fill").font(.headline)
-                        Text("+ \(cell.missingPlacesCount!)")
-                    }
-                    .foregroundColor(.yellow)
-                    .padding(8)
-                    .frame(width: self.size, height: self.size)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .strokeBorder(Color.yellow, lineWidth: 4)
-                    )
-                        .background(Color.black)
-                    .cornerRadius(10)
-                }
-                .sheet(isPresented: self.$isPurchasePresented, onDismiss: {
-                    print("Dismiss")
-                }, content: {
-                    PurchasePage()
-                })
+                .padding(5.0)
             }
         }
+            /*
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .strokeBorder(Color.yellow, lineWidth: 3)
+        )*/
+        //.cornerRadius(10)
+        .sheet(isPresented: self.$isPurchasePresented, content: {
+            PurchasePage()
+        })
+
     }
 }
 
-
-
-struct RegionContent: View {
-    var cells: [ProgressionCell]
-    var cellSize: CGFloat
-    let cols = UIDevice.current.userInterfaceIdiom == .phone ? 5 : 10
-    let rows: Int
+struct PlaceCard: View {
+    var card: ProgressionCard
     
-    let VPADDING: CGFloat = 10.0
-    let HSPACING: CGFloat = 10
-    
-    init(cells: [ProgressionCell], width: CGFloat){
-        self.cellSize = (width/CGFloat(self.cols))-10
-        self.cells = cells
-        self.rows = Int(ceil(CGFloat(cells.count)/CGFloat((cols))))
+    var fetchRequest: FetchRequest<Completion>
+    var completions: FetchedResults<Completion> { fetchRequest.wrappedValue }
+
+    init(card: ProgressionCard){
+        self.card = card
+        fetchRequest = FetchRequest<Completion>(entity: Completion.entity(), sortDescriptors: [], predicate: NSPredicate(format: "placeId == %@", card.place!.id))
     }
     
     var body: some View {
-        QGrid(cells,
-              columns: cols,
-              columnsInLandscape: cols,
-              vSpacing: 10,
-              hSpacing: HSPACING,
-              vPadding: VPADDING,
-              hPadding: 10) { cell in
-                ProgressionItem(cell: cell, cells: self.cells, size: self.cellSize)
-        }.frame(height: VPADDING+(self.cellSize+HSPACING)*CGFloat(self.rows)+VPADDING)
+        NavigationLink(destination: LazyView(PlaceDetail(place: self.card.place!, displayAssociates: false))){
+            VStack(alignment: .center, spacing: 0) {
+                
+                ImageStore.shared.image(forPlace: card.place!)
+                    .resizable()
+                    .renderingMode(.original)
+                    .aspectRatio(contentMode: .fit)
+                    .grayscale((self.completions.first != nil) ? 0.0 : 0.99)
+                    .blur(radius: (self.completions.first != nil) ? 0.0 : 1)
+                    .clipped()
+                
+                HStack(alignment: .center, spacing: 10) {
+                    /*
+                    Image("\(card.place!.category)-colored")
+                        .resizable()
+                        .renderingMode(.original)
+                        
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 20, height: 20)
+                        .padding(8)
+ */
+                    Spacer()
+                    Text(card.place!.title)
+                        .foregroundColor(Color(AppStyle.color(for: self.card.place!.category)))
+                        .font(.caption)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.center)
+                    Spacer()
+                    
+                }
+                .padding(5.0)
+                //.background(BlurView(style: .dark))
+                .background(Color.white)
+            }.overlay(
+                Rectangle()
+                    .strokeBorder(Color(UIColor.systemGray2), lineWidth: 1)
+            )
+            //.cornerRadius(10)
+        }
     }
 }

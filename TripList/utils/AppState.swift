@@ -27,7 +27,7 @@ class AppState: NSObject, ObservableObject {
     @Published var state: BottomSheetState = .closed
     @Published var update: Bool = false
     @Published var cguAccepted: Bool = false
-    @Published var isPremium: Bool = false
+    @Published var isPremium: Bool = true
     
     override init(){
         super.init()
@@ -52,6 +52,7 @@ class AppState: NSObject, ObservableObject {
         
         let ud = UserDefaults.standard
         ud.set(true, forKey: UserDefaultsKeys.cguAccepted.rawValue)
+        ud.synchronize()
     }
     
     
