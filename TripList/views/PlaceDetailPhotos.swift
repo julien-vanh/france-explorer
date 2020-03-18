@@ -101,35 +101,48 @@ struct PhotoPager: View {
 }
 
 struct PhotoFullscreen: View {
+    @State var scale: CGFloat = 1
+    @State var lastScaleValue: CGFloat = 1.0
     
     var pageImage: ImageMetadata
     
     var body: some View {
-        ZStack(alignment: .center) {
-            Color.black
-            URLImage(self.pageImage.thumburl!) { proxy in
-            proxy.image
-                .resizable()                     // Make image resizable
-                .aspectRatio(contentMode: .fit) // Fill the frame
-                .clipped()                       // Clip overlaping parts
-            }
-            //.frame(width: 100.0, height: 100.0)
-            //.resizable()
-            //.aspectRatio(contentMode: .fit)
+        GeometryReader { geometry in
             
-            
-            VStack {
-                Spacer()
-                Text(photoDescription())
-                    .foregroundColor(.white)
-                    .padding(3)
-                    .background(BlurView(style: .dark))
-                    .cornerRadius(5)
-                    .padding(.bottom, 50)
+            ZStack(alignment: .center) {
+                Color.black
+
+                URLImage(self.pageImage.thumburl!) { proxy in
+                proxy.image
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)// Make image resizable
+                    .frame(width:geometry.size.width, height: geometry.size.height)
+                    .scaleEffect(self.scale)
+                    .clipped()
+                    .gesture(MagnificationGesture()
+                        .onChanged { val in
+                            let delta = val / self.lastScaleValue
+                            self.lastScaleValue = val
+                            self.scale = self.scale * delta
+                        }.onEnded { val in
+                            self.lastScaleValue = 1.0
+                            self.scale = max(self.scale, 1.0)
+                        }
+                    )
+                }
+                
+                
+                VStack {
+                    Spacer()
+                    Text(self.photoDescription())
+                        .foregroundColor(.white)
+                        .padding(3)
+                        .background(BlurView(style: .dark))
+                        .cornerRadius(5)
+                        .padding(.bottom, 50)
+                }
             }
         }
-        //.background(Color.black)
-        //.edgesIgnoringSafeArea(.all)
     }
     
     func photoDescription() -> String!{
@@ -145,3 +158,5 @@ struct PhotoFullscreen: View {
         return result
     }
 }
+
+
