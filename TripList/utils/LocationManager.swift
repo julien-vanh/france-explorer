@@ -15,7 +15,7 @@ class LocationManager: NSObject, ObservableObject {
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
         self.locationManager.requestWhenInUseAuthorization()
-        self.locationManager.startUpdatingLocation()
+        self.locationManager.startMonitoringSignificantLocationChanges()
     }
 
     @Published var locationStatus: CLAuthorizationStatus? {
