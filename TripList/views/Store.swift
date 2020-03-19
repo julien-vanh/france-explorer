@@ -75,15 +75,7 @@ struct SearchResult: View {
                 place in
                 NavigationLink(destination: PlaceDetail(place: place)){
                     HStack(alignment: .center, spacing: 10) {
-                        Image("\(place.category)-colored")
-                            .renderingMode(.original)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 20, height: 20)
-                            .padding(8)
-                            //.background(Color(AppStyle.color(for: place.category)))
-                            //.cornerRadius(10)
-                        Text(place.title).foregroundColor(.blue)
+                        PlaceListRow(place: place)
                     }
                 }
             }

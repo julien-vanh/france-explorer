@@ -42,6 +42,12 @@ struct DreamList: View {
                 .onDelete(perform: deleteRow)
                 .onMove(perform: move)
             }
+            .listStyle(GroupedListStyle())
+            .environment(\.horizontalSizeClass, .regular)
+                
+            
+            
+
             .navigationBarTitle("Ma liste")
             .navigationBarItems(leading:EditButton(), trailing:(
                 Button(action: {

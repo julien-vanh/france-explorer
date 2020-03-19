@@ -92,9 +92,6 @@ struct Parameters: View {
                     Text("Mentions tierces")
                 })
                 
-                
-                
-                
             }
             .sheet(isPresented: $isPurchasePresented, onDismiss: {
                 print("Dismiss")
@@ -103,9 +100,9 @@ struct Parameters: View {
             })
             
             .listStyle(GroupedListStyle())
+            .environment(\.horizontalSizeClass, .regular)
             .navigationBarTitle("Paramètres", displayMode: .inline)
-            
-        }.environment(\.horizontalSizeClass, .compact)
+        }
     }
     
     

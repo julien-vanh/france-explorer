@@ -636,6 +636,10 @@
 		F9815CDE23EAD36B00EEF9CA /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9815CDD23EAD36B00EEF9CA /* Article.swift */; };
 		F9815CE023EAD50500EEF9CA /* StoreArticlesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9815CDF23EAD50500EEF9CA /* StoreArticlesRow.swift */; };
 		F9815CE223EAD53900EEF9CA /* ArticleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9815CE123EAD53900EEF9CA /* ArticleDetail.swift */; };
+		F9815D732423B4E80057D515 /* PlacesListFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9815D722423B4E80057D515 /* PlacesListFilter.swift */; };
+		F9815D752423B63E0057D515 /* WebViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9815D742423B63E0057D515 /* WebViewModal.swift */; };
+		F9815D7724240C080057D515 /* PlaceListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9815D7624240C080057D515 /* PlaceListRow.swift */; };
+		F9815D7924240EC60057D515 /* DistanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9815D7824240EC60057D515 /* DistanceView.swift */; };
 		F98172572417D2E70011A76B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98172562417D2E70011A76B /* WebView.swift */; };
 		F99E73A323ED9CD4006BC089 /* Reminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E73A223ED9CD4006BC089 /* Reminders.swift */; };
 		F99E73A723EDAD54006BC089 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E73A623EDAD54006BC089 /* ActivityViewController.swift */; };
@@ -1319,6 +1323,10 @@
 		F9815CDD23EAD36B00EEF9CA /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		F9815CDF23EAD50500EEF9CA /* StoreArticlesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreArticlesRow.swift; sourceTree = "<group>"; };
 		F9815CE123EAD53900EEF9CA /* ArticleDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetail.swift; sourceTree = "<group>"; };
+		F9815D722423B4E80057D515 /* PlacesListFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListFilter.swift; sourceTree = "<group>"; };
+		F9815D742423B63E0057D515 /* WebViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModal.swift; sourceTree = "<group>"; };
+		F9815D7624240C080057D515 /* PlaceListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListRow.swift; sourceTree = "<group>"; };
+		F9815D7824240EC60057D515 /* DistanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceView.swift; sourceTree = "<group>"; };
 		F98172562417D2E70011A76B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		F99E73A223ED9CD4006BC089 /* Reminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminders.swift; sourceTree = "<group>"; };
 		F99E73A623EDAD54006BC089 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
@@ -2085,6 +2093,7 @@
 				F9D032F1240E89A7008A9B13 /* ArticlesList.swift */,
 				F9815CE123EAD53900EEF9CA /* ArticleDetail.swift */,
 				F95DE58523DE349600BE1BD5 /* PlacesList.swift */,
+				F9815D722423B4E80057D515 /* PlacesListFilter.swift */,
 				F95DE58723DE349600BE1BD5 /* PlacesPager.swift */,
 				F95DE57C23DE349500BE1BD5 /* PlaceDetail.swift */,
 				F9DC222A23E31DF30023B8EF /* PlaceDetailPhotos.swift */,
@@ -2167,6 +2176,7 @@
 			isa = PBXGroup;
 			children = (
 				F95DE57823DE349500BE1BD5 /* PlaceMapView.swift */,
+				F9815D742423B63E0057D515 /* WebViewModal.swift */,
 				F926A7C924194CF900615E07 /* PlaceAnnotationView.swift */,
 				F9D49FA02402917C005A2B8E /* PlaceGridCompact.swift */,
 				F94B49722401DE3D0055956D /* PlaceViewCompact.swift */,
@@ -2177,6 +2187,8 @@
 				F99E73AC23F3611E006BC089 /* NearestPlaces.swift */,
 				F95DE57F23DE349600BE1BD5 /* AssociatesRow.swift */,
 				F9C1E805241A943F006EBEB8 /* ProgressBar.swift */,
+				F9815D7824240EC60057D515 /* DistanceView.swift */,
+				F9815D7624240C080057D515 /* PlaceListRow.swift */,
 			);
 			path = subviews;
 			sourceTree = "<group>";
@@ -2937,6 +2949,7 @@
 				F95DE55A23DE2F0F00BE1BD5 /* AppDelegate.swift in Sources */,
 				F9FC37D4240D15F900F17AAC /* PurchasePage.swift in Sources */,
 				F98172572417D2E70011A76B /* WebView.swift in Sources */,
+				F9815D752423B63E0057D515 /* WebViewModal.swift in Sources */,
 				F9DC21D423E0CEC20023B8EF /* ProgressionMapController.swift in Sources */,
 				F9AB64C6240C22C90061CD52 /* AppState.swift in Sources */,
 				F91DEDA323E8A26E00D8FFD7 /* TripList.xcdatamodeld in Sources */,
@@ -2944,6 +2957,7 @@
 				F91DEDCA23E9BAB900D8FFD7 /* Completion.swift in Sources */,
 				F99E73AD23F3611E006BC089 /* NearestPlaces.swift in Sources */,
 				F92E05CF2412EE44009C5ADD /* TabBarController.swift in Sources */,
+				F9815D7924240EC60057D515 /* DistanceView.swift in Sources */,
 				F94B49732401DE3D0055956D /* PlaceViewCompact.swift in Sources */,
 				F95DE5B923DE416D00BE1BD5 /* Dream.swift in Sources */,
 				F9D032F4240EC2DB008A9B13 /* SideMenu.swift in Sources */,
@@ -2952,6 +2966,7 @@
 				F95DE58C23DE349700BE1BD5 /* PlaceMapView.swift in Sources */,
 				F9C9C68823E4D093002C1DA0 /* AppStyle.swift in Sources */,
 				F95DE59B23DE349700BE1BD5 /* PlacesPager.swift in Sources */,
+				F9815D732423B4E80057D515 /* PlacesListFilter.swift in Sources */,
 				F95DE59823DE349700BE1BD5 /* DreamListRow.swift in Sources */,
 				F9815CDE23EAD36B00EEF9CA /* Article.swift in Sources */,
 				F9D032F6240FD085008A9B13 /* Store.swift in Sources */,
@@ -2989,6 +3004,7 @@
 				F9D82E5D2417E3DA003961AD /* BlurView.swift in Sources */,
 				F92E05D12417A467009C5ADD /* LaunchCarousel.swift in Sources */,
 				F95DE59A23DE349700BE1BD5 /* Progression.swift in Sources */,
+				F9815D7724240C080057D515 /* PlaceListRow.swift in Sources */,
 				F9FC37E1240D61D500F17AAC /* MailView.swift in Sources */,
 				F95DE59623DE349700BE1BD5 /* StoreCategoriesRow.swift in Sources */,
 				F95DE59723DE349700BE1BD5 /* ImageCarouselView.swift in Sources */,

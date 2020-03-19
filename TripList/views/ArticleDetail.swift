@@ -28,17 +28,20 @@ struct ArticleDetail: View {
                     .frame(width: geometry.size.width, height: self.getHeightForHeaderImage(geometry))
                     .clipped()
                     .offset(x: 0, y: self.getOffsetForHeaderImage(geometry))
+                    .navigationBarTitle(self.getNavigationTitle(geometry))
             }.frame(height: 300)
             
             VStack {
                 Text(self.article.content.title).font(.largeTitle)
                 
-                Text(self.article.content.description).padding()
+                Text(self.article.content.description).padding(10)
+                
+                SeparationBar()
                 
                 VStack(alignment: .leading) {
                     if associatedPlaces.count > 0 {
                         Text("Destinations associées")
-                            .font(.title)
+                            .font(.headline)
                             .padding([.top, .leading], 15)
                         
                         ForEach(associatedPlaces) { place in
@@ -60,6 +63,10 @@ struct ArticleDetail: View {
             ])
         }
     }
+    private func getNavigationTitle(_ geometry: GeometryProxy) -> String {
+        return getScrollOffset(geometry) < -250 ? self.article.title : ""
+    }
+    
     
     private func getScrollOffset(_ geometry: GeometryProxy) -> CGFloat {
         geometry.frame(in: .global).minY

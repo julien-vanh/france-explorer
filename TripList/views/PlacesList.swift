@@ -10,58 +10,38 @@ import SwiftUI
 
 struct PlacesList: View {
     @ObservedObject var appState = AppState.shared
-    var category: Category!
-    var places: [Place] = []
-    
-    @State var menuOpen: Bool = false
-    
-    init(){
-        places = PlaceStore.shared.getRandom(count: 100, premium: appState.isPremium)
-    }
+    @State private var filterOpen: Bool = false
+    @State private var filterModel: FilterModel
     
     init(category: Category){
-        self.category = category
-        places = PlaceStore.shared.getAllForCategory(category: category.category)
+        _filterModel = State(initialValue: FilterModel(sortBy: .distance, categoryFilter: category.category))
     }
     
     var body: some View {
-        ZStack {
-            List{
-                ForEach(places) { place in
-                    NavigationLink(
-                        destination: PlacesPager(places: self.places, initialePlace:place)
-                    ) {
-                        Text(place.title)
-                    }
+        List{
+            ForEach(PlaceStore.shared.getPlacesFor(filter: self.filterModel, premium: appState.isPremium, count: 50, position: LocationManager.shared.lastLocation)) { place in
+                NavigationLink(
+                    destination: PlaceDetail(place: place)
+                ) {
+                    PlaceListRow(place: place)
                 }
             }
-            
-            SideMenu(width: 270,
-                     isOpen: self.menuOpen,
-                     menuClose: self.openMenu)
         }
-        
-        
         .navigationBarItems(trailing:
             Button("Filtrer") {
-                self.openMenu()
+                self.filterOpen.toggle()
             }
         )
-        .navigationBarTitle(Text(getTitle()), displayMode: .inline)
-    }
-    
-    func openMenu() {
-        self.menuOpen.toggle()
-    }
-    
-    private func getTitle() -> String {
-        if let cat = category {
-            return cat.title
-        } else {
-            return ""
-        }
+        .navigationBarTitle(Text("Destinations"), displayMode: .inline)
+        .sheet(isPresented: $filterOpen, onDismiss: {
+            //self.loadPlaces()
+        }, content: {
+            PlacesListFilter(filterModel : self.$filterModel)
+        })
     }
 }
+
+
 
 struct PlacesList_Previews: PreviewProvider {
     static var previews: some View {

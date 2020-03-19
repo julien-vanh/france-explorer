@@ -30,6 +30,7 @@ final class PlaceStore: NSObject {
             premiumPlaces["\(place.id)"] = place
         }
         
+        categories[PlaceCategory.all.rawValue] = Category(id: 0, category: .all, title: "Tous", image: "")
         categories[PlaceCategory.city.rawValue] = Category(id: 1, category: .city, title: "Ville", image: "")
         categories[PlaceCategory.museum.rawValue] = Category(id: 2, category: .museum, title: "Musée", image: "")
         categories[PlaceCategory.nature.rawValue] = Category(id: 3, category: .nature, title: "Nature", image: "")
@@ -57,12 +58,31 @@ final class PlaceStore: NSObject {
         return regionsData
     }
     
-    func getAllForCategory(category: PlaceCategory) -> [Place] {
-        return premiumPlaces.values.filter { $0.category == category }
-    }
-    
-    func getAllForCategory(category: PlaceCategory, regionId: String) -> [Place] {
-        return premiumPlaces.values.filter { $0.regionId == regionId && $0.category == category }
+    func getPlacesFor(filter: FilterModel, premium: Bool, count: Int, position: CLLocation!) -> [Place]{
+        let placeDict = premium ? premiumPlaces : freePlaces
+        
+        var result: [Place]
+        if filter.categoryFilter != .all {
+            result = placeDict.values.filter { $0.category == filter.categoryFilter }
+        } else {
+            result = Array(placeDict.values)
+        }
+        
+        if filter.sortBy == .popularity {
+            result.sort { (p1, p2) -> Bool in
+                return p1.popularity > p2.popularity
+            }
+        } else if filter.sortBy == .distance && position != nil {
+            let positionPoint = MKMapPoint(position.coordinate);
+            
+            result.sort { (p1, p2) -> Bool in
+                let distanceP1 = positionPoint.distance(to: MKMapPoint(p1.locationCoordinate))
+                let distanceP2 = positionPoint.distance(to: MKMapPoint(p2.locationCoordinate))
+                return distanceP1 < distanceP2
+            }
+        }
+        
+        return Array(result.prefix(min(result.count, count)))
     }
     
     func getAllForRegion(regionId: String) -> [Place] {

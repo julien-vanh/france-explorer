@@ -12,7 +12,6 @@ import UIKit
 
 
 struct DreamDetail: View {
-    @ObservedObject var locationManager = LocationManager.shared
     var dream: Dream
     var place: Place
     
@@ -30,6 +29,7 @@ struct DreamDetail: View {
                     .frame(width: geometry.size.width, height: self.getHeightForHeaderImage(geometry))
                     .clipped()
                     .offset(x: 0, y: self.getOffsetForHeaderImage(geometry))
+                    .navigationBarTitle(self.getNavigationTitle(geometry))
             }.frame(height: 300)
             
             VStack {
@@ -39,9 +39,7 @@ struct DreamDetail: View {
                 
                 Text(self.place.title).font(.largeTitle)
                 
-                if locationManager.isLocationEnable() {
-                    Text("à " + AppStyle.formatDistance(value: locationManager.distanceTo(coordinate: place.locationCoordinate)))
-                }
+                DistanceView(coordinate: place.locationCoordinate)
                 
                 NavigationLink(destination: PlaceDetail(place: self.place, displayAssociates: false)) {
                     HStack {
@@ -77,12 +75,15 @@ struct DreamDetail: View {
             GeometryReader { geometry in
                 PlaceMapView(place: self.place)
                     //.frame(width: geometry.size.width, height: UIScreen.main.bounds.height - 50 - self.getScrollOffset(geometry))//Lag
-                    .frame(width: geometry.size.width, height: 500)
+                    .frame(width: geometry.size.width, height: 500).disabled(true)
             }.frame(height: 500)
         }
         .edgesIgnoringSafeArea(.top)
     }
     
+    private func getNavigationTitle(_ geometry: GeometryProxy) -> String {
+        return getScrollOffset(geometry) < -290 ? self.place.title : ""
+    }
     
     private func getScrollOffset(_ geometry: GeometryProxy) -> CGFloat {
         geometry.frame(in: .global).minY

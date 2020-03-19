@@ -19,8 +19,7 @@ class AppStyle {
             case .nature: color = UIColor(hex: 0x3BCE41)
             case .historical: color = UIColor(hex: 0x999999)
             case .event: color = UIColor(hex: 0x8C32C3)
-            //case .park: color = UIColor(hex: 0x00796B)
-            //case .activity: color = UIColor(hex: 0xE64A19)
+            case .all: color = UIColor(hex: 0x333333)
         }
         return color
     }

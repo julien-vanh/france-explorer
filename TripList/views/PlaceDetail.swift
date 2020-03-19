@@ -11,7 +11,6 @@ import MapKit
 import FirebaseAnalytics
 
 struct PlaceDetail: View {
-    @ObservedObject var locationManager = LocationManager.shared
     @State var websitePresented = false
     @State var place: Place = PlaceStore.shared.getRandom(count: 1, premium: false)[0]
     var displayAssociates: Bool = true
@@ -45,7 +44,7 @@ struct PlaceDetail: View {
                     }
                     .foregroundColor(.blue)
                     .padding(5.0)
-                    .background(BlurView(style: .extraLight))
+                    .background(BlurView())
                     .cornerRadius(10)
                         
                     Spacer()
@@ -58,9 +57,7 @@ struct PlaceDetail: View {
                 
                 Text(self.place.title).font(.largeTitle).multilineTextAlignment(.center)
                 
-                if locationManager.isLocationEnable() {
-                    Text("à " + AppStyle.formatDistance(value: locationManager.distanceTo(coordinate: place.locationCoordinate)))
-                }
+                DistanceView(coordinate: place.locationCoordinate)
                 
                 
                 PlaceButtons(place: self.place)

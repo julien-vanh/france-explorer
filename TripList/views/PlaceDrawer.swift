@@ -35,35 +35,38 @@ struct PlaceDrawer: View {
             
             if UIDevice.current.userInterfaceIdiom == .pad {
                 HStack(alignment: .top, spacing: 10) {
-                    GeometryReader { geometry in
-                        ImageStore.shared.image(forPlace: self.place)
-                            .renderingMode(.original)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: geometry.size.width, height:geometry.size.height)
-                            .clipped().cornerRadius(15).padding(10)
-                    }.frame(height: 150)
                     
+                    ImageStore.shared.image(forPlace: self.place)
+                        .renderingMode(.original)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height:150)
+                        .clipped().cornerRadius(15)
+                        
                     Spacer()
                     
                     PlaceDrawerMetadata(place: place)
                 }
             } else {
-                GeometryReader { geometry in
+                HStack{
+                    Spacer()
                     ImageStore.shared.image(forPlace: self.place)
                         .renderingMode(.original)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: geometry.size.width, height:geometry.size.height)
-                        .clipped().cornerRadius(15).padding(10)
-                }.frame(height: 150)
+                        .frame(height:150)
+                        .clipped().cornerRadius(15)
+                    Spacer()
+                }
+                    
                 
                 PlaceDrawerMetadata(place: place)
             }
             
             
             if self.place.content != nil {
-                Text(self.place.content!.description).lineLimit(10).padding(.top, 10)
+                SeparationBar()
+                Text(self.place.content!.description).lineLimit(9)
             }
             
             SeparationBar()

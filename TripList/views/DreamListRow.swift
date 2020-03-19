@@ -31,7 +31,9 @@ struct DreamListRow: View {
                     .font(.title)
             }.buttonStyle(BorderlessButtonStyle())
             
-            Text(dream.title ?? "")
+            Text(dream.title ?? "").strikethrough(self.dream.completed)
+            
+            Spacer()
         }
     }
     

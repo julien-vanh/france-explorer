@@ -78,6 +78,7 @@ struct PlaceRegion: Hashable, Codable, Identifiable {
 }
 
 enum PlaceCategory: String, CaseIterable, Codable, Hashable {
+    case all = "all"
     case city = "city"
     case museum = "museum"
     case nature = "nature"
