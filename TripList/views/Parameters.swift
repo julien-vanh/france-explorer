@@ -91,7 +91,6 @@ struct Parameters: View {
                     
                     Text("Mentions tierces")
                 })
-                
             }
             .sheet(isPresented: $isPurchasePresented, onDismiss: {
                 print("Dismiss")

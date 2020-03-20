@@ -35,7 +35,7 @@ struct ProgressionRegion: View {
     
     private func getCards() -> [ProgressionCard]{
         let places = PlaceStore.shared.getAllForRegion(regionId: self.region.id).sorted { (p1, p2) -> Bool in
-            p1.category.rawValue < p2.category.rawValue
+            p1.popularity > p2.popularity
         }
         
         var result: [ProgressionCard] = []
@@ -95,7 +95,7 @@ struct PlaceCardLocked: View {
     var body: some View {
         Button(action: {self.isPurchasePresented.toggle()}) {
             ZStack(alignment: .bottomLeading) {
-                ImageStore.shared.image(name: "placeholder.jpg")//TODO
+                ImageStore.shared.image(name: "placeholder.jpg")
                     .resizable()
                     .renderingMode(.original)
                     .aspectRatio(contentMode: .fit)
@@ -120,12 +120,6 @@ struct PlaceCardLocked: View {
                 .padding(5.0)
             }
         }
-            /*
-        .overlay(
-            RoundedRectangle(cornerRadius: 10)
-                .strokeBorder(Color.yellow, lineWidth: 3)
-        )*/
-        //.cornerRadius(10)
         .sheet(isPresented: self.$isPurchasePresented, content: {
             PurchasePage()
         })
@@ -168,7 +162,7 @@ struct PlaceCard: View {
  */
                     Spacer()
                     Text(card.place!.title)
-                        .foregroundColor(Color(AppStyle.color(for: self.card.place!.category)))
+                        .foregroundColor((self.completions.first != nil) ? Color(AppStyle.color(for: self.card.place!.category)) : Color.gray)
                         .font(.caption)
                         .lineLimit(2)
                         .multilineTextAlignment(.center)

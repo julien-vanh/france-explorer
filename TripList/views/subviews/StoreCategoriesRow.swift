@@ -55,7 +55,7 @@ struct StoreCategoryItem: View {
         NavigationLink(
             destination: PlacesList(category: category)
         ) {
-            Text(category.title)
+            Text(category.titlePlural)
                 .fontWeight(.semibold)
                 .frame(width: 130, height: 50)
                 .foregroundColor(.white)

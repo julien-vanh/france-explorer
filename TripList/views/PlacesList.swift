@@ -11,10 +11,10 @@ import SwiftUI
 struct PlacesList: View {
     @ObservedObject var appState = AppState.shared
     @State private var filterOpen: Bool = false
-    @State private var filterModel: FilterModel
+    @ObservedObject private var filterModel: FilterModel
     
     init(category: Category){
-        _filterModel = State(initialValue: FilterModel(sortBy: .distance, categoryFilter: category.category))
+        self.filterModel = FilterModel(sortBy: .distance, categoryFilter: category.category)
     }
     
     var body: some View {
@@ -36,7 +36,7 @@ struct PlacesList: View {
         .sheet(isPresented: $filterOpen, onDismiss: {
             //self.loadPlaces()
         }, content: {
-            PlacesListFilter(filterModel : self.$filterModel)
+            PlacesListFilter(filterModel : self.filterModel)
         })
     }
 }

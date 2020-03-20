@@ -22,9 +22,9 @@ enum SortOption {
     }
 }
 
-class FilterModel: NSObject {
-    var sortBy: SortOption = .distance
-    var categoryFilter: PlaceCategory = .all
+class FilterModel: ObservableObject {
+    @Published var sortBy: SortOption = .distance
+    @Published var categoryFilter: PlaceCategory = .all
     
     convenience init(sortBy: SortOption, categoryFilter: PlaceCategory){
         self.init()
@@ -52,10 +52,8 @@ struct PlacesListFilter: View {
         PlaceCategory.nature,
         PlaceCategory.historical
     ]
-    
-    @Binding var filterModel: FilterModel
-    
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @ObservedObject var filterModel: FilterModel
     
     var body: some View {
         NavigationView {
@@ -63,28 +61,36 @@ struct PlacesListFilter: View {
                 Section {
                     Picker(selection: $filterModel.sortBy, label: Text("Trier par")) {
                         ForEach(sortOptions, id: \.self) { option in
-                            Text(SortOption.labelFor(option))
-
+                            Text(SortOption.labelFor(option)).tag(option)
                         }
                     }
                 }
                 
                 Section {
-                    Picker(selection: $filterModel.categoryFilter, label: Text("Type de destinations")) {
+                    Picker(selection: $filterModel.categoryFilter, label: Text("Type de destination")) {
                         ForEach(categories, id: \.self) { option in
-                            Text(PlaceStore.shared.getCategory(placeCategory: option).title)
-
+                            Text(PlaceStore.shared.getCategory(placeCategory: option).titlePlural).tag(option)
                         }
                     }
                 }
                 
-                Section {
+                HStack {
+                    Spacer()
+                    
                     Button(action: {
                         self.presentationMode.wrappedValue.dismiss()
                     }) {
                         Text("Filtrer")
+                            .fontWeight(.semibold)
+                            .font(.headline).foregroundColor(.white)
+                            .frame(width: 250.0, height: 40.0)
+                            .foregroundColor(.white)
+                            .background(Color.blue).cornerRadius(10)
                     }
+                    
+                    Spacer()
                 }
+                
             }
             .navigationBarTitle("Filtrer", displayMode: .inline)
             .navigationBarItems(leading:
@@ -96,13 +102,13 @@ struct PlacesListFilter: View {
                     self.presentationMode.wrappedValue.dismiss()
                 }
             )
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
 
 struct PlacesListFilter_Previews: PreviewProvider {
     static var previews: some View {
-        PlacesListFilter(filterModel: .constant(FilterModel()))
+        PlacesListFilter(filterModel: FilterModel())
     }
 }

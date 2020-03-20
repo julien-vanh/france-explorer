@@ -31,11 +31,11 @@ final class PlaceStore: NSObject {
         }
         
         categories[PlaceCategory.all.rawValue] = Category(id: 0, category: .all, title: "Tous", image: "")
-        categories[PlaceCategory.city.rawValue] = Category(id: 1, category: .city, title: "Ville", image: "")
-        categories[PlaceCategory.museum.rawValue] = Category(id: 2, category: .museum, title: "Musée", image: "")
-        categories[PlaceCategory.nature.rawValue] = Category(id: 3, category: .nature, title: "Nature", image: "")
-        categories[PlaceCategory.historical.rawValue] = Category(id: 4, category: .historical, title: "Histoire", image: "")
-        categories[PlaceCategory.event.rawValue] = Category(id: 5, category: .event, title: "Sortie", image: "")
+        categories[PlaceCategory.city.rawValue] = Category(id: 1, category: .city, title: "Ville", image: "", titlePlural: "Villes")
+        categories[PlaceCategory.museum.rawValue] = Category(id: 2, category: .museum, title: "Musée", image: "", titlePlural: "Musées")
+        categories[PlaceCategory.nature.rawValue] = Category(id: 3, category: .nature, title: "Nature", image: "", titlePlural: "Nature")
+        categories[PlaceCategory.historical.rawValue] = Category(id: 4, category: .historical, title: "Patrimoine", image: "", titlePlural: "Patrimoine")
+        categories[PlaceCategory.event.rawValue] = Category(id: 5, category: .event, title: "Sortie", image: "", titlePlural: "Sorties")
     }
     
     func get(id: String) -> Place! {
@@ -140,12 +140,18 @@ struct Category: Identifiable {
     var id: Int
     var category: PlaceCategory
     var title: String
+    var titlePlural: String
     var image: String
     
-    init(id: Int, category: PlaceCategory, title: String, image: String){
+    init(id: Int, category: PlaceCategory, title: String, image: String, titlePlural: String? = nil){
         self.id = id
         self.category = category
         self.title = title
         self.image = image
+        if titlePlural != nil {
+            self.titlePlural = titlePlural!
+        } else {
+            self.titlePlural = title
+        }
     }
 }

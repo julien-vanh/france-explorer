@@ -19,6 +19,7 @@ struct DistanceView: View {
             if self.locationManager.isLocationEnable() {
                 Text("à "+AppStyle.formatDistance(value: self.locationManager.distanceTo(coordinate: coordinate)))
                     .font(.caption)
+                    .foregroundColor(.white)
                     .padding(3)
                     .background(Color(.systemGray2))
                     .cornerRadius(10)
