@@ -113,9 +113,7 @@ struct DreamList: View {
     
     private func copyInReminder(){
         showingPopover = false
-        let dreamsArray = self.dreams.map { (dream) -> Dream in
-            return dream
-        } // car self.dreams n'est pas un array
+        let dreamsArray = self.dreams.compactMap {($0)}
         Reminders.copyDreams(dreams: dreamsArray, completion: { success, error in
             if error != nil {
                 self.alertErrorMessage = error!.localizedDescription
