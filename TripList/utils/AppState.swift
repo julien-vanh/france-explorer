@@ -12,6 +12,7 @@ import SwiftUI
 
 enum UserDefaultsKeys : String {
     case cguAccepted = "cguAccepted"
+    case reminderId = "reminderId"
 }
 
 class AppState: NSObject, ObservableObject {

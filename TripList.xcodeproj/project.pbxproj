@@ -602,6 +602,8 @@
 		F92E05CD24129558009C5ADD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F92E05CC24129558009C5ADD /* GoogleService-Info.plist */; };
 		F92E05CF2412EE44009C5ADD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92E05CE2412EE44009C5ADD /* TabBarController.swift */; };
 		F92E05D12417A467009C5ADD /* LaunchCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92E05D02417A467009C5ADD /* LaunchCarousel.swift */; };
+		F9303F67242529E000975A07 /* launchcarousel1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9303F66242529DF00975A07 /* launchcarousel1.jpg */; };
+		F9303F6924252AD600975A07 /* launchcarousel2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9303F6824252AD500975A07 /* launchcarousel2.jpg */; };
 		F94B49692400435A0055956D /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = F94B49682400435A0055956D /* placeholder.png */; };
 		F94B49702401A42A0055956D /* SeparationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B496F2401A42A0055956D /* SeparationBar.swift */; };
 		F94B49732401DE3D0055956D /* PlaceViewCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B49722401DE3D0055956D /* PlaceViewCompact.swift */; };
@@ -646,6 +648,7 @@
 		F99E73A923EF0D69006BC089 /* ProgressionRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E73A823EF0D69006BC089 /* ProgressionRegion.swift */; };
 		F99E73AB23F34DE2006BC089 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E73AA23F34DE2006BC089 /* LocationManager.swift */; };
 		F99E73AD23F3611E006BC089 /* NearestPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E73AC23F3611E006BC089 /* NearestPlaces.swift */; };
+		F9A18E9C24253FBF0075A223 /* launchcarousel3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9A18E9B24253FBF0075A223 /* launchcarousel3.jpg */; };
 		F9AB64C0240AD7520061CD52 /* PlaceButtonsMini.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64BF240AD7520061CD52 /* PlaceButtonsMini.swift */; };
 		F9AB64C2240AD9CE0061CD52 /* VibrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64C1240AD9CE0061CD52 /* VibrationManager.swift */; };
 		F9AB64C4240BD7720061CD52 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64C3240BD7720061CD52 /* Parameters.swift */; };
@@ -1288,6 +1291,8 @@
 		F92E05CC24129558009C5ADD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F92E05CE2412EE44009C5ADD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F92E05D02417A467009C5ADD /* LaunchCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCarousel.swift; sourceTree = "<group>"; };
+		F9303F66242529DF00975A07 /* launchcarousel1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launchcarousel1.jpg; sourceTree = "<group>"; };
+		F9303F6824252AD500975A07 /* launchcarousel2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launchcarousel2.jpg; sourceTree = "<group>"; };
 		F94B49682400435A0055956D /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		F94B496F2401A42A0055956D /* SeparationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparationBar.swift; sourceTree = "<group>"; };
 		F94B49722401DE3D0055956D /* PlaceViewCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewCompact.swift; sourceTree = "<group>"; };
@@ -1333,6 +1338,7 @@
 		F99E73A823EF0D69006BC089 /* ProgressionRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressionRegion.swift; sourceTree = "<group>"; };
 		F99E73AA23F34DE2006BC089 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		F99E73AC23F3611E006BC089 /* NearestPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestPlaces.swift; sourceTree = "<group>"; };
+		F9A18E9B24253FBF0075A223 /* launchcarousel3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launchcarousel3.jpg; sourceTree = "<group>"; };
 		F9AB64BF240AD7520061CD52 /* PlaceButtonsMini.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceButtonsMini.swift; sourceTree = "<group>"; };
 		F9AB64C1240AD9CE0061CD52 /* VibrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationManager.swift; sourceTree = "<group>"; };
 		F9AB64C3240BD7720061CD52 /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
@@ -2001,6 +2007,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F9303F5F2425251500975A07 /* launchCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				F9A18E9B24253FBF0075A223 /* launchcarousel3.jpg */,
+				F9303F6824252AD500975A07 /* launchcarousel2.jpg */,
+				F9303F66242529DF00975A07 /* launchcarousel1.jpg */,
+			);
+			path = launchCarousel;
+			sourceTree = "<group>";
+		};
 		F94B496E2401999E0055956D /* photos */ = {
 			isa = PBXGroup;
 			children = (
@@ -2132,6 +2148,7 @@
 		F95DE57023DE2F6100BE1BD5 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				F9303F5F2425251500975A07 /* launchCarousel */,
 				F9FC37D5240D222200F17AAC /* purchasePage */,
 				F94B49682400435A0055956D /* placeholder.png */,
 				F9DC21D923E0DB1E0023B8EF /* regions.geojson */,
@@ -2683,6 +2700,7 @@
 				F92E050F2412898C009C5ADD /* SainteMregliseAirborneMuseum.jpg in Resources */,
 				F92E05AD2412898C009C5ADD /* AbbayedeBrantme.jpg in Resources */,
 				F92E047A2412898C009C5ADD /* ChteauRoyaldAmboise.jpg in Resources */,
+				F9A18E9C24253FBF0075A223 /* launchcarousel3.jpg in Resources */,
 				F92E04622412898C009C5ADD /* Loubressac.jpg in Resources */,
 				F92E03EA2412898C009C5ADD /* LeCentrePompidou.jpg in Resources */,
 				F92E03C32412898B009C5ADD /* ChteauFortdeSedan.jpg in Resources */,
@@ -2759,6 +2777,7 @@
 				F92E055C2412898C009C5ADD /* CathdraleSainteCroixdOrlans.jpg in Resources */,
 				F92E05892412898C009C5ADD /* ChteaudeVauxleVicomte.jpg in Resources */,
 				F92E03A82412898B009C5ADD /* ZooParcDeBeauval.jpg in Resources */,
+				F9303F6924252AD600975A07 /* launchcarousel2.jpg in Resources */,
 				F92E03E82412898C009C5ADD /* GrottedeLaVerna.jpg in Resources */,
 				F92E03982412898B009C5ADD /* ChteauDApremontsurAllier.jpg in Resources */,
 				F92E03F52412898C009C5ADD /* OradoursurGlane.jpg in Resources */,
@@ -2779,6 +2798,7 @@
 				F92E05662412898C009C5ADD /* MuseCond.jpg in Resources */,
 				F9D07F6A2412893200D34BC2 /* Lesmeilleursparcsdattractions.jpg in Resources */,
 				F92E04812412898C009C5ADD /* Camargue.jpg in Resources */,
+				F9303F67242529E000975A07 /* launchcarousel1.jpg in Resources */,
 				F92E04642412898C009C5ADD /* MarchDeNolDeStrasbourg.jpg in Resources */,
 				F92E03932412898B009C5ADD /* ChteauDeSaintJeanDeBeauregard.jpg in Resources */,
 				F92E03BE2412898B009C5ADD /* FtesmdivalesdeCordessurCiel.jpg in Resources */,

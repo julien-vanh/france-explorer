@@ -33,9 +33,7 @@ struct PlacesList: View {
             }
         )
         .navigationBarTitle(Text("Destinations"), displayMode: .inline)
-        .sheet(isPresented: $filterOpen, onDismiss: {
-            //self.loadPlaces()
-        }, content: {
+        .sheet(isPresented: $filterOpen, content: {
             PlacesListFilter(filterModel : self.filterModel)
         })
     }

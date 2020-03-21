@@ -16,58 +16,118 @@ struct LaunchCarousel: View {
     @State var currentPageIndex = 0
 
     var subviews = [
-        UIHostingController(rootView: CarouselImage(imageString: "premium1.jpg")),
-        UIHostingController(rootView: CarouselImage(imageString: "premium2.jpg")),
-        UIHostingController(rootView: CarouselImage(imageString: "premium4.jpg"))
+        UIHostingController(rootView: CarouselImage(imageString: "launchcarousel1.jpg")),
+        UIHostingController(rootView: CarouselImage(imageString: "launchcarousel2.jpg")),
+        UIHostingController(rootView: CarouselImage(imageString: "launchcarousel3.jpg"))
     ]
     
-    var titles = ["Bienvenue !", "Votre liste", "Progression"]
-    
-    var captions =  [
-        "Découvrez notre sélection de destinations pour découvrir la France.\nMusées, patrimoine, village, nature, événements et sorties",
-        "Ajoutez vos envies de voyages à votre liste\net préparez vos futures vacances",
-        "Marquez les lieux visités et regardez ce qu'il reste à explorer"
-    ]
+    var titles = ["Bienvenue !", "Nos catégories", "Organisez votre voyage"]
     
     
     
     var body: some View {
         ZStack(alignment: .bottom) {
-            Color.white
-            
-            
-            
+            Color.black
             
             PageViewController(currentPageIndex: $currentPageIndex, viewControllers: subviews)
             
             
             VStack(spacing: 10) {
                 Text(titles[currentPageIndex])
-                    .font(.title)
-                    //.frame(height: 50)
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
                 
-                Text(captions[currentPageIndex]).multilineTextAlignment(.center)
-                    //.frame(height: 100)
                 
-                if(self.currentPageIndex+1 == self.subviews.count){
-                    VStack(spacing: 0) {
-                        Text("En continuant vous acceptez nos")
-                        HStack {
-                            Button(action: {self.cguPresented.toggle()}) {
-                                Text("CGU").foregroundColor(.blue)
-                            }.sheet(isPresented: self.$cguPresented, content: {
-                                WebViewModal(title: "Conditions générales", url: "https://www.apple.com")//TODO
-                            })
-                            Text("et la")
-                            Button(action: {self.confidentialitePresented.toggle()}) {
-                                Text("Politique de confidentialité").foregroundColor(.blue)
-                            }.sheet(isPresented: self.$confidentialitePresented, content: {
-                                WebViewModal(title: "Confidentialité", url: "https://www.apple.com")//TODO
-                            })
+                if currentPageIndex == 0 {
+                    Text("Ce guide vous permettra de décrouvrir les plus belles destinations touristiques de France.").multilineTextAlignment(.center)
+                }
+                
+                
+                
+                else if currentPageIndex == 1 {
+                    HStack(alignment: .center, spacing: 0) {
+                        Spacer()
+                        ForEach(PlaceStore.shared.getCategories(), id: \.title) { cat in
+                            VStack {
+                                if cat.category != .all {
+                                    Image("\(cat.category.rawValue)-white")
+                                        .renderingMode(.original)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 35, height: 35)
+                                        .padding(10)
+                                        .background(Color(AppStyle.color(for: cat.category)))
+                                        .cornerRadius(10)
+                                    .padding(5)
+                                }
+                            }
+                            
                         }
+                        Spacer()
                     }
                     
+                    Text("Découvrez les régions de France avec nos sélections par catégories.").multilineTextAlignment(.center)
                 }
+ 
+                
+                else if currentPageIndex == 2 {
+                    HStack(alignment: .center, spacing: 10) {
+                        Image(systemName: "text.badge.plus")
+                            .font(.largeTitle)
+                            .frame(width: 35, height: 35)
+                            .padding(10)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                        
+                        Text("Ajoutez les destinations à votre liste.").font(.headline)
+                        
+                        Spacer()
+                    }
+                    
+                    HStack(alignment: .center, spacing: 10) {
+                        Image(systemName: "checkmark.circle.fill")
+                            .font(.largeTitle)
+                            .frame(width: 35, height: 35)
+                            .padding(10)
+                            .background(Color(UIColor.explored))
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                        
+                        Text("Marquez les destinations visitées.").font(.headline)
+                        
+                        Spacer()
+                    }
+                    
+                    HStack(alignment: .center, spacing: 10) {
+                        Image(systemName: "text.badge.checkmark")
+                            .font(.largeTitle)
+                            .frame(width: 35, height: 35)
+                            .padding(10)
+                            .background(Color.white)
+                            .foregroundColor(.black)
+                            .cornerRadius(10)
+                        
+                        Text("Collectionnez les lieux visités de chaques régions.").font(.headline)
+                        
+                        Spacer()
+                    }
+                }
+                
+                
+                if (self.currentPageIndex+1 == self.subviews.count){
+                    VStack(spacing: 0) {
+                        Text("En continuant vous acceptez nos")
+                        
+                        Button(action: {self.cguPresented.toggle()}) {
+                            Text("Conditions générales").foregroundColor(.blue)
+                        }.sheet(isPresented: self.$cguPresented, content: {
+                            WebViewModal(title: "Conditions générales", url: "https://www.apple.com")//TODO
+                        })
+                    }
+                }
+                
+ 
                 
                 PageControl(numberOfPages: subviews.count, currentPageIndex: $currentPageIndex)
                 
@@ -103,14 +163,14 @@ struct LaunchCarousel: View {
                        .font(.headline).foregroundColor(.white)
                        .frame(width: 250.0, height: 40.0)
                        .foregroundColor(.white)
-                    .background(Color.blue)
+                        .background(Color.blue)
                     //.background(LinearGradient(gradient: Gradient(colors: [Color(UIColor(hex:0x3AB9E4)), Color(UIColor(hex:0x1A16C1))]), startPoint: .top, endPoint: .bottom))
                        .cornerRadius(20)
                 }
-            }.padding(70)
+            }.padding(.bottom, 70)
             
             
-        }.edgesIgnoringSafeArea(.all)
+        }.edgesIgnoringSafeArea([.top, .bottom])
     }
 }
 

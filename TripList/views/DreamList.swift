@@ -10,6 +10,8 @@ import SwiftUI
 import EventKit
 
 struct DreamList: View {
+    @State private var showingAlert = false
+    @State private var alertErrorMessage = ""
     @State private var showingActionSheet = false
     @State private var showingPopover = false
     @Environment(\.editMode) var mode
@@ -20,7 +22,7 @@ struct DreamList: View {
     var actionSheet: ActionSheet {
         ActionSheet(title: Text("Ma Liste"), buttons: [
             .default(Text("Copier dans Rappels"), action:copyInReminder),
-            //.default(Text("Imprimer"), action:printAsPdf),
+            //.default(Text("Imprimer"), action:{}),
             .default(Text("Partager"), action:share),
             .destructive(Text("Supprimer les complétés"), action:deleteCompletes),
             .cancel()
@@ -44,10 +46,6 @@ struct DreamList: View {
             }
             .listStyle(GroupedListStyle())
             .environment(\.horizontalSizeClass, .regular)
-                
-            
-            
-
             .navigationBarTitle("Ma liste")
             .navigationBarItems(leading:EditButton(), trailing:(
                 Button(action: {
@@ -84,6 +82,9 @@ struct DreamList: View {
         .actionSheet(isPresented: $showingActionSheet) {
             self.actionSheet
         }
+        .alert(isPresented: $showingAlert) {
+            Alert(title: Text("Erreur"), message: Text(alertErrorMessage), dismissButton: .default(Text("OK")))
+        }
         .navigationViewStyle(StackNavigationViewStyle())
     }
     
@@ -105,7 +106,8 @@ struct DreamList: View {
             try managedObjectContext.save()
         } catch {
             print(error)
-            //TODO afficher une popup
+            self.alertErrorMessage = error.localizedDescription
+            self.showingAlert = true
         }
     }
     
@@ -114,12 +116,12 @@ struct DreamList: View {
         let dreamsArray = self.dreams.map { (dream) -> Dream in
             return dream
         } // car self.dreams n'est pas un array
-        Reminders.copyDreams(dreams: dreamsArray)
-    }
-    
-    private func printAsPdf(){
-        showingPopover = false
-        //TODO
+        Reminders.copyDreams(dreams: dreamsArray, completion: { success, error in
+            if error != nil {
+                self.alertErrorMessage = error!.localizedDescription
+                self.showingAlert = true
+            }
+        })
     }
     
     private func share(){
