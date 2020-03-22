@@ -6,12 +6,21 @@
 //  Copyright © 2020 Julien Vanheule. All rights reserved.
 //
 import SwiftUI
+import StoreKit
+
+
 
 struct PurchasePage: View {
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @ObservedObject var appState = AppState.shared
+    @State private var showingAlert = false
+    @State private var alertErrorMessage = ""
+    @ObservedObject var productsStore : ProductsStore = ProductsStore.shared
+    @State private var isDisabled : Bool = false
     
-    var price:String = "Acheter 4,99 €"
+    @Environment(\.presentationMode) var presentationMode
+    
+    private func dismiss() {
+        self.presentationMode.wrappedValue.dismiss()
+    }
 
     var body: some View {
         NavigationView {
@@ -28,27 +37,24 @@ struct PurchasePage: View {
                 FeatureLine(text: "Suppression de la publicité")
                 FeatureLine(text: "Liste illimitée")
                 
+                
                 VStack(alignment: .center) {
-                    Button(action: {
-                        print("purchasing...")
-                        self.appState.isPremium = true // TODO
-                        self.presentationMode.wrappedValue.dismiss()
-                    }) {
-                        Text(price)
-                            .fontWeight(.semibold)
-                            .font(.headline).foregroundColor(.white)
-                            .frame(width: 250.0, height: 40.0)
-                            .foregroundColor(.white)
-                            .background(Color.green)
-                            .cornerRadius(20)
+                    ForEach(productsStore.products, id: \.self) { prod in
+                        HStack {
+                            if prod.productIdentifier == ProductsStore.ProductGuideFrance {
+                                PurchaseButton(block: {
+                                    self.purchaseProduct(skproduct: prod)
+                                }, product: prod)
+                                    .disabled(IAPManager.shared.isActive(productIdentifier: prod.productIdentifier))
+                            }
+                        }
+                        
                     }
                     
                     SeparationBar()
                         
                     Button(action: {
-                        print("Restauring")
-                        self.appState.isPremium = true // TODO
-                        self.presentationMode.wrappedValue.dismiss()
+                        self.restorePurchases()
                     }) {
                         Text("Restaurer mes achats")
                             .font(.subheadline)
@@ -59,15 +65,65 @@ struct PurchasePage: View {
                 
             }
             .listStyle(GroupedListStyle())
-            .navigationBarTitle("Version complète", displayMode: .inline)
+            .alert(isPresented: $showingAlert) {
+                Alert(title: Text("Erreur"), message: Text(alertErrorMessage), dismissButton: .default(Text("OK")))
+            }
+            .navigationBarTitle(Text("Version complète"), displayMode: .inline)
             .navigationBarItems(trailing:
                 Button("OK") {
-                    self.presentationMode.wrappedValue.dismiss()
+                    self.dismiss()
                 }
             )
-        }.environment(\.horizontalSizeClass, .compact)
+        }
+        .environment(\.horizontalSizeClass, .compact)
+        .onAppear(){
+            self.productsStore.initializeProducts()
+        }
+    }
+    
+    
+    
+    func restorePurchases(){
+        IAPManager.shared.restorePurchases(success: {
+            self.isDisabled = false
+            self.productsStore.handleUpdateStore()
+
+            self.dismiss()
+        }) { (error) in
+            self.isDisabled = false
+            self.productsStore.handleUpdateStore()
+            
+            if let error = error {
+                self.alertErrorMessage = error.localizedDescription
+            } else {
+                self.alertErrorMessage = ""
+            }
+            self.showingAlert = true
+        }
+    }
+    
+    func purchaseProduct(skproduct : SKProduct){
+        print("did tap purchase product: \(skproduct.productIdentifier)")
+        isDisabled = true
+        IAPManager.shared.purchaseProduct(product: skproduct, success: {
+            self.isDisabled = false
+            self.productsStore.handleUpdateStore()
+            
+            self.dismiss()
+        }) { (error) in
+            self.isDisabled = false
+            self.productsStore.handleUpdateStore()
+            
+            if let error = error {
+                self.alertErrorMessage = error.localizedDescription
+            } else {
+                self.alertErrorMessage = ""
+            }
+            self.showingAlert = true
+        }
     }
 }
+
 
 struct PurchasePage_Previews: PreviewProvider {
     static var previews: some View {
@@ -98,6 +154,7 @@ struct PurchaseCarousel: View {
             }
         }.frame(height: 280, alignment: .center)
     }
+    
 }
 
 struct FeatureLine: View {
@@ -109,5 +166,24 @@ struct FeatureLine: View {
             Text(text)
             Spacer()
         }.padding(.horizontal, 20)
+    }
+}
+
+struct PurchaseButton : View {
+    var block : SuccessBlock!
+    var product : SKProduct!
+
+    var body: some View {
+        Button(action: {
+            self.block()
+        }) {
+            Text(product.localizedPrice)
+                .fontWeight(.semibold)
+                .font(.headline).foregroundColor(.white)
+                .frame(width: 250.0, height: 40.0)
+                .foregroundColor(.white)
+                .background(Color.green)
+                .cornerRadius(20)
+        }
     }
 }

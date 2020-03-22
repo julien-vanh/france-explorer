@@ -25,7 +25,7 @@ struct Parameters: View {
                     }
                 }
                 
-                
+                /*
                 Section(header: Text("Synchonisation"), content: {
                     Button(action: {
                         print("Syncing") //TODO
@@ -36,6 +36,7 @@ struct Parameters: View {
                         }
                     }
                 })
+                */
                 
                 
                 Section(header: Text("Applications"), content: {
@@ -79,7 +80,7 @@ struct Parameters: View {
                 
                 
                 
-                Section(header: Text("À propos"), footer: Footer(), content: {
+                Section(header: Text("À propos"), footer: AboutFooter(), content: {
                     
                     HStack {
                         Text("Version")
@@ -92,9 +93,7 @@ struct Parameters: View {
                     Text("Mentions tierces")
                 })
             }
-            .sheet(isPresented: $isPurchasePresented, onDismiss: {
-                print("Dismiss")
-            }, content: {
+            .sheet(isPresented: $isPurchasePresented, content: {
                 PurchasePage()
             })
             
@@ -113,11 +112,16 @@ struct Parameters_Previews: PreviewProvider {
     }
 }
 
-struct Footer: View {
+struct AboutFooter: View {
     var body: some View {
+        HStack {
+            Spacer()
             Text("TripList\n @2020 ForgeApp Studio. Tous droits réservés.")
-                .foregroundColor(.gray)
-                .font(.footnote)
+            .foregroundColor(.gray)
+                .font(.footnote).multilineTextAlignment(.center)
+            Spacer()
+        }
+            
     }
 }
 

@@ -20,10 +20,12 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MKDirectionsApplicationSupportedModes</key>
+	<array/>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Get User Position</string>
+	<string>Pour trouver les destinations à proximité</string>
 	<key>NSRemindersUsageDescription</key>
-	<string>Enregistrez vos destinations</string>
+	<string>Pour copier Ma Liste des destinations</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

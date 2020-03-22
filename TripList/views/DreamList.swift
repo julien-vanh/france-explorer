@@ -29,8 +29,6 @@ struct DreamList: View {
         ])
     }
     
-    
-    
     var body: some View {
         NavigationView(){
             List {
