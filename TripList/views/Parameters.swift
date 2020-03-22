@@ -101,6 +101,7 @@ struct Parameters: View {
             .environment(\.horizontalSizeClass, .regular)
             .navigationBarTitle("Paramètres", displayMode: .inline)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     
