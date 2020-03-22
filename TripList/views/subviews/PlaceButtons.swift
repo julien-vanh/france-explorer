@@ -86,13 +86,15 @@ struct PlaceButtons: View {
                             .font(.headline)
                     }
                     .padding()
-                    .foregroundColor(.red)
+                    .foregroundColor(.white)
+                    .background(Color.red)
+                    .cornerRadius(10)
                 } else {
                     Button(action: {
                         self.addDream()
                     }) {
                         HStack{
-                            Image(systemName: "plus")
+                            Image(systemName: "text.badge.plus")
                             Text("Ajouter à Ma Liste")
                                 .font(.headline)
                         }

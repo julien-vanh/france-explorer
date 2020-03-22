@@ -1,3 +1,4 @@
+//Based on : https://github.com/apphud/ios-swiftui-subscriptions/blob/master/subscriptions/IAPManager.swift
 import UIKit
 import StoreKit
 

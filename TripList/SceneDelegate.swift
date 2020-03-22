@@ -21,7 +21,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView()
-            .environmentObject(Session())
             .environment(\.managedObjectContext, managedObjectContext)
 
         // Use a UIHostingController as window root view controller.
@@ -53,6 +52,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneWillEnterForeground(_ scene: UIScene) {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
+        RatingManager.countLaunchAndRate()
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {

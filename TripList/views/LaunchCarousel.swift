@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-
+import FirebaseAnalytics
 
 struct LaunchCarousel: View {
     @ObservedObject var appState = AppState.shared
@@ -144,6 +144,7 @@ struct LaunchCarousel: View {
             Button(action: {
                 if self.currentPageIndex+1 == self.subviews.count {
                     self.appState.acceptCGU()
+                    Analytics.logEvent(AnalyticsEventTutorialComplete, parameters: nil)
                 } else {
                     self.currentPageIndex += 1
                 }
@@ -170,7 +171,11 @@ struct LaunchCarousel: View {
             }.padding(.bottom, 70)
             
             
-        }.edgesIgnoringSafeArea([.top, .bottom])
+        }
+        .edgesIgnoringSafeArea([.top, .bottom])
+        .onAppear(){
+            Analytics.logEvent(AnalyticsEventTutorialBegin, parameters: nil)
+        }
     }
 }
 

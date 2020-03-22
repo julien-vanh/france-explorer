@@ -7,7 +7,7 @@
 //
 import SwiftUI
 import StoreKit
-
+import FirebaseAnalytics
 
 
 struct PurchasePage: View {
@@ -78,6 +78,8 @@ struct PurchasePage: View {
         .environment(\.horizontalSizeClass, .compact)
         .onAppear(){
             self.productsStore.initializeProducts()
+            
+            Analytics.logEvent("PurchasePagePresented", parameters: nil)
         }
     }
     

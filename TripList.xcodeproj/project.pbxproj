@@ -613,7 +613,6 @@
 		F95DE56023DE2F0F00BE1BD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F95DE55F23DE2F0F00BE1BD5 /* Assets.xcassets */; };
 		F95DE56323DE2F0F00BE1BD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F95DE56223DE2F0F00BE1BD5 /* Preview Assets.xcassets */; };
 		F95DE56623DE2F0F00BE1BD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F95DE56423DE2F0F00BE1BD5 /* LaunchScreen.storyboard */; };
-		F95DE57623DE348000BE1BD5 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE57423DE347F00BE1BD5 /* Session.swift */; };
 		F95DE57723DE348000BE1BD5 /* Dataloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE57523DE348000BE1BD5 /* Dataloader.swift */; };
 		F95DE58C23DE349700BE1BD5 /* PlaceMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE57823DE349500BE1BD5 /* PlaceMapView.swift */; };
 		F95DE58E23DE349700BE1BD5 /* AutoFocusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE57A23DE349500BE1BD5 /* AutoFocusTextField.swift */; };
@@ -652,6 +651,7 @@
 		F9A2C9122427689000883A52 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A2C9112427689000883A52 /* StoreKit.framework */; };
 		F9A2C91424276EBC00883A52 /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2C91324276EBC00883A52 /* IAPManager.swift */; };
 		F9A2C9162427757000883A52 /* ProductsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2C9152427757000883A52 /* ProductsStore.swift */; };
+		F9A2C9182427EB0E00883A52 /* RatingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2C9172427EB0E00883A52 /* RatingManager.swift */; };
 		F9AB64C0240AD7520061CD52 /* PlaceButtonsMini.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64BF240AD7520061CD52 /* PlaceButtonsMini.swift */; };
 		F9AB64C2240AD9CE0061CD52 /* VibrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64C1240AD9CE0061CD52 /* VibrationManager.swift */; };
 		F9AB64C4240BD7720061CD52 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64C3240BD7720061CD52 /* Parameters.swift */; };
@@ -1307,7 +1307,6 @@
 		F95DE56223DE2F0F00BE1BD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F95DE56523DE2F0F00BE1BD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F95DE56723DE2F0F00BE1BD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F95DE57423DE347F00BE1BD5 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		F95DE57523DE348000BE1BD5 /* Dataloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dataloader.swift; sourceTree = "<group>"; };
 		F95DE57823DE349500BE1BD5 /* PlaceMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceMapView.swift; sourceTree = "<group>"; };
 		F95DE57A23DE349500BE1BD5 /* AutoFocusTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoFocusTextField.swift; sourceTree = "<group>"; };
@@ -1345,6 +1344,7 @@
 		F9A2C9112427689000883A52 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		F9A2C91324276EBC00883A52 /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
 		F9A2C9152427757000883A52 /* ProductsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsStore.swift; sourceTree = "<group>"; };
+		F9A2C9172427EB0E00883A52 /* RatingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingManager.swift; sourceTree = "<group>"; };
 		F9AB64BF240AD7520061CD52 /* PlaceButtonsMini.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceButtonsMini.swift; sourceTree = "<group>"; };
 		F9AB64C1240AD9CE0061CD52 /* VibrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationManager.swift; sourceTree = "<group>"; };
 		F9AB64C3240BD7720061CD52 /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
@@ -2143,13 +2143,13 @@
 				F95DE57523DE348000BE1BD5 /* Dataloader.swift */,
 				F99E73AA23F34DE2006BC089 /* LocationManager.swift */,
 				F9AB64C1240AD9CE0061CD52 /* VibrationManager.swift */,
-				F95DE57423DE347F00BE1BD5 /* Session.swift */,
 				F9C9C68723E4D093002C1DA0 /* AppStyle.swift */,
 				F9AB64C5240C22C90061CD52 /* AppState.swift */,
 				F9C9C68923E4D287002C1DA0 /* UIColor+hexString.swift */,
 				F99E73A223ED9CD4006BC089 /* Reminders.swift */,
 				F9A2C91324276EBC00883A52 /* IAPManager.swift */,
 				F9A2C9152427757000883A52 /* ProductsStore.swift */,
+				F9A2C9172427EB0E00883A52 /* RatingManager.swift */,
 				F9DC21EC23E231D70023B8EF /* wikipedia */,
 			);
 			path = utils;
@@ -3003,7 +3003,6 @@
 				F9D032F6240FD085008A9B13 /* Store.swift in Sources */,
 				F9DC222B23E31DF30023B8EF /* PlaceDetailPhotos.swift in Sources */,
 				F9C1E806241A943F006EBEB8 /* ProgressBar.swift in Sources */,
-				F95DE57623DE348000BE1BD5 /* Session.swift in Sources */,
 				F95DE59323DE349700BE1BD5 /* AssociatesRow.swift in Sources */,
 				F95DE5BD23DE4A2900BE1BD5 /* ProgressionMap.swift in Sources */,
 				F9AB64C4240BD7720061CD52 /* Parameters.swift in Sources */,
@@ -3035,6 +3034,7 @@
 				F9D82E5D2417E3DA003961AD /* BlurView.swift in Sources */,
 				F9A2C91424276EBC00883A52 /* IAPManager.swift in Sources */,
 				F92E05D12417A467009C5ADD /* LaunchCarousel.swift in Sources */,
+				F9A2C9182427EB0E00883A52 /* RatingManager.swift in Sources */,
 				F95DE59A23DE349700BE1BD5 /* Progression.swift in Sources */,
 				F9815D7724240C080057D515 /* PlaceListRow.swift in Sources */,
 				F9FC37E1240D61D500F17AAC /* MailView.swift in Sources */,

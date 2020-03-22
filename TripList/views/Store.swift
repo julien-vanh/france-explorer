@@ -34,7 +34,7 @@ struct Store: View {
                 
                 ScrollView(.vertical) {
                     
-                    RandomButton()
+                    RandomButton().padding(.bottom, 10)
                     
                     NearestPlaces()
                     

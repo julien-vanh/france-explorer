@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import FirebaseAnalytics
 
 struct PlacesList: View {
     @ObservedObject var appState = AppState.shared
@@ -15,6 +16,10 @@ struct PlacesList: View {
     
     init(category: Category){
         self.filterModel = FilterModel(sortBy: .distance, categoryFilter: category.category)
+        
+        Analytics.logEvent("PlacesList", parameters: [
+            "category": category.category.rawValue
+        ])
     }
     
     var body: some View {
