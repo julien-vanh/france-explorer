@@ -22,7 +22,7 @@ struct Progression: View {
                     })
                 }
             }
-            .navigationBarTitle(Text("Progression"), displayMode: .inline)
+            .navigationBarTitle(Text("Progression"), displayMode: .large)
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

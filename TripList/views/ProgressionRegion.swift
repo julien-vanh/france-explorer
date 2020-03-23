@@ -102,12 +102,20 @@ struct PlaceCardLocked: View {
                     .aspectRatio(contentMode: .fit)
                     .clipped()
                 
-                Text("Guide complet")
-                    .font(.title)
-                    .foregroundColor(.yellow)
-                    .fontWeight(.semibold)
-                    .shadow(color: Color.black, radius: 5, x: 0, y: 0)
-                    .foregroundColor(.white)
+                VStack {
+                    Text("Guide complet")
+                        .font(.title)
+                        .foregroundColor(.yellow)
+                        .fontWeight(.semibold)
+                        .shadow(color: Color.black, radius: 5, x: 0, y: 0)
+                        
+                    
+                    Text("\(card.missingPlacesCount!) destinations supplémentaires")
+                        .foregroundColor(.white)
+                        .font(.headline)
+                        .shadow(color: Color.black, radius: 10, x: 0, y: 0)
+                }
+                
                 
             }.overlay(
                 Rectangle()
