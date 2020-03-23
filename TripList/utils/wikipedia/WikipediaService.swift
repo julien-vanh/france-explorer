@@ -8,10 +8,19 @@
 
 import Foundation
 
-enum WikipediaError: Error{
+public enum WikipediaError: Error, LocalizedError{
     case cannotBuildUrl
     case noDataAvailable
     case canNotProcessData
+    
+    public var errorDescription: String? {
+        switch self {
+        case .noDataAvailable:
+            return NSLocalizedString("Données non disponibles", comment: "")
+        default:
+            return NSLocalizedString("Une erreur est suvenue", comment: "")
+        }
+    }
 }
 
 struct WikipediaService {

@@ -15,6 +15,10 @@ struct PlaceDetailPhotos: View {
     @State private var pageImages: [ImageMetadata] = []
     @State private var showModal: Bool = false
     @State var selectedPageImage: ImageMetadata?
+    @State private var showingAlert = false
+    @State private var alertErrorMessage = ""
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
     
     var body: some View {
         WaterfallGrid(pageImages, id: \.self) { pageImage in
@@ -64,17 +68,24 @@ struct PlaceDetailPhotos: View {
                 }
             }.background(Color.black).edgesIgnoringSafeArea(.bottom)
         })
+        .alert(isPresented: $showingAlert) {
+            Alert(title: Text("Erreur"), message: Text(alertErrorMessage), dismissButton: .default(Text("OK")))
+        }
         .onAppear(perform: {
             
             if let wikiPageId = self.place.wikiPageId {
-                WikipediaService.shared.getPageImages(wikiPageId) { result in //TODO id en dur
+                WikipediaService.shared.getPageImages(wikiPageId) { result in
                     switch result {
                     case .failure(let error):
-                        print(error)
+                        self.alertErrorMessage = error.localizedDescription
+                        self.showingAlert = true
+                        self.presentationMode.wrappedValue.dismiss()
                     case .success(let value):
                         self.pageImages = value
                     }
                 }
+            } else {
+                self.presentationMode.wrappedValue.dismiss()
             }
             
         })
