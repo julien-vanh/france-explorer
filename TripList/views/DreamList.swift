@@ -55,25 +55,24 @@ struct DreamList: View {
                     Image(systemName: "ellipsis.circle.fill")
                         .frame(width: 100, height: 40, alignment: .trailing)
                         .font(.title)
-                }
-                .popover(isPresented: $showingPopover, arrowEdge: .bottom){
-                    List {
-                        Button(action: self.copyInReminder) {
-                            Text("Copier dans Rappels").foregroundColor(.blue)
-                        }
-                        Button(action: self.share) {
-                            Text("Partager").foregroundColor(.blue)
-                        }
-                        Button(action: self.deleteCompletes) {
-                            Text("Supprimer les complétés").foregroundColor(.red)
+                    .popover(isPresented: $showingPopover, arrowEdge: .top){
+                        List {
+                            Button(action: self.copyInReminder) {
+                                Text("Copier dans Rappels").foregroundColor(.blue)
+                            }
+                            Button(action: self.share) {
+                                Text("Partager").foregroundColor(.blue)
+                            }
+                            Button(action: self.deleteCompletes) {
+                                Text("Supprimer les complétés").foregroundColor(.red)
+                            }
                         }
                     }
                 }
+                
             ))
         }
-        .sheet(isPresented: $isSharePresented, onDismiss: {
-            print("Dismiss")
-        }, content: {
+        .sheet(isPresented: $isSharePresented, content: {
             ActivityViewController(activityItems: self.sharedItems())
         })
         .actionSheet(isPresented: $showingActionSheet) {
