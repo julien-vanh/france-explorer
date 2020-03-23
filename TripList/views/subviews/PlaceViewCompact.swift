@@ -45,9 +45,10 @@ struct PlaceViewCompact: View {
                     SeparationBar()
                 }
             }
+            
             .frame(height: 70)
             .padding(.leading, 10.0)
-        }
+        }.buttonStyle(PlainButtonStyle())
     }
 }
 

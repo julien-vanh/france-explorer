@@ -26,7 +26,7 @@ struct ProgressionRegion: View {
             }
         }.gridStyle(
             columnsInPortrait: UIDevice.current.userInterfaceIdiom == .phone ? 2 : 3,
-            columnsInLandscape: UIDevice.current.userInterfaceIdiom == .phone ? 3 : 3
+            columnsInLandscape: UIDevice.current.userInterfaceIdiom == .phone ? 3 : 4
         )
             //.background(Color(UIColor.))
         .padding(.horizontal, 5)
@@ -94,31 +94,25 @@ struct PlaceCardLocked: View {
 
     var body: some View {
         Button(action: {self.isPurchasePresented.toggle()}) {
-            ZStack(alignment: .bottomLeading) {
-                ImageStore.shared.image(name: "placeholder.jpg")
+            ZStack(alignment: .center) {
+                
+                ImageStore.shared.image(name: "premium0.jpg")
                     .resizable()
                     .renderingMode(.original)
                     .aspectRatio(contentMode: .fit)
                     .clipped()
                 
-                HStack(alignment: .center, spacing: 10) {
-                    Image(systemName: "star.fill")
-                        .resizable()
-                        .renderingMode(.original)
-                        .foregroundColor(Color.yellow)
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 20, height: 20)
-                        .padding(8)
-                    
-                    Text("Guide complet")
-                        .font(.caption)
-                        .lineLimit(2)
-                        .foregroundColor(.yellow)
-                    
-                    Spacer()
-                }
-                .padding(5.0)
-            }
+                Text("Guide complet")
+                    .font(.title)
+                    .foregroundColor(.yellow)
+                    .fontWeight(.semibold)
+                    .shadow(color: Color.black, radius: 5, x: 0, y: 0)
+                    .foregroundColor(.white)
+                
+            }.overlay(
+                Rectangle()
+                    .strokeBorder(Color.yellow, lineWidth: 2)
+            )
         }
         .sheet(isPresented: self.$isPurchasePresented, content: {
             PurchasePage()
@@ -147,7 +141,7 @@ struct PlaceCard: View {
                     .renderingMode(.original)
                     .aspectRatio(contentMode: .fit)
                     .grayscale((self.completions.first != nil) ? 0.0 : 0.99)
-                    .blur(radius: (self.completions.first != nil) ? 0.0 : 1)
+                    .blur(radius: (self.completions.first != nil) ? 0.0 : 3)
                     .clipped()
                 
                 HStack(alignment: .center, spacing: 10) {

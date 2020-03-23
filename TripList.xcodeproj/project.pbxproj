@@ -642,6 +642,7 @@
 		F9815D7724240C080057D515 /* PlaceListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9815D7624240C080057D515 /* PlaceListRow.swift */; };
 		F9815D7924240EC60057D515 /* DistanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9815D7824240EC60057D515 /* DistanceView.swift */; };
 		F98172572417D2E70011A76B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98172562417D2E70011A76B /* WebView.swift */; };
+		F98B2175242909C800CE3EF5 /* premium0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F98B2174242909C800CE3EF5 /* premium0.jpg */; };
 		F99E73A323ED9CD4006BC089 /* Reminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E73A223ED9CD4006BC089 /* Reminders.swift */; };
 		F99E73A723EDAD54006BC089 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E73A623EDAD54006BC089 /* ActivityViewController.swift */; };
 		F99E73A923EF0D69006BC089 /* ProgressionRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E73A823EF0D69006BC089 /* ProgressionRegion.swift */; };
@@ -1335,6 +1336,7 @@
 		F9815D7624240C080057D515 /* PlaceListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListRow.swift; sourceTree = "<group>"; };
 		F9815D7824240EC60057D515 /* DistanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceView.swift; sourceTree = "<group>"; };
 		F98172562417D2E70011A76B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		F98B2174242909C800CE3EF5 /* premium0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = premium0.jpg; sourceTree = "<group>"; };
 		F99E73A223ED9CD4006BC089 /* Reminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminders.swift; sourceTree = "<group>"; };
 		F99E73A623EDAD54006BC089 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		F99E73A823EF0D69006BC089 /* ProgressionRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressionRegion.swift; sourceTree = "<group>"; };
@@ -2234,6 +2236,7 @@
 		F9FC37D5240D222200F17AAC /* purchasePage */ = {
 			isa = PBXGroup;
 			children = (
+				F98B2174242909C800CE3EF5 /* premium0.jpg */,
 				F9FC37D8240D225900F17AAC /* premium1.jpg */,
 				F9FC37D7240D225900F17AAC /* premium2.jpg */,
 				F9FC37D6240D225900F17AAC /* premium3.jpg */,
@@ -2904,6 +2907,7 @@
 				F92E04E12412898C009C5ADD /* CanalduMidi.jpg in Resources */,
 				F92E03952412898B009C5ADD /* CirquedeNavacelles.jpg in Resources */,
 				F92E04382412898C009C5ADD /* MmorialdeVerdun.jpg in Resources */,
+				F98B2175242909C800CE3EF5 /* premium0.jpg in Resources */,
 				F92E05582412898C009C5ADD /* Gordes.jpg in Resources */,
 				F92E046B2412898C009C5ADD /* Autoire.jpg in Resources */,
 				F92E04AE2412898C009C5ADD /* MuseRodin.jpg in Resources */,
