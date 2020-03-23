@@ -32,23 +32,29 @@ struct PurchasePage: View {
                     .padding()
                     .foregroundColor(.gray)
                 
-                FeatureLine(text: "350 destinations supplémentaires")
-                //FeatureLine(text: "Régions d'outre-mer")
-                FeatureLine(text: "Suppression de la publicité")
-                FeatureLine(text: "Liste illimitée")
-                
                 
                 VStack(alignment: .center) {
                     ForEach(productsStore.products, id: \.self) { prod in
-                        HStack {
+                        VStack {
                             if prod.productIdentifier == ProductsStore.ProductGuideFrance {
+                                
+                                Text(prod.localizedTitle).font(.headline).foregroundColor(.yellow)
+                                
+                                FeatureLine(text: "350 destinations supplémentaires")
+                                //FeatureLine(text: "Régions d'outre-mer")
+                                FeatureLine(text: "Suppression de la publicité")
+                                FeatureLine(text: "Liste illimitée")
+                                
                                 PurchaseButton(block: {
                                     self.purchaseProduct(skproduct: prod)
                                 }, product: prod)
                                     .disabled(IAPManager.shared.isActive(productIdentifier: prod.productIdentifier))
                             }
                         }
-                        
+                        .padding(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10).strokeBorder(Color.yellow, lineWidth: 1)
+                        )
                     }
                     
                     SeparationBar()
@@ -61,14 +67,14 @@ struct PurchasePage: View {
                             .foregroundColor(.blue)
                             .frame(width: 250.0, height: 40.0)
                     }
-                }.padding()
+                }.padding(10)
                 
             }
             .listStyle(GroupedListStyle())
             .alert(isPresented: $showingAlert) {
                 Alert(title: Text("Erreur"), message: Text(alertErrorMessage), dismissButton: .default(Text("OK")))
             }
-            .navigationBarTitle(Text("Version complète"), displayMode: .inline)
+            .navigationBarTitle(Text("Boutique"), displayMode: .inline)
             .navigationBarItems(trailing:
                 Button("OK") {
                     self.dismiss()
@@ -179,7 +185,7 @@ struct PurchaseButton : View {
         Button(action: {
             self.block()
         }) {
-            Text(product.localizedPrice)
+            Text("Acheter \(product.localizedPrice)")
                 .fontWeight(.semibold)
                 .font(.headline).foregroundColor(.white)
                 .frame(width: 250.0, height: 40.0)

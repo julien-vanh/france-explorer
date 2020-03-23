@@ -15,8 +15,7 @@ struct PlaceDetailPhotos: View {
     @State private var pageImages: [ImageMetadata] = []
     @State private var showModal: Bool = false
     @State var selectedPageImage: ImageMetadata?
-    @State private var showingAlert = false
-    @State private var alertErrorMessage = ""
+    @ObservedObject var appState = AppState.shared
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
     
@@ -68,17 +67,13 @@ struct PlaceDetailPhotos: View {
                 }
             }.background(Color.black).edgesIgnoringSafeArea(.bottom)
         })
-        .alert(isPresented: $showingAlert) {
-            Alert(title: Text("Erreur"), message: Text(alertErrorMessage), dismissButton: .default(Text("OK")))
-        }
         .onAppear(perform: {
             
             if let wikiPageId = self.place.wikiPageId {
                 WikipediaService.shared.getPageImages(wikiPageId) { result in
                     switch result {
                     case .failure(let error):
-                        self.alertErrorMessage = error.localizedDescription
-                        self.showingAlert = true
+                        self.appState.displayError(error: error)
                         self.presentationMode.wrappedValue.dismiss()
                     case .success(let value):
                         self.pageImages = value

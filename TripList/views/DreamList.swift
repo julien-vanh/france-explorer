@@ -10,14 +10,13 @@ import SwiftUI
 import EventKit
 
 struct DreamList: View {
-    @State private var showingAlert = false
-    @State private var alertErrorMessage = ""
     @State private var showingActionSheet = false
     @State private var showingPopover = false
     @Environment(\.editMode) var mode
     @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(fetchRequest: Dream.getAllDreams()) var dreams: FetchedResults<Dream>
     @State private var isSharePresented: Bool = false
+    @ObservedObject var appState = AppState.shared
     
     var actionSheet: ActionSheet {
         ActionSheet(title: Text("Ma Liste"), buttons: [
@@ -80,9 +79,6 @@ struct DreamList: View {
         .actionSheet(isPresented: $showingActionSheet) {
             self.actionSheet
         }
-        .alert(isPresented: $showingAlert) {
-            Alert(title: Text("Erreur"), message: Text(alertErrorMessage), dismissButton: .default(Text("OK")))
-        }
         .navigationViewStyle(StackNavigationViewStyle())
     }
     
@@ -104,8 +100,7 @@ struct DreamList: View {
             try managedObjectContext.save()
         } catch {
             print(error)
-            self.alertErrorMessage = error.localizedDescription
-            self.showingAlert = true
+            self.appState.displayError(error: error)
         }
     }
     
@@ -113,9 +108,8 @@ struct DreamList: View {
         showingPopover = false
         let dreamsArray = self.dreams.compactMap {($0)}
         Reminders.copyDreams(dreams: dreamsArray, completion: { success, error in
-            if error != nil {
-                self.alertErrorMessage = error!.localizedDescription
-                self.showingAlert = true
+            if let error = error {
+                self.appState.displayError(error: error)
             }
         })
     }
@@ -123,7 +117,7 @@ struct DreamList: View {
     private func share(){
         showingPopover = false
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {//Retadé de 1 sec pour attendre que le popover dismiss
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {//Retardé de 1 sec pour attendre que le popover dismiss
             self.isSharePresented.toggle()
         }
         

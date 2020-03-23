@@ -52,6 +52,9 @@ struct ContentView: View {
                 }
             }
         , alignment: .bottom)
+        .alert(isPresented: $appState.showingAlert) {
+            Alert(title: Text("Erreur"), message: Text(appState.alertErrorMessage), dismissButton: .default(Text("OK")))
+        }
         .edgesIgnoringSafeArea(.all)
     }
 }

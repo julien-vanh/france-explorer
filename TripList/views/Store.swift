@@ -13,6 +13,7 @@ import SwiftUI
 struct Store: View {
     @State private var searchText = ""
     @State private var isEditing = false
+    @ObservedObject var appState = AppState.shared
     
     var body: some View {
         
@@ -36,13 +37,18 @@ struct Store: View {
                     
                     RandomButton().padding(.bottom, 10)
                     
-                    NearestPlaces()
+                    if appState.cguAccepted {
+                        NearestPlaces()
+                    }
+                    
                     
                     StoreArticlesRow()
                     
                     StoreCategoriesRow()
                     
-                    StoreSuggestions()
+                    if appState.cguAccepted {
+                        StoreSuggestions()
+                    }
                     
                     Rectangle().opacity(0).frame(height:40)
                 }

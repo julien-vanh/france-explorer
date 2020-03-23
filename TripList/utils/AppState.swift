@@ -31,6 +31,9 @@ class AppState: NSObject, ObservableObject {
     @Published var cguAccepted: Bool = false
     @Published var isPremium: Bool = false
     
+    @Published var showingAlert: Bool = false
+    @Published var alertErrorMessage: String = ""
+    
     override init(){
         super.init()
         
@@ -41,6 +44,13 @@ class AppState: NSObject, ObservableObject {
         
     }
     
+    public func displayError(error: Error){
+        print("display error Alert") //Ne marche pas si appelé depuis une modale !
+        DispatchQueue.main.async {
+            self.alertErrorMessage = error.localizedDescription
+            self.showingAlert = true
+        }
+    }
     
     static func openLinkInBrowser(link: String){
         var urlString = link
