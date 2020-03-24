@@ -5,5 +5,7 @@
   Created by Julien Vanheule on 29/01/2020.
   Copyright © 2020 Julien Vanheule. All rights reserved.
 */
+"appname" = "France Explorer";
+
 "wikipedia.host" = "https://fr.wikipedia.org/w/api.php";
 "wikipedia.main-page" = "Wikipedia:Accueil_principal";

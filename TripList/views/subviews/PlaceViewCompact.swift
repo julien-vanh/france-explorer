@@ -34,7 +34,7 @@ struct PlaceViewCompact: View {
                             .font(.caption)
                         
                         if locationManager.isLocationEnable() {
-                            Text("à " + AppStyle.formatDistance(value: locationManager.distanceTo(coordinate: place.locationCoordinate)))
+                            Text("à \(AppStyle.formatDistance(value: locationManager.distanceTo(coordinate: place.locationCoordinate)))")
                                 .foregroundColor(.black)
                                 .font(.caption)
                         }

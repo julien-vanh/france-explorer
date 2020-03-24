@@ -30,12 +30,41 @@ final class PlaceStore: NSObject {
             premiumPlaces["\(place.id)"] = place
         }
         
-        categories[PlaceCategory.all.rawValue] = Category(id: 0, category: .all, title: "Tous", image: "")
-        categories[PlaceCategory.city.rawValue] = Category(id: 1, category: .city, title: "Ville", image: "", titlePlural: "Villes")
-        categories[PlaceCategory.museum.rawValue] = Category(id: 2, category: .museum, title: "Musée", image: "", titlePlural: "Musées")
-        categories[PlaceCategory.nature.rawValue] = Category(id: 3, category: .nature, title: "Nature", image: "", titlePlural: "Nature")
-        categories[PlaceCategory.historical.rawValue] = Category(id: 4, category: .historical, title: "Patrimoine", image: "", titlePlural: "Patrimoine")
-        categories[PlaceCategory.event.rawValue] = Category(id: 5, category: .event, title: "Sortie", image: "", titlePlural: "Sorties")
+        categories[PlaceCategory.all.rawValue] = Category(
+            id: 0,
+            category: .all,
+            title: NSLocalizedString("Tous", comment: "")
+        )
+        categories[PlaceCategory.city.rawValue] = Category(
+            id: 1,
+            category: .city,
+            title: NSLocalizedString("Ville", comment: ""),
+            titlePlural: NSLocalizedString("Villes", comment: "")
+        )
+        categories[PlaceCategory.museum.rawValue] = Category(
+            id: 2,
+            category: .museum,
+            title: NSLocalizedString("Musée", comment: ""),
+            titlePlural: NSLocalizedString("Musées", comment: "")
+        )
+        categories[PlaceCategory.nature.rawValue] = Category(
+            id: 3,
+            category: .nature,
+            title: NSLocalizedString("Nature", comment: ""),
+            titlePlural: NSLocalizedString("Nature", comment: "")
+        )
+        categories[PlaceCategory.historical.rawValue] = Category(
+            id: 4,
+            category: .historical,
+            title: NSLocalizedString("Patrimoine", comment: ""),
+            titlePlural: NSLocalizedString("Patrimoine", comment: "")
+        )
+        categories[PlaceCategory.event.rawValue] = Category(
+            id: 5,
+            category: .event,
+            title: NSLocalizedString("Sortie", comment: ""),
+            titlePlural: NSLocalizedString("Sorties", comment: "")
+        )
     }
     
     func get(id: String) -> Place! {
@@ -141,13 +170,11 @@ struct Category: Identifiable {
     var category: PlaceCategory
     var title: String
     var titlePlural: String
-    var image: String
     
-    init(id: Int, category: PlaceCategory, title: String, image: String, titlePlural: String? = nil){
+    init(id: Int, category: PlaceCategory, title: String, titlePlural: String? = nil){
         self.id = id
         self.category = category
         self.title = title
-        self.image = image
         if titlePlural != nil {
             self.titlePlural = titlePlural!
         } else {

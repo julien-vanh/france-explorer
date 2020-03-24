@@ -38,7 +38,7 @@ class Reminders {
                     calendar = existingCalendar
                 } else {
                     calendar = EKCalendar(for: .reminder, eventStore: eventStore)
-                    calendar.title = "France Guide" //TODO changer le nom du calendrier
+                    calendar.title = NSLocalizedString("appname", comment: "") //TODO changer le nom du calendrier
                     calendar.source = eventStore.sources.first(where: {$0.sourceType == .local}) ?? eventStore.sources.first
                 }
                 

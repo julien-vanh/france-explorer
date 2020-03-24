@@ -84,7 +84,7 @@ struct ProgressionListHeader: View {
     var body: some View {
         VStack(alignment: .center) {
             
-            Text("\(getRegionsCompletion().keys.count)/\(PlaceStore.shared.getRegions().count) régions visitées")
+            Text("\(getRegionsCompletion().keys.count)/\(PlaceStore.shared.getRegions().count) " + NSLocalizedString("régions visitées", comment: ""))
                 .foregroundColor(Color(UIColor.explored))
         }
     }

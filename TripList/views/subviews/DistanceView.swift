@@ -17,7 +17,7 @@ struct DistanceView: View {
     var body: some View {
         VStack {
             if self.locationManager.isLocationEnable() {
-                Text("à "+AppStyle.formatDistance(value: self.locationManager.distanceTo(coordinate: coordinate)))
+                Text("à \(AppStyle.formatDistance(value: self.locationManager.distanceTo(coordinate: coordinate)))")
                     .font(.caption)
                     .foregroundColor(.white)
                     .padding(3)

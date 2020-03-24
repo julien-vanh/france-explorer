@@ -5,5 +5,132 @@
   Created by Julien Vanheule on 29/01/2020.
   Copyright © 2020 Julien Vanheule. All rights reserved.
 */
-"wikipedia.host" = "https://en.wikipedia.org/w/api.php";
-"wikipedia.main-page" = "Main_Page";
+"appname" = "France Explorer";
+
+"wikipedia.host" = "https://fr.wikipedia.org/w/api.php"; //Laisser le fr pour recuperer les images
+"wikipedia.main-page" = "Wikipedia:Accueil_principal";
+
+
+
+//Tabbar
+"Destinations" = "Destinations";
+"Carte" = "Map";
+"Ma Liste" = "My List";
+"Progression" = "Progress";
+"Paramètres" = "Parameters";
+
+//LaunchCarousel
+"Bienvenue !" = "Bonjour !";
+"Nos catégories" = "Our categories";
+"Organisez votre voyage" = "Organize your trip";
+"Ce guide vous permettra de décrouvrir les plus belles destinations touristiques de France." = "This guide will allow you to discover the most beautiful tourist destinations in France.";
+"Découvrez les régions de France avec nos sélections par catégories." = "Discover the regions of France with our destinations by categories.";
+"Ajoutez les destinations à votre liste." = "Add destinations to Your List.";
+"Marquez les destinations visitées." = "Mark the visited destinations.";
+"Collectionnez les lieux visités de chaques régions." = "Collect the destinations visited in each region.";
+"En continuant vous acceptez nos" = "By continuing you accept our";
+"Conditions générales" = "Terms and Conditions";
+"Accepter" = "Accept";
+"Continuer" = "Continue";
+
+
+
+//Store
+"Destinations" = "Destinations";
+"Au hasard" = "Random destination";
+"Suggestions" = "Suggestions";
+
+"à %@" = "at %@";
+"Déjà vu" = "Visited";
+"Retirer de Ma Liste" = "Remove from My List";
+"Ajouter à Ma Liste" = "Add to My List";
+
+"Nos sélections" = "Our selections";
+"Voir plus" = "See more";
+"Catégories" = "Categories";
+"À proximité" = "Nearby destinations";
+"Découvrez aussi" = "Also discover";
+
+//Articles
+"Sélections" = "Selections";
+"Destinations associées" = "Associated destinations";
+
+//PlacesList
+"Filtrer" = "Filter";
+"Destinations" = "Destinations";
+
+"Distance" = "Distance";
+"Popularité" = "Popularity";
+"Trier par" = "Sort by";
+"Type de destination" = "Destination type";
+"Réinitialiser" = "Reset";
+
+//PlaceDetail
+"photos" = "Photos";
+"Site web" = "Website";
+"Crédits" = "Credits";
+"Photo" = "Photo";
+"Texte" = "Text";
+
+//Dream
+"Ma Liste" = "My List";
+"Copier dans Rappels" = "Copy to Reminders";
+"Imprimer" = "Print";
+"Partager" = "Share";
+"Supprimer les complétés" = "Delete the completed";
+
+"Détails sur la destination" = "Destination details";
+
+//Progression
+"Progression" = "Progress";
+"régions visitées" = "regions visited";
+
+//Purchase
+"Guide complet" = "Full Guide";
+"destinations supplémentaires" = "additional destinations";
+
+//Drawer
+"Adresse" = "Address";
+
+//Parameters
+"Paramètres" = "Parameters";
+"Version complète" = "Full version";
+"Synchonisation" = "Synchronisation";
+"Application" = "Application";
+"Noter l'application" = "Rate the app";
+"Nous contacter" = "Contact us";
+"Partager" = "Share";
+"Connaissez-vous bien la France ?" = "How well do you know France?";
+"À propos" = "About";
+"Version" = "Version";
+"Confidentialité" = "Privacy";
+"Mentions tierces" = "Third party references";
+"France Explorer\n @2020 Julien Vanheule. Tous droits réservés." = "France Explorer\n @2020 Julien Vanheule. All rights reserved.";
+
+//Purchase page
+"Boutique" = "Shop";
+"destinations supplémentaires" = "additional destinations";
+"Restaurer mes achats" = "Restore purchases";
+"Acheter %@" = "Purchase %@";
+
+//Action
+"Erreur" = "Error";
+"OK" = "OK";
+"Annuler" = "Cancel";
+"Fermer" = "Close";
+"Rechercher" = "Search";
+
+"Tous" = "All";
+"Ville" = "City";
+"Villes" = "Cities";
+"Musée" = "Museum";
+"Musées" = "Museums";
+"Nature" = "Nature";
+"Nature" = "Nature";
+"Patrimoine" = "Heritage";
+"Patrimoine" = "Heritage";
+"Sortie" = "Outing";
+"Sorties" = "Outings";
+
+//Errors
+"L'application n'est pas autorisée à accéder aux Rappels" = "The application is not authorized to access Reminders.";

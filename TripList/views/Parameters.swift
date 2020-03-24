@@ -5,6 +5,7 @@
 //  Created by Julien Vanheule on 01/03/2020.
 //  Copyright © 2020 Julien Vanheule. All rights reserved.
 //
+let AppId = "1501849156"
 
 import SwiftUI
 import MessageUI
@@ -39,9 +40,9 @@ struct Parameters: View {
                 */
                 
                 
-                Section(header: Text("Applications"), content: {
+                Section(header: Text("Application"), content: {
                     Button(action: {
-                        AppState.openLinkInBrowser(link: "http://VERSLESTORE") //TODO
+                        AppState.openLinkInBrowser(link: "https://itunes.apple.com/app/id\(AppId)?action=write-review")
                     }) {
                         HStack {
                             Image(systemName: "star").foregroundColor(.yellow).frame(width:30)
@@ -69,10 +70,11 @@ struct Parameters: View {
                             Image(systemName: "square.and.arrow.up").foregroundColor(.red).frame(width:30)
                             Text("Partager")
                         }
-                    }.sheet(isPresented: $isSharePresented, onDismiss: {
-                        print("Dismiss")
-                    }, content: {
-                        ActivityViewController(activityItems:["Connaisez-vous la France ?", "TripList", "LIEN VERS LE STORE"]) //TODO
+                    }.sheet(isPresented: $isSharePresented, content: {
+                        ActivityViewController(activityItems:[
+                            NSLocalizedString("Connaissez-vous bien la France ?", comment: ""),
+                            NSLocalizedString("appname", comment: ""),
+                            "https://itunes.apple.com/app/id\(AppId)"])
                     })
                     
                 })
@@ -90,7 +92,7 @@ struct Parameters: View {
                     
                     Text("Confidentialité") //TODO NavigationLink
                     
-                    Text("Mentions tierces")
+                    Text("Mentions tierces") //TODO
                 })
             }
             .sheet(isPresented: $isPurchasePresented, content: {
@@ -99,7 +101,7 @@ struct Parameters: View {
             
             .listStyle(GroupedListStyle())
             .environment(\.horizontalSizeClass, .regular)
-            .navigationBarTitle("Paramètres", displayMode: .inline)
+            .navigationBarTitle(Text("Paramètres"), displayMode: .inline)
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
@@ -117,7 +119,7 @@ struct AboutFooter: View {
     var body: some View {
         HStack {
             Spacer()
-            Text("TripList\n @2020 ForgeApp Studio. Tous droits réservés.")
+            Text("France Explorer\n @2020 Julien Vanheule. Tous droits réservés.")
             .foregroundColor(.gray)
                 .font(.footnote).multilineTextAlignment(.center)
             Spacer()

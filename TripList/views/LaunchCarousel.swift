@@ -21,7 +21,11 @@ struct LaunchCarousel: View {
         UIHostingController(rootView: CarouselImage(imageString: "launchcarousel3.jpg"))
     ]
     
-    var titles = ["Bienvenue !", "Nos catégories", "Organisez votre voyage"]
+    var titles = [
+        NSLocalizedString("Bienvenue !", comment: ""),
+        NSLocalizedString("Nos catégories", comment: ""),
+        NSLocalizedString("Organisez votre voyage", comment: ""),
+    ]
     
     
     
@@ -39,7 +43,8 @@ struct LaunchCarousel: View {
                 
                 
                 if currentPageIndex == 0 {
-                    Text("Ce guide vous permettra de décrouvrir les plus belles destinations touristiques de France.").multilineTextAlignment(.center)
+                    Text("Ce guide vous permettra de décrouvrir les plus belles destinations touristiques de France.")
+                        .multilineTextAlignment(.center)
                 }
                 
                 
@@ -66,7 +71,8 @@ struct LaunchCarousel: View {
                         Spacer()
                     }
                     
-                    Text("Découvrez les régions de France avec nos sélections par catégories.").multilineTextAlignment(.center)
+                    Text("Découvrez les régions de France avec nos sélections par catégories.")
+                        .multilineTextAlignment(.center)
                 }
  
                 
@@ -80,7 +86,8 @@ struct LaunchCarousel: View {
                             .foregroundColor(.white)
                             .cornerRadius(10)
                         
-                        Text("Ajoutez les destinations à votre liste.").font(.headline)
+                        Text("Ajoutez les destinations à votre liste.")
+                            .font(.headline)
                         
                         Spacer()
                     }
@@ -94,7 +101,8 @@ struct LaunchCarousel: View {
                             .foregroundColor(.white)
                             .cornerRadius(10)
                         
-                        Text("Marquez les destinations visitées.").font(.headline)
+                        Text("Marquez les destinations visitées.")
+                            .font(.headline)
                         
                         Spacer()
                     }
@@ -108,7 +116,8 @@ struct LaunchCarousel: View {
                             .foregroundColor(.black)
                             .cornerRadius(10)
                         
-                        Text("Collectionnez les lieux visités de chaques régions.").font(.headline)
+                        Text("Collectionnez les lieux visités de chaques régions.")
+                            .font(.headline)
                         
                         Spacer()
                     }

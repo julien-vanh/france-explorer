@@ -10,7 +10,7 @@ import SwiftUI
 
 
 struct WebViewModal: View {
-    var title: String
+    var title: LocalizedStringKey
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @ObservedObject var model: WebViewModel
     
@@ -21,7 +21,7 @@ struct WebViewModal: View {
         if !url.hasPrefix("http"){
             stringUrl = "https://"+url
         }
-        self.title = title
+        self.title = LocalizedStringKey(title)
         self.model = WebViewModel(url: stringUrl)
     }
      

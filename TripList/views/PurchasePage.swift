@@ -36,10 +36,10 @@ struct PurchasePage: View {
                                 
                                 Text(prod.localizedTitle).font(.headline).foregroundColor(.yellow)
                                 
-                                FeatureLine(text: "350 destinations supplémentaires")
+                                FeatureLine(text: "\(350) " + NSLocalizedString("destinations supplémentaires", comment:"") )
                                 //FeatureLine(text: "Régions d'outre-mer")
-                                FeatureLine(text: "Suppression de la publicité")
-                                FeatureLine(text: "Liste illimitée")
+                                //FeatureLine(text: "Suppression de la publicité")
+                                //FeatureLine(text: "Liste illimitée")
                                 
                                 PurchaseButton(block: {
                                     self.purchaseProduct(skproduct: prod)
@@ -109,7 +109,7 @@ struct PurchasePage: View {
     }
     
     func purchaseProduct(skproduct : SKProduct){
-        print("did tap purchase product: \(skproduct.productIdentifier)")
+        print("Purchasing product: \(skproduct.productIdentifier)")
         isDisabled = true
         IAPManager.shared.purchaseProduct(product: skproduct, success: {
             self.isDisabled = false

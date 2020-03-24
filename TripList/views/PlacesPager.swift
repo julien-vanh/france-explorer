@@ -18,6 +18,6 @@ struct PlacesPager: View {
     }
     
     var body: some View {
-        PageViewController(currentPageIndex: $currentPageIndex, viewControllers: placeDetailViews)//.edgesIgnoringSafeArea(.top)
+        PageViewController(currentPageIndex: $currentPageIndex, viewControllers: placeDetailViews)
     }
 }

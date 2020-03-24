@@ -16,11 +16,31 @@ struct ContentView: View {
     
     var body: some View {
         UIKitTabView([
-            UIKitTabView.Tab(view: Store(), title: "Destinations", image: "rectangle.stack.fill"),
-            UIKitTabView.Tab(view: ProgressionMap(), title: "Carte", image: "mappin.and.ellipse"),
-            UIKitTabView.Tab(view: DreamList(), title: "Ma Liste", image: "list.bullet"),
-            UIKitTabView.Tab(view: Progression(), title: "Progression", image: "text.badge.checkmark"),
-            UIKitTabView.Tab(view: Parameters(), title: "Paramètres", image: "gear")
+            UIKitTabView.Tab(
+                view: Store(),
+                title: NSLocalizedString("Destinations", comment: ""),
+                image: "rectangle.stack.fill"
+            ),
+            UIKitTabView.Tab(
+                view: ProgressionMap(),
+                title: NSLocalizedString("Carte", comment: ""),
+                image: "mappin.and.ellipse"
+            ),
+            UIKitTabView.Tab(
+                view: DreamList(),
+                title: NSLocalizedString("Ma Liste", comment: ""),
+                image: "list.bullet"
+            ),
+            UIKitTabView.Tab(
+                view: Progression(),
+                title: NSLocalizedString("Progression", comment: ""),
+                image: "text.badge.checkmark"
+            ),
+            UIKitTabView.Tab(
+                view: Parameters(),
+                title: NSLocalizedString("Paramètres", comment: ""),
+                image: "gear"
+            )
         ]).overlay(
             GeometryReader { geometry in
                 if(!self.appState.cguAccepted){

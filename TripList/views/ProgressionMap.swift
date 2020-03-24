@@ -35,7 +35,7 @@ struct ProgressionMap: View {
                 */
                 
                 //Add other buttons here
-                Text("\(getRegionsExploredCount())/\(regionsCount) régions visitées")
+                Text("\(getRegionsExploredCount())/\(regionsCount) " + NSLocalizedString("régions visitées", comment:""))
                     .foregroundColor(Color(UIColor.explored))
                     .padding(8)
                     .background(BlurView())

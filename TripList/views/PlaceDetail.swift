@@ -198,7 +198,7 @@ struct CreditsModal: View {
                 Spacer()
             }
             .padding()
-            .navigationBarTitle("Crédits", displayMode: .inline)
+            .navigationBarTitle(Text("Crédits"), displayMode: .inline)
             .navigationBarItems(trailing:
                 Button("OK") {
                     self.presentationMode.wrappedValue.dismiss()

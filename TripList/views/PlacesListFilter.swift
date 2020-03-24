@@ -15,9 +15,9 @@ enum SortOption {
     static func labelFor(_ option: SortOption) -> String{
         switch option {
         case .distance:
-            return "Distance"
+            return NSLocalizedString("Distance", comment: "")
         default:
-            return "Popularité"
+            return NSLocalizedString("Popularité", comment: "")
         }
     }
 }
@@ -92,7 +92,7 @@ struct PlacesListFilter: View {
                 }
                 
             }
-            .navigationBarTitle("Filtrer", displayMode: .inline)
+            .navigationBarTitle(Text("Filtrer"), displayMode: .inline)
             .navigationBarItems(leading:
                 Button("Réinitialiser") {
                     self.filterModel.reset()

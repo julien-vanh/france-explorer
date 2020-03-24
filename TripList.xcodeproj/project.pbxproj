@@ -624,7 +624,6 @@
 		F95DE59923DE349700BE1BD5 /* PlacesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE58523DE349600BE1BD5 /* PlacesList.swift */; };
 		F95DE59A23DE349700BE1BD5 /* Progression.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE58623DE349600BE1BD5 /* Progression.swift */; };
 		F95DE59B23DE349700BE1BD5 /* PlacesPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE58723DE349600BE1BD5 /* PlacesPager.swift */; };
-		F95DE59C23DE349700BE1BD5 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE58823DE349600BE1BD5 /* TextView.swift */; };
 		F95DE59E23DE349700BE1BD5 /* DreamList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE58A23DE349600BE1BD5 /* DreamList.swift */; };
 		F95DE5A723DE34A900BE1BD5 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE5A123DE34A800BE1BD5 /* Place.swift */; };
 		F95DE5A823DE34A900BE1BD5 /* PlaceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE5A223DE34A800BE1BD5 /* PlaceStore.swift */; };
@@ -643,6 +642,7 @@
 		F9815D7924240EC60057D515 /* DistanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9815D7824240EC60057D515 /* DistanceView.swift */; };
 		F98172572417D2E70011A76B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98172562417D2E70011A76B /* WebView.swift */; };
 		F98B2175242909C800CE3EF5 /* premium0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F98B2174242909C800CE3EF5 /* premium0.jpg */; };
+		F98B2178242A7C0A00CE3EF5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F98B217A242A7C0A00CE3EF5 /* InfoPlist.strings */; };
 		F99E73A323ED9CD4006BC089 /* Reminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E73A223ED9CD4006BC089 /* Reminders.swift */; };
 		F99E73A723EDAD54006BC089 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E73A623EDAD54006BC089 /* ActivityViewController.swift */; };
 		F99E73A923EF0D69006BC089 /* ProgressionRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E73A823EF0D69006BC089 /* ProgressionRegion.swift */; };
@@ -663,7 +663,6 @@
 		F9C9C68823E4D093002C1DA0 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9C68723E4D093002C1DA0 /* AppStyle.swift */; };
 		F9C9C68A23E4D287002C1DA0 /* UIColor+hexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C9C68923E4D287002C1DA0 /* UIColor+hexString.swift */; };
 		F9D032F2240E89A7008A9B13 /* ArticlesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D032F1240E89A7008A9B13 /* ArticlesList.swift */; };
-		F9D032F4240EC2DB008A9B13 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D032F3240EC2DB008A9B13 /* SideMenu.swift */; };
 		F9D032F6240FD085008A9B13 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D032F5240FD085008A9B13 /* Store.swift */; };
 		F9D032F8240FD4FE008A9B13 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D032F7240FD4FE008A9B13 /* SearchBarView.swift */; };
 		F9D07F652412893200D34BC2 /* LesplusbellesDamesdeFrance.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9D07F5D2412893100D34BC2 /* LesplusbellesDamesdeFrance.jpg */; };
@@ -1319,7 +1318,6 @@
 		F95DE58523DE349600BE1BD5 /* PlacesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesList.swift; sourceTree = "<group>"; };
 		F95DE58623DE349600BE1BD5 /* Progression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Progression.swift; sourceTree = "<group>"; };
 		F95DE58723DE349600BE1BD5 /* PlacesPager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesPager.swift; sourceTree = "<group>"; };
-		F95DE58823DE349600BE1BD5 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		F95DE58A23DE349600BE1BD5 /* DreamList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamList.swift; sourceTree = "<group>"; };
 		F95DE5A123DE34A800BE1BD5 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		F95DE5A223DE34A800BE1BD5 /* PlaceStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceStore.swift; sourceTree = "<group>"; };
@@ -1337,6 +1335,8 @@
 		F9815D7824240EC60057D515 /* DistanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceView.swift; sourceTree = "<group>"; };
 		F98172562417D2E70011A76B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		F98B2174242909C800CE3EF5 /* premium0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = premium0.jpg; sourceTree = "<group>"; };
+		F98B2179242A7C0A00CE3EF5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F98B217B242A7C1100CE3EF5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F99E73A223ED9CD4006BC089 /* Reminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminders.swift; sourceTree = "<group>"; };
 		F99E73A623EDAD54006BC089 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		F99E73A823EF0D69006BC089 /* ProgressionRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressionRegion.swift; sourceTree = "<group>"; };
@@ -1355,7 +1355,6 @@
 		F9C9C68723E4D093002C1DA0 /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
 		F9C9C68923E4D287002C1DA0 /* UIColor+hexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hexString.swift"; sourceTree = "<group>"; };
 		F9D032F1240E89A7008A9B13 /* ArticlesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesList.swift; sourceTree = "<group>"; };
-		F9D032F3240EC2DB008A9B13 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		F9D032F5240FD085008A9B13 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		F9D032F7240FD4FE008A9B13 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		F9D07F5D2412893100D34BC2 /* LesplusbellesDamesdeFrance.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LesplusbellesDamesdeFrance.jpg; sourceTree = "<group>"; };
@@ -2083,6 +2082,7 @@
 				F95DE55F23DE2F0F00BE1BD5 /* Assets.xcassets */,
 				F95DE56423DE2F0F00BE1BD5 /* LaunchScreen.storyboard */,
 				F9DC21F323E232650023B8EF /* Localizable.strings */,
+				F98B217A242A7C0A00CE3EF5 /* InfoPlist.strings */,
 				F95DE56723DE2F0F00BE1BD5 /* Info.plist */,
 				F91DEDA123E8A26D00D8FFD7 /* TripList.xcdatamodeld */,
 				F92E05CC24129558009C5ADD /* GoogleService-Info.plist */,
@@ -2186,12 +2186,10 @@
 				F91DED9D23E6EAE800D8FFD7 /* BottomSheetView.swift */,
 				F95DE57A23DE349500BE1BD5 /* AutoFocusTextField.swift */,
 				F95DE58323DE349600BE1BD5 /* ImageCarouselView.swift */,
-				F95DE58823DE349600BE1BD5 /* TextView.swift */,
 				F96D610F23EB607900CD296A /* LazyView.swift */,
 				F99E73A623EDAD54006BC089 /* ActivityViewController.swift */,
 				F94B496F2401A42A0055956D /* SeparationBar.swift */,
 				F9FC37E0240D61D500F17AAC /* MailView.swift */,
-				F9D032F3240EC2DB008A9B13 /* SideMenu.swift */,
 				F9D032F7240FD4FE008A9B13 /* SearchBarView.swift */,
 				F92E05CE2412EE44009C5ADD /* TabBarController.swift */,
 				F98172562417D2E70011A76B /* WebView.swift */,
@@ -2594,6 +2592,7 @@
 				F92E05482412898C009C5ADD /* ChteaudeLichtenberg.jpg in Resources */,
 				F92E03F42412898C009C5ADD /* PuydeDme.jpg in Resources */,
 				F92E051D2412898C009C5ADD /* ChteaudeCheverny.jpg in Resources */,
+				F98B2178242A7C0A00CE3EF5 /* InfoPlist.strings in Resources */,
 				F92E058E2412898C009C5ADD /* LacdAiguebelette.jpg in Resources */,
 				F92E03FA2412898C009C5ADD /* MaisonJardinsdeClaudeMonet.jpg in Resources */,
 				F92E05512412898C009C5ADD /* Falaisestretat.jpg in Resources */,
@@ -2995,8 +2994,6 @@
 				F9815D7924240EC60057D515 /* DistanceView.swift in Sources */,
 				F94B49732401DE3D0055956D /* PlaceViewCompact.swift in Sources */,
 				F95DE5B923DE416D00BE1BD5 /* Dream.swift in Sources */,
-				F9D032F4240EC2DB008A9B13 /* SideMenu.swift in Sources */,
-				F95DE59C23DE349700BE1BD5 /* TextView.swift in Sources */,
 				F926A7CA24194CF900615E07 /* PlaceAnnotationView.swift in Sources */,
 				F95DE58C23DE349700BE1BD5 /* PlaceMapView.swift in Sources */,
 				F9C9C68823E4D093002C1DA0 /* AppStyle.swift in Sources */,
@@ -3063,6 +3060,15 @@
 				F9DC21F423E232810023B8EF /* fr */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F98B217A242A7C0A00CE3EF5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F98B2179242A7C0A00CE3EF5 /* fr */,
+				F98B217B242A7C1100CE3EF5 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		F9DC21F323E232650023B8EF /* Localizable.strings */ = {

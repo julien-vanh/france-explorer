@@ -43,7 +43,7 @@ struct DreamList: View {
             }
             .listStyle(GroupedListStyle())
             .environment(\.horizontalSizeClass, .regular)
-            .navigationBarTitle("Ma liste")
+            .navigationBarTitle(Text("Ma Liste"))
             .navigationBarItems(leading:EditButton(), trailing:(
                 Button(action: {
                     if UIDevice.current.userInterfaceIdiom == .phone {

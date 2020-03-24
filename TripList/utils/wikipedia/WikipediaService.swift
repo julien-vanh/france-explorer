@@ -45,7 +45,7 @@ struct WikipediaService {
             return
         }
         
-        print("getPage \(pageid) : \(URL.absoluteString)")
+        //print("getPage \(pageid) : \(URL.absoluteString)")
         let datatask = URLSession.shared.dataTask(with: URL) {data, _, _ in
             guard let jsonData = data else {
                 completion(.failure(.noDataAvailable))
@@ -82,7 +82,7 @@ struct WikipediaService {
             return
         }
         
-        print("getPageImages \(pageid) : \(URL.absoluteString)")
+        //print("getPageImages \(pageid) : \(URL.absoluteString)")
         let datatask = URLSession.shared.dataTask(with: URL) {data, _, _ in
             guard let jsonData = data else {
                 completion(.failure(.noDataAvailable))
@@ -90,7 +90,7 @@ struct WikipediaService {
             }
             do {
                 let response = try JSONDecoder().decode(WikiResponse.self, from: jsonData)
-                print("getPageImages response OK")
+                //print("getPageImages response OK")
                 var images:[ImageMetadata] = []
                 for value in response.query.pages.values {
                     if case .image(let image) = value {

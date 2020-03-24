@@ -167,9 +167,7 @@ struct ArticleAssociatedPlaceLocked: View {
         }
         .frame(height: 70)
         .padding(.horizontal, 10.0)
-        .sheet(isPresented: $isPurchasePresented, onDismiss: {
-            print("Dismiss")
-        }, content: {
+        .sheet(isPresented: $isPurchasePresented, content: {
             PurchasePage()
         })
         

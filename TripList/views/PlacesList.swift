@@ -33,7 +33,7 @@ struct PlacesList: View {
             }
         }
         .navigationBarItems(trailing:
-            Button("Filtrer") {
+            Button(("Filtrer")) {
                 self.filterOpen.toggle()
             }
         )
@@ -48,6 +48,6 @@ struct PlacesList: View {
 
 struct PlacesList_Previews: PreviewProvider {
     static var previews: some View {
-        PlacesList(category: Category(id: 2, category: .historical, title: "Lieux", image: ""))
+        PlacesList(category: PlaceStore.shared.getCategories()[1])
     }
 }
