@@ -40,32 +40,12 @@ struct PlaceDetailPhotos: View {
             }
         }.gridStyle(
             columnsInPortrait: UIDevice.current.userInterfaceIdiom == .phone ? 2 : 3,
-            columnsInLandscape: UIDevice.current.userInterfaceIdiom == .phone ? 3 : 4
+            columnsInLandscape: UIDevice.current.userInterfaceIdiom == .phone ? 3 : 4,
+            animation: .none
         )
         .navigationBarTitle(Text(place.title), displayMode: .inline)
         .sheet(isPresented: $showModal, content: {
-            ZStack {
-                PhotoPager(photos: self.pageImages, initiale: self.selectedPageImage!)
-                
-                HStack {
-                    VStack {
-                        Image(systemName: "xmark")
-                            .foregroundColor(.white)
-                            .background(
-                            Circle()
-                                .fill(Color.gray)
-                                .frame(width: 40, height: 40)
-                        )
-                        .frame(width: 40, height: 40)
-                        .padding([.top, .leading], 20.0)
-                        .onTapGesture {
-                            self.showModal.toggle()
-                        }
-                        Spacer()
-                    }
-                    Spacer()
-                }
-            }.background(Color.black).edgesIgnoringSafeArea(.bottom)
+            PlacePhotosModal(images: self.pageImages, initialeImage: self.selectedPageImage!)
         })
         .onAppear(perform: {
             
@@ -91,6 +71,42 @@ struct PlaceDetailPhotos_Previews: PreviewProvider {
     static var previews: some View {
         PlaceDetailPhotos(place: PlaceStore.shared.get(id: "1"))
     }
+}
+
+struct PlacePhotosModal: View {
+    var images: [ImageMetadata]
+    var initialeImage: ImageMetadata
+    @Environment(\.presentationMode) var presentationMode
+    
+    var body: some View {
+        ZStack {
+            PhotoPager(photos: images, initiale: initialeImage)
+            
+            HStack {
+                VStack {
+                    Image(systemName: "xmark")
+                        .foregroundColor(.white)
+                        .background(
+                        Circle()
+                            .fill(Color.gray)
+                            .frame(width: 40, height: 40)
+                    )
+                    .frame(width: 40, height: 40)
+                    .padding([.top, .leading], 20.0)
+                    .onTapGesture {
+                        self.dismiss()
+                    }
+                    Spacer()
+                }
+                Spacer()
+            }
+        }.background(Color.black).edgesIgnoringSafeArea(.bottom)
+    }
+    
+    private func dismiss() {
+        self.presentationMode.wrappedValue.dismiss()
+    }
+
 }
 
 struct PhotoPager: View {
@@ -142,12 +158,14 @@ struct PhotoFullscreen: View {
                                 self.scale = max(self.scale, 1.0)
                             }
                         )
+ 
                 })
                 
                 
                 VStack {
                     Spacer()
                     Text(self.photoDescription())
+                        .lineLimit(4)
                         .foregroundColor(.white)
                         .padding(3)
                         .background(BlurView(style: .dark))

@@ -100,11 +100,11 @@ struct WikipediaService {
                         
                         if let metadata = image.imageinfo[0].extmetadata, let description = metadata.ImageDescription {
                             if description.value.uppercased().contains("CARTE ") || description.value.uppercased().contains("MAP ") {
-                                //Pour supprimier les cartes vectorielles 
+                                //Pour supprimer les cartes vectorielles 
                                 continue
                             }
                             
-                            if description.value.uppercased().contains("CATHERINE DE  ") {
+                            if description.value.uppercased().contains("CATHERINE DE ") {
                                 //Pour ne pas afficher la photo de chenonceau qui remonte à chaque monument !
                                 continue
                             }
