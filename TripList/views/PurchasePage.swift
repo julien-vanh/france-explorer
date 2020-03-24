@@ -17,20 +17,16 @@ struct PurchasePage: View {
     @State private var isDisabled : Bool = false
     
     @Environment(\.presentationMode) var presentationMode
-    
-    private func dismiss() {
-        self.presentationMode.wrappedValue.dismiss()
-    }
 
     var body: some View {
         NavigationView {
             ScrollView(.vertical) {
                 
-                PurchaseCarousel()
+                //PurchaseCarousel()
                 
-                Text("Ne passez pas à coté de l'inmanquable.\nDéverouillez l'intégralité de l'application.")
-                    .padding()
-                    .foregroundColor(.gray)
+                //Text("Ne passez pas à coté de l'inmanquable.\nDéverouillez l'intégralité de l'application.")
+                //.padding()
+                //.foregroundColor(.gray)
                 
                 
                 VStack(alignment: .center) {
@@ -89,7 +85,9 @@ struct PurchasePage: View {
         }
     }
     
-    
+    private func dismiss() {
+        self.presentationMode.wrappedValue.dismiss()
+    }
     
     func restorePurchases(){
         IAPManager.shared.restorePurchases(success: {

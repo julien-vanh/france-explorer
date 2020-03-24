@@ -44,7 +44,24 @@ struct ProgressionLine: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(region.name)
+            HStack(alignment: .bottom) {
+                Text(region.name)
+                    .font(.headline)
+                Spacer()
+                
+                HStack {
+                    Text("\(getCompletedCount())/\(PlaceStore.shared.getAllForRegion(regionId: region.id).count)")
+                    .font(.caption)
+                    .foregroundColor(.white)
+                    
+                    
+                    Image(systemName: "checkmark.circle.fill")
+                    .foregroundColor(.white)
+                }
+                .padding(3)
+                .background(Color(.systemGray2))
+                .cornerRadius(10)
+            }
             
             ProgressBar(value: CGFloat(getCompletedCount())/CGFloat(PlaceStore.shared.getAllForRegion(regionId: region.id).count))
         }
@@ -65,8 +82,8 @@ struct ProgressionListHeader: View {
     @FetchRequest(fetchRequest: Completion.getAllCompletion()) var completions: FetchedResults<Completion>
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("France").font(.title)
+        VStack(alignment: .center) {
+            
             Text("\(getRegionsCompletion().keys.count)/\(PlaceStore.shared.getRegions().count) régions visitées")
                 .foregroundColor(Color(UIColor.explored))
         }
