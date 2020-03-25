@@ -4,8 +4,8 @@ import SwiftUI
 import UIKit
 import MessageUI
 
-let MAILTO = "support@france-explorer.fr" //TODO
-let SUBJECT = "Support" //TODO
+let MAILTO = "contact@france-explorer.fr"
+let SUBJECT = "Support iOS"
 
 struct MailView: UIViewControllerRepresentable {
 
