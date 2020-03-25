@@ -163,7 +163,7 @@ struct PlaceCard: View {
                         .padding(8)
  */
                     Spacer()
-                    Text(card.place!.title)
+                    Text(card.place!.titleLocalized)
                         .foregroundColor((self.completions.first != nil) ? Color(AppStyle.color(for: self.card.place!.category)) : Color.gray)
                         .font(.caption)
                         .lineLimit(2)

@@ -11,7 +11,7 @@ import CoreLocation
 
 struct Place: Hashable, Codable, Identifiable {
     var id: String
-    var title: String
+    fileprivate var title: String
     var category: PlaceCategory
     var regionId: String
     var iap: Bool
@@ -28,13 +28,6 @@ struct Place: Hashable, Codable, Identifiable {
     
     fileprivate var descriptionFr: PlaceDescription!
     fileprivate var descriptionEn: PlaceDescription!
-    var content: PlaceDescription! {
-        if( Locale.current.languageCode == "fr"){
-            return descriptionFr
-        } else {
-            return descriptionEn
-        }
-    }
     
     var wikiPageId: Int!
     
@@ -46,6 +39,25 @@ struct Place: Hashable, Codable, Identifiable {
             hash += contentdefined
         }
         return hash.lowercased().forSorting
+    }
+    
+    var titleLocalized: String {
+        if( Locale.current.languageCode != "fr"){
+            if let description = descriptionEn, let titleEn = description.title {
+                return titleEn
+            }
+            
+        }
+        return self.title
+    }
+    
+    var descriptionLocalized: PlaceDescription! {
+        if( Locale.current.languageCode != "fr"){
+            if let description = descriptionEn {
+                return description
+            }
+        }
+        return descriptionFr
     }
 }
 

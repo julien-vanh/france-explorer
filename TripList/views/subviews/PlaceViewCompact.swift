@@ -25,7 +25,7 @@ struct PlaceViewCompact: View {
                     .clipped().cornerRadius(5)
                 
                 VStack(alignment: .leading) {
-                    Text(place.title)
+                    Text(place.titleLocalized)
                         .font(.headline).lineLimit(2)
                     
                     HStack(alignment: .bottom, spacing: 10) {

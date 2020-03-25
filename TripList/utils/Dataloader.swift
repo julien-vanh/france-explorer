@@ -56,7 +56,7 @@ final class ImageStore {
     
     
     func image(forPlace place: Place) -> Image {
-        var path = "placeholder.png"
+        var path = "placeholder.jpg"
         if let illustration = place.illustration {
             path = illustration.path.replacingOccurrences(of: "jpeg", with: "jpg")
         }
@@ -84,7 +84,7 @@ final class ImageStore {
             return images.index(forKey: name)!
         }
         
-        images[name] = try! ImageStore.loadImage(name: "placeholder.png")
+        images[name] = try! ImageStore.loadImage(name: "placeholder.jpg")
         return images.index(forKey: name)!
     }
 }

@@ -37,7 +37,7 @@ struct DreamDetail: View {
                 Text(PlaceStore.shared.getCategory(placeCategory: self.place.category).title)
                     .foregroundColor(Color(AppStyle.color(for: self.place.category)))
                 
-                Text(self.place.title).font(.largeTitle)
+                Text(self.place.titleLocalized).font(.largeTitle)
                 
                 DistanceView(coordinate: place.locationCoordinate)
                 
@@ -59,7 +59,7 @@ struct DreamDetail: View {
                         Image(systemName: "map").frame(width: 30, height: 30, alignment: .center).font(.title)
                         Button(action: {
                             let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: self.place.locationCoordinate, addressDictionary:nil))
-                            mapItem.name = self.place.title
+                            mapItem.name = self.place.titleLocalized
                             mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
                         }) {
                             Text(self.place.address)
@@ -82,7 +82,7 @@ struct DreamDetail: View {
     }
     
     private func getNavigationTitle(_ geometry: GeometryProxy) -> String {
-        return getScrollOffset(geometry) < -290 ? self.place.title : ""
+        return getScrollOffset(geometry) < -290 ? self.place.titleLocalized : ""
     }
     
     private func getScrollOffset(_ geometry: GeometryProxy) -> CGFloat {

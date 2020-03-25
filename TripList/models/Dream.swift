@@ -32,7 +32,7 @@ extension Dream {
         id = UUID()
         createdAt = Date()
         completed = false
-        title = place.title
+        title = place.titleLocalized
         placeId = place.id
         note = ""
     }

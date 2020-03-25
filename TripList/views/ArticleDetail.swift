@@ -122,7 +122,7 @@ struct ArticleAssociatedPlace: View {
                     NavigationLink(
                         destination: PlaceDetail(place: place)
                     ) {
-                        Text(place.title).font(.headline).lineLimit(2)
+                        Text(place.titleLocalized).font(.headline).lineLimit(2)
                     }
                     Spacer()
                     VStack {
@@ -159,7 +159,7 @@ struct ArticleAssociatedPlaceLocked: View {
                 
                 VStack(alignment: .leading) {
                     Spacer()
-                    Text(place.title).font(.headline).lineLimit(2).blur(radius: 5)
+                    Text(place.titleLocalized).font(.headline).lineLimit(2).blur(radius: 5)
                     Spacer()
                     SeparationBar()
                 }

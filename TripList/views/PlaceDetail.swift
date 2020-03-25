@@ -55,7 +55,7 @@ struct PlaceDetail: View {
                 Text(PlaceStore.shared.getCategory(placeCategory: self.place.category).title)
                     .foregroundColor(Color(AppStyle.color(for: self.place.category)))
                 
-                Text(self.place.title).font(.largeTitle).multilineTextAlignment(.center)
+                Text(self.place.titleLocalized).font(.largeTitle).multilineTextAlignment(.center)
                 
                 DistanceView(coordinate: place.locationCoordinate)
                 
@@ -63,8 +63,8 @@ struct PlaceDetail: View {
                 PlaceButtons(place: self.place)
                 
                 
-                if self.place.content != nil {
-                    Text(self.place.content!.description)
+                if self.place.descriptionLocalized != nil {
+                    Text(self.place.descriptionLocalized!.description)
                         .padding( 10.0)
                 }
                 
@@ -76,7 +76,7 @@ struct PlaceDetail: View {
                             .padding(.trailing, 10)
                         Button(action: {
                             let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: self.place.locationCoordinate, addressDictionary:nil))
-                            mapItem.name = self.place.title
+                            mapItem.name = self.place.titleLocalized
                             mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
                         }) {
                             Text(self.place.address)
@@ -96,7 +96,7 @@ struct PlaceDetail: View {
                         Button(action: {self.websitePresented.toggle()}) {
                             Text("Site web")
                         }.sheet(isPresented: self.$websitePresented, content: {
-                            WebViewModal(title: self.place.title, url: self.place.website)
+                            WebViewModal(title: self.place.titleLocalized, url: self.place.website)
                         })
                         Spacer()
                     }
@@ -137,7 +137,7 @@ struct PlaceDetail: View {
     }
     
     private func getNavigationTitle(_ geometry: GeometryProxy) -> String {
-        return getScrollOffset(geometry) < -390 ? self.place.title : ""
+        return getScrollOffset(geometry) < -390 ? self.place.titleLocalized : ""
     }
     
     private func getScrollOffset(_ geometry: GeometryProxy) -> CGFloat {
@@ -190,9 +190,9 @@ struct CreditsModal: View {
                     .padding(.bottom, 30.0)
                 }
                 
-                if (self.place.content != nil){
+                if (self.place.descriptionLocalized != nil){
                     Text("Texte")
-                    Text(self.place.content!.credit).foregroundColor(.gray)
+                    Text(self.place.descriptionLocalized!.credit).foregroundColor(.gray)
                 }
                 
                 Spacer()

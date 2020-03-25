@@ -20,7 +20,7 @@ struct PlaceListRow: View {
                 .frame(width: 20, height: 20)
                 .padding(8)
             
-            Text(place.title)
+            Text(place.titleLocalized)
             
             Spacer()
             

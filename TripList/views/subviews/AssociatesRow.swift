@@ -32,7 +32,7 @@ struct AssociatesRow: View {
                                     .aspectRatio(contentMode: .fill)
                                     .clipped().frame(width: 155, height: 155)
                                 
-                                Text(place.title)
+                                Text(place.titleLocalized)
                                     .fontWeight(.semibold)
                                     .shadow(color: Color.black, radius: 5, x: 0, y: 0)
                                     .foregroundColor(.white).frame(width: 155, height: 155)

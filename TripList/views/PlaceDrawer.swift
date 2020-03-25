@@ -18,7 +18,7 @@ struct PlaceDrawer: View {
     var body: some View {
         VStack(alignment: .leading) {
             
-            Text(place.title)
+            Text(place.titleLocalized)
                 .font(.headline)
             
         
@@ -64,9 +64,9 @@ struct PlaceDrawer: View {
             }
             
             
-            if self.place.content != nil {
+            if self.place.descriptionLocalized != nil {
                 SeparationBar()
-                Text(self.place.content!.description).lineLimit(9)
+                Text(self.place.descriptionLocalized!.description).lineLimit(9)
             }
             
             SeparationBar()
@@ -98,7 +98,7 @@ struct PlaceDrawerMetadata: View {
                 Text("Adresse").foregroundColor(.gray).font(.subheadline)
                 Button(action: {
                     let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: self.place.locationCoordinate, addressDictionary:nil))
-                    mapItem.name = self.place.title
+                    mapItem.name = self.place.titleLocalized
                     mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
                 }) {
                     Text(self.place.address)

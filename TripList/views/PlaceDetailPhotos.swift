@@ -43,7 +43,7 @@ struct PlaceDetailPhotos: View {
             columnsInLandscape: UIDevice.current.userInterfaceIdiom == .phone ? 3 : 4,
             animation: .none
         )
-        .navigationBarTitle(Text(place.title), displayMode: .inline)
+        .navigationBarTitle(Text(place.titleLocalized), displayMode: .inline)
         .sheet(isPresented: $showModal, content: {
             PlacePhotosModal(images: self.pageImages, initialeImage: self.selectedPageImage!)
         })
