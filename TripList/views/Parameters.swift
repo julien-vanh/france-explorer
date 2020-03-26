@@ -13,6 +13,7 @@ import MessageUI
 struct Parameters: View {
     @State private var isSharePresented: Bool = false
     @State private var isPurchasePresented: Bool = false
+    @State private var cguPresented: Bool = false
     @State var result: Result<MFMailComposeResult, Error>? = nil
     @State var isShowingMailView = false
     @ObservedObject var appState = AppState.shared
@@ -90,7 +91,12 @@ struct Parameters: View {
                         Text(UIApplication.appVersion).foregroundColor(.gray)
                     }
                     
-                    Text("Confidentialité") //TODO NavigationLink
+                    
+                    Button(action: {self.cguPresented.toggle()}) {
+                        Text("Confidentialité")
+                    }.sheet(isPresented: self.$cguPresented, content: {
+                        WebViewModal(title: "Confidentialité", url: "https://www.france-explorer.fr/confidentialite.html")
+                    })
                     
                     Text("Mentions tierces") //TODO
                 })

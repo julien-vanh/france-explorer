@@ -44,7 +44,6 @@ struct PurchasePage: View {
                                 PurchaseButton(block: {
                                     self.purchaseProduct(skproduct: prod)
                                 }, product: prod)
-                                    .disabled(IAPManager.shared.isActive(productIdentifier: prod.productIdentifier))
                             }
                         }
                         .padding(10)
@@ -190,6 +189,6 @@ struct PurchaseButton : View {
                 .foregroundColor(.white)
                 .background(Color.green)
                 .cornerRadius(20)
-        }
+        }.disabled(IAPManager.shared.isActive(productIdentifier: product.productIdentifier))
     }
 }

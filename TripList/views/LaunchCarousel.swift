@@ -129,10 +129,10 @@ struct LaunchCarousel: View {
                         Text("En continuant vous acceptez nos")
                         
                         Button(action: {self.cguPresented.toggle()}) {
-                            Text("Conditions générales").foregroundColor(.blue)
+                            Text("Conditions générales").foregroundColor(Color.black)
                         }.sheet(isPresented: self.$cguPresented, content: {
-                            WebViewModal(title: "Conditions générales", url: "https://www.apple.com")//TODO
-                        })
+                            WebViewModal(title: "Conditions générales", url: "https://www.france-explorer.fr/confidentialite.html")
+                            }).buttonStyle(PlainButtonStyle())
                     }
                 }
                 
