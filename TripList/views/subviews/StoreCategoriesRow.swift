@@ -53,7 +53,7 @@ struct StoreCategoryItem: View {
     
     var body: some View {
         NavigationLink(
-            destination: PlacesList(category: category)
+            destination: PlacesList(filter: FilterModel(sortBy: .distance, categoryFilter: category.category))
         ) {
             Text(category.titlePlural)
                 .fontWeight(.semibold)

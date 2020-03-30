@@ -20,6 +20,12 @@ struct NearestPlaces: View {
                     Text("À proximité")
                         .font(.title)
                     Spacer()
+                    NavigationLink(destination: PlacesList(filter: FilterModel(sortBy: .distance, categoryFilter: .all))){
+                        HStack {
+                            Text("Voir plus")
+                            Image(systemName: "chevron.right")
+                        }.foregroundColor(.blue)
+                    }
                 }.padding(.horizontal)
                 
                 PlaceGridCompact(places: self.locationManager.nearestPlaces!)

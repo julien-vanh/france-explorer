@@ -14,11 +14,11 @@ struct PlacesList: View {
     @State private var filterOpen: Bool = false
     @ObservedObject private var filterModel: FilterModel
     
-    init(category: Category){
-        self.filterModel = FilterModel(sortBy: .distance, categoryFilter: category.category)
+    init(filter: FilterModel){
+        self.filterModel = filter
         
         Analytics.logEvent("PlacesList", parameters: [
-            "category": category.category.rawValue
+            "category": filter.categoryFilter.rawValue
         ])
     }
     
@@ -48,6 +48,6 @@ struct PlacesList: View {
 
 struct PlacesList_Previews: PreviewProvider {
     static var previews: some View {
-        PlacesList(category: PlaceStore.shared.getCategories()[1])
+        PlacesList(filter: FilterModel(sortBy: .distance, categoryFilter: .all))
     }
 }
