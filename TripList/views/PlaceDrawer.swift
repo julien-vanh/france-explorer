@@ -26,9 +26,7 @@ struct PlaceDrawer: View {
                 Text(PlaceStore.shared.getCategory(placeCategory: self.place.category).title)
                     .foregroundColor(Color(AppStyle.color(for: self.place.category)))
                 
-                if locationManager.isLocationEnable() {
-                    Text(" - " + AppStyle.formatDistance(value: locationManager.distanceTo(coordinate: place.locationCoordinate)))
-                }
+                DistanceView(coordinate: self.place.locationCoordinate)
             }
             
             PlaceButtons(place: place)
@@ -74,8 +72,8 @@ struct PlaceDrawer: View {
             Button(action: {
                 self.showCredits.toggle()
             }) {
-                Text("Crédits").foregroundColor(.gray).font(.subheadline)
-            }.sheet(isPresented: self.$showCredits) {
+                Image(systemName: "info.circle")
+            }.padding(.trailing, 10.0).sheet(isPresented: self.$showCredits) {
                 CreditsModal(place: self.place)
             }
         }.padding()

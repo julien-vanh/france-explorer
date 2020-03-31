@@ -12,7 +12,7 @@ import MapKit
 
 struct DistanceView: View {
     var coordinate: CLLocationCoordinate2D
-    @ObservedObject var locationManager = LocationManager.shared
+    @ObservedObject private var locationManager = LocationManager.shared
     
     var body: some View {
         VStack {
@@ -22,6 +22,22 @@ struct DistanceView: View {
                     .foregroundColor(.white)
                     .padding(3)
                     .background(Color(.systemGray2))
+                    .cornerRadius(10)
+            }
+        }
+    }
+}
+
+struct DistanceViewFull: View {
+    var coordinate: CLLocationCoordinate2D
+    @ObservedObject var locationManager = LocationManager.shared
+    
+    var body: some View {
+        VStack {
+            if self.locationManager.isLocationEnable() {
+                Text("à \(AppStyle.formatDistance(value: self.locationManager.distanceTo(coordinate: coordinate))) de ma position")
+                    .padding(15)
+                    .background(BlurView(style: .regular))
                     .cornerRadius(10)
             }
         }
