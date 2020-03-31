@@ -143,9 +143,13 @@ struct ProgressionMapController: UIViewRepresentable {
             if view.annotation is PlaceAnnotation {
                 let placeAnnotation = view.annotation as! PlaceAnnotation
                 
-                self.parent.appState.place = placeAnnotation.place
-                
-                mapView.setCenter(placeAnnotation.coordinate, animated: true)
+                switch placeAnnotation.style {
+                case .PremiumLock:
+                    parent.appState.displayPurchasePageDrawer()
+                default:
+                    parent.appState.displayPlaceDrawer(place: placeAnnotation.place)
+                    mapView.setCenter(placeAnnotation.coordinate, animated: true)
+                }
             }
         }
     }

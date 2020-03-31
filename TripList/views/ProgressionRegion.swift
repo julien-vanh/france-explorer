@@ -90,10 +90,12 @@ struct ProgressionCard: Identifiable {
 
 struct PlaceCardLocked: View {
     var card: ProgressionCard
-    @State private var isPurchasePresented: Bool = false
+    @ObservedObject private var appState = AppState.shared
 
     var body: some View {
-        Button(action: {self.isPurchasePresented.toggle()}) {
+        Button(action: {
+            self.appState.displayPurchasePageDrawer()
+        }) {
             ZStack(alignment: .center) {
                 
                 ImageStore.shared.image(name: "premium0.jpg")
@@ -122,10 +124,6 @@ struct PlaceCardLocked: View {
                     .strokeBorder(Color.yellow, lineWidth: 2)
             )
         }
-        .sheet(isPresented: self.$isPurchasePresented, content: {
-            PurchasePage()
-        })
-
     }
 }
 

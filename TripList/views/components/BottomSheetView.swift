@@ -62,7 +62,7 @@ struct BottomSheetView<Content: View>: View {
                 self.content
             }
             .frame(width: geometry.size.width, height: self.maxHeight, alignment: .top)
-            .background(Color(.secondarySystemBackground))
+            .background(BlurView(style: .systemThinMaterial))
             .cornerRadius(Constants.radius)
             .frame(height: geometry.size.height, alignment: .bottom)
             .offset(y: max(self.offset + self.translation, 0))
@@ -71,12 +71,11 @@ struct BottomSheetView<Content: View>: View {
                 DragGesture().updating(self.$translation) { value, aState, _ in
                     aState = value.translation.height
                 }.onEnded { value in
-                    let location = geometry.size.height - value.location.y
                     
                     //Determine le state en fin de scroll
-                    if location > self.maxHeight * 0.5 {
+                    if value.predictedEndTranslation.height < 0 {
                         self.state = .full
-                    } else if location < self.maxHeight * 0.25 {
+                    } else if value.predictedEndLocation.y > self.maxHeight {
                         self.state = .closed
                     } else {
                         self.state = .middle

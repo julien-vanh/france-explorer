@@ -145,10 +145,12 @@ struct ArticleAssociatedPlace: View {
 
 struct ArticleAssociatedPlaceLocked: View {
     var place: Place
-    @State private var isPurchasePresented: Bool = false
+    @ObservedObject private var appState = AppState.shared
     
     var body: some View {
-        Button(action: {self.isPurchasePresented.toggle()}) {
+        Button(action: {
+            self.appState.displayPurchasePageDrawer()
+        }) {
             HStack(alignment: .bottom) {
                 ImageStore.shared.image(forPlace: place)
                     .renderingMode(.original)
@@ -167,10 +169,6 @@ struct ArticleAssociatedPlaceLocked: View {
         }
         .frame(height: 70)
         .padding(.horizontal, 10.0)
-        .sheet(isPresented: $isPurchasePresented, content: {
-            PurchasePage()
-        })
-        
     }
 }
 

@@ -11,7 +11,7 @@ import MapKit
 import QGrid
 
 struct PlaceDrawer: View {
-    @Binding var place: Place
+    var place: Place
     @State private var showCredits = false
     @ObservedObject var locationManager = LocationManager.shared
     
@@ -19,7 +19,9 @@ struct PlaceDrawer: View {
         VStack(alignment: .leading) {
             
             Text(place.titleLocalized)
-                .font(.headline)
+                .font(.title)
+                .padding(.trailing, 40)
+                .padding(.vertical, 10)
             
         
             HStack {
@@ -29,11 +31,12 @@ struct PlaceDrawer: View {
                 DistanceView(coordinate: self.place.locationCoordinate)
             }
             
-            PlaceButtons(place: place)
+            
             
             if UIDevice.current.userInterfaceIdiom == .pad {
+                PlaceButtons(place: place)
+                
                 HStack(alignment: .top, spacing: 10) {
-                    
                     ImageStore.shared.image(forPlace: self.place)
                         .renderingMode(.original)
                         .resizable()
@@ -56,11 +59,11 @@ struct PlaceDrawer: View {
                         .clipped().cornerRadius(15)
                     Spacer()
                 }
-                    
                 
+                PlaceButtons(place: place)
+                    
                 PlaceDrawerMetadata(place: place)
             }
-            
             
             if self.place.descriptionLocalized != nil {
                 SeparationBar()
@@ -73,16 +76,18 @@ struct PlaceDrawer: View {
                 self.showCredits.toggle()
             }) {
                 Image(systemName: "info.circle")
-            }.padding(.trailing, 10.0).sheet(isPresented: self.$showCredits) {
-                CreditsModal(place: self.place)
-            }
-        }.padding()
+            }.padding(.trailing, 10.0)
+        }
+        .padding()
+        .sheet(isPresented: self.$showCredits) {
+            CreditsModal(place: self.place)
+        }
     }
 }
 
 struct PlaceMapDrawer_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceDrawer(place: .constant(PlaceStore.shared.getRandom(count: 1, premium: false)[0]))
+        PlaceDrawer(place: PlaceStore.shared.getRandom(count: 1, premium: false)[0])
     }
 }
 
@@ -107,7 +112,7 @@ struct PlaceDrawerMetadata: View {
                 SeparationBar()
                 Text("Site web").foregroundColor(.gray).font(.subheadline)
                 Button(action: {
-                    AppState.openLinkInBrowser(link: self.place.website)
+                    Browser.openLinkInBrowser(link: self.place.website)
                 }) {
                     Text(self.place.website).foregroundColor(.blue)
                 }

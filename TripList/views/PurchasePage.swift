@@ -15,68 +15,64 @@ struct PurchasePage: View {
     @State private var alertErrorMessage = ""
     @ObservedObject var productsStore : ProductsStore = ProductsStore.shared
     @State private var isDisabled : Bool = false
-    
-    @Environment(\.presentationMode) var presentationMode
+    @ObservedObject var appState = AppState.shared
 
     var body: some View {
-        NavigationView {
-            ScrollView(.vertical) {
+        VStack(alignment: .center) {
+        
+            Text("Boutique")
+                .font(.title)
+                .padding(.top, 20)
+                .padding(.bottom, 20)
+            
+            
                 
-                //PurchaseCarousel()
+            PurchaseCarousel()
                 
-                //Text("Ne passez pas à coté de l'inmanquable.\nDéverouillez l'intégralité de l'application.")
-                //.padding()
-                //.foregroundColor(.gray)
+            Text("Ne passez pas à coté de l'inmanquable.\nDéverouillez l'intégralité de l'application.")
+            .padding()
                 
                 
-                VStack(alignment: .center) {
-                    ForEach(productsStore.products, id: \.self) { prod in
-                        VStack {
-                            if prod.productIdentifier == ProductsStore.ProductGuideFrance {
+            
+                 
+                    
+                    
+            ForEach(productsStore.products, id: \.self) { prod in
+                VStack {
+                    if prod.productIdentifier == ProductsStore.ProductGuideFrance {
+                        
+                        Text(prod.localizedTitle).font(.headline).foregroundColor(.yellow)
                                 
-                                Text(prod.localizedTitle).font(.headline).foregroundColor(.yellow)
-                                
-                                FeatureLine(text: "\(350) " + NSLocalizedString("destinations supplémentaires", comment:"") )
+                        FeatureLine(text: "\(350) " + NSLocalizedString("destinations supplémentaires", comment:"") )
                                 //FeatureLine(text: "Régions d'outre-mer")
                                 //FeatureLine(text: "Suppression de la publicité")
                                 //FeatureLine(text: "Liste illimitée")
                                 
-                                PurchaseButton(block: {
-                                    self.purchaseProduct(skproduct: prod)
-                                }, product: prod)
-                            }
-                        }
-                        .padding(10)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10).strokeBorder(Color.yellow, lineWidth: 1)
-                        )
+                        PurchaseButton(block: {
+                            self.purchaseProduct(skproduct: prod)
+                        }, product: prod)
                     }
-                    
-                    SeparationBar()
-                        
-                    Button(action: {
-                        self.restorePurchases()
-                    }) {
-                        Text("Restaurer mes achats")
-                            .font(.subheadline)
-                            .foregroundColor(.blue)
-                            .frame(width: 250.0, height: 40.0)
-                    }
-                }.padding(10)
-                
-            }
-            .listStyle(GroupedListStyle())
-            .alert(isPresented: $showingAlert) {
-                Alert(title: Text("Erreur"), message: Text(alertErrorMessage), dismissButton: .default(Text("OK")))
-            }
-            .navigationBarTitle(Text("Boutique"), displayMode: .inline)
-            .navigationBarItems(trailing:
-                Button("OK") {
-                    self.dismiss()
                 }
-            )
+                .padding(10)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 15).strokeBorder(Color.yellow, lineWidth: 1)
+                )
+            }.padding(15)
+        
+            SeparationBar()
+                
+            Button(action: {
+                self.restorePurchases()
+            }) {
+                Text("Restaurer mes achats")
+                    .font(.subheadline)
+            }
         }
-        .environment(\.horizontalSizeClass, .compact)
+        .padding()
+        .listStyle(GroupedListStyle())
+        .alert(isPresented: $showingAlert) {
+            Alert(title: Text("Erreur"), message: Text(alertErrorMessage), dismissButton: .default(Text("OK")))
+        }
         .onAppear(){
             self.productsStore.initializeProducts()
             
@@ -84,16 +80,12 @@ struct PurchasePage: View {
         }
     }
     
-    private func dismiss() {
-        self.presentationMode.wrappedValue.dismiss()
-    }
-    
     func restorePurchases(){
         IAPManager.shared.restorePurchases(success: {
             self.isDisabled = false
             self.productsStore.handleUpdateStore()
 
-            self.dismiss()
+            self.appState.hideDrawer()
         }) { (error) in
             self.isDisabled = false
             self.productsStore.handleUpdateStore()
@@ -114,7 +106,7 @@ struct PurchasePage: View {
             self.isDisabled = false
             self.productsStore.handleUpdateStore()
             
-            self.dismiss()
+            self.appState.hideDrawer()
         }) { (error) in
             self.isDisabled = false
             self.productsStore.handleUpdateStore()
@@ -138,10 +130,9 @@ struct PurchasePage_Previews: PreviewProvider {
 
 struct PurchaseCarousel: View {
     let images: [String] = [
-        "premium1.jpg",
         "premium2.jpg",
         "premium3.jpg",
-        "premium4.jpg",
+        //"premium4.jpg",
         "premium5.jpg"
     ]
     
@@ -187,7 +178,7 @@ struct PurchaseButton : View {
                 .font(.headline).foregroundColor(.white)
                 .frame(width: 250.0, height: 40.0)
                 .foregroundColor(.white)
-                .background(Color.green)
+                .background(Color.blue)
                 .cornerRadius(20)
         }.disabled(IAPManager.shared.isActive(productIdentifier: product.productIdentifier))
     }

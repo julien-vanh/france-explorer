@@ -12,7 +12,6 @@ import MessageUI
 
 struct Parameters: View {
     @State private var isSharePresented: Bool = false
-    @State private var isPurchasePresented: Bool = false
     @State private var cguPresented: Bool = false
     @State var result: Result<MFMailComposeResult, Error>? = nil
     @State var isShowingMailView = false
@@ -22,7 +21,9 @@ struct Parameters: View {
         NavigationView {
             List {
                 if !appState.isPremium {
-                    Button(action: {self.isPurchasePresented.toggle()}) {
+                    Button(action: {
+                        self.appState.displayPurchasePageDrawer()
+                    }) {
                         Text("Version complète")
                     }
                 }
@@ -43,7 +44,7 @@ struct Parameters: View {
                 
                 Section(header: Text("Application"), content: {
                     Button(action: {
-                        AppState.openLinkInBrowser(link: "https://itunes.apple.com/app/id\(AppId)?action=write-review")
+                        Browser.openLinkInBrowser(link: "https://itunes.apple.com/app/id\(AppId)?action=write-review")
                     }) {
                         HStack {
                             Image(systemName: "star").foregroundColor(.yellow).frame(width:30)
@@ -101,10 +102,6 @@ struct Parameters: View {
                     Text("Mentions tierces") //TODO
                 })
             }
-            .sheet(isPresented: $isPurchasePresented, content: {
-                PurchasePage()
-            })
-            
             .listStyle(GroupedListStyle())
             .environment(\.horizontalSizeClass, .regular)
             .navigationBarTitle(Text("Paramètres"), displayMode: .inline)

@@ -19,29 +19,24 @@ enum UserDefaultsKeys : String {
 class AppState: NSObject, ObservableObject {
     static let shared = AppState()
     
-    @Published var place: Place = PlaceStore.shared.getRandom(count: 1, premium: false)[0] {
-        didSet {
-            if self.state == .closed {
-                self.state = .middle
-            }
-        }
-    }
-    @Published var state: BottomSheetState = .closed
-    @Published var update: Bool = false
     @Published var cguAccepted: Bool = false
     @Published var isPremium: Bool = false
     
+    //For the botttom drawer
+    @Published var isPurchasePresented: Bool = false
+    @Published var place: Place = PlaceStore.shared.getRandom(count: 1, premium: false)[0]
+    @Published var state: BottomSheetState = .closed
+    
+    //For global alert message
     @Published var showingAlert: Bool = false
     @Published var alertErrorMessage: String = ""
+    
     
     override init(){
         super.init()
         
-        let ud = UserDefaults.standard
-        cguAccepted = ud.bool(forKey: UserDefaultsKeys.cguAccepted.rawValue)
+        cguAccepted = UserDefaults.standard.bool(forKey: UserDefaultsKeys.cguAccepted.rawValue)
         isPremium = IAPManager.shared.isActive(productIdentifier: ProductsStore.ProductGuideFrance)
-        
-        
     }
     
     public func displayError(error: Error){
@@ -52,14 +47,20 @@ class AppState: NSObject, ObservableObject {
         }
     }
     
-    static func openLinkInBrowser(link: String){
-        var urlString = link
-        if !link.hasPrefix("http"){
-            urlString = "http://"+link
-        }
-        if let url = URL(string: urlString) {
-            UIApplication.shared.open(url)
-        }
+    public func displayPurchasePageDrawer(){
+        self.isPurchasePresented = true
+        self.state = .full
+    }
+    
+    public func displayPlaceDrawer(place: Place){
+        self.isPurchasePresented = false
+        self.place = place
+        self.state = .middle
+    }
+    
+    public func hideDrawer(){
+        self.state = .closed
+        self.isPurchasePresented = false
     }
     
     public func acceptCGU(){
@@ -69,6 +70,4 @@ class AppState: NSObject, ObservableObject {
         ud.set(true, forKey: UserDefaultsKeys.cguAccepted.rawValue)
         ud.synchronize()
     }
-    
-    
 }
