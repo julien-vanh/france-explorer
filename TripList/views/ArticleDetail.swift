@@ -22,7 +22,7 @@ struct ArticleDetail: View {
     var body: some View {
         ScrollView(.vertical) {
             GeometryReader { geometry in
-                ImageStore.shared.image(name: "\(self.article.id).jpg")
+                ImageStore.shared.image(name: self.article.illustration.path)
                     .resizable()
                     .scaledToFill()
                     .frame(width: geometry.size.width, height: self.getHeightForHeaderImage(geometry))
@@ -34,7 +34,9 @@ struct ArticleDetail: View {
             VStack {
                 Text(self.article.titleLocalized).font(.largeTitle)
                 
-                Text(self.article.descriptionLocalized).padding(10)
+                if(self.article.descriptionLocalized != nil){
+                    Text(self.article.descriptionLocalized).padding(10)
+                }
                 
                 SeparationBar()
                 
