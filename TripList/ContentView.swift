@@ -33,7 +33,7 @@ struct ContentView: View {
             ),
             UIKitTabView.Tab(
                 view: Progression(),
-                title: NSLocalizedString("Progression", comment: ""),
+                title: NSLocalizedString("Exploration", comment: ""),
                 image: "text.badge.checkmark"
             ),
             UIKitTabView.Tab(

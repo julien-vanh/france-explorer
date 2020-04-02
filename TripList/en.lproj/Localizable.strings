@@ -83,12 +83,12 @@
 "Détails sur la destination" = "Destination details";
 
 //Progression
-"Progression" = "Progress";
-"régions visitées" = "regions visited";
+"Exploration" = "Exploration";
+"régions explorées" = "regions explorées";
 
 //Purchase
 "Guide complet" = "Full Guide";
-"destinations supplémentaires" = "additional destinations";
+"destinations supplémentaires dans cette région" = "additional destinations in this region";
 
 //Drawer
 "Adresse" = "Address";

@@ -11,7 +11,7 @@ import SwiftUI
 let placesData: [Place] = load("places.json")
 let articlesData: [Article] = load("articles.json")
 let regionsData: [PlaceRegion] = load("regions.json")
-
+let thirdPartyMentions: [ThirdPartyMention] = load("thirdPartyMentions.json")
 
 
 func load<T: Decodable>(_ filename: String) -> T {

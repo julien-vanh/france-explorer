@@ -32,9 +32,9 @@ struct ArticleDetail: View {
             }.frame(height: 300)
             
             VStack {
-                Text(self.article.content.title).font(.largeTitle)
+                Text(self.article.titleLocalized).font(.largeTitle)
                 
-                Text(self.article.content.description).padding(10)
+                Text(self.article.descriptionLocalized).padding(10)
                 
                 SeparationBar()
                 
@@ -64,7 +64,7 @@ struct ArticleDetail: View {
         }
     }
     private func getNavigationTitle(_ geometry: GeometryProxy) -> String {
-        return getScrollOffset(geometry) < -250 ? self.article.title : ""
+        return getScrollOffset(geometry) < -250 ? self.article.titleLocalized : ""
     }
     
     

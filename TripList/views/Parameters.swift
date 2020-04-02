@@ -52,7 +52,6 @@ struct Parameters: View {
                         }
                     }
                     
-                    
                     Button(action: {
                         self.isShowingMailView.toggle()
                     }) {
@@ -99,7 +98,9 @@ struct Parameters: View {
                         WebViewModal(title: "Confidentialité", url: "https://www.france-explorer.fr/confidentialite.html")
                     })
                     
-                    Text("Mentions tierces") //TODO
+                    NavigationLink(destination: ThirdPartyLicencesList()){
+                        Text("Mentions tierces").foregroundColor(.blue)
+                    }
                 })
             }
             .listStyle(GroupedListStyle())

@@ -22,7 +22,7 @@ struct Progression: View {
                     })
                 }
             }
-            .navigationBarTitle(Text("Progression"), displayMode: .large)
+            .navigationBarTitle(Text("Exploration"), displayMode: .large)
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
@@ -47,6 +47,7 @@ struct ProgressionLine: View {
             HStack(alignment: .bottom) {
                 Text(region.name)
                     .font(.headline)
+                    .foregroundColor(getCompletedCount() > 0 ? Color(UIColor.explored) : Color.primary)
                 Spacer()
                 
                 HStack {
@@ -63,7 +64,12 @@ struct ProgressionLine: View {
                 .cornerRadius(10)
             }
             
-            ProgressBar(value: CGFloat(getCompletedCount())/CGFloat(PlaceStore.shared.getAllForRegion(regionId: region.id).count))
+            if getCompletedCount() > 0 {
+                ProgressBar(value: CGFloat(getCompletedCount())/CGFloat(PlaceStore.shared.getAllForRegion(regionId: region.id).count))
+            } else {
+                //Text("Terra incognita").foregroundColor(Color.secondary)
+            }
+            
         }
     }
     
@@ -84,7 +90,7 @@ struct ProgressionListHeader: View {
     var body: some View {
         VStack(alignment: .center) {
             
-            Text("\(getRegionsCompletion().keys.count)/\(PlaceStore.shared.getRegions().count) " + NSLocalizedString("régions visitées", comment: ""))
+            Text("\(getRegionsCompletion().keys.count)/\(PlaceStore.shared.getRegions().count) " + NSLocalizedString("régions explorées", comment: ""))
                 .foregroundColor(Color(UIColor.explored))
         }
     }

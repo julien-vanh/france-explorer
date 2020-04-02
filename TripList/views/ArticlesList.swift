@@ -44,7 +44,7 @@ struct ArticleRow: View {
                     .clipped()
                 
                 VStack(alignment: .leading){
-                    Text(article.title)
+                    Text(article.titleLocalized)
                 }
             }
         }

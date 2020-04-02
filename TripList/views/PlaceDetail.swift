@@ -73,7 +73,7 @@ struct PlaceDetail: View {
                 PlaceButtons(place: self.place)
                 
                 if self.place.descriptionLocalized != nil {
-                    Text(self.place.descriptionLocalized!.description)
+                    Text(self.place.descriptionLocalized!.content)
                         .padding( 10.0)
                 }
                 

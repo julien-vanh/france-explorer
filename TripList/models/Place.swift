@@ -9,9 +9,9 @@
 import Foundation
 import CoreLocation
 
-struct Place: Hashable, Codable, Identifiable {
+struct Place: Decodable, Identifiable {
     var id: String
-    fileprivate var title: String
+    fileprivate var title: TranslatableField<String>
     var category: PlaceCategory
     var regionId: String
     var iap: Bool
@@ -23,18 +23,13 @@ struct Place: Hashable, Codable, Identifiable {
     }
     var address: String!
     var website: String!
-    
-    var illustration: PlaceIllustration!
-    
-    fileprivate var descriptionFr: PlaceDescription!
-    fileprivate var descriptionEn: PlaceDescription!
-    
+    var illustration: Illustration!
+    fileprivate var description: TranslatableField<PlaceDescription>
     var wikiPageId: Int!
-    
     var cta: CallToAction!
     
     var hash: String {
-        var hash = title + regionId
+        var hash = titleLocalized + regionId
         if let contentdefined = address {
             hash += contentdefined
         }
@@ -42,22 +37,31 @@ struct Place: Hashable, Codable, Identifiable {
     }
     
     var titleLocalized: String {
-        if( Locale.current.languageCode != "fr"){
-            if let description = descriptionEn, let titleEn = description.title {
-                return titleEn
+        if( Locale.current.languageCode == "fr"){
+            if let res = title.fr {
+                return res
             }
-            
+        } else {
+            if let res = title.en {
+                return res
+            } else if let res = title.fr { //fallback en FR
+                return res
+            }
         }
-        return self.title
+        return ""
     }
     
     var descriptionLocalized: PlaceDescription! {
-        if( Locale.current.languageCode != "fr"){
-            if let description = descriptionEn {
-                return description
+        if( Locale.current.languageCode == "fr"){
+            if let res = description.fr {
+                return res
+            }
+        } else {
+            if let res = description.en {
+                return res
             }
         }
-        return descriptionFr
+        return nil
     }
 }
 
@@ -69,18 +73,16 @@ extension String {
     }
 }
 
-struct PlaceIllustration: Hashable, Codable {
+struct Illustration: Hashable, Codable {
     var path: String
     var description: String
     var credit: String
     var source: String
 }
 
-struct PlaceDescription: Hashable, Codable {
-    var title: String!
-    var description: String
-    var credit: String!
-    var wikiPageId: Int!
+struct PlaceDescription: Decodable {
+    var content: String
+    var credit: String
 }
 
 struct PlaceRegion: Hashable, Codable, Identifiable {

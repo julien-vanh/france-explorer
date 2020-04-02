@@ -67,7 +67,7 @@ struct PlaceDrawer: View {
             
             if self.place.descriptionLocalized != nil {
                 SeparationBar()
-                Text(self.place.descriptionLocalized!.description).lineLimit(9)
+                Text(self.place.descriptionLocalized!.content).lineLimit(9)
             }
             
             SeparationBar()

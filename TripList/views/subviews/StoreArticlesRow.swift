@@ -42,7 +42,7 @@ struct StoreArticlesRow: View {
                                     .aspectRatio(contentMode: .fill)
                                     .clipped().frame(width: 325, height: 170)
                                 
-                                Text(article.title)
+                                Text(article.titleLocalized)
                                     .fontWeight(.semibold)
                                     .shadow(color: Color.black, radius: 5, x: 0, y: 0)
                                     .foregroundColor(.white).frame(width: 315, height: 170)

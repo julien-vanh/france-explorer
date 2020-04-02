@@ -29,7 +29,7 @@ struct PurchasePage: View {
                 
             PurchaseCarousel()
                 
-            Text("Ne passez pas à coté de l'inmanquable.\nDéverouillez l'intégralité de l'application.")
+            Text("Ne passez pas à coté de l'inmanquable.\nDéverouillez l'intégralité de l'application.")//TODO
             .padding()
                 
                 

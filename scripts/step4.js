@@ -3,9 +3,13 @@ const fs = require('fs');
 
 
 generatePlaces().then(()=> {
+    console.log("Places generated")
     return generateArticles()
 }).then(()=>{
-    "Finish !"
+    console.log("Articles generated")
+    return generateThirdParty()
+}).then(() => {
+    console.log("Finish !")
 }).catch(err=> {
     console.error(err.message)
 })
@@ -26,6 +30,29 @@ function readCSVFile(filename){
     })
 }
 
+function generateThirdParty(){
+    var results = []
+
+    return readCSVFile("./TapFormsExport/ThirdPartyMentions.csv").then(lines => {
+        lines.forEach(line => {
+            let result = {
+                title: line["title"],
+                licence: line["licence"]
+            }
+            results.push(result)
+        });
+    }).then(()=> {
+        
+        let data = JSON.stringify(results);
+        return new Promise((resolve, reject) => {
+            fs.writeFile("./step4output/thirdPartyMentions.json", data, error => {
+                if (error) reject(error);
+                resolve();
+            });
+        });
+    })
+}
+
 function generatePlaces(){
     var results = []
 
@@ -33,7 +60,10 @@ function generatePlaces(){
         places.forEach(place => {
             let result = {
                 id: place["id"],
-                title: place["title"],
+                title: {
+                    fr: place["title"].trim()
+                },
+                description: {},
                 category: place["category"],
                 regionId: place["region"],
                 iap: place["iap"] === "Non"? false: true,
@@ -44,38 +74,39 @@ function generatePlaces(){
                 },
                 wikiPageId: parseInt(place["wiki-fr"])
             }
+
+            if(place["title-en"]){
+                result["title"]["en"] = place["title-en"].trim()
+            }
     
             if(place["address"] && place["address"] != ""){
-                result["address"] = place["address"]
+                result["address"] = place["address"].trim()
             }
     
             if(place["website"] && place["website"] != ""){
-                result["website"] = place["website"]
+                result["website"] = place["website"].trim()
             }
     
             if(place["photo"]){
                 result["illustration"] = {
                     path: place["photo"],
-                    description: place["photo-description"],
-                    credit: place["photo-credit"],
-                    source: place["photo-source"]
+                    description: place["photo-description"].trim(),
+                    credit: place["photo-credit"].trim(),
+                    source: place["photo-source"].trim()
                 }
             }
     
-            if(place["desc-fr"]){
-                result["descriptionFr"] = {
-                    title: place["title"],
-                    description: place["desc-fr"],
-                    credit: place["credit-desc-fr"],
-                    wikiPageId: parseInt(place["wiki-fr"])
+            if(place["desc-fr"] && place["desc-fr"] != ""){
+                result["description"]["fr"] = {
+                    content: place["desc-fr"].trim(),
+                    credit: place["credit-desc-fr"].trim()
                 }
             }
-            if(place["desc-en"]){
-                result["descriptionEn"] = {
-                    title: place["title-en"],
-                    description: place["desc-en"],
-                    credit: place["credit-desc-en"],
-                    wikiPageId: parseInt(place["wiki-en"])
+
+            if(place["desc-en"] && place["desc-en"] != ""){
+                result["description"]["en"] = {
+                    content: place["desc-en"].trim(),
+                    credit: place["credit-desc-en"].trim()
                 }
             }
     
@@ -94,6 +125,7 @@ function generatePlaces(){
 }
 
 
+
 function generateArticles(){
     var places = []
     var results = []
@@ -106,22 +138,35 @@ function generateArticles(){
         articles.forEach(article => {
             let result = {
                 id: article["id"],
-                title: article["title"],
-                iap: article["iap"] === "Non"? false: true,
+                title: {
+                    fr: article["title"].trim()
+                },
+                description: {},
+                iap: article["iap"] === "Non" ? false : true,
             }
 
-            if(article["desc-fr"]){
-                result["descriptionFr"] = {
-                    title: article["title"],
-                    description: article["desc-fr"]
+            if(article["title-en"] && article["title-en"] != ""){
+                result["title"]["en"] = article["title-en"].trim()
+            }
+
+            if(article["desc-fr"] && article["desc-fr"] != ""){
+                result["description"]["fr"] = article["desc-fr"].trim()
+            }
+            
+            if(article["desc-en"] && article["desc-en"] != ""){
+                result["description"]["en"] = article["desc-en"].trim()
+            }
+
+            if(article["photo"]){
+                result["illustration"] = {
+                    path: article["photo"],
+                    description: article["photo-description"].trim(),
+                    credit: article["photo-credit"].trim(),
+                    source: article["photo-source"].trim()
                 }
             }
-            if(article["desc-en"]){
-                result["descriptionEn"] = {
-                    title: article["title-en"],
-                    description: article["desc-en"]
-                }
-            }
+            
+
             var placesIds = []
             places.forEach(place => {
                 if(place["parent_record_id"] === article["form_record_id"]){

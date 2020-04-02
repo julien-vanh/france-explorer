@@ -112,7 +112,7 @@ struct PlaceCardLocked: View {
                         .shadow(color: Color.black, radius: 5, x: 0, y: 0)
                         
                     
-                    Text("\(card.missingPlacesCount!) " + NSLocalizedString("destinations supplémentaires", comment:""))
+                    Text("\(card.missingPlacesCount!) " + NSLocalizedString("destinations supplémentaires dans cette région", comment:""))
                         .foregroundColor(.white)
                         .font(.headline)
                         .shadow(color: Color.black, radius: 10, x: 0, y: 0)

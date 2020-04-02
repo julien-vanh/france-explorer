@@ -16,7 +16,6 @@ struct ProgressBar: View {
             ZStack(alignment: .leading) {
                 Rectangle()
                     .strokeBorder(Color(UIColor.explored), lineWidth: 2)
-                    .background(Color.white)
                 Rectangle()
                     .strokeBorder(Color(UIColor.explored), lineWidth: 0)
                     .background(Color(UIColor.explored))

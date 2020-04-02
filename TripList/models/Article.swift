@@ -8,33 +8,49 @@
 
 import Foundation
 
-struct Article: Hashable, Codable, Identifiable {
+struct Article: Decodable, Identifiable {
     var id: String
-    var title: String
     var iap: Bool
     var places: [ArticlePlace]
+    fileprivate var title: TranslatableField<String>
+    fileprivate var description: TranslatableField<String>
+    var illustration: Illustration!
     
-    fileprivate var descriptionFr: ArticleDescription!
-    fileprivate var descriptionEn: ArticleDescription!
-    var content: ArticleDescription! {
+    var titleLocalized: String {
         if( Locale.current.languageCode == "fr"){
-            return descriptionFr
+            if let res = title.fr {
+                return res
+            }
         } else {
-            if(descriptionEn != nil) {
-                return descriptionEn
-            } else {
-                return descriptionFr
+            if let res = title.en {
+                return res
+            } else if let res = title.fr { //fallback FR
+                return res
             }
         }
+        return ""
+    }
+    
+    var descriptionLocalized: String! {
+        if( Locale.current.languageCode == "fr"){
+            if let res = description.fr {
+                return res
+            }
+        } else {
+            if let res = description.en {
+                return res
+            }
+        }
+        return nil
     }
 }
 
-struct ArticlePlace: Hashable, Codable {
+struct ArticlePlace: Decodable {
     var order: Int
     var placeId: String
 }
 
-struct ArticleDescription: Hashable, Codable {
-    var title: String!
-    var description: String
+struct TranslatableField<T:Decodable>: Decodable {
+    var fr: T!
+    var en: T!
 }

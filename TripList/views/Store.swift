@@ -77,7 +77,7 @@ struct SearchResult: View {
     var body: some View {
         List {
             // Filtered list of names
-            ForEach(PlaceStore.shared.getAllForSearch(search: searchText, premium: appState.isPremium), id:\.self) {
+            ForEach(PlaceStore.shared.getAllForSearch(search: searchText, premium: appState.isPremium), id:\.id) {
                 place in
                 NavigationLink(destination: PlaceDetail(place: place)){
                     HStack(alignment: .center, spacing: 10) {
