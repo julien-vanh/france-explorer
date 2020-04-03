@@ -24,7 +24,7 @@ struct Parameters: View {
                     Button(action: {
                         self.appState.displayPurchasePageDrawer()
                     }) {
-                        Text("Version complète")
+                        Text("Guide complet")
                     }
                 }
                 
