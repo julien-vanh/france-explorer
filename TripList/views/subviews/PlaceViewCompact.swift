@@ -33,6 +33,8 @@ struct PlaceViewCompact: View {
                             .foregroundColor(Color(AppStyle.color(for: place.category)))
                             .font(.caption)
                         
+                        PlacePopularityStars(place: place, height: 15)
+                        
                         if locationManager.isLocationEnable() {
                             Text("à \(AppStyle.formatDistance(value: locationManager.distanceTo(coordinate: place.locationCoordinate)))")
                                 .foregroundColor(.black)

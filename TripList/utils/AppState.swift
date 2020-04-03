@@ -37,6 +37,7 @@ class AppState: NSObject, ObservableObject {
         
         cguAccepted = UserDefaults.standard.bool(forKey: UserDefaultsKeys.cguAccepted.rawValue)
         isPremium = IAPManager.shared.isActive(productIdentifier: ProductsStore.ProductGuideFrance)
+        ProductsStore.shared.initializeProducts()
     }
     
     public func displayError(error: Error){

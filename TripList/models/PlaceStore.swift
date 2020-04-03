@@ -76,7 +76,9 @@ final class PlaceStore: NSObject {
     }
     
     func getCategories() -> [Category] {
-        return Array(categories.values)
+        return Array(categories.values).sorted { (c1, c2) -> Bool in
+            return c1.id < c2.id
+        }
     }
     
     func getCategory(placeCategory: PlaceCategory) -> Category {

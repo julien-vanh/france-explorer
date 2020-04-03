@@ -20,27 +20,43 @@ struct PlaceDetail: View {
     var body: some View {
         
         ScrollView(.vertical) {
+            
             GeometryReader { geometry in
-                ImageStore.shared.image(forPlace: self.place)
+                ZStack {
+                    ImageStore.shared.image(forPlace: self.place)
                     .resizable()
                     .scaledToFill()
                     .frame(width: geometry.size.width, height: self.getHeightForHeaderImage(geometry))
                     .clipped()
                     .offset(x: 0, y: self.getOffsetForHeaderImage(geometry))
                     .navigationBarTitle(self.getNavigationTitle(geometry))
+                    
+                    LinearGradient(gradient: Gradient(colors: [.clear, .black]), startPoint: .center, endPoint: .bottom)
+                        .frame(width: geometry.size.width, height: self.getHeightForHeaderImage(geometry))
+                        .offset(x: 0, y: self.getOffsetForHeaderImage(geometry))
+                }
+                
             }.frame(height: 400)
             
             
             VStack(spacing: 10) {
-                VStack(alignment: .center) {
+                VStack(alignment: .center, spacing: 5) {
                     Spacer()
+                    
+                    if(place.popularity > 1){
+                        PlacePopularityStars(place: place, height: 30)
+                    }
+                    
                     Text(self.place.titleLocalized).font(.largeTitle)
                         .fontWeight(.semibold)
                         .shadow(color: Color.black, radius: 5, x: 0, y: 0)
                         .foregroundColor(.white)
                         .multilineTextAlignment(.center)
                         .lineLimit(3)
-                }.frame(height: 300).padding(.top, -320)
+                    
+                    
+                    
+                }.frame(height: 300).padding(.top, -310)
                 
                 ZStack{
                     

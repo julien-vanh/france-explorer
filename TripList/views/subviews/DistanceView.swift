@@ -19,10 +19,10 @@ struct DistanceView: View {
             if self.locationManager.isLocationEnable() {
                 Text("à \(AppStyle.formatDistance(value: self.locationManager.distanceTo(coordinate: coordinate)))")
                     .font(.caption)
-                    .foregroundColor(.white)
+                    .foregroundColor(Color(.systemGray2))
                     .padding(3)
-                    .background(Color(.systemGray2))
-                    .cornerRadius(10)
+                    //.background(Color(.systemGray2))
+                    //.cornerRadius(10)
             }
         }
     }

@@ -22,6 +22,8 @@ struct PlaceListRow: View {
             
             Text(place.titleLocalized)
             
+            PlacePopularityStars(place: place, height: 15)
+            
             Spacer()
             
             DistanceView(coordinate: place.locationCoordinate)

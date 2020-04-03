@@ -37,18 +37,27 @@ struct Place: Decodable, Identifiable {
     }
     
     var titleLocalized: String {
+        var output: String = ""
         if( Locale.current.languageCode == "fr"){
             if let res = title.fr {
-                return res
+                output = res
             }
         } else {
             if let res = title.en {
-                return res
+                output = res
             } else if let res = title.fr { //fallback en FR
-                return res
+                output = res
             }
         }
-        return ""
+        /*
+        if popularity == 3 {
+            output = output + "\n★★"
+        }
+        if popularity == 2 {
+            output = output + "\n★"
+        }
+ */
+        return output
     }
     
     var descriptionLocalized: PlaceDescription! {

@@ -14,7 +14,7 @@ struct ImageCarouselView<Content: View>: View {
 
     @State private var currentIndex: Int = 0
     
-    private let timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
+    private let timer = Timer.publish(every: 6, on: .main, in: .common).autoconnect()
 
     // 6
     init(numberOfImages: Int, @ViewBuilder content: () -> Content) {
@@ -37,6 +37,7 @@ struct ImageCarouselView<Content: View>: View {
                 self.currentIndex = (self.currentIndex + 1) % self.numberOfImages
                }
                
+                /*
                HStack(spacing: 3) {
                    ForEach(0..<self.numberOfImages, id: \.self) { index in
                        Circle()
@@ -47,6 +48,7 @@ struct ImageCarouselView<Content: View>: View {
                            .animation(.spring())
                    }
                }
+               */
             }
             
             

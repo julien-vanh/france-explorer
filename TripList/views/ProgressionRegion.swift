@@ -104,9 +104,9 @@ struct PlaceCardLocked: View {
                     .aspectRatio(contentMode: .fit)
                     .clipped()
                 
-                VStack {
+                VStack(alignment: .leading) {
                     Text("Guide complet")
-                        .font(.title)
+                        .font(.headline)
                         .foregroundColor(.yellow)
                         .fontWeight(.semibold)
                         .shadow(color: Color.black, radius: 5, x: 0, y: 0)
@@ -114,9 +114,9 @@ struct PlaceCardLocked: View {
                     
                     Text("\(card.missingPlacesCount!) " + NSLocalizedString("destinations supplémentaires dans cette région", comment:""))
                         .foregroundColor(.white)
-                        .font(.headline)
-                        .shadow(color: Color.black, radius: 10, x: 0, y: 0)
-                }
+                        .font(.subheadline)
+                        .shadow(color: Color.black, radius: 15, x: 0, y: 0)
+                }.padding(10)
                 
                 
             }.overlay(

@@ -17,49 +17,34 @@ struct PurchasePage: View {
     @State private var isDisabled : Bool = false
     @ObservedObject var appState = AppState.shared
 
+    
     var body: some View {
-        VStack(alignment: .center) {
+        VStack() {
         
-            Text("Boutique")
-                .font(.title)
-                .padding(.top, 20)
-                .padding(.bottom, 20)
+            //Text("Boutique").font(.title).padding(.vertical, 20)
             
-            
-                
-            PurchaseCarousel()
-                
-            Text("Ne passez pas à coté de l'inmanquable.\nDéverouillez l'intégralité de l'application.")//TODO
-            .padding()
-                
-                
-            
-                 
-                    
+            PurchaseCarousel()//.padding(.top, -50)
                     
             ForEach(productsStore.products, id: \.self) { prod in
                 VStack {
                     if prod.productIdentifier == ProductsStore.ProductGuideFrance {
                         
-                        Text(prod.localizedTitle).font(.headline).foregroundColor(.yellow)
-                                
-                        FeatureLine(text: "\(350) " + NSLocalizedString("destinations supplémentaires", comment:"") )
-                                //FeatureLine(text: "Régions d'outre-mer")
-                                //FeatureLine(text: "Suppression de la publicité")
-                                //FeatureLine(text: "Liste illimitée")
+                        Text(prod.localizedTitle).font(.largeTitle).multilineTextAlignment(.center).foregroundColor(.yellow)
+                          
+                        FeatureLine(text: NSLocalizedString("Le guide complet contient 350 destinations supplémentaires.", comment:""))
+                        FeatureLine(text: NSLocalizedString("Liste des destinations 100% hors-ligne.", comment:""))
+                        
                                 
                         PurchaseButton(block: {
                             self.purchaseProduct(skproduct: prod)
-                        }, product: prod)
+                        }, product: prod).padding(.top, 20)
                     }
                 }
-                .padding(10)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 15).strokeBorder(Color.yellow, lineWidth: 1)
-                )
-            }.padding(15)
-        
+            }
+            
             SeparationBar()
+                .padding(.horizontal, 50)
+                .padding(.vertical, 20)
                 
             Button(action: {
                 self.restorePurchases()
@@ -67,8 +52,12 @@ struct PurchasePage: View {
                 Text("Restaurer mes achats")
                     .font(.subheadline)
             }
+            
+            
+            Spacer()
         }
-        .padding()
+        .background(Color.black)
+        
         .listStyle(GroupedListStyle())
         .alert(isPresented: $showingAlert) {
             Alert(title: Text("Erreur"), message: Text(alertErrorMessage), dismissButton: .default(Text("OK")))
@@ -84,7 +73,6 @@ struct PurchasePage: View {
         IAPManager.shared.restorePurchases(success: {
             self.isDisabled = false
             self.productsStore.handleUpdateStore()
-
             self.appState.hideDrawer()
         }) { (error) in
             self.isDisabled = false
@@ -131,9 +119,9 @@ struct PurchasePage_Previews: PreviewProvider {
 struct PurchaseCarousel: View {
     let images: [String] = [
         "premium2.jpg",
-        "premium3.jpg",
-        //"premium4.jpg",
-        "premium5.jpg"
+        "launchcarousel3.jpg",
+        "premium1.jpg",
+        "launchcarousel1.jpg",
     ]
     
     var body: some View {
@@ -144,11 +132,11 @@ struct PurchaseCarousel: View {
                         .renderingMode(.original)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: geometry.size.width-20, height:geometry.size.height)
-                        .clipped().cornerRadius(15).padding(10)
+                        .frame(width: geometry.size.width, height:geometry.size.height)
+                        .clipped()//.cornerRadius(15).padding(10)
                 }
             }
-        }.frame(height: 280, alignment: .center)
+        }.frame(height: UIDevice.current.userInterfaceIdiom == .phone ? 330 : 390, alignment: .center)
     }
     
 }
@@ -159,7 +147,7 @@ struct FeatureLine: View {
     var body: some View {
         HStack {
             Image(systemName: "plus").foregroundColor(.yellow)
-            Text(text)
+            Text(text).foregroundColor(.white)
             Spacer()
         }.padding(.horizontal, 20)
     }
@@ -176,7 +164,7 @@ struct PurchaseButton : View {
             Text("Acheter \(product.localizedPrice)")
                 .fontWeight(.semibold)
                 .font(.headline).foregroundColor(.white)
-                .frame(width: 250.0, height: 40.0)
+                .frame(width: 300.0, height: 40.0)
                 .foregroundColor(.white)
                 .background(Color.blue)
                 .cornerRadius(20)

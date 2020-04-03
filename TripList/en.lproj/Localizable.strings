@@ -24,11 +24,11 @@
 "Nos catégories" = "Our categories";
 "Organisez votre voyage" = "Organize your trip";
 "Ce guide vous permettra de décrouvrir les plus belles destinations touristiques de France." = "This guide will allow you to discover the most beautiful tourist destinations in France.";
-"Découvrez les régions de France avec nos sélections par catégories." = "Discover the regions of France with our destinations by categories.";
+"Villes, Musées, Nature, Patrimoine, Sorties pour voyager selon vos envies." = "Cities, Museums, Nature, Heritage, Outings to travel according to your desires.";
 "Ajoutez les destinations à votre liste." = "Add destinations to Your List.";
 "Marquez les destinations visitées." = "Mark the visited destinations.";
 "Collectionnez les lieux visités de chaques régions." = "Collect the destinations visited in each region.";
-"En continuant vous acceptez nos" = "By continuing you accept our";
+"En continuant vous acceptez nos" = "By continuing you accept the";
 "Conditions générales" = "Terms and Conditions";
 "Accepter" = "Accept";
 "Continuer" = "Continue";
@@ -87,8 +87,9 @@
 "régions explorées" = "regions explorées";
 
 //Purchase
-"Guide complet" = "Full Guide";
-"destinations supplémentaires dans cette région" = "additional destinations in this region";
+"Guide complet" = "Complete Guide";
+"Le guide complet contient 350 destinations supplémentaires." = "The complete guide contains 350 additional destinations.";
+"Liste des destinations 100% hors-ligne." = "100% offline destinations list.";
 
 //Drawer
 "Adresse" = "Address";

@@ -25,6 +25,7 @@ struct BottomSheetView<Content: View>: View {
 
     let maxHeight: CGFloat
     let minHeight: CGFloat
+    let scrollEnabled: Bool
     let content: Content
 
     @GestureState private var translation: CGFloat = 0
@@ -48,37 +49,40 @@ struct BottomSheetView<Content: View>: View {
         }
     }
 
-    init(state: Binding<BottomSheetState>, maxHeight: CGFloat, @ViewBuilder content: () -> Content) {
+    init(state: Binding<BottomSheetState>, maxHeight: CGFloat, scrollEnabled: Bool, @ViewBuilder content: () -> Content) {
         self.minHeight = 0
         self.maxHeight = maxHeight
+        self.scrollEnabled = scrollEnabled
         self.content = content()
         self._state = state
     }
 
     var body: some View {
         GeometryReader { geometry in
-            VStack(spacing: 0) {
-                self.indicator.padding(4)
+            ZStack(alignment: .top) {
                 self.content
+                self.indicator.padding(4)
             }
             .frame(width: geometry.size.width, height: self.maxHeight, alignment: .top)
             .background(BlurView(style: .systemThinMaterial))
-            .cornerRadius(Constants.radius)
             .frame(height: geometry.size.height, alignment: .bottom)
             .offset(y: max(self.offset + self.translation, 0))
             .animation(.interactiveSpring())
             .gesture(
                 DragGesture().updating(self.$translation) { value, aState, _ in
-                    aState = value.translation.height
+                    if self.scrollEnabled {
+                        aState = value.translation.height
+                    }
                 }.onEnded { value in
-                    
-                    //Determine le state en fin de scroll
-                    if value.predictedEndTranslation.height < 0 {
-                        self.state = .full
-                    } else if value.predictedEndLocation.y > self.maxHeight {
-                        self.state = .closed
-                    } else {
-                        self.state = .middle
+                    if self.scrollEnabled {
+                        //Determine le state en fin de scroll
+                        if value.predictedEndTranslation.height < 0 {
+                            self.state = .full
+                        } else if value.predictedEndLocation.y > self.maxHeight {
+                            self.state = .closed
+                        } else {
+                            self.state = .middle
+                        }
                     }
                 }
             )
@@ -88,7 +92,7 @@ struct BottomSheetView<Content: View>: View {
 
 struct BottomSheetView_Previews: PreviewProvider {
     static var previews: some View {
-        BottomSheetView(state: .constant(.middle), maxHeight: 600) {
+        BottomSheetView(state: .constant(.middle), maxHeight: 600, scrollEnabled: true) {
             Rectangle().fill(Color.red)
         }.edgesIgnoringSafeArea(.all)
     }

@@ -39,8 +39,6 @@ struct DreamDetail: View {
                 
                 Text(self.place.titleLocalized).font(.largeTitle)
                 
-                DistanceView(coordinate: place.locationCoordinate)
-                
                 NavigationLink(destination: PlaceDetail(place: self.place, displayAssociates: false)) {
                     HStack {
                         Text("Détails sur la destination").foregroundColor(.blue)
@@ -72,11 +70,15 @@ struct DreamDetail: View {
             
             
             
-            GeometryReader { geometry in
-                PlaceMapView(place: self.place)
-                    //.frame(width: geometry.size.width, height: UIScreen.main.bounds.height - 50 - self.getScrollOffset(geometry))//Lag
-                    .frame(width: geometry.size.width, height: 500).disabled(true)
-            }.frame(height: 500)
+            ZStack(alignment: .top) {
+                GeometryReader { geometry in
+                    PlaceMapView(place: self.place)
+                        .frame(width: geometry.size.width, height: 500).disabled(true)
+            
+                }.frame(height: 500)
+                
+                DistanceViewFull(coordinate: self.place.locationCoordinate).padding(10)
+            }
         }
         .edgesIgnoringSafeArea(.top)
     }

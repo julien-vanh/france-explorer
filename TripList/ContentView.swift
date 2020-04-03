@@ -48,7 +48,8 @@ struct ContentView: View {
                 } else {
                     BottomSheetView(
                         state: self.$appState.state,
-                        maxHeight: geometry.size.height
+                        maxHeight: geometry.size.height,
+                        scrollEnabled: !self.appState.isPurchasePresented
                     ) {
                         ZStack(alignment: .topTrailing) {
                             if(self.appState.isPurchasePresented){
@@ -66,7 +67,7 @@ struct ContentView: View {
                             )
                             .frame(width: 40, height: 40)
                             .padding(.trailing, 20.0)
-                            .padding(.top, 30)
+                            .padding(.top, 44)
                             .onTapGesture {
                                 self.appState.hideDrawer()
                             }

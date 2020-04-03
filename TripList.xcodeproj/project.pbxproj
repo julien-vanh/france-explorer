@@ -724,6 +724,8 @@
 		F9CF769F2436686000DBC245 /* thirdPartyMentions.json in Resources */ = {isa = PBXBuildFile; fileRef = F9CF769E2436686000DBC245 /* thirdPartyMentions.json */; };
 		F9CF76A12436689700DBC245 /* ThirdPartyMention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CF76A02436689700DBC245 /* ThirdPartyMention.swift */; };
 		F9CF76A32436697E00DBC245 /* ThirdPartyLicencesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CF76A22436697E00DBC245 /* ThirdPartyLicencesList.swift */; };
+		F9CF76A524373DE600DBC245 /* PlacePopularityStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CF76A424373DE600DBC245 /* PlacePopularityStars.swift */; };
+		F9CF76AB24377E6E00DBC245 /* premium1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9CF76AA24377E6E00DBC245 /* premium1.jpg */; };
 		F9D032F2240E89A7008A9B13 /* ArticlesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D032F1240E89A7008A9B13 /* ArticlesList.swift */; };
 		F9D032F6240FD085008A9B13 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D032F5240FD085008A9B13 /* Store.swift */; };
 		F9D032F8240FD4FE008A9B13 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D032F7240FD4FE008A9B13 /* SearchBarView.swift */; };
@@ -741,11 +743,7 @@
 		F9DC222B23E31DF30023B8EF /* PlaceDetailPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC222A23E31DF30023B8EF /* PlaceDetailPhotos.swift */; };
 		F9DC222D23E31FEE0023B8EF /* PlaceButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC222C23E31FEE0023B8EF /* PlaceButtons.swift */; };
 		F9FC37D4240D15F900F17AAC /* PurchasePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FC37D3240D15F900F17AAC /* PurchasePage.swift */; };
-		F9FC37DB240D225900F17AAC /* premium3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9FC37D6240D225900F17AAC /* premium3.jpg */; };
-		F9FC37DC240D225900F17AAC /* premium2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9FC37D7240D225900F17AAC /* premium2.jpg */; };
-		F9FC37DD240D225900F17AAC /* premium1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9FC37D8240D225900F17AAC /* premium1.jpg */; };
-		F9FC37DE240D225900F17AAC /* premium5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9FC37D9240D225900F17AAC /* premium5.jpg */; };
-		F9FC37DF240D225900F17AAC /* premium4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9FC37DA240D225900F17AAC /* premium4.jpg */; };
+		F9FC37DB240D225900F17AAC /* premium2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9FC37D6240D225900F17AAC /* premium2.jpg */; };
 		F9FC37E1240D61D500F17AAC /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FC37E0240D61D500F17AAC /* MailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -1470,6 +1468,8 @@
 		F9CF769E2436686000DBC245 /* thirdPartyMentions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = thirdPartyMentions.json; sourceTree = "<group>"; };
 		F9CF76A02436689700DBC245 /* ThirdPartyMention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartyMention.swift; sourceTree = "<group>"; };
 		F9CF76A22436697E00DBC245 /* ThirdPartyLicencesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartyLicencesList.swift; sourceTree = "<group>"; };
+		F9CF76A424373DE600DBC245 /* PlacePopularityStars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacePopularityStars.swift; sourceTree = "<group>"; };
+		F9CF76AA24377E6E00DBC245 /* premium1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = premium1.jpg; sourceTree = "<group>"; };
 		F9D032F1240E89A7008A9B13 /* ArticlesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesList.swift; sourceTree = "<group>"; };
 		F9D032F5240FD085008A9B13 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		F9D032F7240FD4FE008A9B13 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
@@ -1489,11 +1489,7 @@
 		F9DC222A23E31DF30023B8EF /* PlaceDetailPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailPhotos.swift; sourceTree = "<group>"; };
 		F9DC222C23E31FEE0023B8EF /* PlaceButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceButtons.swift; sourceTree = "<group>"; };
 		F9FC37D3240D15F900F17AAC /* PurchasePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasePage.swift; sourceTree = "<group>"; };
-		F9FC37D6240D225900F17AAC /* premium3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = premium3.jpg; sourceTree = "<group>"; };
-		F9FC37D7240D225900F17AAC /* premium2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = premium2.jpg; sourceTree = "<group>"; };
-		F9FC37D8240D225900F17AAC /* premium1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = premium1.jpg; sourceTree = "<group>"; };
-		F9FC37D9240D225900F17AAC /* premium5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = premium5.jpg; sourceTree = "<group>"; };
-		F9FC37DA240D225900F17AAC /* premium4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = premium4.jpg; sourceTree = "<group>"; };
+		F9FC37D6240D225900F17AAC /* premium2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = premium2.jpg; sourceTree = "<group>"; };
 		F9FC37E0240D61D500F17AAC /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -2341,6 +2337,7 @@
 			isa = PBXGroup;
 			children = (
 				F95DE57823DE349500BE1BD5 /* PlaceMapView.swift */,
+				F9CF76A424373DE600DBC245 /* PlacePopularityStars.swift */,
 				F9815D742423B63E0057D515 /* WebViewModal.swift */,
 				F926A7C924194CF900615E07 /* PlaceAnnotationView.swift */,
 				F9D49FA02402917C005A2B8E /* PlaceGridCompact.swift */,
@@ -2373,11 +2370,8 @@
 			isa = PBXGroup;
 			children = (
 				F98B2174242909C800CE3EF5 /* premium0.jpg */,
-				F9FC37D8240D225900F17AAC /* premium1.jpg */,
-				F9FC37D7240D225900F17AAC /* premium2.jpg */,
-				F9FC37D6240D225900F17AAC /* premium3.jpg */,
-				F9FC37DA240D225900F17AAC /* premium4.jpg */,
-				F9FC37D9240D225900F17AAC /* premium5.jpg */,
+				F9CF76AA24377E6E00DBC245 /* premium1.jpg */,
+				F9FC37D6240D225900F17AAC /* premium2.jpg */,
 			);
 			path = purchasePage;
 			sourceTree = "<group>";
@@ -2553,7 +2547,6 @@
 				F9CF74C024364D4F00DBC245 /* CastelmorondAlbret.jpg in Resources */,
 				F9CF747E24364D4F00DBC245 /* MornacsurSeudre.jpg in Resources */,
 				F9CF743B24364D4F00DBC245 /* CirquedeNavacelles.jpg in Resources */,
-				F9FC37DC240D225900F17AAC /* premium2.jpg in Resources */,
 				F9CF754424364D4F00DBC245 /* SaintCirqLapopie.jpg in Resources */,
 				F9CF75B824364D4F00DBC245 /* LaBambouseraieenCvennes.jpg in Resources */,
 				F9CF74CB24364D4F00DBC245 /* MuseRolin.jpg in Resources */,
@@ -2640,7 +2633,6 @@
 				F9CF747324364D4F00DBC245 /* LaCoupoleCentredHistoireetPlantarium3D.jpg in Resources */,
 				F9CF750924364D4F00DBC245 /* AbbatialeSaintAustremoinedIssoire.jpg in Resources */,
 				F9CF74E224364D4F00DBC245 /* Monflanquin.jpg in Resources */,
-				F9FC37DF240D225900F17AAC /* premium4.jpg in Resources */,
 				F9CF749724364D4F00DBC245 /* ParcZoologiquedeChamprpus.jpg in Resources */,
 				F9CF766C24364D5000DBC245 /* glisemonolitheSaintJean.jpg in Resources */,
 				F9CF760D24364D4F00DBC245 /* Chteaudun.jpg in Resources */,
@@ -2761,6 +2753,7 @@
 				F9CF763824364D5000DBC245 /* BassindArcachon.jpg in Resources */,
 				F9CF769D24364D5000DBC245 /* ValledeChaudefour.jpg in Resources */,
 				F9CF74C624364D4F00DBC245 /* MuseduLouvre.jpg in Resources */,
+				F9CF76AB24377E6E00DBC245 /* premium1.jpg in Resources */,
 				F9CF760E24364D4F00DBC245 /* HteldesInvalides.jpg in Resources */,
 				F9CF74A624364D4F00DBC245 /* MaisonJardinsdeClaudeMonet.jpg in Resources */,
 				F9CF761E24364D4F00DBC245 /* Falaisestretat.jpg in Resources */,
@@ -2806,7 +2799,7 @@
 				F9CF765B24364D5000DBC245 /* AbbayeNotreDamedeSnanque.jpg in Resources */,
 				F9CF742F24364D4F00DBC245 /* CathdraleNotreDamedeLaon.jpg in Resources */,
 				F9CF750724364D4F00DBC245 /* FtesDeBayonne.jpg in Resources */,
-				F9FC37DB240D225900F17AAC /* premium3.jpg in Resources */,
+				F9FC37DB240D225900F17AAC /* premium2.jpg in Resources */,
 				F9CF744824364D4F00DBC245 /* PlaninclindeSaintLouisArzviller.jpg in Resources */,
 				F9CF749024364D4F00DBC245 /* CitadelledeBitche.jpg in Resources */,
 				F9CF74C324364D4F00DBC245 /* LaCitadelledeMontmdy.jpg in Resources */,
@@ -2842,7 +2835,6 @@
 				F9CF763324364D5000DBC245 /* ChteaudeBazoches.jpg in Resources */,
 				F9CF75CA24364D4F00DBC245 /* ForteressedeSalses.jpg in Resources */,
 				F9CF750B24364D4F00DBC245 /* TourGnoisedelaParata.jpg in Resources */,
-				F9FC37DE240D225900F17AAC /* premium5.jpg in Resources */,
 				F9CF766A24364D5000DBC245 /* Saintenimie.jpg in Resources */,
 				F9CF751B24364D4F00DBC245 /* Loubressac.jpg in Resources */,
 				F9CF756424364D4F00DBC245 /* GrottesdeLascaux.jpg in Resources */,
@@ -3096,7 +3088,6 @@
 				F9CF75DC24364D4F00DBC245 /* ChteaudesducsdeBretagne.jpg in Resources */,
 				F9CF75DE24364D4F00DBC245 /* ChteauRoyaldeBlois.jpg in Resources */,
 				F9CF74A724364D4F00DBC245 /* BaiedeSomme.jpg in Resources */,
-				F9FC37DD240D225900F17AAC /* premium1.jpg in Resources */,
 				F9CF74C824364D4F00DBC245 /* CimetireduPreLachaise.jpg in Resources */,
 				F9CF767524364D5000DBC245 /* WalibiRhneAlpes.jpg in Resources */,
 				F9CF75CE24364D4F00DBC245 /* Blesle.jpg in Resources */,
@@ -3168,6 +3159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9CF76A524373DE600DBC245 /* PlacePopularityStars.swift in Sources */,
 				F95DE55A23DE2F0F00BE1BD5 /* AppDelegate.swift in Sources */,
 				F9FC37D4240D15F900F17AAC /* PurchasePage.swift in Sources */,
 				F98172572417D2E70011A76B /* WebView.swift in Sources */,

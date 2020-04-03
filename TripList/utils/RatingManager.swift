@@ -16,7 +16,7 @@ class RatingManager: NSObject {
         let counter = ud.integer(forKey: UserDefaultsKeys.launchCounter.rawValue)
         
         //print("Counter launch", counter)
-        if counter == 4 || counter == 10 || counter == 30 {
+        if counter == 5 || counter == 10 || counter == 30 {
             SKStoreReviewController.requestReview()
         }
         

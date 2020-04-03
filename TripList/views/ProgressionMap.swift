@@ -14,7 +14,7 @@ import MapKit
 struct ProgressionMap: View {
     @FetchRequest(fetchRequest: Completion.getAllCompletion()) var completions: FetchedResults<Completion>
     let regionsCount = PlaceStore.shared.getRegions().count
-    
+    @ObservedObject var productsStore : ProductsStore = ProductsStore.shared
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {

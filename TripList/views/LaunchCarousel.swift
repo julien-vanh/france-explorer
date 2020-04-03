@@ -71,7 +71,7 @@ struct LaunchCarousel: View {
                         Spacer()
                     }
                     
-                    Text("Découvrez les régions de France avec nos sélections par catégories.")
+                    Text("Villes, Musées, Nature, Patrimoine, Sorties pour voyager selon vos envies.")
                         .multilineTextAlignment(.center)
                 }
  
@@ -129,10 +129,10 @@ struct LaunchCarousel: View {
                         Text("En continuant vous acceptez nos")
                         
                         Button(action: {self.cguPresented.toggle()}) {
-                            Text("Conditions générales").foregroundColor(Color.black)
+                            Text("Conditions générales").underline()
                         }.sheet(isPresented: self.$cguPresented, content: {
                             WebViewModal(title: "Conditions générales", url: "https://www.france-explorer.fr/confidentialite.html")
-                            }).buttonStyle(PlainButtonStyle())
+                        }).buttonStyle(PlainButtonStyle())
                     }
                 }
                 

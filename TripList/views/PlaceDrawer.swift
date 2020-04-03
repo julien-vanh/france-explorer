@@ -20,13 +20,16 @@ struct PlaceDrawer: View {
             
             Text(place.titleLocalized)
                 .font(.title)
-                .padding(.trailing, 40)
-                .padding(.vertical, 10)
+                .padding(.top, 24)
+                .padding(.trailing, 45)
+                .padding(.bottom, 10)
             
         
-            HStack {
+            HStack(alignment: .center, spacing: 10) {
                 Text(PlaceStore.shared.getCategory(placeCategory: self.place.category).title)
                     .foregroundColor(Color(AppStyle.color(for: self.place.category)))
+                
+                PlacePopularityStars(place: self.place, height: 15)
                 
                 DistanceView(coordinate: self.place.locationCoordinate)
             }
