@@ -15,7 +15,6 @@ struct PlacePopularityStars: View {
     var body: some View {
         HStack(spacing: 4){
             ForEach(1 ..< self.place.popularity, id: \.self){ _ in
-                //Image("starLabel")
                 Image(systemName: "star.fill")
                     .resizable()
                     .scaledToFill()

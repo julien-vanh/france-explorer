@@ -55,12 +55,23 @@ struct StoreCategoryItem: View {
         NavigationLink(
             destination: PlacesList(filter: FilterModel(sortBy: .distance, categoryFilter: category.category))
         ) {
-            Text(category.titlePlural)
-                .fontWeight(.semibold)
-                .frame(width: 130, height: 50)
-                .foregroundColor(.white)
-                .background(Color(AppStyle.color(for: category.category)))
-                .cornerRadius(5)
+            HStack{
+                Image("\(category.category.rawValue)-white")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 30, height: 30)
+                    .padding(10)
+                    
+                
+                Text(category.titlePlural)
+                    .fontWeight(.semibold)
+                
+                Spacer()
+            }
+            .frame(width: 150, height: 50)
+            .foregroundColor(.white)
+            .background(Color(AppStyle.color(for: category.category)))
+            .cornerRadius(5)
             
         }
     }
