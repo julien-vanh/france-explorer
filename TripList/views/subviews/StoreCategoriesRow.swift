@@ -56,12 +56,12 @@ struct StoreCategoryItem: View {
             destination: PlacesList(filter: FilterModel(sortBy: .distance, categoryFilter: category.category))
         ) {
             HStack{
+                
                 Image("\(category.category.rawValue)-white")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 30, height: 30)
                     .padding(10)
-                    
                 
                 Text(category.titlePlural)
                     .fontWeight(.semibold)

@@ -37,7 +37,7 @@ struct ArticleRow: View {
         NavigationLink(destination: ArticleDetail(article: article)){
             HStack(alignment: .center) {
                 
-                ImageStore.shared.image(name: "\(article.id).jpg")
+                ImageStore.shared.image(name: article.illustration.path)
                     .resizable()
                     .scaledToFill()
                     .frame(width: 150, height: 100)
