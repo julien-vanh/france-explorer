@@ -24,7 +24,6 @@ struct WebViewModal: View {
         }
         self.title = LocalizedStringKey(title)
         self.model = WebViewModel(url: stringUrl)
-        
     }
      
     var body: some View {
