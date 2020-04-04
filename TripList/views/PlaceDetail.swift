@@ -69,7 +69,7 @@ struct PlaceDetail: View {
                         ) {
                             HStack {
                                 Image(systemName: "photo")
-                                Text("photos")
+                                Text("Photos")
                             }
                         }
                         .padding(.leading, 10.0)

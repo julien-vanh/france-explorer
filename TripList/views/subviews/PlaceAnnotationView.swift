@@ -62,7 +62,7 @@ internal final class PlaceAnnotationView: MKMarkerAnnotationView {
         
         switch placeAnnotation.style {
         case .Explored:
-            markerTintColor = UIColor.explored
+            markerTintColor = UIColor(hex: 0xFC9116)
             //glyphImage = UIImage(named: "\(placeAnnotation.place.category)-colored")
             glyphImage = UIImage(systemName: "checkmark.circle.fill")
         case .Colored:

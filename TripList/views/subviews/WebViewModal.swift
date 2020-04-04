@@ -13,7 +13,8 @@ struct WebViewModal: View {
     var title: LocalizedStringKey
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @ObservedObject var model: WebViewModel
-    
+    let timer = Timer.publish(every: 2, on: .main, in: .common).autoconnect()
+
     let dg = DragGesture()
      
     init(title: String, url: String){
@@ -23,12 +24,15 @@ struct WebViewModal: View {
         }
         self.title = LocalizedStringKey(title)
         self.model = WebViewModel(url: stringUrl)
+        
     }
      
     var body: some View {
         NavigationView {
             LoadingView(isShowing: self.$model.isLoading) {
                 WebView(viewModel: self.model)
+            }.onReceive(timer) { input in
+                self.model.isLoading = false
             }
             .highPriorityGesture(self.dg)
             .edgesIgnoringSafeArea(.bottom)
