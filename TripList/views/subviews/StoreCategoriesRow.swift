@@ -35,7 +35,7 @@ struct StoreCategoriesRow: View {
                   vSpacing: 10,
                   hSpacing: 10,
                   vPadding: 0,
-                  hPadding: 0) { category in
+                  hPadding: 10) { category in
                     StoreCategoryItem(category: category)
             }.frame(height: CGFloat(self.rows)*60)
         }
@@ -68,7 +68,7 @@ struct StoreCategoryItem: View {
                 
                 Spacer()
             }
-            .frame(width: 150, height: 50)
+            .frame(height: 50)
             .foregroundColor(.white)
             .background(Color(AppStyle.color(for: category.category)))
             .cornerRadius(5)
