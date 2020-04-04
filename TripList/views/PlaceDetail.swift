@@ -31,9 +31,9 @@ struct PlaceDetail: View {
                     .offset(x: 0, y: self.getOffsetForHeaderImage(geometry))
                     .navigationBarTitle(self.getNavigationTitle(geometry))
                     
-                    LinearGradient(gradient: Gradient(colors: [.clear, .black]), startPoint: .center, endPoint: .bottom)
-                        .frame(width: geometry.size.width, height: self.getHeightForHeaderImage(geometry))
-                        .offset(x: 0, y: self.getOffsetForHeaderImage(geometry))
+                    //LinearGradient(gradient: Gradient(colors: [.clear, Color.black.opacity(0.4)]), startPoint: .center, endPoint: .bottom)
+                    //    .frame(width: geometry.size.width, height: self.getHeightForHeaderImage(geometry))
+                    //    .offset(x: 0, y: self.getOffsetForHeaderImage(geometry))
                 }
                 
             }.frame(height: 400)
