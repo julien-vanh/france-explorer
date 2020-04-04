@@ -173,8 +173,8 @@ struct LaunchCarousel: View {
                        .font(.headline).foregroundColor(.white)
                        .frame(width: 250.0, height: 40.0)
                        .foregroundColor(.white)
-                        .background(Color.blue)
-                    //.background(LinearGradient(gradient: Gradient(colors: [Color(UIColor(hex:0x3AB9E4)), Color(UIColor(hex:0x1A16C1))]), startPoint: .top, endPoint: .bottom))
+                        //.background(Color.blue)
+                    .background(LinearGradient(gradient: Gradient(colors: [Color(UIColor(hex:0x005BBF)), Color(UIColor(hex:0x007AFF))]), startPoint: .leading, endPoint: .trailing))
                        .cornerRadius(20)
                 }
             }.padding(.bottom, 70)

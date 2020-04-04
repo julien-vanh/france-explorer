@@ -35,7 +35,7 @@ struct Store: View {
                 
                 ScrollView(.vertical) {
                     
-                    RandomButton().padding(.bottom, 10)
+                    RandomButton().padding(.vertical, 10)
                     
                     if appState.cguAccepted {
                         NearestPlaces().padding(.bottom, 15)
