@@ -181,7 +181,7 @@ struct LaunchCarousel: View {
             
             
         }
-        .edgesIgnoringSafeArea([.top, .bottom])
+        .edgesIgnoringSafeArea(.all)
         .onAppear(){
             Analytics.logEvent(AnalyticsEventTutorialBegin, parameters: nil)
         }
