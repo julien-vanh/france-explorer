@@ -78,7 +78,7 @@ struct PlaceDrawer: View {
             Button(action: {
                 self.showCredits.toggle()
             }) {
-                Image(systemName: "info.circle")
+                Image(systemName: "c.circle")
             }.padding(.trailing, 10.0)
         }
         .padding()
