@@ -84,7 +84,7 @@ extension IAPManager : SKRequestDelegate {
             self.failureBlock?(error)
             self.cleanUp()
         }
-        print("error: \(error.localizedDescription)")
+        print("SKRequestDelegate request error: \(error.localizedDescription)")
     }
 }
 

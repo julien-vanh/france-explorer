@@ -18,7 +18,7 @@
 		F92E05CF2412EE44009C5ADD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92E05CE2412EE44009C5ADD /* TabBarController.swift */; };
 		F92E05D12417A467009C5ADD /* LaunchCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92E05D02417A467009C5ADD /* LaunchCarousel.swift */; };
 		F9303F67242529E000975A07 /* launchcarousel1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9303F66242529DF00975A07 /* launchcarousel1.jpg */; };
-		F9303F6924252AD600975A07 /* launchcarousel2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9303F6824252AD500975A07 /* launchcarousel2.jpg */; };
+		F9303F6924252AD600975A07 /* launchcarousel3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9303F6824252AD500975A07 /* launchcarousel3.jpg */; };
 		F94B49702401A42A0055956D /* SeparationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B496F2401A42A0055956D /* SeparationBar.swift */; };
 		F94B49732401DE3D0055956D /* PlaceViewCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B49722401DE3D0055956D /* PlaceViewCompact.swift */; };
 		F95DE55A23DE2F0F00BE1BD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE55923DE2F0F00BE1BD5 /* AppDelegate.swift */; };
@@ -63,7 +63,7 @@
 		F99E73A923EF0D69006BC089 /* ProgressionRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E73A823EF0D69006BC089 /* ProgressionRegion.swift */; };
 		F99E73AB23F34DE2006BC089 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E73AA23F34DE2006BC089 /* LocationManager.swift */; };
 		F99E73AD23F3611E006BC089 /* NearestPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E73AC23F3611E006BC089 /* NearestPlaces.swift */; };
-		F9A18E9C24253FBF0075A223 /* launchcarousel3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9A18E9B24253FBF0075A223 /* launchcarousel3.jpg */; };
+		F9A18E9C24253FBF0075A223 /* launchcarousel2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9A18E9B24253FBF0075A223 /* launchcarousel2.jpg */; };
 		F9A2C9122427689000883A52 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A2C9112427689000883A52 /* StoreKit.framework */; };
 		F9A2C91424276EBC00883A52 /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2C91324276EBC00883A52 /* IAPManager.swift */; };
 		F9A2C9162427757000883A52 /* ProductsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2C9152427757000883A52 /* ProductsStore.swift */; };
@@ -762,7 +762,7 @@
 		F92E05CE2412EE44009C5ADD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F92E05D02417A467009C5ADD /* LaunchCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCarousel.swift; sourceTree = "<group>"; };
 		F9303F66242529DF00975A07 /* launchcarousel1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launchcarousel1.jpg; sourceTree = "<group>"; };
-		F9303F6824252AD500975A07 /* launchcarousel2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launchcarousel2.jpg; sourceTree = "<group>"; };
+		F9303F6824252AD500975A07 /* launchcarousel3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launchcarousel3.jpg; sourceTree = "<group>"; };
 		F94B496F2401A42A0055956D /* SeparationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparationBar.swift; sourceTree = "<group>"; };
 		F94B49722401DE3D0055956D /* PlaceViewCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewCompact.swift; sourceTree = "<group>"; };
 		F95DE55623DE2F0E00BE1BD5 /* France Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "France Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -809,7 +809,7 @@
 		F99E73A823EF0D69006BC089 /* ProgressionRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressionRegion.swift; sourceTree = "<group>"; };
 		F99E73AA23F34DE2006BC089 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		F99E73AC23F3611E006BC089 /* NearestPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestPlaces.swift; sourceTree = "<group>"; };
-		F9A18E9B24253FBF0075A223 /* launchcarousel3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launchcarousel3.jpg; sourceTree = "<group>"; };
+		F9A18E9B24253FBF0075A223 /* launchcarousel2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launchcarousel2.jpg; sourceTree = "<group>"; };
 		F9A2C9112427689000883A52 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		F9A2C91324276EBC00883A52 /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
 		F9A2C9152427757000883A52 /* ProductsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsStore.swift; sourceTree = "<group>"; };
@@ -1532,8 +1532,8 @@
 		F9303F5F2425251500975A07 /* launchCarousel */ = {
 			isa = PBXGroup;
 			children = (
-				F9A18E9B24253FBF0075A223 /* launchcarousel3.jpg */,
-				F9303F6824252AD500975A07 /* launchcarousel2.jpg */,
+				F9A18E9B24253FBF0075A223 /* launchcarousel2.jpg */,
+				F9303F6824252AD500975A07 /* launchcarousel3.jpg */,
 				F9303F66242529DF00975A07 /* launchcarousel1.jpg */,
 			);
 			path = launchCarousel;
@@ -2852,7 +2852,7 @@
 				F9CF758024364D4F00DBC245 /* SaintJeanPieddePort.jpg in Resources */,
 				F9CF763F24364D5000DBC245 /* AlignementsdeCarnac.jpg in Resources */,
 				F9CF75B224364D4F00DBC245 /* ChteauduClosdeVougeot.jpg in Resources */,
-				F9A18E9C24253FBF0075A223 /* launchcarousel3.jpg in Resources */,
+				F9A18E9C24253FBF0075A223 /* launchcarousel2.jpg in Resources */,
 				F9DC21F123E232650023B8EF /* Localizable.strings in Resources */,
 				F9CF762E24364D5000DBC245 /* Lesmeilleursparcsdattractions.jpg in Resources */,
 				F9CF745724364D4F00DBC245 /* Provins.jpg in Resources */,
@@ -2940,7 +2940,7 @@
 				F9CF748B24364D4F00DBC245 /* LesCalanquesdePiana.jpg in Resources */,
 				F9CF763224364D5000DBC245 /* ChteaudeSaintPoint.jpg in Resources */,
 				F9CF765F24364D5000DBC245 /* PassagePommeraye.jpg in Resources */,
-				F9303F6924252AD600975A07 /* launchcarousel2.jpg in Resources */,
+				F9303F6924252AD600975A07 /* launchcarousel3.jpg in Resources */,
 				F9CF747024364D4F00DBC245 /* ChteaudeVersailles.jpg in Resources */,
 				F9CF75F524364D4F00DBC245 /* ChateaudeChouvigny.jpg in Resources */,
 				F9CF745E24364D4F00DBC245 /* Puylvque.jpg in Resources */,

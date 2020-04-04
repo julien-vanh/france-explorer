@@ -34,10 +34,10 @@ struct StoreCategoriesRow: View {
                   columnsInLandscape: cols,
                   vSpacing: 10,
                   hSpacing: 10,
-                  vPadding: 15,
-                  hPadding: 15) { category in
+                  vPadding: 0,
+                  hPadding: 0) { category in
                     StoreCategoryItem(category: category)
-            }.frame(height: CGFloat(self.rows)*60+30)
+            }.frame(height: CGFloat(self.rows)*60)
         }
     }
 }

@@ -38,7 +38,7 @@ struct Store: View {
                     RandomButton().padding(.bottom, 10)
                     
                     if appState.cguAccepted {
-                        NearestPlaces()
+                        NearestPlaces().padding(.bottom, 15)
                     }
                     
                     
