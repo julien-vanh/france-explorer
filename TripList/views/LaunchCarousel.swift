@@ -202,7 +202,7 @@ struct CarouselImage: View {
     
     var body: some View {
         GeometryReader { geometry in
-            ImageStore.shared.image(name: self.imageString)
+            ImageStore.shared.localImage(name: self.imageString)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .imageScale(.large)

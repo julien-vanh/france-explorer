@@ -41,30 +41,29 @@ enum ImageStoreError: Error {
 }
 
 final class ImageStore {
-    typealias _ImageDictionary = [String: CGImage]
-    fileprivate var images: _ImageDictionary = [:]
-
-    fileprivate static var scale = 2
-    
     static var shared = ImageStore()
+    fileprivate static var scale = 1
     
-    
-    func image(name: String) -> Image {
-        let index = _guaranteeImage(name: name)
-        return Image(images.values[index], scale: CGFloat(ImageStore.scale), label: Text(verbatim: name))
+    func localImage(name: String) -> Image {
+        var cgimage: CGImage
+        if let image = try? loadImage(name: name) {
+            cgimage = image
+        } else {
+            cgimage = try! loadImage(name: "placeholder.jpg")
+        }
+        return Image(cgimage, scale: CGFloat(ImageStore.scale), label: Text(verbatim: name))
     }
-    
     
     func image(forPlace place: Place) -> Image {
-        var path = "placeholder.jpg"
+        var name = "placeholder.jpg"
         if let illustration = place.illustration {
-            path = illustration.path.replacingOccurrences(of: "jpeg", with: "jpg")
+            name = illustration.path.replacingOccurrences(of: ".jpeg", with: ".jpg")
+            name = name.replacingOccurrences(of: ".png", with: ".jpg")
         }
-        let index = _guaranteeImage(name: path)
-        return Image(images.values[index], scale: CGFloat(ImageStore.scale), label: Text(verbatim: path))
+        return localImage(name: name)
     }
 
-    static func loadImage(name: String) throws -> CGImage {
+    private func loadImage(name: String) throws -> CGImage {
         guard
             let url = Bundle.main.url(forResource: name, withExtension: nil),
             let imageSource = CGImageSourceCreateWithURL(url as NSURL, nil),
@@ -74,18 +73,6 @@ final class ImageStore {
             
         }
         return image
-    }
-    
-    fileprivate func _guaranteeImage(name: String) -> _ImageDictionary.Index {
-        if let index = images.index(forKey: name) { return index }
-        
-        if let image = try? ImageStore.loadImage(name: name) {
-            images[name] = image
-            return images.index(forKey: name)!
-        }
-        
-        images[name] = try! ImageStore.loadImage(name: "placeholder.jpg")
-        return images.index(forKey: name)!
     }
 }
 

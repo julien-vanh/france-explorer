@@ -98,7 +98,7 @@ struct PlaceCardLocked: View {
         }) {
             ZStack(alignment: .center) {
                 
-                ImageStore.shared.image(name: "premium0.jpg")
+                ImageStore.shared.localImage(name: "premium0.jpg")
                     .resizable()
                     .renderingMode(.original)
                     .aspectRatio(contentMode: .fit)

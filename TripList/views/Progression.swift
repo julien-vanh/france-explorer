@@ -17,7 +17,7 @@ struct Progression: View {
                 ProgressionListHeader()
                 
                 ForEach(PlaceStore.shared.getRegions()) { region in
-                    NavigationLink(destination: LazyView(ProgressionRegion(region: region)), label: {
+                    NavigationLink(destination: (ProgressionRegion(region: region)), label: {
                         ProgressionLine(region: region)
                     })
                 }

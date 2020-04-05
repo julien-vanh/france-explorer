@@ -128,7 +128,7 @@ struct PurchaseCarousel: View {
         GeometryReader { geometry in
             ImageCarouselView(numberOfImages: self.images.count) {
                 ForEach(self.images, id: \.self) { image in
-                    ImageStore.shared.image(name: image)
+                    ImageStore.shared.localImage(name: image)
                         .renderingMode(.original)
                         .resizable()
                         .aspectRatio(contentMode: .fill)

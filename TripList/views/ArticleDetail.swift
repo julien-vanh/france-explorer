@@ -22,7 +22,7 @@ struct ArticleDetail: View {
     var body: some View {
         ScrollView(.vertical) {
             GeometryReader { geometry in
-                ImageStore.shared.image(name: self.article.illustration.path)
+                ImageStore.shared.localImage(name: self.article.illustration.path)
                     .resizable()
                     .scaledToFill()
                     .frame(width: geometry.size.width, height: self.getHeightForHeaderImage(geometry))
