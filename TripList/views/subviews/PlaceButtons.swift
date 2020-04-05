@@ -64,7 +64,7 @@ struct PlaceButtons: View {
             }) {
                 HStack {
                     Image(systemName: (completions.first != nil) ? "checkmark.circle.fill" : "circle")
-                    Text("Déjà vu")
+                    Text("Exploré")
                 }
                 .font(.headline)
             }

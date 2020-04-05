@@ -54,7 +54,6 @@ struct PlaceDetailPhotos: View {
                     switch result {
                     case .failure(let error):
                         self.appState.displayError(error: error)
-                        self.presentationMode.wrappedValue.dismiss()
                     case .success(let value):
                         self.pageImages = value
                     }

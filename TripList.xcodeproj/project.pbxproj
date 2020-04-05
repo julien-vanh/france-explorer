@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E8CB92F7763543DD657D004F /* Pods_TripList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9698C69142C657E5CE8286B8 /* Pods_TripList.framework */; };
+		F91CEF02243A5757005D780A /* CreditsModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91CEF01243A5757005D780A /* CreditsModal.swift */; };
 		F91DED9E23E6EAE800D8FFD7 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91DED9D23E6EAE800D8FFD7 /* BottomSheetView.swift */; };
 		F91DEDA023E6F4DD00D8FFD7 /* PlaceDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91DED9F23E6F4DD00D8FFD7 /* PlaceDrawer.swift */; };
 		F91DEDA323E8A26E00D8FFD7 /* TripList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F91DEDA123E8A26D00D8FFD7 /* TripList.xcdatamodeld */; };
@@ -751,6 +752,7 @@
 		7689E2DCC7F5369AF5ECE682 /* Pods-TripList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripList.debug.xcconfig"; path = "Target Support Files/Pods-TripList/Pods-TripList.debug.xcconfig"; sourceTree = "<group>"; };
 		9698C69142C657E5CE8286B8 /* Pods_TripList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C13C3C1697C3E7D04C10C491 /* Pods-TripList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripList.release.xcconfig"; path = "Target Support Files/Pods-TripList/Pods-TripList.release.xcconfig"; sourceTree = "<group>"; };
+		F91CEF01243A5757005D780A /* CreditsModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsModal.swift; sourceTree = "<group>"; };
 		F91DED9D23E6EAE800D8FFD7 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		F91DED9F23E6F4DD00D8FFD7 /* PlaceDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDrawer.swift; sourceTree = "<group>"; };
 		F91DEDA223E8A26E00D8FFD7 /* TripList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TripList.xcdatamodel; sourceTree = "<group>"; };
@@ -2337,6 +2339,7 @@
 			isa = PBXGroup;
 			children = (
 				F95DE57823DE349500BE1BD5 /* PlaceMapView.swift */,
+				F91CEF01243A5757005D780A /* CreditsModal.swift */,
 				F9CF76A424373DE600DBC245 /* PlacePopularityStars.swift */,
 				F9815D742423B63E0057D515 /* WebViewModal.swift */,
 				F926A7C924194CF900615E07 /* PlaceAnnotationView.swift */,
@@ -3201,6 +3204,7 @@
 				F9D49FA12402917C005A2B8E /* PlaceGridCompact.swift in Sources */,
 				F91DED9E23E6EAE800D8FFD7 /* BottomSheetView.swift in Sources */,
 				F95DE59E23DE349700BE1BD5 /* DreamList.swift in Sources */,
+				F91CEF02243A5757005D780A /* CreditsModal.swift in Sources */,
 				F9DC21E323E231840023B8EF /* WikipediaService.swift in Sources */,
 				F9CF76A12436689700DBC245 /* ThirdPartyMention.swift in Sources */,
 				F95DE5BB23DE422F00BE1BD5 /* DreamDetail.swift in Sources */,

@@ -101,7 +101,7 @@ struct LaunchCarousel: View {
                             .foregroundColor(.white)
                             .cornerRadius(10)
                         
-                        Text("Marquez les destinations visitées.")
+                        Text("Marquez les destinations explorées.")
                             .font(.headline)
                         
                         Spacer()
@@ -116,7 +116,7 @@ struct LaunchCarousel: View {
                             .foregroundColor(.black)
                             .cornerRadius(10)
                         
-                        Text("Collectionnez les lieux visités de chaques régions.")
+                        Text("Collectionnez les lieux explorés de chaques régions.")
                             .font(.headline)
                         
                         Spacer()
