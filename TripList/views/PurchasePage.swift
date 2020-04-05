@@ -11,8 +11,6 @@ import FirebaseAnalytics
 
 
 struct PurchasePage: View {
-    @State private var showingAlert = false
-    @State private var alertErrorMessage = ""
     @ObservedObject var productsStore : ProductsStore = ProductsStore.shared
     @State private var isDisabled : Bool = false
     @ObservedObject var appState = AppState.shared
@@ -20,27 +18,47 @@ struct PurchasePage: View {
     
     var body: some View {
         VStack() {
-        
-            //Text("Boutique").font(.title).padding(.vertical, 20)
             
-            PurchaseCarousel()//.padding(.top, -50)
-                    
-            ForEach(productsStore.products, id: \.self) { prod in
-                VStack {
-                    if prod.productIdentifier == ProductsStore.ProductGuideFrance {
-                        
-                        Text(prod.localizedTitle).font(.largeTitle).multilineTextAlignment(.center).foregroundColor(.yellow)
-                          
-                        FeatureLine(text: NSLocalizedString("Le guide complet contient 350 destinations supplémentaires.", comment:""))
-                        FeatureLine(text: NSLocalizedString("Liste des destinations 100% hors-ligne.", comment:""))
-                        
-                                
-                        PurchaseButton(block: {
-                            self.purchaseProduct(skproduct: prod)
-                        }, product: prod).padding(.top, 20)
+            PurchaseCarousel()
+            
+            if productsStore.products.count > 0 {
+                ForEach(productsStore.products, id: \.self) { prod in
+                    VStack {
+                        if prod.productIdentifier == ProductsStore.ProductGuideFrance {
+                            
+                            Text(prod.localizedTitle).font(.largeTitle).multilineTextAlignment(.center).foregroundColor(.yellow)
+                              
+                            FeatureLine(text: NSLocalizedString("Le guide complet contient 350 destinations supplémentaires.", comment:""))
+                            FeatureLine(text: NSLocalizedString("Liste des destinations 100% hors-ligne.", comment:""))
+                            
+                                    
+                            PurchaseButton(block: {
+                                self.purchaseProduct(skproduct: prod)
+                            }, product: prod)
+                                .disabled(self.isDisabled || IAPManager.shared.isActive(productIdentifier: prod.productIdentifier))
+                            .padding(.top, 20)
+                        }
                     }
                 }
+            } else {
+                Text("Chargement de la boutique...").foregroundColor(.white)
+                Text("Une connexion internet est nécessaire.").foregroundColor(.white)
+                
+                Button(action: {
+                    self.productsStore.initializeProducts()
+                    Analytics.logEvent("RetryInitializeProducts", parameters: nil)
+                }){
+                    Text("Réessayer")
+                        .fontWeight(.semibold)
+                        .font(.headline)
+                        .frame(width: 250.0, height: 40.0)
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .cornerRadius(20)
+                        .padding(15)
+                }
             }
+            
             
             SeparationBar()
                 .padding(.horizontal, 50)
@@ -51,17 +69,13 @@ struct PurchasePage: View {
             }) {
                 Text("Restaurer mes achats")
                     .font(.subheadline)
-            }
+            }.disabled(isDisabled)
             
             
             Spacer()
         }
-        .background(Color.black)
         
-        .listStyle(GroupedListStyle())
-        .alert(isPresented: $showingAlert) {
-            Alert(title: Text("Erreur"), message: Text(alertErrorMessage), dismissButton: .default(Text("OK")))
-        }
+        .background(Color.black)
         .onAppear(){
             self.productsStore.initializeProducts()
             
@@ -76,19 +90,11 @@ struct PurchasePage: View {
             self.appState.hideDrawer()
         }) { (error) in
             self.isDisabled = false
-            self.productsStore.handleUpdateStore()
-            
-            if let error = error {
-                self.alertErrorMessage = error.localizedDescription
-            } else {
-                self.alertErrorMessage = ""
-            }
-            self.showingAlert = true
+            self.appState.displayError(error: error!)
         }
     }
     
     func purchaseProduct(skproduct : SKProduct){
-        print("Purchasing product: \(skproduct.productIdentifier)")
         isDisabled = true
         IAPManager.shared.purchaseProduct(product: skproduct, success: {
             self.isDisabled = false
@@ -97,14 +103,7 @@ struct PurchasePage: View {
             self.appState.hideDrawer()
         }) { (error) in
             self.isDisabled = false
-            self.productsStore.handleUpdateStore()
-            
-            if let error = error {
-                self.alertErrorMessage = error.localizedDescription
-            } else {
-                self.alertErrorMessage = ""
-            }
-            self.showingAlert = true
+            self.appState.displayError(error: error!)
         }
     }
 }
@@ -121,6 +120,7 @@ struct PurchaseCarousel: View {
         "premium2.jpg",
         "launchcarousel3.jpg",
         "premium1.jpg",
+        "launchcarousel2.jpg",
         "launchcarousel1.jpg",
     ]
     
@@ -133,7 +133,7 @@ struct PurchaseCarousel: View {
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: geometry.size.width, height:geometry.size.height)
-                        .clipped()//.cornerRadius(15).padding(10)
+                        .clipped()
                 }
             }
         }.frame(height: UIDevice.current.userInterfaceIdiom == .phone ? 330 : 390, alignment: .center)
@@ -168,6 +168,6 @@ struct PurchaseButton : View {
                 .foregroundColor(.white)
                 .background(Color.blue)
                 .cornerRadius(20)
-        }.disabled(IAPManager.shared.isActive(productIdentifier: product.productIdentifier))
+        }
     }
 }

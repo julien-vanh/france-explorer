@@ -161,7 +161,7 @@ struct LaunchCarousel: View {
                 if(self.currentPageIndex+1 == self.subviews.count) {
                     Text("Accepter")
                         .fontWeight(.semibold)
-                        .font(.headline).foregroundColor(.white)
+                        .font(.headline)
                         .frame(width: 250.0, height: 40.0)
                         .foregroundColor(.white)
                         .background(Color.green)
@@ -170,7 +170,7 @@ struct LaunchCarousel: View {
                 } else {
                    Text("Continuer")
                        .fontWeight(.semibold)
-                       .font(.headline).foregroundColor(.white)
+                       .font(.headline)
                        .frame(width: 250.0, height: 40.0)
                        .foregroundColor(.white)
                         //.background(Color.blue)

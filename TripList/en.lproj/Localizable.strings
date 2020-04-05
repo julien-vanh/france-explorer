@@ -137,3 +137,6 @@
 "L'application n'est pas autorisée à accéder aux Rappels" = "The application is not authorized to access Reminders.";
 "Données non disponibles" = "Data not available";
 "Une erreur est suvenue" = "An error has occurred";
+"Chargement de la boutique..." = "Loading the shop...";
+"Une connexion internet est nécessaire." = "An internet connection is required.";
+"Réessayer" = "Retry";
