@@ -11,7 +11,7 @@ import QGrid
 
 struct StoreCategoriesRow: View {
     var storeCategories:[Category]
-    let cols = UIDevice.current.userInterfaceIdiom == .phone ? 2 : 5
+    let cols = UIDevice.current.userInterfaceIdiom == .phone ? 2 : 4
     let rows:Int
     
     

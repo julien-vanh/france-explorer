@@ -34,7 +34,7 @@ struct BottomSheetView<Content: View>: View {
         switch state {
             case .full: return 0
             case .middle: return maxHeight/2
-            case .closed: return maxHeight
+            case .closed: return maxHeight + 100
         }
     }
 
@@ -44,9 +44,10 @@ struct BottomSheetView<Content: View>: View {
             .frame(
                 width: Constants.indicatorWidth,
                 height: Constants.indicatorHeight
-        ).onTapGesture {
-            self.state = .full
-        }
+        )
+//        .onTapGesture {
+//            self.state = .full
+//        }
     }
 
     init(state: Binding<BottomSheetState>, maxHeight: CGFloat, scrollEnabled: Bool, @ViewBuilder content: () -> Content) {
