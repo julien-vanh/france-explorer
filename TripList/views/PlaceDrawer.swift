@@ -70,7 +70,10 @@ struct PlaceDrawer: View {
             
             if self.place.descriptionLocalized != nil {
                 SeparationBar()
-                Text(self.place.descriptionLocalized!.content).lineLimit(9)
+                ScrollView {
+                    Text(self.place.descriptionLocalized!.content)
+                }
+                
             }
             
             SeparationBar()
