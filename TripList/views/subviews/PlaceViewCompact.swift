@@ -22,7 +22,7 @@ struct PlaceViewCompact: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 100, height:70)
-                    .clipped().cornerRadius(5)
+                    .clipped()
                 
                 VStack(alignment: .leading) {
                     Text(place.titleLocalized)
