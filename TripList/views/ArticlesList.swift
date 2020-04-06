@@ -41,7 +41,7 @@ struct ArticleRow: View {
                     .resizable()
                     .scaledToFill()
                     .frame(width: 150, height: 100)
-                    .clipped()
+                    .cornerRadius(5)
                 
                 VStack(alignment: .leading){
                     Text(article.titleLocalized)

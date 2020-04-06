@@ -51,24 +51,18 @@ struct LaunchCarousel: View {
                 
                 else if currentPageIndex == 1 {
                     HStack(alignment: .center, spacing: 0) {
-                        Spacer()
-                        ForEach(PlaceStore.shared.getCategories(), id: \.title) { cat in
-                            VStack {
-                                if cat.category != .all {
-                                    Image("\(cat.category.rawValue)-white")
-                                        .renderingMode(.original)
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: 35, height: 35)
-                                        .padding(10)
-                                        .background(Color(AppStyle.color(for: cat.category)))
-                                        .cornerRadius(10)
-                                    .padding(5)
-                                }
-                            }
-                            
+                        
+                        ForEach(PlaceStore.shared.getCategoriesWithoutAll(), id: \.title) { cat in
+                            Image("\(cat.category.rawValue)-white")
+                                .renderingMode(.original)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 35, height: 35)
+                                .padding(6)
+                                .background(Color(AppStyle.color(for: cat.category)))
+                                .cornerRadius(10)
+                                .padding(4)
                         }
-                        Spacer()
                     }
                     
                     Text("Villes, Musées, Nature, Patrimoine, Sorties pour voyager selon vos envies.")
@@ -86,7 +80,7 @@ struct LaunchCarousel: View {
                             .foregroundColor(.white)
                             .cornerRadius(10)
                         
-                        Text("Ajoutez les destinations à votre liste.")
+                        Text("Ajoutez les destinations à votre prochain Voyage.")
                             .font(.headline)
                         
                         Spacer()

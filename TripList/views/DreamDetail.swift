@@ -37,7 +37,10 @@ struct DreamDetail: View {
                 Text(PlaceStore.shared.getCategory(placeCategory: self.place.category).title)
                     .foregroundColor(Color(AppStyle.color(for: self.place.category)))
                 
-                Text(self.place.titleLocalized).font(.largeTitle)
+                Text(self.place.titleLocalized)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .multilineTextAlignment(.center)
+                    .font(.largeTitle)
                 
                 NavigationLink(destination: PlaceDetail(place: self.place, displayAssociates: false)) {
                     HStack {
@@ -60,7 +63,7 @@ struct DreamDetail: View {
                             mapItem.name = self.place.titleLocalized
                             mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
                         }) {
-                            Text(self.place.address)
+                            Text(self.place.address).fixedSize(horizontal: false, vertical: true)
                         }
                         Spacer()
                     }

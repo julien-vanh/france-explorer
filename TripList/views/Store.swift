@@ -76,7 +76,6 @@ struct SearchResult: View {
     
     var body: some View {
         List {
-            // Filtered list of names
             ForEach(PlaceStore.shared.getAllForSearch(search: searchText, premium: appState.isPremium), id:\.id) {
                 place in
                 NavigationLink(destination: PlaceDetail(place: place)){
@@ -86,30 +85,6 @@ struct SearchResult: View {
                 }
             }
         }.resignKeyboardOnDragGesture()
-    }
-}
-
-struct Carousel: View {
-    @ObservedObject var appState = AppState.shared
-    let CountInCarousel = 5
-    
-    var body: some View {
-        GeometryReader { geometry in
-            ImageCarouselView(numberOfImages: self.CountInCarousel) {
-                ForEach(PlaceStore.shared.getRandom(count: self.CountInCarousel, premium: self.appState.isPremium)) { place in
-                    NavigationLink(
-                        destination: PlaceDetail(place: place)
-                    ) {
-                        ImageStore.shared.image(forPlace: place)
-                            .renderingMode(.original)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: geometry.size.width-20, height:geometry.size.height)
-                            .clipped().cornerRadius(15).padding(10)
-                    }
-                }
-            }
-        }.frame(width: UIScreen.main.bounds.width, height: 300, alignment: .center)
     }
 }
 
@@ -143,13 +118,6 @@ struct StoreSuggestions: View {
                     Text("Suggestions")
                         .font(.title)
                     Spacer()
-                    /*
-                    Button(action: {
-                        //
-                    })
-                    {
-                        Text("Voir plus")
-                    }*/
             }.padding(.horizontal)
             
             PlaceGridCompact(places: PlaceStore.shared.getRandom(count: 9, premium: appState.isPremium))

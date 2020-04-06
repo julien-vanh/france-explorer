@@ -28,7 +28,7 @@ struct ContentView: View {
             ),
             UIKitTabView.Tab(
                 view: DreamList(),
-                title: NSLocalizedString("Ma Liste", comment: ""),
+                title: NSLocalizedString("Voyage", comment: ""),
                 image: "list.bullet"
             ),
             UIKitTabView.Tab(
@@ -43,9 +43,7 @@ struct ContentView: View {
             )
         ]).overlay(
             GeometryReader { geometry in
-                if(!self.appState.cguAccepted){
-                    LaunchCarousel()
-                } else {
+                if(self.appState.cguAccepted){
                     BottomSheetView(
                         state: self.$appState.state,
                         maxHeight: geometry.size.height,
@@ -73,6 +71,8 @@ struct ContentView: View {
                             }
                         }
                     }
+                } else {
+                    LaunchCarousel()
                 }
             }
         , alignment: .bottom)

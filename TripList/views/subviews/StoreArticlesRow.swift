@@ -35,19 +35,19 @@ struct StoreArticlesRow: View {
                                 article: article
                             )
                         ) {
-                            ZStack {
+                            ZStack(alignment: .center) {
                                 ImageStore.shared.localImage(name: article.illustration.path)
                                     .renderingMode(.original)
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
-                                    .clipped().frame(width: 325, height: 170)
+                                    .frame(width: 325, height: 170)
+                                    .cornerRadius(10)
                                 
                                 Text(article.titleLocalized)
                                     .fontWeight(.semibold)
                                     .shadow(color: Color.black, radius: 5, x: 0, y: 0)
-                                    .foregroundColor(.white).frame(width: 315, height: 170)
+                                    .foregroundColor(.white).frame(width: 315, height: 160)
                             }
-                            .cornerRadius(5)
                             .padding(.leading, 10)
                         }
                     }

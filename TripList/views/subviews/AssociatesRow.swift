@@ -24,20 +24,20 @@ struct AssociatesRow: View {
                     ForEach(PlaceStore.shared.getAssociatedPlaceTo(place: place, count: 6, premium: appState.isPremium)) { place in
                         
                         NavigationLink(destination: PlaceDetail(place: place, displayAssociates: false )){
-                            ZStack {
+                            ZStack(alignment: .center) {
                                 ImageStore.shared.image(forPlace: place)
                                     .renderingMode(.original)
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
-                                    .clipped().frame(width: 155, height: 155)
+                                    .frame(width: 155, height: 155)
+                                    .cornerRadius(10)
                                 
                                 Text(place.titleLocalized)
                                     .fontWeight(.semibold)
                                     .shadow(color: Color.black, radius: 5, x: 0, y: 0)
-                                    .foregroundColor(.white).frame(width: 155, height: 155)
+                                    .foregroundColor(.white).frame(width: 145, height: 145)
                                     .multilineTextAlignment(.center)
                             }
-                            .cornerRadius(5)
                             .padding(.leading, 15)
                         }
                     }

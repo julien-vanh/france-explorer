@@ -17,7 +17,7 @@ struct WikiQuery: Decodable {
     var pages: [String: WikiResult]
 }
 
-enum WikiResult : Decodable{
+enum WikiResult : Decodable {
     case page(WikiPage)
     case image(WikiImage)
     case searchResult(WikiSearchResult)

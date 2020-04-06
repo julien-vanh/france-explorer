@@ -81,6 +81,13 @@ final class PlaceStore: NSObject {
         }
     }
     
+    func getCategoriesWithoutAll() -> [Category] {
+        let result = getCategories()
+        return result.filter { (cat) -> Bool in
+            cat.category != .all
+        }
+    }
+    
     func getCategory(placeCategory: PlaceCategory) -> Category {
         return categories[placeCategory.rawValue]!
     }

@@ -11,7 +11,7 @@ import CoreLocation
 
 struct Place: Decodable, Identifiable {
     var id: String
-    fileprivate var title: TranslatableField<String>
+    fileprivate var title: TranslatableField
     var category: PlaceCategory
     var regionId: String
     var iap: Bool
@@ -24,7 +24,7 @@ struct Place: Decodable, Identifiable {
     var address: String!
     var website: String!
     var illustration: Illustration!
-    fileprivate var description: TranslatableField<PlaceDescription>
+    fileprivate var description: TranslatableDescription
     var wikiPageId: Int!
     var cta: CallToAction!
     
@@ -49,14 +49,6 @@ struct Place: Decodable, Identifiable {
                 output = res
             }
         }
-        /*
-        if popularity == 3 {
-            output = output + "\n★★"
-        }
-        if popularity == 2 {
-            output = output + "\n★"
-        }
- */
         return output
     }
     
@@ -89,10 +81,18 @@ struct Illustration: Hashable, Codable {
     var source: String
 }
 
+
+struct TranslatableDescription: Decodable {
+    var fr: PlaceDescription!
+    var en: PlaceDescription!
+}
+
 struct PlaceDescription: Decodable {
     var content: String
     var credit: String
 }
+
+
 
 struct PlaceRegion: Hashable, Codable, Identifiable {
     var id: String

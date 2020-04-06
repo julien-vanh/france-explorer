@@ -12,8 +12,8 @@ struct Article: Decodable, Identifiable {
     var id: String
     var iap: Bool
     var places: [ArticlePlace]
-    fileprivate var title: TranslatableField<String>
-    fileprivate var description: TranslatableField<String>
+    fileprivate var title: TranslatableField
+    fileprivate var description: TranslatableField
     var illustration: Illustration!
     
     var titleLocalized: String {
@@ -50,7 +50,7 @@ struct ArticlePlace: Decodable {
     var placeId: String
 }
 
-struct TranslatableField<T:Decodable>: Decodable {
-    var fr: T!
-    var en: T!
+struct TranslatableField: Decodable {
+    var fr: String!
+    var en: String!
 }

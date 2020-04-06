@@ -15,7 +15,7 @@
 //Tabbar
 "Destinations" = "Destinations";
 "Carte" = "Map";
-"Ma Liste" = "My List";
+"Voyage" = "My Trip";
 "Progression" = "Progress";
 "Paramètres" = "Parameters";
 
@@ -25,7 +25,7 @@
 "Organisez votre voyage" = "Organize your trip";
 "Ce guide vous permettra de décrouvrir les plus belles destinations touristiques de France." = "This guide will allow you to discover the most beautiful tourist destinations in France.";
 "Villes, Musées, Nature, Patrimoine, Sorties pour voyager selon vos envies." = "Cities, Museums, Nature, Heritage, Outings to travel according to your desires.";
-"Ajoutez les destinations à votre liste." = "Add destinations to Your List.";
+"Ajoutez les destinations à votre prochain Voyage." = "Add destinations to your next Trip.";
 "Marquez les destinations explorées." = "Mark the explored destinations.";
 "Collectionnez les lieux explorés de chaques régions." = "Collect the destinations explored in each region.";
 "En continuant vous acceptez nos" = "By continuing you accept the";
@@ -43,8 +43,8 @@
 "à %@" = "at %@";
 "à %@ de ma position" = "at %@ from my position";
 "Exploré" = "Explored";
-"Retirer de Ma Liste" = "Remove from My List";
-"Ajouter à Ma Liste" = "Add to My List";
+"Retirer du Voyage" = "Remove from My Trip";
+"Ajouter au Voyage" = "Add to My Trip";
 
 "Nos sélections" = "Our selections";
 "Voir plus" = "See more";
@@ -74,7 +74,7 @@
 "Texte" = "Text";
 
 //Dream
-"Ma Liste" = "My List";
+"Mon Voyage" = "My Trip";
 "Copier dans Rappels" = "Copy to Reminders";
 "Imprimer" = "Print";
 "Partager" = "Share";

@@ -65,7 +65,7 @@ class AppState: NSObject, ObservableObject {
     }
     
     public func acceptCGU(){
-        cguAccepted = true
+        self.cguAccepted = true
         
         let ud = UserDefaults.standard
         ud.set(true, forKey: UserDefaultsKeys.cguAccepted.rawValue)

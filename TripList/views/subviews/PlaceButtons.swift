@@ -82,7 +82,9 @@ struct PlaceButtons: View {
                         self.managedObjectContext.delete(item)
                         self.saveContext()
                     }) {
-                        Text("Retirer de Ma Liste")
+                        Text("Retirer du Voyage")
+                            .fixedSize(horizontal: false, vertical: true)
+                            .lineLimit(2)
                             .font(.headline)
                     }
                     .padding()
@@ -95,7 +97,9 @@ struct PlaceButtons: View {
                     }) {
                         HStack{
                             Image(systemName: "text.badge.plus")
-                            Text("Ajouter à Ma Liste")
+                            Text("Ajouter au Voyage")
+                                .fixedSize(horizontal: false, vertical: true)
+                                .lineLimit(2)
                                 .font(.headline)
                         }
                     }

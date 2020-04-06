@@ -89,8 +89,12 @@ struct PlaceDetail: View {
                 PlaceButtons(place: self.place)
                 
                 if self.place.descriptionLocalized != nil {
-                    Text(self.place.descriptionLocalized!.content)
-                        .padding( 10.0)
+                    VStack {
+                        Text(self.place.descriptionLocalized!.content)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .padding( 10.0)
+                    }
+                    
                 }
                 
                 if self.place.address != nil {
@@ -105,6 +109,7 @@ struct PlaceDetail: View {
                             mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
                         }) {
                             Text(self.place.address)
+                                .fixedSize(horizontal: false, vertical: true)
                         }
                         Spacer()
                     }

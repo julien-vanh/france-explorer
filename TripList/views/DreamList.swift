@@ -19,7 +19,7 @@ struct DreamList: View {
     @ObservedObject var appState = AppState.shared
     
     var actionSheet: ActionSheet {
-        ActionSheet(title: Text("Ma Liste"), buttons: [
+        ActionSheet(title: Text("Mon Voyage"), buttons: [
             .default(Text("Copier dans Rappels"), action:copyInReminder),
             //.default(Text("Imprimer"), action:{}),
             .default(Text("Partager"), action:share),
@@ -43,7 +43,7 @@ struct DreamList: View {
             }
             .listStyle(GroupedListStyle())
             .environment(\.horizontalSizeClass, .regular)
-            .navigationBarTitle(Text("Ma Liste"))
+            .navigationBarTitle(Text("Mon Voyage"))
             .navigationBarItems(leading:EditButton(), trailing:(
                 Button(action: {
                     if UIDevice.current.userInterfaceIdiom == .phone {
