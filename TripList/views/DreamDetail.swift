@@ -38,7 +38,6 @@ struct DreamDetail: View {
                     .foregroundColor(Color(AppStyle.color(for: self.place.category)))
                 
                 Text(self.place.titleLocalized)
-                    .fixedSize(horizontal: false, vertical: true)
                     .multilineTextAlignment(.center)
                     .font(.largeTitle)
                 
@@ -63,7 +62,7 @@ struct DreamDetail: View {
                             mapItem.name = self.place.titleLocalized
                             mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
                         }) {
-                            Text(self.place.address).fixedSize(horizontal: false, vertical: true)
+                            Text(self.place.address)
                         }
                         Spacer()
                     }

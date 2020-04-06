@@ -64,7 +64,7 @@ struct PlaceButtons: View {
             }) {
                 HStack {
                     Image(systemName: (completions.first != nil) ? "checkmark.circle.fill" : "circle")
-                    Text("Exploré")
+                    Text("Exploré").fixedSize()
                 }
                 .font(.headline)
             }
@@ -83,7 +83,6 @@ struct PlaceButtons: View {
                         self.saveContext()
                     }) {
                         Text("Retirer du Voyage")
-                            .fixedSize(horizontal: false, vertical: true)
                             .lineLimit(2)
                             .font(.headline)
                     }
@@ -98,7 +97,6 @@ struct PlaceButtons: View {
                         HStack{
                             Image(systemName: "text.badge.plus")
                             Text("Ajouter au Voyage")
-                                .fixedSize(horizontal: false, vertical: true)
                                 .lineLimit(2)
                                 .font(.headline)
                         }

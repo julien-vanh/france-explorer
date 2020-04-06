@@ -91,7 +91,6 @@ struct PlaceDetail: View {
                 if self.place.descriptionLocalized != nil {
                     VStack {
                         Text(self.place.descriptionLocalized!.content)
-                            .fixedSize(horizontal: false, vertical: true)
                             .padding( 10.0)
                     }
                     
@@ -109,7 +108,6 @@ struct PlaceDetail: View {
                             mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
                         }) {
                             Text(self.place.address)
-                                .fixedSize(horizontal: false, vertical: true)
                         }
                         Spacer()
                     }

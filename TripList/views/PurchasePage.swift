@@ -58,19 +58,15 @@ struct PurchasePage: View {
                         .padding(15)
                 }
             }
-            
-            
-            SeparationBar()
-                .padding(.horizontal, 50)
-                .padding(.vertical, 20)
                 
             Button(action: {
                 self.restorePurchases()
             }) {
                 Text("Restaurer mes achats")
                     .font(.subheadline)
-            }.disabled(isDisabled)
-            
+            }
+            .disabled(isDisabled)
+            .padding()
             
             Spacer()
         }
@@ -136,7 +132,7 @@ struct PurchaseCarousel: View {
                         .clipped()
                 }
             }
-        }.frame(height: UIDevice.current.userInterfaceIdiom == .phone ? 330 : 390, alignment: .center)
+        }.frame(height: UIDevice.current.userInterfaceIdiom == .phone ? 300 : 360, alignment: .center)
     }
     
 }

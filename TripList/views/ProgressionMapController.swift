@@ -13,7 +13,7 @@ import UIKit
 
 
 struct ProgressionMapController: UIViewRepresentable {
-    @ObservedObject var appState = AppState.shared
+    var appState = AppState.shared //Ne pas mettre @Observed sinon refresh la map de trop
     var completions: [Completion]
     private var regionsOverlay: [String: MKOverlay] = [:]
     private let view = MKMapView(frame: .zero)
