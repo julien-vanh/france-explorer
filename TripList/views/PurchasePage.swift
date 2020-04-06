@@ -132,7 +132,7 @@ struct PurchaseCarousel: View {
                         .clipped()
                 }
             }
-        }.frame(height: UIDevice.current.userInterfaceIdiom == .phone ? 300 : 360, alignment: .center)
+        }.frame(height: UIDevice.current.userInterfaceIdiom == .phone ? 300 : 390, alignment: .center)
     }
     
 }

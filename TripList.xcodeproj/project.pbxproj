@@ -3395,7 +3395,7 @@
 				CODE_SIGN_ENTITLEMENTS = "TripList/France Heritage.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20200405;
+				CURRENT_PROJECT_VERSION = 20200406;
 				DEVELOPMENT_ASSET_PATHS = "\"TripList/Preview Content\"";
 				DEVELOPMENT_TEAM = G49XQYC5WE;
 				ENABLE_PREVIEWS = YES;
@@ -3422,7 +3422,7 @@
 				CODE_SIGN_ENTITLEMENTS = "TripList/France Heritage.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20200405;
+				CURRENT_PROJECT_VERSION = 20200406;
 				DEVELOPMENT_ASSET_PATHS = "\"TripList/Preview Content\"";
 				DEVELOPMENT_TEAM = G49XQYC5WE;
 				ENABLE_PREVIEWS = YES;
