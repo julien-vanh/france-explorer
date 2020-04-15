@@ -131,6 +131,20 @@ struct PlaceDetail: View {
                     .padding(.leading, 10.0)
                 }
                 
+                /*
+                if false {
+                    SeparationBar()
+                    AssociatesActivities(place: self.place)
+                        
+                }
+                
+                if false {
+                    SeparationBar()
+                    AssociatesHotels(place: self.place)
+                        
+                }
+                */
+                
                 
                 if displayAssociates {
                     SeparationBar()
@@ -138,6 +152,7 @@ struct PlaceDetail: View {
                         .padding(.top, 10.0)
                         .padding(.bottom, 15.0)
                 }
+                
             }
             
             ZStack(alignment: .top) {

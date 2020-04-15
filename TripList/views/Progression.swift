@@ -54,13 +54,13 @@ struct ProgressionLine: View {
                     Text("\(getCompletedCount())/\(PlaceStore.shared.getAllForRegion(regionId: region.id).count)")
                     .font(.caption)
                     .foregroundColor(.white)
-                    
+                    .shadow(color: Color.black, radius: 5, x: 0, y: 0)
                     
                     Image(systemName: "checkmark.circle.fill")
                     .foregroundColor(.white)
                 }
                 .padding(3)
-                .background(Color(.systemGray2))
+                .background(getCompletedCount() > 0 ? Color(UIColor.explored) : Color(.systemGray2))
                 .cornerRadius(10)
             }
             

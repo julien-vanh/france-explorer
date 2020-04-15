@@ -49,9 +49,7 @@ struct DreamDetail: View {
                 }
                 .padding(.bottom)
                 
-                //TODO
-                //Text("Hotels à proximité").font(.title)
-                //Rectangle().background(Color.yellow).frame(width: 300, height: 150)
+                
                 
                 if self.place.address != nil {
                     SeparationBar()
