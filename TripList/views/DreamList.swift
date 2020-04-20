@@ -87,10 +87,34 @@ struct DreamList: View {
         saveDreams()
     }
     
-    private func move(from source: IndexSet, to destination: Int) {
-        var copyArray = Array(dreams)
-        copyArray.move(fromOffsets: source, toOffset: destination)
-        copyArray.enumerated().forEach { $1.order = $0 }
+    private func move(from indexSet: IndexSet, to destination: Int) {
+        let source = indexSet.first!
+        
+        if source < destination {
+            var startIndex = source + 1
+            let endIndex = destination - 1
+            var startOrder = dreams[source].order
+            while startIndex <= endIndex {
+                dreams[startIndex].order = startOrder
+                startOrder = startOrder + 1
+                startIndex = startIndex + 1
+            }
+            
+            dreams[source].order = startOrder
+            
+        } else if destination < source {
+            var startIndex = destination
+            let endIndex = source - 1
+            var startOrder = dreams[destination].order + 1
+            let newOrder = dreams[destination].order
+            while startIndex <= endIndex {
+                dreams[startIndex].order = startOrder
+                startOrder = startOrder + 1
+                startIndex = startIndex + 1
+            }
+            dreams[source].order = newOrder
+        }
+        
         saveDreams()
     }
     

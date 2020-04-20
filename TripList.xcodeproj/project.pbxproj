@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E8CB92F7763543DD657D004F /* Pods_TripList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9698C69142C657E5CE8286B8 /* Pods_TripList.framework */; };
+		F90551C4244E30200046C76E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90551C3244E30200046C76E /* CloudKit.framework */; };
 		F91CEF02243A5757005D780A /* CreditsModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91CEF01243A5757005D780A /* CreditsModal.swift */; };
 		F91DED9E23E6EAE800D8FFD7 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91DED9D23E6EAE800D8FFD7 /* BottomSheetView.swift */; };
 		F91DEDA023E6F4DD00D8FFD7 /* PlaceDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91DED9F23E6F4DD00D8FFD7 /* PlaceDrawer.swift */; };
@@ -756,6 +757,7 @@
 		7689E2DCC7F5369AF5ECE682 /* Pods-TripList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripList.debug.xcconfig"; path = "Target Support Files/Pods-TripList/Pods-TripList.debug.xcconfig"; sourceTree = "<group>"; };
 		9698C69142C657E5CE8286B8 /* Pods_TripList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C13C3C1697C3E7D04C10C491 /* Pods-TripList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripList.release.xcconfig"; path = "Target Support Files/Pods-TripList/Pods-TripList.release.xcconfig"; sourceTree = "<group>"; };
+		F90551C3244E30200046C76E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		F91CEF01243A5757005D780A /* CreditsModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsModal.swift; sourceTree = "<group>"; };
 		F91DED9D23E6EAE800D8FFD7 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		F91DED9F23E6F4DD00D8FFD7 /* PlaceDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDrawer.swift; sourceTree = "<group>"; };
@@ -1508,6 +1510,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F90551C4244E30200046C76E /* CloudKit.framework in Frameworks */,
 				F92E05CB2412941B009C5ADD /* MapKit.framework in Frameworks */,
 				F95DE5B723DE3BE500BE1BD5 /* QGrid in Frameworks */,
 				F9C1E809241C0A60006EBEB8 /* URLImage in Frameworks */,
@@ -1532,6 +1535,7 @@
 		F92E05C92412941B009C5ADD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F90551C3244E30200046C76E /* CloudKit.framework */,
 				F9A2C9112427689000883A52 /* StoreKit.framework */,
 				F92E05CA2412941B009C5ADD /* MapKit.framework */,
 				9698C69142C657E5CE8286B8 /* Pods_TripList.framework */,
