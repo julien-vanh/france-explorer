@@ -62,6 +62,15 @@ final class ImageStore {
         }
         return localImage(name: name)
     }
+    
+    func uiimage(forPlace place: Place) -> UIImage {
+        var name = "placeholder.jpg"
+        if let illustration = place.illustration {
+            name = illustration.path.replacingOccurrences(of: ".jpeg", with: ".jpg")
+            name = name.replacingOccurrences(of: ".png", with: ".jpg")
+        }
+        return UIImage(named: name)!
+    }
 
     private func loadImage(name: String) throws -> CGImage {
         guard

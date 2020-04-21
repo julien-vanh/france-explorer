@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import MapKit
 
 class AppStyle {
     static func color(for placeCategory: PlaceCategory) -> UIColor {
@@ -22,12 +21,6 @@ class AppStyle {
             case .all: color = UIColor(hex: 0x333333)
         }
         return color
-    }
-    
-    static func formatDistance(value: CLLocationDistance) -> String {
-        let formatter = MKDistanceFormatter()
-        return formatter.string(fromDistance: value)
-       
     }
 }
 
