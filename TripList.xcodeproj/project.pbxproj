@@ -46,7 +46,7 @@
 		F940D3D3244F6E6400B42012 /* ThumbnailPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F940D3D1244F6E6400B42012 /* ThumbnailPageCell.xib */; };
 		F940D3D4244F6E6400B42012 /* ThumbnailPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940D3D2244F6E6400B42012 /* ThumbnailPageCell.swift */; };
 		F940D3D5244F70A600B42012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F95DE55F23DE2F0F00BE1BD5 /* Assets.xcassets */; };
-		F940D3D7244F714200B42012 /* WikiPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940D3D6244F714200B42012 /* WikiPageViewController.swift */; };
+		F940D3D7244F714200B42012 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940D3D6244F714200B42012 /* PlaceDetailViewController.swift */; };
 		F940D3DA244F738A00B42012 /* ImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F940D3D8244F738A00B42012 /* ImageViewCell.xib */; };
 		F940D3DB244F738A00B42012 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940D3D9244F738A00B42012 /* ImageViewCell.swift */; };
 		F940D3DE244F744900B42012 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F940D3DD244F744900B42012 /* Kingfisher */; };
@@ -1336,6 +1336,8 @@
 		F940E06A244F7DD000B42012 /* ValledeChaudefour.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940DB66244F7DCE00B42012 /* ValledeChaudefour.jpg */; };
 		F940E06C244F836D00B42012 /* TVUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940E06B244F836D00B42012 /* TVUIKit.framework */; };
 		F940E06D2450A86600B42012 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9DC21F323E232650023B8EF /* Localizable.strings */; };
+		F940E06F2450B37300B42012 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940E06E2450B37300B42012 /* MapKit.framework */; };
+		F940E0702450BF6B00B42012 /* PlaceAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F926A7C924194CF900615E07 /* PlaceAnnotationView.swift */; };
 		F94B49702401A42A0055956D /* SeparationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B496F2401A42A0055956D /* SeparationBar.swift */; };
 		F94B49732401DE3D0055956D /* PlaceViewCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B49722401DE3D0055956D /* PlaceViewCompact.swift */; };
 		F95DE55A23DE2F0F00BE1BD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE55923DE2F0F00BE1BD5 /* AppDelegate.swift */; };
@@ -1471,7 +1473,7 @@
 		F940D3CE244F6BD100B42012 /* ImagesPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesPageViewController.swift; sourceTree = "<group>"; };
 		F940D3D1244F6E6400B42012 /* ThumbnailPageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThumbnailPageCell.xib; sourceTree = "<group>"; };
 		F940D3D2244F6E6400B42012 /* ThumbnailPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailPageCell.swift; sourceTree = "<group>"; };
-		F940D3D6244F714200B42012 /* WikiPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikiPageViewController.swift; sourceTree = "<group>"; };
+		F940D3D6244F714200B42012 /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
 		F940D3D8244F738A00B42012 /* ImageViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageViewCell.xib; sourceTree = "<group>"; };
 		F940D3D9244F738A00B42012 /* ImageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
 		F940D8E5244F7DCB00B42012 /* MuseCinmaetMiniature.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MuseCinmaetMiniature.jpg; sourceTree = "<group>"; };
@@ -2117,6 +2119,7 @@
 		F940DB65244F7DCE00B42012 /* CitadelledeCorte.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CitadelledeCorte.jpg; sourceTree = "<group>"; };
 		F940DB66244F7DCE00B42012 /* ValledeChaudefour.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ValledeChaudefour.jpg; sourceTree = "<group>"; };
 		F940E06B244F836D00B42012 /* TVUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TVUIKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS13.4.sdk/System/Library/Frameworks/TVUIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F940E06E2450B37300B42012 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS13.4.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
 		F94B496F2401A42A0055956D /* SeparationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparationBar.swift; sourceTree = "<group>"; };
 		F94B49722401DE3D0055956D /* PlaceViewCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewCompact.swift; sourceTree = "<group>"; };
 		F95DE55623DE2F0E00BE1BD5 /* France Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "France Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2216,6 +2219,7 @@
 			files = (
 				F940D3DE244F744900B42012 /* Kingfisher in Frameworks */,
 				F940E06C244F836D00B42012 /* TVUIKit.framework in Frameworks */,
+				F940E06F2450B37300B42012 /* MapKit.framework in Frameworks */,
 				F9055205244F65900046C76E /* StoreKit.framework in Frameworks */,
 				F9055208244F65AD0046C76E /* CloudKit.framework in Frameworks */,
 			);
@@ -2267,6 +2271,7 @@
 			children = (
 				F9DC21F323E232650023B8EF /* Localizable.strings */,
 				F95DE55F23DE2F0F00BE1BD5 /* Assets.xcassets */,
+				F926A7C924194CF900615E07 /* PlaceAnnotationView.swift */,
 				F940D3C0244F69AE00B42012 /* utils */,
 				F95DE56D23DE2F1F00BE1BD5 /* models */,
 				F9DC21EC23E231D70023B8EF /* wikipedia */,
@@ -2278,6 +2283,7 @@
 		F92E05C92412941B009C5ADD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F940E06E2450B37300B42012 /* MapKit.framework */,
 				F940E06B244F836D00B42012 /* TVUIKit.framework */,
 				F9055207244F65AD0046C76E /* CloudKit.framework */,
 				F9055204244F65900046C76E /* StoreKit.framework */,
@@ -2312,7 +2318,7 @@
 		F940D3C7244F6B8F00B42012 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F940D3D6244F714200B42012 /* WikiPageViewController.swift */,
+				F940D3D6244F714200B42012 /* PlaceDetailViewController.swift */,
 				F940D3CA244F6BB500B42012 /* DiscoverViewController.swift */,
 				F940D3C8244F6B9E00B42012 /* SearchResultViewController.swift */,
 				F940D3CE244F6BD100B42012 /* ImagesPageViewController.swift */,
@@ -3141,7 +3147,6 @@
 				F91CEF01243A5757005D780A /* CreditsModal.swift */,
 				F9CF76A424373DE600DBC245 /* PlacePopularityStars.swift */,
 				F9815D742423B63E0057D515 /* WebViewModal.swift */,
-				F926A7C924194CF900615E07 /* PlaceAnnotationView.swift */,
 				F9D49FA02402917C005A2B8E /* PlaceGridCompact.swift */,
 				F94B49722401DE3D0055956D /* PlaceViewCompact.swift */,
 				F9DC222C23E31FEE0023B8EF /* PlaceButtons.swift */,
@@ -4655,7 +4660,7 @@
 				F9811C26244F68AF0098D608 /* PlaceStore.swift in Sources */,
 				F9811C24244F68AF0098D608 /* Article.swift in Sources */,
 				F940D3CF244F6BD100B42012 /* ImagesPageViewController.swift in Sources */,
-				F940D3D7244F714200B42012 /* WikiPageViewController.swift in Sources */,
+				F940D3D7244F714200B42012 /* PlaceDetailViewController.swift in Sources */,
 				F90551F3244F65390046C76E /* AppDelegate.swift in Sources */,
 				F9811C1D244F68530098D608 /* ImageMetadata.swift in Sources */,
 				F9811C1E244F68530098D608 /* WikipediaService.swift in Sources */,
@@ -4669,6 +4674,7 @@
 				F940D3C9244F6B9E00B42012 /* SearchResultViewController.swift in Sources */,
 				F9811C1F244F68530098D608 /* WikiResponse.swift in Sources */,
 				F9811C22244F68AF0098D608 /* Completion.swift in Sources */,
+				F940E0702450BF6B00B42012 /* PlaceAnnotationView.swift in Sources */,
 				F940D3C3244F69CF00B42012 /* AppStyle.swift in Sources */,
 				F9811C21244F68AF0098D608 /* Dream.swift in Sources */,
 				F9811C23244F68AF0098D608 /* Place.swift in Sources */,

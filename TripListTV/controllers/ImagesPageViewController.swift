@@ -85,6 +85,5 @@ extension ImagesPageViewController : UIPageViewControllerDataSource {
     @IBAction func tap() {
         let vc = self.viewControllers!.first! as! PageImageViewController
         vc.toogleImageDescriptionView()
-        
     }
 }

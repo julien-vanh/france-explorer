@@ -9,15 +9,16 @@
 import Foundation
 import UIKit
 import TVUIKit
+import MapKit
 
 let MAX_ITEM_IN_HISTORY = 30
 
-protocol WikiPageViewControllerDelegate {
+protocol PlaceDetailViewControllerDelegate {
     func shouldRedirectToPage(place: Place)
 }
 
-class WikiPageViewController: UIViewController {
-    var delegate:WikiPageViewControllerDelegate?
+class PlaceDetailViewController: UIViewController {
+    var delegate:PlaceDetailViewControllerDelegate?
     var place: Place = PlaceStore.shared.getRandom(count: 1, premium: false)[0]
     var mustScrollToTop = true
     
@@ -36,6 +37,11 @@ class WikiPageViewController: UIViewController {
     @IBOutlet weak var linksCollectionView: UICollectionView!
     @IBOutlet weak var linksHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var creditLabel: UILabel!
+    
+    
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var map: MKMapView!
+    
     let buttonImageConfig = UIImage.SymbolConfiguration(textStyle: .headline)
     private var pageImages: [ImageMetadata] = []
     private var linkedPlaces: [Place] = []
@@ -75,18 +81,17 @@ class WikiPageViewController: UIViewController {
         linksCollectionView.dataSource = self
         linksCollectionView.register(UINib(nibName: "ThumbnailPageCell", bundle: nil), forCellWithReuseIdentifier: "ThumbnailPageCell")
         
+        addressLabel.text = ""
         creditLabel.text = ""
     }
     
     
     private func displayPageContent(){
         titleLabel.text = place.titleLocalized
-        if let descriptionLocalized = place.descriptionLocalized {
-            extractTextView.text = descriptionLocalized.content
-        } else {
-            extractTextView.text = ""
-        }
-        
+        displayDescription()
+        displayAddressLabel()
+        displayMap()
+        displayCredits()
         
         if place.illustration != nil {
             thumbnailImageView.image = ImageStore.shared.uiimage(forPlace: place)
@@ -95,8 +100,6 @@ class WikiPageViewController: UIViewController {
             thumbnailWidthConstraint.constant = 0.0
             extractHeightConstraint.constant = 600.0
         }
- 
-        
         
         if let wikiPageId = self.place.wikiPageId {
             WikipediaService.shared.getPageImages(wikiPageId) { result in
@@ -118,11 +121,98 @@ class WikiPageViewController: UIViewController {
             self.imagesHeightConstraint.constant = 0.0
         }
         
-        creditLabel.text = "Crédits"//place.descriptionLocalized.credit
-        
         self.view.setNeedsUpdateConstraints()
         self.view.layoutIfNeeded()
         self.linksCollectionView.reloadData()
+        
+        
+    }
+    
+    private func displayDescription(){
+        
+        let text = NSMutableAttributedString(string: "")
+        
+        let categoryAttributes: [NSAttributedString.Key: Any] = [
+            NSAttributedString.Key.foregroundColor: AppStyle.color(for: place.category),
+            .font: UIFont.systemFont(ofSize: 50),
+        ]
+        
+        let description = NSAttributedString(string: PlaceStore.shared.getCategory(placeCategory: self.place.category).title, attributes: categoryAttributes)
+        text.append(description)
+        
+        
+        if let descriptionLocalized = place.descriptionLocalized {
+            let lineContentAttributes: [NSAttributedString.Key: Any] = [
+                NSAttributedString.Key.foregroundColor: UIColor.black,
+                .font: UIFont.systemFont(ofSize: 40),
+            ]
+            
+            let description = NSAttributedString(string: "\n\n"+descriptionLocalized.content, attributes: lineContentAttributes)
+            text.append(description)
+        }
+        
+        extractTextView.attributedText = text
+    }
+    
+    private func displayAddressLabel(){
+        let lineTitleAttributes: [NSAttributedString.Key: Any] = [
+            NSAttributedString.Key.foregroundColor: UIColor.darkGray,
+            .font: UIFont.boldSystemFont(ofSize: 30),
+        ]
+        let lineContentAttributes: [NSAttributedString.Key: Any] = [
+            NSAttributedString.Key.foregroundColor: UIColor.black,
+            .font: UIFont.systemFont(ofSize: 40),
+        ]
+
+        let text = NSMutableAttributedString(string: "")
+        
+        let region = PlaceStore.shared.getRegions().first { (region) -> Bool in
+            region.id == place.regionId
+        }
+        if let regionFound = region {
+            let regionTitle = NSAttributedString(string: NSLocalizedString(NSLocalizedString("Région", comment: ""), comment: ""), attributes: lineTitleAttributes)
+            text.append(regionTitle)
+            
+            let regionContent = NSAttributedString(string: "\n"+regionFound.name+"\n\n", attributes: lineContentAttributes)
+            text.append(regionContent)
+        }
+        
+        if let address = place.address {
+            let addressTitle = NSAttributedString(string: NSLocalizedString("Adresse", comment: ""), attributes: lineTitleAttributes)
+            text.append(addressTitle)
+            
+            let addressContent = NSAttributedString(string: "\n"+address+"\n\n", attributes: lineContentAttributes)
+            text.append(addressContent)
+        }
+        
+        if let website = place.website {
+            let addressTitle = NSAttributedString(string: NSLocalizedString("Site web", comment: ""), attributes: lineTitleAttributes)
+            text.append(addressTitle)
+            
+            let addressContent = NSAttributedString(string: "\n"+website+"\n\n", attributes: lineContentAttributes)
+            text.append(addressContent)
+        }
+        addressLabel.attributedText = text
+    }
+    
+    private func displayMap(){
+        map.register(PlaceAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        let annotation = PlaceAnnotation(place: place, style: .Colored)
+        map.addAnnotation(annotation)
+        let span = MKCoordinateSpan(latitudeDelta: 0.0, longitudeDelta: 2.0)
+        let region = MKCoordinateRegion(center: place.locationCoordinate, span: span)
+        map.setRegion(region, animated: true)
+    }
+    
+    private func displayCredits(){
+        var credits = ""
+        if place.illustration != nil {
+            credits += place.illustration!.credit + " " + place.illustration!.source + "\n"
+        }
+        if (self.place.descriptionLocalized != nil){
+            credits += self.place.descriptionLocalized!.credit
+        }
+        creditLabel.text = credits
     }
     
     @IBAction func favoritesClickedAction(_ sender: Any) {
@@ -179,7 +269,7 @@ class WikiPageViewController: UIViewController {
  
 }
 
-extension WikiPageViewController : UICollectionViewDelegate, UICollectionViewDataSource {
+extension PlaceDetailViewController : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.linksCollectionView {
             return linkedPlaces.count
@@ -218,7 +308,7 @@ extension WikiPageViewController : UICollectionViewDelegate, UICollectionViewDat
 
 
 
-extension WikiPageViewController : UIScrollViewDelegate {
+extension PlaceDetailViewController : UIScrollViewDelegate {
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         //Force the scrollview to the top when buttons are selected
         if mustScrollToTop {
