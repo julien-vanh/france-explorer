@@ -37,17 +37,16 @@ class WikiPageViewController: UIViewController {
     @IBOutlet weak var linksHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var creditLabel: UILabel!
     let buttonImageConfig = UIImage.SymbolConfiguration(textStyle: .headline)
-    
-    
+    private var pageImages: [ImageMetadata] = []
+    private var linkedPlaces: [Place] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.linkedPlaces = PlaceStore.shared.getAssociatedPlaceTo(place: place, count: 6, premium: false)
+        
         initViews()
         displayPageContent()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
     }
     
     private func initViews(){
@@ -67,8 +66,6 @@ class WikiPageViewController: UIViewController {
             favoriteCaptionButton.title = NSLocalizedString("button.favorites.add", comment: "")
         }
         favoriteCaptionButton.subtitle = ""
-        
-        
         
         imagesCollectionView.delegate = self
         imagesCollectionView.dataSource = self
@@ -98,16 +95,33 @@ class WikiPageViewController: UIViewController {
             thumbnailWidthConstraint.constant = 0.0
             extractHeightConstraint.constant = 600.0
         }
-        
-        
-        if true { //if pageContent.pageImages.count == 0 {
-            imagesHeightConstraint.constant = 0.0
-        }
  
+        
+        
+        if let wikiPageId = self.place.wikiPageId {
+            WikipediaService.shared.getPageImages(wikiPageId) { result in
+                DispatchQueue.main.async {
+                    switch result {
+                    case .failure(let error):
+                        print("error loading images", error)
+                        self.imagesHeightConstraint.constant = 0.0
+                        self.view.setNeedsUpdateConstraints()
+                        self.view.layoutIfNeeded()
+                    case .success(let value):
+                        self.pageImages = value
+                        self.imagesCollectionView.reloadData()
+                    }
+                }
+                
+            }
+        } else {
+            self.imagesHeightConstraint.constant = 0.0
+        }
+        
         creditLabel.text = "Crédits"//place.descriptionLocalized.credit
+        
         self.view.setNeedsUpdateConstraints()
         self.view.layoutIfNeeded()
-        self.imagesCollectionView.reloadData()
         self.linksCollectionView.reloadData()
     }
     
@@ -168,20 +182,20 @@ class WikiPageViewController: UIViewController {
 extension WikiPageViewController : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.linksCollectionView {
-            return PlaceStore.shared.getAssociatedPlaceTo(place: place, count: 6, premium: false).count
+            return linkedPlaces.count
         } else {
-            return 0 //TODO photos
+            return self.pageImages.count
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.linksCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ThumbnailPageCell", for: indexPath) as! ThumbnailPageCell
-            cell.configure(place: PlaceStore.shared.getAssociatedPlaceTo(place: place, count: 6, premium: false)[indexPath.item])
+            cell.configure(place: linkedPlaces[indexPath.item])
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageViewCell", for: indexPath) as! ImageViewCell
-            //cell.configure(image: pageContent.pageImages[indexPath.item])
+            cell.configure(image: self.pageImages[indexPath.item])
             return cell
         }
         
@@ -195,7 +209,7 @@ extension WikiPageViewController : UICollectionViewDelegate, UICollectionViewDat
             }
         } else if collectionView == self.imagesCollectionView {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "ImagesPageViewController") as! ImagesPageViewController
-            vc.images = []//self.pageContent.pageImages
+            vc.images = self.pageImages
             vc.currentIndex = indexPath.item
             present(vc, animated: true, completion: nil)
         }

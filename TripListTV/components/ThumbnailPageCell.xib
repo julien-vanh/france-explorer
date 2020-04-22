@@ -9,14 +9,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ThumbnailPageCell" id="P7I-vz-zQw" userLabel="ThumbnailPageCell" customClass="ThumbnailPageCell" customModule="TV_Wiki" customModuleProvider="target">
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ThumbnailPageCell" id="P7I-vz-zQw" userLabel="ThumbnailPageCell" customClass="ThumbnailPageCell" customModule="TripListTV" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="250" height="280"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <collectionViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gzz-hg-iPB">
                 <rect key="frame" x="0.0" y="0.0" width="250" height="280"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ThumbnailCellBackground" translatesAutoresizingMaskIntoConstraints="NO" id="ubK-D4-eew">
+                    <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ubK-D4-eew">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </imageView>
@@ -49,7 +49,4 @@
             <point key="canvasLocation" x="-83" y="-201"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="ThumbnailCellBackground" width="250" height="249"/>
-    </resources>
 </document>

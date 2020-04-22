@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 private enum State {
     case closed
@@ -40,9 +41,9 @@ class PageImageViewController : UIViewController {
         super.viewDidLoad()
         bottomImageDescriptionViewConstraint.constant = -360
         
-        //imageView.kf.indicatorType = .activity
+        imageView.kf.indicatorType = .activity
         if image.url != nil {
-          //  imageView.kf.setImage(with: image.url)
+            imageView.kf.setImage(with: image.url)
         }
         
         if image.artist != nil {

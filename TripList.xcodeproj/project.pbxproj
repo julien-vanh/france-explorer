@@ -1335,6 +1335,7 @@
 		F940E069244F7DD000B42012 /* ValledeChaudefour.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940DB66244F7DCE00B42012 /* ValledeChaudefour.jpg */; };
 		F940E06A244F7DD000B42012 /* ValledeChaudefour.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940DB66244F7DCE00B42012 /* ValledeChaudefour.jpg */; };
 		F940E06C244F836D00B42012 /* TVUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940E06B244F836D00B42012 /* TVUIKit.framework */; };
+		F940E06D2450A86600B42012 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9DC21F323E232650023B8EF /* Localizable.strings */; };
 		F94B49702401A42A0055956D /* SeparationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B496F2401A42A0055956D /* SeparationBar.swift */; };
 		F94B49732401DE3D0055956D /* PlaceViewCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B49722401DE3D0055956D /* PlaceViewCompact.swift */; };
 		F95DE55A23DE2F0F00BE1BD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE55923DE2F0F00BE1BD5 /* AppDelegate.swift */; };
@@ -2264,6 +2265,7 @@
 		F9055209244F65CD0046C76E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F9DC21F323E232650023B8EF /* Localizable.strings */,
 				F95DE55F23DE2F0F00BE1BD5 /* Assets.xcassets */,
 				F940D3C0244F69AE00B42012 /* utils */,
 				F95DE56D23DE2F1F00BE1BD5 /* models */,
@@ -3012,7 +3014,6 @@
 				F95DE56F23DE2F3B00BE1BD5 /* utils */,
 				F95DE56E23DE2F3300BE1BD5 /* views */,
 				F95DE56423DE2F0F00BE1BD5 /* LaunchScreen.storyboard */,
-				F9DC21F323E232650023B8EF /* Localizable.strings */,
 				F98B217A242A7C0A00CE3EF5 /* InfoPlist.strings */,
 				F95DE56723DE2F0F00BE1BD5 /* Info.plist */,
 				F91DEDA123E8A26D00D8FFD7 /* TripList.xcdatamodeld */,
@@ -3635,6 +3636,7 @@
 				F940DD76244F7DCF00B42012 /* HteldeVog.jpg in Resources */,
 				F940DF56244F7DD000B42012 /* ViaducdeMillau.jpg in Resources */,
 				F940DECA244F7DD000B42012 /* ChteaudeMontsoreauMusedartcontemporain.jpg in Resources */,
+				F940E06D2450A86600B42012 /* Localizable.strings in Resources */,
 				F940DB7E244F7DCE00B42012 /* ChteaudeSerrant.jpg in Resources */,
 				F940DC58244F7DCF00B42012 /* GrottedesDemoiselles.jpg in Resources */,
 				F940DE98244F7DD000B42012 /* PlanetOceanMontpellier.jpg in Resources */,
