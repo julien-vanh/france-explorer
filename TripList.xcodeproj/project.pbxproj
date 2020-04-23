@@ -45,7 +45,6 @@
 		F940D3CF244F6BD100B42012 /* ImagesPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940D3CE244F6BD100B42012 /* ImagesPageViewController.swift */; };
 		F940D3D3244F6E6400B42012 /* ThumbnailPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F940D3D1244F6E6400B42012 /* ThumbnailPageCell.xib */; };
 		F940D3D4244F6E6400B42012 /* ThumbnailPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940D3D2244F6E6400B42012 /* ThumbnailPageCell.swift */; };
-		F940D3D5244F70A600B42012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F95DE55F23DE2F0F00BE1BD5 /* Assets.xcassets */; };
 		F940D3D7244F714200B42012 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940D3D6244F714200B42012 /* PlaceDetailViewController.swift */; };
 		F940D3DA244F738A00B42012 /* ImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F940D3D8244F738A00B42012 /* ImageViewCell.xib */; };
 		F940D3DB244F738A00B42012 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940D3D9244F738A00B42012 /* ImageViewCell.swift */; };
@@ -1338,6 +1337,8 @@
 		F940E06D2450A86600B42012 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9DC21F323E232650023B8EF /* Localizable.strings */; };
 		F940E06F2450B37300B42012 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940E06E2450B37300B42012 /* MapKit.framework */; };
 		F940E0702450BF6B00B42012 /* PlaceAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F926A7C924194CF900615E07 /* PlaceAnnotationView.swift */; };
+		F940E0722451802400B42012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F940E0712451802400B42012 /* Assets.xcassets */; };
+		F940E0732451807C00B42012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F95DE55F23DE2F0F00BE1BD5 /* Assets.xcassets */; };
 		F94B49702401A42A0055956D /* SeparationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B496F2401A42A0055956D /* SeparationBar.swift */; };
 		F94B49732401DE3D0055956D /* PlaceViewCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B49722401DE3D0055956D /* PlaceViewCompact.swift */; };
 		F95DE55A23DE2F0F00BE1BD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE55923DE2F0F00BE1BD5 /* AppDelegate.swift */; };
@@ -2120,6 +2121,7 @@
 		F940DB66244F7DCE00B42012 /* ValledeChaudefour.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ValledeChaudefour.jpg; sourceTree = "<group>"; };
 		F940E06B244F836D00B42012 /* TVUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TVUIKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS13.4.sdk/System/Library/Frameworks/TVUIKit.framework; sourceTree = DEVELOPER_DIR; };
 		F940E06E2450B37300B42012 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS13.4.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
+		F940E0712451802400B42012 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F94B496F2401A42A0055956D /* SeparationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparationBar.swift; sourceTree = "<group>"; };
 		F94B49722401DE3D0055956D /* PlaceViewCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewCompact.swift; sourceTree = "<group>"; };
 		F95DE55623DE2F0E00BE1BD5 /* France Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "France Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2269,13 +2271,12 @@
 		F9055209244F65CD0046C76E /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				F9DC21F323E232650023B8EF /* Localizable.strings */,
-				F95DE55F23DE2F0F00BE1BD5 /* Assets.xcassets */,
-				F926A7C924194CF900615E07 /* PlaceAnnotationView.swift */,
+				F940E07424518D4300B42012 /* views */,
 				F940D3C0244F69AE00B42012 /* utils */,
 				F95DE56D23DE2F1F00BE1BD5 /* models */,
-				F9DC21EC23E231D70023B8EF /* wikipedia */,
 				F9811C29244F69060098D608 /* assets */,
+				F95DE55F23DE2F0F00BE1BD5 /* Assets.xcassets */,
+				F9DC21F323E232650023B8EF /* Localizable.strings */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -2308,6 +2309,7 @@
 		F940D3C0244F69AE00B42012 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				F9DC21EC23E231D70023B8EF /* wikipedia */,
 				F95DE57523DE348000BE1BD5 /* Dataloader.swift */,
 				F9C9C68923E4D287002C1DA0 /* UIColor+hexString.swift */,
 				F9C9C68723E4D093002C1DA0 /* AppStyle.swift */,
@@ -2988,6 +2990,14 @@
 			path = Common/photos;
 			sourceTree = SOURCE_ROOT;
 		};
+		F940E07424518D4300B42012 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				F926A7C924194CF900615E07 /* PlaceAnnotationView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		F95DE54D23DE2F0E00BE1BD5 = {
 			isa = PBXGroup;
 			children = (
@@ -3022,6 +3032,7 @@
 				F95DE56423DE2F0F00BE1BD5 /* LaunchScreen.storyboard */,
 				F98B217A242A7C0A00CE3EF5 /* InfoPlist.strings */,
 				F95DE56723DE2F0F00BE1BD5 /* Info.plist */,
+				F940E0712451802400B42012 /* Assets.xcassets */,
 				F91DEDA123E8A26D00D8FFD7 /* TripList.xcdatamodeld */,
 				F92E05CC24129558009C5ADD /* GoogleService-Info.plist */,
 				F95DE56123DE2F0F00BE1BD5 /* Preview Content */,
@@ -3585,7 +3596,6 @@
 				F940DF36244F7DD000B42012 /* FondationLouisVuitton.jpg in Resources */,
 				F940DEAC244F7DD000B42012 /* ParcduMarquenterre.jpg in Resources */,
 				F940DCB8244F7DCF00B42012 /* OuvrageduHackenberg.jpg in Resources */,
-				F940D3D5244F70A600B42012 /* Assets.xcassets in Resources */,
 				F940DBAC244F7DCF00B42012 /* LesGantsduCielVolenScne.jpg in Resources */,
 				F940DD50244F7DCF00B42012 /* ChteaudeChambord.jpg in Resources */,
 				F940DFC0244F7DD000B42012 /* CapBlancNez.jpg in Resources */,
@@ -3906,6 +3916,7 @@
 				F940DEAA244F7DD000B42012 /* LesrempartsdeSaintMalo.jpg in Resources */,
 				F940DFF8244F7DD000B42012 /* Curemonte.jpg in Resources */,
 				F940DC78244F7DCF00B42012 /* MaisondelOutiletdelaPenseOuvrire.jpg in Resources */,
+				F940E0732451807C00B42012 /* Assets.xcassets in Resources */,
 				F940DE22244F7DD000B42012 /* VieillesCharruesFestival.jpg in Resources */,
 				F940DB78244F7DCE00B42012 /* Charroux.jpg in Resources */,
 				F940E01A244F7DD000B42012 /* WalibiRhneAlpes.jpg in Resources */,
@@ -4391,6 +4402,7 @@
 				F940DBB7244F7DCF00B42012 /* ChteaudeClisson.jpg in Resources */,
 				F940DD9B244F7DCF00B42012 /* ChteauRoyaldAmboise.jpg in Resources */,
 				F940DE1B244F7DD000B42012 /* BasiliqueNotreDamedelaGarde.jpg in Resources */,
+				F940E0722451802400B42012 /* Assets.xcassets in Resources */,
 				F940DDD3244F7DCF00B42012 /* PlateauDeValensole.jpg in Resources */,
 				F940DD47244F7DCF00B42012 /* Mons.jpg in Resources */,
 				F940DD0F244F7DCF00B42012 /* SemurenBrionnais.jpg in Resources */,
