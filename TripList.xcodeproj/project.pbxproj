@@ -1339,6 +1339,7 @@
 		F940E0702450BF6B00B42012 /* PlaceAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F926A7C924194CF900615E07 /* PlaceAnnotationView.swift */; };
 		F940E0722451802400B42012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F940E0712451802400B42012 /* Assets.xcassets */; };
 		F940E0732451807C00B42012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F95DE55F23DE2F0F00BE1BD5 /* Assets.xcassets */; };
+		F940E0762451D54B00B42012 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940E0752451D54B00B42012 /* FavoritesViewController.swift */; };
 		F94B49702401A42A0055956D /* SeparationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B496F2401A42A0055956D /* SeparationBar.swift */; };
 		F94B49732401DE3D0055956D /* PlaceViewCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B49722401DE3D0055956D /* PlaceViewCompact.swift */; };
 		F95DE55A23DE2F0F00BE1BD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE55923DE2F0F00BE1BD5 /* AppDelegate.swift */; };
@@ -2122,6 +2123,7 @@
 		F940E06B244F836D00B42012 /* TVUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TVUIKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS13.4.sdk/System/Library/Frameworks/TVUIKit.framework; sourceTree = DEVELOPER_DIR; };
 		F940E06E2450B37300B42012 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS13.4.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
 		F940E0712451802400B42012 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F940E0752451D54B00B42012 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		F94B496F2401A42A0055956D /* SeparationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparationBar.swift; sourceTree = "<group>"; };
 		F94B49722401DE3D0055956D /* PlaceViewCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewCompact.swift; sourceTree = "<group>"; };
 		F95DE55623DE2F0E00BE1BD5 /* France Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "France Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2322,6 +2324,7 @@
 			children = (
 				F940D3D6244F714200B42012 /* PlaceDetailViewController.swift */,
 				F940D3CA244F6BB500B42012 /* DiscoverViewController.swift */,
+				F940E0752451D54B00B42012 /* FavoritesViewController.swift */,
 				F940D3C8244F6B9E00B42012 /* SearchResultViewController.swift */,
 				F940D3CE244F6BD100B42012 /* ImagesPageViewController.swift */,
 				F940D3CC244F6BC600B42012 /* PageImageViewControler.swift */,
@@ -4679,6 +4682,7 @@
 				F940D3C2244F69CC00B42012 /* UIColor+hexString.swift in Sources */,
 				F940D3D4244F6E6400B42012 /* ThumbnailPageCell.swift in Sources */,
 				F940D3C6244F6A3600B42012 /* FilterModel.swift in Sources */,
+				F940E0762451D54B00B42012 /* FavoritesViewController.swift in Sources */,
 				F940D3CB244F6BB500B42012 /* DiscoverViewController.swift in Sources */,
 				F940D3C1244F69C800B42012 /* Dataloader.swift in Sources */,
 				F940D3CD244F6BC600B42012 /* PageImageViewControler.swift in Sources */,

@@ -18,7 +18,7 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="aQ4-YD-Uk7" kind="relationship" relationship="viewControllers" id="vmX-ku-wE5"/>
+                        <segue destination="pp3-de-A1l" kind="relationship" relationship="viewControllers" id="fRg-Mt-FYl"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -157,7 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TaU-HN-oIh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2363" y="1739"/>
+            <point key="canvasLocation" x="2363" y="3261"/>
         </scene>
         <!--Page-->
         <scene sceneID="Dp8-ae-qwz">
@@ -380,7 +380,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gnh-zD-1Ar">
-                                <rect key="frame" x="90" y="157" width="1740" height="1483"/>
+                                <rect key="frame" x="90" y="60" width="1740" height="1580"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wra-ke-PuR">
                                         <rect key="frame" x="-90" y="0.0" width="1920" height="1543"/>
@@ -477,7 +477,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2fi-S8-0Pp" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2363" y="-716"/>
+            <point key="canvasLocation" x="2698" y="-716"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="1CX-eE-Laj">
+            <objects>
+                <viewController id="pp3-de-A1l" userLabel="Favorites" customClass="FavoritesViewController" customModule="TV_Wiki" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4VT-cT-k4v"/>
+                        <viewControllerLayoutGuide type="bottom" id="hAg-9C-8Ke"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qMN-a0-0vM">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SGX-Ry-GmS">
+                                <rect key="frame" x="80" y="157" width="1760" height="863"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="48" minimumInteritemSpacing="48" id="Dd7-X9-bX0">
+                                    <size key="itemSize" width="250" height="280"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="50" maxX="0.0" maxY="50"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="SGX-Ry-GmS" firstAttribute="top" secondItem="TW4-xo-AF3" secondAttribute="top" id="KmW-lR-SSs"/>
+                            <constraint firstItem="TW4-xo-AF3" firstAttribute="leading" secondItem="SGX-Ry-GmS" secondAttribute="leading" constant="10" id="Zla-Lc-KvS"/>
+                            <constraint firstItem="TW4-xo-AF3" firstAttribute="trailing" secondItem="SGX-Ry-GmS" secondAttribute="trailing" constant="-10" id="hKX-D3-s84"/>
+                            <constraint firstItem="SGX-Ry-GmS" firstAttribute="bottom" secondItem="TW4-xo-AF3" secondAttribute="bottom" id="hfv-oG-oxE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TW4-xo-AF3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="ZDf-F1-gdD"/>
+                    <connections>
+                        <outlet property="collectionView" destination="SGX-Ry-GmS" id="uhZ-QN-PPo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ErH-jm-Fv1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2698" y="1451"/>
         </scene>
     </scenes>
     <resources>
