@@ -9,72 +9,39 @@
 import UIKit
 import TVUIKit
 
-/*
-class DiscoverViewController: UIViewController  {
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var discoverCollectionView: UICollectionView!
-    
-    @IBOutlet weak var linksTitle: UILabel!
-    @IBOutlet weak var linksCollectionView: UICollectionView!
-    
-    var linksResults = [WikiLinkResult]() {
-        didSet {
-            DispatchQueue.main.async {
-                self.discoverCollectionView.reloadData()
-            }
-        }
-    }
-    var linksWithoutThumbnail = [WikiLinkResult]() {
-        didSet {
-            DispatchQueue.main.async {
-                self.linksCollectionView.reloadData()
-            }
-        }
-    }
-    
 
+class DiscoverViewController: UIViewController  {
+    @IBOutlet weak var selectionLabel: UILabel!
+    @IBOutlet weak var selectionCollectionView: UICollectionView!
+    
+    @IBOutlet weak var regionsTitle: UILabel!
+    @IBOutlet weak var regionsCollectionView: UICollectionView!
+    
+    private var places: [Place] = PlaceStore.shared.getRandom(count: 10, premium: false)
+    private var regions = PlaceStore.shared.getRegions()
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.tabBarItem = UITabBarItem(title: NSLocalizedString("tabbar.discover", comment: ""), image: nil, tag: 1)
+        self.tabBarItem = UITabBarItem(title: NSLocalizedString("Destinations", comment: ""), image: nil, tag: 1)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initViews()
-        
-        WikipediaService.shared.getMainPageArticle { [weak self] result in
-            switch result {
-            case .failure(let error):
-                print(error)
-            case .success(let linksResults):
-                var resultWithThumbnail = [WikiLinkResult]()
-                var resultsWithoutThumbnail = [WikiLinkResult]()
-                for linkResult in linksResults {
-                    if linkResult.thumbnail != nil {
-                        resultWithThumbnail.append(linkResult)
-                    } else {
-                        resultsWithoutThumbnail.append(linkResult)
-                    }
-                }
-                self?.linksResults = resultWithThumbnail
-                self?.linksWithoutThumbnail = resultsWithoutThumbnail
-            }
-        }
-        
     }
     
     private func initViews(){
-        titleLabel.text = NSLocalizedString("discover.title", comment: "")
+        selectionLabel.text = NSLocalizedString("Suggestions", comment: "")
         
-        discoverCollectionView.delegate = self
-        discoverCollectionView.dataSource = self
-        discoverCollectionView.register(UINib(nibName: "ThumbnailPageCell", bundle: nil), forCellWithReuseIdentifier: "ThumbnailPageCell")
+        selectionCollectionView.delegate = self
+        selectionCollectionView.dataSource = self
+        selectionCollectionView.register(UINib(nibName: "ThumbnailPageCell", bundle: nil), forCellWithReuseIdentifier: "ThumbnailPageCell")
         
-        linksTitle.text = NSLocalizedString("discover.links", comment: "")
+        regionsTitle.text = NSLocalizedString("Régions", comment: "")
         
-        linksCollectionView.delegate = self
-        linksCollectionView.dataSource = self
-        linksCollectionView.register(UINib(nibName: "LinkViewCell", bundle: nil), forCellWithReuseIdentifier: "LinkViewCell")
+        regionsCollectionView.delegate = self
+        regionsCollectionView.dataSource = self
+        regionsCollectionView.register(UINib(nibName: "ThumbnailPageCell", bundle: nil), forCellWithReuseIdentifier: "ThumbnailPageCell")
     }
 }
 
@@ -83,21 +50,21 @@ class DiscoverViewController: UIViewController  {
 extension DiscoverViewController : UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == self.linksCollectionView {
-            return linksWithoutThumbnail.count
+        if collectionView == self.selectionCollectionView {
+            return places.count
         } else {
-            return linksResults.count
+            return regions.count
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == self.linksCollectionView {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LinkViewCell", for: indexPath) as! LinkViewCell
-            cell.configure(linkTitle: linksWithoutThumbnail[indexPath.item].title)
+        if collectionView == self.selectionCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ThumbnailPageCell", for: indexPath) as! ThumbnailPageCell
+            cell.configure(place: places[indexPath.item])
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ThumbnailPageCell", for: indexPath) as! ThumbnailPageCell
-            cell.configure(linkResult: linksResults[indexPath.item])
+            cell.configure(region: regions[indexPath.item])
             return cell
         }
         
@@ -105,31 +72,24 @@ extension DiscoverViewController : UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let pageid:Int;
-        if collectionView == self.linksCollectionView {
-            pageid = self.linksWithoutThumbnail[indexPath.item].pageid
+        if collectionView == self.selectionCollectionView {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlaceDetailViewController") as! PlaceDetailViewController
+            vc.place = places[indexPath.item]
+            vc.delegate = self
+            present(vc, animated: true, completion: nil)
         } else {
-            pageid = self.linksResults[indexPath.item].pageid
+            //TODO go to region
         }
-        
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "WikiPageViewController") as! WikiPageViewController
-        vc.pageid = pageid
-        vc.delegate = self
-        
-        present(vc, animated: true, completion: nil)
     }
 }
 
-extension DiscoverViewController : WikiPageViewControllerDelegate {
-    func shouldRedirectToPage(pageId: Int) {
+extension DiscoverViewController : PlaceDetailViewControllerDelegate {
+    func shouldRedirectToPage(place: Place) {
         self.dismiss(animated: false) {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "WikiPageViewController") as! WikiPageViewController
-            vc.pageid = pageId
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlaceDetailViewController") as! PlaceDetailViewController
+            vc.place = place
             vc.delegate = self
             self.present(vc, animated: true, completion: nil)
         }
     }
 }
-
-
-*/

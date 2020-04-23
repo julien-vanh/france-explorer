@@ -69,7 +69,7 @@ extension SearchResultViewController: UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let searchResult = searchResultsPages[indexPath.item]
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "WikiPageViewController") as! PlaceDetailViewController
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlaceDetailViewController") as! PlaceDetailViewController
         vc.place = searchResult
         vc.delegate = self
         present(vc, animated: true, completion: nil)
@@ -81,7 +81,7 @@ extension SearchResultViewController: UICollectionViewDelegate, UICollectionView
 extension SearchResultViewController : PlaceDetailViewControllerDelegate {
     func shouldRedirectToPage(place: Place) {
         self.presentedVc?.dismiss(animated: false) {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "WikiPageViewController") as! PlaceDetailViewController
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlaceDetailViewController") as! PlaceDetailViewController
             vc.place = place
             vc.delegate = self
             self.presentedVc = vc
