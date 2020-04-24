@@ -1340,6 +1340,9 @@
 		F940E0722451802400B42012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F940E0712451802400B42012 /* Assets.xcassets */; };
 		F940E0732451807C00B42012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F95DE55F23DE2F0F00BE1BD5 /* Assets.xcassets */; };
 		F940E0762451D54B00B42012 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940E0752451D54B00B42012 /* FavoritesViewController.swift */; };
+		F940E07A24532FD200B42012 /* RegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940E07924532FD200B42012 /* RegionViewController.swift */; };
+		F940E07D2453341400B42012 /* hautenormandie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E07C2453341400B42012 /* hautenormandie.jpg */; };
+		F940E07F2453367800B42012 /* alsace.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E07E2453367800B42012 /* alsace.jpg */; };
 		F94B49702401A42A0055956D /* SeparationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B496F2401A42A0055956D /* SeparationBar.swift */; };
 		F94B49732401DE3D0055956D /* PlaceViewCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B49722401DE3D0055956D /* PlaceViewCompact.swift */; };
 		F95DE55A23DE2F0F00BE1BD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE55923DE2F0F00BE1BD5 /* AppDelegate.swift */; };
@@ -2124,6 +2127,9 @@
 		F940E06E2450B37300B42012 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS13.4.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
 		F940E0712451802400B42012 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F940E0752451D54B00B42012 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		F940E07924532FD200B42012 /* RegionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionViewController.swift; sourceTree = "<group>"; };
+		F940E07C2453341400B42012 /* hautenormandie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hautenormandie.jpg; sourceTree = "<group>"; };
+		F940E07E2453367800B42012 /* alsace.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alsace.jpg; sourceTree = "<group>"; };
 		F94B496F2401A42A0055956D /* SeparationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparationBar.swift; sourceTree = "<group>"; };
 		F94B49722401DE3D0055956D /* PlaceViewCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewCompact.swift; sourceTree = "<group>"; };
 		F95DE55623DE2F0E00BE1BD5 /* France Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "France Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2260,6 +2266,7 @@
 			children = (
 				F9055206244F65A90046C76E /* TripListTV.entitlements */,
 				F90551F2244F65390046C76E /* AppDelegate.swift */,
+				F940E07B2453340A00B42012 /* assets */,
 				F940D3D0244F6E5700B42012 /* components */,
 				F940D3C7244F6B8F00B42012 /* controllers */,
 				F90551F8244F65390046C76E /* Main.storyboard */,
@@ -2323,6 +2330,7 @@
 			isa = PBXGroup;
 			children = (
 				F940D3D6244F714200B42012 /* PlaceDetailViewController.swift */,
+				F940E07924532FD200B42012 /* RegionViewController.swift */,
 				F940D3CA244F6BB500B42012 /* DiscoverViewController.swift */,
 				F940E0752451D54B00B42012 /* FavoritesViewController.swift */,
 				F940D3C8244F6B9E00B42012 /* SearchResultViewController.swift */,
@@ -3001,6 +3009,15 @@
 			path = views;
 			sourceTree = "<group>";
 		};
+		F940E07B2453340A00B42012 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				F940E07E2453367800B42012 /* alsace.jpg */,
+				F940E07C2453341400B42012 /* hautenormandie.jpg */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
 		F95DE54D23DE2F0E00BE1BD5 = {
 			isa = PBXGroup;
 			children = (
@@ -3544,6 +3561,7 @@
 				F940DFF6244F7DD000B42012 /* LacdAiguebelette.jpg in Resources */,
 				F940DE56244F7DD000B42012 /* AncyleFranc.jpg in Resources */,
 				F940DFDA244F7DD000B42012 /* CitSouterrainedeNaours.jpg in Resources */,
+				F940E07F2453367800B42012 /* alsace.jpg in Resources */,
 				F940DEC4244F7DD000B42012 /* ForteressedeSalses.jpg in Resources */,
 				F940DEA2244F7DD000B42012 /* PalaisdesBeauxArtsdeLille.jpg in Resources */,
 				F940DBB2244F7DCF00B42012 /* SitearchologiqueLattaraMuseArchologiqueHenriPrades.jpg in Resources */,
@@ -3796,6 +3814,7 @@
 				F940DFC2244F7DD000B42012 /* OssuairedeDouaumont.jpg in Resources */,
 				F940DCF8244F7DCF00B42012 /* ChteaudeVilleneuveLembron.jpg in Resources */,
 				F940DCF2244F7DCF00B42012 /* Vesunnamusegalloromain.jpg in Resources */,
+				F940E07D2453341400B42012 /* hautenormandie.jpg in Resources */,
 				F940DC40244F7DCF00B42012 /* Goury.jpg in Resources */,
 				F940E05A244F7DD000B42012 /* Cassis.jpg in Resources */,
 				F940DC22244F7DCF00B42012 /* Estaing.jpg in Resources */,
@@ -4672,6 +4691,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F940E07A24532FD200B42012 /* RegionViewController.swift in Sources */,
 				F9811C26244F68AF0098D608 /* PlaceStore.swift in Sources */,
 				F9811C24244F68AF0098D608 /* Article.swift in Sources */,
 				F940D3CF244F6BD100B42012 /* ImagesPageViewController.swift in Sources */,

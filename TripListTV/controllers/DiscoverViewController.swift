@@ -78,7 +78,9 @@ extension DiscoverViewController : UICollectionViewDelegate, UICollectionViewDat
             vc.delegate = self
             present(vc, animated: true, completion: nil)
         } else {
-            //TODO go to region
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "RegionViewController") as! RegionViewController
+            vc.region = regions[indexPath.item]
+            present(vc, animated: true, completion: nil)
         }
     }
 }

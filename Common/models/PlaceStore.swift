@@ -123,8 +123,9 @@ final class PlaceStore: NSObject {
         return Array(result.prefix(min(result.count, count)))
     }
     
-    func getAllForRegion(regionId: String) -> [Place] {
-        return premiumPlaces.values.filter { $0.regionId == regionId }
+    func getAllForRegion(regionId: String, premium: Bool) -> [Place] {
+        let places = premium ? premiumPlaces : freePlaces
+        return places.values.filter { $0.regionId == regionId }
     }
     
     

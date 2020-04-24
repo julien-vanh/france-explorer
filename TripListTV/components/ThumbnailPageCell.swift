@@ -31,7 +31,7 @@ class ThumbnailPageCell: UICollectionViewCell {
     }
     
     func configure(region: PlaceRegion) {
-        let randomPlaceForRegion = PlaceStore.shared.getAllForRegion(regionId: region.id)[0]
+        let randomPlaceForRegion = PlaceStore.shared.getAllForRegion(regionId: region.id, premium: true)[0]
         
         let topImage = UIImageView()
         topImage.frame = imageView.frame

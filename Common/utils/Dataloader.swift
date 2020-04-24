@@ -71,6 +71,23 @@ final class ImageStore {
         }
         return UIImage(named: name)!
     }
+    
+    func uiimage(forRegion region: PlaceRegion) -> UIImage {
+        let name = "\(region.id).jpg"
+        
+        if let regionImage = UIImage(named: name) {
+            return regionImage
+        } else {
+            let size = CGSize(width: 1920, height: 1080)
+            let rect = CGRect(x: 0, y:0, width:size.width, height:size.height)
+            UIGraphicsBeginImageContextWithOptions(size, false, 0)
+            UIColor.black.setFill()
+            UIRectFill(rect)
+            let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+            return image
+        }
+    }
 
     private func loadImage(name: String) throws -> CGImage {
         guard
