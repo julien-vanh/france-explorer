@@ -20,7 +20,9 @@ class RegionViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.places = PlaceStore.shared.getAllForRegion(regionId: region.id, premium: true).sorted(by: { (p1, p2) -> Bool in
+            return p1.popularity < p2.popularity
+        })
         
         self.initViews()
     }
@@ -39,7 +41,7 @@ class RegionViewController: UIViewController  {
         backgroundImage.layer.insertSublayer(gradient, at: 0)
         
         
-        self.places = PlaceStore.shared.getAllForRegion(regionId: region.id, premium: true) //TODO
+        
         placesCollectionView.delegate = self
         placesCollectionView.dataSource = self
         placesCollectionView.register(UINib(nibName: "ThumbnailPageCell", bundle: nil), forCellWithReuseIdentifier: "ThumbnailPageCell")

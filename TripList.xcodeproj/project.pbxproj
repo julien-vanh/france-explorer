@@ -1341,8 +1341,26 @@
 		F940E0732451807C00B42012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F95DE55F23DE2F0F00BE1BD5 /* Assets.xcassets */; };
 		F940E0762451D54B00B42012 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940E0752451D54B00B42012 /* FavoritesViewController.swift */; };
 		F940E07A24532FD200B42012 /* RegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940E07924532FD200B42012 /* RegionViewController.swift */; };
-		F940E07D2453341400B42012 /* hautenormandie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E07C2453341400B42012 /* hautenormandie.jpg */; };
-		F940E07F2453367800B42012 /* alsace.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E07E2453367800B42012 /* alsace.jpg */; };
+		F940E09A24534BC600B42012 /* bassenormandie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E08824534BC300B42012 /* bassenormandie.jpg */; };
+		F940E09B24534BC600B42012 /* hautenormandie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E08924534BC300B42012 /* hautenormandie.jpg */; };
+		F940E09C24534BC600B42012 /* rhone.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E08A24534BC300B42012 /* rhone.jpg */; };
+		F940E09D24534BC600B42012 /* picardie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E08B24534BC300B42012 /* picardie.jpg */; };
+		F940E09E24534BC600B42012 /* nord.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E08C24534BC400B42012 /* nord.jpg */; };
+		F940E09F24534BC600B42012 /* paysdelaloire.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E08D24534BC400B42012 /* paysdelaloire.jpg */; };
+		F940E0A024534BC600B42012 /* champagne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E08E24534BC400B42012 /* champagne.jpg */; };
+		F940E0A124534BC600B42012 /* iledefrance.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E08F24534BC400B42012 /* iledefrance.jpg */; };
+		F940E0A224534BC600B42012 /* aquitaine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E09024534BC400B42012 /* aquitaine.jpg */; };
+		F940E0A324534BC600B42012 /* corse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E09124534BC400B42012 /* corse.jpg */; };
+		F940E0A424534BC600B42012 /* lorraine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E09224534BC400B42012 /* lorraine.jpg */; };
+		F940E0A524534BC600B42012 /* bretagne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E09324534BC500B42012 /* bretagne.jpg */; };
+		F940E0A624534BC600B42012 /* centre.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E09424534BC500B42012 /* centre.jpg */; };
+		F940E0A724534BC600B42012 /* auvergne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E09524534BC500B42012 /* auvergne.jpg */; };
+		F940E0A824534BC600B42012 /* poitou.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E09624534BC500B42012 /* poitou.jpg */; };
+		F940E0A924534BC600B42012 /* bourgogne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E09724534BC500B42012 /* bourgogne.jpg */; };
+		F940E0AA24534BC600B42012 /* provence.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E09824534BC500B42012 /* provence.jpg */; };
+		F940E0AB24534BC600B42012 /* alsace.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E09924534BC600B42012 /* alsace.jpg */; };
+		F940E0AD24534D6700B42012 /* limousin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E0AC24534D6600B42012 /* limousin.jpg */; };
+		F940E0AF24534DA300B42012 /* midi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E0AE24534DA300B42012 /* midi.jpg */; };
 		F94B49702401A42A0055956D /* SeparationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B496F2401A42A0055956D /* SeparationBar.swift */; };
 		F94B49732401DE3D0055956D /* PlaceViewCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B49722401DE3D0055956D /* PlaceViewCompact.swift */; };
 		F95DE55A23DE2F0F00BE1BD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE55923DE2F0F00BE1BD5 /* AppDelegate.swift */; };
@@ -2128,8 +2146,26 @@
 		F940E0712451802400B42012 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F940E0752451D54B00B42012 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		F940E07924532FD200B42012 /* RegionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionViewController.swift; sourceTree = "<group>"; };
-		F940E07C2453341400B42012 /* hautenormandie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hautenormandie.jpg; sourceTree = "<group>"; };
-		F940E07E2453367800B42012 /* alsace.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alsace.jpg; sourceTree = "<group>"; };
+		F940E08824534BC300B42012 /* bassenormandie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bassenormandie.jpg; sourceTree = "<group>"; };
+		F940E08924534BC300B42012 /* hautenormandie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hautenormandie.jpg; sourceTree = "<group>"; };
+		F940E08A24534BC300B42012 /* rhone.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rhone.jpg; sourceTree = "<group>"; };
+		F940E08B24534BC300B42012 /* picardie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = picardie.jpg; sourceTree = "<group>"; };
+		F940E08C24534BC400B42012 /* nord.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nord.jpg; sourceTree = "<group>"; };
+		F940E08D24534BC400B42012 /* paysdelaloire.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paysdelaloire.jpg; sourceTree = "<group>"; };
+		F940E08E24534BC400B42012 /* champagne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = champagne.jpg; sourceTree = "<group>"; };
+		F940E08F24534BC400B42012 /* iledefrance.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iledefrance.jpg; sourceTree = "<group>"; };
+		F940E09024534BC400B42012 /* aquitaine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aquitaine.jpg; sourceTree = "<group>"; };
+		F940E09124534BC400B42012 /* corse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = corse.jpg; sourceTree = "<group>"; };
+		F940E09224534BC400B42012 /* lorraine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lorraine.jpg; sourceTree = "<group>"; };
+		F940E09324534BC500B42012 /* bretagne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bretagne.jpg; sourceTree = "<group>"; };
+		F940E09424534BC500B42012 /* centre.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = centre.jpg; sourceTree = "<group>"; };
+		F940E09524534BC500B42012 /* auvergne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = auvergne.jpg; sourceTree = "<group>"; };
+		F940E09624534BC500B42012 /* poitou.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = poitou.jpg; sourceTree = "<group>"; };
+		F940E09724534BC500B42012 /* bourgogne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bourgogne.jpg; sourceTree = "<group>"; };
+		F940E09824534BC500B42012 /* provence.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = provence.jpg; sourceTree = "<group>"; };
+		F940E09924534BC600B42012 /* alsace.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alsace.jpg; sourceTree = "<group>"; };
+		F940E0AC24534D6600B42012 /* limousin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = limousin.jpg; sourceTree = "<group>"; };
+		F940E0AE24534DA300B42012 /* midi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = midi.jpg; sourceTree = "<group>"; };
 		F94B496F2401A42A0055956D /* SeparationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparationBar.swift; sourceTree = "<group>"; };
 		F94B49722401DE3D0055956D /* PlaceViewCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewCompact.swift; sourceTree = "<group>"; };
 		F95DE55623DE2F0E00BE1BD5 /* France Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "France Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -3012,8 +3048,26 @@
 		F940E07B2453340A00B42012 /* assets */ = {
 			isa = PBXGroup;
 			children = (
-				F940E07E2453367800B42012 /* alsace.jpg */,
-				F940E07C2453341400B42012 /* hautenormandie.jpg */,
+				F940E09924534BC600B42012 /* alsace.jpg */,
+				F940E09024534BC400B42012 /* aquitaine.jpg */,
+				F940E09524534BC500B42012 /* auvergne.jpg */,
+				F940E08824534BC300B42012 /* bassenormandie.jpg */,
+				F940E09724534BC500B42012 /* bourgogne.jpg */,
+				F940E09324534BC500B42012 /* bretagne.jpg */,
+				F940E09424534BC500B42012 /* centre.jpg */,
+				F940E08E24534BC400B42012 /* champagne.jpg */,
+				F940E09124534BC400B42012 /* corse.jpg */,
+				F940E08924534BC300B42012 /* hautenormandie.jpg */,
+				F940E08F24534BC400B42012 /* iledefrance.jpg */,
+				F940E0AC24534D6600B42012 /* limousin.jpg */,
+				F940E09224534BC400B42012 /* lorraine.jpg */,
+				F940E0AE24534DA300B42012 /* midi.jpg */,
+				F940E08C24534BC400B42012 /* nord.jpg */,
+				F940E08D24534BC400B42012 /* paysdelaloire.jpg */,
+				F940E08B24534BC300B42012 /* picardie.jpg */,
+				F940E09624534BC500B42012 /* poitou.jpg */,
+				F940E09824534BC500B42012 /* provence.jpg */,
+				F940E08A24534BC300B42012 /* rhone.jpg */,
 			);
 			path = assets;
 			sourceTree = "<group>";
@@ -3316,6 +3370,7 @@
 				F940E03A244F7DD000B42012 /* GrotteAvenArmand.jpg in Resources */,
 				F940DFCC244F7DD000B42012 /* ViaducdeGarabit.jpg in Resources */,
 				F940DFA8244F7DD000B42012 /* PontduGard.jpg in Resources */,
+				F940E0A024534BC600B42012 /* champagne.jpg in Resources */,
 				F940DE0A244F7DCF00B42012 /* GrandPalais.jpg in Resources */,
 				F940DF1A244F7DD000B42012 /* ChateaudeChouvigny.jpg in Resources */,
 				F940DD52244F7DCF00B42012 /* CathdraleNotreDamedeChartres.jpg in Resources */,
@@ -3337,11 +3392,13 @@
 				F940DF7E244F7DD000B42012 /* ArcdeTriomphe.jpg in Resources */,
 				F940DD4C244F7DCF00B42012 /* CascadesduHrissonHaut.jpg in Resources */,
 				F940DC2E244F7DCF00B42012 /* PalaisdesducsetdesEtatsdeBourgogne.jpg in Resources */,
+				F940E0A624534BC600B42012 /* centre.jpg in Resources */,
 				F940DDDE244F7DCF00B42012 /* ParcnationaldelaVanoise.jpg in Resources */,
 				F940DE2E244F7DD000B42012 /* MusedesBeauxArtsdAgen.jpg in Resources */,
 				F940DDE6244F7DCF00B42012 /* Monuments.jpg in Resources */,
 				F940DBA8244F7DCF00B42012 /* LeMontSaintMichel.jpg in Resources */,
 				F940DC0A244F7DCF00B42012 /* FestivalLaRouteDuRock.jpg in Resources */,
+				F940E0A724534BC600B42012 /* auvergne.jpg in Resources */,
 				F940DC32244F7DCF00B42012 /* AbbayedeSaintSavin.jpg in Resources */,
 				F940DEB2244F7DD000B42012 /* Montpeyroux.jpg in Resources */,
 				F940DF30244F7DD000B42012 /* Huelgoat.jpg in Resources */,
@@ -3352,6 +3409,7 @@
 				F940DECE244F7DD000B42012 /* EscalAtlantic.jpg in Resources */,
 				F940DD26244F7DCF00B42012 /* SantAntonino.jpg in Resources */,
 				F940DBCC244F7DCF00B42012 /* Locronan.jpg in Resources */,
+				F940E0A124534BC600B42012 /* iledefrance.jpg in Resources */,
 				F940DF66244F7DD000B42012 /* Gudelon.jpg in Resources */,
 				F940DBAE244F7DCF00B42012 /* ChteauDApremontsurAllier.jpg in Resources */,
 				F940DDD0244F7DCF00B42012 /* ChteauduGrandJardin.jpg in Resources */,
@@ -3368,6 +3426,7 @@
 				F940DF4A244F7DD000B42012 /* Chteaudun.jpg in Resources */,
 				F940DEB4244F7DD000B42012 /* AllancheFtedelEstive.jpg in Resources */,
 				F940DCE8244F7DCF00B42012 /* Parcnationaldescrins.jpg in Resources */,
+				F940E0AB24534BC600B42012 /* alsace.jpg in Resources */,
 				F940DDBE244F7DCF00B42012 /* MuseFesch.jpg in Resources */,
 				F940DFFE244F7DD000B42012 /* CtedeGranitRose.jpg in Resources */,
 				F940E04A244F7DD000B42012 /* MaisondeGeorgeSand.jpg in Resources */,
@@ -3383,6 +3442,7 @@
 				F940DB7C244F7DCE00B42012 /* ParcNaturelRgionaldeBrire.jpg in Resources */,
 				F940DDB0244F7DCF00B42012 /* Niedermorschwihr.jpg in Resources */,
 				F940DC1E244F7DCF00B42012 /* ZoodeLaPalmyre.jpg in Resources */,
+				F940E0AF24534DA300B42012 /* midi.jpg in Resources */,
 				F940DCF4244F7DCF00B42012 /* Monflanquin.jpg in Resources */,
 				F940DD98244F7DCF00B42012 /* RserveNaturelleDeScandola.jpg in Resources */,
 				F940DD14244F7DCF00B42012 /* LacPavin.jpg in Resources */,
@@ -3418,6 +3478,7 @@
 				F940DDF6244F7DCF00B42012 /* TumulusdeBougon.jpg in Resources */,
 				F940E012244F7DD000B42012 /* LabyrintheGantdesMontsdeGuret.jpg in Resources */,
 				F940DD5C244F7DCF00B42012 /* MusedeGrenoble.jpg in Resources */,
+				F940E09E24534BC600B42012 /* nord.jpg in Resources */,
 				F940DE86244F7DD000B42012 /* SaintTropez.jpg in Resources */,
 				F940DFB4244F7DD000B42012 /* Kaysersberg.jpg in Resources */,
 				F940DE94244F7DD000B42012 /* ChteauduClosdeVougeot.jpg in Resources */,
@@ -3452,6 +3513,7 @@
 				F940DC38244F7DCF00B42012 /* PharedesBaleines.jpg in Resources */,
 				F940DE28244F7DD000B42012 /* CimetireAmricaindeColleville.jpg in Resources */,
 				F940DF92244F7DD000B42012 /* ChteaudArlempdes.jpg in Resources */,
+				F940E0A324534BC600B42012 /* corse.jpg in Resources */,
 				F905520B244F66310046C76E /* regions.json in Resources */,
 				F940DF78244F7DD000B42012 /* LesBainsdesDocks.jpg in Resources */,
 				F940DC34244F7DCF00B42012 /* LacdeSainteCroix.jpg in Resources */,
@@ -3533,13 +3595,16 @@
 				F9055213244F66BB0046C76E /* places.json in Resources */,
 				F940DC66244F7DCF00B42012 /* ChteaudeFontainebleau.jpg in Resources */,
 				F940DCAE244F7DCF00B42012 /* MusedelAventurePeugeot.jpg in Resources */,
+				F940E09B24534BC600B42012 /* hautenormandie.jpg in Resources */,
 				F940DBB0244F7DCF00B42012 /* HospicesdeBeaune.jpg in Resources */,
 				F940DE26244F7DD000B42012 /* MARISCentrededcouvertedelapcheenmer.jpg in Resources */,
 				F940DE88244F7DD000B42012 /* ChteaudeLarole.jpg in Resources */,
+				F940E0A824534BC600B42012 /* poitou.jpg in Resources */,
 				F940DC30244F7DCF00B42012 /* BasiliqueNotreDamedOrcival.jpg in Resources */,
 				F940E028244F7DD000B42012 /* Patrimonio.jpg in Resources */,
 				F940DC0E244F7DCF00B42012 /* LaCharitsurLoire.jpg in Resources */,
 				F940DE1C244F7DD000B42012 /* BasiliqueNotreDamedelaGarde.jpg in Resources */,
+				F940E0A424534BC600B42012 /* lorraine.jpg in Resources */,
 				F940DE3C244F7DD000B42012 /* LeGrosHorloge.jpg in Resources */,
 				F940DE3A244F7DD000B42012 /* ParcnationaldesCalanques.jpg in Resources */,
 				F940DE0C244F7DCF00B42012 /* ArnesdArles.jpg in Resources */,
@@ -3561,7 +3626,6 @@
 				F940DFF6244F7DD000B42012 /* LacdAiguebelette.jpg in Resources */,
 				F940DE56244F7DD000B42012 /* AncyleFranc.jpg in Resources */,
 				F940DFDA244F7DD000B42012 /* CitSouterrainedeNaours.jpg in Resources */,
-				F940E07F2453367800B42012 /* alsace.jpg in Resources */,
 				F940DEC4244F7DD000B42012 /* ForteressedeSalses.jpg in Resources */,
 				F940DEA2244F7DD000B42012 /* PalaisdesBeauxArtsdeLille.jpg in Resources */,
 				F940DBB2244F7DCF00B42012 /* SitearchologiqueLattaraMuseArchologiqueHenriPrades.jpg in Resources */,
@@ -3694,6 +3758,7 @@
 				F940DE44244F7DD000B42012 /* Wambrechies.jpg in Resources */,
 				F940DF10244F7DD000B42012 /* ledYeu.jpg in Resources */,
 				F940DEFE244F7DD000B42012 /* FaylBillot.jpg in Resources */,
+				F940E0A924534BC600B42012 /* bourgogne.jpg in Resources */,
 				F940DF38244F7DD000B42012 /* AbbayedelaChaiseDieu.jpg in Resources */,
 				F940DBBA244F7DCF00B42012 /* Citdessciencesetdelindustrie.jpg in Resources */,
 				F940E042244F7DD000B42012 /* MuseAeroscopia.jpg in Resources */,
@@ -3703,6 +3768,7 @@
 				F940DE5E244F7DD000B42012 /* Rocamadour.jpg in Resources */,
 				F940DE76244F7DD000B42012 /* RocherSaintMicheldAiguilhe.jpg in Resources */,
 				F940DBF6244F7DCF00B42012 /* Czallier.jpg in Resources */,
+				F940E0AD24534D6700B42012 /* limousin.jpg in Resources */,
 				F940DD8E244F7DCF00B42012 /* Calvi.jpg in Resources */,
 				F940DDF2244F7DCF00B42012 /* CaverneduDragonChemindesDames.jpg in Resources */,
 				F940DEE4244F7DD000B42012 /* MuseBalzac.jpg in Resources */,
@@ -3780,6 +3846,7 @@
 				F940DF5E244F7DD000B42012 /* DuneduPilat.jpg in Resources */,
 				F940DB74244F7DCE00B42012 /* PlaceDucaleCharleville.jpg in Resources */,
 				F940DE08244F7DCF00B42012 /* ChteauFortdeRambures.jpg in Resources */,
+				F940E09F24534BC600B42012 /* paysdelaloire.jpg in Resources */,
 				F940DC08244F7DCF00B42012 /* ChteauFortdeSedan.jpg in Resources */,
 				F940DBA6244F7DCE00B42012 /* CirquedeNavacelles.jpg in Resources */,
 				F940DEDC244F7DD000B42012 /* AiguillesdeBavella.jpg in Resources */,
@@ -3793,6 +3860,7 @@
 				F940DEBC244F7DD000B42012 /* Palosite.jpg in Resources */,
 				F940DD9E244F7DCF00B42012 /* ChteaudeChenonceau.jpg in Resources */,
 				F940E00A244F7DD000B42012 /* GorgesdelAsco.jpg in Resources */,
+				F940E0A224534BC600B42012 /* aquitaine.jpg in Resources */,
 				F940DEA8244F7DD000B42012 /* PetiteFrance.jpg in Resources */,
 				F940DDE2244F7DCF00B42012 /* GrottesdIsturitzetdOxocelhaya.jpg in Resources */,
 				F940DCBA244F7DCF00B42012 /* ParcnaturelrgionalduHautJura.jpg in Resources */,
@@ -3814,7 +3882,6 @@
 				F940DFC2244F7DD000B42012 /* OssuairedeDouaumont.jpg in Resources */,
 				F940DCF8244F7DCF00B42012 /* ChteaudeVilleneuveLembron.jpg in Resources */,
 				F940DCF2244F7DCF00B42012 /* Vesunnamusegalloromain.jpg in Resources */,
-				F940E07D2453341400B42012 /* hautenormandie.jpg in Resources */,
 				F940DC40244F7DCF00B42012 /* Goury.jpg in Resources */,
 				F940E05A244F7DD000B42012 /* Cassis.jpg in Resources */,
 				F940DC22244F7DCF00B42012 /* Estaing.jpg in Resources */,
@@ -3844,6 +3911,7 @@
 				F940DE66244F7DD000B42012 /* Soissons.jpg in Resources */,
 				F940DC10244F7DCF00B42012 /* ChteaudeVersailles.jpg in Resources */,
 				F940DC48244F7DCF00B42012 /* ChorgiesdOrange.jpg in Resources */,
+				F940E0A524534BC600B42012 /* bretagne.jpg in Resources */,
 				F940DF8C244F7DD000B42012 /* Lesmeilleursparcsdattractions.jpg in Resources */,
 				F940DF20244F7DD000B42012 /* AbbayedeMontivilliers.jpg in Resources */,
 				F940DFF4244F7DD000B42012 /* LaRhune.jpg in Resources */,
@@ -3855,6 +3923,7 @@
 				F940DEA4244F7DD000B42012 /* ChteaudUss.jpg in Resources */,
 				F940DE30244F7DD000B42012 /* SaintJeanPieddePort.jpg in Resources */,
 				F940DF40244F7DD000B42012 /* VillaEphrussideRothschild.jpg in Resources */,
+				F940E09D24534BC600B42012 /* picardie.jpg in Resources */,
 				F940DC82244F7DCF00B42012 /* Leucate.jpg in Resources */,
 				F940DD96244F7DCF00B42012 /* PlaceDuVieuxMarchdeRouen.jpg in Resources */,
 				F940E038244F7DD000B42012 /* PalaisIdalduFacteurCheval.jpg in Resources */,
@@ -3905,6 +3974,7 @@
 				F940DDAE244F7DCF00B42012 /* ParcduPetitPrince.jpg in Resources */,
 				F940DC72244F7DCF00B42012 /* OradoursurGlane.jpg in Resources */,
 				F940DD34244F7DCF00B42012 /* FortdeBrocliande.jpg in Resources */,
+				F940E0AA24534BC600B42012 /* provence.jpg in Resources */,
 				F940DD84244F7DCF00B42012 /* GouffredePoudrey.jpg in Resources */,
 				F940DC4C244F7DCF00B42012 /* Barfleur.jpg in Resources */,
 				F940DBF0244F7DCF00B42012 /* RouteduCidredeCambremer.jpg in Resources */,
@@ -3931,6 +4001,7 @@
 				F940E062244F7DD000B42012 /* ManoirdeVillers.jpg in Resources */,
 				F940DE48244F7DD000B42012 /* Saintmilion.jpg in Resources */,
 				F940DCFC244F7DCF00B42012 /* PointeduHoc.jpg in Resources */,
+				F940E09C24534BC600B42012 /* rhone.jpg in Resources */,
 				F940E054244F7DD000B42012 /* Vichy.jpg in Resources */,
 				F90551FA244F65390046C76E /* Main.storyboard in Resources */,
 				F940DDF8244F7DCF00B42012 /* GrottesdeLascaux.jpg in Resources */,
@@ -3950,6 +4021,7 @@
 				F940DEA0244F7DD000B42012 /* LaBambouseraieenCvennes.jpg in Resources */,
 				F940DE96244F7DD000B42012 /* MusedelaMine.jpg in Resources */,
 				F940E002244F7DD000B42012 /* FestivalLesNuitsAtypiques.jpg in Resources */,
+				F940E09A24534BC600B42012 /* bassenormandie.jpg in Resources */,
 				F940DD16244F7DCF00B42012 /* Groix.jpg in Resources */,
 				F940DB8A244F7DCE00B42012 /* HarasnationalduPin.jpg in Resources */,
 				F940DCDE244F7DCF00B42012 /* DomaineduRayolLeJardindesMditerranes.jpg in Resources */,

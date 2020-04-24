@@ -17,8 +17,8 @@ class DiscoverViewController: UIViewController  {
     @IBOutlet weak var regionsTitle: UILabel!
     @IBOutlet weak var regionsCollectionView: UICollectionView!
     
-    private var places: [Place] = PlaceStore.shared.getRandom(count: 10, premium: false)
-    private var regions = PlaceStore.shared.getRegions()
+    private var places: [Place] = []
+    private var regions: [PlaceRegion] = []
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -27,6 +27,12 @@ class DiscoverViewController: UIViewController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.places = PlaceStore.shared.getRandom(count: 10, premium: false)
+        self.regions = PlaceStore.shared.getRegions().sorted(by: { (r1, r2) -> Bool in
+            r1.name < r2.name
+        })
+        
         self.initViews()
     }
     

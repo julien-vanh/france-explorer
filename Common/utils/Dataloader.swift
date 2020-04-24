@@ -69,7 +69,7 @@ final class ImageStore {
             name = illustration.path.replacingOccurrences(of: ".jpeg", with: ".jpg")
             name = name.replacingOccurrences(of: ".png", with: ".jpg")
         }
-        return UIImage(named: name)!
+        return UIImage(named: name) ?? UIImage(named: "placeholder.jpg")!
     }
     
     func uiimage(forRegion region: PlaceRegion) -> UIImage {
