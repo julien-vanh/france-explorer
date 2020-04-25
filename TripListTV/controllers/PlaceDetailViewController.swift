@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import TVUIKit
 import MapKit
+import CoreData
 
 let MAX_ITEM_IN_HISTORY = 30
 
@@ -45,6 +46,11 @@ class PlaceDetailViewController: UIViewController {
     let buttonImageConfig = UIImage.SymbolConfiguration(textStyle: .headline)
     private var pageImages: [ImageMetadata] = []
     private var linkedPlaces: [Place] = []
+    private var dreams: [Dream] = [] {
+        didSet {
+            displayBookmark()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +61,26 @@ class PlaceDetailViewController: UIViewController {
         displayPageContent()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      
+      guard let appDelegate =
+        UIApplication.shared.delegate as? AppDelegate else {
+          return
+      }
+      
+      let managedContext = appDelegate.persistentContainer.viewContext
+      let fetchRequest = NSFetchRequest<Dream>(entityName: "Dream")
+      
+      do {
+        dreams = try managedContext.fetch(fetchRequest)
+      } catch let error as NSError {
+        print("Could not fetch. \(error), \(error.userInfo)")
+      }
+    }
+    
+    
+    
     private func initViews(){
         scrollView.delegate = self
         titleLabel.text = ""
@@ -62,16 +88,6 @@ class PlaceDetailViewController: UIViewController {
         extractTextView.text = ""
         extractTextView.isSelectable = true
         extractTextView.panGestureRecognizer.allowedTouchTypes = [NSNumber(value: UITouch.TouchType.indirect.rawValue)]
-        
-        //Bookmark button
-        if false {//if favorites.firstIndex(of: pageid) != nil {
-            favoriteCaptionButton.contentImage = UIImage(systemName: "bookmark.fill", withConfiguration: buttonImageConfig)
-            favoriteCaptionButton.title = NSLocalizedString("button.favorites.added", comment: "")
-        } else {
-            favoriteCaptionButton.contentImage = UIImage(systemName: "bookmark", withConfiguration: buttonImageConfig)
-            favoriteCaptionButton.title = NSLocalizedString("button.favorites.add", comment: "")
-        }
-        favoriteCaptionButton.subtitle = ""
         
         imagesCollectionView.delegate = self
         imagesCollectionView.dataSource = self
@@ -85,6 +101,18 @@ class PlaceDetailViewController: UIViewController {
         creditLabel.text = ""
     }
     
+    private func displayBookmark() {
+        if dreams.contains(where: { (dream) -> Bool in
+            return dream.placeId == self.place.id
+        }) {
+            favoriteCaptionButton.contentImage = UIImage(systemName: "text.badge.minus", withConfiguration: buttonImageConfig)
+            favoriteCaptionButton.title = NSLocalizedString("Retirer du Voyage", comment: "")
+        } else {
+            favoriteCaptionButton.contentImage = UIImage(systemName: "text.badge.plus", withConfiguration: buttonImageConfig)
+            favoriteCaptionButton.title = NSLocalizedString("Ajouter au Voyage", comment: "")
+        }
+        favoriteCaptionButton.subtitle = ""
+    }
     
     private func displayPageContent(){
         titleLabel.text = place.titleLocalized
@@ -216,27 +244,38 @@ class PlaceDetailViewController: UIViewController {
     }
     
     @IBAction func favoritesClickedAction(_ sender: Any) {
-        /*
-        var favorites = [Int]()
-        
-        if let cloudFavorites = NSUbiquitousKeyValueStore.default.array(forKey: "favorites") {
-            favorites = cloudFavorites as! [Int]
+        guard let appDelegate =
+          UIApplication.shared.delegate as? AppDelegate else {
+            return
         }
+        let context = appDelegate.persistentContainer.viewContext
         
-        if let index = favorites.firstIndex(of: pageid) {
-            favorites.remove(at: index)
-            favoriteCaptionButton.contentImage = UIImage(systemName: "bookmark", withConfiguration: buttonImageConfig)
-            favoriteCaptionButton.title = NSLocalizedString("button.favorites.add", comment: "")
+        
+        if let index = dreams.firstIndex(where: {$0.placeId == place.id}) {
+            let dream = self.dreams[index]
+            context.delete(dream)
+            dreams.remove(at: index)
         } else {
-            favorites.append(pageid)
-            if favorites.count > MAX_ITEM_IN_HISTORY {
-                favorites.remove(at: 0)
-            }
-            favoriteCaptionButton.contentImage = UIImage(systemName: "bookmark.fill", withConfiguration: buttonImageConfig)
-            favoriteCaptionButton.title = NSLocalizedString("button.favorites.added", comment: "")
+            let dream = Dream(context: context)
+            dream.configure(place: place)
+            dream.order = (dreams.last?.order ?? 0) + 1
+            dreams.append(dream)
         }
-        NSUbiquitousKeyValueStore.default.set(favorites, forKey: "favorites")
-         */
+        appDelegate.saveContext()
+    }
+    
+    private func addDream(){
+        
+        
+    }
+    
+    private func removeDream(){
+        guard let appDelegate =
+          UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        appDelegate.saveContext()
     }
     
     

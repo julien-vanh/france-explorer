@@ -7,11 +7,18 @@
 //
 
 import UIKit
+import CoreData
 
 class FavoritesViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var places = PlaceStore.shared.getRandom(count: 22, premium: false) //TODO
+    var dreams: [Dream] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
+    }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -25,27 +32,51 @@ class FavoritesViewController: UIViewController {
         collectionView.register(UINib(nibName: "ThumbnailPageCell", bundle: nil), forCellWithReuseIdentifier: "ThumbnailPageCell")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      
+      guard let appDelegate =
+        UIApplication.shared.delegate as? AppDelegate else {
+          return
+      }
+      
+      let managedContext = appDelegate.persistentContainer.viewContext
+      let fetchRequest = NSFetchRequest<Dream>(entityName: "Dream")
+      
+      do {
+        dreams = try managedContext.fetch(fetchRequest)
+      } catch let error as NSError {
+        print("Could not fetch. \(error), \(error.userInfo)")
+      }
+    }
+    
 }
 
 extension FavoritesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return places.count
+        return dreams.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ThumbnailPageCell", for: indexPath) as! ThumbnailPageCell
-        let place = self.places[indexPath.item]
-        cell.configure(place: place)
+        if let placeId = dreams[indexPath.item].placeId {
+            if let place = PlaceStore.shared.get(id: placeId) {
+                cell.configure(place: place)
+            }
+        }
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let place = self.places[indexPath.item]
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlaceDetailViewController") as! PlaceDetailViewController
-        vc.place = place
-        vc.delegate = self
-        present(vc, animated: true, completion: nil)
+        if let placeId = dreams[indexPath.item].placeId {
+            if let place = PlaceStore.shared.get(id: placeId) {
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlaceDetailViewController") as! PlaceDetailViewController
+                vc.place = place
+                vc.delegate = self
+                present(vc, animated: true, completion: nil)
+            }
+        }
     }
 }
 
