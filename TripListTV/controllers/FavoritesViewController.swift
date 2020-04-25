@@ -44,7 +44,10 @@ class FavoritesViewController: UIViewController {
       let fetchRequest = NSFetchRequest<Dream>(entityName: "Dream")
       
       do {
-        dreams = try managedContext.fetch(fetchRequest)
+        let results: [Dream] = try managedContext.fetch(fetchRequest)
+        dreams = results.sorted(by: { (d1, d2) -> Bool in
+            return d1.order < d2.order
+        })
       } catch let error as NSError {
         print("Could not fetch. \(error), \(error.userInfo)")
       }
