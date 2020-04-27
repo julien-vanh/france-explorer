@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-struct Place: Decodable, Identifiable {
+struct Place: Decodable, Identifiable, CustomStringConvertible {
     var id: String
     fileprivate var title: TranslatableField
     var category: PlaceCategory
@@ -24,7 +24,7 @@ struct Place: Decodable, Identifiable {
     var address: String!
     var website: String!
     var illustration: Illustration!
-    fileprivate var description: TranslatableDescription
+    //fileprivate var description: TranslatableDescription
     var wikiPageId: Int!
     var cta: CallToAction!
     
@@ -53,6 +53,7 @@ struct Place: Decodable, Identifiable {
     }
     
     var descriptionLocalized: PlaceDescription! {
+        /*
         if( Locale.current.languageCode == "fr"){
             if let res = description.fr {
                 return res
@@ -62,8 +63,11 @@ struct Place: Decodable, Identifiable {
                 return res
             }
         }
+ */
         return nil
     }
+    
+    public var description: String { return titleLocalized }
 }
 
 extension String {

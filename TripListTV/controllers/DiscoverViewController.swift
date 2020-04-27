@@ -41,13 +41,13 @@ class DiscoverViewController: UIViewController  {
         
         selectionCollectionView.delegate = self
         selectionCollectionView.dataSource = self
-        selectionCollectionView.register(UINib(nibName: "ThumbnailPageCell", bundle: nil), forCellWithReuseIdentifier: "ThumbnailPageCell")
+        selectionCollectionView.register(UINib(nibName: "PlaceCell", bundle: nil), forCellWithReuseIdentifier: "PlaceCell")
         
         regionsTitle.text = NSLocalizedString("Régions", comment: "")
         
         regionsCollectionView.delegate = self
         regionsCollectionView.dataSource = self
-        regionsCollectionView.register(UINib(nibName: "ThumbnailPageCell", bundle: nil), forCellWithReuseIdentifier: "ThumbnailPageCell")
+        regionsCollectionView.register(UINib(nibName: "RegionCell", bundle: nil), forCellWithReuseIdentifier: "RegionCell")
     }
 }
 
@@ -65,11 +65,11 @@ extension DiscoverViewController : UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.selectionCollectionView {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ThumbnailPageCell", for: indexPath) as! ThumbnailPageCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlaceCell", for: indexPath) as! PlaceCell
             cell.configure(place: places[indexPath.item])
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ThumbnailPageCell", for: indexPath) as! ThumbnailPageCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RegionCell", for: indexPath) as! RegionCell
             cell.configure(region: regions[indexPath.item])
             return cell
         }

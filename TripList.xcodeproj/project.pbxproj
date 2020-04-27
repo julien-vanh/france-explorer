@@ -43,8 +43,8 @@
 		F940D3CB244F6BB500B42012 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940D3CA244F6BB500B42012 /* DiscoverViewController.swift */; };
 		F940D3CD244F6BC600B42012 /* PageImageViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940D3CC244F6BC600B42012 /* PageImageViewControler.swift */; };
 		F940D3CF244F6BD100B42012 /* ImagesPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940D3CE244F6BD100B42012 /* ImagesPageViewController.swift */; };
-		F940D3D3244F6E6400B42012 /* ThumbnailPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F940D3D1244F6E6400B42012 /* ThumbnailPageCell.xib */; };
-		F940D3D4244F6E6400B42012 /* ThumbnailPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940D3D2244F6E6400B42012 /* ThumbnailPageCell.swift */; };
+		F940D3D3244F6E6400B42012 /* PlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F940D3D1244F6E6400B42012 /* PlaceCell.xib */; };
+		F940D3D4244F6E6400B42012 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940D3D2244F6E6400B42012 /* PlaceCell.swift */; };
 		F940D3D7244F714200B42012 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940D3D6244F714200B42012 /* PlaceDetailViewController.swift */; };
 		F940D3DA244F738A00B42012 /* ImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F940D3D8244F738A00B42012 /* ImageViewCell.xib */; };
 		F940D3DB244F738A00B42012 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940D3D9244F738A00B42012 /* ImageViewCell.swift */; };
@@ -1339,7 +1339,7 @@
 		F940E0702450BF6B00B42012 /* PlaceAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F926A7C924194CF900615E07 /* PlaceAnnotationView.swift */; };
 		F940E0722451802400B42012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F940E0712451802400B42012 /* Assets.xcassets */; };
 		F940E0732451807C00B42012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F95DE55F23DE2F0F00BE1BD5 /* Assets.xcassets */; };
-		F940E0762451D54B00B42012 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940E0752451D54B00B42012 /* FavoritesViewController.swift */; };
+		F940E0762451D54B00B42012 /* DreamListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940E0752451D54B00B42012 /* DreamListViewController.swift */; };
 		F940E07A24532FD200B42012 /* RegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940E07924532FD200B42012 /* RegionViewController.swift */; };
 		F940E09A24534BC600B42012 /* bassenormandie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E08824534BC300B42012 /* bassenormandie.jpg */; };
 		F940E09B24534BC600B42012 /* hautenormandie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E08924534BC300B42012 /* hautenormandie.jpg */; };
@@ -1362,6 +1362,9 @@
 		F940E0AD24534D6700B42012 /* limousin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E0AC24534D6600B42012 /* limousin.jpg */; };
 		F940E0AF24534DA300B42012 /* midi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F940E0AE24534DA300B42012 /* midi.jpg */; };
 		F940E0B02454973100B42012 /* TripList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F91DEDA123E8A26D00D8FFD7 /* TripList.xcdatamodeld */; };
+		F940E0B32456EE5D00B42012 /* RegionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F940E0B12456EE5D00B42012 /* RegionCell.xib */; };
+		F940E0B42456EE5D00B42012 /* RegionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940E0B22456EE5D00B42012 /* RegionCell.swift */; };
+		F940E0B6245700D100B42012 /* CatalogueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940E0B5245700D100B42012 /* CatalogueTableViewCell.swift */; };
 		F94B49702401A42A0055956D /* SeparationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B496F2401A42A0055956D /* SeparationBar.swift */; };
 		F94B49732401DE3D0055956D /* PlaceViewCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B49722401DE3D0055956D /* PlaceViewCompact.swift */; };
 		F95DE55A23DE2F0F00BE1BD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE55923DE2F0F00BE1BD5 /* AppDelegate.swift */; };
@@ -1495,8 +1498,8 @@
 		F940D3CA244F6BB500B42012 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		F940D3CC244F6BC600B42012 /* PageImageViewControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageImageViewControler.swift; sourceTree = "<group>"; };
 		F940D3CE244F6BD100B42012 /* ImagesPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesPageViewController.swift; sourceTree = "<group>"; };
-		F940D3D1244F6E6400B42012 /* ThumbnailPageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThumbnailPageCell.xib; sourceTree = "<group>"; };
-		F940D3D2244F6E6400B42012 /* ThumbnailPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailPageCell.swift; sourceTree = "<group>"; };
+		F940D3D1244F6E6400B42012 /* PlaceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceCell.xib; sourceTree = "<group>"; };
+		F940D3D2244F6E6400B42012 /* PlaceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
 		F940D3D6244F714200B42012 /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
 		F940D3D8244F738A00B42012 /* ImageViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageViewCell.xib; sourceTree = "<group>"; };
 		F940D3D9244F738A00B42012 /* ImageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
@@ -2145,7 +2148,7 @@
 		F940E06B244F836D00B42012 /* TVUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TVUIKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS13.4.sdk/System/Library/Frameworks/TVUIKit.framework; sourceTree = DEVELOPER_DIR; };
 		F940E06E2450B37300B42012 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS13.4.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
 		F940E0712451802400B42012 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F940E0752451D54B00B42012 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		F940E0752451D54B00B42012 /* DreamListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamListViewController.swift; sourceTree = "<group>"; };
 		F940E07924532FD200B42012 /* RegionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionViewController.swift; sourceTree = "<group>"; };
 		F940E08824534BC300B42012 /* bassenormandie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bassenormandie.jpg; sourceTree = "<group>"; };
 		F940E08924534BC300B42012 /* hautenormandie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hautenormandie.jpg; sourceTree = "<group>"; };
@@ -2167,6 +2170,9 @@
 		F940E09924534BC600B42012 /* alsace.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alsace.jpg; sourceTree = "<group>"; };
 		F940E0AC24534D6600B42012 /* limousin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = limousin.jpg; sourceTree = "<group>"; };
 		F940E0AE24534DA300B42012 /* midi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = midi.jpg; sourceTree = "<group>"; };
+		F940E0B12456EE5D00B42012 /* RegionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegionCell.xib; sourceTree = "<group>"; };
+		F940E0B22456EE5D00B42012 /* RegionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionCell.swift; sourceTree = "<group>"; };
+		F940E0B5245700D100B42012 /* CatalogueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueTableViewCell.swift; sourceTree = "<group>"; };
 		F94B496F2401A42A0055956D /* SeparationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparationBar.swift; sourceTree = "<group>"; };
 		F94B49722401DE3D0055956D /* PlaceViewCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewCompact.swift; sourceTree = "<group>"; };
 		F95DE55623DE2F0E00BE1BD5 /* France Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "France Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2367,10 +2373,10 @@
 		F940D3C7244F6B8F00B42012 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F940D3D6244F714200B42012 /* PlaceDetailViewController.swift */,
-				F940E07924532FD200B42012 /* RegionViewController.swift */,
 				F940D3CA244F6BB500B42012 /* DiscoverViewController.swift */,
-				F940E0752451D54B00B42012 /* FavoritesViewController.swift */,
+				F940E07924532FD200B42012 /* RegionViewController.swift */,
+				F940D3D6244F714200B42012 /* PlaceDetailViewController.swift */,
+				F940E0752451D54B00B42012 /* DreamListViewController.swift */,
 				F940D3C8244F6B9E00B42012 /* SearchResultViewController.swift */,
 				F940D3CE244F6BD100B42012 /* ImagesPageViewController.swift */,
 				F940D3CC244F6BC600B42012 /* PageImageViewControler.swift */,
@@ -2381,8 +2387,11 @@
 		F940D3D0244F6E5700B42012 /* components */ = {
 			isa = PBXGroup;
 			children = (
-				F940D3D2244F6E6400B42012 /* ThumbnailPageCell.swift */,
-				F940D3D1244F6E6400B42012 /* ThumbnailPageCell.xib */,
+				F940E0B5245700D100B42012 /* CatalogueTableViewCell.swift */,
+				F940E0B22456EE5D00B42012 /* RegionCell.swift */,
+				F940E0B12456EE5D00B42012 /* RegionCell.xib */,
+				F940D3D2244F6E6400B42012 /* PlaceCell.swift */,
+				F940D3D1244F6E6400B42012 /* PlaceCell.xib */,
 				F940D3D9244F738A00B42012 /* ImageViewCell.swift */,
 				F940D3D8244F738A00B42012 /* ImageViewCell.xib */,
 			);
@@ -3433,7 +3442,7 @@
 				F940E04A244F7DD000B42012 /* MaisondeGeorgeSand.jpg in Resources */,
 				F940DD02244F7DCF00B42012 /* PassageDuGois.jpg in Resources */,
 				F940E004244F7DD000B42012 /* Saintenimie.jpg in Resources */,
-				F940D3D3244F6E6400B42012 /* ThumbnailPageCell.xib in Resources */,
+				F940D3D3244F6E6400B42012 /* PlaceCell.xib in Resources */,
 				F940DCE6244F7DCF00B42012 /* Gerberoy.jpg in Resources */,
 				F940DD22244F7DCF00B42012 /* ClermontFerrand.jpg in Resources */,
 				F940DF7C244F7DD000B42012 /* Gordes.jpg in Resources */,
@@ -3850,6 +3859,7 @@
 				F940E09F24534BC600B42012 /* paysdelaloire.jpg in Resources */,
 				F940DC08244F7DCF00B42012 /* ChteauFortdeSedan.jpg in Resources */,
 				F940DBA6244F7DCE00B42012 /* CirquedeNavacelles.jpg in Resources */,
+				F940E0B32456EE5D00B42012 /* RegionCell.xib in Resources */,
 				F940DEDC244F7DD000B42012 /* AiguillesdeBavella.jpg in Resources */,
 				F940DDD6244F7DCF00B42012 /* PalaisJacquesCur.jpg in Resources */,
 				F940DD36244F7DCF00B42012 /* MusedelaBiere.jpg in Resources */,
@@ -4773,9 +4783,11 @@
 				F9811C1D244F68530098D608 /* ImageMetadata.swift in Sources */,
 				F9811C1E244F68530098D608 /* WikipediaService.swift in Sources */,
 				F940D3C2244F69CC00B42012 /* UIColor+hexString.swift in Sources */,
-				F940D3D4244F6E6400B42012 /* ThumbnailPageCell.swift in Sources */,
+				F940E0B6245700D100B42012 /* CatalogueTableViewCell.swift in Sources */,
+				F940E0B42456EE5D00B42012 /* RegionCell.swift in Sources */,
+				F940D3D4244F6E6400B42012 /* PlaceCell.swift in Sources */,
 				F940D3C6244F6A3600B42012 /* FilterModel.swift in Sources */,
-				F940E0762451D54B00B42012 /* FavoritesViewController.swift in Sources */,
+				F940E0762451D54B00B42012 /* DreamListViewController.swift in Sources */,
 				F940D3CB244F6BB500B42012 /* DiscoverViewController.swift in Sources */,
 				F940D3C1244F69C800B42012 /* Dataloader.swift in Sources */,
 				F940D3CD244F6BC600B42012 /* PageImageViewControler.swift in Sources */,

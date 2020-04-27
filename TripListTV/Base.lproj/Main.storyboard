@@ -182,41 +182,35 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZB-X0-BAG" userLabel="description">
-                                <rect key="frame" x="90" y="201" width="1084" height="230"/>
+                                <rect key="frame" x="90" y="176" width="1084" height="180"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="230" id="hVa-Hx-Yol"/>
+                                    <constraint firstAttribute="height" constant="180" id="hVa-Hx-Yol"/>
                                 </constraints>
                                 <string key="text">La Normandie a connu une histoire riche de l'époque romaine au débarquement en 1944 en passant par l'invasion Viking et chacune de ces périodes à marquée le visage de la Normandie et il en reste des traces, des monuments, des événements qui permettent au tourisme normand de s'appuyer sur son histoire.</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t7U-mF-Dtm">
-                                <rect key="frame" x="90" y="481" width="1740" height="539"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="50" minimumInteritemSpacing="50" id="t70-hM-0o2">
-                                    <size key="itemSize" width="348" height="200"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="50" minY="50" maxX="0.0" maxY="50"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
+                            <tableView contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="1" sectionHeaderHeight="66" sectionFooterHeight="66" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Fj-kN-uSq">
+                                <rect key="frame" x="0.0" y="381" width="1920" height="639"/>
+                                <sections/>
+                            </tableView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="5Fj-kN-uSq" firstAttribute="top" secondItem="KZB-X0-BAG" secondAttribute="bottom" constant="25" id="6pU-cf-NF3"/>
                             <constraint firstItem="gHS-gY-FUT" firstAttribute="trailing" secondItem="831-tY-a2g" secondAttribute="trailing" id="748-tf-YnW"/>
                             <constraint firstItem="gHS-gY-FUT" firstAttribute="trailing" secondItem="KZB-X0-BAG" secondAttribute="trailing" constant="656" id="Abr-9u-UEd"/>
-                            <constraint firstItem="KZB-X0-BAG" firstAttribute="top" secondItem="831-tY-a2g" secondAttribute="bottom" constant="50" id="CyH-48-Nf0"/>
+                            <constraint firstItem="KZB-X0-BAG" firstAttribute="top" secondItem="831-tY-a2g" secondAttribute="bottom" constant="25" id="CyH-48-Nf0"/>
                             <constraint firstItem="KZB-X0-BAG" firstAttribute="leading" secondItem="gHS-gY-FUT" secondAttribute="leading" id="Cyi-IE-6Fq"/>
-                            <constraint firstItem="gHS-gY-FUT" firstAttribute="leading" secondItem="t7U-mF-Dtm" secondAttribute="leading" id="ann-Vz-j2I"/>
-                            <constraint firstItem="t7U-mF-Dtm" firstAttribute="bottom" secondItem="gHS-gY-FUT" secondAttribute="bottom" id="bfA-Dp-rep"/>
+                            <constraint firstItem="gHS-gY-FUT" firstAttribute="trailing" secondItem="5Fj-kN-uSq" secondAttribute="trailing" constant="-90" id="MMI-a8-d1P"/>
                             <constraint firstItem="831-tY-a2g" firstAttribute="top" secondItem="gHS-gY-FUT" secondAttribute="top" id="ccu-0W-GvN"/>
-                            <constraint firstItem="t7U-mF-Dtm" firstAttribute="trailing" secondItem="gHS-gY-FUT" secondAttribute="trailing" id="fdQ-ma-Nou"/>
                             <constraint firstItem="yai-uP-q56" firstAttribute="trailing" secondItem="dwd-Vj-WPV" secondAttribute="trailing" id="hRn-GX-ufk"/>
+                            <constraint firstItem="5Fj-kN-uSq" firstAttribute="leading" secondItem="gHS-gY-FUT" secondAttribute="leading" constant="-90" id="ifg-e5-2dO"/>
                             <constraint firstItem="yai-uP-q56" firstAttribute="bottom" secondItem="dwd-Vj-WPV" secondAttribute="bottom" id="jez-1Y-KdY"/>
                             <constraint firstAttribute="top" secondItem="yai-uP-q56" secondAttribute="top" id="kUq-zT-HTP"/>
                             <constraint firstAttribute="leading" secondItem="yai-uP-q56" secondAttribute="leading" id="lP1-9r-a20"/>
                             <constraint firstItem="831-tY-a2g" firstAttribute="leading" secondItem="gHS-gY-FUT" secondAttribute="leading" id="qcj-aR-Tzd"/>
-                            <constraint firstItem="t7U-mF-Dtm" firstAttribute="top" secondItem="KZB-X0-BAG" secondAttribute="bottom" constant="50" id="v8K-Ug-cZY"/>
+                            <constraint firstItem="gHS-gY-FUT" firstAttribute="bottom" secondItem="5Fj-kN-uSq" secondAttribute="bottom" id="sZ0-v1-8Wq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gHS-gY-FUT"/>
                     </view>
@@ -224,7 +218,7 @@
                     <connections>
                         <outlet property="backgroundImage" destination="yai-uP-q56" id="uty-XO-dsO"/>
                         <outlet property="descriptionLabel" destination="KZB-X0-BAG" id="GME-T0-cfL"/>
-                        <outlet property="placesCollectionView" destination="t7U-mF-Dtm" id="XKr-Kd-vqf"/>
+                        <outlet property="placesTableView" destination="5Fj-kN-uSq" id="VJ2-hu-83Z"/>
                         <outlet property="titleLabel" destination="831-tY-a2g" id="lWJ-LW-n7y"/>
                     </connections>
                 </viewController>
@@ -456,7 +450,7 @@
                                 <rect key="frame" x="90" y="157" width="1740" height="1483"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wra-ke-PuR">
-                                        <rect key="frame" x="-90" y="0.0" width="1920" height="1543"/>
+                                        <rect key="frame" x="-90" y="0.0" width="1920" height="1387"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Po9-9V-nol">
                                                 <rect key="frame" x="90" y="0.0" width="180" height="91"/>
@@ -490,15 +484,15 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oCf-TW-1Gj" userLabel="Link Collection View">
-                                                <rect key="frame" x="0.0" y="557" width="1920" height="986"/>
+                                                <rect key="frame" x="0.0" y="557" width="1920" height="830"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="986" id="PKL-OJ-xXt"/>
+                                                    <constraint firstAttribute="height" constant="830" id="PKL-OJ-xXt"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="48" minimumInteritemSpacing="48" id="VXf-DA-CO4">
-                                                    <size key="itemSize" width="250" height="280"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="50" minimumInteritemSpacing="50" id="VXf-DA-CO4">
+                                                    <size key="itemSize" width="375" height="210"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="70" minY="25" maxX="70" maxY="25"/>
+                                                    <inset key="sectionInset" minX="50" minY="50" maxX="0.0" maxY="50"/>
                                                 </collectionViewFlowLayout>
                                                 <cells/>
                                             </collectionView>
@@ -555,7 +549,7 @@
         <!--Favorites-->
         <scene sceneID="1CX-eE-Laj">
             <objects>
-                <viewController id="pp3-de-A1l" userLabel="Favorites" customClass="FavoritesViewController" customModule="TV_Wiki" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pp3-de-A1l" userLabel="Favorites" customClass="DreamListViewController" customModule="TV_Wiki" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4VT-cT-k4v"/>
                         <viewControllerLayoutGuide type="bottom" id="hAg-9C-8Ke"/>

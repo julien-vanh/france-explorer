@@ -95,7 +95,7 @@ class PlaceDetailViewController: UIViewController {
         
         linksCollectionView.delegate = self
         linksCollectionView.dataSource = self
-        linksCollectionView.register(UINib(nibName: "ThumbnailPageCell", bundle: nil), forCellWithReuseIdentifier: "ThumbnailPageCell")
+        linksCollectionView.register(UINib(nibName: "PlaceCell", bundle: nil), forCellWithReuseIdentifier: "PlaceCell")
         
         addressLabel.text = ""
         creditLabel.text = ""
@@ -319,7 +319,7 @@ extension PlaceDetailViewController : UICollectionViewDelegate, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.linksCollectionView {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ThumbnailPageCell", for: indexPath) as! ThumbnailPageCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlaceCell", for: indexPath) as! PlaceCell
             cell.configure(place: linkedPlaces[indexPath.item])
             return cell
         } else {

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ThumbnailPageCell: UICollectionViewCell {
+class PlaceCell: UICollectionViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var unfocusedConstraint: NSLayoutConstraint!
@@ -17,33 +17,8 @@ class ThumbnailPageCell: UICollectionViewCell {
     private var focusedConstraint: NSLayoutConstraint!
     
     func configure(place: Place) {
-        let topImage = UIImageView()
-        topImage.frame = imageView.frame
-        topImage.contentMode = .scaleAspectFill
-        topImage.image = ImageStore.shared.uiimage(forPlace: place)
-        
-        for view in self.imageView.overlayContentView.subviews{
-            view.removeFromSuperview()
-        }
-        self.imageView.overlayContentView.addSubview(topImage)
-        
         titleLabel.text = place.titleLocalized
-    }
-    
-    func configure(region: PlaceRegion) {
-        let randomPlaceForRegion = PlaceStore.shared.getAllForRegion(regionId: region.id, premium: true)[0]
-        
-        let topImage = UIImageView()
-        topImage.frame = imageView.frame
-        topImage.contentMode = .scaleAspectFill
-        topImage.image = ImageStore.shared.uiimage(forPlace: randomPlaceForRegion)
-        
-        for view in self.imageView.overlayContentView.subviews{
-            view.removeFromSuperview()
-        }
-        self.imageView.overlayContentView.addSubview(topImage)
-        
-        titleLabel.text = region.name
+        self.imageView.image  = ImageStore.shared.uiimage(forPlace: place)
     }
     
     override func awakeFromNib() {
