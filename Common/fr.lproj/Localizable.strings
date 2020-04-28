@@ -7,5 +7,5 @@
 */
 "appname" = "France Explorer";
 
-"wikipedia.host" = "https://fr.wikipedia.org/w/api.php";
+"wikipedia.host" = "https://fr.wikipedia.org/w/api.php"; //Laisser le fr pour recuperer les images
 "wikipedia.main-page" = "Wikipedia:Accueil_principal";

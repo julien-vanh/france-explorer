@@ -39,14 +39,13 @@ class RegionViewController: UIViewController  {
                 result.append(placesOfCategory)
             }
         }
-        print("result", result)
         return result
     }
     
 
     private func initViews(){
         self.titleLabel.text = region.name
-        self.descriptionLabel.text = "La Normandie a connu une histoire riche de l'époque romaine au débarquement en 1944 en passant par l'invasion Viking et chacune de ces périodes à marquée le visage de la Normandie et il en reste des traces, des monuments, des événements qui permettent au tourisme normand de s'appuyer sur son histoire." //TODO
+        self.descriptionLabel.text = "" //TODO
         
         self.backgroundImage.image  = ImageStore.shared.uiimage(forRegion: region)
         
