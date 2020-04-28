@@ -16,7 +16,10 @@ class PlaceCell: UICollectionViewCell {
     
     private var focusedConstraint: NSLayoutConstraint!
     
+    private var place: Place!
+    
     func configure(place: Place) {
+        self.place = place
         titleLabel.text = place.titleLocalized
         self.imageView.image  = ImageStore.shared.uiimage(forPlace: place)
     }
@@ -33,7 +36,10 @@ class PlaceCell: UICollectionViewCell {
         focusedConstraint.isActive = isFocused
         unfocusedConstraint.isActive = !isFocused
         
-        titleLabel.textColor = isFocused ? .white : .darkGray
+        if place != nil {
+            titleLabel.textColor = isFocused ? UIColor.explored : .white
+        }
+        
     }
         
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {

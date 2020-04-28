@@ -20,9 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabBarController = self.window!.rootViewController as! UITabBarController
         
         tabBarController.viewControllers?.append(createSearch(storyboard: tabBarController.storyboard))
-
-        let langStr = Locale.current.languageCode
-        print("Langue \(langStr?.description ?? "not found")")
         
         return true
     }

@@ -102,7 +102,6 @@ class PlaceDetailViewController: UIViewController {
         imagesCollectionView.register(UINib(nibName: "ImageViewCell", bundle: nil), forCellWithReuseIdentifier: "ImageViewCell")
         //imagesView.addBlur(0.5, style: .light)
         imagesTitleLabel.text = NSLocalizedString("Images associées", comment: "")
-        imagesTitleLabel.textColor = .lightGray
         imagesView.addSubview(imagesTitleLabel)
         imagesView.addSubview(imagesCollectionView)
         
@@ -111,7 +110,6 @@ class PlaceDetailViewController: UIViewController {
         associatesCollectionView.register(UINib(nibName: "PlaceCell", bundle: nil), forCellWithReuseIdentifier: "PlaceCell")
         associatesView.addBlur(0.5, style: .light)
         associatesTitleLabel.text = NSLocalizedString("Découvrez aussi", comment: "")
-        associatesTitleLabel.textColor = .lightGray
         associatesView.addSubview(associatesTitleLabel)
         associatesView.addSubview(associatesCollectionView)
         

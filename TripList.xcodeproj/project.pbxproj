@@ -1452,6 +1452,8 @@
 		F9D032F6240FD085008A9B13 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D032F5240FD085008A9B13 /* Store.swift */; };
 		F9D032F8240FD4FE008A9B13 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D032F7240FD4FE008A9B13 /* SearchBarView.swift */; };
 		F9D49FA12402917C005A2B8E /* PlaceGridCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D49FA02402917C005A2B8E /* PlaceGridCompact.swift */; };
+		F9D533622458D5CB0055580E /* languedoc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9D533612458D5CB0055580E /* languedoc.jpg */; };
+		F9D533642458D6AD0055580E /* franchecomte.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9D533632458D6AC0055580E /* franchecomte.jpg */; };
 		F9D82E5D2417E3DA003961AD /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D82E5C2417E3DA003961AD /* BlurView.swift */; };
 		F9D82E5F2417FB97003961AD /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D82E5E2417FB97003961AD /* PageViewController.swift */; };
 		F9DC21D423E0CEC20023B8EF /* ProgressionMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC21D323E0CEC20023B8EF /* ProgressionMapController.swift */; };
@@ -2256,6 +2258,8 @@
 		F9D032F5240FD085008A9B13 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		F9D032F7240FD4FE008A9B13 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		F9D49FA02402917C005A2B8E /* PlaceGridCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceGridCompact.swift; sourceTree = "<group>"; };
+		F9D533612458D5CB0055580E /* languedoc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = languedoc.jpg; sourceTree = "<group>"; };
+		F9D533632458D6AC0055580E /* franchecomte.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = franchecomte.jpg; sourceTree = "<group>"; };
 		F9D82E5C2417E3DA003961AD /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		F9D82E5E2417FB97003961AD /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		F9DC21D323E0CEC20023B8EF /* ProgressionMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressionMapController.swift; sourceTree = "<group>"; };
@@ -3085,8 +3089,10 @@
 				F940E09424534BC500B42012 /* centre.jpg */,
 				F940E08E24534BC400B42012 /* champagne.jpg */,
 				F940E09124534BC400B42012 /* corse.jpg */,
+				F9D533632458D6AC0055580E /* franchecomte.jpg */,
 				F940E08924534BC300B42012 /* hautenormandie.jpg */,
 				F940E08F24534BC400B42012 /* iledefrance.jpg */,
+				F9D533612458D5CB0055580E /* languedoc.jpg */,
 				F940E0AC24534D6600B42012 /* limousin.jpg */,
 				F940E09224534BC400B42012 /* lorraine.jpg */,
 				F940E0AE24534DA300B42012 /* midi.jpg */,
@@ -3534,6 +3540,7 @@
 				F940DD08244F7DCF00B42012 /* AbbayedeMortemer.jpg in Resources */,
 				F940DC8A244F7DCF00B42012 /* DennlysParc.jpg in Resources */,
 				F940DC3C244F7DCF00B42012 /* AnglessurlAnglin.jpg in Resources */,
+				F9D533642458D6AD0055580E /* franchecomte.jpg in Resources */,
 				F940E00E244F7DD000B42012 /* ChnedAllouville.jpg in Resources */,
 				F940DB70244F7DCE00B42012 /* lesdeGlnan.jpg in Resources */,
 				F940DBDC244F7DCF00B42012 /* TrouvillesurMer.jpg in Resources */,
@@ -3595,6 +3602,7 @@
 				F940DC52244F7DCF00B42012 /* SaintCnerileGrei.jpg in Resources */,
 				F940DBCA244F7DCF00B42012 /* ZoodeLaFlche.jpg in Resources */,
 				F940DCA8244F7DCF00B42012 /* CentreHistoriqueMinierdeLewarde.jpg in Resources */,
+				F9D533622458D5CB0055580E /* languedoc.jpg in Resources */,
 				F940DEFA244F7DD000B42012 /* ChteaudePierrefonds.jpg in Resources */,
 				F940DBFC244F7DCF00B42012 /* FtesmdivalesdeCordessurCiel.jpg in Resources */,
 				F940E05C244F7DD000B42012 /* Uzerche.jpg in Resources */,

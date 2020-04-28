@@ -11,9 +11,11 @@ import TVUIKit
 
 
 class DiscoverViewController: UIViewController  {
+    @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var selectionLabel: UILabel!
     @IBOutlet weak var selectionCollectionView: UICollectionView!
     
+    @IBOutlet weak var regionsView: UIView!
     @IBOutlet weak var regionsTitle: UILabel!
     @IBOutlet weak var regionsCollectionView: UICollectionView!
     
@@ -28,7 +30,7 @@ class DiscoverViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.places = PlaceStore.shared.getRandom(count: 10, premium: false)
+        self.places = PlaceStore.shared.getRandom(count: 20, premium: false)
         self.regions = PlaceStore.shared.getRegions().sorted(by: { (r1, r2) -> Bool in
             r1.name < r2.name
         })
@@ -37,17 +39,22 @@ class DiscoverViewController: UIViewController  {
     }
     
     private func initViews(){
+        backgroundImageView.image = ImageStore.shared.uiimage(forPlace: PlaceStore.shared.get(id: "Bordeaux"))
+        backgroundImageView.addBlur(1, style: .dark)
         selectionLabel.text = NSLocalizedString("Suggestions", comment: "")
         
         selectionCollectionView.delegate = self
         selectionCollectionView.dataSource = self
         selectionCollectionView.register(UINib(nibName: "PlaceCell", bundle: nil), forCellWithReuseIdentifier: "PlaceCell")
         
+        regionsView.addBlur(0.5, style: .light)
         regionsTitle.text = NSLocalizedString("Régions", comment: "")
         
         regionsCollectionView.delegate = self
         regionsCollectionView.dataSource = self
         regionsCollectionView.register(UINib(nibName: "RegionCell", bundle: nil), forCellWithReuseIdentifier: "RegionCell")
+        regionsView.addSubview(regionsTitle)
+        regionsView.addSubview(regionsCollectionView)
     }
 }
 
