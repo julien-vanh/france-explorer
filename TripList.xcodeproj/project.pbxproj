@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5369F23C6F656A7569D340D0 /* Pods_TripListTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07B1FF5DDC891CBFF15C90F /* Pods_TripListTV.framework */; };
 		E8CB92F7763543DD657D004F /* Pods_TripList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9698C69142C657E5CE8286B8 /* Pods_TripList.framework */; };
 		F90551C4244E30200046C76E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90551C3244E30200046C76E /* CloudKit.framework */; };
 		F90551F3244F65390046C76E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90551F2244F65390046C76E /* AppDelegate.swift */; };
@@ -1365,6 +1366,9 @@
 		F940E0B32456EE5D00B42012 /* RegionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F940E0B12456EE5D00B42012 /* RegionCell.xib */; };
 		F940E0B42456EE5D00B42012 /* RegionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940E0B22456EE5D00B42012 /* RegionCell.swift */; };
 		F940E0B6245700D100B42012 /* CatalogueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940E0B5245700D100B42012 /* CatalogueTableViewCell.swift */; };
+		F940E0BC245798CD00B42012 /* Blurage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940E0BB245798CD00B42012 /* Blurage.swift */; };
+		F940E0BE24579ABD00B42012 /* patron.png in Resources */ = {isa = PBXBuildFile; fileRef = F940E0BD24579ABD00B42012 /* patron.png */; };
+		F940E0C02458363F00B42012 /* PlaceDetailViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940E0BF2458363F00B42012 /* PlaceDetailViewControllerDelegate.swift */; };
 		F94B49702401A42A0055956D /* SeparationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B496F2401A42A0055956D /* SeparationBar.swift */; };
 		F94B49732401DE3D0055956D /* PlaceViewCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B49722401DE3D0055956D /* PlaceViewCompact.swift */; };
 		F95DE55A23DE2F0F00BE1BD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DE55923DE2F0F00BE1BD5 /* AppDelegate.swift */; };
@@ -1466,8 +1470,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		282BB1E605DA04286F6A5839 /* Pods-TripListTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripListTV.debug.xcconfig"; path = "Target Support Files/Pods-TripListTV/Pods-TripListTV.debug.xcconfig"; sourceTree = "<group>"; };
 		7689E2DCC7F5369AF5ECE682 /* Pods-TripList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripList.debug.xcconfig"; path = "Target Support Files/Pods-TripList/Pods-TripList.debug.xcconfig"; sourceTree = "<group>"; };
 		9698C69142C657E5CE8286B8 /* Pods_TripList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2A836E1965D213D556E9D03 /* Pods-TripListTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripListTV.release.xcconfig"; path = "Target Support Files/Pods-TripListTV/Pods-TripListTV.release.xcconfig"; sourceTree = "<group>"; };
+		B07B1FF5DDC891CBFF15C90F /* Pods_TripListTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripListTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C13C3C1697C3E7D04C10C491 /* Pods-TripList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripList.release.xcconfig"; path = "Target Support Files/Pods-TripList/Pods-TripList.release.xcconfig"; sourceTree = "<group>"; };
 		F90551C3244E30200046C76E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		F90551F0244F65390046C76E /* TripListTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripListTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2173,6 +2180,9 @@
 		F940E0B12456EE5D00B42012 /* RegionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegionCell.xib; sourceTree = "<group>"; };
 		F940E0B22456EE5D00B42012 /* RegionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionCell.swift; sourceTree = "<group>"; };
 		F940E0B5245700D100B42012 /* CatalogueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueTableViewCell.swift; sourceTree = "<group>"; };
+		F940E0BB245798CD00B42012 /* Blurage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blurage.swift; sourceTree = "<group>"; };
+		F940E0BD24579ABD00B42012 /* patron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = patron.png; sourceTree = "<group>"; };
+		F940E0BF2458363F00B42012 /* PlaceDetailViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewControllerDelegate.swift; sourceTree = "<group>"; };
 		F94B496F2401A42A0055956D /* SeparationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparationBar.swift; sourceTree = "<group>"; };
 		F94B49722401DE3D0055956D /* PlaceViewCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewCompact.swift; sourceTree = "<group>"; };
 		F95DE55623DE2F0E00BE1BD5 /* France Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "France Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2275,6 +2285,7 @@
 				F940E06F2450B37300B42012 /* MapKit.framework in Frameworks */,
 				F9055205244F65900046C76E /* StoreKit.framework in Frameworks */,
 				F9055208244F65AD0046C76E /* CloudKit.framework in Frameworks */,
+				5369F23C6F656A7569D340D0 /* Pods_TripListTV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2300,6 +2311,8 @@
 			children = (
 				7689E2DCC7F5369AF5ECE682 /* Pods-TripList.debug.xcconfig */,
 				C13C3C1697C3E7D04C10C491 /* Pods-TripList.release.xcconfig */,
+				282BB1E605DA04286F6A5839 /* Pods-TripListTV.debug.xcconfig */,
+				A2A836E1965D213D556E9D03 /* Pods-TripListTV.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -2345,6 +2358,7 @@
 				F9A2C9112427689000883A52 /* StoreKit.framework */,
 				F92E05CA2412941B009C5ADD /* MapKit.framework */,
 				9698C69142C657E5CE8286B8 /* Pods_TripList.framework */,
+				B07B1FF5DDC891CBFF15C90F /* Pods_TripListTV.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2376,6 +2390,7 @@
 				F940D3CA244F6BB500B42012 /* DiscoverViewController.swift */,
 				F940E07924532FD200B42012 /* RegionViewController.swift */,
 				F940D3D6244F714200B42012 /* PlaceDetailViewController.swift */,
+				F940E0BD24579ABD00B42012 /* patron.png */,
 				F940E0752451D54B00B42012 /* DreamListViewController.swift */,
 				F940D3C8244F6B9E00B42012 /* SearchResultViewController.swift */,
 				F940D3CE244F6BD100B42012 /* ImagesPageViewController.swift */,
@@ -2388,11 +2403,13 @@
 			isa = PBXGroup;
 			children = (
 				F940E0B5245700D100B42012 /* CatalogueTableViewCell.swift */,
+				F940E0BF2458363F00B42012 /* PlaceDetailViewControllerDelegate.swift */,
 				F940E0B22456EE5D00B42012 /* RegionCell.swift */,
 				F940E0B12456EE5D00B42012 /* RegionCell.xib */,
 				F940D3D2244F6E6400B42012 /* PlaceCell.swift */,
 				F940D3D1244F6E6400B42012 /* PlaceCell.xib */,
 				F940D3D9244F738A00B42012 /* ImageViewCell.swift */,
+				F940E0BB245798CD00B42012 /* Blurage.swift */,
 				F940D3D8244F738A00B42012 /* ImageViewCell.xib */,
 			);
 			path = components;
@@ -3287,9 +3304,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9055201244F653C0046C76E /* Build configuration list for PBXNativeTarget "TripListTV" */;
 			buildPhases = (
+				1D1438CBE86F2EFEF597A937 /* [CP] Check Pods Manifest.lock */,
 				F90551EC244F65390046C76E /* Sources */,
 				F90551ED244F65390046C76E /* Frameworks */,
 				F90551EE244F65390046C76E /* Resources */,
+				7403637E9CAC389EB8541B2D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -3983,6 +4002,7 @@
 				F940DE60244F7DD000B42012 /* SaintJeandeLuz.jpg in Resources */,
 				F940E02E244F7DD000B42012 /* ParlementdeBretagne.jpg in Resources */,
 				F940DDAE244F7DCF00B42012 /* ParcduPetitPrince.jpg in Resources */,
+				F940E0BE24579ABD00B42012 /* patron.png in Resources */,
 				F940DC72244F7DCF00B42012 /* OradoursurGlane.jpg in Resources */,
 				F940DD34244F7DCF00B42012 /* FortdeBrocliande.jpg in Resources */,
 				F940E0AA24534BC600B42012 /* provence.jpg in Resources */,
@@ -4728,6 +4748,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1D1438CBE86F2EFEF597A937 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TripListTV-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		457E5F701CA3AD202B2CE77D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -4767,6 +4809,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TripList/Pods-TripList-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7403637E9CAC389EB8541B2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TripListTV/Pods-TripListTV-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TripListTV/Pods-TripListTV-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TripListTV/Pods-TripListTV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -4782,12 +4841,14 @@
 				F90551F3244F65390046C76E /* AppDelegate.swift in Sources */,
 				F9811C1D244F68530098D608 /* ImageMetadata.swift in Sources */,
 				F9811C1E244F68530098D608 /* WikipediaService.swift in Sources */,
+				F940E0C02458363F00B42012 /* PlaceDetailViewControllerDelegate.swift in Sources */,
 				F940D3C2244F69CC00B42012 /* UIColor+hexString.swift in Sources */,
 				F940E0B6245700D100B42012 /* CatalogueTableViewCell.swift in Sources */,
 				F940E0B42456EE5D00B42012 /* RegionCell.swift in Sources */,
 				F940D3D4244F6E6400B42012 /* PlaceCell.swift in Sources */,
 				F940D3C6244F6A3600B42012 /* FilterModel.swift in Sources */,
 				F940E0762451D54B00B42012 /* DreamListViewController.swift in Sources */,
+				F940E0BC245798CD00B42012 /* Blurage.swift in Sources */,
 				F940D3CB244F6BB500B42012 /* DiscoverViewController.swift in Sources */,
 				F940D3C1244F69C800B42012 /* Dataloader.swift in Sources */,
 				F940D3CD244F6BC600B42012 /* PageImageViewControler.swift in Sources */,
@@ -4940,6 +5001,7 @@
 /* Begin XCBuildConfiguration section */
 		F9055202244F653C0046C76E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 282BB1E605DA04286F6A5839 /* Pods-TripListTV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				CODE_SIGN_ENTITLEMENTS = TripListTV/TripListTV.entitlements;
@@ -4963,6 +5025,7 @@
 		};
 		F9055203244F653C0046C76E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2A836E1965D213D556E9D03 /* Pods-TripListTV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				CODE_SIGN_ENTITLEMENTS = TripListTV/TripListTV.entitlements;

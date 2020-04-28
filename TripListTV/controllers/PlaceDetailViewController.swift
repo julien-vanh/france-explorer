@@ -11,32 +11,36 @@ import UIKit
 import TVUIKit
 import MapKit
 import CoreData
+import TvOSMoreButton
+import TvOSTextViewer
 
-let MAX_ITEM_IN_HISTORY = 30
-
-protocol PlaceDetailViewControllerDelegate {
-    func shouldRedirectToPage(place: Place)
-}
 
 class PlaceDetailViewController: UIViewController {
     var delegate:PlaceDetailViewControllerDelegate?
     var place: Place = PlaceStore.shared.getRandom(count: 1, premium: false)[0]
     var mustScrollToTop = true
     
+    
+    @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var descriptionMoreButton: TvOSMoreButton!
     @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var thumbnailWidthConstraint: NSLayoutConstraint!
-    @IBOutlet weak var extractTextView: UITextView!
-    @IBOutlet weak var extractHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var dreamCaptionButton: TVCaptionButtonView!
+    @IBOutlet weak var exploreCaptionButton: TVCaptionButtonView!
     
-    @IBOutlet weak var favoriteCaptionButton: TVCaptionButtonView!
     
+    @IBOutlet weak var imagesView: UIView!
+    @IBOutlet weak var imagesTitleLabel: UILabel!
     @IBOutlet weak var imagesCollectionView: UICollectionView!
     @IBOutlet weak var imagesHeightConstraint: NSLayoutConstraint!
     
-    @IBOutlet weak var linksCollectionView: UICollectionView!
-    @IBOutlet weak var linksHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var associatesView: UIView!
+    @IBOutlet weak var associatesTitleLabel: UILabel!
+    @IBOutlet weak var associatesCollectionView: UICollectionView!
     @IBOutlet weak var creditLabel: UILabel!
     
     
@@ -48,7 +52,12 @@ class PlaceDetailViewController: UIViewController {
     private var linkedPlaces: [Place] = []
     private var dreams: [Dream] = [] {
         didSet {
-            displayBookmark()
+            displayDreamButton()
+        }
+    }
+    private var completions: [Completion] = [] {
+        didSet {
+            displayExploreButton()
         }
     }
     
@@ -62,21 +71,24 @@ class PlaceDetailViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-      super.viewWillAppear(animated)
+        super.viewWillAppear(animated)
       
-      guard let appDelegate =
-        UIApplication.shared.delegate as? AppDelegate else {
-          return
-      }
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
       
-      let managedContext = appDelegate.persistentContainer.viewContext
-      let fetchRequest = NSFetchRequest<Dream>(entityName: "Dream")
-      
-      do {
-        dreams = try managedContext.fetch(fetchRequest)
-      } catch let error as NSError {
-        print("Could not fetch. \(error), \(error.userInfo)")
-      }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest1 = NSFetchRequest<Dream>(entityName: "Dream")
+        let fetchRequest2 = NSFetchRequest<Completion>(entityName: "Completion")
+        fetchRequest2.predicate = NSPredicate(format: "placeId == %@", place.id)
+        
+        do {
+            dreams = try managedContext.fetch(fetchRequest1)
+            completions = try managedContext.fetch(fetchRequest2)
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
     }
     
     
@@ -85,48 +97,83 @@ class PlaceDetailViewController: UIViewController {
         scrollView.delegate = self
         titleLabel.text = ""
         
-        extractTextView.text = ""
-        extractTextView.isSelectable = true
-        extractTextView.panGestureRecognizer.allowedTouchTypes = [NSNumber(value: UITouch.TouchType.indirect.rawValue)]
-        
         imagesCollectionView.delegate = self
         imagesCollectionView.dataSource = self
         imagesCollectionView.register(UINib(nibName: "ImageViewCell", bundle: nil), forCellWithReuseIdentifier: "ImageViewCell")
+        //imagesView.addBlur(0.5, style: .light)
+        imagesTitleLabel.text = NSLocalizedString("Images associées", comment: "")
+        imagesTitleLabel.textColor = .lightGray
+        imagesView.addSubview(imagesTitleLabel)
+        imagesView.addSubview(imagesCollectionView)
         
-        linksCollectionView.delegate = self
-        linksCollectionView.dataSource = self
-        linksCollectionView.register(UINib(nibName: "PlaceCell", bundle: nil), forCellWithReuseIdentifier: "PlaceCell")
+        associatesCollectionView.delegate = self
+        associatesCollectionView.dataSource = self
+        associatesCollectionView.register(UINib(nibName: "PlaceCell", bundle: nil), forCellWithReuseIdentifier: "PlaceCell")
+        associatesView.addBlur(0.5, style: .light)
+        associatesTitleLabel.text = NSLocalizedString("Découvrez aussi", comment: "")
+        associatesTitleLabel.textColor = .lightGray
+        associatesView.addSubview(associatesTitleLabel)
+        associatesView.addSubview(associatesCollectionView)
         
         addressLabel.text = ""
         creditLabel.text = ""
     }
     
-    private func displayBookmark() {
+    private func displayDreamButton() {
         if dreams.contains(where: { (dream) -> Bool in
             return dream.placeId == self.place.id
         }) {
-            favoriteCaptionButton.contentImage = UIImage(systemName: "text.badge.minus", withConfiguration: buttonImageConfig)
-            favoriteCaptionButton.title = NSLocalizedString("Retirer du Voyage", comment: "")
+            dreamCaptionButton.contentImage = UIImage(systemName: "text.badge.minus", withConfiguration: buttonImageConfig)
+            dreamCaptionButton.title = NSLocalizedString("Retirer du Voyage", comment: "")
         } else {
-            favoriteCaptionButton.contentImage = UIImage(systemName: "text.badge.plus", withConfiguration: buttonImageConfig)
-            favoriteCaptionButton.title = NSLocalizedString("Ajouter au Voyage", comment: "")
+            dreamCaptionButton.contentImage = UIImage(systemName: "text.badge.plus", withConfiguration: buttonImageConfig)
+            dreamCaptionButton.title = NSLocalizedString("Ajouter au Voyage", comment: "")
         }
-        favoriteCaptionButton.subtitle = ""
+        dreamCaptionButton.subtitle = ""
+        dreamCaptionButton.isHidden = false
+    }
+    
+    private func displayExploreButton(){
+        if completions.contains(where: { (completion) -> Bool in
+            return completion.placeId == self.place.id
+        }) {
+            exploreCaptionButton.contentImage = UIImage(systemName: "checkmark.circle.fill", withConfiguration: buttonImageConfig)
+            exploreCaptionButton.title = NSLocalizedString("Exploré", comment: "")
+        } else {
+            exploreCaptionButton.contentImage = UIImage(systemName: "circle", withConfiguration: buttonImageConfig)
+            exploreCaptionButton.title = NSLocalizedString("Exploré", comment: "")
+        }
+        exploreCaptionButton.subtitle = ""
+        exploreCaptionButton.isHidden = false
     }
     
     private func displayPageContent(){
         titleLabel.text = place.titleLocalized
-        displayDescription()
+        
+        categoryLabel.text = PlaceStore.shared.getCategory(placeCategory: place.category).title
+        categoryLabel.textColor = AppStyle.color(for: place.category)
+        
+        if let descriptionLocalized = place.descriptionLocalized {
+            descriptionMoreButton.text = descriptionLocalized.content
+            descriptionMoreButton.buttonWasPressed = {
+                [weak self] text in
+                self?.moreButtonWasPressed(text: descriptionLocalized.content)
+            }
+        } else {
+            descriptionMoreButton.isHidden = true
+        }
+        
         displayAddressLabel()
         displayMap()
         displayCredits()
         
         if place.illustration != nil {
             thumbnailImageView.image = ImageStore.shared.uiimage(forPlace: place)
+            backgroundImageView.image = ImageStore.shared.uiimage(forPlace: place)
+            backgroundImageView.addBlur(1, style: .dark)
         } else {
-            //Pas d'image, le texte prend toute la largeur, réduction de la hauteur pour reter au dessus des boutons
+            //Pas d'image, le texte prend toute la largeur
             thumbnailWidthConstraint.constant = 0.0
-            extractHeightConstraint.constant = 600.0
         }
         
         if let wikiPageId = self.place.wikiPageId {
@@ -151,45 +198,24 @@ class PlaceDetailViewController: UIViewController {
         
         self.view.setNeedsUpdateConstraints()
         self.view.layoutIfNeeded()
-        self.linksCollectionView.reloadData()
-        
-        
+        self.associatesCollectionView.reloadData()
     }
     
-    private func displayDescription(){
-        
-        let text = NSMutableAttributedString(string: "")
-        
-        let categoryAttributes: [NSAttributedString.Key: Any] = [
-            NSAttributedString.Key.foregroundColor: AppStyle.color(for: place.category),
-            .font: UIFont.systemFont(ofSize: 50),
-        ]
-        
-        let description = NSAttributedString(string: PlaceStore.shared.getCategory(placeCategory: self.place.category).title, attributes: categoryAttributes)
-        text.append(description)
-        
-        
-        if let descriptionLocalized = place.descriptionLocalized {
-            let lineContentAttributes: [NSAttributedString.Key: Any] = [
-                NSAttributedString.Key.foregroundColor: UIColor.black,
-                .font: UIFont.systemFont(ofSize: 40),
-            ]
-            
-            let description = NSAttributedString(string: "\n\n"+descriptionLocalized.content, attributes: lineContentAttributes)
-            text.append(description)
-        }
-        
-        extractTextView.attributedText = text
+    private func moreButtonWasPressed(text: String) -> Void {
+        let viewController = TvOSTextViewerViewController()
+        viewController.text = text
+        viewController.textEdgeInsets = UIEdgeInsets(top: 100, left: 250, bottom: 100, right: 250)
+        present(viewController, animated: true)
     }
     
     private func displayAddressLabel(){
         let lineTitleAttributes: [NSAttributedString.Key: Any] = [
-            NSAttributedString.Key.foregroundColor: UIColor.darkGray,
-            .font: UIFont.boldSystemFont(ofSize: 30),
+            NSAttributedString.Key.foregroundColor: UIColor.lightGray,
+            .font: UIFont.systemFont(ofSize: 26),
         ]
         let lineContentAttributes: [NSAttributedString.Key: Any] = [
-            NSAttributedString.Key.foregroundColor: UIColor.black,
-            .font: UIFont.systemFont(ofSize: 40),
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            .font: UIFont.systemFont(ofSize: 26),
         ]
 
         let text = NSMutableAttributedString(string: "")
@@ -198,7 +224,7 @@ class PlaceDetailViewController: UIViewController {
             region.id == place.regionId
         }
         if let regionFound = region {
-            let regionTitle = NSAttributedString(string: NSLocalizedString(NSLocalizedString("Région", comment: ""), comment: ""), attributes: lineTitleAttributes)
+            let regionTitle = NSAttributedString(string: NSLocalizedString("Région", comment: "").uppercased()+" :", attributes: lineTitleAttributes)
             text.append(regionTitle)
             
             let regionContent = NSAttributedString(string: "\n"+regionFound.name+"\n\n", attributes: lineContentAttributes)
@@ -206,7 +232,7 @@ class PlaceDetailViewController: UIViewController {
         }
         
         if let address = place.address {
-            let addressTitle = NSAttributedString(string: NSLocalizedString("Adresse", comment: ""), attributes: lineTitleAttributes)
+            let addressTitle = NSAttributedString(string: NSLocalizedString("Adresse", comment: "").uppercased()+" :", attributes: lineTitleAttributes)
             text.append(addressTitle)
             
             let addressContent = NSAttributedString(string: "\n"+address+"\n\n", attributes: lineContentAttributes)
@@ -214,7 +240,7 @@ class PlaceDetailViewController: UIViewController {
         }
         
         if let website = place.website {
-            let addressTitle = NSAttributedString(string: NSLocalizedString("Site web", comment: ""), attributes: lineTitleAttributes)
+            let addressTitle = NSAttributedString(string: NSLocalizedString("Site web", comment: "").uppercased()+" :", attributes: lineTitleAttributes)
             text.append(addressTitle)
             
             let addressContent = NSAttributedString(string: "\n"+website+"\n\n", attributes: lineContentAttributes)
@@ -230,14 +256,24 @@ class PlaceDetailViewController: UIViewController {
         let span = MKCoordinateSpan(latitudeDelta: 0.0, longitudeDelta: 2.0)
         let region = MKCoordinateRegion(center: place.locationCoordinate, span: span)
         map.setRegion(region, animated: true)
+        
+        map.layer.cornerRadius = 15
+        map.clipsToBounds = true
     }
     
     private func displayCredits(){
         var credits = ""
         if place.illustration != nil {
-            credits += place.illustration!.credit + " " + place.illustration!.source + "\n"
+            credits += place.illustration!.credit
+            credits += " "
+            credits += NSLocalizedString("Photo", comment: "")
+            credits += " "
+            credits += place.illustration!.source
+            credits += "\n"
         }
         if (self.place.descriptionLocalized != nil){
+            credits += NSLocalizedString("Texte", comment: "")
+            credits += " "
             credits += self.place.descriptionLocalized!.credit
         }
         creditLabel.text = credits
@@ -264,45 +300,46 @@ class PlaceDetailViewController: UIViewController {
         appDelegate.saveContext()
     }
     
-    private func addDream(){
-        
-        
-    }
-    
-    private func removeDream(){
+    @IBAction func exploreClickedAction(_ sender: Any) {
         guard let appDelegate =
           UIApplication.shared.delegate as? AppDelegate else {
             return
         }
+        let context = appDelegate.persistentContainer.viewContext
         
+        
+        if self.completions.first != nil {
+            self.completions.forEach({
+                context.delete($0)
+            })
+            completions = []
+        } else {
+            let completion = Completion(context: context)
+            completion.configure(placeId: self.place.id)
+            completions.append(completion)
+            
+            // Si dans la Dreams liste, on complete le Dream
+            if let index = dreams.firstIndex(where: {$0.placeId == place.id}) {
+                let item = self.dreams[index]
+                item.completed = true
+            }
+        }
         appDelegate.saveContext()
     }
     
     
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
-        if context.nextFocusedView == self.extractTextView {
-            extractTextView.backgroundColor = UIColor.white
-        } else {
-            extractTextView.backgroundColor = UIColor.clear
-        }
         
-        let must:Bool = (context.nextFocusedView == self.extractTextView || context.nextFocusedView == self.favoriteCaptionButton)
+        let must:Bool = (
+            context.nextFocusedView == self.descriptionMoreButton ||
+            context.nextFocusedView == self.dreamCaptionButton ||
+            context.nextFocusedView == self.exploreCaptionButton
+        )
         self.mustScrollToTop = must
     }
     
     override func shouldUpdateFocus(in context: UIFocusUpdateContext) -> Bool {
-        if context.previouslyFocusedView == self.extractTextView {
-            if extractTextView.contentOffset.y >= (extractTextView.contentSize.height - extractTextView.frame.size.height) {
-                //extractView scoll reached the bottom
-                return true
-            }
-            
-            if context.nextFocusedView == self.favoriteCaptionButton {
-                //one can always go to favorites button
-                return true
-            }
-            return false
-        }
+        
         return true
     }
  
@@ -310,7 +347,7 @@ class PlaceDetailViewController: UIViewController {
 
 extension PlaceDetailViewController : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == self.linksCollectionView {
+        if collectionView == self.associatesCollectionView {
             return linkedPlaces.count
         } else {
             return self.pageImages.count
@@ -318,7 +355,7 @@ extension PlaceDetailViewController : UICollectionViewDelegate, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == self.linksCollectionView {
+        if collectionView == self.associatesCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlaceCell", for: indexPath) as! PlaceCell
             cell.configure(place: linkedPlaces[indexPath.item])
             return cell
@@ -331,7 +368,7 @@ extension PlaceDetailViewController : UICollectionViewDelegate, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if collectionView == self.linksCollectionView {
+        if collectionView == self.associatesCollectionView {
             let place = PlaceStore.shared.getAssociatedPlaceTo(place: self.place, count: 6, premium: false)[indexPath.item]
             if delegate != nil {
                 delegate?.shouldRedirectToPage(place: place)

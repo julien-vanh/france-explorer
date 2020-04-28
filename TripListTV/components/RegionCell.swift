@@ -24,7 +24,6 @@ class RegionCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.titleLabel.textColor = .white
     }
         
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
@@ -32,7 +31,6 @@ class RegionCell: UICollectionViewCell {
         
         
         coordinator.addCoordinatedAnimations({
-            self.titleLabel.textColor = self.isFocused ? UIColor.explored : .white
             self.titleLabel.font = self.titleLabel.font.withSize(self.isFocused ? 42 : 38)
         }, completion: nil)
     }
