@@ -11,6 +11,7 @@ import UIKit
 class RegionViewController: UIViewController  {
     var region: PlaceRegion = PlaceStore.shared.getRegions()[0]
     var placesModel: [[Place]] = []
+    
 
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -26,7 +27,8 @@ class RegionViewController: UIViewController  {
         placesModel = self.getViewModel(places: places)
         
         self.initViews()
-    }
+        
+        }
     
     private func getViewModel(places: [Place]) -> [[Place]]{
         var result:[[Place]] = []
@@ -70,7 +72,7 @@ extension RegionViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
+        return 70
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -98,8 +100,8 @@ extension RegionViewController: UITableViewDelegate, UITableViewDataSource {
         let titleLabel = UILabel()
         titleLabel.textColor = AppStyle.color(for: place.category)
         titleLabel.textAlignment = .left
-        titleLabel.font = titleLabel.font.withSize(40)
-        titleLabel.frame = CGRect(x: 90, y: 0, width: tableView.bounds.width, height: 50)
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 30)
+        titleLabel.frame = CGRect(x: 90, y: 0, width: tableView.bounds.width, height: 70)
         titleLabel.text = PlaceStore.shared.getCategory(placeCategory: place.category).titlePlural
         headerView.addSubview(titleLabel)
         return headerView

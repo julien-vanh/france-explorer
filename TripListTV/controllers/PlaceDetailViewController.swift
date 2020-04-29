@@ -60,14 +60,26 @@ class PlaceDetailViewController: UIViewController {
             displayExploreButton()
         }
     }
+    private var focusGuide = UIFocusGuide()
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.linkedPlaces = PlaceStore.shared.getAssociatedPlaceTo(place: place, count: 6, premium: false)
+        self.linkedPlaces = PlaceStore.shared.getAssociatedPlaceTo(place: place, count: 10, premium: false)
         
         initViews()
         displayPageContent()
+        
+        //Pour aider le passage de "Images associée" au bouton "Exploré" en remontant
+        self.view.addLayoutGuide(self.focusGuide)
+        self.focusGuide.leftAnchor.constraint(equalTo: self.exploreCaptionButton.rightAnchor).isActive = true
+        self.focusGuide.topAnchor.constraint(equalTo: self.exploreCaptionButton.topAnchor).isActive = true
+        self.focusGuide.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        self.focusGuide.heightAnchor.constraint(equalTo: self.exploreCaptionButton.heightAnchor).isActive = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -327,6 +339,13 @@ class PlaceDetailViewController: UIViewController {
     
     
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+        super.didUpdateFocus(in: context, with: coordinator)
+        
+        if context.previouslyFocusedView == self.exploreCaptionButton {
+            self.focusGuide.preferredFocusEnvironments = nil
+        } else {
+            self.focusGuide.preferredFocusEnvironments = [self.exploreCaptionButton]
+        }
         
         let must:Bool = (
             context.nextFocusedView == self.descriptionMoreButton ||
@@ -337,10 +356,8 @@ class PlaceDetailViewController: UIViewController {
     }
     
     override func shouldUpdateFocus(in context: UIFocusUpdateContext) -> Bool {
-        
         return true
     }
- 
 }
 
 extension PlaceDetailViewController : UICollectionViewDelegate, UICollectionViewDataSource {
