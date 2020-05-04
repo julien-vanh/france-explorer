@@ -29,7 +29,7 @@
         <!--Parameters-->
         <scene sceneID="5MJ-XY-ibb">
             <objects>
-                <viewController id="Zjn-vc-aLe" userLabel="Parameters" customClass="ParametersViewController" customModule="TripListTV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Zjn-vc-aLe" userLabel="Parameters" customClass="ParametersViewController" customModule="France_Explorer" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ABl-TG-2FB"/>
                         <viewControllerLayoutGuide type="bottom" id="DB8-Q0-9dS"/>
@@ -93,7 +93,7 @@
         <!--Images Page View Controller-->
         <scene sceneID="8hi-QA-s8J">
             <objects>
-                <pageViewController storyboardIdentifier="ImagesPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="kGY-Ov-YGI" customClass="ImagesPageViewController" customModule="TripListTV" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="ImagesPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="kGY-Ov-YGI" customClass="ImagesPageViewController" customModule="France_Explorer" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faj-8s-OVj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7273" y="-289"/>
@@ -101,7 +101,7 @@
         <!--Page Image View Controller-->
         <scene sceneID="sGM-aC-ZOu">
             <objects>
-                <viewController storyboardIdentifier="PageImageViewController" id="UPD-jn-J2l" customClass="PageImageViewController" customModule="TripListTV" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PageImageViewController" id="UPD-jn-J2l" customClass="PageImageViewController" customModule="France_Explorer" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GFJ-AJ-9GS"/>
                         <viewControllerLayoutGuide type="bottom" id="K0A-V5-WR0"/>
@@ -187,7 +187,7 @@
         <!--Search Result-->
         <scene sceneID="blo-VN-TbA">
             <objects>
-                <viewController storyboardIdentifier="SearchResultViewController" id="PCr-Km-CQa" userLabel="Search Result" customClass="SearchResultViewController" customModule="TripListTV" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchResultViewController" id="PCr-Km-CQa" userLabel="Search Result" customClass="SearchResultViewController" customModule="France_Explorer" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="j03-R0-rSY"/>
                         <viewControllerLayoutGuide type="bottom" id="uZl-ut-3xx"/>
@@ -227,7 +227,7 @@
         <!--Region-->
         <scene sceneID="tCI-rL-EbX">
             <objects>
-                <viewController storyboardIdentifier="RegionViewController" id="0iQ-u6-oqB" userLabel="Region" customClass="RegionViewController" customModule="TripListTV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegionViewController" id="0iQ-u6-oqB" userLabel="Region" customClass="RegionViewController" customModule="France_Explorer" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s6l-H5-5OF"/>
                         <viewControllerLayoutGuide type="bottom" id="3BI-jp-I7P"/>
@@ -294,7 +294,7 @@
         <!--Page-->
         <scene sceneID="Dp8-ae-qwz">
             <objects>
-                <viewController storyboardIdentifier="PlaceDetailViewController" id="qPI-qK-Ao7" userLabel="Page" customClass="PlaceDetailViewController" customModule="TripListTV" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlaceDetailViewController" id="qPI-qK-Ao7" userLabel="Page" customClass="PlaceDetailViewController" customModule="France_Explorer" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="md4-Xf-qgi"/>
                         <viewControllerLayoutGuide type="bottom" id="6Dd-eP-DcV"/>
@@ -570,7 +570,7 @@
         <!--Discover-->
         <scene sceneID="bxn-fe-oDW">
             <objects>
-                <viewController id="aQ4-YD-Uk7" userLabel="Discover" customClass="DiscoverViewController" customModule="TripListTV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aQ4-YD-Uk7" userLabel="Discover" customClass="DiscoverViewController" customModule="France_Explorer" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9Nd-N4-PCx"/>
                         <viewControllerLayoutGuide type="bottom" id="TSv-Dv-5BV"/>
@@ -703,7 +703,7 @@
         <!--DreamList-->
         <scene sceneID="1CX-eE-Laj">
             <objects>
-                <viewController id="pp3-de-A1l" userLabel="DreamList" customClass="DreamListViewController" customModule="TripListTV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pp3-de-A1l" userLabel="DreamList" customClass="DreamListViewController" customModule="France_Explorer" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4VT-cT-k4v"/>
                         <viewControllerLayoutGuide type="bottom" id="hAg-9C-8Ke"/>

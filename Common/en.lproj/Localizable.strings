@@ -18,6 +18,7 @@
 "Voyage" = "My Trip";
 "Progression" = "Progress";
 "Paramètres" = "Parameters";
+"Plus" = "Plus";
 
 //LaunchCarousel
 "Bienvenue !" = "Bonjour !";
@@ -149,3 +150,7 @@
 "Détails" = "Details";
 
 "Hôtels à proximité" = "Hotels nearby";
+
+//
+"Partout avec vous" = "Everywhere with you";
+"Retrouvez l'application complète sur iPhone et iPad." = "Get the complete application on iPhone and iPad.";

@@ -274,9 +274,9 @@ class PlaceDetailViewController: UIViewController {
     private func displayCredits(){
         var credits = ""
         if place.illustration != nil {
-            credits += place.illustration!.credit
-            credits += " "
             credits += NSLocalizedString("Photo", comment: "")
+            credits += " "
+            credits += place.illustration!.credit
             credits += " "
             credits += place.illustration!.source
             credits += "\n"

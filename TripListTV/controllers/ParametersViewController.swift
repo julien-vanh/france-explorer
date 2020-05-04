@@ -19,7 +19,7 @@ class ParametersViewController: UIViewController  {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.tabBarItem = UITabBarItem(title: NSLocalizedString("Paramètres", comment: ""), image: nil, tag: 1)
+        self.tabBarItem = UITabBarItem(title: NSLocalizedString("Plus", comment: ""), image: nil, tag: 1)
     }
     
     override func viewDidLoad() {
