@@ -30,7 +30,7 @@ class DiscoverViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.places = PlaceStore.shared.getRandom(count: 20, premium: false)
+        self.places = PlaceStore.shared.getRandom(count: 20, premium: TVAppState.shared.isPremium)
         self.regions = PlaceStore.shared.getRegions().sorted(by: { (r1, r2) -> Bool in
             r1.name < r2.name
         })
@@ -39,7 +39,7 @@ class DiscoverViewController: UIViewController  {
     }
     
     private func initViews(){
-        backgroundImageView.image = ImageStore.shared.uiimage(forPlace: PlaceStore.shared.get(id: "Bordeaux"))
+        backgroundImageView.image = ImageStore.shared.uiimage(forPlace: PlaceStore.shared.get(id: "GouffredeProumeyssac"))
         backgroundImageView.addBlur(1, style: .dark)
         selectionLabel.text = NSLocalizedString("Suggestions", comment: "")
         

@@ -1367,7 +1367,6 @@
 		F940E0B42456EE5D00B42012 /* RegionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940E0B22456EE5D00B42012 /* RegionCell.swift */; };
 		F940E0B6245700D100B42012 /* CatalogueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940E0B5245700D100B42012 /* CatalogueTableViewCell.swift */; };
 		F940E0BC245798CD00B42012 /* Blurage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940E0BB245798CD00B42012 /* Blurage.swift */; };
-		F940E0BE24579ABD00B42012 /* patron.png in Resources */ = {isa = PBXBuildFile; fileRef = F940E0BD24579ABD00B42012 /* patron.png */; };
 		F940E0C02458363F00B42012 /* PlaceDetailViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940E0BF2458363F00B42012 /* PlaceDetailViewControllerDelegate.swift */; };
 		F94B49702401A42A0055956D /* SeparationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B496F2401A42A0055956D /* SeparationBar.swift */; };
 		F94B49732401DE3D0055956D /* PlaceViewCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94B49722401DE3D0055956D /* PlaceViewCompact.swift */; };
@@ -1433,6 +1432,7 @@
 		F9A2C91424276EBC00883A52 /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2C91324276EBC00883A52 /* IAPManager.swift */; };
 		F9A2C9162427757000883A52 /* ProductsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2C9152427757000883A52 /* ProductsStore.swift */; };
 		F9A2C9182427EB0E00883A52 /* RatingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2C9172427EB0E00883A52 /* RatingManager.swift */; };
+		F9A3B30E246012B4009FDCB1 /* TVAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A3B30D246012B4009FDCB1 /* TVAppState.swift */; };
 		F9AB64C0240AD7520061CD52 /* PlaceButtonsMini.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64BF240AD7520061CD52 /* PlaceButtonsMini.swift */; };
 		F9AB64C2240AD9CE0061CD52 /* VibrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64C1240AD9CE0061CD52 /* VibrationManager.swift */; };
 		F9AB64C4240BD7720061CD52 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64C3240BD7720061CD52 /* Parameters.swift */; };
@@ -1454,6 +1454,8 @@
 		F9D49FA12402917C005A2B8E /* PlaceGridCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D49FA02402917C005A2B8E /* PlaceGridCompact.swift */; };
 		F9D533622458D5CB0055580E /* languedoc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9D533612458D5CB0055580E /* languedoc.jpg */; };
 		F9D533642458D6AD0055580E /* franchecomte.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9D533632458D6AC0055580E /* franchecomte.jpg */; };
+		F9D53366245ACA910055580E /* ParametersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D53365245ACA910055580E /* ParametersViewController.swift */; };
+		F9D53368245AD7220055580E /* qrcode.png in Resources */ = {isa = PBXBuildFile; fileRef = F9D53367245AD7220055580E /* qrcode.png */; };
 		F9D82E5D2417E3DA003961AD /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D82E5C2417E3DA003961AD /* BlurView.swift */; };
 		F9D82E5F2417FB97003961AD /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D82E5E2417FB97003961AD /* PageViewController.swift */; };
 		F9DC21D423E0CEC20023B8EF /* ProgressionMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC21D323E0CEC20023B8EF /* ProgressionMapController.swift */; };
@@ -2183,7 +2185,6 @@
 		F940E0B22456EE5D00B42012 /* RegionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionCell.swift; sourceTree = "<group>"; };
 		F940E0B5245700D100B42012 /* CatalogueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueTableViewCell.swift; sourceTree = "<group>"; };
 		F940E0BB245798CD00B42012 /* Blurage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blurage.swift; sourceTree = "<group>"; };
-		F940E0BD24579ABD00B42012 /* patron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = patron.png; sourceTree = "<group>"; };
 		F940E0BF2458363F00B42012 /* PlaceDetailViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewControllerDelegate.swift; sourceTree = "<group>"; };
 		F94B496F2401A42A0055956D /* SeparationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparationBar.swift; sourceTree = "<group>"; };
 		F94B49722401DE3D0055956D /* PlaceViewCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewCompact.swift; sourceTree = "<group>"; };
@@ -2241,6 +2242,7 @@
 		F9A2C91324276EBC00883A52 /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
 		F9A2C9152427757000883A52 /* ProductsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsStore.swift; sourceTree = "<group>"; };
 		F9A2C9172427EB0E00883A52 /* RatingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingManager.swift; sourceTree = "<group>"; };
+		F9A3B30D246012B4009FDCB1 /* TVAppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVAppState.swift; sourceTree = "<group>"; };
 		F9AB64BF240AD7520061CD52 /* PlaceButtonsMini.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceButtonsMini.swift; sourceTree = "<group>"; };
 		F9AB64C1240AD9CE0061CD52 /* VibrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationManager.swift; sourceTree = "<group>"; };
 		F9AB64C3240BD7720061CD52 /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
@@ -2260,6 +2262,8 @@
 		F9D49FA02402917C005A2B8E /* PlaceGridCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceGridCompact.swift; sourceTree = "<group>"; };
 		F9D533612458D5CB0055580E /* languedoc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = languedoc.jpg; sourceTree = "<group>"; };
 		F9D533632458D6AC0055580E /* franchecomte.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = franchecomte.jpg; sourceTree = "<group>"; };
+		F9D53365245ACA910055580E /* ParametersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersViewController.swift; sourceTree = "<group>"; };
+		F9D53367245AD7220055580E /* qrcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qrcode.png; sourceTree = "<group>"; };
 		F9D82E5C2417E3DA003961AD /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		F9D82E5E2417FB97003961AD /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		F9DC21D323E0CEC20023B8EF /* ProgressionMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressionMapController.swift; sourceTree = "<group>"; };
@@ -2326,6 +2330,7 @@
 			children = (
 				F9055206244F65A90046C76E /* TripListTV.entitlements */,
 				F90551F2244F65390046C76E /* AppDelegate.swift */,
+				F9A3B30D246012B4009FDCB1 /* TVAppState.swift */,
 				F940E07B2453340A00B42012 /* assets */,
 				F940D3D0244F6E5700B42012 /* components */,
 				F940D3C7244F6B8F00B42012 /* controllers */,
@@ -2392,9 +2397,9 @@
 			isa = PBXGroup;
 			children = (
 				F940D3CA244F6BB500B42012 /* DiscoverViewController.swift */,
+				F9D53365245ACA910055580E /* ParametersViewController.swift */,
 				F940E07924532FD200B42012 /* RegionViewController.swift */,
 				F940D3D6244F714200B42012 /* PlaceDetailViewController.swift */,
-				F940E0BD24579ABD00B42012 /* patron.png */,
 				F940E0752451D54B00B42012 /* DreamListViewController.swift */,
 				F940D3C8244F6B9E00B42012 /* SearchResultViewController.swift */,
 				F940D3CE244F6BD100B42012 /* ImagesPageViewController.swift */,
@@ -3080,28 +3085,8 @@
 		F940E07B2453340A00B42012 /* assets */ = {
 			isa = PBXGroup;
 			children = (
-				F940E09924534BC600B42012 /* alsace.jpg */,
-				F940E09024534BC400B42012 /* aquitaine.jpg */,
-				F940E09524534BC500B42012 /* auvergne.jpg */,
-				F940E08824534BC300B42012 /* bassenormandie.jpg */,
-				F940E09724534BC500B42012 /* bourgogne.jpg */,
-				F940E09324534BC500B42012 /* bretagne.jpg */,
-				F940E09424534BC500B42012 /* centre.jpg */,
-				F940E08E24534BC400B42012 /* champagne.jpg */,
-				F940E09124534BC400B42012 /* corse.jpg */,
-				F9D533632458D6AC0055580E /* franchecomte.jpg */,
-				F940E08924534BC300B42012 /* hautenormandie.jpg */,
-				F940E08F24534BC400B42012 /* iledefrance.jpg */,
-				F9D533612458D5CB0055580E /* languedoc.jpg */,
-				F940E0AC24534D6600B42012 /* limousin.jpg */,
-				F940E09224534BC400B42012 /* lorraine.jpg */,
-				F940E0AE24534DA300B42012 /* midi.jpg */,
-				F940E08C24534BC400B42012 /* nord.jpg */,
-				F940E08D24534BC400B42012 /* paysdelaloire.jpg */,
-				F940E08B24534BC300B42012 /* picardie.jpg */,
-				F940E09624534BC500B42012 /* poitou.jpg */,
-				F940E09824534BC500B42012 /* provence.jpg */,
-				F940E08A24534BC300B42012 /* rhone.jpg */,
+				F9D53367245AD7220055580E /* qrcode.png */,
+				F9D53369245AD7280055580E /* regions */,
 			);
 			path = assets;
 			sourceTree = "<group>";
@@ -3256,6 +3241,35 @@
 				F9055211244F66BB0046C76E /* places.json */,
 			);
 			path = assets;
+			sourceTree = "<group>";
+		};
+		F9D53369245AD7280055580E /* regions */ = {
+			isa = PBXGroup;
+			children = (
+				F940E09924534BC600B42012 /* alsace.jpg */,
+				F940E09024534BC400B42012 /* aquitaine.jpg */,
+				F940E09524534BC500B42012 /* auvergne.jpg */,
+				F940E08824534BC300B42012 /* bassenormandie.jpg */,
+				F940E09724534BC500B42012 /* bourgogne.jpg */,
+				F940E09324534BC500B42012 /* bretagne.jpg */,
+				F940E09424534BC500B42012 /* centre.jpg */,
+				F940E08E24534BC400B42012 /* champagne.jpg */,
+				F940E09124534BC400B42012 /* corse.jpg */,
+				F9D533632458D6AC0055580E /* franchecomte.jpg */,
+				F940E08924534BC300B42012 /* hautenormandie.jpg */,
+				F940E08F24534BC400B42012 /* iledefrance.jpg */,
+				F9D533612458D5CB0055580E /* languedoc.jpg */,
+				F940E0AC24534D6600B42012 /* limousin.jpg */,
+				F940E09224534BC400B42012 /* lorraine.jpg */,
+				F940E0AE24534DA300B42012 /* midi.jpg */,
+				F940E08C24534BC400B42012 /* nord.jpg */,
+				F940E08D24534BC400B42012 /* paysdelaloire.jpg */,
+				F940E08B24534BC300B42012 /* picardie.jpg */,
+				F940E09624534BC500B42012 /* poitou.jpg */,
+				F940E09824534BC500B42012 /* provence.jpg */,
+				F940E08A24534BC300B42012 /* rhone.jpg */,
+			);
+			path = regions;
 			sourceTree = "<group>";
 		};
 		F9D82E602419491E003961AD /* subviews */ = {
@@ -3428,6 +3442,7 @@
 				F940DD4C244F7DCF00B42012 /* CascadesduHrissonHaut.jpg in Resources */,
 				F940DC2E244F7DCF00B42012 /* PalaisdesducsetdesEtatsdeBourgogne.jpg in Resources */,
 				F940E0A624534BC600B42012 /* centre.jpg in Resources */,
+				F9D53368245AD7220055580E /* qrcode.png in Resources */,
 				F940DDDE244F7DCF00B42012 /* ParcnationaldelaVanoise.jpg in Resources */,
 				F940DE2E244F7DD000B42012 /* MusedesBeauxArtsdAgen.jpg in Resources */,
 				F940DDE6244F7DCF00B42012 /* Monuments.jpg in Resources */,
@@ -4010,7 +4025,6 @@
 				F940DE60244F7DD000B42012 /* SaintJeandeLuz.jpg in Resources */,
 				F940E02E244F7DD000B42012 /* ParlementdeBretagne.jpg in Resources */,
 				F940DDAE244F7DCF00B42012 /* ParcduPetitPrince.jpg in Resources */,
-				F940E0BE24579ABD00B42012 /* patron.png in Resources */,
 				F940DC72244F7DCF00B42012 /* OradoursurGlane.jpg in Resources */,
 				F940DD34244F7DCF00B42012 /* FortdeBrocliande.jpg in Resources */,
 				F940E0AA24534BC600B42012 /* provence.jpg in Resources */,
@@ -4864,12 +4878,14 @@
 				F940E0B02454973100B42012 /* TripList.xcdatamodeld in Sources */,
 				F940D3C9244F6B9E00B42012 /* SearchResultViewController.swift in Sources */,
 				F9811C1F244F68530098D608 /* WikiResponse.swift in Sources */,
+				F9A3B30E246012B4009FDCB1 /* TVAppState.swift in Sources */,
 				F9811C22244F68AF0098D608 /* Completion.swift in Sources */,
 				F940E0702450BF6B00B42012 /* PlaceAnnotationView.swift in Sources */,
 				F940D3C3244F69CF00B42012 /* AppStyle.swift in Sources */,
 				F9811C21244F68AF0098D608 /* Dream.swift in Sources */,
 				F9811C23244F68AF0098D608 /* Place.swift in Sources */,
 				F940D3DB244F738A00B42012 /* ImageViewCell.swift in Sources */,
+				F9D53366245ACA910055580E /* ParametersViewController.swift in Sources */,
 				F9811C25244F68AF0098D608 /* ThirdPartyMention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

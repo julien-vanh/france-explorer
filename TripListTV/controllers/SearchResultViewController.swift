@@ -29,7 +29,7 @@ class SearchResultViewController : UIViewController {
                 searchResultsPages = []
             }
             else {
-                searchResultsPages = PlaceStore.shared.getAllForSearch(search: filterString, premium: false)
+                searchResultsPages = PlaceStore.shared.getAllForSearch(search: filterString, premium: TVAppState.shared.isPremium)
             }
         }
     }

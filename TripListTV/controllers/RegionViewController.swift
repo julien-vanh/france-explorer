@@ -21,14 +21,10 @@ class RegionViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let places = PlaceStore.shared.getAllForRegion(regionId: region.id, premium: true).sorted(by: { (p1, p2) -> Bool in //TODO
-            return p1.popularity < p2.popularity
-        })
+        let places = PlaceStore.shared.getAllForRegion(regionId: region.id, premium: TVAppState.shared.isPremium)
         placesModel = self.getViewModel(places: places)
-        
         self.initViews()
-        
-        }
+    }
     
     private func getViewModel(places: [Place]) -> [[Place]]{
         var result:[[Place]] = []
@@ -38,7 +34,9 @@ class RegionViewController: UIViewController  {
                 return place.category == category.category
             }
             if placesOfCategory.count > 0 {
-                result.append(placesOfCategory)
+                result.append(placesOfCategory.sorted(by: { (p1, p2) -> Bool in
+                    return p1.popularity < p2.popularity
+                }))
             }
         }
         return result
@@ -47,7 +45,7 @@ class RegionViewController: UIViewController  {
 
     private func initViews(){
         self.titleLabel.text = region.name
-        self.descriptionLabel.text = "" //TODO
+        self.descriptionLabel.text = ""
         
         self.backgroundImage.image  = ImageStore.shared.uiimage(forRegion: region)
         

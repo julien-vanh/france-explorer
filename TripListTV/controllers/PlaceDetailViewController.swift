@@ -69,7 +69,7 @@ class PlaceDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.linkedPlaces = PlaceStore.shared.getAssociatedPlaceTo(place: place, count: 10, premium: false)
+        self.linkedPlaces = PlaceStore.shared.getAssociatedPlaceTo(place: place, count: 10, premium: TVAppState.shared.isPremium)
         
         initViews()
         displayPageContent()
@@ -384,7 +384,7 @@ extension PlaceDetailViewController : UICollectionViewDelegate, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == self.associatesCollectionView {
-            let place = PlaceStore.shared.getAssociatedPlaceTo(place: self.place, count: 6, premium: false)[indexPath.item]
+            let place = linkedPlaces[indexPath.item]
             if delegate != nil {
                 delegate?.shouldRedirectToPage(place: place)
             }

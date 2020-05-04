@@ -54,6 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let searchContainer = UISearchContainerViewController(searchController: searchController)
         searchContainer.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
+        
         return searchContainer
     }
     

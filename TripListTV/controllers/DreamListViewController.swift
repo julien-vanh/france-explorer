@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 
 class DreamListViewController: UIViewController {
+    @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var dreams: [Dream] = [] {
@@ -27,6 +28,10 @@ class DreamListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        backgroundImageView.image = ImageStore.shared.uiimage(forPlace: PlaceStore.shared.get(id: "ParcNaturelRegionaldeMillevachesenLimousin"))
+        backgroundImageView.addBlur(1, style: .dark)
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "PlaceCell", bundle: nil), forCellWithReuseIdentifier: "PlaceCell")
