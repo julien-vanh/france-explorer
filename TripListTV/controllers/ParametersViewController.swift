@@ -134,7 +134,9 @@ class ParametersViewController: UIViewController  {
             purchaseViewWidthConstraint.constant = 900
             
             if let product = TVProductsStore.shared.products.first {
-                purchaseButton.setTitle(NSLocalizedString("Acheter \(product.localizedPrice)", comment: ""), for: .normal)
+                purchaseButton.setTitle(String(format: NSLocalizedString("Acheter %@", comment: ""), product.localizedPrice), for: .normal)
+                
+                
                 restaureButton.setTitle(NSLocalizedString("Restaurer mes achats", comment: ""), for: .normal)
                 
                 purchaseButton.isHidden = false
