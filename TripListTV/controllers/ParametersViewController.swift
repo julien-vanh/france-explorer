@@ -34,17 +34,12 @@ class ParametersViewController: UIViewController  {
         buildViews()
         buildPurchaseView()
         
-        
         let store = TVProductsStore.shared
         self.products = store.products
-        
         _ = store.objectWillChange.sink { _ in
-            print("products changed", store.products)
             self.products = store.products
             self.buildPurchaseView()
         }
-        
-        print("viewDidLoad products", products)
     }
     
     @IBAction func purchaseAction(_ sender: Any) {
@@ -72,9 +67,7 @@ class ParametersViewController: UIViewController  {
     private func displayError(error: Error?){
         if let err = error {
             let alert = UIAlertController(title: NSLocalizedString("Erreur", comment: ""), message: err.localizedDescription, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: { _ in
-                print("The \"OK\" alert occured.")
-            }))
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default))
             self.present(alert, animated: true, completion: nil)
         }
     }
@@ -103,6 +96,10 @@ class ParametersViewController: UIViewController  {
             NSAttributedString.Key.foregroundColor: UIColor.white,
             .font: UIFont.systemFont(ofSize: 32),
         ]
+        let minilineContentAttributes: [NSAttributedString.Key: Any] = [
+            NSAttributedString.Key.foregroundColor: UIColor.gray,
+            .font: UIFont.systemFont(ofSize: 22),
+        ]
         let imageAttachment = NSTextAttachment()
         imageAttachment.image = UIImage(systemName: "plus")?.withTintColor(.yellow)
         let imageString = NSAttributedString(attachment: imageAttachment)
@@ -118,8 +115,11 @@ class ParametersViewController: UIViewController  {
         result.append(line1)
         
         result.append(imageString)
-        let line2 = NSAttributedString(string: " "+NSLocalizedString("Liste des destinations 100% hors-ligne.", comment: ""), attributes: lineContentAttributes)
+        let line2 = NSAttributedString(string: " "+NSLocalizedString("Liste des destinations 100% hors-ligne.", comment: "")+"\n\n", attributes: lineContentAttributes)
         result.append(line2)
+        
+        let line3 = NSAttributedString(string: " "+NSLocalizedString("Un achat unique pour votre compte iTunes valable sur iPhone, iPad et Apple TV.", comment: ""), attributes: minilineContentAttributes)
+        result.append(line3)
         
         
         return result
