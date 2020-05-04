@@ -7,11 +7,6 @@
 //
 import Foundation
 
-/*
-enum UserDefaultsKeys : String {
-    case cguAccepted = "cguAccepted"
-}
-*/
 
 class TVAppState: NSObject {
     static let shared = TVAppState()
@@ -22,7 +17,7 @@ class TVAppState: NSObject {
     override init(){
         super.init()
         
-        //isPremium = IAPManager.shared.isActive(productIdentifier: ProductsStore.ProductGuideFrance)
-        //ProductsStore.shared.initializeProducts()
+        isPremium = TVIAPManager.shared.isActive(productIdentifier: TVProductsStore.ProductGuideFrance)
+        TVProductsStore.shared.initializeProducts()
     }
 }

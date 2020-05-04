@@ -8,14 +8,21 @@
 
 import UIKit
 import TVUIKit
-
+import StoreKit
 
 class ParametersViewController: UIViewController  {
     
-    @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var purchaseView: UIView!
+    @IBOutlet weak var purchaseTitleLabel: UILabel!
+    @IBOutlet weak var purchaseImageView: UIImageView!
+    @IBOutlet weak var purchaseButton: UIButton!
+    @IBOutlet weak var restaureButton: UIButton!
+    @IBOutlet weak var purchaseViewWidthConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var qrTitleLabel: UILabel!
     @IBOutlet weak var qrImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var bodyLabel: UILabel!
+    
+    private var products: [SKProduct] = []
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -24,16 +31,119 @@ class ParametersViewController: UIViewController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        buildViews()
+        buildPurchaseView()
         
-        backgroundImageView.image = ImageStore.shared.uiimage(forPlace: PlaceStore.shared.get(id: "Bordeaux"))
-        backgroundImageView.addBlur(1, style: .dark)
-
-        titleLabel.text = NSLocalizedString("Partout avec vous", comment: "")
-        bodyLabel.text = NSLocalizedString("Retrouvez l'application complète sur iPhone et iPad.", comment: "")
         
+        let store = TVProductsStore.shared
+        self.products = store.products
+        
+        _ = store.objectWillChange.sink { _ in
+            print("products changed", store.products)
+            self.products = store.products
+            self.buildPurchaseView()
+        }
+        
+        print("viewDidLoad products", products)
+    }
+    
+    @IBAction func purchaseAction(_ sender: Any) {
+        purchaseButton.isEnabled = false
+        TVIAPManager.shared.purchaseProduct(product: products.first!, success: {
+            self.purchaseButton.isEnabled = true
+            self.buildPurchaseView()
+        }) { (error) in
+            self.purchaseButton.isEnabled = true
+            self.displayError(error: error)
+        }
+    }
+    
+    @IBAction func restaureAction(_ sender: Any) {
+        restaureButton.isEnabled = false
+        TVIAPManager.shared.restorePurchases(success: {
+            self.restaureButton.isEnabled = true
+            self.buildPurchaseView()
+        }) { (error) in
+            self.restaureButton.isEnabled = true
+            self.displayError(error: error)
+        }
+    }
+    
+    private func displayError(error: Error?){
+        if let err = error {
+            let alert = UIAlertController(title: NSLocalizedString("Erreur", comment: ""), message: err.localizedDescription, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: { _ in
+                print("The \"OK\" alert occured.")
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    private func buildViews(){
+        purchaseTitleLabel.attributedText = computePurchasetitle()
+        purchaseImageView.image = UIImage(named: "premium0.jpg")
+        purchaseView.addBlur(1, style: .dark)
+        purchaseView.layer.cornerRadius = 15
+        purchaseView.layer.masksToBounds = true
+        purchaseView.addSubview(purchaseTitleLabel)
+        purchaseView.addSubview(purchaseImageView)
+        purchaseView.addSubview(purchaseButton)
+        purchaseView.addSubview(restaureButton)
+        
+        qrTitleLabel.text = NSLocalizedString("Retrouvez l'application complète sur iPhone et iPad.", comment: "")
         qrImageView.image = UIImage(named: "qrcode.png")
-        qrImageView.layer.cornerRadius = 15
-        qrImageView.layer.masksToBounds = true
+    }
+    
+    private func computePurchasetitle() -> NSAttributedString {
+        let lineTitleAttributes: [NSAttributedString.Key: Any] = [
+            NSAttributedString.Key.foregroundColor: UIColor.lightGray,
+            .font: UIFont.systemFont(ofSize: 36),
+        ]
+        let lineContentAttributes: [NSAttributedString.Key: Any] = [
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            .font: UIFont.systemFont(ofSize: 32),
+        ]
+        let imageAttachment = NSTextAttachment()
+        imageAttachment.image = UIImage(systemName: "plus")?.withTintColor(.yellow)
+        let imageString = NSAttributedString(attachment: imageAttachment)
+        
+
+        let result = NSMutableAttributedString(string: "")
+        
+        let title = NSAttributedString(string: NSLocalizedString("Guide complet", comment: "").uppercased()+"\n\n", attributes: lineTitleAttributes)
+        result.append(title)
+        
+        result.append(imageString)
+        let line1 = NSAttributedString(string: " "+NSLocalizedString("Le guide complet contient 350 destinations supplémentaires.", comment: "")+"\n", attributes: lineContentAttributes)
+        result.append(line1)
+        
+        result.append(imageString)
+        let line2 = NSAttributedString(string: " "+NSLocalizedString("Liste des destinations 100% hors-ligne.", comment: ""), attributes: lineContentAttributes)
+        result.append(line2)
+        
+        
+        return result
+    }
+    
+    private func buildPurchaseView() {
+        purchaseViewWidthConstraint.constant = 0
+        purchaseButton.isHidden = true
+        restaureButton.isHidden = true
+        
+        if !TVAppState.shared.isPremium {
+            purchaseViewWidthConstraint.constant = 900
+            
+            if let product = TVProductsStore.shared.products.first {
+                purchaseButton.setTitle(NSLocalizedString("Acheter \(product.localizedPrice)", comment: ""), for: .normal)
+                restaureButton.setTitle(NSLocalizedString("Restaurer mes achats", comment: ""), for: .normal)
+                
+                purchaseButton.isHidden = false
+                restaureButton.isHidden = false
+            }
+        }
+        
+        self.view.setNeedsUpdateConstraints()
+        self.view.layoutIfNeeded()
     }
 
 }

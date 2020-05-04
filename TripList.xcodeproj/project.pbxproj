@@ -29,6 +29,7 @@
 		F91DEDA323E8A26E00D8FFD7 /* TripList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F91DEDA123E8A26D00D8FFD7 /* TripList.xcdatamodeld */; };
 		F91DEDCA23E9BAB900D8FFD7 /* Completion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91DEDC923E9BAB900D8FFD7 /* Completion.swift */; };
 		F926A7CA24194CF900615E07 /* PlaceAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F926A7C924194CF900615E07 /* PlaceAnnotationView.swift */; };
+		F92BA5CC246062D900E1F931 /* premium0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F98B2174242909C800CE3EF5 /* premium0.jpg */; };
 		F92E05CB2412941B009C5ADD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92E05CA2412941B009C5ADD /* MapKit.framework */; };
 		F92E05CD24129558009C5ADD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F92E05CC24129558009C5ADD /* GoogleService-Info.plist */; };
 		F92E05CF2412EE44009C5ADD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92E05CE2412EE44009C5ADD /* TabBarController.swift */; };
@@ -1429,10 +1430,11 @@
 		F99E73AD23F3611E006BC089 /* NearestPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E73AC23F3611E006BC089 /* NearestPlaces.swift */; };
 		F9A18E9C24253FBF0075A223 /* launchcarousel2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9A18E9B24253FBF0075A223 /* launchcarousel2.jpg */; };
 		F9A2C9122427689000883A52 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A2C9112427689000883A52 /* StoreKit.framework */; };
-		F9A2C91424276EBC00883A52 /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2C91324276EBC00883A52 /* IAPManager.swift */; };
-		F9A2C9162427757000883A52 /* ProductsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2C9152427757000883A52 /* ProductsStore.swift */; };
 		F9A2C9182427EB0E00883A52 /* RatingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A2C9172427EB0E00883A52 /* RatingManager.swift */; };
 		F9A3B30E246012B4009FDCB1 /* TVAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A3B30D246012B4009FDCB1 /* TVAppState.swift */; };
+		F9A3B31D24602C11009FDCB1 /* ProductsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A3B31B24602C11009FDCB1 /* ProductsStore.swift */; };
+		F9A3B31F24602C11009FDCB1 /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A3B31C24602C11009FDCB1 /* IAPManager.swift */; };
+		F9A3B3222460337C009FDCB1 /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A3B3212460337C009FDCB1 /* IAPManager.swift */; };
 		F9AB64C0240AD7520061CD52 /* PlaceButtonsMini.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64BF240AD7520061CD52 /* PlaceButtonsMini.swift */; };
 		F9AB64C2240AD9CE0061CD52 /* VibrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64C1240AD9CE0061CD52 /* VibrationManager.swift */; };
 		F9AB64C4240BD7720061CD52 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB64C3240BD7720061CD52 /* Parameters.swift */; };
@@ -2239,10 +2241,11 @@
 		F99E73AC23F3611E006BC089 /* NearestPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestPlaces.swift; sourceTree = "<group>"; };
 		F9A18E9B24253FBF0075A223 /* launchcarousel2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launchcarousel2.jpg; sourceTree = "<group>"; };
 		F9A2C9112427689000883A52 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		F9A2C91324276EBC00883A52 /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
-		F9A2C9152427757000883A52 /* ProductsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsStore.swift; sourceTree = "<group>"; };
 		F9A2C9172427EB0E00883A52 /* RatingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingManager.swift; sourceTree = "<group>"; };
 		F9A3B30D246012B4009FDCB1 /* TVAppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVAppState.swift; sourceTree = "<group>"; };
+		F9A3B31B24602C11009FDCB1 /* ProductsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsStore.swift; sourceTree = "<group>"; };
+		F9A3B31C24602C11009FDCB1 /* IAPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
+		F9A3B3212460337C009FDCB1 /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
 		F9AB64BF240AD7520061CD52 /* PlaceButtonsMini.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceButtonsMini.swift; sourceTree = "<group>"; };
 		F9AB64C1240AD9CE0061CD52 /* VibrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationManager.swift; sourceTree = "<group>"; };
 		F9AB64C3240BD7720061CD52 /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
@@ -2331,6 +2334,7 @@
 				F9055206244F65A90046C76E /* TripListTV.entitlements */,
 				F90551F2244F65390046C76E /* AppDelegate.swift */,
 				F9A3B30D246012B4009FDCB1 /* TVAppState.swift */,
+				F9A3B3212460337C009FDCB1 /* IAPManager.swift */,
 				F940E07B2453340A00B42012 /* assets */,
 				F940D3D0244F6E5700B42012 /* components */,
 				F940D3C7244F6B8F00B42012 /* controllers */,
@@ -3191,9 +3195,9 @@
 				F9AB64C1240AD9CE0061CD52 /* VibrationManager.swift */,
 				F9AB64C5240C22C90061CD52 /* AppState.swift */,
 				F99E73A223ED9CD4006BC089 /* Reminders.swift */,
-				F9A2C91324276EBC00883A52 /* IAPManager.swift */,
-				F9A2C9152427757000883A52 /* ProductsStore.swift */,
 				F9A2C9172427EB0E00883A52 /* RatingManager.swift */,
+				F9A3B31C24602C11009FDCB1 /* IAPManager.swift */,
+				F9A3B31B24602C11009FDCB1 /* ProductsStore.swift */,
 				F986A61E2433A45F0015EAD2 /* Browser.swift */,
 			);
 			path = utils;
@@ -3232,6 +3236,7 @@
 		F9811C29244F69060098D608 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				F98B2174242909C800CE3EF5 /* premium0.jpg */,
 				F940D8E4244F7DCB00B42012 /* photos */,
 				F9DC21D923E0DB1E0023B8EF /* regions.geojson */,
 				F9DC21E023E1DE0C0023B8EF /* regions.json */,
@@ -3310,7 +3315,6 @@
 		F9FC37D5240D222200F17AAC /* purchasePage */ = {
 			isa = PBXGroup;
 			children = (
-				F98B2174242909C800CE3EF5 /* premium0.jpg */,
 				F9CF76AA24377E6E00DBC245 /* premium1.jpg */,
 				F9FC37D6240D225900F17AAC /* premium2.jpg */,
 			);
@@ -3897,6 +3901,7 @@
 				F940DC0C244F7DCF00B42012 /* Castres.jpg in Resources */,
 				F940DF5E244F7DD000B42012 /* DuneduPilat.jpg in Resources */,
 				F940DB74244F7DCE00B42012 /* PlaceDucaleCharleville.jpg in Resources */,
+				F92BA5CC246062D900E1F931 /* premium0.jpg in Resources */,
 				F940DE08244F7DCF00B42012 /* ChteauFortdeRambures.jpg in Resources */,
 				F940E09F24534BC600B42012 /* paysdelaloire.jpg in Resources */,
 				F940DC08244F7DCF00B42012 /* ChteauFortdeSedan.jpg in Resources */,
@@ -4870,6 +4875,7 @@
 				F940D3D4244F6E6400B42012 /* PlaceCell.swift in Sources */,
 				F940D3C6244F6A3600B42012 /* FilterModel.swift in Sources */,
 				F940E0762451D54B00B42012 /* DreamListViewController.swift in Sources */,
+				F9A3B3222460337C009FDCB1 /* IAPManager.swift in Sources */,
 				F940E0BC245798CD00B42012 /* Blurage.swift in Sources */,
 				F940D3CB244F6BB500B42012 /* DiscoverViewController.swift in Sources */,
 				F940D3C1244F69C800B42012 /* Dataloader.swift in Sources */,
@@ -4904,7 +4910,6 @@
 				F91DEDA323E8A26E00D8FFD7 /* TripList.xcdatamodeld in Sources */,
 				F91DEDA023E6F4DD00D8FFD7 /* PlaceDrawer.swift in Sources */,
 				F91DEDCA23E9BAB900D8FFD7 /* Completion.swift in Sources */,
-				F9A2C9162427757000883A52 /* ProductsStore.swift in Sources */,
 				F99E73AD23F3611E006BC089 /* NearestPlaces.swift in Sources */,
 				F92E05CF2412EE44009C5ADD /* TabBarController.swift in Sources */,
 				F9815D7924240EC60057D515 /* DistanceView.swift in Sources */,
@@ -4914,6 +4919,7 @@
 				F95DE58C23DE349700BE1BD5 /* PlaceMapView.swift in Sources */,
 				F9C9C68823E4D093002C1DA0 /* AppStyle.swift in Sources */,
 				F95DE59B23DE349700BE1BD5 /* PlacesPager.swift in Sources */,
+				F9A3B31D24602C11009FDCB1 /* ProductsStore.swift in Sources */,
 				F9815D732423B4E80057D515 /* PlacesListFilter.swift in Sources */,
 				F95DE59823DE349700BE1BD5 /* DreamListRow.swift in Sources */,
 				F9CF76A32436697E00DBC245 /* ThirdPartyLicencesList.swift in Sources */,
@@ -4929,6 +4935,7 @@
 				F95DE55C23DE2F0F00BE1BD5 /* SceneDelegate.swift in Sources */,
 				F9DC222D23E31FEE0023B8EF /* PlaceButtons.swift in Sources */,
 				F940D3C5244F6A3600B42012 /* FilterModel.swift in Sources */,
+				F9A3B31F24602C11009FDCB1 /* IAPManager.swift in Sources */,
 				F99E73A923EF0D69006BC089 /* ProgressionRegion.swift in Sources */,
 				F95DE57723DE348000BE1BD5 /* Dataloader.swift in Sources */,
 				F9D032F2240E89A7008A9B13 /* ArticlesList.swift in Sources */,
@@ -4956,7 +4963,6 @@
 				F9DC21E923E231A70023B8EF /* ImageMetadata.swift in Sources */,
 				F95DE59923DE349700BE1BD5 /* PlacesList.swift in Sources */,
 				F9D82E5D2417E3DA003961AD /* BlurView.swift in Sources */,
-				F9A2C91424276EBC00883A52 /* IAPManager.swift in Sources */,
 				F92E05D12417A467009C5ADD /* LaunchCarousel.swift in Sources */,
 				F9A2C9182427EB0E00883A52 /* RatingManager.swift in Sources */,
 				F95DE59A23DE349700BE1BD5 /* Progression.swift in Sources */,
@@ -5038,7 +5044,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jva.app.TripListTV;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jva.app.triplist;
 				PRODUCT_NAME = "France Explorer";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
@@ -5062,7 +5068,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jva.app.TripListTV;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jva.app.triplist;
 				PRODUCT_NAME = "France Explorer";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;

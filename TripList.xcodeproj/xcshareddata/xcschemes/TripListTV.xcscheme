@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F90551EF244F65390046C76E"
-               BuildableName = "TripListTV.app"
+               BuildableName = "France Explorer.app"
                BlueprintName = "TripListTV"
                ReferencedContainer = "container:TripList.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F90551EF244F65390046C76E"
-            BuildableName = "TripListTV.app"
+            BuildableName = "France Explorer.app"
             BlueprintName = "TripListTV"
             ReferencedContainer = "container:TripList.xcodeproj">
          </BuildableReference>
@@ -63,7 +63,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F90551EF244F65390046C76E"
-            BuildableName = "TripListTV.app"
+            BuildableName = "France Explorer.app"
             BlueprintName = "TripListTV"
             ReferencedContainer = "container:TripList.xcodeproj">
          </BuildableReference>
