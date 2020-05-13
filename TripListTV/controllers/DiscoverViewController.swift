@@ -32,7 +32,7 @@ class DiscoverViewController: UIViewController  {
         
         self.places = PlaceStore.shared.getRandom(count: 20, premium: TVAppState.shared.isPremium)
         self.regions = PlaceStore.shared.getRegions().sorted(by: { (r1, r2) -> Bool in
-            r1.name < r2.name
+            r1.name.forSorting < r2.name.forSorting
         })
         
         self.initViews()

@@ -52,7 +52,7 @@
 "Voir plus" = "See more";
 "Catégories" = "Categories";
 "À proximité" = "Nearby destinations";
-"Découvrez aussi" = "Also discover";
+"Découvrez aussi à proximité" = "Nearby destinations";
 
 //Articles
 "Sélections" = "Selections";
@@ -75,6 +75,7 @@
 "Photo" = "Photo";
 "Texte" = "Text";
 "Région" = "French region";
+"Images associées" = "Associated images";
 
 //Dream
 "Mon Voyage" = "My Trip";

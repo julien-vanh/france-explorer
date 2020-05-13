@@ -34,7 +34,7 @@ struct ProgressionRegion: View {
     }
     
     private func getCards() -> [ProgressionCard]{
-        let places = PlaceStore.shared.getAllForRegion(regionId: self.region.id).sorted { (p1, p2) -> Bool in
+        let places = PlaceStore.shared.getAllForRegion(regionId: self.region.id, premium: true).sorted { (p1, p2) -> Bool in
             p1.popularity > p2.popularity
         }
         

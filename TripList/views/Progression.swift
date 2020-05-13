@@ -51,7 +51,7 @@ struct ProgressionLine: View {
                 Spacer()
                 
                 HStack {
-                    Text("\(getCompletedCount())/\(PlaceStore.shared.getAllForRegion(regionId: region.id).count)")
+                    Text("\(getCompletedCount())/\(PlaceStore.shared.getAllForRegion(regionId: region.id, premium: true).count)")
                     .font(.caption)
                     .foregroundColor(.white)
                     .shadow(color: Color.black, radius: 5, x: 0, y: 0)
@@ -65,7 +65,7 @@ struct ProgressionLine: View {
             }
             
             if getCompletedCount() > 0 {
-                ProgressBar(value: CGFloat(getCompletedCount())/CGFloat(PlaceStore.shared.getAllForRegion(regionId: region.id).count))
+                ProgressBar(value: CGFloat(getCompletedCount())/CGFloat(PlaceStore.shared.getAllForRegion(regionId: region.id, premium: true).count))
             } else {
                 //Text("Terra incognita").foregroundColor(Color.secondary)
             }
@@ -74,7 +74,7 @@ struct ProgressionLine: View {
     }
     
     func completedPlaceCount() -> String {
-        let placesCountForRegions = PlaceStore.shared.getAllForRegion(regionId: region.id).count
+        let placesCountForRegions = PlaceStore.shared.getAllForRegion(regionId: region.id, premium: true).count
         return "\(getCompletedCount())/\(placesCountForRegions)"
     }
     

@@ -17,7 +17,6 @@ class TVProductsStore: ObservableObject {
     
     func initializeProducts(){
         TVIAPManager.shared.loadProducts() { products in
-            print("initializeProducts", products)
             self.products = products
         }
     }
@@ -98,7 +97,6 @@ class TVIAPManager : NSObject {
 extension TVIAPManager : SKRequestDelegate {
     
     func requestDidFinish(_ request: SKRequest) {
-        print("IAP request finish")
         if request is SKReceiptRefreshRequest {
             self.successBlock?()
             self.cleanUp()
@@ -106,12 +104,11 @@ extension TVIAPManager : SKRequestDelegate {
     }
     
     func request(_ request: SKRequest, didFailWithError error: Error){
-        print("IAP request error")
         if request is SKReceiptRefreshRequest {
             self.failureBlock?(error)
             self.cleanUp()
         }
-        print("SKRequestDelegate request error: \(error.localizedDescription)")
+        //print("SKRequestDelegate request error: \(error.localizedDescription)")
     }
 }
 
@@ -119,7 +116,6 @@ extension TVIAPManager : SKRequestDelegate {
 extension TVIAPManager: SKProductsRequestDelegate {
     
     public func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
-        print("IAP productsRequest", response.products)
         products = response.products
         DispatchQueue.main.async {
             if response.products.count > 0 {

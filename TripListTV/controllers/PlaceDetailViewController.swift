@@ -121,7 +121,7 @@ class PlaceDetailViewController: UIViewController {
         associatesCollectionView.dataSource = self
         associatesCollectionView.register(UINib(nibName: "PlaceCell", bundle: nil), forCellWithReuseIdentifier: "PlaceCell")
         associatesView.addBlur(0.5, style: .light)
-        associatesTitleLabel.text = NSLocalizedString("Découvrez aussi", comment: "")
+        associatesTitleLabel.text = NSLocalizedString("Découvrez aussi à proximité", comment: "")
         associatesView.addSubview(associatesTitleLabel)
         associatesView.addSubview(associatesCollectionView)
         
