@@ -120,12 +120,12 @@ struct LaunchCarousel: View {
                 
                 if (self.currentPageIndex+1 == self.subviews.count){
                     VStack(spacing: 0) {
-                        Text("En continuant vous acceptez nos")
+                        Text("En continuant vous acceptez notre")
                         
                         Button(action: {self.cguPresented.toggle()}) {
-                            Text("Conditions générales").underline()
+                            Text("Politique de confidentialité").underline()
                         }.sheet(isPresented: self.$cguPresented, content: {
-                            WebViewModal(title: "Conditions générales", url: "https://www.france-explorer.fr/confidentialite.html")
+                            WebViewModal(title: "Politique de confidentialité", url: Locale.current.languageCode == "fr" ? "https://www.france-explorer.fr/confidentialite-fr.html" : "https://www.france-explorer.fr/confidentialite.html")
                         }).buttonStyle(PlainButtonStyle())
                     }
                 }
