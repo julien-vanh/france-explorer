@@ -32,5 +32,3 @@ extension UIColor {
         return UIColor(hex: 0xFFC110)
     }
 }
-
-

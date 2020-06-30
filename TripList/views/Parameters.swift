@@ -28,20 +28,6 @@ struct Parameters: View {
                     }
                 }
                 
-                /*
-                Section(header: Text("Synchonisation"), content: {
-                    Button(action: {
-                        print("Syncing") //TODO
-                    }) {
-                        HStack {
-                            Image(systemName: "arrow.clockwise.icloud").foregroundColor(.blue).frame(width:30)
-                            Text("iCloud")
-                        }
-                    }
-                })
-                */
-                
-                
                 Section(header: Text("Application"), content: {
                     Button(action: {
                         Browser.openLinkInBrowser(link: "https://itunes.apple.com/app/id\(AppId)?action=write-review")
@@ -123,7 +109,7 @@ struct AboutFooter: View {
     var body: some View {
         HStack {
             Spacer()
-            Text("France Explorer\n @2020 Julien Vanheule. Tous droits réservés.")
+            Text("©2020 France Explorer.\nTous droits réservés.")
             .foregroundColor(.gray)
                 .font(.footnote).multilineTextAlignment(.center)
             Spacer()
