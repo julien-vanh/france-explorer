@@ -159,6 +159,10 @@ extension TVIAPManager: SKPaymentTransactionObserver {
         }
     }
     
+    public func paymentQueue(_ queue: SKPaymentQueue, shouldAddStorePayment payment: SKPayment, for product: SKProduct) -> Bool {
+        return !TVAppState.shared.isPremium
+    }
+    
     private func purchaseSuccedFor(identifier: String?) {
         guard let identifier = identifier else {
             return

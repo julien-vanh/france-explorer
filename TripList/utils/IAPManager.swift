@@ -134,6 +134,10 @@ extension IAPManager: SKPaymentTransactionObserver {
         }
     }
     
+    public func paymentQueue(_ queue: SKPaymentQueue, shouldAddStorePayment payment: SKPayment, for product: SKProduct) -> Bool {
+        return !AppState.shared.isPremium
+    }
+    
     private func purchaseSuccedFor(identifier: String?) {
         guard let identifier = identifier else {
             //self.failureBlock?(error)
