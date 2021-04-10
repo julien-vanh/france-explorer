@@ -21,8 +21,6 @@
 		F905520C244F66310046C76E /* articles.json in Resources */ = {isa = PBXBuildFile; fileRef = F9CF719724364D3B00DBC245 /* articles.json */; };
 		F905520D244F66310046C76E /* thirdPartyMentions.json in Resources */ = {isa = PBXBuildFile; fileRef = F9CF769E2436686000DBC245 /* thirdPartyMentions.json */; };
 		F905520E244F66310046C76E /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F98B217C242B845000CE3EF5 /* placeholder.jpg */; };
-		F9055212244F66BB0046C76E /* places.json in Resources */ = {isa = PBXBuildFile; fileRef = F9055211244F66BB0046C76E /* places.json */; };
-		F9055213244F66BB0046C76E /* places.json in Resources */ = {isa = PBXBuildFile; fileRef = F9055211244F66BB0046C76E /* places.json */; };
 		F91CEF02243A5757005D780A /* CreditsModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91CEF01243A5757005D780A /* CreditsModal.swift */; };
 		F91DED9E23E6EAE800D8FFD7 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91DED9D23E6EAE800D8FFD7 /* BottomSheetView.swift */; };
 		F91DEDA023E6F4DD00D8FFD7 /* PlaceDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91DED9F23E6F4DD00D8FFD7 /* PlaceDrawer.swift */; };
@@ -1415,6 +1413,8 @@
 		F9815D7724240C080057D515 /* PlaceListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9815D7624240C080057D515 /* PlaceListRow.swift */; };
 		F9815D7924240EC60057D515 /* DistanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9815D7824240EC60057D515 /* DistanceView.swift */; };
 		F98172572417D2E70011A76B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98172562417D2E70011A76B /* WebView.swift */; };
+		F9867D602621E3ED00461330 /* places.json in Resources */ = {isa = PBXBuildFile; fileRef = F9867D5F2621E3ED00461330 /* places.json */; };
+		F9867D612621E3ED00461330 /* places.json in Resources */ = {isa = PBXBuildFile; fileRef = F9867D5F2621E3ED00461330 /* places.json */; };
 		F986A61F2433A45F0015EAD2 /* Browser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F986A61E2433A45F0015EAD2 /* Browser.swift */; };
 		F98B2175242909C800CE3EF5 /* premium0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F98B2174242909C800CE3EF5 /* premium0.jpg */; };
 		F98B2178242A7C0A00CE3EF5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F98B217A242A7C0A00CE3EF5 /* InfoPlist.strings */; };
@@ -1492,7 +1492,6 @@
 		F9055204244F65900046C76E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS13.4.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		F9055206244F65A90046C76E /* TripListTV.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TripListTV.entitlements; sourceTree = "<group>"; };
 		F9055207244F65AD0046C76E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS13.4.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
-		F9055211244F66BB0046C76E /* places.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = places.json; path = ../places.json; sourceTree = "<group>"; };
 		F91CEF01243A5757005D780A /* CreditsModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsModal.swift; sourceTree = "<group>"; };
 		F91DED9D23E6EAE800D8FFD7 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		F91DED9F23E6F4DD00D8FFD7 /* PlaceDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDrawer.swift; sourceTree = "<group>"; };
@@ -2225,6 +2224,7 @@
 		F9815D7624240C080057D515 /* PlaceListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListRow.swift; sourceTree = "<group>"; };
 		F9815D7824240EC60057D515 /* DistanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceView.swift; sourceTree = "<group>"; };
 		F98172562417D2E70011A76B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		F9867D5F2621E3ED00461330 /* places.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = places.json; sourceTree = "<group>"; };
 		F986A61E2433A45F0015EAD2 /* Browser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Browser.swift; sourceTree = "<group>"; };
 		F98B2174242909C800CE3EF5 /* premium0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = premium0.jpg; sourceTree = "<group>"; };
 		F98B2179242A7C0A00CE3EF5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -3243,7 +3243,7 @@
 				F9CF719724364D3B00DBC245 /* articles.json */,
 				F9CF769E2436686000DBC245 /* thirdPartyMentions.json */,
 				F98B217C242B845000CE3EF5 /* placeholder.jpg */,
-				F9055211244F66BB0046C76E /* places.json */,
+				F9867D5F2621E3ED00461330 /* places.json */,
 			);
 			path = assets;
 			sourceTree = "<group>";
@@ -3648,7 +3648,6 @@
 				F940DC06244F7DCF00B42012 /* MusedpartementalAlbertKahn.jpg in Resources */,
 				F940DCDA244F7DCF00B42012 /* AbbayedePontigny.jpg in Resources */,
 				F940DC92244F7DCF00B42012 /* Yport.jpg in Resources */,
-				F9055213244F66BB0046C76E /* places.json in Resources */,
 				F940DC66244F7DCF00B42012 /* ChteaudeFontainebleau.jpg in Resources */,
 				F940DCAE244F7DCF00B42012 /* MusedelAventurePeugeot.jpg in Resources */,
 				F940E09B24534BC600B42012 /* hautenormandie.jpg in Resources */,
@@ -3791,6 +3790,7 @@
 				F940DCC6244F7DCF00B42012 /* MuseRolin.jpg in Resources */,
 				F940DD76244F7DCF00B42012 /* HteldeVog.jpg in Resources */,
 				F940DF56244F7DD000B42012 /* ViaducdeMillau.jpg in Resources */,
+				F9867D612621E3ED00461330 /* places.json in Resources */,
 				F940DECA244F7DD000B42012 /* ChteaudeMontsoreauMusedartcontemporain.jpg in Resources */,
 				F940E06D2450A86600B42012 /* Localizable.strings in Resources */,
 				F940DB7E244F7DCE00B42012 /* ChteaudeSerrant.jpg in Resources */,
@@ -4119,7 +4119,6 @@
 				F940DD2D244F7DCF00B42012 /* MuseduLouvreLens.jpg in Resources */,
 				F940DD2F244F7DCF00B42012 /* RservenaturellenationaledesgorgesdelArdche.jpg in Resources */,
 				F940DD35244F7DCF00B42012 /* MusedelaBiere.jpg in Resources */,
-				F9055212244F66BB0046C76E /* places.json in Resources */,
 				F940DB75244F7DCE00B42012 /* ZoosetAquariums.jpg in Resources */,
 				F940DC87244F7DCF00B42012 /* BastiaPlaceSaintNicolas.jpg in Resources */,
 				F940DC51244F7DCF00B42012 /* SaintCnerileGrei.jpg in Resources */,
@@ -4308,6 +4307,7 @@
 				F940DBC5244F7DCF00B42012 /* SacrCur.jpg in Resources */,
 				F940DC0D244F7DCF00B42012 /* LaCharitsurLoire.jpg in Resources */,
 				F940DD97244F7DCF00B42012 /* RserveNaturelleDeScandola.jpg in Resources */,
+				F9867D602621E3ED00461330 /* places.json in Resources */,
 				F940E00B244F7DD000B42012 /* ChteaudeBreteuil.jpg in Resources */,
 				F940DF69244F7DD000B42012 /* FtedesRempartsDinan.jpg in Resources */,
 				F940DFB9244F7DD000B42012 /* MusePortuairedeDunkerque.jpg in Resources */,
