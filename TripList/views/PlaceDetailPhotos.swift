@@ -14,7 +14,7 @@ struct PlaceDetailPhotos: View {
     var place: Place
     @State private var pageImages: [ImageMetadata] = []
     @State private var showModal: Bool = false
-    @State var selectedPageImage: ImageMetadata?
+    @State var selectedPageImage: ImageMetadata!
     @ObservedObject var appState = AppState.shared
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
@@ -45,7 +45,7 @@ struct PlaceDetailPhotos: View {
         )
         .navigationBarTitle(Text(place.titleLocalized), displayMode: .inline)
         .sheet(isPresented: $showModal, content: {
-            PlacePhotosModal(images: self.pageImages, initialeImage: self.selectedPageImage!)
+            PlacePhotosModal(images: self.pageImages, initialeImage: self.selectedPageImage ?? self.pageImages[0])
         })
         .onAppear(perform: {
             
