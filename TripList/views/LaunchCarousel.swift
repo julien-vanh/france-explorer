@@ -202,6 +202,6 @@ struct CarouselImage: View {
                 .imageScale(.large)
                 .frame(width: geometry.size.width, height: geometry.size.height)
                 .clipped()
-        }
+        }.edgesIgnoringSafeArea(.all)
     }
 }
