@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  TripList
+
+  Created by Julien Vanheule on 24/03/2020.
+  Copyright © 2020 Julien Vanheule. All rights reserved.
+*/
+"NSLocationWhenInUseUsageDescription" = "Pour trouver les destinations à proximité";
+"NSRemindersUsageDescription" = "Pour copier Ma Liste des destinations";

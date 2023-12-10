@@ -1,0 +1,158 @@
+/* 
+  Localizable.strings
+  TripList
+
+  Created by Julien Vanheule on 29/01/2020.
+  Copyright © 2020 Julien Vanheule. All rights reserved.
+*/
+"appname" = "France Explorer";
+
+"wikipedia.host" = "https://fr.wikipedia.org/w/api.php"; //Laisser le fr pour recuperer les images
+"wikipedia.main-page" = "Wikipedia:Accueil_principal";
+
+
+
+//Tabbar
+"Destinations" = "Destinations";
+"Carte" = "Map";
+"Voyage" = "My Trip";
+"Progression" = "Progress";
+"Paramètres" = "Parameters";
+"Plus" = "Plus";
+
+//LaunchCarousel
+"Bienvenue !" = "Bonjour !";
+"Nos catégories" = "Our categories";
+"Organisez votre voyage" = "Organize your trip";
+"Ce guide vous permettra de décrouvrir les plus belles destinations touristiques de France." = "This guide will allow you to discover the most beautiful sights in France.";
+"Villes, Musées, Nature, Patrimoine, Sorties pour voyager selon vos envies." = "Cities, Museums, Nature, Heritage, Outings to travel according to your desires.";
+"Ajoutez les destinations à votre prochain Voyage." = "Add destinations to your next Trip.";
+"Marquez les destinations explorées." = "Mark the explored destinations.";
+"Collectionnez les lieux explorés de chaque région." = "Collect the destinations explored in each region.";
+"En continuant vous acceptez notre" = "By continuing you accept the";
+"Politique de confidentialité" = "Privacy policy";
+"Accepter" = "Accept";
+"Continuer" = "Continue";
+
+
+
+//Store
+"Destinations" = "Destinations";
+"Au hasard" = "Random destination";
+"Suggestions" = "Suggestions";
+"Régions" = "Regions";
+
+"à %@" = "at %@";
+"à %@ de ma position" = "at %@ from my position";
+"Exploré" = "Explored";
+"Retirer du Voyage" = "Remove from My Trip";
+"Ajouter au Voyage" = "Add to My Trip";
+
+"Nos sélections" = "Our selections";
+"Voir plus" = "See more";
+"Catégories" = "Categories";
+"À proximité" = "Nearby destinations";
+"Découvrez aussi à proximité" = "Nearby destinations";
+
+//Articles
+"Sélections" = "Selections";
+"Destinations associées" = "Associated destinations";
+
+//PlacesList
+"Filtrer" = "Filter";
+"Destinations" = "Destinations";
+
+"Distance" = "Distance";
+"Popularité" = "Popularity";
+"Trier par" = "Sort by";
+"Type de destination" = "Destination type";
+"Réinitialiser" = "Reset";
+
+//PlaceDetail
+"Photos" = "Photos";
+"Site web" = "Website";
+"Crédits" = "Credits";
+"Photo" = "Photo";
+"Texte" = "Text";
+"Région" = "French region";
+"Images associées" = "Associated images";
+
+//Dream
+"Mon Voyage" = "My Trip";
+"Copier dans Rappels" = "Copy to Reminders";
+"Imprimer" = "Print";
+"Partager" = "Share";
+"Supprimer les complétés" = "Delete the completed";
+
+"Détails sur la destination" = "Destination details";
+
+//Progression
+"Exploration" = "Exploration";
+"régions explorées" = "explored regions";
+
+//Purchase
+"Guide complet" = "Complete Guide";
+"Le guide complet contient 350 destinations supplémentaires." = "The complete guide contains 350 additional destinations.";
+"Liste des destinations 100% hors-ligne." = "100% offline destinations list.";
+
+//Drawer
+"Adresse" = "Address";
+
+//Parameters
+"Paramètres" = "Parameters";
+"Synchonisation" = "Synchronisation";
+"Application" = "Application";
+"Noter l'application" = "Rate the app";
+"Nous contacter" = "Contact us";
+"Partager" = "Share";
+"Connaissez-vous bien la France ?" = "How well do you know France?";
+"À propos" = "About";
+"Version" = "Version";
+"Confidentialité" = "Privacy policy";
+"Mentions tierces" = "Third party references";
+"©2020 France Explorer.\nTous droits réservés." = "@2020 France Explorer.\nAll rights reserved.";
+
+//Purchase page
+"Boutique" = "Shop";
+"destinations supplémentaires" = "additional destinations";
+"Restaurer mes achats" = "Restore purchases";
+"Acheter %@" = "Purchase %@";
+
+//Action
+"Erreur" = "Error";
+"OK" = "OK";
+"Annuler" = "Cancel";
+"Fermer" = "Close";
+"Rechercher" = "Search";
+
+"Tous" = "All";
+"Ville" = "City";
+"Villes" = "Cities";
+"Musée" = "Museum";
+"Musées" = "Museums";
+"Nature" = "Nature";
+"Nature" = "Nature";
+"Patrimoine" = "Heritage";
+"Patrimoine" = "Heritage";
+"Sortie" = "Outing";
+"Sorties" = "Outings";
+
+//Errors
+"L'application n'est pas autorisée à accéder aux Rappels" = "The application is not authorized to access Reminders.";
+"Données non disponibles" = "Data not available";
+"Une erreur est suvenue" = "An error has occurred";
+"Chargement de la boutique..." = "Loading the shop...";
+"Une connexion internet est nécessaire." = "An internet connection is required.";
+"Réessayer" = "Retry";
+
+
+//
+"Activités à proximité" = "Nearby activities";
+"Détails" = "Details";
+
+"Hôtels à proximité" = "Hotels nearby";
+
+//
+"Partout avec vous" = "Everywhere with you";
+"Retrouvez l'application complète sur iPhone et iPad." = "Get the complete application on iPhone and iPad.";
+"Un achat unique pour votre compte iTunes valable sur iPhone, iPad et Apple TV." = "A one-time purchase for your iTunes account valid on iPhone, iPad and Apple TV.";
